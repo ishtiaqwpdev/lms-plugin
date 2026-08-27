@@ -211,10 +211,14 @@ class CTA_Exam_Prep_Lessons {
 			return '';
 		}
 
-		$needle = '_WB' . (int) $workbook_num . '_';
+		$num = (int) $workbook_num;
+		// Match both `_WB1_` and zero-padded `_WB01_` without grabbing `_WB10_`.
+		$pattern = ( $num >= 10 )
+			? '/_WB' . $num . '_/i'
+			: '/_WB0?' . $num . '_/i';
 		foreach ( $files as $file ) {
 			$name = basename( (string) $file );
-			if ( false !== stripos( $name, $needle ) ) {
+			if ( preg_match( $pattern, $name ) ) {
 				return (string) $file;
 			}
 		}
@@ -259,7 +263,7 @@ class CTA_Exam_Prep_Lessons {
 
 				$is_bold = (bool) preg_match( '/<w:b\s*\/?>|<w:b\s[^>]*>/i', $chunk );
 				$is_h1   = (bool) preg_match( '/^(Heading1|Title)$/i', $style )
-					|| (bool) preg_match( '/^(How to Use This Workbook|Workbook Learning Objectives|Learning Objectives|Why This Topic Matters|Workbook Roadmap|Chapter Summary|Chapter\s+\d+\s+Summary|Knowledge Check|Workbook\s+\d+\s+Knowledge Check|Common Exam Traps|Workbook Close|Study Planning(?:\s+and\s+Next Step)?|Current AMFTRB Alignment|Workbook\s+\d+\s+Emphasis)\b/i', $text );
+					|| (bool) preg_match( '/^(How to Use This Workbook|Workbook Learning Objectives|Learning Objectives|Why This Topic Matters|Workbook Roadmap|Chapter Map|Chapter Summary|Chapter\s+\d+\s+Summary|Knowledge Check|Workbook\s+\d+\s+Knowledge Check|Common Exam Traps|Workbook Close|Study Planning(?:\s+and\s+Next Step)?|Current AMFTRB Alignment|Workbook\s+\d+\s+Emphasis)\b/i', $text );
 				$is_h2   = (bool) preg_match( '/^Heading2$/i', $style );
 				$is_h3   = (bool) preg_match( '/^Heading3$/i', $style );
 
