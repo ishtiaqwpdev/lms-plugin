@@ -17,13 +17,29 @@
                     }
                 ],
     "program":  "lcsw-aswb",
-    "source":  "Form A/B stems classified to 2026 ASWB Clinical content areas (Practice Exams untouched)",
+    "source":  "Form A/B stems classified to 2026 ASWB Clinical content areas; approved allocation 65/58/57 (Practice Exams untouched)",
     "cards":  [
                   {
                       "id":  "aswb-A-004",
                       "front":  "Residents near an integrated-care program report repeated environmental health concerns and want change. What should the social worker do FIRST?",
                       "domain_order":  1,
                       "back":  "B. Engage residents in defining priorities, mapping power and resources, identifying decision makers, and selecting resident-led strategies.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-008",
+                      "front":  "At a hospital social-work service, an adolescent reports body dissatisfaction after repeated social-media comments. What should the social worker assess FIRST?",
+                      "domain_order":  1,
+                      "back":  "C. Assess body-image beliefs, eating and activity patterns, development, culture, identity, ability, trauma, discrimination, media exposure, medical factors, functioning, and strengths without assuming pathology.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-009",
+                      "front":  "At a community outreach program, a clientâ€™s words say â€œIâ€™m fine,â€ while posture and tone communicate distress. What should the social worker do?",
+                      "domain_order":  1,
+                      "back":  "B. Reflect the observed incongruence respectfully and invite the client to clarify the experience without assuming what it means.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -68,16 +84,24 @@
                       "domain_label":  "Values and Ethics"
                   },
                   {
-                      "id":  "aswb-A-034",
-                      "front":  "An involuntary client at an outpatient clinic says, “You’re just here to report on me.” What should the social worker do FIRST?",
+                      "id":  "aswb-A-032",
+                      "front":  "A client at a telehealth practice understands breathing skills but forgets to use them during panic. What should the social worker do NEXT?",
                       "domain_order":  1,
-                      "back":  "A. Clarify role, limits of confidentiality, required versus voluntary elements, choices the client retains, and invite the client’s concerns.\nA. Correct. Engagement with involuntary clients uses transparency, choice, role clarity, and respect rather than coercion",
+                      "back":  "A. Rehearse the skill under mild activation, identify cues for use, simplify the steps, and create a practice and review plan.\nA. Correct. Coping skills are learned through rehearsal, cues, manageable practice, and reviewâ€”not information alone",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-034",
+                      "front":  "An involuntary client at an outpatient clinic says, â€œYouâ€™re just here to report on me.â€ What should the social worker do FIRST?",
+                      "domain_order":  1,
+                      "back":  "A. Clarify role, limits of confidentiality, required versus voluntary elements, choices the client retains, and invite the clientâ€™s concerns.\nA. Correct. Engagement with involuntary clients uses transparency, choice, role clarity, and respect rather than coercion",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
                   {
                       "id":  "aswb-A-036",
-                      "front":  "A care coordinator at a hospital social-work service requests the client’s complete psychotherapy record to arrange transportation and medication follow-up. What response is BEST?",
+                      "front":  "A care coordinator at a hospital social-work service requests the clientâ€™s complete psychotherapy record to arrange transportation and medication follow-up. What response is BEST?",
                       "domain_order":  1,
                       "back":  "B. Clarify the coordination purpose and disclosure authority, then share only information relevant to that purpose.\nA. Incorrect. Sharing or confirming information beyond established authority can violate confidentiality even when the information seems limited or clinically useful",
                       "domain":  "values-and-ethics",
@@ -92,10 +116,18 @@
                       "domain_label":  "Values and Ethics"
                   },
                   {
+                      "id":  "aswb-A-044",
+                      "front":  "A social worker at a telehealth psychotherapy practice makes a clinical error that could affect a clientâ€™s care. What action best reflects professional integrity?",
+                      "domain_order":  1,
+                      "back":  "D. Address immediate risk, disclose and correct the error through appropriate processes, document accurately, and take steps to prevent recurrence.\nA. Incorrect. Personal beliefs, organizational convenience, or client waivers do not override the professional obligation to practice competently and with integrity",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
                       "id":  "aswb-A-047",
                       "front":  "A client at a community mental-health program asks the social worker to email detailed session notes to a personal account shared with family members. What should the social worker do NEXT?",
                       "domain_order":  1,
-                      "back":  "C. Discuss privacy risks and alternatives, verify the client’s informed preference and authorization, and use the most appropriate secure process available.\nA. Incorrect. Sharing or confirming information beyond established authority can violate confidentiality even when the information seems limited or clinically useful",
+                      "back":  "C. Discuss privacy risks and alternatives, verify the clientâ€™s informed preference and authorization, and use the most appropriate secure process available.\nA. Incorrect. Sharing or confirming information beyond established authority can violate confidentiality even when the information seems limited or clinically useful",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -108,10 +140,42 @@
                       "domain_label":  "Values and Ethics"
                   },
                   {
+                      "id":  "aswb-A-051",
+                      "front":  "At a community mental-health program, a client in acute distress can identify supports, has no current plan or means, and is willing to collaborate on safety. What is the BEST response?",
+                      "domain_order":  1,
+                      "back":  "C. Use a collaborative safety-focused plan with supports, means review, follow-up, and clear escalation criteria while continuing reassessment.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-053",
+                      "front":  "An agency at a community mental-health program interprets a new regulation more restrictively than required, reducing access for a marginalized group. What should a social worker do?",
+                      "domain_order":  1,
+                      "back":  "C. Clarify the actual rule, examine the interpretationâ€™s impact, and advocate for an accurate, equitable implementation through appropriate channels.\nA. Incorrect. Ignoring a policy or advising noncompliance can create additional legal and service risks before the governing rule is understood",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
                       "id":  "aswb-A-055",
                       "front":  "A client at a hospital social-work service agrees to telehealth but appears unaware that others in the home can hear the session. What should the social worker do NEXT?",
                       "domain_order":  1,
-                      "back":  "B. Review privacy risks and alternatives, confirm the client’s understanding and preferences, and develop a feasible privacy plan.\nA. Incorrect. A signature or earlier consent does not substitute for current understanding when material information or circumstances are unclear",
+                      "back":  "B. Review privacy risks and alternatives, confirm the clientâ€™s understanding and preferences, and develop a feasible privacy plan.\nA. Incorrect. A signature or earlier consent does not substitute for current understanding when material information or circumstances are unclear",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-056",
+                      "front":  "At a school-linked program, a client with a physical disability reports shame about appearance after a new medical procedure. Which assessment approach is BEST?",
+                      "domain_order":  1,
+                      "back":  "D. Assess body-image beliefs, eating and activity patterns, development, culture, identity, ability, trauma, discrimination, media exposure, medical factors, functioning, and strengths without assuming pathology.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-059",
+                      "front":  "A clinician at a community outreach program reports compassion fatigue but says current judgment and client care are not yet impaired. What should be done?",
+                      "domain_order":  1,
+                      "back":  "D. Act early with supervision, recovery practices, workload review, and monitoring rather than waiting for clear impairment.\nA. Incorrect. Simply pushing through significant burnout or secondary-trauma symptoms can increase the risk of impaired judgment and poorer care",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -135,7 +199,15 @@
                       "id":  "aswb-A-062",
                       "front":  "At a community mental-health program, a school counselor reports bruising on a child and says the caregiver gave two different explanations. The social worker is uncertain whether the information meets the applicable reporting threshold. What should the social worker do NEXT?",
                       "domain_order":  1,
-                      "back":  "C. Clarify the facts relevant to the applicable reporting threshold promptly, seek consultation when needed, and complete any required report without attempting to prove who caused the injury.\nA. Incorrect. Repeated or leading questioning can exceed the social worker’s role and may distort information; mandated-report decisions do not generally require proving the allegation",
+                      "back":  "C. Clarify the facts relevant to the applicable reporting threshold promptly, seek consultation when needed, and complete any required report without attempting to prove who caused the injury.\nA. Incorrect. Repeated or leading questioning can exceed the social workerâ€™s role and may distort information; mandated-report decisions do not generally require proving the allegation",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-064",
+                      "front":  "At a group practice, a client becomes silent after a sensitive question. Which assessment approach is BEST?",
+                      "domain_order":  1,
+                      "back":  "C. Use interviewing methods that match the moment: begin open then clarify, acknowledge hesitation and pace sensitive topics, and arrange qualified communication access when language differences affect accuracy.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -144,6 +216,14 @@
                       "front":  "A community served by a residential treatment program has high asthma rates near an industrial site and limited access to healthcare. What approach is MOST consistent with environmental justice?",
                       "domain_order":  1,
                       "back":  "A. Partner with residents to identify priorities, support access to care and credible environmental data, and advocate for structural remedies with community participation.\nA. Correct. Environmental justice links individual harm with structural conditions and community participation",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-066",
+                      "front":  "Staff at an integrated-care program report bullying and fear of retaliation when raising concerns. What should administrators do FIRST?",
+                      "domain_order":  1,
+                      "back":  "C. Assess the pattern and safety, create accessible reporting and anti-retaliation processes, involve staff, clarify expectations, and monitor implementation.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -159,7 +239,15 @@
                       "id":  "aswb-A-072",
                       "front":  "At a rural behavioral-health clinic, a client says part of them wants to change and part does not. Which assessment approach is BEST?",
                       "domain_order":  1,
-                      "back":  "A. Assess practical barriers, trust, values, reasons for and against change, confidence, importance, prior attempts, supports, and readiness before labeling motivation.\nA. Correct. Motivation and readiness are assessed through ambivalence, confidence, values, barriers, and access—not inferred from attendance alone",
+                      "back":  "A. Assess practical barriers, trust, values, reasons for and against change, confidence, importance, prior attempts, supports, and readiness before labeling motivation.\nA. Correct. Motivation and readiness are assessed through ambivalence, confidence, values, barriers, and accessâ€”not inferred from attendance alone",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-075",
+                      "front":  "A client at a community mental-health program feels stuck between two housing options. Which problem-solving approach is BEST?",
+                      "domain_order":  1,
+                      "back":  "B. Define the decision, identify criteria and constraints, generate realistic options, weigh consequences, choose a step, and review the outcome.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -189,9 +277,17 @@
                   },
                   {
                       "id":  "aswb-A-105",
-                      "front":  "A client at a residential treatment program sends a friend request to the clinician’s personal social-media account. What should the clinician do NEXT?",
+                      "front":  "A client at a residential treatment program sends a friend request to the clinicianâ€™s personal social-media account. What should the clinician do NEXT?",
                       "domain_order":  1,
                       "back":  "C. Maintain the professional boundary, follow the electronic-communication policy, and discuss the request clinically if relevant.\nA. Incorrect. Convenience or popularity does not establish that an electronic platform or online relationship is clinically and ethically appropriate",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-106",
+                      "front":  "At a community outreach program, an adult reports feeling â€œbetween culturesâ€ after migration. Which assessment approach is BEST?",
+                      "domain_order":  1,
+                      "back":  "B. Explore identity, belonging, language, family expectations, culture, spirituality, discrimination, developmental meaning, strengths, conflict, and supports without pathologizing exploration.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -199,7 +295,7 @@
                       "id":  "aswb-A-108",
                       "front":  "A White clinician at a residential treatment program notices a Black client becomes guarded after the clinician questions whether discrimination occurred. What should the clinician do NEXT?",
                       "domain_order":  1,
-                      "back":  "C. Acknowledge the impact and power dynamic, invite the client’s experience, examine assumptions, and repair the interaction without demanding proof.\nA. Incorrect. Explaining intent or professional expertise can reinforce the power difference rather than address the client’s experience",
+                      "back":  "C. Acknowledge the impact and power dynamic, invite the clientâ€™s experience, examine assumptions, and repair the interaction without demanding proof.\nA. Incorrect. Explaining intent or professional expertise can reinforce the power difference rather than address the clientâ€™s experience",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -223,7 +319,7 @@
                       "id":  "aswb-A-114",
                       "front":  "A clinic at an outpatient behavioral health clinic offers a scarce service benefit only to clients who enroll in a research study. What is the PRIMARY ethical concern?",
                       "domain_order":  1,
-                      "back":  "B. The arrangement may create undue influence and weaken the voluntariness of informed consent.\nA. Incorrect. Administrative cost or analytic complexity is secondary to participants’ rights, voluntariness, privacy, and appropriate review",
+                      "back":  "B. The arrangement may create undue influence and weaken the voluntariness of informed consent.\nA. Incorrect. Administrative cost or analytic complexity is secondary to participantsâ€™ rights, voluntariness, privacy, and appropriate review",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -236,10 +332,26 @@
                       "domain_label":  "Values and Ethics"
                   },
                   {
-                      "id":  "aswb-A-120",
-                      "front":  "An involuntary client at a community mental-health program says, “You’re just here to report on me.” What should the social worker do FIRST?",
+                      "id":  "aswb-A-118",
+                      "front":  "A migrant worker at a nonprofit family-service agency reports an employer is holding identification documents and threatening immigration consequences if the worker leaves. What is the BEST response?",
                       "domain_order":  1,
-                      "back":  "B. Clarify role, limits of confidentiality, required versus voluntary elements, choices the client retains, and invite the client’s concerns.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "B. Assess immediate safety, coercion, needs and client goals, clarify the social workerâ€™s role, and connect to qualified legal and trafficking resources without making legal promises.\nA. Incorrect. Confronting the suspected exploiter or directing the client immediately can increase danger before consent, coercion, and vulnerability are assessed",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-A-120",
+                      "front":  "An involuntary client at a community mental-health program says, â€œYouâ€™re just here to report on me.â€ What should the social worker do FIRST?",
+                      "domain_order":  1,
+                      "back":  "B. Clarify role, limits of confidentiality, required versus voluntary elements, choices the client retains, and invite the clientâ€™s concerns.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "values-and-ethics",
+                      "domain_label":  "Values and Ethics"
+                  },
+                  {
+                      "id":  "aswb-B-002",
+                      "front":  "A client at an outpatient clinic says, â€œIâ€™m angry that no one understands me.â€ Which response BEST demonstrates active listening?",
+                      "domain_order":  1,
+                      "back":  "A. Reflect the emotion and meaning, invite elaboration, and check whether the social workerâ€™s understanding is accurate.\nA. Correct. Active listening reflects content and emotion, invites elaboration, and checks understanding",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -255,7 +367,7 @@
                       "id":  "aswb-B-014",
                       "front":  "A clinician at a public behavioral-health agency discovers a factual error in a signed progress note. What is the BEST response?",
                       "domain_order":  1,
-                      "back":  "B. Correct the record using the organization’s approved amendment process so the original entry and correction remain transparent.\nA. Incorrect. Changing, deleting, or backdating records to create a preferred appearance undermines documentation integrity",
+                      "back":  "B. Correct the record using the organizationâ€™s approved amendment process so the original entry and correction remain transparent.\nA. Incorrect. Changing, deleting, or backdating records to create a preferred appearance undermines documentation integrity",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -309,7 +421,7 @@
                   },
                   {
                       "id":  "aswb-B-036",
-                      "front":  "At an outpatient behavioral health clinic, a client signs the consent form and then says, “I did not understand most of that.” What should the social worker do FIRST?",
+                      "front":  "At an outpatient behavioral health clinic, a client signs the consent form and then says, â€œI did not understand most of that.â€ What should the social worker do FIRST?",
                       "domain_order":  1,
                       "back":  "A. Pause, explain the material information in accessible language, answer questions, and use teach-back before relying on the consent.\nA. Correct. Informed consent requires meaningful understanding, not merely a signature",
                       "domain":  "values-and-ethics",
@@ -317,9 +429,9 @@
                   },
                   {
                       "id":  "aswb-B-037",
-                      "front":  "A client at a community mental-health program says, “I’m angry that no one understands me.” Which response BEST demonstrates active listening?",
+                      "front":  "A client at a community mental-health program says, â€œIâ€™m angry that no one understands me.â€ Which response BEST demonstrates active listening?",
                       "domain_order":  1,
-                      "back":  "B. Reflect the emotion and meaning, invite elaboration, and check whether the social worker’s understanding is accurate.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "B. Reflect the emotion and meaning, invite elaboration, and check whether the social workerâ€™s understanding is accurate.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -341,9 +453,9 @@
                   },
                   {
                       "id":  "aswb-B-053",
-                      "front":  "A social worker at a rural integrated-care clinic notices personal moral beliefs are influencing reactions to a client’s relationship choices. What should the social worker do FIRST?",
+                      "front":  "A social worker at a rural integrated-care clinic notices personal moral beliefs are influencing reactions to a clientâ€™s relationship choices. What should the social worker do FIRST?",
                       "domain_order":  1,
-                      "back":  "A. Recognize the value conflict, examine its impact on practice, seek consultation as needed, and keep the client’s goals and dignity central.\nA. Correct. Professional values require managing personal beliefs so they do not direct client-centered care",
+                      "back":  "A. Recognize the value conflict, examine its impact on practice, seek consultation as needed, and keep the clientâ€™s goals and dignity central.\nA. Correct. Professional values require managing personal beliefs so they do not direct client-centered care",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -373,9 +485,9 @@
                   },
                   {
                       "id":  "aswb-B-086",
-                      "front":  "A bereaved family at a hospice and palliative-care program requests information about a deceased client’s confidential therapy details. What should the clinician do FIRST?",
+                      "front":  "A bereaved family at a hospice and palliative-care program requests information about a deceased clientâ€™s confidential therapy details. What should the clinician do FIRST?",
                       "domain_order":  1,
-                      "back":  "C. Clarify applicable confidentiality obligations after death, the requester’s authority, and what information, if any, may be disclosed.\nA. Incorrect. Family distress or preference does not automatically replace a capable client’s informed end-of-life choices",
+                      "back":  "C. Clarify applicable confidentiality obligations after death, the requesterâ€™s authority, and what information, if any, may be disclosed.\nA. Incorrect. Family distress or preference does not automatically replace a capable clientâ€™s informed end-of-life choices",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -383,7 +495,7 @@
                       "id":  "aswb-B-098",
                       "front":  "During telehealth at a group practice, the connection repeatedly drops while a client is discussing acute distress. What should the clinician do?",
                       "domain_order":  1,
-                      "back":  "A. Use the established emergency and backup communication plan, confirm the client’s location and safety as appropriate, and restore or transition care.\nA. Correct. Telehealth ethics include backup, location, privacy, and emergency planning when technology fails",
+                      "back":  "A. Use the established emergency and backup communication plan, confirm the clientâ€™s location and safety as appropriate, and restore or transition care.\nA. Correct. Telehealth ethics include backup, location, privacy, and emergency planning when technology fails",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -415,7 +527,7 @@
                       "id":  "aswb-B-118",
                       "front":  "A client with an intellectual disability at a hospice and palliative-care program struggles with abstract consent language but answers concrete questions well. What is the BEST approach?",
                       "domain_order":  1,
-                      "back":  "B. Use concrete language, supported communication and teach-back, preserving the client’s own responses and decision-making participation.\nA. Incorrect. Family interpretation or standard procedures may not provide effective, private, or accurate access to services",
+                      "back":  "B. Use concrete language, supported communication and teach-back, preserving the clientâ€™s own responses and decision-making participation.\nA. Incorrect. Family interpretation or standard procedures may not provide effective, private, or accurate access to services",
                       "domain":  "values-and-ethics",
                       "domain_label":  "Values and Ethics"
                   },
@@ -439,7 +551,7 @@
                       "id":  "aswb-A-002",
                       "front":  "At a community outreach program, a capable client chooses comfort-focused care while family members demand aggressive treatment. What should the social worker do?",
                       "domain_order":  2,
-                      "back":  "B. Support communication of the client’s informed goals, address family distress, and help the team maintain continuity consistent with the client’s preferences.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "B. Support communication of the clientâ€™s informed goals, address family distress, and help the team maintain continuity consistent with the clientâ€™s preferences.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -453,7 +565,7 @@
                   },
                   {
                       "id":  "aswb-A-006",
-                      "front":  "At a family-service agency, a client describes a partner as “the angry one” while repeatedly showing intense anger in sessions. Which assessment approach is BEST?",
+                      "front":  "At a family-service agency, a client describes a partner as â€œthe angry oneâ€ while repeatedly showing intense anger in sessions. Which assessment approach is BEST?",
                       "domain_order":  2,
                       "back":  "B. Treat the pattern as a tentative protective or defensive process whose function, context, costs, and relationship effects should be explored without forcing an interpretation.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "assessment-and-planning",
@@ -463,23 +575,7 @@
                       "id":  "aswb-A-007",
                       "front":  "A capable client at a residential treatment program refuses a recommended higher level of care after accurately describing risks and alternatives. No emergency threshold is present. What should the social worker do?",
                       "domain_order":  2,
-                      "back":  "A. Explore the client’s goals and concerns, confirm understanding, respect the informed choice, and create the safest feasible alternative plan.\nA. Correct. Capable informed clients may refuse recommended care; the clinician should preserve safety without substituting professional preference",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-008",
-                      "front":  "At a hospital social-work service, an adolescent reports body dissatisfaction after repeated social-media comments. What should the social worker assess FIRST?",
-                      "domain_order":  2,
-                      "back":  "C. Assess body-image beliefs, eating and activity patterns, development, culture, identity, ability, trauma, discrimination, media exposure, medical factors, functioning, and strengths without assuming pathology.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-009",
-                      "front":  "At a community outreach program, a client’s words say “I’m fine,” while posture and tone communicate distress. What should the social worker do?",
-                      "domain_order":  2,
-                      "back":  "B. Reflect the observed incongruence respectfully and invite the client to clarify the experience without assuming what it means.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "A. Explore the clientâ€™s goals and concerns, confirm understanding, respect the informed choice, and create the safest feasible alternative plan.\nA. Correct. Capable informed clients may refuse recommended care; the clinician should preserve safety without substituting professional preference",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -508,14 +604,6 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-014",
-                      "front":  "A client with panic at a rural behavioral-health clinic avoids elevators and feels immediate relief by taking stairs. Medical causes have been assessed. Which intervention is BEST?",
-                      "domain_order":  2,
-                      "back":  "A. Use a collaborative graded-exposure approach that targets avoidance, supports regulation, and tracks predictions and outcomes.\nA. Correct. Evidence-based intervention selection should match the maintaining mechanism and client context",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-015",
                       "front":  "At a community outreach program, an adult reports anxiety and hypervigilance after release from incarceration. Which assessment approach is BEST?",
                       "domain_order":  2,
@@ -524,16 +612,8 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-016",
-                      "front":  "A client at a nonprofit family-service agency has an unpaid balance and ongoing moderate symptoms. The clinician is considering termination. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "A. Discuss the financial issue and options, reassess clinical risk, provide reasonable notice and referrals if ending, and document continuity efforts.\nA. Correct. Termination can address financial boundaries while still protecting reasonable continuity of care",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-017",
-                      "front":  "At a school-linked program, an adolescent’s symptoms worsen during intense parental conflict. What should the social worker assess FIRST?",
+                      "front":  "At a school-linked program, an adolescentâ€™s symptoms worsen during intense parental conflict. What should the social worker assess FIRST?",
                       "domain_order":  2,
                       "back":  "D. Assess interaction patterns, roles, alliances, communication, stressors, resources, safety, cultural meanings, and how symptoms function within the family system.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "assessment-and-planning",
@@ -544,14 +624,6 @@
                       "front":  "At a group practice, a spouse caring for a partner with dementia reports exhaustion and guilt. What should the social worker assess FIRST?",
                       "domain_order":  2,
                       "back":  "C. Assess caregiving demands, strain, health, safety, roles, beliefs, finances, sleep, supports, service coordination, coping, strengths, and willingness to use available help.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-021",
-                      "front":  "A social worker at a public behavioral-health agency notices persistent intrusive images from clients’ trauma stories and difficulty sleeping. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "B. Use supervision, consultation, and appropriate self-care and workload supports while monitoring effects on clinical judgment and functioning.\nA. Incorrect. Simply pushing through significant burnout or secondary-trauma symptoms can increase the risk of impaired judgment and poorer care",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -567,15 +639,7 @@
                       "id":  "aswb-A-024",
                       "front":  "A child in foster care seen at a community mental-health program has experienced several placement changes. What should guide permanency planning?",
                       "domain_order":  2,
-                      "back":  "C. Safety, attachment and relational continuity, the child’s developmental needs and voice, family possibilities, culture, legal requirements, and stable long-term connection.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-027",
-                      "front":  "A terminally ill client at a telehealth psychotherapy practice expresses fear of burdening family and asks about hospice. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "D. Explore the client’s goals, understanding, fears, supports, and preferences and facilitate informed discussion of hospice and palliative options.\nA. Incorrect. Family distress or preference does not automatically replace a capable client’s informed end-of-life choices",
+                      "back":  "C. Safety, attachment and relational continuity, the childâ€™s developmental needs and voice, family possibilities, culture, legal requirements, and stable long-term connection.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -591,15 +655,7 @@
                       "id":  "aswb-A-031",
                       "front":  "At a residential program, a client in consensual polyamorous relationships seeks help with jealousy. Which assessment approach is BEST?",
                       "domain_order":  2,
-                      "back":  "D. Assess the interaction cycle, agreements and expectations, communication, power, safety, relational needs, meaning, and each person’s goals within the actual relationship structure.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-032",
-                      "front":  "A client at a telehealth practice understands breathing skills but forgets to use them during panic. What should the social worker do NEXT?",
-                      "domain_order":  2,
-                      "back":  "A. Rehearse the skill under mild activation, identify cues for use, simplify the steps, and create a practice and review plan.\nA. Correct. Coping skills are learned through rehearsal, cues, manageable practice, and review—not information alone",
+                      "back":  "D. Assess the interaction cycle, agreements and expectations, communication, power, safety, relational needs, meaning, and each personâ€™s goals within the actual relationship structure.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -645,17 +701,9 @@
                   },
                   {
                       "id":  "aswb-A-043",
-                      "front":  "During an intake at a community mental-health program, an adolescent says, “People here never listen to me.” What should the social worker do FIRST?",
+                      "front":  "During an intake at a community mental-health program, an adolescent says, â€œPeople here never listen to me.â€ What should the social worker do FIRST?",
                       "domain_order":  2,
-                      "back":  "C. Acknowledge the concern, invite the client’s perspective, clarify the social worker’s role, and respond with empathy and curiosity.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-044",
-                      "front":  "A social worker at a telehealth psychotherapy practice makes a clinical error that could affect a client’s care. What action best reflects professional integrity?",
-                      "domain_order":  2,
-                      "back":  "D. Address immediate risk, disclose and correct the error through appropriate processes, document accurately, and take steps to prevent recurrence.\nA. Incorrect. Personal beliefs, organizational convenience, or client waivers do not override the professional obligation to practice competently and with integrity",
+                      "back":  "C. Acknowledge the concern, invite the clientâ€™s perspective, clarify the social workerâ€™s role, and respond with empathy and curiosity.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -663,7 +711,7 @@
                       "id":  "aswb-A-046",
                       "front":  "At a family-service agency, an adolescent wants greater control over treatment decisions. Which assessment approach is BEST?",
                       "domain_order":  2,
-                      "back":  "B. Assess the specific decision and the client’s understanding, appreciation, reasoning, communication, developmental and legal context, fluctuation, supports, preferences, and whether capacity can be enhanced.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "back":  "B. Assess the specific decision and the clientâ€™s understanding, appreciation, reasoning, communication, developmental and legal context, fluctuation, supports, preferences, and whether capacity can be enhanced.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -684,14 +732,6 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-051",
-                      "front":  "At a community mental-health program, a client in acute distress can identify supports, has no current plan or means, and is willing to collaborate on safety. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "C. Use a collaborative safety-focused plan with supports, means review, follow-up, and clear escalation criteria while continuing reassessment.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-052",
                       "front":  "At a community mental-health program, a client relies on online communities as the main source of social support. Which assessment approach is BEST?",
                       "domain_order":  2,
@@ -700,26 +740,10 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-053",
-                      "front":  "An agency at a community mental-health program interprets a new regulation more restrictively than required, reducing access for a marginalized group. What should a social worker do?",
-                      "domain_order":  2,
-                      "back":  "C. Clarify the actual rule, examine the interpretation’s impact, and advocate for an accurate, equitable implementation through appropriate channels.\nA. Incorrect. Ignoring a policy or advising noncompliance can create additional legal and service risks before the governing rule is understood",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-054",
                       "front":  "At a telehealth practice, a child has headaches, school avoidance, family conflict, and bullying. Which assessment focus is MOST appropriate?",
                       "domain_order":  2,
                       "back":  "A. Assess biological, psychological, social, cultural, developmental, environmental, medical, substance, strength, and safety factors and how they interact in the current presentation.\nA. Correct. Biopsychosocial assessment integrates interacting domains before causal or diagnostic conclusions are finalized",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-056",
-                      "front":  "At a school-linked program, a client with a physical disability reports shame about appearance after a new medical procedure. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "D. Assess body-image beliefs, eating and activity patterns, development, culture, identity, ability, trauma, discrimination, media exposure, medical factors, functioning, and strengths without assuming pathology.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -740,50 +764,10 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-059",
-                      "front":  "A clinician at a community outreach program reports compassion fatigue but says current judgment and client care are not yet impaired. What should be done?",
-                      "domain_order":  2,
-                      "back":  "D. Act early with supervision, recovery practices, workload review, and monitoring rather than waiting for clear impairment.\nA. Incorrect. Simply pushing through significant burnout or secondary-trauma symptoms can increase the risk of impaired judgment and poorer care",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-064",
-                      "front":  "At a group practice, a client becomes silent after a sensitive question. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "C. Use interviewing methods that match the moment: begin open then clarify, acknowledge hesitation and pace sensitive topics, and arrange qualified communication access when language differences affect accuracy.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-066",
-                      "front":  "Staff at an integrated-care program report bullying and fear of retaliation when raising concerns. What should administrators do FIRST?",
-                      "domain_order":  2,
-                      "back":  "C. Assess the pattern and safety, create accessible reporting and anti-retaliation processes, involve staff, clarify expectations, and monitor implementation.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-067",
-                      "front":  "A supervisor at a community outreach program learns a supervisee has made a serious clinical error. What should the supervisor do FIRST?",
-                      "domain_order":  2,
-                      "back":  "D. Address immediate client risk, clarify what occurred, guide corrective action, and use the event for accountable supervision and systems learning.\nA. Incorrect. Supervisory authority or personal confidence does not eliminate conflicts of interest or competence limits",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-068",
                       "front":  "At an integrated primary-care clinic, an older adult who was previously independent becomes suddenly confused and unsteady. What should the social worker assess FIRST?",
                       "domain_order":  2,
                       "back":  "C. Compare with baseline and assess health, cognition, role changes, relationships, loss, finances, culture, activity, strengths, supports, and acute medical or medication factors when indicated.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-070",
-                      "front":  "At a group practice, an evidence-based group fits the diagnosis but the client cannot access the schedule and is overwhelmed by large groups. What should the social worker assess FIRST?",
-                      "domain_order":  2,
-                      "back":  "C. Select modality using evidence plus developmental level, abilities, culture, life stage, readiness, access, client-system context, preferences, and capacity to engage.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -804,14 +788,6 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
-                      "id":  "aswb-A-075",
-                      "front":  "A client at a community mental-health program feels stuck between two housing options. Which problem-solving approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "B. Define the decision, identify criteria and constraints, generate realistic options, weigh consequences, choose a step, and review the outcome.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
                       "id":  "aswb-A-077",
                       "front":  "At a public behavioral-health agency, a client needs an interpreter for complex discussion. Which assessment focus is MOST appropriate?",
                       "domain_order":  2,
@@ -821,7 +797,7 @@
                   },
                   {
                       "id":  "aswb-A-080",
-                      "front":  "At an outpatient clinic, a client’s preferred healing practices differ from the clinician’s usual plan. What should the social worker assess FIRST?",
+                      "front":  "At an outpatient clinic, a clientâ€™s preferred healing practices differ from the clinicianâ€™s usual plan. What should the social worker assess FIRST?",
                       "domain_order":  2,
                       "back":  "A. Explore client meaning and goals, clarify authority and privacy, assess safety and evidence, and integrate culturally meaningful participation or practices where feasible and consistent with client wishes.\nA. Correct. Culturally responsive planning integrates meaning, client choice, safety, evidence, and appropriate participation",
                       "domain":  "assessment-and-planning",
@@ -831,7 +807,7 @@
                       "id":  "aswb-A-082",
                       "front":  "At a community mental-health program, family members disagree about the primary problem. Which assessment approach is BEST?",
                       "domain_order":  2,
-                      "back":  "B. Elicit the client system’s perspectives, priorities, strengths, safety concerns, and competing goals, then define problems and plans collaboratively within appropriate role and authority.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
+                      "back":  "B. Elicit the client systemâ€™s perspectives, priorities, strengths, safety concerns, and competing goals, then define problems and plans collaboratively within appropriate role and authority.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -863,7 +839,7 @@
                       "id":  "aswb-A-091",
                       "front":  "A clinician at a rural integrated-care clinic plans to leave the agency in six weeks. What should the clinician do FIRST?",
                       "domain_order":  2,
-                      "back":  "D. Begin timely transition planning with clients, assess risk and barriers, provide appropriate options, and coordinate continuity.\nA. Incorrect. Late or abrupt termination can create avoidable discontinuity and reduce the client’s opportunity to participate in transition planning",
+                      "back":  "D. Begin timely transition planning with clients, assess risk and barriers, provide appropriate options, and coordinate continuity.\nA. Incorrect. Late or abrupt termination can create avoidable discontinuity and reduce the clientâ€™s opportunity to participate in transition planning",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -879,7 +855,7 @@
                       "id":  "aswb-A-096",
                       "front":  "A client at an outpatient behavioral health clinic describes conflict between personal goals and family cultural expectations. What should the clinician do FIRST?",
                       "domain_order":  2,
-                      "back":  "A. Explore the client’s own meanings, identity, family expectations, power, and desired balance before applying a developmental or cultural interpretation.\nA. Correct. Cultural responsiveness begins with client-defined meaning rather than imposing individualistic or collectivist assumptions",
+                      "back":  "A. Explore the clientâ€™s own meanings, identity, family expectations, power, and desired balance before applying a developmental or cultural interpretation.\nA. Correct. Cultural responsiveness begins with client-defined meaning rather than imposing individualistic or collectivist assumptions",
                       "domain":  "assessment-and-planning",
                       "domain_label":  "Assessment and Planning"
                   },
@@ -908,18 +884,154 @@
                       "domain_label":  "Assessment and Planning"
                   },
                   {
+                      "id":  "aswb-A-101",
+                      "front":  "A clinician at a community mental-health program is unfamiliar with a clientâ€™s spiritual practice. What should the clinician do?",
+                      "domain_order":  2,
+                      "back":  "C. Ask respectful, client-centered questions about meaning and relevance, avoid assumptions, and seek appropriate cultural consultation if needed.\nA. Incorrect. Applying a preset developmental, cultural, or diagnostic meaning can stereotype the client before the clientâ€™s own meaning is understood",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-103",
+                      "front":  "A supervisor at a residential treatment program tells a clinician to backdate a treatment plan so the record appears timely. What should the clinician do?",
+                      "domain_order":  2,
+                      "back":  "A. Refuse to falsify the record, make an accurate current entry or permitted amendment, and use appropriate supervisory or compliance channels.\nA. Correct. Accurate records should reflect what occurred and when; supervisory pressure does not justify falsification",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-104",
+                      "front":  "At a public behavioral-health agency, a client frequently interrupts others and reports repeated interpersonal conflict. What should the social worker assess FIRST?",
+                      "domain_order":  2,
+                      "back":  "D. Assess listening, turn-taking, expression of needs, verbal and nonverbal cues, feedback, cultural norms, digital context when relevant, conflict patterns, and relational impact.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-109",
+                      "front":  "At an outpatient clinic, a couple reports that arguments escalate by text but not in person. Which assessment approach is BEST?",
+                      "domain_order":  2,
+                      "back":  "A. Assess listening, turn-taking, expression of needs, verbal and nonverbal cues, feedback, cultural norms, digital context when relevant, conflict patterns, and relational impact.\nA. Correct. Communication assessment describes specific skills and patterns in context rather than assigning motive prematurely",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-111",
+                      "front":  "At a public behavioral-health agency, a child is referred for a treatment designed for adults. Which assessment approach is BEST?",
+                      "domain_order":  2,
+                      "back":  "D. Select modality using evidence plus developmental level, abilities, culture, life stage, readiness, access, client-system context, preferences, and capacity to engage.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-116",
+                      "front":  "A transgender client at a hospital social-work service reports anxiety in medical settings after repeated misgendering. What is the BEST assessment approach?",
+                      "domain_order":  2,
+                      "back":  "B. Assess the anxiety and prior discriminatory experiences, clarify identity-affirming needs, and distinguish environmental threat from internal pathology.\nA. Incorrect. Applying a preset developmental, cultural, or diagnostic meaning can stereotype the client before the clientâ€™s own meaning is understood",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-117",
+                      "front":  "A client at an outpatient clinic says, â€œI want to feel better.â€ Which goal-setting response is BEST?",
+                      "domain_order":  2,
+                      "back":  "D. Translate the broad goal into a client-chosen observable target with specific steps, timeframe, responsibility, and review criteria.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-A-119",
+                      "front":  "At a community outreach program, a client has five broad goals and feels overwhelmed. Which assessment approach is BEST?",
+                      "domain_order":  2,
+                      "back":  "B. Prioritize urgent safety or medical needs, collaborate on the clientâ€™s goals, partialize broad goals into feasible steps, identify barriers and resources, and set measurable review points.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-001",
+                      "front":  "A manager at a hospital social-work service asks clinicians to code every intake at the highest reimbursable complexity level regardless of actual service. What should a social worker do?",
+                      "domain_order":  2,
+                      "back":  "B. Use accurate coding based on the service provided and raise the systematic billing concern through appropriate compliance channels.\nA. Incorrect. Billing must reflect the actual service; managerial direction, client preference, or administrative convenience does not justify inaccurate coding",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-003",
+                      "front":  "At a family-service agency, a childâ€™s behavior improves when caregivers coordinate routines and worsens when rules conflict. Which assessment focus is MOST appropriate?",
+                      "domain_order":  2,
+                      "back":  "B. Assess interaction patterns, roles, alliances, communication, stressors, resources, safety, cultural meanings, and how symptoms function within the family system.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-006",
+                      "front":  "At a group practice, a family experiencing homelessness reports rising conflict and school absences. What should the social worker assess FIRST?",
+                      "domain_order":  2,
+                      "back":  "C. Assess immediate safety and shelter, losses, trauma, health, education or work access, transportation, legal and resource stress, culture, family connections, strengths, and barriers to services.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-008",
+                      "front":  "At a hospital social-work service, an adult reports episodic elevated energy, reduced sleep, and impulsivity. Which assessment focus is MOST appropriate?",
+                      "domain_order":  2,
+                      "back":  "C. Assess duration, severity, change from baseline, functional impairment, safety, developmental context, medical and substance factors, medications, stressors, and protective supports.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-010",
+                      "front":  "At a hospital social-work service, employees show anxiety, irritability, and concentration problems after workplace violence. Which assessment focus is MOST appropriate?",
+                      "domain_order":  2,
+                      "back":  "C. Assess exposure pattern, current safety, functional impact, coping, supports, contextual and historical factors, and whether responses are acute, chronic, or complex.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-011",
+                      "front":  "At a rural behavioral-health clinic, a client in acute distress can identify supports, has no current plan or means, and is willing to collaborate on safety. What is the BEST response?",
+                      "domain_order":  2,
+                      "back":  "D. Use a collaborative safety-focused plan with supports, means review, follow-up, and clear escalation criteria while continuing reassessment.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
+                      "id":  "aswb-B-013",
+                      "front":  "At a telehealth practice, a youth returns home after residential placement and is struggling with trust and rules. What should the social worker assess FIRST?",
+                      "domain_order":  2,
+                      "back":  "A. Assess the placement experience, losses and attachments, trauma, role and routine changes, stigma, supports, health, reintegration demands, strengths, and current safety.\nA. Correct. Out-of-home placement can affect attachment, identity, trauma, functioning, relationships, and reintegration",
+                      "domain":  "assessment-and-planning",
+                      "domain_label":  "Assessment and Planning"
+                  },
+                  {
                       "id":  "aswb-A-003",
                       "front":  "An adult client at a group practice does not want family involved in treatment. The family repeatedly contacts the clinician. What should the clinician do?",
                       "domain_order":  3,
-                      "back":  "C. Respect the client’s preference, clarify communication boundaries, and revisit involvement only with appropriate permission or changed circumstances.\nA. Incorrect. Professional or family preference does not automatically override a capable client’s informed treatment choice",
+                      "back":  "C. Respect the clientâ€™s preference, clarify communication boundaries, and revisit involvement only with appropriate permission or changed circumstances.\nA. Incorrect. Professional or family preference does not automatically override a capable clientâ€™s informed treatment choice",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
                   {
                       "id":  "aswb-A-011",
-                      "front":  "A clinician at a school-linked counseling program notices frequent self-disclosure is shifting sessions toward the clinician’s experiences. What should the clinician do NEXT?",
+                      "front":  "A clinician at a school-linked counseling program notices frequent self-disclosure is shifting sessions toward the clinicianâ€™s experiences. What should the clinician do NEXT?",
                       "domain_order":  3,
                       "back":  "D. Recenter the work on the client, examine the function and impact of disclosure, and use supervision to strengthen boundaries.\nA. Incorrect. Client consent does not erase the power difference or conflict of interest inherent in a significant dual or financial relationship",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-014",
+                      "front":  "A client with panic at a rural behavioral-health clinic avoids elevators and feels immediate relief by taking stairs. Medical causes have been assessed. Which intervention is BEST?",
+                      "domain_order":  3,
+                      "back":  "A. Use a collaborative graded-exposure approach that targets avoidance, supports regulation, and tracks predictions and outcomes.\nA. Correct. Evidence-based intervention selection should match the maintaining mechanism and client context",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-016",
+                      "front":  "A client at a nonprofit family-service agency has an unpaid balance and ongoing moderate symptoms. The clinician is considering termination. What is the BEST response?",
+                      "domain_order":  3,
+                      "back":  "A. Discuss the financial issue and options, reassess clinical risk, provide reasonable notice and referrals if ending, and document continuity efforts.\nA. Correct. Termination can address financial boundaries while still protecting reasonable continuity of care",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -932,6 +1044,14 @@
                       "domain_label":  "Intervention and Practice"
                   },
                   {
+                      "id":  "aswb-A-021",
+                      "front":  "A social worker at a public behavioral-health agency notices persistent intrusive images from clientsâ€™ trauma stories and difficulty sleeping. What is the BEST response?",
+                      "domain_order":  3,
+                      "back":  "B. Use supervision, consultation, and appropriate self-care and workload supports while monitoring effects on clinical judgment and functioning.\nA. Incorrect. Simply pushing through significant burnout or secondary-trauma symptoms can increase the risk of impaired judgment and poorer care",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
                       "id":  "aswb-A-023",
                       "front":  "A clinician at a nonprofit family-service agency is pressured to provide a service beyond current competence because the agency has no specialist available. What response is BEST?",
                       "domain_order":  3,
@@ -940,10 +1060,18 @@
                       "domain_label":  "Intervention and Practice"
                   },
                   {
-                      "id":  "aswb-A-039",
-                      "front":  "At an integrated-care program, a client asks the social worker to decide whether to leave a job. What is the social worker’s BEST role?",
+                      "id":  "aswb-A-027",
+                      "front":  "A terminally ill client at a telehealth psychotherapy practice expresses fear of burdening family and asks about hospice. What is the BEST response?",
                       "domain_order":  3,
-                      "back":  "B. Help the client define the problem, identify priorities and options, consider consequences and resources, and make the client’s own informed decision.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "D. Explore the clientâ€™s goals, understanding, fears, supports, and preferences and facilitate informed discussion of hospice and palliative options.\nA. Incorrect. Family distress or preference does not automatically replace a capable clientâ€™s informed end-of-life choices",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-039",
+                      "front":  "At an integrated-care program, a client asks the social worker to decide whether to leave a job. What is the social workerâ€™s BEST role?",
+                      "domain_order":  3,
+                      "back":  "B. Help the client define the problem, identify priorities and options, consider consequences and resources, and make the clientâ€™s own informed decision.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -972,6 +1100,22 @@
                       "domain_label":  "Intervention and Practice"
                   },
                   {
+                      "id":  "aswb-A-067",
+                      "front":  "A supervisor at a community outreach program learns a supervisee has made a serious clinical error. What should the supervisor do FIRST?",
+                      "domain_order":  3,
+                      "back":  "D. Address immediate client risk, clarify what occurred, guide corrective action, and use the event for accountable supervision and systems learning.\nA. Incorrect. Supervisory authority or personal confidence does not eliminate conflicts of interest or competence limits",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-070",
+                      "front":  "At a group practice, an evidence-based group fits the diagnosis but the client cannot access the schedule and is overwhelmed by large groups. What should the social worker assess FIRST?",
+                      "domain_order":  3,
+                      "back":  "C. Select modality using evidence plus developmental level, abilities, culture, life stage, readiness, access, client-system context, preferences, and capacity to engage.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
                       "id":  "aswb-A-073",
                       "front":  "A client at a telehealth practice reports chronic work stress, muscle tension, and poor sleep. What intervention is BEST?",
                       "domain_order":  3,
@@ -981,7 +1125,7 @@
                   },
                   {
                       "id":  "aswb-A-076",
-                      "front":  "A manager at a group practice pressures a supervisor to lower a supervisee’s evaluation because the supervisee challenged an unsafe policy. What should the supervisor do?",
+                      "front":  "A manager at a group practice pressures a supervisor to lower a superviseeâ€™s evaluation because the supervisee challenged an unsafe policy. What should the supervisor do?",
                       "domain_order":  3,
                       "back":  "C. Base the evaluation on documented performance criteria, address retaliatory pressure through appropriate channels, and protect the integrity of the process.\nA. Incorrect. Supervisory authority or personal confidence does not eliminate conflicts of interest or competence limits",
                       "domain":  "intervention-and-practice",
@@ -1047,7 +1191,7 @@
                       "id":  "aswb-A-094",
                       "front":  "Program data at a rural integrated-care clinic show one racial group is referred to restrictive services more often than peers with similar documented needs. What should the program do FIRST?",
                       "domain_order":  3,
-                      "back":  "A. Examine disaggregated data, referral criteria, assessment language, decision points, and affected stakeholders’ experiences before selecting corrective changes.\nA. Correct. Anti-oppressive practice investigates how systems and decision processes produce inequity rather than hiding disparity data",
+                      "back":  "A. Examine disaggregated data, referral criteria, assessment language, decision points, and affected stakeholdersâ€™ experiences before selecting corrective changes.\nA. Correct. Anti-oppressive practice investigates how systems and decision processes produce inequity rather than hiding disparity data",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1055,7 +1199,15 @@
                       "id":  "aswb-A-098",
                       "front":  "A group at a public behavioral-health agency experiences harm after a discriminatory comment by a facilitator. What should the program do NEXT?",
                       "domain_order":  3,
-                      "back":  "A. Acknowledge the harm, center affected members’ safety and voice, establish accountability, and develop repair steps with follow-up.\nA. Correct. Restorative response combines acknowledgment, affected-party voice, accountability, repair, and follow-up",
+                      "back":  "A. Acknowledge the harm, center affected membersâ€™ safety and voice, establish accountability, and develop repair steps with follow-up.\nA. Correct. Restorative response combines acknowledgment, affected-party voice, accountability, repair, and follow-up",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-102",
+                      "front":  "A client at a community outreach program wants to reduce cocaine use but is not ready for abstinence. Which intervention approach is BEST?",
+                      "domain_order":  3,
+                      "back":  "B. Use motivational and harm-reduction strategies, identify triggers and consequences, build supports, discuss treatment options, and monitor risk and goals.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1076,10 +1228,34 @@
                       "domain_label":  "Intervention and Practice"
                   },
                   {
+                      "id":  "aswb-A-121",
+                      "front":  "A supervisee at an integrated-care program notices uncertainty and avoidance in high-risk cases. What should the supervisee do FIRST?",
+                      "domain_order":  3,
+                      "back":  "B. Identify the learning need, bring it promptly to supervision with relevant cases and questions, and participate in a plan to build competence.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-A-122",
+                      "front":  "A client with panic at an integrated-care program avoids elevators and feels immediate relief by taking stairs. Medical causes have been assessed. Which intervention is BEST?",
+                      "domain_order":  3,
+                      "back":  "B. Use a collaborative graded-exposure approach that targets avoidance, supports regulation, and tracks predictions and outcomes.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
                       "id":  "aswb-B-004",
-                      "front":  "At a rural behavioral-health clinic, caregivers respond inconsistently to a child’s escalating behavior. Which family intervention is BEST?",
+                      "front":  "At a rural behavioral-health clinic, caregivers respond inconsistently to a childâ€™s escalating behavior. Which family intervention is BEST?",
                       "domain_order":  3,
                       "back":  "A. Identify the interaction and reinforcement pattern, align caregivers around a developmentally appropriate response, rehearse consistency, and monitor change.\nA. Correct. Family therapy targets relational and interactional patterns rather than locating the problem only in one person",
+                      "domain":  "intervention-and-practice",
+                      "domain_label":  "Intervention and Practice"
+                  },
+                  {
+                      "id":  "aswb-B-005",
+                      "front":  "A client at a public behavioral-health agency wants to stop therapy after meaningful improvement, while the social worker believes more work would be beneficial. What is the BEST response?",
+                      "domain_order":  3,
+                      "back":  "B. Discuss gains, remaining risks, client goals, follow-up options, and the clientâ€™s right to end services, then plan termination collaboratively.\nA. Incorrect. Professional or family preference does not automatically override a capable clientâ€™s informed treatment choice",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1093,7 +1269,7 @@
                   },
                   {
                       "id":  "aswb-B-009",
-                      "front":  "At a telehealth practice, a client’s words say “I’m fine,” while posture and tone communicate distress. What should the social worker do?",
+                      "front":  "At a telehealth practice, a clientâ€™s words say â€œIâ€™m fine,â€ while posture and tone communicate distress. What should the social worker do?",
                       "domain_order":  3,
                       "back":  "A. Reflect the observed incongruence respectfully and invite the client to clarify the experience without assuming what it means.\nA. Correct. Communication work integrates verbal and nonverbal data while checking meaning with the client",
                       "domain":  "intervention-and-practice",
@@ -1117,7 +1293,7 @@
                   },
                   {
                       "id":  "aswb-B-039",
-                      "front":  "A clinician at a hospice and palliative-care program is asked to provide a specialized intervention outside the clinician’s current competence. The client needs timely care. What should the clinician do?",
+                      "front":  "A clinician at a hospice and palliative-care program is asked to provide a specialized intervention outside the clinicianâ€™s current competence. The client needs timely care. What should the clinician do?",
                       "domain_order":  3,
                       "back":  "C. Acknowledge the competence limit and arrange qualified consultation, training, referral, or another competent continuity plan.\nA. Incorrect. Concealing, rewriting, or informally fixing the problem can undermine record integrity and accountability",
                       "domain":  "intervention-and-practice",
@@ -1127,7 +1303,7 @@
                       "id":  "aswb-B-043",
                       "front":  "At an integrated-care program, two team members each believe the other is responsible for a time-sensitive referral. What should the social worker do NEXT?",
                       "domain_order":  3,
-                      "back":  "C. Clarify the required process, each professional’s authority, task ownership, and the follow-up point so responsibility is explicit.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "C. Clarify the required process, each professionalâ€™s authority, task ownership, and the follow-up point so responsibility is explicit.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1135,7 +1311,7 @@
                       "id":  "aswb-B-052",
                       "front":  "At a telehealth practice, two team members each believe the other is responsible for a time-sensitive referral. What should the social worker do NEXT?",
                       "domain_order":  3,
-                      "back":  "D. Clarify the required process, each professional’s authority, task ownership, and the follow-up point so responsibility is explicit.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
+                      "back":  "D. Clarify the required process, each professionalâ€™s authority, task ownership, and the follow-up point so responsibility is explicit.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1157,7 +1333,7 @@
                   },
                   {
                       "id":  "aswb-B-065",
-                      "front":  "Program data at a community mental-health program show a clinician’s referral decisions differ by client race even after need level is considered. What is the BEST supervisory response?",
+                      "front":  "Program data at a community mental-health program show a clinicianâ€™s referral decisions differ by client race even after need level is considered. What is the BEST supervisory response?",
                       "domain_order":  3,
                       "back":  "D. Review the pattern with the clinician, examine decision criteria and bias, use structured standards, and monitor whether referral equity improves.\nA. Incorrect. Clinical intuition or colleague agreement does not make a biased interpretation objective evidence",
                       "domain":  "intervention-and-practice",
@@ -1199,7 +1375,7 @@
                       "id":  "aswb-B-083",
                       "front":  "A client at a hospital social-work service tells a social worker that a prior comment felt like a microaggression. What should the social worker do NEXT?",
                       "domain_order":  3,
-                      "back":  "C. Invite the client’s experience, acknowledge impact, examine assumptions and power, repair the interaction, and adjust practice.\nA. Incorrect. Clinical intuition or colleague agreement does not make a biased interpretation objective evidence",
+                      "back":  "C. Invite the clientâ€™s experience, acknowledge impact, examine assumptions and power, repair the interaction, and adjust practice.\nA. Incorrect. Clinical intuition or colleague agreement does not make a biased interpretation objective evidence",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1213,9 +1389,9 @@
                   },
                   {
                       "id":  "aswb-B-088",
-                      "front":  "A clinician at an outpatient behavioral health clinic notices feeling more suspicious of one client’s direct communication than of similar behavior from other clients. What should the clinician do FIRST?",
+                      "front":  "A clinician at an outpatient behavioral health clinic notices feeling more suspicious of one clientâ€™s direct communication than of similar behavior from other clients. What should the clinician do FIRST?",
                       "domain_order":  3,
-                      "back":  "B. Pause interpretation, examine possible bias, return to observable evidence and the client’s context, and use supervision as needed.\nA. Incorrect. Clinical intuition or colleague agreement does not make a biased interpretation objective evidence",
+                      "back":  "B. Pause interpretation, examine possible bias, return to observable evidence and the clientâ€™s context, and use supervision as needed.\nA. Incorrect. Clinical intuition or colleague agreement does not make a biased interpretation objective evidence",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1239,7 +1415,7 @@
                       "id":  "aswb-B-105",
                       "front":  "A client at a nonprofit family-service agency asks for help completing advance-care planning but appears confused about the choices. What should the social worker do FIRST?",
                       "domain_order":  3,
-                      "back":  "B. Clarify understanding and decision-making ability, provide accessible information, and involve appropriate medical or legal resources as needed.\nA. Incorrect. Family distress or preference does not automatically replace a capable client’s informed end-of-life choices",
+                      "back":  "B. Clarify understanding and decision-making ability, provide accessible information, and involve appropriate medical or legal resources as needed.\nA. Incorrect. Family distress or preference does not automatically replace a capable clientâ€™s informed end-of-life choices",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1261,9 +1437,9 @@
                   },
                   {
                       "id":  "aswb-B-113",
-                      "front":  "A client at a public behavioral-health agency says the clinician’s professional status makes it hard to disagree with treatment recommendations. What is the BEST response?",
+                      "front":  "A client at a public behavioral-health agency says the clinicianâ€™s professional status makes it hard to disagree with treatment recommendations. What is the BEST response?",
                       "domain_order":  3,
-                      "back":  "D. Name the power difference, explicitly invite disagreement and alternatives, and structure decisions so the client’s voice has meaningful influence.\nA. Incorrect. Explaining intent or professional expertise can reinforce the power difference rather than address the client’s experience",
+                      "back":  "D. Name the power difference, explicitly invite disagreement and alternatives, and structure decisions so the clientâ€™s voice has meaningful influence.\nA. Incorrect. Explaining intent or professional expertise can reinforce the power difference rather than address the clientâ€™s experience",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
                   },
@@ -1279,187 +1455,11 @@
                       "id":  "aswb-B-120",
                       "front":  "A supervisor at a community mental-health program recruits supervisees into a study the supervisor is conducting. What is the BEST safeguard?",
                       "domain_order":  3,
-                      "back":  "D. Separate evaluation authority from recruitment where possible, clearly protect voluntariness, and ensure refusal has no effect on supervision or employment.\nA. Incorrect. Administrative cost or analytic complexity is secondary to participants’ rights, voluntariness, privacy, and appropriate review",
+                      "back":  "D. Separate evaluation authority from recruitment where possible, clearly protect voluntariness, and ensure refusal has no effect on supervision or employment.\nA. Incorrect. Administrative cost or analytic complexity is secondary to participantsâ€™ rights, voluntariness, privacy, and appropriate review",
                       "domain":  "intervention-and-practice",
                       "domain_label":  "Intervention and Practice"
-                  },
-                  {
-                      "id":  "aswb-A-101",
-                      "front":  "A clinician at a community mental-health program is unfamiliar with a client’s spiritual practice. What should the clinician do?",
-                      "domain_order":  2,
-                      "back":  "C. Ask respectful, client-centered questions about meaning and relevance, avoid assumptions, and seek appropriate cultural consultation if needed.\nA. Incorrect. Applying a preset developmental, cultural, or diagnostic meaning can stereotype the client before the client’s own meaning is understood",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-102",
-                      "front":  "A client at a community outreach program wants to reduce cocaine use but is not ready for abstinence. Which intervention approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "B. Use motivational and harm-reduction strategies, identify triggers and consequences, build supports, discuss treatment options, and monitor risk and goals.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-103",
-                      "front":  "A supervisor at a residential treatment program tells a clinician to backdate a treatment plan so the record appears timely. What should the clinician do?",
-                      "domain_order":  2,
-                      "back":  "A. Refuse to falsify the record, make an accurate current entry or permitted amendment, and use appropriate supervisory or compliance channels.\nA. Correct. Accurate records should reflect what occurred and when; supervisory pressure does not justify falsification",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-104",
-                      "front":  "At a public behavioral-health agency, a client frequently interrupts others and reports repeated interpersonal conflict. What should the social worker assess FIRST?",
-                      "domain_order":  2,
-                      "back":  "D. Assess listening, turn-taking, expression of needs, verbal and nonverbal cues, feedback, cultural norms, digital context when relevant, conflict patterns, and relational impact.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-106",
-                      "front":  "At a community outreach program, an adult reports feeling “between cultures” after migration. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "B. Explore identity, belonging, language, family expectations, culture, spirituality, discrimination, developmental meaning, strengths, conflict, and supports without pathologizing exploration.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-109",
-                      "front":  "At an outpatient clinic, a couple reports that arguments escalate by text but not in person. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "A. Assess listening, turn-taking, expression of needs, verbal and nonverbal cues, feedback, cultural norms, digital context when relevant, conflict patterns, and relational impact.\nA. Correct. Communication assessment describes specific skills and patterns in context rather than assigning motive prematurely",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-111",
-                      "front":  "At a public behavioral-health agency, a child is referred for a treatment designed for adults. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "D. Select modality using evidence plus developmental level, abilities, culture, life stage, readiness, access, client-system context, preferences, and capacity to engage.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-116",
-                      "front":  "A transgender client at a hospital social-work service reports anxiety in medical settings after repeated misgendering. What is the BEST assessment approach?",
-                      "domain_order":  2,
-                      "back":  "B. Assess the anxiety and prior discriminatory experiences, clarify identity-affirming needs, and distinguish environmental threat from internal pathology.\nA. Incorrect. Applying a preset developmental, cultural, or diagnostic meaning can stereotype the client before the client’s own meaning is understood",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-117",
-                      "front":  "A client at an outpatient clinic says, “I want to feel better.” Which goal-setting response is BEST?",
-                      "domain_order":  2,
-                      "back":  "D. Translate the broad goal into a client-chosen observable target with specific steps, timeframe, responsibility, and review criteria.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-118",
-                      "front":  "A migrant worker at a nonprofit family-service agency reports an employer is holding identification documents and threatening immigration consequences if the worker leaves. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "B. Assess immediate safety, coercion, needs and client goals, clarify the social worker’s role, and connect to qualified legal and trafficking resources without making legal promises.\nA. Incorrect. Confronting the suspected exploiter or directing the client immediately can increase danger before consent, coercion, and vulnerability are assessed",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-119",
-                      "front":  "At a community outreach program, a client has five broad goals and feels overwhelmed. Which assessment approach is BEST?",
-                      "domain_order":  2,
-                      "back":  "B. Prioritize urgent safety or medical needs, collaborate on the client’s goals, partialize broad goals into feasible steps, identify barriers and resources, and set measurable review points.\nA. Incorrect. This is a plausible consideration, but it is premature, incomplete, or gives insufficient weight to the information needed for the current assessment or planning decision",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-121",
-                      "front":  "A supervisee at an integrated-care program notices uncertainty and avoidance in high-risk cases. What should the supervisee do FIRST?",
-                      "domain_order":  2,
-                      "back":  "B. Identify the learning need, bring it promptly to supervision with relevant cases and questions, and participate in a plan to build competence.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-A-122",
-                      "front":  "A client with panic at an integrated-care program avoids elevators and feels immediate relief by taking stairs. Medical causes have been assessed. Which intervention is BEST?",
-                      "domain_order":  2,
-                      "back":  "B. Use a collaborative graded-exposure approach that targets avoidance, supports regulation, and tracks predictions and outcomes.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-001",
-                      "front":  "A manager at a hospital social-work service asks clinicians to code every intake at the highest reimbursable complexity level regardless of actual service. What should a social worker do?",
-                      "domain_order":  2,
-                      "back":  "B. Use accurate coding based on the service provided and raise the systematic billing concern through appropriate compliance channels.\nA. Incorrect. Billing must reflect the actual service; managerial direction, client preference, or administrative convenience does not justify inaccurate coding",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-002",
-                      "front":  "A client at an outpatient clinic says, “I’m angry that no one understands me.” Which response BEST demonstrates active listening?",
-                      "domain_order":  2,
-                      "back":  "A. Reflect the emotion and meaning, invite elaboration, and check whether the social worker’s understanding is accurate.\nA. Correct. Active listening reflects content and emotion, invites elaboration, and checks understanding",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-003",
-                      "front":  "At a family-service agency, a child’s behavior improves when caregivers coordinate routines and worsens when rules conflict. Which assessment focus is MOST appropriate?",
-                      "domain_order":  2,
-                      "back":  "B. Assess interaction patterns, roles, alliances, communication, stressors, resources, safety, cultural meanings, and how symptoms function within the family system.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-005",
-                      "front":  "A client at a public behavioral-health agency wants to stop therapy after meaningful improvement, while the social worker believes more work would be beneficial. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "B. Discuss gains, remaining risks, client goals, follow-up options, and the client’s right to end services, then plan termination collaboratively.\nA. Incorrect. Professional or family preference does not automatically override a capable client’s informed treatment choice",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-006",
-                      "front":  "At a group practice, a family experiencing homelessness reports rising conflict and school absences. What should the social worker assess FIRST?",
-                      "domain_order":  2,
-                      "back":  "C. Assess immediate safety and shelter, losses, trauma, health, education or work access, transportation, legal and resource stress, culture, family connections, strengths, and barriers to services.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-008",
-                      "front":  "At a hospital social-work service, an adult reports episodic elevated energy, reduced sleep, and impulsivity. Which assessment focus is MOST appropriate?",
-                      "domain_order":  2,
-                      "back":  "C. Assess duration, severity, change from baseline, functional impairment, safety, developmental context, medical and substance factors, medications, stressors, and protective supports.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-010",
-                      "front":  "At a hospital social-work service, employees show anxiety, irritability, and concentration problems after workplace violence. Which assessment focus is MOST appropriate?",
-                      "domain_order":  2,
-                      "back":  "C. Assess exposure pattern, current safety, functional impact, coping, supports, contextual and historical factors, and whether responses are acute, chronic, or complex.\nA. Incorrect. This response narrows the formulation too early, overstates one explanation, or overlooks developmental, contextual, functional, safety, or person-in-environment information needed for assessment",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-011",
-                      "front":  "At a rural behavioral-health clinic, a client in acute distress can identify supports, has no current plan or means, and is willing to collaborate on safety. What is the BEST response?",
-                      "domain_order":  2,
-                      "back":  "D. Use a collaborative safety-focused plan with supports, means review, follow-up, and clear escalation criteria while continuing reassessment.\nA. Incorrect. This is a plausible action in some circumstances, but it is premature, incomplete, overly restrictive, or less well matched to the current practice stage than the keyed response",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
-                  },
-                  {
-                      "id":  "aswb-B-013",
-                      "front":  "At a telehealth practice, a youth returns home after residential placement and is struggling with trust and rules. What should the social worker assess FIRST?",
-                      "domain_order":  2,
-                      "back":  "A. Assess the placement experience, losses and attachments, trauma, role and routine changes, stigma, supports, health, reintegration demands, strengths, and current safety.\nA. Correct. Out-of-home placement can affect attachment, identity, trauma, functioning, relationships, and reintegration",
-                      "domain":  "assessment-and-planning",
-                      "domain_label":  "Assessment and Planning"
                   }
               ],
-    "title":  "LCSW ASWB Clinical â€” Flashcard Study Center",
+    "title":  "LCSW ASWB Clinical Ã¢â‚¬â€ Flashcard Study Center",
     "expected_total":  180
 }

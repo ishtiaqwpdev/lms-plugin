@@ -116,54 +116,81 @@ foreach ($pack in @(@{ items = $formA; tag = 'A' }, @{ items = $formB; tag = 'B'
 	}
 }
 
-# Balance to 60/60/60 = 180 by round-robin take from each domain pool.
+# Approved allocation: Values and Ethics 65 / Assessment and Planning 58 / Intervention and Practice 57.
+$TargetCounts = @{
+	'values-and-ethics'         = 65
+	'assessment-and-planning'   = 58
+	'intervention-and-practice' = 57
+}
+
 $byDomain = @{}
 foreach ($d in $DomainDefs) { $byDomain[$d.key] = New-Object System.Collections.Generic.List[hashtable] }
 foreach ($c in $built) { $byDomain[$c.domain].Add($c) }
 
+function Score-DomainText([string]$Text, [string]$Kind) {
+	$t = $Text.ToLowerInvariant()
+	$n = 0
+	$words = @()
+	if ($Kind -eq 'ethics') {
+		$words = @('ethic','confidential','consent','mandate','boundary','dual relationship','privilege','justice','self-determination','values','nasw','duty to warn','informed consent','discrimination','oppression','cultural humility','advocacy')
+	} elseif ($Kind -eq 'assess') {
+		$words = @('assess','diagnos','biopsychosocial','intake','screen','risk','suicid','formul','goal','treatment plan','triage','person-in-environment','developmental','strengths','collateral')
+	} else {
+		$words = @('interven','therap','cbt','modality','session','group','family system','crisis response','termination','referral','case manag','supervis','discharge','engage the client','motivational')
+	}
+	foreach ($w in $words) { if ($t.Contains($w)) { $n++ } }
+	return $n
+}
+
 $final = New-Object System.Collections.Generic.List[hashtable]
-$per = 60
+$used = @{}
+
 foreach ($d in $DomainDefs) {
+	$need = [int]$TargetCounts[$d.key]
 	$pool = $byDomain[$d.key]
-	$take = [Math]::Min($per, $pool.Count)
-	for ($i = 0; $i -lt $take; $i++) { $final.Add($pool[$i]) }
-}
-
-# Top up to 180 from remaining cards in any pool.
-if ($final.Count -lt 180) {
-	foreach ($d in $DomainDefs) {
-		$pool = $byDomain[$d.key]
-		for ($i = $per; $i -lt $pool.Count -and $final.Count -lt 180; $i++) {
-			$final.Add($pool[$i])
-		}
+	$take = [Math]::Min($need, $pool.Count)
+	for ($i = 0; $i -lt $take; $i++) {
+		$final.Add($pool[$i])
+		$used[$pool[$i].id] = $true
 	}
 }
 
-# If still short, reassign leftovers into short domains.
-if ($final.Count -lt 180) {
-	$used = @{}
-	foreach ($c in $final) { $used[$c.id] = $true }
-	$leftover = @($built | Where-Object { -not $used.ContainsKey($_.id) })
-	$li = 0
-	while ($final.Count -lt 180 -and $li -lt $leftover.Count) {
-		$c = $leftover[$li]
-		$short = $DomainDefs | Sort-Object { @($final | Where-Object domain -eq $_.key).Count } | Select-Object -First 1
+function Add-Reassigned([string]$TargetKey, [int]$NeedMore) {
+	if ($NeedMore -le 0) { return }
+	$def = $DomainDefs | Where-Object { $_.key -eq $TargetKey } | Select-Object -First 1
+	$kind = if ($TargetKey -eq 'values-and-ethics') { 'ethics' } elseif ($TargetKey -eq 'intervention-and-practice') { 'interv' } else { 'assess' }
+	$candidates = @($built | Where-Object { -not $used.ContainsKey($_.id) } | Sort-Object {
+		- (Score-DomainText ($_.front + ' ' + $_.back) $kind)
+	})
+	$added = 0
+	foreach ($c in $candidates) {
+		if ($added -ge $NeedMore) { break }
 		$final.Add(@{
-			id = $c.id
-			front = $c.front
-			back = $c.back
-			domain = $short.key
-			domain_label = $short.label
-			domain_order = [int]$short.order
+			id            = $c.id
+			front         = $c.front
+			back          = $c.back
+			domain        = $def.key
+			domain_label  = $def.label
+			domain_order  = [int]$def.order
 		})
-		$li++
+		$used[$c.id] = $true
+		$added++
 	}
 }
 
-if ($final.Count -gt 180) {
-	$trimmed = New-Object System.Collections.Generic.List[hashtable]
-	for ($i = 0; $i -lt 180; $i++) { $trimmed.Add($final[$i]) }
-	$final = $trimmed
+foreach ($d in $DomainDefs) {
+	$have = @($final | Where-Object { $_.domain -eq $d.key }).Count
+	Add-Reassigned $d.key ([int]$TargetCounts[$d.key] - $have)
+}
+
+if ($final.Count -ne 180) {
+	throw ("Expected 180 cards, got {0}" -f $final.Count)
+}
+foreach ($d in $DomainDefs) {
+	$c = @($final | Where-Object { $_.domain -eq $d.key }).Count
+	if ($c -ne [int]$TargetCounts[$d.key]) {
+		throw ("Domain {0} expected {1}, got {2}" -f $d.key, $TargetCounts[$d.key], $c)
+	}
 }
 
 if (-not (Test-Path $OutDir)) { New-Item -ItemType Directory -Path $OutDir | Out-Null }
@@ -177,7 +204,7 @@ $payload = @{
 	title = 'LCSW ASWB Clinical — Flashcard Study Center'
 	expected_total = 180
 	program = 'lcsw-aswb'
-	source = 'Form A/B stems classified to 2026 ASWB Clinical content areas (Practice Exams untouched)'
+	source = 'Form A/B stems classified to 2026 ASWB Clinical content areas; approved allocation 65/58/57 (Practice Exams untouched)'
 	domains = $domainArr
 	cards = @($final)
 }
