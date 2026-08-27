@@ -356,6 +356,13 @@ $programs = @(
 		FlashTitle = 'LMFT AMFTRB National — Flashcard Study Center'
 		DomainMap = @{}
 	}
+	@{
+		Key = 'lmft-law-ethics'
+		WorkbookGlob = 'CTA_LMFT_Law_and_Ethics_EP_WB{0}_*_Candidate_Edition_*.docx'
+		FlashcardRel = ''
+		FlashTitle = 'LMFT California Law & Ethics — Flashcard Study Center'
+		DomainMap = @{}
+	}
 )
 
 if ($ProgramKeys -and $ProgramKeys.Count -gt 0) {
@@ -388,7 +395,7 @@ foreach ($prog in $programs) {
 	}
 
 	$fcCount = 0
-	if (-not $SkipFlashcards) {
+	if (-not $SkipFlashcards -and -not [string]::IsNullOrWhiteSpace([string]$prog.FlashcardRel)) {
 		$fcPath = Join-Path $progDir $prog.FlashcardRel
 		if (Test-Path $fcPath) {
 			$deck = Convert-FlashcardDocxToJson $fcPath $prog.FlashTitle $prog.DomainMap
