@@ -82,7 +82,10 @@ class CTA_Telehealth_Exam_Sync {
 		foreach ( self::match_titles() as $title ) {
 			$course = CTA_Database::get_course_by_title( $title );
 			if ( $course ) {
-				return $course;
+				$is_exam = class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course );
+				if ( ! $is_exam ) {
+					return $course;
+				}
 			}
 		}
 

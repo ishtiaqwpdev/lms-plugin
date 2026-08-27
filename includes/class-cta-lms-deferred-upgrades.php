@@ -408,6 +408,21 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+			case 'ce_catalog_materials_heal':
+				if ( class_exists( 'CTA_Course_Materials' ) ) {
+					$result = CTA_Course_Materials::heal_ce_catalog_material_mapping( 100 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'ce_catalog_materials_heal' );
+					} else {
+						CTA_Course_Materials::ensure_bundled_resources();
+						if ( class_exists( 'CTA_Suicide_Risk_Toolkit_Sync' ) && method_exists( 'CTA_Suicide_Risk_Toolkit_Sync', 'ensure' ) ) {
+							CTA_Suicide_Risk_Toolkit_Sync::ensure();
+						}
+						update_option( CTA_Course_Materials::CE_MATERIALS_HEAL_OPTION, $result, false );
+					}
+				}
+				break;
+
 			case 'lpcc_ncmhce_form_a_v2':
 				if ( class_exists( 'CTA_Lpcc_Ncmhce_Form_A_V2_Sync' ) ) {
 					CTA_Lpcc_Ncmhce_Form_A_V2_Sync::sync( true );

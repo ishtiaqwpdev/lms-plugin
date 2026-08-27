@@ -359,6 +359,9 @@ class CTA_Courses {
 		$is_free_course  = (float) $course->price <= 0;
 		$video_helper    = new CTA_Student_Dashboard();
 		$resources       = CTA_Database::get_downloadable_resources( $course_id );
+		if ( class_exists( 'CTA_Course_Materials' ) ) {
+			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
+		}
 		$syllabus_meta   = class_exists( 'CTA_Syllabus_Sync' )
 			? CTA_Syllabus_Sync::get_meta( $course )
 			: array();

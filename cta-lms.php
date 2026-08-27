@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.298' );
+	define( 'CTA_VERSION', '1.0.299' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -259,6 +259,10 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 
 		if ( version_compare( $installed, '1.0.298', '<' ) ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_practice_exams' );
+		}
+
+		if ( version_compare( $installed, '1.0.299', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'ce_catalog_materials_heal' );
 		}
 	}
 }
@@ -2010,6 +2014,21 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
 
 if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams', 14 );
+}
+
+if ( ! function_exists( 'cta_maybe_heal_ce_catalog_materials' ) ) {
+	/**
+	 * Unlink exam-prep files from CE courses and hide controlled keys from learners.
+	 */
+	function cta_maybe_heal_ce_catalog_materials() {
+		if ( class_exists( 'CTA_Course_Materials' ) ) {
+			CTA_Course_Materials::maybe_heal_ce_catalog_materials();
+		}
+	}
+}
+
+if ( function_exists( 'cta_maybe_heal_ce_catalog_materials' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_ce_catalog_materials' ) ) {
+	add_action( 'plugins_loaded', 'cta_maybe_heal_ce_catalog_materials', 15 );
 }
 
 if ( function_exists( 'cta_maybe_sync_ce_prices_from_catalog' ) && ! has_action( 'plugins_loaded', 'cta_maybe_sync_ce_prices_from_catalog' ) ) {
