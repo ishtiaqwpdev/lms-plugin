@@ -1104,7 +1104,7 @@ class CTA_Lpcc_Law_Ethics_Sync {
 
 				$defs[] = array(
 					'quiz_type' => $quiz_type,
-					'title'     => sprintf( 'WB%d-C%d — %s (Chapter Test)', $wb, $ch, $chapter_title ),
+					'title'     => sprintf( 'Workbook %d — Chapter %d: %s', $wb, $ch, $chapter_title ),
 					'sort'      => $sort,
 					'time'      => 25,
 					'file'      => $file,

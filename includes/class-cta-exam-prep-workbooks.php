@@ -205,6 +205,13 @@ class CTA_Exam_Prep_Workbooks {
 	 * @return string
 	 */
 	public static function get_workbook_practice_bank_button_label( $module = null, $quiz = null ) {
+		if ( $quiz ) {
+			$chapter_label = self::get_chapter_practice_bank_label( $quiz );
+			if ( '' !== $chapter_label ) {
+				return $chapter_label;
+			}
+		}
+
 		$wb_num = 0;
 		if ( $module && class_exists( 'CTA_Exam_Prep_Lessons' ) ) {
 			$wb_num = CTA_Exam_Prep_Lessons::workbook_number_from_module( $module );
@@ -222,6 +229,92 @@ class CTA_Exam_Prep_Workbooks {
 		}
 
 		return __( 'Practice Bank', 'cta-lms' );
+	}
+
+	/**
+	 * Chapter number from quiz_type wb{N}_c{M} or title.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return int
+	 */
+	public static function chapter_number_from_quiz( $quiz ) {
+		if ( ! $quiz ) {
+			return 0;
+		}
+
+		$type = (string) ( $quiz->quiz_type ?? '' );
+		if ( preg_match( '/^wb\d+_c(\d+)$/i', $type, $m ) ) {
+			return absint( $m[1] );
+		}
+
+		$title = (string) ( $quiz->title ?? '' );
+		if ( preg_match( '/^WB\d+-C(\d+)\b/i', $title, $m ) ) {
+			return absint( $m[1] );
+		}
+		if ( preg_match( '/\bChapter\s+(\d+)\b/i', $title, $m ) ) {
+			return absint( $m[1] );
+		}
+
+		return 0;
+	}
+
+	/**
+	 * Approved chapter name from a chapter-test quiz title.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return string
+	 */
+	public static function chapter_title_from_quiz( $quiz ) {
+		if ( ! $quiz ) {
+			return '';
+		}
+
+		$title = trim( (string) ( $quiz->title ?? '' ) );
+		if ( '' === $title ) {
+			return '';
+		}
+
+		if ( preg_match( '/^WB\d+-C\d+\s+[—–\-]\s+(.+?)(?:\s+\(Chapter Test\))?\s*$/u', $title, $m ) ) {
+			return trim( $m[1] );
+		}
+
+		if ( preg_match( '/^Workbook\s+\d+\s+[—–\-]\s+Chapter\s+\d+:\s+(.+)$/u', $title, $m ) ) {
+			return trim( $m[1] );
+		}
+
+		return '';
+	}
+
+	/**
+	 * Unique learner label for a chapter test (wbN_cM). Empty when not a chapter test.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return string
+	 */
+	public static function get_chapter_practice_bank_label( $quiz ) {
+		$wb = self::workbook_number_from_quiz( $quiz );
+		$ch = self::chapter_number_from_quiz( $quiz );
+		if ( $wb < 1 || $ch < 1 ) {
+			return '';
+		}
+
+		$name = self::chapter_title_from_quiz( $quiz );
+		if ( '' !== $name ) {
+			return sprintf(
+				/* translators: 1: workbook number, 2: chapter number, 3: chapter title */
+				__( 'Workbook %1$d — Chapter %2$d: %3$s', 'cta-lms' ),
+				$wb,
+				$ch,
+				$name
+			);
+		}
+
+		return sprintf(
+			/* translators: 1: workbook number, 2: chapter number */
+			__( 'Workbook %1$d — Chapter %2$d Practice Bank', 'cta-lms' ),
+			$wb,
+			$ch
+		);
 	}
 
 	/**

@@ -161,11 +161,13 @@ class CTA_Exam_Prep_Progress_Readiness {
 
 			$status = CTA_Exam_Prep_Workbooks::get_practice_bank_status( $card );
 			$workbook_number = CTA_Exam_Prep_Workbooks::workbook_number_from_quiz( $quiz );
+			$chapter_number  = CTA_Exam_Prep_Workbooks::chapter_number_from_quiz( $quiz );
 			$rows[] = array(
 				'quiz_id'         => $quiz_id,
 				'title'           => (string) $quiz->title,
-				'label'           => CTA_Exam_Prep_Workbooks::get_assessment_category_label( 'workbook_bank', $quiz ),
+				'label'           => CTA_Exam_Prep_Workbooks::get_workbook_practice_bank_button_label( null, $quiz ),
 				'workbook_number' => $workbook_number,
+				'chapter_number'  => $chapter_number,
 				'attempt_count'   => count(
 					array_filter(
 						$attempts,
@@ -188,10 +190,15 @@ class CTA_Exam_Prep_Progress_Readiness {
 			static function ( $a, $b ) {
 				$wa = (int) ( $a['workbook_number'] ?? 999 );
 				$wb = (int) ( $b['workbook_number'] ?? 999 );
-				if ( $wa === $wb ) {
-					return strnatcasecmp( (string) $a['title'], (string) $b['title'] );
+				if ( $wa !== $wb ) {
+					return $wa <=> $wb;
 				}
-				return $wa <=> $wb;
+				$ca = (int) ( $a['chapter_number'] ?? 0 );
+				$cb = (int) ( $b['chapter_number'] ?? 0 );
+				if ( $ca !== $cb ) {
+					return $ca <=> $cb;
+				}
+				return strnatcasecmp( (string) ( $a['label'] ?? $a['title'] ?? '' ), (string) ( $b['label'] ?? $b['title'] ?? '' ) );
 			}
 		);
 
