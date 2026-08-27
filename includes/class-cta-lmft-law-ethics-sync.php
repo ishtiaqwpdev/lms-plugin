@@ -23,6 +23,7 @@ class CTA_Lmft_Law_Ethics_Sync {
 	const TOOLKIT_SEED_OPTION   = 'cta_lmft_law_ethics_toolkits_seeded_1_0_251';
 	const COPY_SEED_OPTION      = 'cta_lmft_law_ethics_copy_seeded_point6_v1_1';
 	const MATERIALS_SEED_OPTION = 'cta_lmft_law_ethics_materials_seeded_1_0_253';
+	const WORKBOOK_BANK_COUNT   = 9;
 	const PACKAGE_TOOLKIT_DIR   = '_packages/CTA_LMFT_Law_and_Ethics_EP_Complete_David_Handoff_Package_v1.0/05_Study_Center_and_Toolkits/';
 	const SLUG          = 'california-law-ethics-exam-preparation';
 	const TITLE         = 'CTA LMFT California Law & Ethics Exam Preparation Program';
@@ -332,26 +333,17 @@ class CTA_Lmft_Law_Ethics_Sync {
 			),
 		);
 
-		$wb_counts = array(
-			1 => 119,
-			2 => 102,
-			3 => 102,
-			4 => 85,
-			5 => 85,
-			6 => 85,
-			7 => 51,
-			8 => 68,
-			9 => 68,
-		);
+		$wb_counts = self::get_workbook_bank_spec();
 		for ( $wb = 1; $wb <= 9; ++$wb ) {
-			$count  = isset( $wb_counts[ $wb ] ) ? (int) $wb_counts[ $wb ] : 0;
+			$meta   = isset( $wb_counts[ $wb ] ) ? $wb_counts[ $wb ] : array( 'expect' => 0, 'time' => 40 );
+			$count  = (int) $meta['expect'];
 			$defs[] = array(
 				'quiz_type' => 'wb' . $wb . '_bank',
 				'title'     => sprintf( 'Workbook %d — %d-Question Assessment', $wb, $count ),
 				'sort'      => 10 + ( $wb * 10 ),
-				'time'      => 0,
-				// Printable Candidate Forms + Controlled Answer Keys are the primary delivery
-				// (synced as downloads). Online LMS banks stay empty until PHP quiz-seeds ship.
+				'time'      => (int) $meta['time'],
+				// Online banks are published by sync_workbook_banks() from PHP seeds.
+				// Empty payload here refreshes title/time only and never wipes questions.
 				'questions' => array(),
 				'key'       => 'wb' . $wb . '_bank',
 			);
@@ -405,6 +397,384 @@ class CTA_Lmft_Law_Ethics_Sync {
 		$result['message'] = $result['ok'] ? 'synced' : 'quiz_write_failed';
 
 		return $result;
+	}
+
+	/**
+	 * Approved item counts and time limits for workbook Practice Banks (Candidate Forms).
+	 *
+	 * @return array<int,array{expect:int,time:int}>
+	 */
+	private static function get_workbook_bank_spec() {
+		return array(
+			1 => array( 'expect' => 119, 'time' => 180 ),
+			2 => array( 'expect' => 102, 'time' => 150 ),
+			3 => array( 'expect' => 102, 'time' => 150 ),
+			4 => array( 'expect' => 85, 'time' => 130 ),
+			5 => array( 'expect' => 85, 'time' => 130 ),
+			6 => array( 'expect' => 85, 'time' => 130 ),
+			7 => array( 'expect' => 51, 'time' => 80 ),
+			8 => array( 'expect' => 68, 'time' => 100 ),
+			9 => array( 'expect' => 68, 'time' => 100 ),
+		);
+	}
+
+	/**
+	 * Nine workbook-bank assessment definitions (quiz_type wb{N}_bank).
+	 *
+	 * @return array<int,array<string,mixed>>
+	 */
+	private static function get_workbook_bank_defs() {
+		$defs = array();
+		$sort = 10;
+		foreach ( self::get_workbook_bank_spec() as $n => $meta ) {
+			$expect   = (int) $meta['expect'];
+			$defs[]   = array(
+				'quiz_type' => 'wb' . $n . '_bank',
+				'title'     => sprintf( 'Workbook %d — %d-Question Assessment', $n, $expect ),
+				'sort'      => $sort,
+				'time'      => (int) $meta['time'],
+				'file'      => 'lmft-law-ethics-wb' . $n . '.php',
+				'expect'    => $expect,
+				'key'       => 'wb' . $n . '_bank',
+				'qkey'      => 'questions_wb' . $n . '_bank',
+			);
+			$sort += 10;
+		}
+
+		return $defs;
+	}
+
+	/**
+	 * Publish online workbook Practice Banks from PHP seeds. Does not write Practice A/B or the final.
+	 *
+	 * @param int $course_id Course ID.
+	 * @return array<string,mixed>
+	 */
+	public static function sync_workbook_banks( $course_id ) {
+		$course_id = absint( $course_id );
+		$result    = array(
+			'ok'        => false,
+			'course_id' => $course_id,
+			'message'   => 'invalid_course',
+		);
+		for ( $n = 1; $n <= self::WORKBOOK_BANK_COUNT; $n++ ) {
+			$result[ 'wb' . $n . '_bank' ]           = 0;
+			$result[ 'questions_wb' . $n . '_bank' ] = 0;
+		}
+
+		if ( ! $course_id ) {
+			return $result;
+		}
+
+		$defs = self::get_workbook_bank_defs();
+		foreach ( $defs as $def ) {
+			$questions              = self::load_seed_questions( $def['file'] );
+			$count                  = count( $questions );
+			$result[ $def['qkey'] ] = $count;
+			if ( (int) $def['expect'] !== $count ) {
+				$result['message'] = sprintf(
+					'invalid_question_bank_count:%s expected %d got %d',
+					$def['quiz_type'],
+					$def['expect'],
+					$count
+				);
+				return $result;
+			}
+		}
+
+		foreach ( $defs as $def ) {
+			$questions = self::load_seed_questions( $def['file'] );
+			$quiz_id   = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+			$result[ $def['key'] ]  = $quiz_id;
+			$result[ $def['qkey'] ] = (int) $def['expect'];
+			if ( ! $quiz_id ) {
+				$result['message'] = 'quiz_write_failed:' . $def['quiz_type'];
+				return $result;
+			}
+		}
+
+		$result['ok']      = true;
+		$result['message'] = 'workbook_banks_synced';
+
+		return $result;
+	}
+
+	/**
+	 * Publish missing workbook banks two at a time (no Practice Exam writes).
+	 *
+	 * @param int $course_id Optional course ID.
+	 * @param int $max_banks Banks to write this pass.
+	 * @return array{ok:bool,course_id:int,synced:int,remaining:int,message:string}
+	 */
+	public static function sync_workbook_banks_missing( $course_id = 0, $max_banks = 2 ) {
+		$max_banks = max( 1, min( 4, absint( $max_banks ) ) );
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'synced'    => 0,
+				'remaining' => self::WORKBOOK_BANK_COUNT,
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+		$synced    = 0;
+		$defs      = self::get_workbook_bank_defs();
+
+		foreach ( $defs as $def ) {
+			if ( $synced >= $max_banks ) {
+				break;
+			}
+
+			if ( ! preg_match( '/^wb(\d+)_bank$/', (string) ( $def['quiz_type'] ?? '' ), $m ) ) {
+				continue;
+			}
+
+			$wb_num = absint( $m[1] );
+			$health = self::get_live_workbook_bank_health( $wb_num, $course_id );
+			if ( ! empty( $health['ok'] ) ) {
+				continue;
+			}
+
+			$questions = self::load_seed_questions( $def['file'] );
+			if ( (int) $def['expect'] !== count( $questions ) ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_workbook_banks( $course_id ),
+					'message'   => 'invalid_question_bank_count:' . $def['quiz_type'],
+				);
+			}
+
+			$quiz_id = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+
+			if ( ! $quiz_id ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_workbook_banks( $course_id ),
+					'message'   => 'quiz_write_failed:' . $def['quiz_type'],
+				);
+			}
+
+			++$synced;
+		}
+
+		$remaining = self::count_missing_workbook_banks( $course_id );
+
+		return array(
+			'ok'        => ( 0 === $remaining ),
+			'course_id' => $course_id,
+			'synced'    => $synced,
+			'remaining' => $remaining,
+			'message'   => 0 === $remaining ? 'workbook_banks_synced' : 'workbook_banks_partial',
+		);
+	}
+
+	/**
+	 * Queue workbook Practice Bank publish if any bank is empty or inactive.
+	 *
+	 * @param int  $course_id Optional course ID.
+	 * @param bool $force     Queue even if banks look healthy.
+	 * @return array{ok:bool,course_id:int,message:string}
+	 */
+	public static function ensure_workbook_banks( $course_id = 0, $force = false ) {
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+
+		if ( ! $force && self::workbook_banks_are_live( $course_id ) ) {
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'workbook_banks_healthy',
+			);
+		}
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_law_ethics_workbook_banks' );
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'workbook_banks_queued',
+			);
+		}
+
+		$sync = self::sync_workbook_banks_missing( $course_id, 2 );
+
+		return array(
+			'ok'        => ! empty( $sync['ok'] ),
+			'course_id' => $course_id,
+			'message'   => (string) ( $sync['message'] ?? 'workbook_bank_sync_failed' ),
+		);
+	}
+
+	/**
+	 * Self-heal unpublished / empty workbook Practice Banks.
+	 *
+	 * @return void
+	 */
+	public static function maybe_heal_workbook_banks() {
+		if ( get_transient( 'cta_lmft_le_wb_bank_heal_lock' ) ) {
+			return;
+		}
+
+		if ( get_transient( 'cta_lms_upgrading' ) ) {
+			return;
+		}
+
+		$course = self::find_course();
+		if ( ! $course || empty( $course->id ) ) {
+			return;
+		}
+
+		if ( self::workbook_banks_are_live( (int) $course->id ) ) {
+			return;
+		}
+
+		set_transient( 'cta_lmft_le_wb_bank_heal_lock', 1, 5 * MINUTE_IN_SECONDS );
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_law_ethics_workbook_banks' );
+		}
+	}
+
+	/**
+	 * @param int $workbook_num Workbook number 1-9.
+	 * @param int $course_id    Optional course ID.
+	 * @return array{ok:bool,course_id:int,quiz_id:int,question_count:int,time_limit_mins:int,status:string}
+	 */
+	public static function get_live_workbook_bank_health( $workbook_num, $course_id = 0 ) {
+		$workbook_num = absint( $workbook_num );
+		$spec         = self::get_workbook_bank_spec();
+		$quiz_type    = 'wb' . $workbook_num . '_bank';
+		$expected     = isset( $spec[ $workbook_num ] ) ? (int) $spec[ $workbook_num ]['expect'] : 0;
+		$empty        = array(
+			'ok'              => false,
+			'course_id'       => 0,
+			'quiz_id'         => 0,
+			'question_count'  => 0,
+			'time_limit_mins' => 0,
+			'status'          => '',
+		);
+
+		if ( $workbook_num < 1 || $workbook_num > self::WORKBOOK_BANK_COUNT || $expected < 1 ) {
+			return $empty;
+		}
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+		if ( ! $course || empty( $course->id ) ) {
+			return $empty;
+		}
+
+		$course_id          = (int) $course->id;
+		$empty['course_id'] = $course_id;
+
+		if ( ! class_exists( 'CTA_Database' ) ) {
+			return $empty;
+		}
+
+		$row = null;
+		foreach ( (array) CTA_Database::get_quizzes_by_course( $course_id, false ) as $candidate ) {
+			if ( $quiz_type === sanitize_key( (string) ( $candidate->quiz_type ?? '' ) ) ) {
+				$row = $candidate;
+				break;
+			}
+		}
+
+		if ( ! $row || empty( $row->id ) ) {
+			return $empty;
+		}
+
+		$quiz_id         = (int) $row->id;
+		$question_count  = count( CTA_Database::get_quiz_questions( $quiz_id ) );
+		$time_limit_mins = (int) ( $row->time_limit_mins ?? 0 );
+		$status          = (string) ( $row->status ?? '' );
+
+		return array(
+			'ok'              => ( $expected === $question_count && $time_limit_mins >= 1 && 'active' === $status ),
+			'course_id'       => $course_id,
+			'quiz_id'         => $quiz_id,
+			'question_count'  => $question_count,
+			'time_limit_mins' => $time_limit_mins,
+			'status'          => $status,
+		);
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function workbook_banks_are_live( $course_id = 0 ) {
+		for ( $n = 1; $n <= self::WORKBOOK_BANK_COUNT; $n++ ) {
+			$health = self::get_live_workbook_bank_health( $n, $course_id );
+			if ( empty( $health['ok'] ) ) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return int
+	 */
+	private static function count_missing_workbook_banks( $course_id ) {
+		$missing = 0;
+		for ( $n = 1; $n <= self::WORKBOOK_BANK_COUNT; $n++ ) {
+			$health = self::get_live_workbook_bank_health( $n, $course_id );
+			if ( empty( $health['ok'] ) ) {
+				++$missing;
+			}
+		}
+		return $missing;
 	}
 
 	/**
@@ -935,6 +1305,8 @@ class CTA_Lmft_Law_Ethics_Sync {
 		if ( empty( $questions ) ) {
 			return $quiz_id;
 		}
+
+		self::maybe_widen_option_columns();
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$wpdb->delete( $q_table, array( 'quiz_id' => $quiz_id ), array( '%d' ) );
@@ -1663,6 +2035,36 @@ class CTA_Lmft_Law_Ethics_Sync {
 			$wpdb->query(
 				"ALTER TABLE {$table} ADD COLUMN unlock_after_quiz_type varchar(40) NOT NULL DEFAULT '' AFTER is_practice_test"
 			);
+		}
+	}
+
+	/**
+	 * Widen option_* columns so long assessment stems are not truncated.
+	 *
+	 * @return void
+	 */
+	private static function maybe_widen_option_columns() {
+		global $wpdb;
+
+		$table = $wpdb->prefix . 'cta_quiz_questions';
+		// phpcs:ignore WordPress.WP.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$exists = $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) );
+		if ( $exists !== $table ) {
+			return;
+		}
+
+		foreach ( array( 'option_a', 'option_b', 'option_c', 'option_d' ) as $col ) {
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+			$row = $wpdb->get_row( $wpdb->prepare( "SHOW COLUMNS FROM {$table} LIKE %s", $col ), ARRAY_A );
+			if ( empty( $row['Type'] ) ) {
+				continue;
+			}
+			$type = strtolower( (string) $row['Type'] );
+			if ( false !== strpos( $type, 'text' ) ) {
+				continue;
+			}
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange, WordPress.DB.PreparedSQL.NotPrepared
+			$wpdb->query( "ALTER TABLE {$table} MODIFY {$col} text NOT NULL" );
 		}
 	}
 

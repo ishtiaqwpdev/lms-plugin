@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.296' );
+	define( 'CTA_VERSION', '1.0.297' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -251,6 +251,10 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 
 		if ( version_compare( $installed, '1.0.296', '<' ) ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
+		}
+
+		if ( version_compare( $installed, '1.0.297', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_workbook_banks' );
 		}
 	}
 }
@@ -1972,6 +1976,21 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_clinical_workbook_banks' ) ) {
 
 if ( function_exists( 'cta_maybe_heal_lmft_clinical_workbook_banks' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_clinical_workbook_banks' ) ) {
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_clinical_workbook_banks', 12 );
+}
+
+if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
+	/**
+	 * Publish missing LMFT Law & Ethics workbook online practice banks without touching Practice Exams.
+	 */
+	function cta_maybe_heal_lmft_law_ethics_workbook_banks() {
+		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
+			CTA_Lmft_Law_Ethics_Sync::maybe_heal_workbook_banks();
+		}
+	}
+}
+
+if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
+	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks', 13 );
 }
 
 if ( function_exists( 'cta_maybe_sync_ce_prices_from_catalog' ) && ! has_action( 'plugins_loaded', 'cta_maybe_sync_ce_prices_from_catalog' ) ) {
