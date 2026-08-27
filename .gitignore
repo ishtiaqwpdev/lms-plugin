@@ -1,0 +1,11 @@
+# Hosting dumps and media archives (live files stay in assets/)
+cta-academy-lms-media.zip
+/files/
+/_media_tmp/
+
+# Cursor numbered copies of plugin directories
+/admin.*/
+/includes.*/
+/public.*/
+/templates.*/
+/vendor.*/

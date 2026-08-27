@@ -1,0 +1,102 @@
+<?php
+/**
+ * In-progress course progress card.
+ *
+ * @package CTA_LMS
+ *
+ * @var object $item Enrollment bundle with course, modules, progress data.
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$enrollment = $item->enrollment;
+$course     = $item->course;
+$progress   = (int) $enrollment->progress;
+$display_title = '';
+if ( ! empty( $course->title ) ) {
+	$display_title = trim( (string) $course->title );
+}
+if ( '' === $display_title && function_exists( 'cta_lms_get_course_display_title' ) ) {
+	$display_title = trim( (string) cta_lms_get_course_display_title( $course ) );
+}
+$card_meta = class_exists( 'CTA_Syllabus_Sync' ) ? CTA_Syllabus_Sync::get_meta( $course ) : array();
+$card_alt  = ! empty( $card_meta['image_alt'] )
+	? (string) $card_meta['image_alt']
+	: (string) $course->title;
+?>
+<article class="card dashboard-course-card cta-progress-card" data-course-id="<?php echo esc_attr( $course->id ); ?>">
+	<?php if ( ! empty( $course->thumbnail_url ) ) : ?>
+		<div class="dashboard-course-card__thumb">
+			<img src="<?php echo esc_url( $course->thumbnail_url ); ?>" alt="<?php echo esc_attr( $card_alt ); ?>">
+		</div>
+	<?php else : ?>
+		<div class="dashboard-course-card__thumb dashboard-course-card__thumb--placeholder" aria-hidden="true"></div>
+	<?php endif; ?>
+	<div class="dashboard-course-card__header">
+		<h3 class="dashboard-course-card__title">
+			<?php if ( $item->player_url ) : ?>
+				<a href="<?php echo esc_url( $item->player_url ); ?>"><?php echo esc_html( $display_title ); ?></a>
+			<?php else : ?>
+				<?php echo esc_html( $display_title ); ?>
+			<?php endif; ?>
+		</h3>
+	</div>
+	<div class="progress">
+		<div class="progress__label">
+			<span><?php echo esc_html__( 'Course progress', 'cta-lms' ); ?></span>
+			<span class="progress__percent cta-progress-percent"><?php echo esc_html( (string) $progress ); ?>%</span>
+		</div>
+		<div class="progress__track">
+			<div class="progress__bar cta-progress-bar" style="width: <?php echo esc_attr( (string) $progress ); ?>%;"></div>
+		</div>
+	</div>
+	<p class="dashboard-course-card__meta cta-progress-meta">
+		<?php
+		printf(
+			/* translators: 1: completed module count, 2: total module count */
+			esc_html__( '%1$d of %2$d modules complete', 'cta-lms' ),
+			(int) $item->completed_count,
+			(int) $item->total_modules
+		);
+		?>
+	</p>
+	<?php
+	$card_modules = isset( $item->modules ) ? (array) $item->modules : array();
+	if ( ! empty( $card_modules ) ) :
+		$completed_ids = isset( $item->completed_ids ) ? (array) $item->completed_ids : array();
+		?>
+		<details class="cta-learner-syllabus__card-outline">
+			<summary><?php esc_html_e( 'Course syllabus / modules', 'cta-lms' ); ?></summary>
+			<ol class="cta-learner-syllabus__card-list">
+				<?php foreach ( $card_modules as $mod ) : ?>
+					<?php
+					$mod_id     = (int) ( $mod->id ?? 0 );
+					$mod_done   = $mod_id && in_array( $mod_id, $completed_ids, true );
+					$mod_player = ( ! empty( $item->player_url ) && $mod_id )
+						? add_query_arg( 'module_id', $mod_id, (string) $item->player_url )
+						: '';
+					?>
+					<li<?php echo $mod_done ? ' class="is-complete"' : ''; ?>>
+						<?php if ( $mod_player ) : ?>
+							<a href="<?php echo esc_url( $mod_player ); ?>"><?php echo esc_html( (string) $mod->title ); ?></a>
+						<?php else : ?>
+							<?php echo esc_html( (string) $mod->title ); ?>
+						<?php endif; ?>
+					</li>
+				<?php endforeach; ?>
+			</ol>
+		</details>
+	<?php endif; ?>
+	<div class="dashboard-course-card__actions">
+		<?php if ( $progress >= 100 ) : ?>
+			<span class="badge badge--primary"><?php echo esc_html__( 'Quiz Ready', 'cta-lms' ); ?></span>
+		<?php else : ?>
+			<span></span>
+		<?php endif; ?>
+		<?php if ( $item->player_url ) : ?>
+			<a href="<?php echo esc_url( $item->player_url ); ?>" class="btn btn-primary"><?php echo esc_html__( 'Continue', 'cta-lms' ); ?></a>
+		<?php endif; ?>
+	</div>
+</article>
