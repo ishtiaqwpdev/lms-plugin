@@ -177,11 +177,19 @@ Write-Host ("Stems A={0} B={1} Keys A={2} B={3}" -f $stemsA.Count, $stemsB.Count
 $poolA = Build-Pool $stemsA $keysA 'Form A'
 $poolB = Build-Pool $stemsB $keysB 'Form B'
 
-$perDomain = 36
+# Approved allocation (NBCC NCMHCE weights on 180 cards): 15/25/15/30/15.
+$TargetCounts = @{
+	'professional-practice-and-ethics'     = 27
+	'intake-assessment-and-diagnosis'      = 45
+	'treatment-planning'                   = 27
+	'counseling-skills-and-interventions'  = 54
+	'core-counseling-attributes'           = 27
+}
 $cards = New-Object System.Collections.Generic.List[object]
 $domainRows = @()
 
 foreach ($def in $DomainDefs) {
+	$need = [int]$TargetCounts[$def.key]
 	$combined = New-Object System.Collections.Generic.List[object]
 	foreach ($c in $poolA[$def.key]) { $combined.Add($c) }
 	foreach ($c in $poolB[$def.key]) { $combined.Add($c) }
@@ -197,11 +205,11 @@ foreach ($def in $DomainDefs) {
 		$unique.Add($c)
 	}
 
-	if ($unique.Count -lt $perDomain) {
-		throw ("Domain {0} has only {1} unique cards; need {2}" -f $def.key, $unique.Count, $perDomain)
+	if ($unique.Count -lt $need) {
+		throw ("Domain {0} has only {1} unique cards; need {2}" -f $def.key, $unique.Count, $need)
 	}
 
-	$picked = $unique | Select-Object -First $perDomain
+	$picked = $unique | Select-Object -First $need
 	$i = 0
 	foreach ($c in $picked) {
 		$i++
@@ -220,7 +228,7 @@ foreach ($def in $DomainDefs) {
 		label = [string]$def.label
 		order = [int]$def.order
 	}
-	Write-Host ("{0}: picked {1} (unique pool {2})" -f $def.label, $perDomain, $unique.Count)
+	Write-Host ("{0}: picked {1} (unique pool {2})" -f $def.label, $need, $unique.Count)
 }
 
 if ($cards.Count -ne 180) {
@@ -232,7 +240,7 @@ $deck = [PSCustomObject]@{
 	title           = 'LPCC NCMHCE — Flashcard Study Center'
 	version         = '1.0'
 	expected_total  = 180
-	source          = 'Five-domain current NCMHCE blueprint rebuild from Form A/B v2 keyed items (Study Center only; exam banks unchanged)'
+	source          = 'Five-domain current NCMHCE blueprint rebuild from Form A/B v2 keyed items; approved allocation 27/45/27/54/27 (Study Center only; exam banks unchanged)'
 	domains         = @($domainRows)
 	cards           = @($cards.ToArray())
 }

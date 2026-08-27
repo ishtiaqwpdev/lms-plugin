@@ -3,7 +3,7 @@
     "title":  "LPCC NCMHCE â€” Flashcard Study Center",
     "version":  "1.0",
     "expected_total":  180,
-    "source":  "Five-domain current NCMHCE blueprint rebuild from Form A/B v2 keyed items (Study Center only; exam banks unchanged)",
+    "source":  "Five-domain current NCMHCE blueprint rebuild from Form A/B v2 keyed items; approved allocation 27/45/27/54/27 (Study Center only; exam banks unchanged)",
     "domains":  [
                     {
                         "key":  "professional-practice-and-ethics",
@@ -274,87 +274,6 @@
                       "back":  "A. Explain the counselor\u0027s confidentiality obligations and limits, clarify that no employer disclosure is currently authorized, and review any relevant record or payment arrangements with Maya.\n\nThe counselor should explain confidentiality and its limits based on the actual counseling relationship and clarify relevant record/payment arrangements rather than make an absolute promise. The ACA Code requires counselors to discuss confidentiality and its limitations with clients and recognizes additional privacy/security considerations when technology or records are involved.",
                       "memory_cue":  "Form A",
                       "sort_order":  127
-                  },
-                  {
-                      "id":  "NCMHCE-1-028",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 3 — ELI P. â€” SECTION 1 — INITIAL PRESENTATION\n\nGiven Eli\u0027s separate authorizations, which information-sharing approach is MOST appropriate?",
-                      "back":  "C. Share safety and transportation information with the aunt and clinically relevant assessment information with the treatment team, each within Eli\u0027s authorized purpose.\n\nEli gave different authorizations for different purposes. His aunt\u0027s role concerns transportation, appointments, and agreed safety support; the treatment team needs clinically relevant information for assessment and care. One authorization does not make every detail appropriate for every recipient. The current ACA Code instructs counselors to involve clients in decisions about how, when, and with whom information isâ€¦",
-                      "memory_cue":  "Form A",
-                      "sort_order":  128
-                  },
-                  {
-                      "id":  "NCMHCE-1-029",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nHow should the counselor respond to the resettlement agency\u0027s request for Nadia\u0027s treatment information?",
-                      "back":  "C. Tell Nadia what the agency requested, clarify that no disclosure is currently authorized, and ask whether she wants any narrowly defined information shared for a specific purpose.\n\nThe agency has requested information, but the case supplies no current authorization or independent disclosure basis. The appropriate response is to involve Nadia in the decision and determine whether she wants a limited disclosure for a defined purpose. The ACA Code states that clients should be involved in disclosure decisions when possible and that, when confidential information must be disclosed, only essential iâ€¦",
-                      "memory_cue":  "Form A",
-                      "sort_order":  129
-                  },
-                  {
-                      "id":  "NCMHCE-1-030",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nNadia is a 37-year-old refugee and mother of two. She resettled in the United States approximately 18 months ago after experiencing serious violence in her country of origin.\n\nWhich informed-consent process is MOST appropriate before counseling proceeds?",
-                      "back":  "B. Confirm Nadia\u0027s language and interpreter preferences, explain the interpreter\u0027s role and confidentiality, review consent directly with Nadia through qualified interpretation, and verify understanding and voluntariness.\n\nInformed consent must be understandable to the client, not merely presented to them. The ACA Code says counselors use developmentally and culturally appropriate, clear language and arrange qualified interpreter or translator services when a client has difficulty understanding the counselor\u0027s language.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  130
-                  },
-                  {
-                      "id":  "NCMHCE-1-031",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 9 — GRACE T. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nHow should the counselor respond?",
-                      "back":  "C. Do not confirm or disclose Grace\u0027s counseling information without authorization or another applicable exception, and discuss with Grace whether she wants her daughter involved.\n\nGrace remains the client, and her daughter has neither authorization nor independent legal authority to obtain Grace\u0027s clinical information. The counselor should protect confidentiality and discuss desired family involvement with Grace.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  131
-                  },
-                  {
-                      "id":  "NCMHCE-1-032",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 9 — GRACE T. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nAt a subsequent session, Grace\u0027s hearing access has been improved, and the counselor completes a brief validated cognitive screening procedure under more appropriate conditions. Grace\u0027s performance remains below the range expected for the instrument.\n\nWhat should the counselor do?",
-                      "back":  "A. Explain the reporting obligation to Grace, make the required APS report promptly, disclose only information needed for the report, and continue collaborative safety support.\n\nThe narrative explicitly establishes a mandatory-reporting duty and that the known facts meet the jurisdiction\u0027s threshold. The counselor should comply promptly while explaining the process, limiting disclosure, and continuing collaborative safety support.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  132
-                  },
-                  {
-                      "id":  "NCMHCE-1-033",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 10 — THEO B. â€” SECTION 1 — INITIAL INTAKE SUMMARY\n\nWhat is the most appropriate response?",
-                      "back":  "C. Clarify the clinical question, complete ADHD assessment within demonstrated competence, and refer for specialized testing only if the needed evaluation exceeds that competence.\n\nThe counselor should clarify what evaluation is actually needed, work within demonstrated competence, and refer for specialized testing only when the clinical question exceeds that competence.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  133
-                  },
-                  {
-                      "id":  "NCMHCE-1-034",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 11 — PRIYA N. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich response best addresses the communication issue?",
-                      "back":  "B. Redirect Priya to the approved secure channel, restate response-time and crisis procedures, and address any clinically relevant content through the established communication process.\n\nThe counselor should preserve the established secure communication structure, clarify response and crisis expectations, and ensure clinically relevant content is not simply ignored.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  134
-                  },
-                  {
-                      "id":  "NCMHCE-1-035",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 10 — THEO B. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich response is most appropriate?",
-                      "back":  "D. With Theo\u0027s authorization, document supported functional limitations and how accommodation may help, while limiting disclosure and avoiding a directive that one specific accommodation be granted.\n\nWith authorization, the counselor may document clinically supported functional limitations and how an accommodation could help, but should limit disclosure and not dictate the employer\u0027s legal accommodation decision.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  135
-                  },
-                  {
-                      "id":  "NCMHCE-1-036",
-                      "domain":  "professional-practice-and-ethics",
-                      "domain_label":  "Professional Practice and Ethics",
-                      "front":  "CASE 8 — AVERY \u0026 SAM â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich referral approach is most appropriate after conjoint work is paused?",
-                      "back":  "D. Offer separate, tailored referrals that address Sam\u0027s safety and support needs and Avery\u0027s concerning behavior, while explaining how continuity and follow-up will occur.\n\nThe two partners now have different clinical needs. Separate tailored referrals preserve safety and continuity without assuming identical services are appropriate for both.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  136
                   },
                   {
                       "id":  "NCMHCE-2-001",
@@ -681,6 +600,87 @@
                       "sort_order":  236
                   },
                   {
+                      "id":  "NCMHCE-2-037",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 6: Mateo C. â€” SECTION 1 - INITIAL PRESENTATION\n\nMateo is a 26-year-old client who reports recurrent superficial cutting since his late teens. His most recent episode occurred two days ago after his partner did not respond to several messages for several hours. Mateo used a razor to make several shallow cuts on his forearm.\n\nWhich assessment would most directly clarify the clinical significance of Mateo\u0027s recent cutting?",
+                      "back":  "C. Assess cutting intent, expected outcome, medical severity, suicidal thoughts or plans, means, history, intoxication, and protective factors.\n\nAssess NSSI function and severity while independently assessing suicide risk rather than treating the two as interchangeable.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  237
+                  },
+                  {
+                      "id":  "NCMHCE-2-038",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 6: Mateo C. â€” SECTION 1 - INITIAL PRESENTATION\n\nWhich working hypothesis would be most useful for understanding Mateo\u0027s urgent-message pattern at this stage?",
+                      "back":  "D. Urgent contact may briefly regulate abandonment fear and shape a repeating counselor-client cycle; examine triggers, responses, relief, and later consequences.\n\nForm a tentative functional hypothesis about the client-counselor reassurance cycle rather than labeling behavior or diagnosing from one interaction pattern.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  238
+                  },
+                  {
+                      "id":  "NCMHCE-2-039",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 7: Mei L. â€” SECTION 1 - INITIAL PRESENTATION\n\nWhich assessment would BEST determine whether a distinct trauma-related syndrome is also present?",
+                      "back":  "B. Clarify the medical and loss experience, then assess intrusion, avoidance, negative mood or cognition, arousal, dissociation, duration, and impairment.\n\nAssess the full trauma-symptom architecture rather than treating the painful event, self-label, or screening score as the diagnosis.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  239
+                  },
+                  {
+                      "id":  "NCMHCE-2-040",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 8: Alan’s Therapy Group â€” SECTION 3 - COURSE OF CARE\n\nWhich pre/post approach BEST determines whether the group\u0027s repair efforts are improving group functioning?",
+                      "back":  "C. Repeat the same safety or cohesion measure at planned intervals from the pre-rupture baseline and pair it with participation, attendance, and individual anxiety-function data.\n\nUse comparable repeated group-process measurement together with participation, attendance, and individual anxiety/function outcomes.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  240
+                  },
+                  {
+                      "id":  "NCMHCE-2-041",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 9: Harold B. â€” SECTION 1 - INITIAL PRESENTATION\n\nHarold is 71 and is the primary caregiver for his spouse, who has moderate dementia. His spouse needs assistance with medications and bathing and has previously attempted to leave the home when confused. No other caregiver is regularly present.\n\nWhich inquiry would MOST directly clarify the immediate safety concerns in Harold\u0027s presentation?",
+                      "back":  "D. Clarify what “never coming back” means, suicidal or violent thoughts, recent caregiving lapses, current supervision, and Harold\u0027s ability to maintain safety.\n\nClarify Harold’s ambiguous escape statement and immediate risk to both Harold and his dependent spouse rather than assuming suicidality or harmless frustration.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  241
+                  },
+                  {
+                      "id":  "NCMHCE-2-042",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 8: Alan’s Therapy Group â€” SECTION 1 - INITIAL PRESENTATION\n\nWhich working hypothesis about Ben’s behavior is MOST appropriate to test?",
+                      "back":  "B. Workplace hierarchy may be suppressing Ben’s disclosure; test that hypothesis through observation and private check-in rather than assuming the meaning of his restraint.\n\nForm a testable hypothesis tied to the observed workplace-specific change rather than turning it into certainty or immediate group policy.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  242
+                  },
+                  {
+                      "id":  "NCMHCE-2-043",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 7: Mei L. â€” SECTION 3 - COURSE OF CARE\n\nWhich interpretation BEST reflects the available evidence about counseling effectiveness?",
+                      "back":  "C. Overall functioning and coping have improved, while the time-limited trigger-related increase remains meaningful outcome data that requires continued monitoring.\n\nEvaluate treatment longitudinally across functioning, coping, and symptom trajectory rather than deciding from the presence or absence of one grief spike.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  243
+                  },
+                  {
+                      "id":  "NCMHCE-2-044",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 8: Alan’s Therapy Group â€” SECTION 1 - INITIAL PRESENTATION\n\nBefore deciding whether Asha and Ben should participate in the same group, what should Alan do?",
+                      "back":  "C. Assess voluntariness, likely inhibition, workplace power, privacy concerns, treatment goals, and realistic alternatives with each employee before deciding group placement.\n\nScreen the concrete effect of workplace power and privacy on group fit rather than treating overlap as automatic inclusion/exclusion or transferring the decision entirely to members.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  244
+                  },
+                  {
+                      "id":  "NCMHCE-2-045",
+                      "domain":  "intake-assessment-and-diagnosis",
+                      "domain_label":  "Intake, Assessment, and Diagnosis",
+                      "front":  "CASE 1: Lena M. â€” SECTION 1 - INITIAL PRESENTATION\n\nWhich provisional formulation is best supported by the information available in this section?",
+                      "back":  "C. Provisional major depressive disorder with peripartum onset; obsessive-compulsive, bipolar, psychotic, and medical explanations for the presentation remain under assessment.\n\nChoose the best-supported provisional syndrome while preserving meaningful diagnostic uncertainty.",
+                      "memory_cue":  "Form B",
+                      "sort_order":  245
+                  },
+                  {
                       "id":  "NCMHCE-3-001",
                       "domain":  "treatment-planning",
                       "domain_label":  "Treatment Planning",
@@ -922,87 +922,6 @@
                       "back":  "D. Consolidate effective supports, revise the after-shift plan around the lapse trigger, continue medical follow-up, and define escalation steps.\n\nMaintenance should preserve what has worked, learn from the lapse, continue coordinated care, and make future escalation decisions explicit.",
                       "memory_cue":  "Form A",
                       "sort_order":  327
-                  },
-                  {
-                      "id":  "NCMHCE-3-028",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 5 — MARCUS D. â€” SECTION 3 — SECOND COUNSELING SESSION\n\nWhich summary best represents Marcus\u0027s progress?",
-                      "back":  "B. Overall progress is meaningful, while the lapse and remaining triggers indicate continued recovery work and targeted plan revision.\n\nProgress review should integrate the lapse with the broader trajectory. Marcus has improved in craving, sleep, functioning, coping, treatment engagement, and recovery behavior while still demonstrating vulnerability requiring additional work.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  328
-                  },
-                  {
-                      "id":  "NCMHCE-3-029",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 5 — MARCUS D. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich approach best supports coordinated care?",
-                      "back":  "D. With Marcus\u0027s authorization, exchange information relevant to shared goals while each provider retains responsibility for their own treatment decisions.\n\nCoordination should use Marcus\u0027s authorization, limit exchange to information relevant to shared care, and preserve each provider\u0027s role and decision-making responsibility.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  329
-                  },
-                  {
-                      "id":  "NCMHCE-3-030",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 6 — SOFIA L. â€” SECTION 3 — SECOND COUNSELING SESSION\n\nWhich plan best supports maintenance of Sofia\u0027s progress?",
-                      "back":  "D. Consolidate warning signs, coping steps, support contacts, online-harassment responses, family communication, means safety, and clear thresholds for escalating care.\n\nThe maintenance plan integrates learned coping, support, online-trigger response, family communication, means safety, and clear escalation thresholds.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  330
-                  },
-                  {
-                      "id":  "NCMHCE-3-031",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 6 — SOFIA L. â€” SECTION 3 — SECOND COUNSELING SESSION\n\nHow should the counselor respond to Sofia\u0027s recent recurrence of self-injury?",
-                      "back":  "C. Reassess suicide and self-harm risk, examine the recurrence sequence, and revise coping, cyberbullying, family-support, and means-safety strategies around identified vulnerabilities.\n\nThe recurrence supplies new information about a specific trigger sequence and therefore calls for fresh risk assessment and targeted treatment-plan revision without erasing prior gains.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  331
-                  },
-                  {
-                      "id":  "NCMHCE-3-032",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 6 — SOFIA L. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich goal set best reflects collaborative treatment planning?",
-                      "back":  "C. Reduce self-harm, practice safer emotion-regulation skills, strengthen responses to cyberbullying, and improve communication with selected supportive adults.\n\nThese goals correspond to concerns Sofia herself has identified and translate them into clinically meaningful outcomes involving self-harm, emotion regulation, cyberbullying response, and communication/support.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  332
-                  },
-                  {
-                      "id":  "NCMHCE-3-033",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 2 — JORDAN K. â€” SECTION 3 — COURSE OF CARE\n\nWhich treatment-plan revision BEST fits Jordan\u0027s current progress?",
-                      "back":  "A. Reduce the crisis emphasis while continuing proportionate suicide monitoring and increase focus on residual depression, academic recovery, family stress, and independent coping.\n\nJordan\u0027s acute suicide-related picture has improved, but depression, academic recovery, independent coping, and family distress remain active. The treatment plan should therefore redistribute emphasis rather than either discontinue safety monitoring or keep treatment organized as though the original acute picture has not changed.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  333
-                  },
-                  {
-                      "id":  "NCMHCE-3-034",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 1 — MAYA R. â€” SECTION 3 — COURSE OF CARE\n\nEight weeks later, Maya has continued the reduced-caffeine pattern and usually sleeps about seven hours per night. She reports one panic attack during the past three weeks compared with two to three attacks per week before treatment.\n\nWhich next-phase treatment objective is BEST matched to Maya\u0027s current progress?",
-                      "back":  "B. Complete agreed graded interchange practices while progressively reducing pulse checking and reassurance behaviors and maintaining normal work attendance.\n\nThe remaining impairment is behavioral and specific: Maya still avoids the interchange and relies on safety behaviors. D creates a collaborative, observable next-phase objective without requiring complete symptom elimination or using a score threshold as a prerequisite.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  334
-                  },
-                  {
-                      "id":  "NCMHCE-3-035",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 1 — MAYA R. â€” SECTION 2 — ADDITIONAL INFORMATION\n\nMaya asks what her baseline panic score means for treatment. Which response BEST uses the result to facilitate decision-making?",
-                      "back":  "A. Explain what the score measures, compare it with Maya\u0027s reported impairment, and use both to decide collaboratively which symptoms and functional goals to prioritize.\n\nAn assessment result contributes information about current severity; it does not independently make the diagnosis, set treatment intensity, or determine the exposure schedule. Using the result alongside Maya\u0027s own impairment and goals turns measurement into shared treatment planning rather than a command. NBCC explicitly includes using assessment results to facilitate client decision-making.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  335
-                  },
-                  {
-                      "id":  "NCMHCE-3-036",
-                      "domain":  "treatment-planning",
-                      "domain_label":  "Treatment Planning",
-                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich treatment-plan revision BEST fits Nadia\u0027s current course?",
-                      "back":  "A. Retain effective grounding and sleep supports while adding Nadia\u0027s chosen trauma-focused treatment, with explicit pacing, orientation monitoring, avoidance targets, and functional goals.\n\nNadia has responded to grounding, sleep, and present-focused work, but significant PTSD targets remain. Treatment planning should therefore preserve what is useful while adding the next clinically indicated treatment elements.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  336
                   },
                   {
                       "id":  "NCMHCE-4-001",
@@ -1329,6 +1248,168 @@
                       "sort_order":  436
                   },
                   {
+                      "id":  "NCMHCE-4-037",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich treatment approach is BEST supported at this stage?",
+                      "back":  "B. Review evidence-based trauma-focused psychotherapy options with Nadia and collaboratively select an appropriate approach with language support, pacing, and monitoring of orientation.\n\nNadia has improved her ability to remain oriented, identifies meaningful PTSD goals, and can participate in shared decision-making. Current VA/DoD guidance recommends individual trauma-focused psychotherapy—particularly PE, CPT, and EMDR—as first-line treatment for PTSD. The existence of dissociative symptoms does not by itself establish that evidence-based trauma treatment must be postponed indefinitely. VA researchâ€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  437
+                  },
+                  {
+                      "id":  "NCMHCE-4-038",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 3 — ELI P. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich approach BEST helps Eli develop a sustainable support system?",
+                      "back":  "A. Map Eli\u0027s aunt, chosen friends, early-psychosis team, and school supports, defining each role, availability, backup, and preferred communication according to his preferences.\n\nEli identifies several potentially useful sources of support, but he has also said he does not want his aunt involved in every decision. A therefore assesses and defines roles rather than assuming that whichever resource appears most reliable should become the central authority. Recovery-oriented early-psychosis care commonly incorporates family, education/employment supports, psychotherapy, and other coordinated serâ€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  438
+                  },
+                  {
+                      "id":  "NCMHCE-4-039",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nDuring another trauma-related discussion, Nadia again begins to appear disoriented. What should the counselor do NEXT?",
+                      "back":  "B. Pause the detailed discussion, orient Nadia to the present, use the agreed grounding strategy, assess current functioning and safety, and decide collaboratively whether to continue.\n\nThe immediate task is to reduce the escalating loss of present orientation, restore enough regulation for informed participation, reassess how Nadia is functioning, and then make the next decision collaboratively. The counselor does not need to choose between “push through” and “never discuss trauma again.”",
+                      "memory_cue":  "Form A",
+                      "sort_order":  439
+                  },
+                  {
+                      "id":  "NCMHCE-4-040",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 5 — MARCUS D. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich counseling approach is most responsive to Marcus\u0027s current alcohol-related needs?",
+                      "back":  "B. Use AUD-focused CBT and motivational work to map after-shift triggers, alcohol expectancies, cravings, and realistic alternative responses.\n\nMarcus has identified a specific reinforcement sequence involving stress, after-shift cues, alcohol expectancies, and craving. AUD-focused cognitive-behavioral and motivational work directly addresses those mechanisms.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  440
+                  },
+                  {
+                      "id":  "NCMHCE-4-041",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 5 — MARCUS D. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich intervention best translates Marcus\u0027s identified trigger pattern into a usable coping strategy?",
+                      "back":  "A. Build a specific after-shift routine that changes cues, delays acting on urges, and uses a practiced coping or support response.\n\nThe strategy converts Marcus\u0027s actual high-risk sequence into an actionable plan by changing cues and rehearsing what he will do when an urge occurs.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  441
+                  },
+                  {
+                      "id":  "NCMHCE-4-042",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 4 — NADIA S. â€” SECTION 1 — INITIAL PRESENTATION\n\nNadia says, “If I can\u0027t tell the whole story, maybe I\u0027m failing therapy.” Which psychoeducation is MOST appropriate?",
+                      "back":  "D. Explain that progress is not measured by how much detail Nadia recounts, that effective PTSD treatments differ in how they address trauma, and that treatment can be selected and paced collaboratively.\n\nNadia is equating therapeutic success with the ability to tell every traumatic detail. That is not an appropriate universal outcome standard. Evidence-based PTSD treatments vary in how they work with traumatic memories, meanings, and exposure, and shared decision-making allows treatment to be selected around evidence, preferences, and clinical fit. VA identifies PE, CPT, and EMDR as strongly supported trauma-focusedâ€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  442
+                  },
+                  {
+                      "id":  "NCMHCE-4-043",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 5 — MARCUS D. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich response most directly addresses the therapeutic rupture Marcus describes?",
+                      "back":  "A. I can see how the referral felt like being passed off. Tell me what that experience was like for you.\n\nThe response attends to Marcus\u0027s subjective experience and invites exploration of the rupture before explaining, defending, or redirecting.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  443
+                  },
+                  {
+                      "id":  "NCMHCE-4-044",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 3 — ELI P. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich psychoeducation is MOST appropriate for Eli at this point?",
+                      "back":  "C. Explain that psychosis can have multiple contributors; sleep and substances may worsen symptoms; longitudinal follow-up clarifies patterns; and early coordinated care supports recovery goals.\n\nEli\u0027s current evidence supports several possible contributors. Psychoeducation should therefore communicate what is known without converting an unresolved differential into certainty. NIMH lists mental illness, sleep deprivation, prescription medications, and drug/alcohol misuse among possible contributors to psychosis and supports early coordinated treatment. NIDA notes that THC can change thoughts and perceptions,â€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  444
+                  },
+                  {
+                      "id":  "NCMHCE-4-045",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 1 — MAYA R. â€” SECTION 3 — COURSE OF CARE\n\nWhich strategy BEST addresses Maya\u0027s remaining difficulty with the freeway interchange?",
+                      "back":  "C. Use a graded plan targeting the interchange while systematically reducing pulse checking, reassurance calls, and other safety behaviors that may limit new learning.\n\nMaya can already enter the freeway environment; the remaining pattern is concentrated at one interchange and includes repeated pulse checking and reassurance. A graded strategy that targets the specific route while reducing those safety behaviors most directly addresses the residual learning problem.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  445
+                  },
+                  {
+                      "id":  "NCMHCE-4-046",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 2 — JORDAN K. â€” SECTION 2 — ADDITIONAL INFORMATION\n\nWith direct inquiry, Jordan reports intermittent thoughts of overdosing on an old prescription approximately two or three times during the past two weeks.\n\nWhich safety plan is BEST matched to Jordan\u0027s current presentation?",
+                      "back":  "A. Identify warning signs, internal coping steps, usable people and settings, professional/crisis resources, medication-access steps, and clear thresholds for urgent reassessment or emergency care.\n\nA complete safety plan links warning signs with internal coping, usable supports or settings, professional/crisis resources, means-safety actions, and escalation thresholds. SAMHSA\u0027s current safety-planning framework similarly organizes intervention around warning signs, coping strategies, supportive contacts, professional resources, and making the environment safer.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  446
+                  },
+                  {
+                      "id":  "NCMHCE-4-047",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 1 — MAYA R. â€” SECTION 2 — ADDITIONAL INFORMATION\n\nWhich CBT plan BEST fits Maya\u0027s current presentation?",
+                      "back":  "B. Combine panic psychoeducation, interoceptive practice, graded in-vivo exposure, and reduction of safety behaviors while monitoring functional progress collaboratively.\n\nPanic-focused CBT commonly targets catastrophic interpretation of bodily sensations and avoidance through cognitive/behavioral work and exposure. In Maya\u0027s case, both internal sensations and freeway avoidance are active, while pulse checking and reassurance can function as safety behaviors that limit corrective learning. The treatment plan therefore needs to address both the sensations and the avoided context ratherâ€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  447
+                  },
+                  {
+                      "id":  "NCMHCE-4-048",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 1 — MAYA R. â€” SECTION 3 — COURSE OF CARE\n\nWhich plan BEST addresses Maya\u0027s request for evening telehealth?",
+                      "back":  "B. Review telehealth consent, privacy/security, Maya\u0027s session location, backup communication and emergency procedures, clinical appropriateness, and how effectiveness will be monitored.\n\nThe ACA Code\u0027s distance-counseling standards address informed consent, risks and benefits, technology failure, response times, emergency procedures, privacy/security, client location/identity, appropriateness of technology-assisted services, and ongoing effectiveness.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  448
+                  },
+                  {
+                      "id":  "NCMHCE-4-049",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 2 — JORDAN K. â€” SECTION 3 — COURSE OF CARE\n\nJordan wants help preparing for a possible conversation with a parent. Which strategy BEST develops communication skills while preserving Jordan\u0027s control over disclosure?",
+                      "back":  "C. Help Jordan decide what to disclose, state the desired boundary or request, rehearse likely responses, and develop a plan for pausing or ending the conversation if needed.\n\nJordan has not yet decided exactly what to disclose. The most useful communication work therefore preserves Jordan\u0027s control over content, clarifies the intended request or boundary, rehearses likely responses, and includes a way to pause or exit if the conversation becomes harmful.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  449
+                  },
+                  {
+                      "id":  "NCMHCE-4-050",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 3 — ELI P. â€” SECTION 1 — INITIAL PRESENTATION\n\nEli says, “Everybody is lining up against me.” Which response BEST facilitates trust and safety?",
+                      "back":  "D. Acknowledge that this feels threatening, explain what the team is doing and why, preserve Eli\u0027s choices, and keep safety concerns explicit without demanding agreement.\n\nEli is already suspicious and worries that people are organizing against him. The counselor should therefore be transparent about what is happening, preserve available choices, acknowledge his experience without endorsing its factual interpretation, and remain direct about safety.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  450
+                  },
+                  {
+                      "id":  "NCMHCE-4-051",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 2 — JORDAN K. â€” SECTION 2 — ADDITIONAL INFORMATION\n\nJordan prefers structured treatment with concrete practice between sessions. Which intervention plan BEST fits the current formulation?",
+                      "back":  "C. Use structured CBT combining behavioral activation, work on guilt and self-critical thinking, sleep and academic goals, coping with family stress, and continued suicide-risk monitoring.\n\nJordan prefers a structured approach with between-session practice, and the current formulation includes withdrawal, academic impairment, self-critical cognitions, sleep disruption, and ongoing safety needs. A structured CBT plan incorporating behavioral activation and cognitive work therefore fits both the clinical targets and Jordan\u0027s stated preferences. Psychotherapy, including structured approaches such as CBT, iâ€¦",
+                      "memory_cue":  "Form A",
+                      "sort_order":  451
+                  },
+                  {
+                      "id":  "NCMHCE-4-052",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 2 — JORDAN K. â€” SECTION 3 — COURSE OF CARE\n\nWhich strategy BEST strengthens Jordan\u0027s support system?",
+                      "back":  "B. Map the availability and role of the close friend, LGBTQ+ center, academic supports, and any family Jordan chooses, then create a network with specific functions and backup options.\n\nA usable support system is based on actual availability, chosen roles, and backup options. Jordan has already made clear that the LGBTQ+ center is helpful but should not automatically be treated as their whole support network, while family involvement remains selective.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  452
+                  },
+                  {
+                      "id":  "NCMHCE-4-053",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 5 — MARCUS D. â€” SECTION 3 — SECOND COUNSELING SESSION\n\nApproximately six weeks later, Marcus has continued medication management and counseling. He has altered his route home, begun eating before leaving work, and uses a brief coping routine when urges increase. He also attends a recovery-support meeting most weeks.\n\nWhich intervention most directly addresses Marcus and his wife\u0027s communication difficulty?",
+                      "back":  "C. Facilitate agreed check-ins using clear requests and I-statements so Marcus can receive support without experiencing it as surveillance.\n\nThe intervention helps both partners communicate needs and expectations while differentiating supportive accountability from surveillance.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  453
+                  },
+                  {
+                      "id":  "NCMHCE-4-054",
+                      "domain":  "counseling-skills-and-interventions",
+                      "domain_label":  "Counseling Skills and Interventions",
+                      "front":  "CASE 10 — THEO B. â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich counseling approach best matches the formulation and treatment plan?",
+                      "back":  "A. Implement a structured individual plan combining executive-function supports, CBT-based anxiety work, behavioral sleep goals, and ongoing review of cannabis use and occupational functioning.\n\nThe intervention follows the formulation by addressing executive function, anxiety, sleep, cannabis-related behavior, and occupational functioning in an integrated individual plan.",
+                      "memory_cue":  "Form A",
+                      "sort_order":  454
+                  },
+                  {
                       "id":  "NCMHCE-5-001",
                       "domain":  "core-counseling-attributes",
                       "domain_label":  "Core Counseling Attributes",
@@ -1570,87 +1651,6 @@
                       "back":  "C. “Being rejected by people whose acceptance matters to you seems to have intensified the sense that you\u0027re a burden. I want to understand that with you.”\n\nJordan has linked interpersonal rejection with a growing sense of burdensomeness. A reflects both dimensions without assuming that identity alone causes the depression or shifting prematurely to education, resource planning, or further assessment.",
                       "memory_cue":  "Form A",
                       "sort_order":  527
-                  },
-                  {
-                      "id":  "NCMHCE-5-028",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 11 — PRIYA N. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich counselor response is most appropriate?",
-                      "back":  "B. Ask which parts of the summary feel accurate or inaccurate, reflect what Priya is experiencing, and clarify the meanings she wants to explore.\n\nThe counselor should return attention to Priya\u0027s lived experience, language, and meaning rather than treating the machine-generated summary as independent clinical evidence or dismissing it before understanding its significance to her.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  528
-                  },
-                  {
-                      "id":  "NCMHCE-5-029",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 11 — PRIYA N. â€” SECTION 1 — INITIAL PRESENTATION\n\nWhich response best demonstrates empathic attunement?",
-                      "back":  "C. It sounds painful to measure yourself against what you think a therapist should handle and then feel ashamed when you need help too.\n\nPriya is describing shame and self-evaluation tied to what she believes a therapist should tolerate. The response stays with that emotional meaning instead of reassuring or restructuring it immediately.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  529
-                  },
-                  {
-                      "id":  "NCMHCE-5-030",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 1: Lena M. â€” SECTION 1 - INITIAL PRESENTATION\n\nLena says, “What kind of mother thinks something like this?” Which response best combines empathic attunement with continued assessment?",
-                      "back":  "B. The image sounds frightening and shame-filled. What happens when it appears, and what do you fear it means?\n\nRespond empathically while continuing to explore phenomenology rather than reassuring away risk or meaning.",
-                      "memory_cue":  "Form B",
-                      "sort_order":  530
-                  },
-                  {
-                      "id":  "NCMHCE-5-031",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 11 — PRIYA N. â€” SECTION 2 — ADDITIONAL INFORMATION\n\nWhich response best demonstrates conflict tolerance and resolution?",
-                      "back":  "A. Acknowledge Priya\u0027s anger and sense of abandonment, remain nondefensive about the constraint, and collaborate on the safest available continuity plan.\n\nThe counselor cannot negotiate away the legal constraint but can remain therapeutically present while Priya expresses anger, hold the boundary nondefensively, and collaborate on continuity.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  531
-                  },
-                  {
-                      "id":  "NCMHCE-5-032",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 10 — THEO B. â€” SECTION 1 — INITIAL INTAKE SUMMARY\n\nWhich response best demonstrates empathic attunement?",
-                      "back":  "A. It sounds exhausting to work this hard and still wonder whether the struggle means something is wrong with your character rather than your attention.\n\nThe response reflects the emotional meaning of Theo\u0027s statement: he is working hard while questioning his character and competence, without confirming ADHD prematurely.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  532
-                  },
-                  {
-                      "id":  "NCMHCE-5-033",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 8 — AVERY \u0026 SAM â€” SECTION 1 — INITIAL INTAKE SUMMARY\n\nWhich response is most appropriate?",
-                      "back":  "B. Part of you seems to be saying it was not serious, while another part remembers feeling trapped and frightened when the doorway was blocked.\n\nThe response reflects Sam\u0027s own ambivalence and fear without imposing a label, blaming Sam, or minimizing the experience because no physical assault occurred.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  533
-                  },
-                  {
-                      "id":  "NCMHCE-5-034",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 7 — DARNELL W. â€” SECTION 1 — INITIAL INTAKE SUMMARY\n\nWhich counselor response best demonstrates empathic responding?",
-                      "back":  "D. You are dealing with persistent pain and also carrying the experience of not feeling believed when you tried to get help before.\n\nThe response reflects both the chronic pain and the relational injury of repeatedly feeling disbelieved without endorsing unsafe dosing or promising that this counselor will prove different.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  534
-                  },
-                  {
-                      "id":  "NCMHCE-5-035",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 9 — GRACE T. â€” SECTION 1 — INITIAL INTAKE SUMMARY\n\nWhich response best demonstrates a nonjudgmental stance?",
-                      "back":  "B. It sounds frightening to think that asking for help could lead people to treat you as incapable; we can examine the concerns without making that assumption.\n\nThe response reflects Grace\u0027s fear of being treated as incapable while avoiding both paternalism and false reassurance and leaving room to examine genuine concerns.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  535
-                  },
-                  {
-                      "id":  "NCMHCE-5-036",
-                      "domain":  "core-counseling-attributes",
-                      "domain_label":  "Core Counseling Attributes",
-                      "front":  "CASE 8 — AVERY \u0026 SAM â€” SECTION 2 — FIRST COUNSELING SESSION\n\nWhich counselor response best maintains a nonjudgmental stance without minimizing the behavior?",
-                      "back":  "C. I hear that you do not see yourself as violent. I also want to understand what happens when you block the doorway or take Sam\u0027s phone.\n\nThe response acknowledges Avery\u0027s perspective while maintaining attention to the specific behaviors that require examination, without shaming Avery or colluding with minimization.",
-                      "memory_cue":  "Form A",
-                      "sort_order":  536
                   }
               ]
 }
