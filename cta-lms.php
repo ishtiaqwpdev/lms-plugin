@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.297' );
+	define( 'CTA_VERSION', '1.0.298' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -255,6 +255,10 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 
 		if ( version_compare( $installed, '1.0.297', '<' ) ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_workbook_banks' );
+		}
+
+		if ( version_compare( $installed, '1.0.298', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_practice_exams' );
 		}
 	}
 }
@@ -1991,6 +1995,21 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
 
 if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks', 13 );
+}
+
+if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
+	/**
+	 * Publish missing LMFT Law & Ethics Practice A/B / comprehensive final without touching workbook banks.
+	 */
+	function cta_maybe_heal_lmft_law_ethics_practice_exams() {
+		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
+			CTA_Lmft_Law_Ethics_Sync::maybe_heal_practice_exams();
+		}
+	}
+}
+
+if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
+	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams', 14 );
 }
 
 if ( function_exists( 'cta_maybe_sync_ce_prices_from_catalog' ) && ! has_action( 'plugins_loaded', 'cta_maybe_sync_ce_prices_from_catalog' ) ) {

@@ -294,7 +294,9 @@ class CTA_Lmft_Law_Ethics_Sync {
 	}
 
 	/**
-	 * Create/update assessment quizzes. License module loads 25 secured questions; workbook shells stay empty until client content arrives.
+	 * Create/update assessment quizzes. License module loads 25 secured questions.
+	 * Workbook-bank and Practice Exam shells stay empty here; questions are published
+	 * by sync_workbook_banks() and sync_practice_exams() from PHP seeds.
 	 *
 	 * @param int $course_id Course ID.
 	 * @return array<string,mixed>
@@ -349,30 +351,18 @@ class CTA_Lmft_Law_Ethics_Sync {
 			);
 		}
 
-		$defs[] = array(
-			'quiz_type' => 'practice_a',
-			'title'     => 'Practice Examination A — 50-Question Assessment',
-			'sort'      => 200,
-			'time'      => 60,
-			'questions' => array(),
-			'key'       => 'practice_a',
-		);
-		$defs[] = array(
-			'quiz_type' => 'practice_b',
-			'title'     => 'Practice Examination B — 50-Question Assessment',
-			'sort'      => 210,
-			'time'      => 60,
-			'questions' => array(),
-			'key'       => 'practice_b',
-		);
-		$defs[] = array(
-			'quiz_type' => 'comprehensive_final',
-			'title'     => 'Comprehensive Final Examination — 100-Question Assessment',
-			'sort'      => 220,
-			'time'      => 120,
-			'questions' => array(),
-			'key'       => 'comprehensive_final',
-		);
+		foreach ( self::get_practice_exam_defs() as $exam_def ) {
+			$defs[] = array(
+				'quiz_type' => $exam_def['quiz_type'],
+				'title'     => $exam_def['title'],
+				'sort'      => (int) $exam_def['sort'],
+				'time'      => (int) $exam_def['time'],
+				// Practice Exams are published by sync_practice_exams() from PHP seeds.
+				// Empty payload here refreshes title/time only and never wipes questions.
+				'questions' => array(),
+				'key'       => $exam_def['key'],
+			);
+		}
 
 		$written = 0;
 		foreach ( $defs as $def ) {
@@ -778,6 +768,381 @@ class CTA_Lmft_Law_Ethics_Sync {
 	}
 
 	/**
+	 * Practice Examination A/B + Comprehensive Final definitions.
+	 *
+	 * @return array<int,array<string,mixed>>
+	 */
+	private static function get_practice_exam_defs() {
+		return array(
+			array(
+				'quiz_type' => 'practice_a',
+				'title'     => 'Practice Examination A — 50-Question Assessment',
+				'sort'      => 200,
+				'time'      => 60,
+				'file'      => 'lmft-law-ethics-practice-a.php',
+				'expect'    => 50,
+				'key'       => 'practice_a',
+				'qkey'      => 'questions_practice_a',
+			),
+			array(
+				'quiz_type' => 'practice_b',
+				'title'     => 'Practice Examination B — 50-Question Assessment',
+				'sort'      => 210,
+				'time'      => 60,
+				'file'      => 'lmft-law-ethics-practice-b.php',
+				'expect'    => 50,
+				'key'       => 'practice_b',
+				'qkey'      => 'questions_practice_b',
+			),
+			array(
+				'quiz_type' => 'comprehensive_final',
+				'title'     => 'Comprehensive Final Examination — 100-Question Assessment',
+				'sort'      => 220,
+				'time'      => 120,
+				'file'      => 'lmft-law-ethics-comprehensive-final.php',
+				'expect'    => 100,
+				'key'       => 'comprehensive_final',
+				'qkey'      => 'questions_comprehensive_final',
+			),
+		);
+	}
+
+	/**
+	 * Publish Practice A/B and the comprehensive final from PHP seeds.
+	 * Does not write workbook Practice Banks, lessons, or flashcards.
+	 *
+	 * @param int $course_id Course ID.
+	 * @return array<string,mixed>
+	 */
+	public static function sync_practice_exams( $course_id ) {
+		$course_id = absint( $course_id );
+		$result    = array(
+			'ok'        => false,
+			'course_id' => $course_id,
+			'message'   => 'invalid_course',
+		);
+
+		foreach ( self::get_practice_exam_defs() as $def ) {
+			$result[ $def['key'] ]  = 0;
+			$result[ $def['qkey'] ] = 0;
+		}
+
+		if ( ! $course_id ) {
+			return $result;
+		}
+
+		$defs = self::get_practice_exam_defs();
+		foreach ( $defs as $def ) {
+			$questions              = self::load_seed_questions( $def['file'] );
+			$count                  = count( $questions );
+			$result[ $def['qkey'] ] = $count;
+			if ( (int) $def['expect'] !== $count ) {
+				$result['message'] = sprintf(
+					'invalid_question_bank_count:%s expected %d got %d',
+					$def['quiz_type'],
+					$def['expect'],
+					$count
+				);
+				return $result;
+			}
+		}
+
+		foreach ( $defs as $def ) {
+			$questions = self::load_seed_questions( $def['file'] );
+			$quiz_id   = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+			$result[ $def['key'] ]  = $quiz_id;
+			$result[ $def['qkey'] ] = (int) $def['expect'];
+			if ( ! $quiz_id ) {
+				$result['message'] = 'quiz_write_failed:' . $def['quiz_type'];
+				return $result;
+			}
+		}
+
+		$result['ok']      = true;
+		$result['message'] = 'practice_exams_synced';
+
+		return $result;
+	}
+
+	/**
+	 * Publish missing Practice Exams one at a time (no workbook-bank writes).
+	 *
+	 * @param int $course_id Optional course ID.
+	 * @param int $max_exams Exams to write this pass.
+	 * @return array{ok:bool,course_id:int,synced:int,remaining:int,message:string}
+	 */
+	public static function sync_practice_exams_missing( $course_id = 0, $max_exams = 1 ) {
+		$max_exams = max( 1, min( 3, absint( $max_exams ) ) );
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'synced'    => 0,
+				'remaining' => count( self::get_practice_exam_defs() ),
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+		$synced    = 0;
+		$defs      = self::get_practice_exam_defs();
+
+		foreach ( $defs as $def ) {
+			if ( $synced >= $max_exams ) {
+				break;
+			}
+
+			$health = self::get_live_practice_exam_health( $def['quiz_type'], $course_id );
+			if ( ! empty( $health['ok'] ) ) {
+				continue;
+			}
+
+			$questions = self::load_seed_questions( $def['file'] );
+			if ( (int) $def['expect'] !== count( $questions ) ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_practice_exams( $course_id ),
+					'message'   => 'invalid_question_bank_count:' . $def['quiz_type'],
+				);
+			}
+
+			$quiz_id = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+
+			if ( ! $quiz_id ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_practice_exams( $course_id ),
+					'message'   => 'quiz_write_failed:' . $def['quiz_type'],
+				);
+			}
+
+			++$synced;
+		}
+
+		$remaining = self::count_missing_practice_exams( $course_id );
+
+		return array(
+			'ok'        => ( 0 === $remaining ),
+			'course_id' => $course_id,
+			'synced'    => $synced,
+			'remaining' => $remaining,
+			'message'   => 0 === $remaining ? 'practice_exams_synced' : 'practice_exams_partial',
+		);
+	}
+
+	/**
+	 * Queue Practice Exam publish if any full simulation is empty or inactive.
+	 *
+	 * @param int  $course_id Optional course ID.
+	 * @param bool $force     Queue even if exams look healthy.
+	 * @return array{ok:bool,course_id:int,message:string}
+	 */
+	public static function ensure_practice_exams( $course_id = 0, $force = false ) {
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+
+		if ( ! $force && self::practice_exams_are_live( $course_id ) ) {
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'practice_exams_healthy',
+			);
+		}
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_law_ethics_practice_exams' );
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'practice_exams_queued',
+			);
+		}
+
+		$sync = self::sync_practice_exams_missing( $course_id, 1 );
+
+		return array(
+			'ok'        => ! empty( $sync['ok'] ),
+			'course_id' => $course_id,
+			'message'   => (string) ( $sync['message'] ?? 'practice_exam_sync_failed' ),
+		);
+	}
+
+	/**
+	 * Self-heal unpublished / empty Practice A/B / comprehensive final.
+	 *
+	 * @return void
+	 */
+	public static function maybe_heal_practice_exams() {
+		if ( get_transient( 'cta_lmft_le_practice_exam_heal_lock' ) ) {
+			return;
+		}
+
+		if ( get_transient( 'cta_lms_upgrading' ) ) {
+			return;
+		}
+
+		$course = self::find_course();
+		if ( ! $course || empty( $course->id ) ) {
+			return;
+		}
+
+		if ( self::practice_exams_are_live( (int) $course->id ) ) {
+			return;
+		}
+
+		set_transient( 'cta_lmft_le_practice_exam_heal_lock', 1, 5 * MINUTE_IN_SECONDS );
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_law_ethics_practice_exams' );
+		}
+	}
+
+	/**
+	 * @param string $quiz_type practice_a|practice_b|comprehensive_final.
+	 * @param int    $course_id Optional course ID.
+	 * @return array{ok:bool,course_id:int,quiz_id:int,question_count:int,time_limit_mins:int,status:string}
+	 */
+	public static function get_live_practice_exam_health( $quiz_type, $course_id = 0 ) {
+		$quiz_type = sanitize_key( (string) $quiz_type );
+		$expected  = 0;
+		foreach ( self::get_practice_exam_defs() as $def ) {
+			if ( $quiz_type === (string) $def['quiz_type'] ) {
+				$expected = (int) $def['expect'];
+				break;
+			}
+		}
+
+		$empty = array(
+			'ok'              => false,
+			'course_id'       => 0,
+			'quiz_id'         => 0,
+			'question_count'  => 0,
+			'time_limit_mins' => 0,
+			'status'          => '',
+		);
+
+		if ( $expected < 1 ) {
+			return $empty;
+		}
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+		if ( ! $course || empty( $course->id ) ) {
+			return $empty;
+		}
+
+		$course_id          = (int) $course->id;
+		$empty['course_id'] = $course_id;
+
+		if ( ! class_exists( 'CTA_Database' ) ) {
+			return $empty;
+		}
+
+		$row = null;
+		foreach ( (array) CTA_Database::get_quizzes_by_course( $course_id, false ) as $candidate ) {
+			if ( $quiz_type === sanitize_key( (string) ( $candidate->quiz_type ?? '' ) ) ) {
+				$row = $candidate;
+				break;
+			}
+		}
+
+		if ( ! $row || empty( $row->id ) ) {
+			return $empty;
+		}
+
+		$quiz_id         = (int) $row->id;
+		$question_count  = count( CTA_Database::get_quiz_questions( $quiz_id ) );
+		$time_limit_mins = (int) ( $row->time_limit_mins ?? 0 );
+		$status          = (string) ( $row->status ?? '' );
+
+		return array(
+			'ok'              => ( $expected === $question_count && $time_limit_mins >= 1 && 'active' === $status ),
+			'course_id'       => $course_id,
+			'quiz_id'         => $quiz_id,
+			'question_count'  => $question_count,
+			'time_limit_mins' => $time_limit_mins,
+			'status'          => $status,
+		);
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function practice_exams_are_live( $course_id = 0 ) {
+		foreach ( self::get_practice_exam_defs() as $def ) {
+			$health = self::get_live_practice_exam_health( $def['quiz_type'], $course_id );
+			if ( empty( $health['ok'] ) ) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return int
+	 */
+	private static function count_missing_practice_exams( $course_id ) {
+		$missing = 0;
+		foreach ( self::get_practice_exam_defs() as $def ) {
+			$health = self::get_live_practice_exam_health( $def['quiz_type'], $course_id );
+			if ( empty( $health['ok'] ) ) {
+				++$missing;
+			}
+		}
+		return $missing;
+	}
+
+	/**
 	 * Write placeholder lesson HTML and empty flashcard deck JSON if missing.
 	 *
 	 * @return array{lessons:int,flashcards:bool}
@@ -800,18 +1165,9 @@ class CTA_Lmft_Law_Ethics_Sync {
 		}
 
 		$flash_path = $base . 'study-tools/flashcard-study-center.json';
-		$flash_ok   = false;
-		if ( ! is_readable( $flash_path ) ) {
-			$payload = array(
-				'program' => 'lmft-law-ethics',
-				'title'   => 'LMFT California Law & Ethics — Flashcard Study Center',
-				'version' => '1.0',
-				'domains' => array(),
-				'cards'   => array(),
-			);
-			file_put_contents( $flash_path, wp_json_encode( $payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE ) . "\n" );
-			$flash_ok = true;
-		}
+		$flash_ok   = is_readable( $flash_path );
+		// Never seed an empty Study Center JSON. An empty stub shows 0 cards / 0 domains
+		// and blocks fallback to the approved 807-card Master Flashcard Library.
 
 		return array(
 			'lessons'    => $written,

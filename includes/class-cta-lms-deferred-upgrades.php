@@ -51,6 +51,7 @@ class CTA_Lms_Deferred_Upgrades {
 			'lmft_clinical_form_a',
 			'lmft_clinical_workbook_banks',
 			'lmft_law_ethics_workbook_banks',
+			'lmft_law_ethics_practice_exams',
 			'lmft_amftrb_workbook_banks',
 			'lpcc_ncmhce_form_a_v2',
 			'lpcc_ncmhce_form_b_v2',
@@ -81,6 +82,7 @@ class CTA_Lms_Deferred_Upgrades {
 			'lmft_clinical_form_a',
 			'lmft_clinical_workbook_banks',
 			'lmft_law_ethics_workbook_banks',
+			'lmft_law_ethics_practice_exams',
 			'lmft_amftrb_workbook_banks',
 			'lpcc_ncmhce_form_a_v2',
 			'lpcc_ncmhce_form_b_v2',
@@ -257,6 +259,15 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+			case 'lmft_law_ethics_practice_exams':
+				if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
+					$result = CTA_Lmft_Law_Ethics_Sync::sync_practice_exams_missing( 0, 1 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'lmft_law_ethics_practice_exams' );
+					}
+				}
+				break;
+
 			case 'lmft_clinical_form_a':
 				if ( class_exists( 'CTA_Lmft_Clinical_Legacy_Forms_Archive' ) ) {
 					CTA_Lmft_Clinical_Legacy_Forms_Archive::archive_non_final_active_forms(
@@ -348,6 +359,9 @@ class CTA_Lms_Deferred_Upgrades {
 					}
 					if ( method_exists( 'CTA_Lmft_Law_Ethics_Sync', 'ensure_workbook_banks' ) ) {
 						CTA_Lmft_Law_Ethics_Sync::ensure_workbook_banks( 0, false );
+					}
+					if ( method_exists( 'CTA_Lmft_Law_Ethics_Sync', 'ensure_practice_exams' ) ) {
+						CTA_Lmft_Law_Ethics_Sync::ensure_practice_exams( 0, false );
 					}
 				}
 				break;
