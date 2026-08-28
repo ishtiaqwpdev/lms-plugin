@@ -161,6 +161,7 @@ class CTA_Exam_Prep_Workbooks {
 
 		$title = strtolower( (string) ( $quiz->title ?? '' ) );
 
+<<<<<<< HEAD
 		return (bool) preg_match( '/\bform\s*[ab]\b/', $title )
 			|| false !== strpos( $title, 'comprehensive simulation' )
 			|| false !== strpos( $title, 'comprehensive final' )
@@ -256,6 +257,14 @@ class CTA_Exam_Prep_Workbooks {
 		}
 
 		return __( 'Chapter Practice Bank', 'cta-lms' );
+=======
+		return false !== strpos( $title, 'form a' )
+			|| false !== strpos( $title, 'form b' )
+			|| false !== strpos( $title, 'comprehensive simulation' )
+			|| false !== strpos( $title, 'comprehensive final' )
+			|| false !== strpos( $title, 'practice exam a' )
+			|| false !== strpos( $title, 'practice exam b' );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	}
 
 	/**
@@ -268,10 +277,13 @@ class CTA_Exam_Prep_Workbooks {
 	public static function get_assessment_category_label( $category, $quiz = null ) {
 		switch ( sanitize_key( (string) $category ) ) {
 			case 'workbook_bank':
+<<<<<<< HEAD
 				// Chapter tests need unique names — do not collapse them to one workbook label.
 				if ( $quiz && self::is_chapter_test_quiz( $quiz ) ) {
 					return self::get_chapter_test_display_label( $quiz );
 				}
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				$wb = $quiz ? self::workbook_number_from_quiz( $quiz ) : 0;
 				if ( $wb > 0 ) {
 					return sprintf(
@@ -291,15 +303,27 @@ class CTA_Exam_Prep_Workbooks {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Primary toolbar / list label for a workbook practice bank or chapter test.
+=======
+	 * Primary toolbar button label for a workbook practice bank.
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 *
 	 * @param object|null $module Module row.
 	 * @param object|null $quiz   Optional linked quiz row.
 	 * @return string
 	 */
 	public static function get_workbook_practice_bank_button_label( $module = null, $quiz = null ) {
+<<<<<<< HEAD
 		if ( $quiz && self::is_chapter_test_quiz( $quiz ) ) {
 			return self::get_chapter_test_display_label( $quiz );
+=======
+		if ( $quiz ) {
+			$chapter_label = self::get_chapter_practice_bank_label( $quiz );
+			if ( '' !== $chapter_label ) {
+				return $chapter_label;
+			}
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		}
 
 		$wb_num = 0;
@@ -322,6 +346,95 @@ class CTA_Exam_Prep_Workbooks {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Chapter number from quiz_type wb{N}_c{M} or title.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return int
+	 */
+	public static function chapter_number_from_quiz( $quiz ) {
+		if ( ! $quiz ) {
+			return 0;
+		}
+
+		$type = (string) ( $quiz->quiz_type ?? '' );
+		if ( preg_match( '/^wb\d+_c(\d+)$/i', $type, $m ) ) {
+			return absint( $m[1] );
+		}
+
+		$title = (string) ( $quiz->title ?? '' );
+		if ( preg_match( '/^WB\d+-C(\d+)\b/i', $title, $m ) ) {
+			return absint( $m[1] );
+		}
+		if ( preg_match( '/\bChapter\s+(\d+)\b/i', $title, $m ) ) {
+			return absint( $m[1] );
+		}
+
+		return 0;
+	}
+
+	/**
+	 * Approved chapter name from a chapter-test quiz title.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return string
+	 */
+	public static function chapter_title_from_quiz( $quiz ) {
+		if ( ! $quiz ) {
+			return '';
+		}
+
+		$title = trim( (string) ( $quiz->title ?? '' ) );
+		if ( '' === $title ) {
+			return '';
+		}
+
+		if ( preg_match( '/^WB\d+-C\d+\s+[—–\-]\s+(.+?)(?:\s+\(Chapter Test\))?\s*$/u', $title, $m ) ) {
+			return trim( $m[1] );
+		}
+
+		if ( preg_match( '/^Workbook\s+\d+\s+[—–\-]\s+Chapter\s+\d+:\s+(.+)$/u', $title, $m ) ) {
+			return trim( $m[1] );
+		}
+
+		return '';
+	}
+
+	/**
+	 * Unique learner label for a chapter test (wbN_cM). Empty when not a chapter test.
+	 *
+	 * @param object|null $quiz Quiz row.
+	 * @return string
+	 */
+	public static function get_chapter_practice_bank_label( $quiz ) {
+		$wb = self::workbook_number_from_quiz( $quiz );
+		$ch = self::chapter_number_from_quiz( $quiz );
+		if ( $wb < 1 || $ch < 1 ) {
+			return '';
+		}
+
+		$name = self::chapter_title_from_quiz( $quiz );
+		if ( '' !== $name ) {
+			return sprintf(
+				/* translators: 1: workbook number, 2: chapter number, 3: chapter title */
+				__( 'Workbook %1$d — Chapter %2$d: %3$s', 'cta-lms' ),
+				$wb,
+				$ch,
+				$name
+			);
+		}
+
+		return sprintf(
+			/* translators: 1: workbook number, 2: chapter number */
+			__( 'Workbook %1$d — Chapter %2$d Practice Bank', 'cta-lms' ),
+			$wb,
+			$ch
+		);
+	}
+
+	/**
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Whether a quiz is program-wide (Exam Center) vs workbook-scoped.
 	 *
 	 * @param object $quiz Quiz row.

@@ -54,11 +54,21 @@ class CTA_Exam_Prep_Flashcard_Center {
 	 */
 	public static function get_legacy_fallback_slugs() {
 		$slugs = array(
+<<<<<<< HEAD
 			'lpcc-california-law-ethics-exam-preparation',
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			'lcsw-california-law-ethics-exam-preparation',
 		);
 
 		// When the approved Study Center deck is live, never fall back to legacy JSON.
+<<<<<<< HEAD
+=======
+		if ( ! self::study_center_deck_is_live( 'lpcc-law-ethics' ) ) {
+			$slugs[] = 'lpcc-california-law-ethics-exam-preparation';
+		}
+
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		if ( self::study_center_deck_is_live( 'lcsw-aswb' ) ) {
 			$slugs = array_values(
 				array_diff(
@@ -143,6 +153,10 @@ class CTA_Exam_Prep_Flashcard_Center {
 			'lmft-california-clinical-exam-preparation',
 			'lpcc-ncmhce-exam-preparation',
 			'lpcc-california-clinical-exam-preparation',
+<<<<<<< HEAD
+=======
+			'lpcc-california-law-ethics-exam-preparation',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			'lcsw-aswb-clinical-exam-preparation',
 			'lcsw-california-clinical-exam-preparation',
 		);

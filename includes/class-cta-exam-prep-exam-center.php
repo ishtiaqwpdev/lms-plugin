@@ -168,6 +168,7 @@ class CTA_Exam_Prep_Exam_Center {
 				continue;
 			}
 
+<<<<<<< HEAD
 			$type  = sanitize_key( (string) ( $qrow->quiz_type ?? '' ) );
 			$title = (string) ( $qrow->title ?? '' );
 
@@ -179,6 +180,8 @@ class CTA_Exam_Prep_Exam_Center {
 				continue;
 			}
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			if ( class_exists( 'CTA_Exam_Prep_Workbooks' ) && ! CTA_Exam_Prep_Workbooks::is_program_level_quiz( $qrow ) ) {
 				continue;
 			}
@@ -271,8 +274,14 @@ class CTA_Exam_Prep_Exam_Center {
 		}
 
 		if ( in_array( $type, array( 'form_a', 'form_b', 'practice_a', 'practice_b' ), true )
+<<<<<<< HEAD
 			|| (bool) preg_match( '/\bform\s*[ab]\b/', $title )
 			|| (bool) preg_match( '/practice\s+exam(ination)?\s*[ab]\b/', $title )
+=======
+			|| false !== strpos( $title, 'form a' )
+			|| false !== strpos( $title, 'form b' )
+			|| false !== strpos( $title, 'practice exam' )
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			|| false !== strpos( $title, 'comprehensive simulation' ) ) {
 			return __( 'Full-Length Simulation', 'cta-lms' );
 		}

@@ -646,9 +646,12 @@ class CTA_Lcsw_Law_Ethics_Sync {
 	 * @return void
 	 */
 	public static function maybe_heal_incomplete_content() {
+<<<<<<< HEAD
 		if ( function_exists( 'cta_lms_is_plugin_lifecycle_request' ) && cta_lms_is_plugin_lifecycle_request() ) {
 			return;
 		}
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		if ( get_transient( 'cta_lcsw_le_heal_lock' ) ) {
 			return;
 		}
@@ -1311,6 +1314,7 @@ class CTA_Lcsw_Law_Ethics_Sync {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Publish Practice A/B + Comprehensive Final only (scoped).
 	 *
 	 * @param int $course_id Course ID.
@@ -1390,6 +1394,8 @@ class CTA_Lcsw_Law_Ethics_Sync {
 	}
 
 	/**
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Widen option_* columns so long official stems are not truncated.
 	 */
 	private static function maybe_widen_option_columns() {

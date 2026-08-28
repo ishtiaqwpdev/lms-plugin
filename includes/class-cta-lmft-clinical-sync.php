@@ -492,6 +492,7 @@ class CTA_Lmft_Clinical_Sync {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Workbook practice bank quiz definitions (wb1_bank … wb12_bank).
 	 *
 	 * @return array<int,array<string,mixed>>
@@ -881,6 +882,8 @@ class CTA_Lmft_Clinical_Sync {
 	}
 
 	/**
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Apply the 240-minute comprehensive simulation timer to Form A and Form B.
 	 *
 	 * @return array{ok:bool,course_id:int,updated:int,message:string}
@@ -1039,6 +1042,357 @@ class CTA_Lmft_Clinical_Sync {
 		return $found > 0;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Sync only the 12 workbook online practice banks (does not touch Form A/B).
+	 *
+	 * @param int $course_id Course ID.
+	 * @return array<string,mixed>
+	 */
+	public static function sync_workbook_banks( $course_id ) {
+		$course_id = absint( $course_id );
+		$result    = array(
+			'ok'        => false,
+			'course_id' => $course_id,
+			'message'   => 'invalid_course',
+		);
+		for ( $n = 1; $n <= 12; $n++ ) {
+			$result[ 'wb' . $n . '_bank' ]           = 0;
+			$result[ 'questions_wb' . $n . '_bank' ] = 0;
+		}
+
+		if ( ! $course_id ) {
+			return $result;
+		}
+
+		$defs = self::get_workbook_bank_defs();
+
+		foreach ( $defs as $def ) {
+			$questions              = self::load_seed_questions( $def['file'] );
+			$count                  = count( $questions );
+			$result[ $def['qkey'] ] = $count;
+
+			if ( (int) $def['expect'] !== $count ) {
+				$result['message'] = sprintf(
+					'invalid_question_bank_count:%s expected %d got %d',
+					$def['quiz_type'],
+					$def['expect'],
+					$count
+				);
+				return $result;
+			}
+		}
+
+		foreach ( $defs as $def ) {
+			$questions = self::load_seed_questions( $def['file'] );
+			$quiz_id   = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+			$result[ $def['key'] ]  = $quiz_id;
+			$result[ $def['qkey'] ] = (int) $def['expect'];
+
+			if ( ! $quiz_id ) {
+				$result['message'] = 'quiz_write_failed:' . $def['quiz_type'];
+				return $result;
+			}
+		}
+
+		$result['ok']      = true;
+		$result['message'] = 'workbook_banks_synced';
+
+		return $result;
+	}
+
+	/**
+	 * Publish missing workbook banks two at a time (scoped — no Form A/B writes).
+	 *
+	 * @param int $course_id Optional course ID.
+	 * @param int $max_banks Banks to write this pass.
+	 * @return array{ok:bool,course_id:int,synced:int,remaining:int,message:string}
+	 */
+	public static function sync_workbook_banks_missing( $course_id = 0, $max_banks = 2 ) {
+		$max_banks = max( 1, min( 4, absint( $max_banks ) ) );
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+			if ( $course && ! self::is_lmft_clinical_course( $course ) ) {
+				$course = null;
+			}
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'synced'    => 0,
+				'remaining' => 12,
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+		$synced    = 0;
+		$defs      = self::get_workbook_bank_defs();
+
+		foreach ( $defs as $def ) {
+			if ( $synced >= $max_banks ) {
+				break;
+			}
+
+			if ( ! preg_match( '/^wb(\d+)_bank$/', (string) ( $def['quiz_type'] ?? '' ), $m ) ) {
+				continue;
+			}
+
+			$wb_num = absint( $m[1] );
+			$health = self::get_live_workbook_bank_health( $wb_num, $course_id );
+			if ( ! empty( $health['ok'] ) ) {
+				continue;
+			}
+
+			$questions = self::load_seed_questions( $def['file'] );
+			if ( (int) $def['expect'] !== count( $questions ) ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_workbook_banks( $course_id ),
+					'message'   => 'invalid_question_bank_count:' . $def['quiz_type'],
+				);
+			}
+
+			$quiz_id = self::replace_form_quiz(
+				$course_id,
+				$def['quiz_type'],
+				$def['title'],
+				(int) $def['sort'],
+				$questions,
+				(int) $def['time']
+			);
+
+			if ( ! $quiz_id ) {
+				return array(
+					'ok'        => false,
+					'course_id' => $course_id,
+					'synced'    => $synced,
+					'remaining' => self::count_missing_workbook_banks( $course_id ),
+					'message'   => 'quiz_write_failed:' . $def['quiz_type'],
+				);
+			}
+
+			++$synced;
+		}
+
+		$remaining = self::count_missing_workbook_banks( $course_id );
+
+		return array(
+			'ok'        => ( 0 === $remaining ),
+			'course_id' => $course_id,
+			'synced'    => $synced,
+			'remaining' => $remaining,
+			'message'   => 0 === $remaining ? 'workbook_banks_synced' : 'workbook_banks_partial',
+		);
+	}
+
+	/**
+	 * Ensure all 12 workbook practice banks are live (scoped — no Form A/B writes).
+	 *
+	 * @param int  $course_id Optional course ID.
+	 * @param bool $force     Queue a rewrite even if banks appear healthy.
+	 * @return array{ok:bool,course_id:int,message:string}
+	 */
+	public static function ensure_workbook_banks( $course_id = 0, $force = false ) {
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+			if ( $course && ! self::is_lmft_clinical_course( $course ) ) {
+				$course = null;
+			}
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+
+		if ( ! $course || empty( $course->id ) ) {
+			return array(
+				'ok'        => false,
+				'course_id' => 0,
+				'message'   => 'course_not_found',
+			);
+		}
+
+		$course_id = (int) $course->id;
+
+		if ( ! $force && self::workbook_banks_are_live( $course_id ) ) {
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'workbook_banks_healthy',
+			);
+		}
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_clinical_workbook_banks' );
+			return array(
+				'ok'        => true,
+				'course_id' => $course_id,
+				'message'   => 'workbook_banks_queued',
+			);
+		}
+
+		$sync = self::sync_workbook_banks_missing( $course_id, 2 );
+
+		return array(
+			'ok'        => ! empty( $sync['ok'] ),
+			'course_id' => $course_id,
+			'message'   => (string) ( $sync['message'] ?? 'workbook_bank_sync_failed' ),
+		);
+	}
+
+	/**
+	 * Self-heal missing workbook practice banks (transient-guarded).
+	 *
+	 * @return void
+	 */
+	public static function maybe_heal_workbook_banks() {
+		if ( get_transient( 'cta_lmft_clinical_wb_bank_heal_lock' ) ) {
+			return;
+		}
+
+		if ( get_transient( 'cta_lms_upgrading' ) ) {
+			return;
+		}
+
+		$course = self::find_course();
+		if ( ! $course || empty( $course->id ) ) {
+			return;
+		}
+
+		if ( self::workbook_banks_are_live( (int) $course->id ) ) {
+			return;
+		}
+
+		set_transient( 'cta_lmft_clinical_wb_bank_heal_lock', 1, 5 * MINUTE_IN_SECONDS );
+
+		if ( class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_clinical_workbook_banks' );
+		}
+	}
+
+	/**
+	 * @param int $workbook_num Workbook number 1-12.
+	 * @param int $course_id    Optional course ID.
+	 * @return array{ok:bool,course_id:int,quiz_id:int,question_count:int,time_limit_mins:int,status:string}
+	 */
+	public static function get_live_workbook_bank_health( $workbook_num, $course_id = 0 ) {
+		$workbook_num = absint( $workbook_num );
+		$quiz_type    = 'wb' . $workbook_num . '_bank';
+		$expected     = self::WORKBOOK_BANK_COUNT;
+		$empty        = array(
+			'ok'              => false,
+			'course_id'       => 0,
+			'quiz_id'         => 0,
+			'question_count'  => 0,
+			'time_limit_mins' => 0,
+			'status'          => '',
+		);
+
+		if ( $workbook_num < 1 || $workbook_num > 12 ) {
+			return $empty;
+		}
+
+		$course = null;
+		if ( $course_id > 0 && class_exists( 'CTA_Database' ) ) {
+			$course = CTA_Database::get_course( $course_id );
+			if ( $course && ! self::is_lmft_clinical_course( $course ) ) {
+				$course = null;
+			}
+		}
+		if ( ! $course ) {
+			$course = self::find_course();
+		}
+		if ( ! $course || empty( $course->id ) ) {
+			return $empty;
+		}
+
+		$course_id          = (int) $course->id;
+		$empty['course_id'] = $course_id;
+
+		if ( ! class_exists( 'CTA_Database' ) ) {
+			return $empty;
+		}
+
+		$row = null;
+		foreach ( (array) CTA_Database::get_quizzes_by_course( $course_id, true ) as $candidate ) {
+			if ( $quiz_type === sanitize_key( (string) ( $candidate->quiz_type ?? '' ) ) ) {
+				$row = $candidate;
+				break;
+			}
+		}
+
+		if ( ! $row || empty( $row->id ) ) {
+			return $empty;
+		}
+
+		$quiz_id         = (int) $row->id;
+		$question_count  = count( CTA_Database::get_quiz_questions( $quiz_id ) );
+		$time_limit_mins = (int) ( $row->time_limit_mins ?? 0 );
+
+		return array(
+			'ok'              => ( $expected === $question_count && $time_limit_mins >= 1 && 'active' === (string) ( $row->status ?? '' ) ),
+			'course_id'       => $course_id,
+			'quiz_id'         => $quiz_id,
+			'question_count'  => $question_count,
+			'time_limit_mins' => $time_limit_mins,
+			'status'          => (string) ( $row->status ?? '' ),
+		);
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function workbook_banks_are_live( $course_id = 0 ) {
+		for ( $n = 1; $n <= 12; $n++ ) {
+			$health = self::get_live_workbook_bank_health( $n, $course_id );
+			if ( empty( $health['ok'] ) ) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Whether a course row is LMFT California Clinical.
+	 *
+	 * @param object|null $course Course row.
+	 * @return bool
+	 */
+	public static function is_lmft_clinical_course( $course ) {
+		if ( ! $course ) {
+			return false;
+		}
+
+		$slug = sanitize_title( (string) ( $course->slug ?? '' ) );
+		if ( self::SLUG === $slug ) {
+			return true;
+		}
+
+		$title = (string) ( $course->title ?? '' );
+		return self::TITLE === $title || self::LEGACY_TITLE === $title || self::PUBLIC_TITLE === $title;
+	}
+
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	/* -------------------------------------------------------------------------
 	 * Private helpers
 	 * ---------------------------------------------------------------------- */
@@ -1304,6 +1658,7 @@ class CTA_Lmft_Clinical_Sync {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Load Form A or Form B question seed array.
 	 *
 	 * @param string $form a|b.
@@ -1312,6 +1667,53 @@ class CTA_Lmft_Clinical_Sync {
 	private static function load_form_questions( $form ) {
 		$form = strtolower( (string) $form );
 		$file = ( 'b' === $form ) ? 'lmft-clinical-form-b.php' : 'lmft-clinical-form-a.php';
+=======
+	 * Twelve workbook-bank assessment definitions (quiz_type wb{N}_bank).
+	 *
+	 * @return array<int,array<string,mixed>>
+	 */
+	private static function get_workbook_bank_defs() {
+		$defs = array();
+		for ( $n = 1; $n <= 12; $n++ ) {
+			$defs[] = array(
+				'quiz_type' => 'wb' . $n . '_bank',
+				'title'     => sprintf( 'Workbook %d — 17-Question Practice Bank', $n ),
+				'sort'      => $n,
+				'time'      => self::WORKBOOK_BANK_TIME_MINS,
+				'file'      => 'lmft-clinical-wb' . $n . '-bank.php',
+				'expect'    => self::WORKBOOK_BANK_COUNT,
+				'key'       => 'wb' . $n . '_bank',
+				'qkey'      => 'questions_wb' . $n . '_bank',
+			);
+		}
+
+		return $defs;
+	}
+
+	/**
+	 * @param int $course_id Course ID.
+	 * @return int
+	 */
+	private static function count_missing_workbook_banks( $course_id ) {
+		$missing = 0;
+		for ( $n = 1; $n <= 12; $n++ ) {
+			$health = self::get_live_workbook_bank_health( $n, $course_id );
+			if ( empty( $health['ok'] ) ) {
+				++$missing;
+			}
+		}
+		return $missing;
+	}
+
+	/**
+	 * Load a quiz-seed PHP file from includes/quiz-seeds/.
+	 *
+	 * @param string $file Basename.
+	 * @return array[]
+	 */
+	private static function load_seed_questions( $file ) {
+		$file = basename( (string) $file );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		$path = CTA_PLUGIN_DIR . 'includes/quiz-seeds/' . $file;
 
 		if ( ! is_readable( $path ) ) {
@@ -1323,11 +1725,27 @@ class CTA_Lmft_Clinical_Sync {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Load Form A or Form B question seed array.
+	 *
+	 * @param string $form a|b.
+	 * @return array[]
+	 */
+	private static function load_form_questions( $form ) {
+		$form = strtolower( (string) $form );
+		$file = ( 'b' === $form ) ? 'lmft-clinical-form-b.php' : 'lmft-clinical-form-a.php';
+		return self::load_seed_questions( $file );
+	}
+
+	/**
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Create/update a form quiz and replace all questions.
 	 *
 	 * @param int    $course_id Course ID.
 	 * @param string $quiz_type form_a|form_b.
 	 * @param string $title     Quiz title.
+<<<<<<< HEAD
 	 * @param int    $sort      Sort order.
 	 * @param array  $questions Question rows.
 	 * @return int Quiz ID or 0.
@@ -1343,6 +1761,23 @@ class CTA_Lmft_Clinical_Sync {
 			$time_limit = (int) self::FORM_TIME_LIMIT_MINS;
 		} else {
 			$time_limit = (int) $time_limit;
+=======
+	 * @param int    $sort       Sort order.
+	 * @param array  $questions  Question rows.
+	 * @param int    $time_limit Optional time limit in minutes (default Form A/B 240).
+	 * @return int Quiz ID or 0.
+	 */
+	private static function replace_form_quiz( $course_id, $quiz_type, $title, $sort, array $questions, $time_limit = 0 ) {
+		global $wpdb;
+
+		$course_id  = absint( $course_id );
+		$quiz_type  = sanitize_text_field( $quiz_type );
+		$title      = sanitize_text_field( $title );
+		$sort       = (int) $sort;
+		$time_limit = absint( $time_limit );
+		if ( $time_limit < 1 ) {
+			$time_limit = self::FORM_TIME_LIMIT_MINS;
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		}
 
 		if ( ! $course_id || '' === $quiz_type ) {

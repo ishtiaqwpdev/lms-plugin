@@ -89,6 +89,7 @@ if ( $course ) {
 		<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Exam access extended.', 'cta-lms' ); ?></p></div>
 	<?php elseif ( 'exam_extend_failed' === $notice ) : ?>
 		<div class="notice notice-error is-dismissible"><p><?php esc_html_e( 'Could not extend exam access.', 'cta-lms' ); ?></p></div>
+<<<<<<< HEAD
 	<?php elseif ( 'lmft_le_practice_exams_published' === $notice ) : ?>
 		<div class="notice notice-success is-dismissible"><p>
 			<?php
@@ -105,6 +106,8 @@ if ( $course ) {
 		<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'Assessment publish status updated (Active = live for learners, Draft = hidden).', 'cta-lms' ); ?></p></div>
 	<?php elseif ( 'quiz_status_failed' === $notice ) : ?>
 		<div class="notice notice-error is-dismissible"><p><?php esc_html_e( 'Could not update assessment status.', 'cta-lms' ); ?></p></div>
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	<?php endif; ?>
 
 	<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="cta-admin-form cta-course-edit-form" id="cta-course-save-form">
@@ -521,6 +524,7 @@ if ( $course ) {
 		<div class="cta-admin-panel" id="cta-quiz-panel" data-course-id="<?php echo esc_attr( (string) $course_id ); ?>" data-is-exam-prep="<?php echo $is_exam_prep ? '1' : '0'; ?>" data-quiz-id="<?php echo esc_attr( (string) ( $quiz->id ?? 0 ) ); ?>">
 			<h2><?php echo $is_exam_prep ? esc_html__( 'Assessments (Practice / Form A / Form B)', 'cta-lms' ) : esc_html__( 'Course Quiz', 'cta-lms' ); ?></h2>
 
+<<<<<<< HEAD
 			<?php if ( $is_exam_prep && $course_id ) : ?>
 				<?php
 				$is_lmft_le = $course && ! empty( $course->slug )
@@ -579,6 +583,10 @@ if ( $course ) {
 
 			<?php if ( $is_exam_prep ) : ?>
 				<p class="description"><?php esc_html_e( 'Exam Preparation programs support multiple assessments. Create Practice Assessment, Form A, Form B, Practice Examination A/B, or Comprehensive Final. Each assessment has its own questions and learner progress.', 'cta-lms' ); ?></p>
+=======
+			<?php if ( $is_exam_prep ) : ?>
+				<p class="description"><?php esc_html_e( 'Exam Preparation programs support multiple assessments. Create Practice Assessment, Form A, and Form B (or custom). Each assessment has its own questions and learner progress.', 'cta-lms' ); ?></p>
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				<div id="cta-exam-assessment-toolbar" class="cta-exam-assessment-toolbar" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0;">
 					<label for="cta-active-quiz-select"><strong><?php esc_html_e( 'Editing:', 'cta-lms' ); ?></strong></label>
 					<select id="cta-active-quiz-select" style="min-width:260px;">
@@ -603,9 +611,12 @@ if ( $course ) {
 					<label for="cta-quiz-type"><strong><?php esc_html_e( 'Assessment type', 'cta-lms' ); ?></strong></label><br>
 					<select id="cta-quiz-type">
 						<option value="practice" <?php selected( (string) ( $quiz->quiz_type ?? 'practice' ), 'practice' ); ?>><?php esc_html_e( 'Practice Assessment', 'cta-lms' ); ?></option>
+<<<<<<< HEAD
 						<option value="practice_a" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'practice_a' ); ?>><?php esc_html_e( 'Practice Examination A', 'cta-lms' ); ?></option>
 						<option value="practice_b" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'practice_b' ); ?>><?php esc_html_e( 'Practice Examination B', 'cta-lms' ); ?></option>
 						<option value="comprehensive_final" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'comprehensive_final' ); ?>><?php esc_html_e( 'Comprehensive Final', 'cta-lms' ); ?></option>
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 						<option value="form_a" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'form_a' ); ?>><?php esc_html_e( 'Form A — Comprehensive Simulation', 'cta-lms' ); ?></option>
 						<option value="form_b" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'form_b' ); ?>><?php esc_html_e( 'Form B — Comprehensive Simulation', 'cta-lms' ); ?></option>
 						<option value="custom" <?php selected( (string) ( $quiz->quiz_type ?? '' ), 'custom' ); ?>><?php esc_html_e( 'Custom', 'cta-lms' ); ?></option>

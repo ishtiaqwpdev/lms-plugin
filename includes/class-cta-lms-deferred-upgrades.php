@@ -46,7 +46,10 @@ class CTA_Lms_Deferred_Upgrades {
 			'content_lmft_amftrb',
 			'content_lpcc_ncmhce',
 			'content_materials',
+<<<<<<< HEAD
 			'ce_materials_repair',
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			'lcsw_forms_ab',
 			'lcsw_workbook_banks',
 			'lmft_clinical_form_a',
@@ -115,12 +118,17 @@ class CTA_Lms_Deferred_Upgrades {
 			return;
 		}
 
+<<<<<<< HEAD
 		if ( function_exists( 'cta_lms_is_plugin_lifecycle_request' ) && cta_lms_is_plugin_lifecycle_request() ) {
 			return;
 		}
 
 		$action = isset( $_REQUEST['action'] ) ? sanitize_key( (string) wp_unslash( $_REQUEST['action'] ) ) : '';
 		if ( in_array( $action, array( 'cta_sync_syllabus', 'cta_sync_exam_prep_content', 'update-plugin', 'install-plugin', 'activate-plugin', 'upload-plugin' ), true ) ) {
+=======
+		$action = isset( $_REQUEST['action'] ) ? sanitize_key( (string) wp_unslash( $_REQUEST['action'] ) ) : '';
+		if ( in_array( $action, array( 'cta_sync_syllabus', 'cta_sync_exam_prep_content', 'update-plugin', 'install-plugin', 'activate-plugin' ), true ) ) {
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			return;
 		}
 
@@ -206,19 +214,29 @@ class CTA_Lms_Deferred_Upgrades {
 			return;
 		}
 
+<<<<<<< HEAD
 		// Never run during plugin install/update HTTP actions (incl. upload-plugin WSOD).
 		if ( ! empty( $_REQUEST['action'] ) ) {
 			$action = sanitize_key( (string) wp_unslash( $_REQUEST['action'] ) );
 			if ( in_array( $action, array( 'update-plugin', 'install-plugin', 'activate-plugin', 'upload-plugin', 'wppusher-pull' ), true ) ) {
+=======
+		// Never run during plugin install/update HTTP actions.
+		if ( wp_doing_ajax() && ! empty( $_REQUEST['action'] ) ) {
+			$action = sanitize_key( (string) wp_unslash( $_REQUEST['action'] ) );
+			if ( in_array( $action, array( 'update-plugin', 'install-plugin', 'activate-plugin', 'wppusher-pull' ), true ) ) {
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				return;
 			}
 		}
 
+<<<<<<< HEAD
 		// Never drain the queue on the plugin upload/update screens themselves.
 		if ( function_exists( 'cta_lms_is_plugin_lifecycle_request' ) && cta_lms_is_plugin_lifecycle_request() ) {
 			return;
 		}
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		self::process_one();
 	}
 
@@ -251,6 +269,36 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+<<<<<<< HEAD
+=======
+			case 'lmft_clinical_workbook_banks':
+				if ( class_exists( 'CTA_Lmft_Clinical_Sync' ) ) {
+					$result = CTA_Lmft_Clinical_Sync::sync_workbook_banks_missing( 0, 2 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'lmft_clinical_workbook_banks' );
+					}
+				}
+				break;
+
+			case 'lmft_law_ethics_workbook_banks':
+				if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
+					$result = CTA_Lmft_Law_Ethics_Sync::sync_workbook_banks_missing( 0, 2 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'lmft_law_ethics_workbook_banks' );
+					}
+				}
+				break;
+
+			case 'lmft_law_ethics_practice_exams':
+				if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
+					$result = CTA_Lmft_Law_Ethics_Sync::sync_practice_exams_missing( 0, 1 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'lmft_law_ethics_practice_exams' );
+					}
+				}
+				break;
+
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			case 'lmft_clinical_form_a':
 				if ( class_exists( 'CTA_Lmft_Clinical_Legacy_Forms_Archive' ) ) {
 					CTA_Lmft_Clinical_Legacy_Forms_Archive::archive_non_final_active_forms(
@@ -270,6 +318,7 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+<<<<<<< HEAD
 			case 'lmft_clinical_workbook_banks':
 				if ( class_exists( 'CTA_Lmft_Clinical_Sync' ) ) {
 					$result = CTA_Lmft_Clinical_Sync::sync_workbook_banks_missing( 0, 2 );
@@ -298,18 +347,23 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			case 'lmft_amftrb_workbook_banks':
 				if ( class_exists( 'CTA_Lmft_Amftrb_Sync' ) ) {
 					CTA_Lmft_Amftrb_Sync::ensure_learner_forms( 0, true );
 				}
 				break;
 
+<<<<<<< HEAD
 			case 'ce_materials_repair':
 				if ( class_exists( 'CTA_CE_Materials_Sync' ) ) {
 					CTA_CE_Materials_Sync::repair_all_ce_courses( true );
 				}
 				break;
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			case 'lpcc_ncmhce_form_a':
 				if ( class_exists( 'CTA_Lpcc_Ncmhce_Form_A_Sync' ) ) {
 					CTA_Lpcc_Ncmhce_Form_A_Sync::sync( true );
@@ -374,6 +428,15 @@ class CTA_Lms_Deferred_Upgrades {
 					if ( method_exists( 'CTA_Lmft_Law_Ethics_Sync', 'sync_toolkits' ) ) {
 						CTA_Lmft_Law_Ethics_Sync::sync_toolkits( true );
 					}
+<<<<<<< HEAD
+=======
+					if ( method_exists( 'CTA_Lmft_Law_Ethics_Sync', 'ensure_workbook_banks' ) ) {
+						CTA_Lmft_Law_Ethics_Sync::ensure_workbook_banks( 0, false );
+					}
+					if ( method_exists( 'CTA_Lmft_Law_Ethics_Sync', 'ensure_practice_exams' ) ) {
+						CTA_Lmft_Law_Ethics_Sync::ensure_practice_exams( 0, false );
+					}
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				}
 				break;
 
@@ -419,6 +482,24 @@ class CTA_Lms_Deferred_Upgrades {
 				}
 				break;
 
+<<<<<<< HEAD
+=======
+			case 'ce_catalog_materials_heal':
+				if ( class_exists( 'CTA_Course_Materials' ) ) {
+					$result = CTA_Course_Materials::heal_ce_catalog_material_mapping( 100 );
+					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+						self::queue( 'ce_catalog_materials_heal' );
+					} else {
+						CTA_Course_Materials::ensure_bundled_resources();
+						if ( class_exists( 'CTA_Suicide_Risk_Toolkit_Sync' ) && method_exists( 'CTA_Suicide_Risk_Toolkit_Sync', 'ensure' ) ) {
+							CTA_Suicide_Risk_Toolkit_Sync::ensure();
+						}
+						update_option( CTA_Course_Materials::CE_MATERIALS_HEAL_OPTION, $result, false );
+					}
+				}
+				break;
+
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			case 'lpcc_ncmhce_form_a_v2':
 				if ( class_exists( 'CTA_Lpcc_Ncmhce_Form_A_V2_Sync' ) ) {
 					CTA_Lpcc_Ncmhce_Form_A_V2_Sync::sync( true );

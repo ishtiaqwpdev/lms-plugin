@@ -1,7 +1,12 @@
 <?php
 /**
+<<<<<<< HEAD
  * CTA LMFT California Law & Ethics - Workbook 2 Assessment (102 questions).
  * Built from approved Controlled Answer Key DOCX (online Practice Bank).
+=======
+ * CTA LMFT Law & Ethics EP - Workbook 2 Assessment (102 questions).
+ * Source: CTA_LMFT_Law_and_Ethics_EP_WB2_102_Question_Assessment_Candidate_Form_v1.0.docx + CTA_LMFT_Law_and_Ethics_EP_WB2_102_Question_Assessment_Controlled_Answer_Key_and_Detailed_Rationales_v1.0.docx.
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -13,16 +18,25 @@ return array(
 		'option_d'       => 'Health care delivered electronically only when the therapist and client are located in different states.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. An administrative electronic message is not automatically a telehealth health-care service merely because technology is used.
+<<<<<<< HEAD
 B. Correct. California Business and Professions Code section 2290.5 defines telehealth broadly as a mode of health-care delivery and includes synchronous and asynchronous methods.
 C. Incorrect. The definition is not limited to live video, psychotherapy, or different counties.
 D. Incorrect. Telehealth does not require interstate practice; the therapist and client may both be in California.
 CTA Exam Strategy: Do not reduce telehealth to video therapy. Look for the broader statutory definition.',
+=======
+		B. Correct. California Business and Professions Code section 2290.5 defines telehealth broadly as a mode of health-care delivery and includes synchronous and asynchronous methods.
+		C. Incorrect. The definition is not limited to live video, psychotherapy, or different counties.
+		D. Incorrect. Telehealth does not require interstate practice; the therapist and client may both be in California.
+		CTA Exam Strategy: Do not reduce telehealth to video therapy. Look for the broader statutory definition.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review California Definition of Telehealth; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During supervision, an associate assumes that using video automatically changes the clinician’s scope of practice and professional duties. Which principle is most accurate when a California BBS licensee provides psychotherapy by telehealth?',
 		'option_a'       => 'Telehealth creates a separate scope of practice that is broader than in-person practice.',
 		'option_b'       => 'Documentation and confidentiality duties are reduced because the interaction is remote.',
 		'option_c'       => 'BBS standards apply only when the therapist is physically located in California.',
+<<<<<<< HEAD
 		'option_d'       => 'The same professional-responsibility and standards-of-practice rules apply, and telehealth does not authorize services that are otherwise outside the therapist\\'s lawful scope.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Telehealth is a mode of delivery; it does not expand the therapist\\'s lawful scope of practice.
@@ -34,11 +48,26 @@ CTA Exam Strategy: When an answer suggests that technology changes scope or lowe
 	array(
 		'question_text'  => 'From the California BBS perspective, a California LMFT with a current and active license is attending a conference in Oregon and plans to conduct a telehealth session with an established client who is physically in California. Which statement is most accurate?',
 		'option_a'       => 'The LMFT may generally provide the session if telehealth is clinically appropriate and the LMFT follows California\\'s telehealth requirements.',
+=======
+		'option_d'       => 'The same professional-responsibility and standards-of-practice rules apply, and telehealth does not authorize services that are otherwise outside the therapist\'s lawful scope.',
+		'correct_option' => 'd',
+		'explanation'    => 'A. Incorrect. Telehealth is a mode of delivery; it does not expand the therapist\'s lawful scope of practice.
+		B. Incorrect. Telehealth does not reduce documentation, confidentiality, or other professional duties.
+		C. Incorrect. BBS jurisdiction applies to telehealth psychotherapy under the Board\'s statutes and regulations; the therapist\'s physical location does not eliminate those duties.
+		D. Correct. California law preserves scope limits and applies professional-responsibility, unprofessional-conduct, and standards-of-practice rules to telehealth.
+		CTA Exam Strategy: When an answer suggests that technology changes scope or lowers standards, eliminate it.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Scope and Professional Standards; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'From the California BBS perspective, a California LMFT with a current and active license is attending a conference in Oregon and plans to conduct a telehealth session with an established client who is physically in California. Which statement is most accurate?',
+		'option_a'       => 'The LMFT may generally provide the session if telehealth is clinically appropriate and the LMFT follows California\'s telehealth requirements.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_b'       => 'The session is prohibited solely because the LMFT is physically outside California.',
 		'option_c'       => 'The LMFT may proceed only if the client waives California telehealth requirements.',
 		'option_d'       => 'California law no longer applies because the LMFT is outside the state.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. BBS guidance states that a California licensee who is outside California may serve a client located in California if the license is current and active, the case is appropriate, and the telehealth regulations are followed.
+<<<<<<< HEAD
 B. Incorrect. The therapist\\'s temporary physical location outside California does not by itself prohibit the session under BBS rules.
 C. Incorrect. A client cannot waive the therapist\\'s legal and regulatory obligations.
 D. Incorrect. The client is in California, and the therapist remains subject to California BBS requirements.
@@ -60,10 +89,36 @@ CTA Exam Strategy: When the client crosses state lines, pause and verify legal a
 	array(
 		'question_text'  => 'A client joins a telehealth session from a hotel and says, \\'You already have my home address.\\' What is the therapist required to do at the beginning of the session?',
 		'option_a'       => 'Verbally obtain and document the client\\'s full name and present address, then assess whether the client and the session are appropriate for telehealth.',
+=======
+		B. Incorrect. The therapist\'s temporary physical location outside California does not by itself prohibit the session under BBS rules.
+		C. Incorrect. A client cannot waive the therapist\'s legal and regulatory obligations.
+		D. Incorrect. The client is in California, and the therapist remains subject to California BBS requirements.
+		CTA Exam Strategy: Separate the therapist\'s travel from the client\'s location. The client is physically in California.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Therapist Traveling Out of State; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'At the start of a session, an established California client tells the therapist that the client is temporarily in Colorado. The therapist is licensed only in California. What should the therapist do before providing psychotherapy?',
+		'option_a'       => 'Apply California law because the client\'s permanent residence is in California.',
+		'option_b'       => 'Continue because an established therapeutic relationship creates interstate authority.',
+		'option_c'       => 'Determine whether the therapist may lawfully provide services to a client in Colorado and whether Colorado permits the telehealth service.',
+		'option_d'       => 'Document only the client\'s California home address because the travel is temporary.',
+		'correct_option' => 'c',
+		'explanation'    => 'A. Incorrect. The client\'s present physical location, not permanent residence, drives the immediate jurisdiction analysis.
+		B. Incorrect. An existing relationship does not automatically authorize practice in another state.
+		C. Correct. Under 16 CCR section 1815.5(e), a California licensee or registrant may serve a client in another jurisdiction only when the therapist meets that jurisdiction\'s requirements and telehealth is permitted there.
+		D. Incorrect. The therapist must obtain and document the client\'s present address, and the Colorado location cannot be ignored.
+		CTA Exam Strategy: When the client crosses state lines, pause and verify legal authority before relying on continuity or convenience.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Client Location and Interstate Authority; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A client joins a telehealth session from a hotel and says, \'You already have my home address.\' What is the therapist required to do at the beginning of the session?',
+		'option_a'       => 'Verbally obtain and document the client\'s full name and present address, then assess whether the client and the session are appropriate for telehealth.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_b'       => 'Use the permanent address in the chart because the therapist already verified identity at intake.',
 		'option_c'       => 'Document that the client is traveling without requesting a specific location.',
 		'option_d'       => 'Ask for the hotel location only if the client later reports a crisis.',
 		'correct_option' => 'a',
+<<<<<<< HEAD
 		'explanation'    => 'A. Correct. Section 1815.5 requires the therapist to verbally obtain and document the client\\'s full name and present address at the beginning of each telehealth session and to assess appropriateness.
 B. Incorrect. A permanent address does not establish where the client is physically located now.
 C. Incorrect. A general note that the client is traveling does not satisfy the requirement to obtain and document the present address.
@@ -74,10 +129,24 @@ CTA Exam Strategy: The phrase \\'present address\\' is a strong exam clue. Do no
 		'question_text'  => 'A clinic is revising its telehealth procedures before accepting a new California client for remote services. Which combination most accurately states the California BBS requirements when telehealth services are initiated with a client in California?',
 		'option_a'       => 'Use a secure platform, obtain a written signature, and verify the client\\'s permanent residence.',
 		'option_b'       => 'Obtain and document verbal or written telehealth consent, explain potential risks and limitations, provide the credential type and number, and document reasonable efforts to identify relevant resources in the client\\'s geographic area.',
+=======
+		'explanation'    => 'A. Correct. Section 1815.5 requires the therapist to verbally obtain and document the client\'s full name and present address at the beginning of each telehealth session and to assess appropriateness.
+		B. Incorrect. A permanent address does not establish where the client is physically located now.
+		C. Incorrect. A general note that the client is traveling does not satisfy the requirement to obtain and document the present address.
+		D. Incorrect. The present location is required at the beginning of the session, not only after a crisis emerges.
+		CTA Exam Strategy: The phrase \'present address\' is a strong exam clue. Do not substitute the address already in the record.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Beginning-of-Session Requirements; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A clinic is revising its telehealth procedures before accepting a new California client for remote services. Which combination most accurately states the California BBS requirements when telehealth services are initiated with a client in California?',
+		'option_a'       => 'Use a secure platform, obtain a written signature, and verify the client\'s permanent residence.',
+		'option_b'       => 'Obtain and document verbal or written telehealth consent, explain potential risks and limitations, provide the credential type and number, and document reasonable efforts to identify relevant resources in the client\'s geographic area.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'Obtain an emergency contact and begin treatment; other disclosures may wait until a problem occurs.',
 		'option_d'       => 'Confirm that the client prefers telehealth and that the platform has a business associate agreement; no additional client disclosures are required.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. California permits verbal or written consent, and the listed steps omit required risk, credential, and local-resource information.
+<<<<<<< HEAD
 B. Correct. These are the initiation requirements stated in 16 CCR section 1815.5(c) and Business and Professions Code section 2290.5.
 C. Incorrect. Required telehealth information must be addressed at initiation rather than postponed until a problem arises.
 D. Incorrect. Client preference and platform contracting do not replace the disclosures and documentation required by California law.
@@ -98,11 +167,36 @@ CTA Exam Strategy: California-style questions often reject both extremes. Choose
 	),
 	array(
 		'question_text'  => 'A client who has participated successfully in telehealth for several months appears intoxicated, highly agitated, and unable to speak privately during today\\'s session. What should the therapist do?',
+=======
+		B. Correct. These are the initiation requirements stated in 16 CCR section 1815.5(c) and Business and Professions Code section 2290.5.
+		C. Incorrect. Required telehealth information must be addressed at initiation rather than postponed until a problem arises.
+		D. Incorrect. Client preference and platform contracting do not replace the disclosures and documentation required by California law.
+		CTA Exam Strategy: Look for the complete initiation set: consent, risks/limitations, credential information, and local resources.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Initiation Requirements; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A client in a rural community has no nearby specialty provider and benefits from telehealth access. However, the client\'s internet connection repeatedly interrupts clinically important discussions. What is the therapist\'s best response?',
+		'option_a'       => 'Consider both the access benefit and the communication limitation, then determine whether telehealth can continue safely and effectively or whether a lawful alternative is needed.',
+		'option_b'       => 'Continue unchanged because improved access always outweighs technology limitations.',
+		'option_c'       => 'End treatment immediately because any technology failure makes telehealth inappropriate.',
+		'option_d'       => 'Focus only on the client\'s preference because clinical effectiveness is secondary in telehealth.',
+		'correct_option' => 'a',
+		'explanation'    => 'A. Correct. Sound telehealth judgment balances access and continuity against the effect of disruptions on assessment, treatment, safety, and client welfare.
+		B. Incorrect. Access is important, but it does not automatically override treatment effectiveness or safety.
+		C. Incorrect. Technology failure requires assessment and problem-solving; it does not automatically require immediate termination.
+		D. Incorrect. Client preference matters, but the therapist must also evaluate clinical appropriateness and effectiveness.
+		CTA Exam Strategy: California-style questions often reject both extremes. Choose the response that assesses and balances competing factors.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Balancing Benefits and Limitations; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A client who has participated successfully in telehealth for several months appears intoxicated, highly agitated, and unable to speak privately during today\'s session. What should the therapist do?',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'Continue the usual session because telehealth was appropriate at intake.',
 		'option_b'       => 'Automatically terminate treatment because telehealth is no longer permitted.',
 		'option_c'       => 'Reassess whether the client and this specific session are appropriate for telehealth, address immediate safety and privacy concerns, and modify the plan as clinically indicated.',
 		'option_d'       => 'Ask the client to sign a new telehealth consent form and proceed without further assessment.',
 		'correct_option' => 'c',
+<<<<<<< HEAD
 		'explanation'    => 'A. Incorrect. Prior appropriateness does not determine whether today\\'s session is appropriate.
 B. Incorrect. The therapist must assess and respond; automatic termination is an unsupported extreme.
 C. Correct. Section 1815.5 requires an appropriateness assessment each time telehealth is provided, and the current psychosocial and environmental changes are directly relevant.
@@ -126,14 +220,49 @@ CTA Exam Strategy: Watch for vague location language. The regulation is specific
 		'question_text'  => 'An LMFT begins offering a specialized assessment by telehealth even though the assessment is outside the LMFT\\'s lawful scope and training. The LMFT argues that the online format makes the service permissible. Which principle controls?',
 		'option_a'       => 'Technology may expand scope when the client provides informed consent.',
 		'option_b'       => 'Telehealth does not authorize a service that is otherwise outside the therapist\\'s lawful scope or competence.',
+=======
+		'explanation'    => 'A. Incorrect. Prior appropriateness does not determine whether today\'s session is appropriate.
+		B. Incorrect. The therapist must assess and respond; automatic termination is an unsupported extreme.
+		C. Correct. Section 1815.5 requires an appropriateness assessment each time telehealth is provided, and the current psychosocial and environmental changes are directly relevant.
+		D. Incorrect. A new signature does not resolve intoxication, agitation, privacy, or safety concerns.
+		CTA Exam Strategy: A change in symptoms or environment signals an each-session reassessment question.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Ongoing Appropriateness; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'At every telehealth session, a therapist asks, \'Are you in the same place as usual?\' The client says yes, and the therapist documents \'client at home.\' Which statement is most accurate?',
+		'option_a'       => 'The practice is sufficient because the therapist knows the client\'s permanent address.',
+		'option_b'       => 'The practice is sufficient unless the client has a history of emergencies.',
+		'option_c'       => 'The therapist only needs the client\'s city and state when treatment is ongoing.',
+		'option_d'       => 'The practice does not satisfy the requirement to verbally obtain and document the client\'s full name and address of present location at the beginning of each session.',
+		'correct_option' => 'd',
+		'explanation'    => 'A. Incorrect. Knowing the permanent address does not replace obtaining the current-session information.
+		B. Incorrect. The requirement applies to each telehealth session, not only high-risk cases.
+		C. Incorrect. The regulation requires the address of the present location, not merely a city and state.
+		D. Correct. A vague confirmation and the note \'at home\' do not reflect the full name and present address required by section 1815.5(d)(1).
+		CTA Exam Strategy: Watch for vague location language. The regulation is specific: full name and present address.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Present Address Documentation; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'An LMFT begins offering a specialized assessment by telehealth even though the assessment is outside the LMFT\'s lawful scope and training. The LMFT argues that the online format makes the service permissible. Which principle controls?',
+		'option_a'       => 'Technology may expand scope when the client provides informed consent.',
+		'option_b'       => 'Telehealth does not authorize a service that is otherwise outside the therapist\'s lawful scope or competence.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'The service is permissible if no in-person provider is available.',
 		'option_d'       => 'The service is permissible if the platform is secure.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Client consent cannot expand a professional scope of practice or establish competence.
+<<<<<<< HEAD
 B. Correct. Business and Professions Code section 2290.5(e) states that telehealth does not alter scope or authorize otherwise unlawful delivery.
 C. Incorrect. Limited local access does not create legal scope or competence.
 D. Incorrect. Platform security is important but does not determine whether the professional service is legally or clinically authorized.
 CTA Exam Strategy: Separate the delivery method from the underlying service. Telehealth cannot make an unauthorized service lawful.',
+=======
+		B. Correct. Business and Professions Code section 2290.5(e) states that telehealth does not alter scope or authorize otherwise unlawful delivery.
+		C. Incorrect. Limited local access does not create legal scope or competence.
+		D. Incorrect. Platform security is important but does not determine whether the professional service is legally or clinically authorized.
+		CTA Exam Strategy: Separate the delivery method from the underlying service. Telehealth cannot make an unauthorized service lawful.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Telehealth Does Not Expand Scope; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a low-risk telehealth session, the video connection fails, but the therapist and client can communicate clearly by telephone. What is the most appropriate response?',
@@ -143,6 +272,7 @@ CTA Exam Strategy: Separate the delivery method from the underlying service. Tel
 		'option_d'       => 'Continue without documenting the disruption because technology failures are expected.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The therapist must assess appropriateness rather than assume that all methods are equivalent for every client and session.
+<<<<<<< HEAD
 B. Incorrect. One failure does not automatically require permanent discontinuation.
 C. Correct. The therapist should use clinical judgment, consider privacy and effectiveness, and implement the planned alternative when appropriate.
 D. Incorrect. A clinically meaningful disruption and resulting decision may require documentation; expected problems are not irrelevant problems.
@@ -160,6 +290,27 @@ B. Incorrect. A client cannot select a jurisdiction by contract when licensure l
 C. Incorrect. Supervisor status may matter, but it does not replace the supervisee\\'s need to provide services lawfully in the client\\'s jurisdiction.
 D. Incorrect. A California registration is not nationwide authority.
 CTA Exam Strategy: For associates, analyze both jurisdictions and preserve all supervision requirements.',
+=======
+		B. Incorrect. One failure does not automatically require permanent discontinuation.
+		C. Correct. The therapist should use clinical judgment, consider privacy and effectiveness, and implement the planned alternative when appropriate.
+		D. Incorrect. A clinically meaningful disruption and resulting decision may require documentation; expected problems are not irrelevant problems.
+		CTA Exam Strategy: The best answer is usually assessment plus a reasonable backup response, not automatic continuation or automatic termination.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Technology Failure and Continued Appropriateness; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A California AMFT\'s established client permanently relocates to Nevada. The supervisor is willing to continue supervision, and the client wants to continue telehealth. What must be determined before the AMFT provides another session?',
+		'option_a'       => 'Whether the AMFT can lawfully provide services in Nevada, whether Nevada permits the arrangement, and whether all California associate and supervision requirements can still be met.',
+		'option_b'       => 'Whether the client signs a statement choosing California law.',
+		'option_c'       => 'Whether the supervisor is licensed in Nevada; the AMFT\'s own authority is irrelevant.',
+		'option_d'       => 'Nothing further, because an active California registration authorizes telehealth throughout the United States.',
+		'correct_option' => 'a',
+		'explanation'    => 'A. Correct. The client\'s Nevada location triggers Nevada\'s practice requirements, while the AMFT must also remain compliant with California registration, employment, and supervision rules.
+		B. Incorrect. A client cannot select a jurisdiction by contract when licensure law requires authorization where the service is provided.
+		C. Incorrect. Supervisor status may matter, but it does not replace the supervisee\'s need to provide services lawfully in the client\'s jurisdiction.
+		D. Incorrect. A California registration is not nationwide authority.
+		CTA Exam Strategy: For associates, analyze both jurisdictions and preserve all supervision requirements.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review California Registrant Serving Out-of-State Client; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An independently licensed marriage and family therapist from another state has an established client who will be visiting California for two weeks. The therapist has never held a California license. Which statement is most accurate?',
@@ -169,6 +320,7 @@ CTA Exam Strategy: For associates, analyze both jurisdictions and preserve all s
 		'option_d'       => 'The therapist may qualify for a BBS-approved, one-time-per-calendar-year allowance lasting 30 consecutive days, but must meet all conditions and obtain approval before practicing.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The 30-day period is not an automatic exemption; the out-of-state marriage and family therapist must qualify and receive BBS approval.
+<<<<<<< HEAD
 B. Incorrect. California provides a narrow temporary practice allowance for a qualifying independently licensed marriage and family therapist serving an existing client.
 C. Incorrect. Informed consent alone does not create practice authority; the therapist must provide the required information to the Board and obtain approval before practicing.
 D. Correct. Business and Professions Code section 4980.11 permits a qualifying out-of-state marriage and family therapist to serve an established client for one approved period of 30 consecutive days per calendar year. The allowance is scheduled to remain in effect only until January 1, 2030.
@@ -186,12 +338,34 @@ B. Incorrect. The permanent address may not be where the client is located and c
 C. Correct. The therapist needs the present location to coordinate immediate safety action and should address location and risk without unnecessary delay.
 D. Incorrect. Ending the session would increase danger and fail to respond to the emergency.
 CTA Exam Strategy: In acute-risk telehealth questions, location is not paperwork; it is part of the safety intervention.',
+=======
+		B. Incorrect. California provides a narrow temporary practice allowance for a qualifying independently licensed marriage and family therapist serving an existing client.
+		C. Incorrect. Informed consent alone does not create practice authority; the therapist must provide the required information to the Board and obtain approval before practicing.
+		D. Correct. Business and Professions Code section 4980.11 permits a qualifying out-of-state marriage and family therapist to serve an established client for one approved period of 30 consecutive days per calendar year. The allowance is scheduled to remain in effect only until January 1, 2030.
+		CTA Exam Strategy: The words \'existing client visiting California\' suggest the narrow allowance, but never assume it is automatic.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Temporary Practice Allowance; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'At the beginning of a telehealth session, a client says, \'I\'m at a friend\'s place, but I do not know the address.\' Minutes later, the client reports imminent intent to die. What is the therapist\'s best immediate response?',
+		'option_a'       => 'Complete the full risk assessment before attempting to identify the client\'s location.',
+		'option_b'       => 'Contact emergency services at the client\'s permanent home address.',
+		'option_c'       => 'Promptly establish the client\'s exact present location by reasonable means while assessing and responding to the imminent safety risk.',
+		'option_d'       => 'End the session because the client did not provide an address at the beginning.',
+		'correct_option' => 'c',
+		'explanation'    => 'A. Incorrect. Risk assessment is necessary, but delaying location identification may prevent an effective emergency response.
+		B. Incorrect. The permanent address may not be where the client is located and could misdirect emergency intervention.
+		C. Correct. The therapist needs the present location to coordinate immediate safety action and should address location and risk without unnecessary delay.
+		D. Incorrect. Ending the session would increase danger and fail to respond to the emergency.
+		CTA Exam Strategy: In acute-risk telehealth questions, location is not paperwork; it is part of the safety intervention.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Unknown Location During Acute Risk; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A highly experienced clinician begins telehealth using a platform the clinician does not understand. The clinician cannot manage privacy settings, client access controls, or connection failures. Which statement is most accurate?',
 		'option_a'       => 'Years of clinical experience establish telehealth competence even without technology knowledge.',
 		'option_b'       => 'The clinician must develop sufficient competence with the technology and its risks before relying on it for clinical services.',
 		'option_c'       => 'The client assumes responsibility for all technology risks by choosing telehealth.',
+<<<<<<< HEAD
 		'option_d'       => 'The platform vendor is solely responsible for the clinician\\'s professional use of the system.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. General clinical experience does not automatically establish competence with a specific technology or delivery method.
@@ -199,6 +373,16 @@ B. Correct. Professional competence includes understanding the tools used in pra
 C. Incorrect. Client choice does not transfer the therapist\\'s professional responsibilities to the client.
 D. Incorrect. A vendor may have contractual duties, but the therapist remains responsible for professional judgment and lawful clinical use.
 CTA Exam Strategy: Licensure and experience are not substitutes for specific competence.',
+=======
+		'option_d'       => 'The platform vendor is solely responsible for the clinician\'s professional use of the system.',
+		'correct_option' => 'b',
+		'explanation'    => 'A. Incorrect. General clinical experience does not automatically establish competence with a specific technology or delivery method.
+		B. Correct. Professional competence includes understanding the tools used in practice, their limitations, and their effect on confidentiality, safety, and treatment.
+		C. Incorrect. Client choice does not transfer the therapist\'s professional responsibilities to the client.
+		D. Incorrect. A vendor may have contractual duties, but the therapist remains responsible for professional judgment and lawful clinical use.
+		CTA Exam Strategy: Licensure and experience are not substitutes for specific competence.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Technology Competence; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A low-risk client permanently moves from California to Arizona. The California therapist is not authorized to practice in Arizona. The client reports that local providers have long waitlists and asks the therapist to continue weekly telehealth. What is the best response?',
@@ -207,6 +391,7 @@ CTA Exam Strategy: Licensure and experience are not substitutes for specific com
 		'option_c'       => 'Continue as long as the client signs a waiver accepting California law.',
 		'option_d'       => 'Continue because the therapist-client relationship began in California.',
 		'correct_option' => 'a',
+<<<<<<< HEAD
 		'explanation'    => 'A. Correct. Client need and continuity are important, but they do not override Arizona\\'s authority to regulate services delivered to a person located there.
 B. Incorrect. There is no general automatic 90-day interstate telehealth grace period in the facts presented.
 C. Incorrect. A waiver cannot create licensure authority or displace another jurisdiction\\'s law.
@@ -225,6 +410,28 @@ B. Incorrect. Client agreement and lack of complaint do not eliminate the therap
 C. Incorrect. Platform security may be relevant, but it addresses only one possible concern and does not resolve the multiple legal and clinical deficiencies.
 D. Correct. This response integrates initiation duties, each-session requirements, ongoing appropriateness, safety, documentation, and professional judgment.
 CTA Exam Strategy: For an integrated question, choose the answer that addresses every material problem without relying on a single form, platform, or extreme action.',
+=======
+		'explanation'    => 'A. Correct. Client need and continuity are important, but they do not override Arizona\'s authority to regulate services delivered to a person located there.
+		B. Incorrect. There is no general automatic 90-day interstate telehealth grace period in the facts presented.
+		C. Incorrect. A waiver cannot create licensure authority or displace another jurisdiction\'s law.
+		D. Incorrect. The location where treatment began does not permanently control after the client relocates.
+		CTA Exam Strategy: The exam may make the unauthorized option feel compassionate. Choose lawful continuity planning rather than unauthorized continuation.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Permanent Interstate Relocation and Continuity; log error category TELEHEALTH-FOUNDATIONS.',
+	),
+	array(
+		'question_text'  => 'A therapist initiates telehealth with a new client in California after obtaining only a signed general treatment form. The therapist does not discuss telehealth risks, provide credential information, identify local emergency resources, or obtain the client\'s present address at later sessions. When the client becomes increasingly disorganized, the therapist continues without reassessing appropriateness. Which response best reflects the therapist\'s responsibilities?',
+		'option_a'       => 'Obtain another signature; the remaining issues are clinical preferences rather than legal requirements.',
+		'option_b'       => 'Continue because the client originally agreed to remote treatment and has not complained.',
+		'option_c'       => 'Change to a more secure platform; that change resolves the foundational problems.',
+		'option_d'       => 'Correct the missing initiation requirements, obtain and document the client\'s full name and present address at each session, reassess telehealth appropriateness, address safety and continuity needs, and document or consult as clinically indicated.',
+		'correct_option' => 'd',
+		'explanation'    => 'A. Incorrect. Another signature does not cure missing disclosures, local-resource planning, each-session location requirements, or failure to reassess appropriateness.
+		B. Incorrect. Client agreement and lack of complaint do not eliminate the therapist\'s legal and professional duties.
+		C. Incorrect. Platform security may be relevant, but it addresses only one possible concern and does not resolve the multiple legal and clinical deficiencies.
+		D. Correct. This response integrates initiation duties, each-session requirements, ongoing appropriateness, safety, documentation, and professional judgment.
+		CTA Exam Strategy: For an integrated question, choose the answer that addresses every material problem without relying on a single form, platform, or extreme action.
+		Remediation: Return to Workbook 2, Chapter 1: Telehealth Foundations; review Integrated Telehealth Foundations; log error category TELEHEALTH-FOUNDATIONS.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Before the first remote session, a therapist reviews whether the client received and understood the required telehealth information. Under California Business and Professions Code section 2290.5, how may a client consent to the use of telehealth?',
@@ -234,10 +441,18 @@ CTA Exam Strategy: For an integrated question, choose the answer that addresses 
 		'option_d'       => 'By attending the first telehealth session, without any discussion.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. California does not require a particular signed telehealth form.
+<<<<<<< HEAD
 B. Correct. The statute permits verbal or written consent and requires documentation of the consent.
 C. Incorrect. A recording is not required and would create a separate recording-consent issue.
 D. Incorrect. Mere attendance does not replace informing the client and obtaining consent.
 CTA Exam Strategy: Eliminate answers that impose a written-form requirement not found in the statute.',
+=======
+		B. Correct. The statute permits verbal or written consent and requires documentation of the consent.
+		C. Incorrect. A recording is not required and would create a separate recording-consent issue.
+		D. Incorrect. Mere attendance does not replace informing the client and obtaining consent.
+		CTA Exam Strategy: Eliminate answers that impose a written-form requirement not found in the statute.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Form of Telehealth Consent; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client agrees to meet by video, but the record does not clearly show when or how telehealth consent was obtained. When must the provider initiating telehealth inform the client and obtain telehealth consent?',
@@ -247,16 +462,25 @@ CTA Exam Strategy: Eliminate answers that impose a written-form requirement not 
 		'option_d'       => 'Before delivering health care through telehealth.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The consent cannot be postponed until several sessions have occurred.
+<<<<<<< HEAD
 B. Incorrect. The duty is not triggered only by client questions.
 C. Incorrect. Termination is far too late.
 D. Correct. Section 2290.5 requires the client to be informed and consent obtained before telehealth delivery.
 CTA Exam Strategy: The statutory phrase is “before the delivery” of telehealth.',
+=======
+		B. Incorrect. The duty is not triggered only by client questions.
+		C. Incorrect. Termination is far too late.
+		D. Correct. Section 2290.5 requires the client to be informed and consent obtained before telehealth delivery.
+		CTA Exam Strategy: The statutory phrase is “before the delivery” of telehealth.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Timing of Consent; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has seen a client in person for four months and now plans to begin video sessions. What is the most accurate statement?',
 		'option_a'       => 'Beginning video treatment is the initiation of telehealth, so the therapist must obtain and document telehealth consent and complete the BBS initiation requirements.',
 		'option_b'       => 'The original in-person treatment consent automatically authorizes telehealth even if it never mentioned remote services.',
 		'option_c'       => 'No telehealth consent is needed because the therapeutic relationship is already established.',
+<<<<<<< HEAD
 		'option_d'       => 'The therapist only needs to ask for the client\\'s present location at the first video session.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The change from in-person treatment to video initiates telehealth and triggers the consent and BBS initiation duties.
@@ -269,14 +493,37 @@ CTA Exam Strategy: A change in delivery mode can trigger telehealth initiation e
 		'question_text'  => 'Before the first remote session, a therapist reviews whether the client received and understood the required telehealth information. Which information must a BBS licensee or registrant provide to the client when telehealth services are initiated?',
 		'option_a'       => 'The therapist\\'s malpractice insurance limits.',
 		'option_b'       => 'The therapist\\'s home address.',
+=======
+		'option_d'       => 'The therapist only needs to ask for the client\'s present location at the first video session.',
+		'correct_option' => 'a',
+		'explanation'    => 'A. Correct. The change from in-person treatment to video initiates telehealth and triggers the consent and BBS initiation duties.
+		B. Incorrect. A general consent that did not address telehealth does not automatically satisfy the telehealth requirements.
+		C. Incorrect. An established relationship does not eliminate the requirement to inform and obtain consent before telehealth delivery.
+		D. Incorrect. Location verification is an each-session duty, but it does not replace the initiation requirements.
+		CTA Exam Strategy: A change in delivery mode can trigger telehealth initiation even when treatment itself is not new.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Transition to Telehealth; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'Before the first remote session, a therapist reviews whether the client received and understood the required telehealth information. Which information must a BBS licensee or registrant provide to the client when telehealth services are initiated?',
+		'option_a'       => 'The therapist\'s malpractice insurance limits.',
+		'option_b'       => 'The therapist\'s home address.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'The type of license or registration and the license or registration number.',
 		'option_d'       => 'The name of every platform vendor used by the practice.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Insurance limits are not part of the telehealth initiation list in section 1815.5.
+<<<<<<< HEAD
 B. Incorrect. The therapist\\'s home address is not the required credential disclosure.
 C. Correct. Section 1815.5(c)(3) requires the credential type and number.
 D. Incorrect. Vendor names may be relevant in practice, but they are not the credential disclosure required by the regulation.
 CTA Exam Strategy: When the question asks what must be provided, look for the exact BBS credential information.',
+=======
+		B. Incorrect. The therapist\'s home address is not the required credential disclosure.
+		C. Correct. Section 1815.5(c)(3) requires the credential type and number.
+		D. Incorrect. Vendor names may be relevant in practice, but they are not the credential disclosure required by the regulation.
+		CTA Exam Strategy: When the question asks what must be provided, look for the exact BBS credential information.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review BBS Credential Disclosure; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client verbally agrees to telehealth after the therapist explains the service. The therapist does not record the consent in the clinical record. Which statement is most accurate?',
@@ -286,6 +533,7 @@ CTA Exam Strategy: When the question asks what must be provided, look for the ex
 		'option_d'       => 'Verbal consent is permitted, but the therapist failed to document it as required.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Verbal telehealth consent is expressly permitted.
+<<<<<<< HEAD
 B. Incorrect. The statute requires documentation of the consent.
 C. Incorrect. Recording is not required and would require separate all-parties consent for a confidential communication.
 D. Correct. The defect is not the verbal form; it is the absence of documentation.
@@ -295,10 +543,23 @@ CTA Exam Strategy: Separate the form of consent from the documentation requireme
 		'question_text'  => 'During a compliance review, a clinician must determine whether the telehealth-consent process was completed at the legally required time. Which set of actions most completely reflects the BBS requirements when telehealth begins with a client in California?',
 		'option_a'       => 'Obtain a signed form, verify the client\\'s permanent address, and use a popular platform.',
 		'option_b'       => 'Obtain and document verbal or written telehealth consent, explain potential risks and limitations, provide credential type and number, and document reasonable efforts to identify relevant resources including emergency services in the client\\'s geographic area.',
+=======
+		B. Incorrect. The statute requires documentation of the consent.
+		C. Incorrect. Recording is not required and would require separate all-parties consent for a confidential communication.
+		D. Correct. The defect is not the verbal form; it is the absence of documentation.
+		CTA Exam Strategy: Separate the form of consent from the documentation requirement.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Documentation of Consent; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'During a compliance review, a clinician must determine whether the telehealth-consent process was completed at the legally required time. Which set of actions most completely reflects the BBS requirements when telehealth begins with a client in California?',
+		'option_a'       => 'Obtain a signed form, verify the client\'s permanent address, and use a popular platform.',
+		'option_b'       => 'Obtain and document verbal or written telehealth consent, explain potential risks and limitations, provide credential type and number, and document reasonable efforts to identify relevant resources including emergency services in the client\'s geographic area.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'Discuss benefits, require an emergency contact, and guarantee that the platform is secure.',
 		'option_d'       => 'Confirm client preference, obtain a business associate agreement, and wait to discuss risks until they occur.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A signature is not mandatory, and this answer omits several express BBS duties.
+<<<<<<< HEAD
 B. Correct. This answer contains the four initiation requirements in section 1815.5(c).
 C. Incorrect. An emergency contact may be clinically useful, but the answer omits consent documentation and credential disclosure and makes an inappropriate security guarantee.
 D. Incorrect. Client preference and vendor contracting do not replace the required disclosures, and risks may not be withheld until a problem occurs.
@@ -306,16 +567,34 @@ CTA Exam Strategy: Memorize the four-part initiation set rather than selecting a
 	),
 	array(
 		'question_text'  => 'A practice uses one comprehensive informed-consent document that clearly explains telehealth, includes the required BBS information, obtains the client\\'s agreement, and is documented. Must the practice also use a separate telehealth-only form?',
+=======
+		B. Correct. This answer contains the four initiation requirements in section 1815.5(c).
+		C. Incorrect. An emergency contact may be clinically useful, but the answer omits consent documentation and credential disclosure and makes an inappropriate security guarantee.
+		D. Incorrect. Client preference and vendor contracting do not replace the required disclosures, and risks may not be withheld until a problem occurs.
+		CTA Exam Strategy: Memorize the four-part initiation set rather than selecting a partially correct checklist.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Complete BBS Initiation Requirements; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'A practice uses one comprehensive informed-consent document that clearly explains telehealth, includes the required BBS information, obtains the client\'s agreement, and is documented. Must the practice also use a separate telehealth-only form?',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'No. California requires an informed and documented consent process, not a separate standalone form.',
 		'option_b'       => 'Yes. Telehealth consent is valid only on a document titled “Telehealth Consent.”',
 		'option_c'       => 'Yes, unless the client has previously used telehealth with another provider.',
 		'option_d'       => 'No, because telehealth never requires informed consent when included in general paperwork.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The law does not mandate a separate form if the comprehensive process satisfies the telehealth requirements.
+<<<<<<< HEAD
 B. Incorrect. No specific title or standalone document is required.
 C. Incorrect. Another provider\\'s prior telehealth use does not eliminate this provider\\'s duties.
 D. Incorrect. Telehealth still requires informed consent; it may simply be incorporated into a broader process.
 CTA Exam Strategy: Do not confuse a required process with a required document format.',
+=======
+		B. Incorrect. No specific title or standalone document is required.
+		C. Incorrect. Another provider\'s prior telehealth use does not eliminate this provider\'s duties.
+		D. Incorrect. Telehealth still requires informed consent; it may simply be incorporated into a broader process.
+		CTA Exam Strategy: Do not confuse a required process with a required document format.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Separate Form Not Required; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist obtains a signature on a standard treatment form that never mentions telehealth. The therapist then begins video sessions without discussing risks or limitations. What is the primary concern?',
@@ -325,10 +604,18 @@ CTA Exam Strategy: Do not confuse a required process with a required document fo
 		'option_d'       => 'The therapist could avoid the problem by documenting only the platform name.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Notarization is not required.
+<<<<<<< HEAD
 B. Incorrect. The law does not require a new signature every session.
 C. Correct. A generic signature cannot substitute for informing the client, obtaining telehealth consent, documenting it, and providing the BBS-required information.
 D. Incorrect. A platform name does not establish informed consent or the initiation disclosures.
 CTA Exam Strategy: A signature is evidence only of what the document and surrounding process actually covered.',
+=======
+		B. Incorrect. The law does not require a new signature every session.
+		C. Correct. A generic signature cannot substitute for informing the client, obtaining telehealth consent, documenting it, and providing the BBS-required information.
+		D. Incorrect. A platform name does not establish informed consent or the initiation disclosures.
+		CTA Exam Strategy: A signature is evidence only of what the document and surrounding process actually covered.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Generic Signature Is Insufficient; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client consented to telehealth but later asks whether an in-person session is possible. Which statement best reflects California law?',
@@ -338,14 +625,23 @@ CTA Exam Strategy: A signature is evidence only of what the document and surroun
 		'option_d'       => 'Agreeing to telehealth does not preclude in-person services during the course of care; the therapist should evaluate available and clinically appropriate options.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Section 2290.5(c) expressly rejects the idea that telehealth consent precludes in-person care.
+<<<<<<< HEAD
 B. Incorrect. The statute does not impose a universal 24-hour personal in-person-service requirement.
 C. Incorrect. Written revocation is not required before the client and therapist can discuss another format.
 D. Correct. In-person care remains possible, although the particular option depends on availability, legality, and clinical appropriateness.
 CTA Exam Strategy: Do not turn the right to receive in-person care into a guarantee that one provider must offer every format.',
+=======
+		B. Incorrect. The statute does not impose a universal 24-hour personal in-person-service requirement.
+		C. Incorrect. Written revocation is not required before the client and therapist can discuss another format.
+		D. Correct. In-person care remains possible, although the particular option depends on availability, legality, and clinical appropriateness.
+		CTA Exam Strategy: Do not turn the right to receive in-person care into a guarantee that one provider must offer every format.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review In-Person Care After Telehealth Consent; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Before the first remote session, a therapist reviews whether the client received and understood the required telehealth information. When telehealth begins, a therapist obtains consent and discusses privacy risks but makes no effort to identify emergency services near the client. Which BBS requirement is missing?',
 		'option_a'       => 'A mandatory promise to provide 24-hour crisis coverage.',
+<<<<<<< HEAD
 		'option_b'       => 'Documentation of reasonable efforts to ascertain contact information for relevant resources, including emergency services, in the client\\'s geographic area.',
 		'option_c'       => 'A requirement that the client identify two emergency contacts.',
 		'option_d'       => 'A requirement to give the client the therapist\\'s personal cell phone number.',
@@ -355,6 +651,18 @@ B. Correct. This is the express local-resource requirement in section 1815.5(c)(
 C. Incorrect. Emergency contacts may be clinically appropriate, but two contacts are not the stated regulatory requirement.
 D. Incorrect. The regulation does not require disclosure of a personal phone number.
 CTA Exam Strategy: Choose the precise local-resource requirement rather than a broader crisis-practice recommendation.',
+=======
+		'option_b'       => 'Documentation of reasonable efforts to ascertain contact information for relevant resources, including emergency services, in the client\'s geographic area.',
+		'option_c'       => 'A requirement that the client identify two emergency contacts.',
+		'option_d'       => 'A requirement to give the client the therapist\'s personal cell phone number.',
+		'correct_option' => 'b',
+		'explanation'    => 'A. Incorrect. The regulation does not require the therapist to promise continuous crisis coverage.
+		B. Correct. This is the express local-resource requirement in section 1815.5(c)(4).
+		C. Incorrect. Emergency contacts may be clinically appropriate, but two contacts are not the stated regulatory requirement.
+		D. Incorrect. The regulation does not require disclosure of a personal phone number.
+		CTA Exam Strategy: Choose the precise local-resource requirement rather than a broader crisis-practice recommendation.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Local Emergency Resources; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist changes from a familiar video platform to a system that uses a different login process, stores messages, and creates new privacy limitations. What is the best response?',
@@ -364,10 +672,18 @@ CTA Exam Strategy: Choose the precise local-resource requirement rather than a b
 		'option_d'       => 'Tell the client that platform decisions are solely administrative and cannot affect informed consent.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Prior consent should not be used to conceal or ignore a material change affecting risks and client understanding.
+<<<<<<< HEAD
 B. Incorrect. A new signed form at every session is not required.
 C. Correct. A material platform change should prompt a tailored update to the informed-consent process and documentation.
 D. Incorrect. Technology changes may affect privacy, access, communication, and the client\\'s decision.
 CTA Exam Strategy: The trigger is material change, not merely the passage of time.',
+=======
+		B. Incorrect. A new signed form at every session is not required.
+		C. Correct. A material platform change should prompt a tailored update to the informed-consent process and documentation.
+		D. Incorrect. Technology changes may affect privacy, access, communication, and the client\'s decision.
+		CTA Exam Strategy: The trigger is material change, not merely the passage of time.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Material Change and Updated Discussion; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Several months into telehealth, a client says, “I did not realize other people in my home might overhear me, and I am no longer comfortable.” What should the therapist do first?',
@@ -376,6 +692,7 @@ CTA Exam Strategy: The trigger is material change, not merely the passage of tim
 		'option_c'       => 'Require continued telehealth because treatment has already begun.',
 		'option_d'       => 'Terminate immediately without discussing alternatives or continuity.',
 		'correct_option' => 'a',
+<<<<<<< HEAD
 		'explanation'    => 'A. Correct. The client\\'s misunderstanding and changed willingness require renewed discussion, clinical assessment, and documentation.
 B. Incorrect. A prior signature does not eliminate the need to address a meaningful misunderstanding.
 C. Incorrect. Informed participation is not compulsory merely because treatment began.
@@ -386,10 +703,24 @@ CTA Exam Strategy: When the client reveals a misunderstanding, repair the inform
 		'question_text'  => 'A therapist correctly obtained and documented telehealth consent at initiation. At later sessions, the therapist never verifies the client\\'s present address. Which statement is most accurate?',
 		'option_a'       => 'The original consent satisfies all future telehealth requirements.',
 		'option_b'       => 'The initiation consent may remain valid, but it does not replace the separate requirement to verbally obtain and document the client\\'s full name and present address at the beginning of each telehealth session.',
+=======
+		'explanation'    => 'A. Correct. The client\'s misunderstanding and changed willingness require renewed discussion, clinical assessment, and documentation.
+		B. Incorrect. A prior signature does not eliminate the need to address a meaningful misunderstanding.
+		C. Incorrect. Informed participation is not compulsory merely because treatment began.
+		D. Incorrect. Immediate termination is an extreme response that ignores problem-solving and continuity of care.
+		CTA Exam Strategy: When the client reveals a misunderstanding, repair the informed-consent process before choosing an extreme action.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Client Misunderstanding; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'A therapist correctly obtained and documented telehealth consent at initiation. At later sessions, the therapist never verifies the client\'s present address. Which statement is most accurate?',
+		'option_a'       => 'The original consent satisfies all future telehealth requirements.',
+		'option_b'       => 'The initiation consent may remain valid, but it does not replace the separate requirement to verbally obtain and document the client\'s full name and present address at the beginning of each telehealth session.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'Location is necessary only if the client reports imminent danger.',
 		'option_d'       => 'The therapist must obtain a new telehealth consent instead of verifying location.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Consent is only one part of compliance and does not eliminate each-session duties.
+<<<<<<< HEAD
 B. Correct. California separates initiation consent from the recurring full-name and present-address requirement.
 C. Incorrect. The location requirement applies at the beginning of each telehealth session, not only emergencies.
 D. Incorrect. Re-consent is not the substitute for location verification.
@@ -397,20 +728,39 @@ CTA Exam Strategy: Identify whether the question tests initiation duties or each
 	),
 	array(
 		'question_text'  => 'A client signed a telehealth consent form. Without further discussion, the therapist activates the platform\\'s recording feature to review the session later. Which issue is most significant?',
+=======
+		B. Correct. California separates initiation consent from the recurring full-name and present-address requirement.
+		C. Incorrect. The location requirement applies at the beginning of each telehealth session, not only emergencies.
+		D. Incorrect. Re-consent is not the substitute for location verification.
+		CTA Exam Strategy: Identify whether the question tests initiation duties or each-session duties; they are related but not interchangeable.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Consent vs. Each-Session Duties; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'A client signed a telehealth consent form. Without further discussion, the therapist activates the platform\'s recording feature to review the session later. Which issue is most significant?',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'No issue exists because telehealth consent automatically includes recording.',
 		'option_b'       => 'Recording is permitted if the therapist deletes the file within 24 hours.',
 		'option_c'       => 'Consent to telehealth does not authorize recording; California generally requires the consent of all parties to record a confidential communication.',
 		'option_d'       => 'Only the platform vendor needs to consent to the recording.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Telehealth and recording are distinct forms of consent.
+<<<<<<< HEAD
 B. Incorrect. Prompt deletion does not cure recording without required consent.
 C. Correct. Penal Code section 632 generally requires all-party consent for recording confidential communications.
 D. Incorrect. The parties to the confidential communication, not merely the vendor, are central to the consent requirement.
 CTA Exam Strategy: Whenever recording appears, stop treating the question as ordinary telehealth consent.',
+=======
+		B. Incorrect. Prompt deletion does not cure recording without required consent.
+		C. Correct. Penal Code section 632 generally requires all-party consent for recording confidential communications.
+		D. Incorrect. The parties to the confidential communication, not merely the vendor, are central to the consent requirement.
+		CTA Exam Strategy: Whenever recording appears, stop treating the question as ordinary telehealth consent.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Recording Consent; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client declines telehealth because of privacy concerns. The therapist has no in-person office and believes telehealth would be clinically reasonable. What is the best response?',
 		'option_a'       => 'Require telehealth because the therapist has determined it is clinically reasonable.',
+<<<<<<< HEAD
 		'option_b'       => 'Explore the client\\'s concerns, explain the available lawful options and limitations, and arrange referral or continuity planning if the therapist cannot provide an acceptable service format.',
 		'option_c'       => 'Tell the client that declining telehealth is a refusal of all mental health treatment.',
 		'option_d'       => 'Obtain a waiver stating that the client accepts telehealth despite the objection.',
@@ -420,11 +770,24 @@ B. Correct. The therapist should support informed choice while honestly addressi
 C. Incorrect. Declining one delivery format is not necessarily refusing all treatment.
 D. Incorrect. A coerced waiver does not resolve the client\\'s lack of willingness or privacy concern.
 CTA Exam Strategy: Do not confuse client autonomy with a requirement that one therapist personally provide every preferred option.',
+=======
+		'option_b'       => 'Explore the client\'s concerns, explain the available lawful options and limitations, and arrange referral or continuity planning if the therapist cannot provide an acceptable service format.',
+		'option_c'       => 'Tell the client that declining telehealth is a refusal of all mental health treatment.',
+		'option_d'       => 'Obtain a waiver stating that the client accepts telehealth despite the objection.',
+		'correct_option' => 'b',
+		'explanation'    => 'A. Incorrect. Clinical reasonableness does not make the client\'s participation compulsory.
+		B. Correct. The therapist should support informed choice while honestly addressing the limits of the therapist\'s practice and continuity needs.
+		C. Incorrect. Declining one delivery format is not necessarily refusing all treatment.
+		D. Incorrect. A coerced waiver does not resolve the client\'s lack of willingness or privacy concern.
+		CTA Exam Strategy: Do not confuse client autonomy with a requirement that one therapist personally provide every preferred option.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Voluntary Participation and Limited Options; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist intentionally begins telehealth without informing the client or obtaining telehealth consent. Which legal consequence is expressly stated in Business and Professions Code section 2290.5?',
 		'option_a'       => 'Failure to comply constitutes unprofessional conduct.',
 		'option_b'       => 'The client automatically receives treble damages.',
+<<<<<<< HEAD
 		'option_c'       => 'The therapist\\'s license is automatically revoked without a hearing.',
 		'option_d'       => 'The treatment record becomes inadmissible in every proceeding.',
 		'correct_option' => 'a',
@@ -446,6 +809,31 @@ B. Incorrect. Participation and delay in objecting do not eliminate the therapis
 C. Incorrect. Immediate termination ignores informed choice, problem-solving, and continuity-of-care responsibilities.
 D. Correct. This answer addresses initiation consent, BBS disclosures, material changes, recording consent, client autonomy, alternatives, and documentation.
 CTA Exam Strategy: Integrated questions require a response that fixes every material defect without relying on a signature or an extreme action.',
+=======
+		'option_c'       => 'The therapist\'s license is automatically revoked without a hearing.',
+		'option_d'       => 'The treatment record becomes inadmissible in every proceeding.',
+		'correct_option' => 'a',
+		'explanation'    => 'A. Correct. Section 2290.5(d) expressly classifies failure to comply as unprofessional conduct.
+		B. Incorrect. The telehealth statute does not state an automatic treble-damages remedy.
+		C. Incorrect. The statute does not impose automatic revocation without disciplinary process.
+		D. Incorrect. The statute does not create a universal evidentiary exclusion for the treatment record.
+		CTA Exam Strategy: Choose the consequence the statute actually states, not an exaggerated remedy.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Effect of Noncompliance; log error category TELEHEALTH-CONSENT.',
+	),
+	array(
+		'question_text'  => 'A therapist shifts an established client from office visits to video. The therapist relies on an old general consent form, does not discuss telehealth risks, does not provide the credential number, and does not identify emergency resources near the client. Months later, a new platform introduces recording and storage features, but the therapist says nothing. The client then objects to telehealth and requests another format. Which response best reflects the therapist\'s responsibilities?',
+		'option_a'       => 'Obtain another signature and continue; the old and new omissions are cured by paperwork.',
+		'option_b'       => 'Continue because the client participated for several months without objecting.',
+		'option_c'       => 'Terminate immediately because the client no longer agrees to telehealth.',
+		'option_d'       => 'Complete and document the missing telehealth initiation process, explain material platform and recording issues, address the client\'s questions and voluntary choice, evaluate lawful alternatives or referral, and document the corrective actions.',
+		'correct_option' => 'd',
+		'explanation'    => 'A. Incorrect. A new signature alone does not cure missing disclosures, local-resource preparation, or the separate recording issue.
+		B. Incorrect. Participation and delay in objecting do not eliminate the therapist\'s duties or the client\'s current concerns.
+		C. Incorrect. Immediate termination ignores informed choice, problem-solving, and continuity-of-care responsibilities.
+		D. Correct. This answer addresses initiation consent, BBS disclosures, material changes, recording consent, client autonomy, alternatives, and documentation.
+		CTA Exam Strategy: Integrated questions require a response that fixes every material defect without relying on a signature or an extreme action.
+		Remediation: Return to Workbook 2, Chapter 2: Telehealth Informed Consent; review Integrated Telehealth Informed Consent; log error category TELEHEALTH-CONSENT.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After staff use the terms privacy, confidentiality, and security interchangeably, a therapist reviews the safeguards for a new telehealth service. Which statement best distinguishes privacy, confidentiality, and security in telehealth?',
@@ -455,10 +843,18 @@ CTA Exam Strategy: Integrated questions require a response that fixes every mate
 		'option_d'       => 'The three terms are legally identical and may be used interchangeably.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Each concept can involve both physical and technological conditions; none is limited in the way described.
+<<<<<<< HEAD
 B. Correct. Privacy concerns access and observation, confidentiality concerns professional use and disclosure, and security concerns administrative, physical, and technical protection.
 C. Incorrect. Telehealth consent does not make confidentiality or security optional.
 D. Incorrect. The concepts overlap but are not identical.
 CTA Exam Strategy: Define the problem before solving it. The exam may use one word while the facts involve all three.',
+=======
+		B. Correct. Privacy concerns access and observation, confidentiality concerns professional use and disclosure, and security concerns administrative, physical, and technical protection.
+		C. Incorrect. Telehealth consent does not make confidentiality or security optional.
+		D. Incorrect. The concepts overlap but are not identical.
+		CTA Exam Strategy: Define the problem before solving it. The exam may use one word while the facts involve all three.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Privacy, Confidentiality, and Security; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A remote-practice clinician is evaluating whether the setting, platform, devices, and vendors adequately protect client information. Under 16 CCR section 1815.5, what must a California BBS licensee or registrant do each time telehealth is provided?',
@@ -468,10 +864,18 @@ CTA Exam Strategy: Define the problem before solving it. The exam may use one wo
 		'option_d'       => 'Comply with applicable federal and state privacy, confidentiality, and security laws, including the CMIA and the regulation’s referenced HIPAA security standards.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The BBS does not publish an approved-platform list.
+<<<<<<< HEAD
 B. Incorrect. The law requires compliance and reasonable safeguards, not an impossible guarantee that risk can be eliminated.
 C. Incorrect. A new HIPAA authorization is not required before every telehealth session merely because telehealth is used.
 D. Correct. Section 1815.5(d)(3) expressly requires compliance with applicable privacy, confidentiality, and security laws and identifies the CMIA and HIPAA security standards.
 CTA Exam Strategy: Look for the regulation’s actual duty, not an invented product list, guarantee, or repeated authorization.',
+=======
+		B. Incorrect. The law requires compliance and reasonable safeguards, not an impossible guarantee that risk can be eliminated.
+		C. Incorrect. A new HIPAA authorization is not required before every telehealth session merely because telehealth is used.
+		D. Correct. Section 1815.5(d)(3) expressly requires compliance with applicable privacy, confidentiality, and security laws and identifies the CMIA and HIPAA security standards.
+		CTA Exam Strategy: Look for the regulation’s actual duty, not an invented product list, guarantee, or repeated authorization.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review BBS Telehealth Security Requirement; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist uses a well-configured encrypted platform, but conducts sessions where family members can overhear. Which statement is most accurate?',
@@ -481,10 +885,18 @@ CTA Exam Strategy: Look for the regulation’s actual duty, not an invented prod
 		'option_d'       => 'Only the platform vendor can be responsible for the exposure.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Telehealth privacy requires attention to the physical environment as well as the technology.
+<<<<<<< HEAD
 B. Incorrect. Encryption protects transmission or stored information; it cannot prevent a nearby person from overhearing.
 C. Incorrect. Telehealth consent does not waive the therapist’s confidentiality duties.
 D. Incorrect. The therapist remains responsible for controlling foreseeable risks in the therapist’s environment.
 CTA Exam Strategy: When the facts involve an open room or visible screen, do not let the word “encrypted” distract you.',
+=======
+		B. Incorrect. Encryption protects transmission or stored information; it cannot prevent a nearby person from overhearing.
+		C. Incorrect. Telehealth consent does not waive the therapist’s confidentiality duties.
+		D. Incorrect. The therapist remains responsible for controlling foreseeable risks in the therapist’s environment.
+		CTA Exam Strategy: When the facts involve an open room or visible screen, do not let the word “encrypted” distract you.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Secure Platform Limitation; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After staff use the terms privacy, confidentiality, and security interchangeably, a therapist reviews the safeguards for a new telehealth service. Which statement is most accurate regarding the CMIA and federal HIPAA?',
@@ -494,10 +906,18 @@ CTA Exam Strategy: When the facts involve an open room or visible screen, do not
 		'option_d'       => 'The CMIA applies only to hospitals and never to psychotherapists.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The CMIA and HIPAA are distinct legal frameworks with different sources and scopes.
+<<<<<<< HEAD
 B. Incorrect. California confidentiality law and professional duties may apply even when federal HIPAA does not directly classify the therapist as a covered entity.
 C. Correct. This statement accurately distinguishes the frameworks while recognizing the BBS telehealth regulation.
 D. Incorrect. The CMIA is not limited to hospitals and can apply to providers of health care, including psychotherapists.
 CTA Exam Strategy: Avoid the common distractor that treats HIPAA as the only source of confidentiality law.',
+=======
+		B. Incorrect. California confidentiality law and professional duties may apply even when federal HIPAA does not directly classify the therapist as a covered entity.
+		C. Correct. This statement accurately distinguishes the frameworks while recognizing the BBS telehealth regulation.
+		D. Incorrect. The CMIA is not limited to hospitals and can apply to providers of health care, including psychotherapists.
+		CTA Exam Strategy: Avoid the common distractor that treats HIPAA as the only source of confidentiality law.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review CMIA and Federal HIPAA; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client joins a telehealth session from a crowded coffee shop and begins discussing highly sensitive trauma. What should the therapist do first?',
@@ -507,10 +927,18 @@ CTA Exam Strategy: Avoid the common distractor that treats HIPAA as the only sou
 		'option_d'       => 'Tell the client that confidentiality no longer applies outside the home.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Client choice does not remove the therapist’s duty to evaluate privacy and appropriateness.
+<<<<<<< HEAD
 B. Incorrect. Immediate termination is an extreme response and does not first address the current risk.
 C. Correct. The therapist should address the active exposure and use clinical judgment to restore privacy or modify the session.
 D. Incorrect. Confidentiality duties continue; the setting creates risk but does not erase the duty.
 CTA Exam Strategy: The best first response to environmental exposure is usually pause, assess, and restore privacy.',
+=======
+		B. Incorrect. Immediate termination is an extreme response and does not first address the current risk.
+		C. Correct. The therapist should address the active exposure and use clinical judgment to restore privacy or modify the session.
+		D. Incorrect. Confidentiality duties continue; the setting creates risk but does not erase the duty.
+		CTA Exam Strategy: The best first response to environmental exposure is usually pause, assess, and restore privacy.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Client Environment; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist works from home with the office door closed, but the therapist’s smart speaker and voice-activated home security device remain active during sessions. What is the best response?',
@@ -520,10 +948,18 @@ CTA Exam Strategy: The best first response to environmental exposure is usually 
 		'option_d'       => 'Stop all telehealth permanently because home offices can never be private.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Voice-activated or recording devices may collect or expose confidential information.
+<<<<<<< HEAD
 B. Correct. The therapist should control foreseeable environmental technology risks before continuing.
 C. Incorrect. A client cannot assume the therapist’s professional responsibility for the therapist’s environment.
 D. Incorrect. A home office may be appropriate when reasonable privacy and security safeguards are implemented.
 CTA Exam Strategy: Environmental risk includes devices that listen, not only people who are physically present.',
+=======
+		B. Correct. The therapist should control foreseeable environmental technology risks before continuing.
+		C. Incorrect. A client cannot assume the therapist’s professional responsibility for the therapist’s environment.
+		D. Incorrect. A home office may be appropriate when reasonable privacy and security safeguards are implemented.
+		CTA Exam Strategy: Environmental risk includes devices that listen, not only people who are physically present.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Therapist Environment; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During an individual telehealth session, an unknown person enters the client’s room and sits outside the camera view. What should the therapist do first?',
@@ -533,10 +969,18 @@ CTA Exam Strategy: Environmental risk includes devices that listen, not only peo
 		'option_d'       => 'Immediately discharge the client for failing to maintain privacy.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The therapist should determine who is present and whether the client can voluntarily and privately continue.
+<<<<<<< HEAD
 B. Incorrect. Silence may reflect discomfort or coercion and is not reliable consent.
 C. Incorrect. Continuing without assessment may expose information, and a clinically relevant interruption may need documentation.
 D. Incorrect. Discharge is premature and does not address the immediate privacy question.
 CTA Exam Strategy: Unexpected presence calls for clarification before either continuing or taking an extreme action.',
+=======
+		B. Incorrect. Silence may reflect discomfort or coercion and is not reliable consent.
+		C. Incorrect. Continuing without assessment may expose information, and a clinically relevant interruption may need documentation.
+		D. Incorrect. Discharge is premature and does not address the immediate privacy question.
+		CTA Exam Strategy: Unexpected presence calls for clarification before either continuing or taking an extreme action.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Unexpected Third Party; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A vendor advertises that its platform is “officially HIPAA certified.” What is the therapist’s best response?',
@@ -546,10 +990,18 @@ CTA Exam Strategy: Unexpected presence calls for clarification before either con
 		'option_d'       => 'Reject the platform solely because it uses cloud technology.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. HHS does not endorse or certify specific telehealth products as compliant.
+<<<<<<< HEAD
 B. Incorrect. Product suitability depends on configuration, features, information flow, users, and the therapist’s workflow.
 C. Correct. Marketing language must be verified through risk analysis, contractual review, configuration, and other compliance steps.
 D. Incorrect. Cloud technology is not automatically prohibited; it requires appropriate analysis and safeguards.
 CTA Exam Strategy: “Certified” and “compliant” are marketing clues. Look for independent assessment rather than blind reliance.',
+=======
+		B. Incorrect. Product suitability depends on configuration, features, information flow, users, and the therapist’s workflow.
+		C. Correct. Marketing language must be verified through risk analysis, contractual review, configuration, and other compliance steps.
+		D. Incorrect. Cloud technology is not automatically prohibited; it requires appropriate analysis and safeguards.
+		CTA Exam Strategy: “Certified” and “compliant” are marketing clues. Look for independent assessment rather than blind reliance.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Vendor Marketing Claims; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client attends from a private office using an employer-managed laptop and network. The client is unsure whether the employer monitors activity. What is the best response?',
@@ -559,10 +1011,18 @@ CTA Exam Strategy: “Certified” and “compliant” are marketing clues. Look
 		'option_d'       => 'Explain the potential device and network risks, explore a personal device or other setting, and assess whether the session can proceed confidentially and effectively.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Physical privacy does not establish device or network privacy.
+<<<<<<< HEAD
 B. Incorrect. The therapist should address foreseeable confidentiality risk rather than transfer the issue to the employer.
 C. Incorrect. Workplace technology is a risk factor, not an automatic legal prohibition in every circumstance.
 D. Correct. The therapist should educate, explore safeguards, and assess appropriateness.
 CTA Exam Strategy: A private room can still contain an insecure or monitored device. Evaluate both layers.',
+=======
+		B. Incorrect. The therapist should address foreseeable confidentiality risk rather than transfer the issue to the employer.
+		C. Incorrect. Workplace technology is a risk factor, not an automatic legal prohibition in every circumstance.
+		D. Correct. The therapist should educate, explore safeguards, and assess appropriateness.
+		CTA Exam Strategy: A private room can still contain an insecure or monitored device. Evaluate both layers.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Workplace Device and Network; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After staff use the terms privacy, confidentiality, and security interchangeably, a therapist reviews the safeguards for a new telehealth service. Which statement best describes a business associate agreement in telehealth practice?',
@@ -572,10 +1032,18 @@ CTA Exam Strategy: A private room can still contain an insecure or monitored dev
 		'option_d'       => 'A BAA is unnecessary whenever the vendor encrypts the information.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. BAA requirements depend on HIPAA status and the vendor’s function; some transmission-only conduit relationships may not be business-associate relationships.
+<<<<<<< HEAD
 B. Correct. A BAA is generally required for a covered entity’s business associate, but it is only one part of compliance.
 C. Incorrect. A contract cannot correct insecure configuration, weak access controls, or inappropriate workflow.
 D. Incorrect. A vendor that maintains encrypted ePHI may still be a business associate even without the decryption key.
 CTA Exam Strategy: Do not choose an absolute. Analyze covered-entity status, vendor function, contract, and safeguards.',
+=======
+		B. Correct. A BAA is generally required for a covered entity’s business associate, but it is only one part of compliance.
+		C. Incorrect. A contract cannot correct insecure configuration, weak access controls, or inappropriate workflow.
+		D. Incorrect. A vendor that maintains encrypted ePHI may still be a business associate even without the decryption key.
+		CTA Exam Strategy: Do not choose an absolute. Analyze covered-entity status, vendor function, contract, and safeguards.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Business Associate Agreement; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A telehealth platform automatically records and transcribes every session by default. The therapist has obtained general telehealth consent but has not discussed recording. What should the therapist do?',
@@ -585,10 +1053,18 @@ CTA Exam Strategy: Do not choose an absolute. Analyze covered-entity status, ven
 		'option_d'       => 'Allow the vendor to decide whether consent is necessary.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Consent to telehealth is not automatic consent to recording or transcription.
+<<<<<<< HEAD
 B. Incorrect. A confidential communication cannot be intentionally recorded without the consent required by California law merely by limiting the intended recording.
 C. Correct. The therapist must separately analyze consent, purpose, security, retention, and vendor handling.
 D. Incorrect. The therapist cannot delegate professional and legal consent decisions to the platform vendor.
 CTA Exam Strategy: Treat recording and transcription as separate data-creation events, not ordinary telehealth features.',
+=======
+		B. Incorrect. A confidential communication cannot be intentionally recorded without the consent required by California law merely by limiting the intended recording.
+		C. Correct. The therapist must separately analyze consent, purpose, security, retention, and vendor handling.
+		D. Incorrect. The therapist cannot delegate professional and legal consent decisions to the platform vendor.
+		CTA Exam Strategy: Treat recording and transcription as separate data-creation events, not ordinary telehealth features.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Recording and Transcription; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist loses a laptop that may contain locally stored client information. What should the therapist do first?',
@@ -598,10 +1074,18 @@ CTA Exam Strategy: Treat recording and transcription as separate data-creation e
 		'option_d'       => 'Immediately tell every client that a reportable breach definitely occurred before assessing the facts.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Immediate containment and fact assessment are necessary to determine risk and required next steps.
+<<<<<<< HEAD
 B. Incorrect. Delay may increase risk and is inconsistent with appropriate incident response.
 C. Incorrect. Deleting source records does not secure the missing device and may violate record duties.
 D. Incorrect. Notification may be required, but the therapist should not label every lost-device event a reportable breach without assessment.
 CTA Exam Strategy: Incident first steps are containment and assessment, not waiting, deleting, or making unsupported conclusions.',
+=======
+		B. Incorrect. Delay may increase risk and is inconsistent with appropriate incident response.
+		C. Incorrect. Deleting source records does not secure the missing device and may violate record duties.
+		D. Incorrect. Notification may be required, but the therapist should not label every lost-device event a reportable breach without assessment.
+		CTA Exam Strategy: Incident first steps are containment and assessment, not waiting, deleting, or making unsupported conclusions.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Lost Device Incident Response; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An unknown participant enters a telehealth meeting for approximately one minute while a client’s diagnosis and medication history are being discussed. The therapist removes the participant. What is the best next response?',
@@ -611,10 +1095,18 @@ CTA Exam Strategy: Incident first steps are containment and assessment, not wait
 		'option_d'       => 'Secure the meeting, preserve relevant access information, determine what the participant could hear or see, document and consult under applicable policies and laws, and provide notice if the assessment shows notice is required.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Ending access contains the event but does not complete the assessment or response.
+<<<<<<< HEAD
 B. Incorrect. Deleting documentation may be improper and would interfere with accurate assessment.
 C. Incorrect. The incident concerns one session and has not yet been legally classified as a reportable breach affecting every client.
 D. Correct. The therapist should contain, investigate, document, consult, and notify according to the facts and governing requirements.
 CTA Exam Strategy: For sophisticated incident questions, choose the complete response that separates containment from legal breach determination.',
+=======
+		B. Incorrect. Deleting documentation may be improper and would interfere with accurate assessment.
+		C. Incorrect. The incident concerns one session and has not yet been legally classified as a reportable breach affecting every client.
+		D. Correct. The therapist should contain, investigate, document, consult, and notify according to the facts and governing requirements.
+		CTA Exam Strategy: For sophisticated incident questions, choose the complete response that separates containment from legal breach determination.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Unauthorized Participant and Exposure Assessment; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A cash-only therapist does not conduct the standard electronic transactions that ordinarily make a provider a federal HIPAA covered entity. The therapist concludes that no HIPAA-related security standard matters in California telehealth. Which statement is most accurate?',
@@ -624,10 +1116,18 @@ CTA Exam Strategy: For sophisticated incident questions, choose the complete res
 		'option_d'       => 'Only the client’s device security matters in a cash-only practice.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. California statutes, the CMIA, professional duties, and BBS regulation independently matter.
+<<<<<<< HEAD
 B. Incorrect. A professional license alone does not automatically establish federal covered-entity status.
 C. Correct. The answer distinguishes direct federal HIPAA scope from California’s own confidentiality and telehealth regulatory requirements.
 D. Incorrect. The therapist remains responsible for the therapist’s environment, systems, vendors, and professional handling of information.
 CTA Exam Strategy: This is a dual-framework question. Do not collapse federal HIPAA status and California BBS duties into one issue.',
+=======
+		B. Incorrect. A professional license alone does not automatically establish federal covered-entity status.
+		C. Correct. The answer distinguishes direct federal HIPAA scope from California’s own confidentiality and telehealth regulatory requirements.
+		D. Incorrect. The therapist remains responsible for the therapist’s environment, systems, vendors, and professional handling of information.
+		CTA Exam Strategy: This is a dual-framework question. Do not collapse federal HIPAA status and California BBS duties into one issue.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review HIPAA Scope and California BBS Duties; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client repeatedly glances off-camera, gives unusually brief answers, and says privacy is “fine,” but the therapist hears another person whispering instructions. What is the best response?',
@@ -637,10 +1137,18 @@ CTA Exam Strategy: This is a dual-framework question. Do not collapse federal HI
 		'option_d'       => 'Continue discussing sensitive material so the therapist can collect more evidence.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Direct confrontation may increase danger or coercion when the therapist does not know the circumstances.
+<<<<<<< HEAD
 B. Correct. The therapist should assess privacy and safety carefully without escalating a potentially controlling situation.
 C. Incorrect. The client’s statement may not reflect voluntary consent under the observed circumstances.
 D. Incorrect. Continuing sensitive content may expose the client and worsen risk.
 CTA Exam Strategy: When coercion may be present, privacy assessment is also a safety assessment. Avoid actions that could escalate danger.',
+=======
+		B. Correct. The therapist should assess privacy and safety carefully without escalating a potentially controlling situation.
+		C. Incorrect. The client’s statement may not reflect voluntary consent under the observed circumstances.
+		D. Incorrect. Continuing sensitive content may expose the client and worsen risk.
+		CTA Exam Strategy: When coercion may be present, privacy assessment is also a safety assessment. Avoid actions that could escalate danger.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Coercion and Hidden Listener; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A HIPAA-covered practice stores telehealth recordings with a cloud vendor. The recordings are encrypted, and the vendor does not possess the decryption key. The practice has no BAA with the vendor. Which statement is most accurate?',
@@ -650,10 +1158,18 @@ CTA Exam Strategy: When coercion may be present, privacy assessment is also a sa
 		'option_d'       => 'The recordings cease to be PHI once stored in the cloud.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. HHS guidance states that a cloud provider maintaining encrypted ePHI can be a business associate even without the decryption key.
+<<<<<<< HEAD
 B. Incorrect. Business-associate status can arise from maintaining ePHI, not only from viewing it.
 C. Incorrect. Encryption is important but does not address all risks to confidentiality, integrity, and availability.
 D. Incorrect. Cloud storage does not remove the information’s status as ePHI.
 CTA Exam Strategy: The key verb is “maintains.” A no-view cloud vendor can still be a business associate.',
+=======
+		B. Incorrect. Business-associate status can arise from maintaining ePHI, not only from viewing it.
+		C. Incorrect. Encryption is important but does not address all risks to confidentiality, integrity, and availability.
+		D. Incorrect. Cloud storage does not remove the information’s status as ePHI.
+		CTA Exam Strategy: The key verb is “maintains.” A no-view cloud vendor can still be a business associate.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Encrypted Cloud Storage and BAA; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist uses a vendor based only on a “HIPAA certified” advertisement, has no applicable vendor agreement, leaves automatic transcription enabled, conducts sessions where household members can overhear, and ignores a suspicious account login because no client has complained. Which response best reflects the therapist’s responsibilities?',
@@ -663,10 +1179,18 @@ CTA Exam Strategy: The key verb is “maintains.” A no-view cloud vendor can s
 		'option_d'       => 'Contain and assess the suspicious access, secure the therapist environment, disable unnecessary transcription, evaluate the vendor and agreement requirements, document corrective actions, and consult or notify as required by the facts and applicable law.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A signature does not correct insecure workflow, unauthorized access, vendor, recording, or environmental deficiencies.
+<<<<<<< HEAD
 B. Incorrect. The therapist must respond to foreseeable and suspected risks before a complaint or proven harm.
 C. Incorrect. Destruction and blanket discontinuation are extreme and may create additional legal and continuity problems.
 D. Correct. The response addresses the active incident, environmental privacy, recording, vendor compliance, documentation, and legally required follow-up.
 CTA Exam Strategy: Integrated questions reward the answer that addresses every material problem in a lawful sequence without relying on one document or an extreme reaction.',
+=======
+		B. Incorrect. The therapist must respond to foreseeable and suspected risks before a complaint or proven harm.
+		C. Incorrect. Destruction and blanket discontinuation are extreme and may create additional legal and continuity problems.
+		D. Correct. The response addresses the active incident, environmental privacy, recording, vendor compliance, documentation, and legally required follow-up.
+		CTA Exam Strategy: Integrated questions reward the answer that addresses every material problem in a lawful sequence without relying on one document or an extreme reaction.
+		Remediation: Return to Workbook 2, Chapter 3: Telehealth Privacy and Security; review Integrated Privacy and Security Response; log error category TELEHEALTH-PRIVACY-SECURITY.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is deciding whether to use email and other electronic communications for clinically related information. Which electronic communication is most likely to constitute telehealth under California law?',
@@ -676,10 +1200,18 @@ CTA Exam Strategy: Integrated questions reward the answer that addresses every m
 		'option_d'       => 'A neutral notice that the office will be closed for a holiday.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A routine administrative reminder is not automatically the delivery of health care.
+<<<<<<< HEAD
 B. Correct. California telehealth includes asynchronous delivery of health-care services, and symptom assessment plus treatment guidance is clinical care.
 C. Incorrect. A payment receipt is an administrative transaction rather than a clinical service.
 D. Incorrect. An office-closure notice does not deliver diagnosis, consultation, treatment, education, or care management.
 CTA Exam Strategy: Look at the purpose and content, not merely the fact that technology was used.',
+=======
+		B. Correct. California telehealth includes asynchronous delivery of health-care services, and symptom assessment plus treatment guidance is clinical care.
+		C. Incorrect. A payment receipt is an administrative transaction rather than a clinical service.
+		D. Incorrect. An office-closure notice does not deliver diagnosis, consultation, treatment, education, or care management.
+		CTA Exam Strategy: Look at the purpose and content, not merely the fact that technology was used.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Electronic Communication Categories; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Before transmitting a client record electronically, a clinician reviews the legal duties governing the communication and the retained record. Which statement best reflects current federal HIPAA guidance regarding email communication with patients?',
@@ -689,10 +1221,18 @@ CTA Exam Strategy: Look at the purpose and content, not merely the fact that tec
 		'option_d'       => 'Covered providers may use email with reasonable safeguards; the method and protections should be evaluated based on the circumstances.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. HHS expressly states that the Privacy Rule permits electronic communication with patients when reasonable safeguards are used.
+<<<<<<< HEAD
 B. Incorrect. Portals may be useful, but HIPAA does not make them the only lawful communication method.
 C. Incorrect. HHS does not impose that blanket rule; it requires risk assessment, appropriate safeguards, and compliance with the Security Rule when applicable.
 D. Correct. The governing principle is reasonable safeguards and protection appropriate to the communication and risk.
 CTA Exam Strategy: Avoid absolute words such as “never,” “only,” and “automatic” when official guidance uses a reasonable-safeguards standard.',
+=======
+		B. Incorrect. Portals may be useful, but HIPAA does not make them the only lawful communication method.
+		C. Incorrect. HHS does not impose that blanket rule; it requires risk assessment, appropriate safeguards, and compliance with the Security Rule when applicable.
+		D. Correct. The governing principle is reasonable safeguards and protection appropriate to the communication and risk.
+		CTA Exam Strategy: Avoid absolute words such as “never,” “only,” and “automatic” when official guidance uses a reasonable-safeguards standard.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Email and Reasonable Safeguards; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice is updating its electronic-communication policy after discovering that staff treat every digital message as merely administrative. Which explanation best identifies the primary purpose of discussing response times and emergency procedures before using routine electronic messaging with a client in this situation?',
@@ -702,10 +1242,18 @@ CTA Exam Strategy: Avoid absolute words such as “never,” “only,” and “
 		'option_d'       => 'To allow the therapist to avoid documenting clinically significant information.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Clear expectations reduce unsafe assumptions about availability, monitoring, and emergency use.
+<<<<<<< HEAD
 B. Incorrect. A policy does not excuse inaction after the therapist actually becomes aware of clinically significant or imminent risk.
 C. Incorrect. A discussion cannot guarantee confidentiality or remove method-specific risks.
 D. Incorrect. Clinically significant communications may still require documentation.
 CTA Exam Strategy: Communication policies clarify expectations; they do not erase professional duties.',
+=======
+		B. Incorrect. A policy does not excuse inaction after the therapist actually becomes aware of clinically significant or imminent risk.
+		C. Incorrect. A discussion cannot guarantee confidentiality or remove method-specific risks.
+		D. Incorrect. Clinically significant communications may still require documentation.
+		CTA Exam Strategy: Communication policies clarify expectations; they do not erase professional duties.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Communication Expectations; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT is deciding whether to use email and other electronic communications for clinically related information. Which statement is accurate regarding California health-service records maintained by an LMFT?',
@@ -715,10 +1263,18 @@ CTA Exam Strategy: Communication policies clarify expectations; they do not eras
 		'option_d'       => 'Record-retention requirements end when a message is deleted from the therapist’s device.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. California LMFT law permits required health-service records to be retained in written or electronic form.
+<<<<<<< HEAD
 B. Incorrect. The significance of the content, not the communication method, determines whether it belongs in the record.
 C. Correct. California permits electronic records, and clinically significant communications should be preserved or incorporated as part of responsible LMFT documentation.
 D. Incorrect. Deleting a device copy does not eliminate the underlying LMFT recordkeeping duty.
 CTA Exam Strategy: Technology changes the form of the record, not the importance of clinically significant information.',
+=======
+		B. Incorrect. The significance of the content, not the communication method, determines whether it belongs in the record.
+		C. Correct. California permits electronic records, and clinically significant communications should be preserved or incorporated as part of responsible LMFT documentation.
+		D. Incorrect. Deleting a device copy does not eliminate the underlying LMFT recordkeeping duty.
+		CTA Exam Strategy: Technology changes the form of the record, not the importance of clinically significant information.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Electronic Health-Service Records; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client initiates email communication with a therapist about scheduling. Which conclusion is most accurate?',
@@ -728,10 +1284,18 @@ CTA Exam Strategy: Technology changes the form of the record, not the importance
 		'option_d'       => 'The client’s initiation may indicate that email is acceptable for that communication, but the therapist still must use professional judgment and reasonable safeguards.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Initiating email is not a broad waiver of confidentiality.
+<<<<<<< HEAD
 B. Incorrect. Acceptability of the channel does not authorize unlimited or unnecessarily sensitive content.
 C. Incorrect. Email is not categorically prohibited.
 D. Correct. HHS guidance permits a limited inference of acceptability while preserving the provider’s responsibility to address risks and safeguards.
 CTA Exam Strategy: Client choice informs the analysis but does not transfer professional responsibility.',
+=======
+		B. Incorrect. Acceptability of the channel does not authorize unlimited or unnecessarily sensitive content.
+		C. Incorrect. Email is not categorically prohibited.
+		D. Correct. HHS guidance permits a limited inference of acceptability while preserving the provider’s responsibility to address risks and safeguards.
+		CTA Exam Strategy: Client choice informs the analysis but does not transfer professional responsibility.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Client-Initiated Email; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist sends an appointment reminder to ten clients using a group text in which every recipient can see the other telephone numbers. What is the most significant concern?',
@@ -741,10 +1305,18 @@ CTA Exam Strategy: Client choice informs the analysis but does not transfer prof
 		'option_d'       => 'The therapist must terminate treatment with all recipients.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The reminder is administrative and does not become psychotherapy merely because it is electronic.
+<<<<<<< HEAD
 B. Correct. Visible recipients may reveal identifying information and a treatment relationship, creating a confidentiality concern.
 C. Incorrect. Appointment reminders are not categorically prohibited; reasonable safeguards are required.
 D. Incorrect. Termination is not the first or necessary response to the messaging error.
 CTA Exam Strategy: “No diagnosis was included” does not eliminate the risk of revealing who receives services.',
+=======
+		B. Correct. Visible recipients may reveal identifying information and a treatment relationship, creating a confidentiality concern.
+		C. Incorrect. Appointment reminders are not categorically prohibited; reasonable safeguards are required.
+		D. Incorrect. Termination is not the first or necessary response to the messaging error.
+		CTA Exam Strategy: “No diagnosis was included” does not eliminate the risk of revealing who receives services.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Group Messaging Disclosure; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client sends a suicidal text at 2:00 a.m. The therapist’s written policy states that texts are reviewed during business hours and are not for emergencies. The therapist does not see the message until 8:00 a.m. What is the best response upon reading it?',
@@ -754,10 +1326,18 @@ CTA Exam Strategy: “No diagnosis was included” does not eliminate the risk o
 		'option_d'       => 'Immediately terminate treatment for violating the texting policy.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The policy helps define monitoring expectations, but once the therapist becomes aware of a suicidal communication, the therapist should assess and respond appropriately.
+<<<<<<< HEAD
 B. Incorrect. A policy does not authorize ignoring known risk.
 C. Incorrect. Time alone does not establish that the danger has ended.
 D. Incorrect. Immediate termination would be an extreme response and could increase risk.
 CTA Exam Strategy: Distinguish not seeing a message from seeing it and choosing not to act.',
+=======
+		B. Incorrect. A policy does not authorize ignoring known risk.
+		C. Incorrect. Time alone does not establish that the danger has ended.
+		D. Incorrect. Immediate termination would be an extreme response and could increase risk.
+		CTA Exam Strategy: Distinguish not seeing a message from seeing it and choosing not to act.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Unread Crisis Message; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client sends a portal message reporting a new manic episode, medication nonadherence, and impulsive spending. The therapist changes the treatment plan after reviewing the message. What should the therapist do?',
@@ -767,10 +1347,18 @@ CTA Exam Strategy: Distinguish not seeing a message from seeing it and choosing 
 		'option_d'       => 'Wait until termination to decide whether the message mattered.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Clinically significant content does not fall outside the record merely because it came through a portal.
+<<<<<<< HEAD
 B. Incorrect. A bare receipt note would omit the information and decisions that affected care.
 C. Correct. The message materially affected assessment and treatment and should be documented accordingly.
 D. Incorrect. Documentation should occur contemporaneously rather than being deferred until termination.
 CTA Exam Strategy: Ask whether the message changed assessment, treatment, risk, or follow-up.',
+=======
+		B. Incorrect. A bare receipt note would omit the information and decisions that affected care.
+		C. Correct. The message materially affected assessment and treatment and should be documented accordingly.
+		D. Incorrect. Documentation should occur contemporaneously rather than being deferred until termination.
+		CTA Exam Strategy: Ask whether the message changed assessment, treatment, risk, or follow-up.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Clinical Documentation; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client asks the therapist to use ordinary unencrypted email for brief treatment updates because the client cannot access the portal. What is the best response?',
@@ -780,10 +1368,18 @@ CTA Exam Strategy: Ask whether the message changed assessment, treatment, risk, 
 		'option_d'       => 'Discuss the material risks and alternatives, determine whether the method can be used with reasonable safeguards for the proposed content, honor reasonable communication preferences when lawful, and document significant decisions.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Official HIPAA guidance does not impose a blanket prohibition on unencrypted email.
+<<<<<<< HEAD
 B. Incorrect. Client preference does not eliminate the need to consider risks and safeguards.
 C. Incorrect. A blanket waiver does not make every type of content or workflow appropriate.
 D. Correct. This response respects access needs while preserving legal, security, and professional judgment.
 CTA Exam Strategy: The strongest answer balances access, client preference, risk, and safeguards rather than choosing an absolute.',
+=======
+		B. Incorrect. Client preference does not eliminate the need to consider risks and safeguards.
+		C. Incorrect. A blanket waiver does not make every type of content or workflow appropriate.
+		D. Correct. This response respects access needs while preserving legal, security, and professional judgment.
+		CTA Exam Strategy: The strongest answer balances access, client preference, risk, and safeguards rather than choosing an absolute.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Client Preference for Unencrypted Email; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client sends multiple nonurgent texts every evening and becomes angry when the therapist does not respond immediately. What should the therapist do first?',
@@ -793,10 +1389,18 @@ CTA Exam Strategy: The strongest answer balances access, client preference, risk
 		'option_d'       => 'Transfer all treatment to text messaging.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Reinforcing an unsustainable expectation may worsen the boundary problem.
+<<<<<<< HEAD
 B. Correct. The therapist should clarify expectations and explore the clinical meaning and treatment impact of the messaging pattern.
 C. Incorrect. Immediate blocking may create safety and continuity problems and does not address the issue therapeutically.
 D. Incorrect. Texting is not automatically an appropriate substitute for scheduled treatment.
 CTA Exam Strategy: For nonemergency boundary concerns, the exam usually favors clarification and clinical discussion before an extreme action.',
+=======
+		B. Correct. The therapist should clarify expectations and explore the clinical meaning and treatment impact of the messaging pattern.
+		C. Incorrect. Immediate blocking may create safety and continuity problems and does not address the issue therapeutically.
+		D. Incorrect. Texting is not automatically an appropriate substitute for scheduled treatment.
+		CTA Exam Strategy: For nonemergency boundary concerns, the exam usually favors clarification and clinical discussion before an extreme action.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Response Boundaries; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Before sending a treatment summary by email to an authorized third party, which action best reduces an avoidable disclosure?',
@@ -806,10 +1410,18 @@ CTA Exam Strategy: For nonemergency boundary concerns, the exam usually favors c
 		'option_d'       => 'Place the complete diagnosis and treatment history in the subject line.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Auto-complete is a common source of wrong-recipient errors.
+<<<<<<< HEAD
 B. Incorrect. This may shift risk to the client and may not satisfy the intended authorized disclosure process.
 C. Correct. Verifying authority, recipient, attachment, and method is a reasonable safeguard.
 D. Incorrect. Subject lines may be widely visible and should not contain unnecessary sensitive information.
 CTA Exam Strategy: The exam favors verification before transmission rather than repair after a preventable error.',
+=======
+		B. Incorrect. This may shift risk to the client and may not satisfy the intended authorized disclosure process.
+		C. Correct. Verifying authority, recipient, attachment, and method is a reasonable safeguard.
+		D. Incorrect. Subject lines may be widely visible and should not contain unnecessary sensitive information.
+		CTA Exam Strategy: The exam favors verification before transmission rather than repair after a preventable error.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Recipient Verification; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist uses a secure messaging application to review a client’s symptom report and provide individualized coping instructions between sessions. Which analysis is most accurate?',
@@ -819,10 +1431,18 @@ CTA Exam Strategy: The exam favors verification before transmission rather than 
 		'option_d'       => 'It is outside BBS jurisdiction because the communication was written.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. California’s telehealth definition includes asynchronous delivery of health-care services, and individualized clinical guidance may fall within that definition.
+<<<<<<< HEAD
 B. Incorrect. Telehealth is not limited to live video.
 C. Incorrect. Timing between sessions does not make clinical treatment content administrative.
 D. Incorrect. Written electronic clinical care remains subject to professional and BBS standards.
 CTA Exam Strategy: When the therapist assesses or treats through technology, think beyond video and consider asynchronous telehealth.',
+=======
+		B. Incorrect. Telehealth is not limited to live video.
+		C. Incorrect. Timing between sessions does not make clinical treatment content administrative.
+		D. Incorrect. Written electronic clinical care remains subject to professional and BBS standards.
+		CTA Exam Strategy: When the therapist assesses or treats through technology, think beyond video and consider asynchronous telehealth.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Asynchronous Clinical Care; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client texts that the client purchased a firearm and is considering suicide. After the therapist reads the message, the client asks the therapist to delete it and not place it in the record. What is the best response?',
@@ -832,10 +1452,18 @@ CTA Exam Strategy: When the therapist assesses or treats through technology, thi
 		'option_d'       => 'Respond to the safety risk, document the clinically significant communication and resulting assessment and actions, and preserve information according to applicable record and confidentiality rules.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A client request does not require destruction of clinically significant health-service information or override safety duties.
+<<<<<<< HEAD
 B. Incorrect. The content, not the texting format, makes the communication clinically significant.
 C. Incorrect. Preserving information without responding to the suicide risk is inadequate.
 D. Correct. The therapist must address the imminent clinical concern and create an appropriate record of the message, assessment, actions, consultation, and follow-up.
 CTA Exam Strategy: A request for secrecy does not remove risk-management and documentation responsibilities.',
+=======
+		B. Incorrect. The content, not the texting format, makes the communication clinically significant.
+		C. Incorrect. Preserving information without responding to the suicide risk is inadequate.
+		D. Correct. The therapist must address the imminent clinical concern and create an appropriate record of the message, assessment, actions, consultation, and follow-up.
+		CTA Exam Strategy: A request for secrecy does not remove risk-management and documentation responsibilities.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Preserving Risk Communication; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist uses a personal mobile telephone for client texts. The device is password protected, but message previews appear on the lock screen and the therapist’s spouse sometimes uses the device. Which statement is most accurate?',
@@ -845,10 +1473,18 @@ CTA Exam Strategy: A request for secrecy does not remove risk-management and doc
 		'option_d'       => 'The client assumes all risk because the client chose to text.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. There is no universal rule that any personal device use is automatically prohibited.
+<<<<<<< HEAD
 B. Incorrect. Password protection does not address previews, shared access, cloud syncing, message retention, or boundaries.
 C. Correct. The appropriate response is a fact-specific assessment and reasonable safeguards, which may require changing settings, access, workflow, or device use.
 D. Incorrect. Client participation does not shift the therapist’s responsibilities to the client.
 CTA Exam Strategy: When the facts show manageable risks, choose assessment and correction rather than an unsupported automatic conclusion.',
+=======
+		B. Incorrect. Password protection does not address previews, shared access, cloud syncing, message retention, or boundaries.
+		C. Correct. The appropriate response is a fact-specific assessment and reasonable safeguards, which may require changing settings, access, workflow, or device use.
+		D. Incorrect. Client participation does not shift the therapist’s responsibilities to the client.
+		CTA Exam Strategy: When the facts show manageable risks, choose assessment and correction rather than an unsupported automatic conclusion.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Personal Device Use; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple is the identified client. One partner sends the therapist a private text containing clinically important information and asks the therapist to conceal it from the other partner. The treatment agreement does not address individual electronic communications. What should the therapist do?',
@@ -858,10 +1494,18 @@ CTA Exam Strategy: When the facts show manageable risks, choose assessment and c
 		'option_d'       => 'Promise permanent secrecy because the message was sent privately.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Automatic disclosure may violate expectations, undermine treatment, or create safety concerns; the therapist must analyze the agreement and circumstances.
+<<<<<<< HEAD
 B. Correct. The scenario requires careful application of the treatment unit, consent, confidentiality policy, safety, and clinical judgment rather than an automatic promise or disclosure.
 C. Incorrect. Deleting and ignoring clinically important information is not appropriate.
 D. Incorrect. The therapist should not make a permanent secrecy promise without analyzing the treatment framework and applicable duties.
 CTA Exam Strategy: Complex electronic communication does not replace the underlying informed-consent and confidentiality analysis.',
+=======
+		B. Correct. The scenario requires careful application of the treatment unit, consent, confidentiality policy, safety, and clinical judgment rather than an automatic promise or disclosure.
+		C. Incorrect. Deleting and ignoring clinically important information is not appropriate.
+		D. Incorrect. The therapist should not make a permanent secrecy promise without analyzing the treatment framework and applicable duties.
+		CTA Exam Strategy: Complex electronic communication does not replace the underlying informed-consent and confidentiality analysis.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Couples Messaging and Confidentiality; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During office hours, a therapist opens a portal message stating, “I have taken all of my medication and I am getting sleepy.” The portal displays an automated notice that it is not for emergencies. What should the therapist do?',
@@ -871,10 +1515,18 @@ CTA Exam Strategy: Complex electronic communication does not replace the underly
 		'option_d'       => 'Delete the message to avoid assuming responsibility for portal emergencies.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The therapist has actual knowledge of a potentially lethal overdose and should respond promptly; the automated warning does not end the duty to act on known risk.
+<<<<<<< HEAD
 B. Incorrect. Routine response timelines are not appropriate after the therapist reads an urgent overdose disclosure.
 C. Incorrect. A policy reminder alone is inadequate for an immediate medical danger.
 D. Incorrect. Deleting the message would worsen the risk and the documentation failure.
 CTA Exam Strategy: A disclaimer is preventive guidance, not a substitute for action after actual notice of danger.',
+=======
+		B. Incorrect. Routine response timelines are not appropriate after the therapist reads an urgent overdose disclosure.
+		C. Incorrect. A policy reminder alone is inadequate for an immediate medical danger.
+		D. Incorrect. Deleting the message would worsen the risk and the documentation failure.
+		CTA Exam Strategy: A disclaimer is preventive guidance, not a substitute for action after actual notice of danger.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Actually Received Emergency Message; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist communicates through personal text, ordinary email, two portals, and a social messaging application. The therapist has never explained which channel to use, responds unpredictably at all hours, leaves clinically significant messages on personal devices without documenting them, and has no process for urgent messages. Which response best reflects the therapist’s responsibilities?',
@@ -884,10 +1536,18 @@ CTA Exam Strategy: A disclaimer is preventive guidance, not a substitute for act
 		'option_d'       => 'Reevaluate the communication system; establish clear purposes, boundaries, response times, and emergency procedures; use appropriate safeguards and approved channels; incorporate clinically significant content into the record; and seek consultation when needed.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Client convenience does not resolve confidentiality, boundary, safety, and documentation problems.
+<<<<<<< HEAD
 B. Incorrect. A total ban is an extreme response and may unnecessarily reduce access; the therapist should first develop a lawful and clinically appropriate system.
 C. Incorrect. A disclaimer cannot eliminate professional duties or responsibility for messages actually received.
 D. Correct. This response addresses communication design, informed expectations, confidentiality, boundaries, emergencies, documentation, and professional judgment.
 CTA Exam Strategy: In an integrated question, select the answer that repairs the entire system rather than relying on preference, prohibition, or a disclaimer.',
+=======
+		B. Incorrect. A total ban is an extreme response and may unnecessarily reduce access; the therapist should first develop a lawful and clinically appropriate system.
+		C. Incorrect. A disclaimer cannot eliminate professional duties or responsibility for messages actually received.
+		D. Correct. This response addresses communication design, informed expectations, confidentiality, boundaries, emergencies, documentation, and professional judgment.
+		CTA Exam Strategy: In an integrated question, select the answer that repairs the entire system rather than relying on preference, prohibition, or a disclaimer.
+		Remediation: Return to Workbook 2, Chapter 4: Technology, Electronic Communication, and Professional Responsibilities; review Integrated Electronic Communication Responsibilities; log error category ELECTRONIC-COMMUNICATION.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is reviewing social-media activity that could reveal a professional relationship or blur the boundary between personal and professional roles. Which statement best reflects professional responsibilities on social media?',
@@ -897,10 +1557,18 @@ CTA Exam Strategy: In an integrated question, select the answer that repairs the
 		'option_d'       => 'Public information may always be repeated because it is no longer confidential.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Professional responsibilities can be implicated by conduct outside a scheduled session, including public disclosures, advertising, and boundary interactions.
+<<<<<<< HEAD
 B. Correct. Social media changes visibility and communication methods but does not eliminate the underlying professional standards.
 C. Incorrect. Privacy settings reduce some exposure but do not guarantee separation, confidentiality, or immunity from professional consequences.
 D. Incorrect. Public availability does not authorize the therapist to disclose client information or confirm a treatment relationship.
 CTA Exam Strategy: Choose the answer that applies existing professional principles rather than treating social media as a separate legal universe.',
+=======
+		B. Correct. Social media changes visibility and communication methods but does not eliminate the underlying professional standards.
+		C. Incorrect. Privacy settings reduce some exposure but do not guarantee separation, confidentiality, or immunity from professional consequences.
+		D. Incorrect. Public availability does not authorize the therapist to disclose client information or confirm a treatment relationship.
+		CTA Exam Strategy: Choose the answer that applies existing professional principles rather than treating social media as a separate legal universe.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Digital Professional Boundaries; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A California LMFT uses a professional social-media profile to promote psychotherapy services. Under the BBS advertising rules effective April 1, 2026, which information must appear on the profile or through an easy-to-find link?',
@@ -910,10 +1578,18 @@ CTA Exam Strategy: Choose the answer that applies existing professional principl
 		'option_d'       => 'Only the therapist’s business name and telephone number.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. These are the minimum content requirements for a BBS licensee’s advertising, including social media.
+<<<<<<< HEAD
 B. Incorrect. Academic credentials and insurance information are not the required minimum items.
 C. Incorrect. Specialties and experience may be advertised accurately, but they do not replace the required identifying information.
 D. Incorrect. A business name and telephone number do not satisfy the minimum licensee content requirements.
 CTA Exam Strategy: Social media is advertising. Look for name, license type, and license number.',
+=======
+		B. Incorrect. Academic credentials and insurance information are not the required minimum items.
+		C. Incorrect. Specialties and experience may be advertised accurately, but they do not replace the required identifying information.
+		D. Incorrect. A business name and telephone number do not satisfy the minimum licensee content requirements.
+		CTA Exam Strategy: Social media is advertising. Look for name, license type, and license number.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Social Media Advertising Requirements; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client publicly posts, “My therapist helped me through a divorce.” What may the therapist conclude?',
@@ -923,10 +1599,18 @@ CTA Exam Strategy: Social media is advertising. Look for name, license type, and
 		'option_d'       => 'The therapist must publicly correct any inaccurate part of the review.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. A client’s self-disclosure does not create authorization for the therapist to confirm, expand, or disclose protected information.
+<<<<<<< HEAD
 B. Incorrect. The client’s post is not a blanket waiver of the therapist’s confidentiality obligations.
 C. Incorrect. Reposting with record details would add an unauthorized disclosure.
 D. Incorrect. Public correction may reveal confidential information; concerns should be handled through lawful private processes.
 CTA Exam Strategy: The client controls the client’s own speech; the therapist remains bound by confidentiality.',
+=======
+		B. Incorrect. The client’s post is not a blanket waiver of the therapist’s confidentiality obligations.
+		C. Incorrect. Reposting with record details would add an unauthorized disclosure.
+		D. Incorrect. Public correction may reveal confidential information; concerns should be handled through lawful private processes.
+		CTA Exam Strategy: The client controls the client’s own speech; the therapist remains bound by confidentiality.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Online Reviews and Confidentiality; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is reviewing social-media activity that could reveal a professional relationship or blur the boundary between personal and professional roles. Which statement is most accurate about information found on a client’s public social-media account?',
@@ -936,10 +1620,18 @@ CTA Exam Strategy: The client controls the client’s own speech; the therapist 
 		'option_d'       => 'The therapist must never consider public information, even during an imminent safety emergency.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Online content may be outdated, false, sarcastic, edited, impersonated, or taken out of context.
+<<<<<<< HEAD
 B. Incorrect. Lack of a password does not supply a clinical purpose or eliminate boundary concerns.
 C. Correct. Public availability is only one fact; professional judgment still governs whether and how the information is used.
 D. Incorrect. Online information may be relevant to safety, but it should be assessed and verified rather than categorically ignored.
 CTA Exam Strategy: Avoid both extremes: “public means free to use” and “public information can never matter.”',
+=======
+		B. Incorrect. Lack of a password does not supply a clinical purpose or eliminate boundary concerns.
+		C. Correct. Public availability is only one fact; professional judgment still governs whether and how the information is used.
+		D. Incorrect. Online information may be relevant to safety, but it should be assessed and verified rather than categorically ignored.
+		CTA Exam Strategy: Avoid both extremes: “public means free to use” and “public information can never matter.”
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Using Public Client Information; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client’s online activity creates a boundary and confidentiality question that the therapist must address before responding publicly or privately. What is the best description of separate personal and professional social-media accounts?',
@@ -949,10 +1641,18 @@ CTA Exam Strategy: Avoid both extremes: “public means free to use” and “pu
 		'option_d'       => 'They may reduce role confusion, but algorithms, tags, screenshots, mutual contacts, and public content can still create boundary and privacy risks.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Friend requests still require boundary and treatment analysis.
+<<<<<<< HEAD
 B. Incorrect. Separation does not guarantee invisibility or privacy.
 C. Incorrect. A professional account promoting services remains advertising and must comply with BBS requirements.
 D. Correct. Separate accounts are a risk-reduction measure, not a complete solution.
 CTA Exam Strategy: When an option promises that a technology choice “guarantees” privacy or removes duties, eliminate it.',
+=======
+		B. Incorrect. Separation does not guarantee invisibility or privacy.
+		C. Incorrect. A professional account promoting services remains advertising and must comply with BBS requirements.
+		D. Correct. Separate accounts are a risk-reduction measure, not a complete solution.
+		CTA Exam Strategy: When an option promises that a technology choice “guarantees” privacy or removes duties, eliminate it.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Separate Accounts; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A current client sends a friend request to the therapist’s personal account. What is the therapist’s best first response?',
@@ -962,10 +1662,18 @@ CTA Exam Strategy: When an option promises that a technology choice “guarantee
 		'option_d'       => 'Terminate treatment because the request proves the client cannot respect boundaries.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Automatic acceptance prioritizes immediate emotion over boundary and confidentiality analysis.
+<<<<<<< HEAD
 B. Correct. There is no one automatic legal answer; the therapist should assess the request and respond according to policy, treatment needs, and client welfare.
 C. Incorrect. Blocking may sometimes be appropriate, but it is not the required first response in every case and may miss a useful clinical discussion.
 D. Incorrect. A friend request alone does not justify immediate termination.
 CTA Exam Strategy: California-style questions usually favor thoughtful boundary assessment over an automatic click, block, or termination.',
+=======
+		B. Correct. There is no one automatic legal answer; the therapist should assess the request and respond according to policy, treatment needs, and client welfare.
+		C. Incorrect. Blocking may sometimes be appropriate, but it is not the required first response in every case and may miss a useful clinical discussion.
+		D. Incorrect. A friend request alone does not justify immediate termination.
+		CTA Exam Strategy: California-style questions usually favor thoughtful boundary assessment over an automatic click, block, or termination.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Friend Request from Current Client; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An AMFT’s professional profile states only, “Jordan Lee, Therapist - accepting private clients,” and gives a registration number. Which concern is most significant under the 2026 BBS advertising rules?',
@@ -975,10 +1683,18 @@ CTA Exam Strategy: California-style questions usually favor thoughtful boundary 
 		'option_d'       => 'The profile is compliant because a registration number appears.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Associate advertising must accurately state associate status and include the required employer/entity and supervision information; it must not imply independent licensure.
+<<<<<<< HEAD
 B. Incorrect. Associates may advertise when they comply with the applicable requirements.
 C. Incorrect. A supervisor’s home address is not the minimum advertising requirement identified here.
 D. Incorrect. A registration number alone is insufficient.
 CTA Exam Strategy: For associate ads, look for status, number, employer/entity, and supervision - not merely a credential number.',
+=======
+		B. Incorrect. Associates may advertise when they comply with the applicable requirements.
+		C. Incorrect. A supervisor’s home address is not the minimum advertising requirement identified here.
+		D. Incorrect. A registration number alone is insufficient.
+		CTA Exam Strategy: For associate ads, look for status, number, employer/entity, and supervision - not merely a credential number.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Associate Advertising; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A former client posts a negative review. The therapist replies, “You missed six appointments, rejected my safety plan, and still owe a balance.” What is the primary concern?',
@@ -988,10 +1704,18 @@ CTA Exam Strategy: For associate ads, look for status, number, employer/entity, 
 		'option_d'       => 'The therapist should have included the diagnosis so readers could understand the case.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The problem is disclosure, not failure to identify the client more fully.
+<<<<<<< HEAD
 B. Incorrect. A client’s public review does not authorize the therapist to reveal protected information.
 C. Correct. The response confirms client status and discloses multiple categories of confidential information.
 D. Incorrect. Adding the diagnosis would create an even more serious disclosure.
 CTA Exam Strategy: A defensive response is not an exception to confidentiality.',
+=======
+		B. Incorrect. A client’s public review does not authorize the therapist to reveal protected information.
+		C. Correct. The response confirms client status and discloses multiple categories of confidential information.
+		D. Incorrect. Adding the diagnosis would create an even more serious disclosure.
+		CTA Exam Strategy: A defensive response is not an exception to confidentiality.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Defensive Review Response; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist posts in a 20,000-member professional social-media group: “No names, but my only firefighter client in a small rural county has a rare diagnosis and a pending custody trial.” Which statement is most accurate?',
@@ -1001,10 +1725,18 @@ CTA Exam Strategy: A defensive response is not an exception to confidentiality.'
 		'option_d'       => 'The combination of details may identify the client, and a broad social-media group is not automatically an appropriate confidential consultation channel.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Group membership does not create the confidentiality protections of a properly structured professional consultation.
+<<<<<<< HEAD
 B. Incorrect. Unique combined details may identify the client even without a name.
 C. Incorrect. Deletion does not undo screenshots, reposting, or an initial disclosure.
 D. Correct. The therapist should use an appropriate consultation method and disclose only what is reasonably necessary.
 CTA Exam Strategy: No name is not enough. Ask whether the audience and combined details create identification risk.',
+=======
+		B. Incorrect. Unique combined details may identify the client even without a name.
+		C. Incorrect. Deletion does not undo screenshots, reposting, or an initial disclosure.
+		D. Correct. The therapist should use an appropriate consultation method and disclose only what is reasonably necessary.
+		CTA Exam Strategy: No name is not enough. Ask whether the audience and combined details create identification risk.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Online Case Discussion; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist routinely searches every new client’s social-media history “to see what they are really like,” without a specific clinical reason. What is the best analysis?',
@@ -1014,10 +1746,18 @@ CTA Exam Strategy: No name is not enough. Ask whether the audience and combined 
 		'option_d'       => 'The therapist may use any information found without discussing or verifying it.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. California does not require routine social-media searches of every client.
+<<<<<<< HEAD
 B. Correct. Curiosity alone is a weak justification for potentially intrusive information gathering.
 C. Incorrect. Public access does not eliminate boundary or treatment consequences.
 D. Incorrect. Online information may be inaccurate or out of context and may require verification and clinical discussion.
 CTA Exam Strategy: Purpose before curiosity is the key clue.',
+=======
+		B. Correct. Curiosity alone is a weak justification for potentially intrusive information gathering.
+		C. Incorrect. Public access does not eliminate boundary or treatment consequences.
+		D. Incorrect. Online information may be inaccurate or out of context and may require verification and clinical discussion.
+		CTA Exam Strategy: Purpose before curiosity is the key clue.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Searching from Curiosity; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is shown a current client’s public post displaying a firearm and stating, “Tonight everyone will finally understand.” What should the therapist do first?',
@@ -1027,10 +1767,18 @@ CTA Exam Strategy: Purpose before curiosity is the key clue.',
 		'option_d'       => 'Wait until the next scheduled session so the client can explain the post.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The content presents a potentially serious and imminent safety concern requiring prompt assessment and proportionate action.
+<<<<<<< HEAD
 B. Incorrect. Clinically significant information does not become irrelevant merely because a third party brought it to the therapist’s attention.
 C. Incorrect. The therapist should assess and act lawfully, not make unsupported public accusations or disclosures.
 D. Incorrect. Delay may be unsafe when the post suggests imminent danger.
 CTA Exam Strategy: In a safety question, verify and assess promptly; do not ignore or overreact publicly.',
+=======
+		B. Incorrect. Clinically significant information does not become irrelevant merely because a third party brought it to the therapist’s attention.
+		C. Incorrect. The therapist should assess and act lawfully, not make unsupported public accusations or disclosures.
+		D. Incorrect. Delay may be unsafe when the post suggests imminent danger.
+		CTA Exam Strategy: In a safety question, verify and assess promptly; do not ignore or overreact publicly.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Online Safety Information; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client sends the therapist’s personal account a direct message describing escalating suicidal thoughts. The therapist reads it even though the office policy prohibits social-media messaging. What is the best response?',
@@ -1040,10 +1788,18 @@ CTA Exam Strategy: In a safety question, verify and assess promptly; do not igno
 		'option_d'       => 'Conduct all future treatment through the personal account because the client prefers it.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A policy does not erase responsibility for urgent information the therapist actually sees.
+<<<<<<< HEAD
 B. Incorrect. Blocking before addressing the safety concern may increase risk.
 C. Correct. Immediate safety comes first, followed by documentation and boundary repair.
 D. Incorrect. Client preference does not make a personal social-media channel appropriate for ongoing clinical care.
 CTA Exam Strategy: Policies prevent confusion; actual knowledge of risk still requires clinical action.',
+=======
+		B. Incorrect. Blocking before addressing the safety concern may increase risk.
+		C. Correct. Immediate safety comes first, followed by documentation and boundary repair.
+		D. Incorrect. Client preference does not make a personal social-media channel appropriate for ongoing clinical care.
+		CTA Exam Strategy: Policies prevent confusion; actual knowledge of risk still requires clinical action.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Direct Message to Personal Account; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist “likes” a current client’s public post celebrating one year of sobriety. The therapist’s professional account clearly identifies the therapist as an addiction specialist, and the like is visible to everyone. What is the best analysis?',
@@ -1053,10 +1809,18 @@ CTA Exam Strategy: Policies prevent confusion; actual knowledge of risk still re
 		'option_d'       => 'The interaction may allow others to infer a treatment relationship and may affect boundaries; the therapist should evaluate the context, policy, client expectations, and treatment impact rather than assume the like is harmless.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Public engagement is not required clinical support and may create unintended disclosure.
+<<<<<<< HEAD
 B. Incorrect. A visible connection can communicate information even without text.
 C. Incorrect. Automatic termination is an extreme and unsupported response.
 D. Correct. The analysis turns on implied identification, boundary effects, and the specific therapeutic context.
 CTA Exam Strategy: Online signals such as likes, follows, and tags can disclose by association.',
+=======
+		B. Incorrect. A visible connection can communicate information even without text.
+		C. Incorrect. Automatic termination is an extreme and unsupported response.
+		D. Correct. The analysis turns on implied identification, boundary effects, and the specific therapeutic context.
+		CTA Exam Strategy: Online signals such as likes, follows, and tags can disclose by association.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Public Like and Implied Relationship; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Three months after treatment ends, a former client sends a friend request to the therapist’s personal account. Which statement is most accurate?',
@@ -1066,10 +1830,18 @@ CTA Exam Strategy: Online signals such as likes, follows, and tags can disclose 
 		'option_d'       => 'The therapist must report the request to the BBS.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Ending treatment does not erase confidentiality or all professional-boundary concerns.
+<<<<<<< HEAD
 B. Correct. The timing, former treatment, client vulnerability, potential future care, and public association may remain relevant.
 C. Incorrect. No law requires acceptance of a former client’s friend request.
 D. Incorrect. A friend request alone is not a mandatory BBS report.
 CTA Exam Strategy: Former does not mean ordinary. Confidentiality survives termination.',
+=======
+		B. Correct. The timing, former treatment, client vulnerability, potential future care, and public association may remain relevant.
+		C. Incorrect. No law requires acceptance of a former client’s friend request.
+		D. Incorrect. A friend request alone is not a mandatory BBS report.
+		CTA Exam Strategy: Former does not mean ordinary. Confidentiality survives termination.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Former Client Boundary; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist asks several current clients to record video testimonials for the therapist’s social-media advertising and offers a free session in exchange. What is the best analysis?',
@@ -1079,6 +1851,7 @@ CTA Exam Strategy: Former does not mean ordinary. Confidentiality survives termi
 		'option_d'       => 'The only relevant issue is whether the videos include the therapist’s license number.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Current clients may feel pressure, and the marketing use may exploit vulnerability, reveal treatment, and create unjustified expectations.
+<<<<<<< HEAD
 B. Incorrect. Formal voluntariness does not eliminate power imbalance, pressure, or confidentiality and advertising concerns.
 C. Incorrect. A therapist is not required to solicit testimonials.
 D. Incorrect. Advertising identification is relevant but does not resolve the larger ethical and confidentiality problems.
@@ -1088,14 +1861,34 @@ CTA Exam Strategy: When a current client is used for marketing, examine power, i
 		'question_text'  => 'A registered AMFT\\'s social-media bio reads, “Dr. Rivera, Licensed Trauma Psychologist - guaranteed cure in four sessions.” The AMFT has an earned doctorate in a psychotherapy-related field but is not a psychologist and omits the complete registration title, employer, registration number, and supervision statement. Which response best reflects California BBS requirements?',
 		'option_a'       => 'The profile is acceptable because the doctorate permits use of any professional title.',
 		'option_b'       => 'The profile is acceptable if the AMFT links to the supervisor\\'s page.',
+=======
+		B. Incorrect. Formal voluntariness does not eliminate power imbalance, pressure, or confidentiality and advertising concerns.
+		C. Incorrect. A therapist is not required to solicit testimonials.
+		D. Incorrect. Advertising identification is relevant but does not resolve the larger ethical and confidentiality problems.
+		CTA Exam Strategy: When a current client is used for marketing, examine power, influence, confidentiality, and misleading outcomes - not only the form of consent.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Soliciting Testimonials; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+	),
+	array(
+		'question_text'  => 'A registered AMFT\'s social-media bio reads, “Dr. Rivera, Licensed Trauma Psychologist - guaranteed cure in four sessions.” The AMFT has an earned doctorate in a psychotherapy-related field but is not a psychologist and omits the complete registration title, employer, registration number, and supervision statement. Which response best reflects California BBS requirements?',
+		'option_a'       => 'The profile is acceptable because the doctorate permits use of any professional title.',
+		'option_b'       => 'The profile is acceptable if the AMFT links to the supervisor\'s page.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'The profile is misleading and noncompliant because it misstates license status and professional title, guarantees results, and omits required registered-AMFT advertising information.',
 		'option_d'       => 'The only problem is the failure to list the price of four sessions.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. An earned doctorate does not authorize a registered AMFT to claim licensure as a psychologist or misrepresent professional status.
+<<<<<<< HEAD
 B. Incorrect. A link to a supervisor\\'s page does not cure false titles, guaranteed outcomes, or omitted registrant information unless all required information is accurate and easy to find.
 C. Correct. The profile misstates status and a protected professional title, guarantees results, and omits the filed name, registration number, complete title, employer or volunteer entity, and statement that the AMFT is supervised by a licensed person.
 D. Incorrect. Price disclosure is not the central defect presented.
 CTA Exam Strategy: In advertising questions, evaluate every representation from the consumer’s perspective.',
+=======
+		B. Incorrect. A link to a supervisor\'s page does not cure false titles, guaranteed outcomes, or omitted registrant information unless all required information is accurate and easy to find.
+		C. Correct. The profile misstates status and a protected professional title, guarantees results, and omits the filed name, registration number, complete title, employer or volunteer entity, and statement that the AMFT is supervised by a licensed person.
+		D. Incorrect. Price disclosure is not the central defect presented.
+		CTA Exam Strategy: In advertising questions, evaluate every representation from the consumer’s perspective.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Misleading Digital Advertising; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist’s professional account omits the license number and promises “permanent anxiety relief.” The therapist accepts current-client friend requests, searches clients without a clinical purpose, posts a recognizable client story without a name, and publicly argues with a negative reviewer using attendance and diagnosis information. Which response best reflects the therapist’s responsibilities?',
@@ -1105,10 +1898,18 @@ CTA Exam Strategy: In advertising questions, evaluate every representation from 
 		'option_d'       => 'Correct the advertising to include required and truthful information; stop unauthorized client disclosures; reassess friend-request and search practices; protect confidentiality in reviews and case discussion; document or consult regarding significant incidents; and establish clear, lawful social-media boundaries.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Public-platform use does not remove advertising, confidentiality, or boundary requirements.
+<<<<<<< HEAD
 B. Incorrect. The scenario contains multiple independent legal and professional problems.
 C. Incorrect. A broad waiver cannot validate misleading advertising, exploitation, unnecessary searching, or disclosures that are not lawfully authorized and clinically appropriate.
 D. Correct. This response addresses the entire system: advertising, confidentiality, boundaries, information gathering, public responses, documentation, and consultation.
 CTA Exam Strategy: For an integrated challenge, choose the answer that corrects every material problem rather than relying on publicity, deletion of one post, or a blanket waiver.',
+=======
+		B. Incorrect. The scenario contains multiple independent legal and professional problems.
+		C. Incorrect. A broad waiver cannot validate misleading advertising, exploitation, unnecessary searching, or disclosures that are not lawfully authorized and clinically appropriate.
+		D. Correct. This response addresses the entire system: advertising, confidentiality, boundaries, information gathering, public responses, documentation, and consultation.
+		CTA Exam Strategy: For an integrated challenge, choose the answer that corrects every material problem rather than relying on publicity, deletion of one post, or a blanket waiver.
+		Remediation: Return to Workbook 2, Chapter 5: Social Media, Boundaries, and Digital Ethics; review Integrated Social Media Responsibilities; log error category DIGITAL-BOUNDARIES-ADVERTISING.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a possible technology incident, a practice must decide what to assess, document, and correct before continuing ordinary operations. Which statement best distinguishes technology risk analysis from technology risk management?',
@@ -1118,10 +1919,18 @@ CTA Exam Strategy: For an integrated challenge, choose the answer that corrects 
 		'option_d'       => 'The terms have the same legal meaning and can always be used interchangeably.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Training and reporting may be parts of a broader program, but they do not define the two processes.
+<<<<<<< HEAD
 B. Correct. Risk analysis determines what could threaten electronic information and how serious the risk may be; risk management reduces and monitors the identified risk.
 C. Incorrect. Both are ongoing processes that may occur before and after implementation or an incident.
 D. Incorrect. They are related but distinct Security Rule functions.
 CTA Exam Strategy: When the question asks for the distinction, look for “identify and evaluate” versus “reduce and monitor.”',
+=======
+		B. Correct. Risk analysis determines what could threaten electronic information and how serious the risk may be; risk management reduces and monitors the identified risk.
+		C. Incorrect. Both are ongoing processes that may occur before and after implementation or an incident.
+		D. Incorrect. They are related but distinct Security Rule functions.
+		CTA Exam Strategy: When the question asks for the distinction, look for “identify and evaluate” versus “reduce and monitor.”
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Risk Analysis vs. Risk Management; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice has secure passwords but loses all client records because its only server fails and no usable backup exists. Which security objective was most directly compromised?',
@@ -1131,10 +1940,18 @@ CTA Exam Strategy: When the question asks for the distinction, look for “ident
 		'option_d'       => 'Confidentiality',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Authorization concerns what an authenticated user is permitted to access.
+<<<<<<< HEAD
 B. Correct. Availability means authorized users can access needed information and systems when required.
 C. Incorrect. Authentication verifies identity; it is not the central failure here.
 D. Incorrect. The facts do not primarily describe unauthorized disclosure.
 CTA Exam Strategy: Security is not only secrecy. Lost or inaccessible records point to availability.',
+=======
+		B. Correct. Availability means authorized users can access needed information and systems when required.
+		C. Incorrect. Authentication verifies identity; it is not the central failure here.
+		D. Incorrect. The facts do not primarily describe unauthorized disclosure.
+		CTA Exam Strategy: Security is not only secrecy. Lost or inaccessible records point to availability.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Confidentiality, Integrity, and Availability; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a security review, a clinician must distinguish identifying technology risk from taking proportionate steps to manage it. Which statement is most accurate about a suspected technology security incident?',
@@ -1144,10 +1961,18 @@ CTA Exam Strategy: Security is not only secrecy. Lost or inaccessible records po
 		'option_d'       => 'It becomes a breach only when the therapist admits fault.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. An incident triggers prompt containment and investigation; notification depends on the applicable legal definition and the facts.
+<<<<<<< HEAD
 B. Incorrect. There is no universal rule requiring every technology incident to be reported immediately to the BBS.
 C. Incorrect. Risk and notification analysis do not depend on proof of financial harm, and delaying may increase exposure.
 D. Incorrect. Legal breach status does not depend on an admission of fault.
 CTA Exam Strategy: Do not confuse “respond immediately” with “automatically report to every authority.”',
+=======
+		B. Incorrect. There is no universal rule requiring every technology incident to be reported immediately to the BBS.
+		C. Incorrect. Risk and notification analysis do not depend on proof of financial harm, and delaying may increase exposure.
+		D. Incorrect. Legal breach status does not depend on an admission of fault.
+		CTA Exam Strategy: Do not confuse “respond immediately” with “automatically report to every authority.”
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Incident vs. Breach; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a possible technology incident, a practice must decide what to assess, document, and correct before continuing ordinary operations. Which action is primarily an administrative safeguard?',
@@ -1157,10 +1982,18 @@ CTA Exam Strategy: Do not confuse “respond immediately” with “automaticall
 		'option_d'       => 'Configuring automatic screen locking.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A privacy screen is primarily a physical safeguard.
+<<<<<<< HEAD
 B. Incorrect. Encryption is primarily a technical safeguard.
 C. Correct. Risk analysis, policy, governance, and workforce training are administrative safeguards.
 D. Incorrect. Automatic screen locking is primarily a technical control, although policies may support it.
 CTA Exam Strategy: Administrative safeguards organize people and processes; physical safeguards protect spaces and devices; technical safeguards control systems and data.',
+=======
+		B. Incorrect. Encryption is primarily a technical safeguard.
+		C. Correct. Risk analysis, policy, governance, and workforce training are administrative safeguards.
+		D. Incorrect. Automatic screen locking is primarily a technical control, although policies may support it.
+		CTA Exam Strategy: Administrative safeguards organize people and processes; physical safeguards protect spaces and devices; technical safeguards control systems and data.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Safeguard Categories; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is reviewing the administrative, physical, and technical safeguards used for electronic client information. Which statement most accurately describes the California BBS security standard for telehealth?',
@@ -1170,10 +2003,18 @@ CTA Exam Strategy: Administrative safeguards organize people and processes; phys
 		'option_d'       => 'Each time telehealth is provided, the licensee or registrant must comply with applicable federal and California privacy, confidentiality, and security laws, including the standards identified in 16 CCR section 1815.5.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A client cannot waive the therapist’s professional or legal security duties.
+<<<<<<< HEAD
 B. Incorrect. The BBS regulation applies to licensees and registrants providing telehealth, not only large practices.
 C. Incorrect. Popularity does not establish security, appropriate configuration, or legal compliance.
 D. Correct. Section 1815.5(d)(3) expressly requires compliance with applicable law and references the CMIA and HIPAA Security standards.
 CTA Exam Strategy: A waiver, product label, or practice size does not replace the BBS telehealth standard.',
+=======
+		B. Incorrect. The BBS regulation applies to licensees and registrants providing telehealth, not only large practices.
+		C. Incorrect. Popularity does not establish security, appropriate configuration, or legal compliance.
+		D. Correct. Section 1815.5(d)(3) expressly requires compliance with applicable law and references the CMIA and HIPAA Security standards.
+		CTA Exam Strategy: A waiver, product label, or practice size does not replace the BBS telehealth standard.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review California Telehealth Security Standard; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A small practice allows every employee and associate to use the same administrator username and password for the electronic record system. What is the most significant concern?',
@@ -1183,10 +2024,18 @@ CTA Exam Strategy: A waiver, product label, or practice size does not replace th
 		'option_d'       => 'The practice should print all records and stop using electronic systems.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Password changes do not correct the lack of unique identity and appropriate access limitation.
+<<<<<<< HEAD
 B. Correct. Unique user identification and role-based access help establish who accessed information and what each person is authorized to do.
 C. Incorrect. Client notice does not cure weak access controls.
 D. Incorrect. Eliminating electronic records is an extreme response; the practice should correct access and accountability controls.
 CTA Exam Strategy: Shared credentials usually signal authentication, auditability, and least-privilege problems.',
+=======
+		B. Correct. Unique user identification and role-based access help establish who accessed information and what each person is authorized to do.
+		C. Incorrect. Client notice does not cure weak access controls.
+		D. Incorrect. Eliminating electronic records is an extreme response; the practice should correct access and accountability controls.
+		CTA Exam Strategy: Shared credentials usually signal authentication, auditability, and least-privilege problems.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Access Control and Accountability; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A HIPAA-covered therapy practice uses a cloud service that stores client records on the practice’s behalf. Which statement is most accurate?',
@@ -1196,10 +2045,18 @@ CTA Exam Strategy: Shared credentials usually signal authentication, auditabilit
 		'option_d'       => 'The client must personally contract with the cloud provider.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. A vendor that maintains ePHI on behalf of a covered entity is generally a business associate; the BAA is required but does not replace risk analysis and due diligence.
+<<<<<<< HEAD
 B. Incorrect. A cloud service can be a business associate even when it stores encrypted data without routinely viewing it.
 C. Incorrect. A BAA establishes contractual duties but does not certify every product configuration or use.
 D. Incorrect. The covered practice, not the client, generally contracts with its business associate.
 CTA Exam Strategy: “Stores PHI on behalf of the practice” is a strong business-associate clue.',
+=======
+		B. Incorrect. A cloud service can be a business associate even when it stores encrypted data without routinely viewing it.
+		C. Incorrect. A BAA establishes contractual duties but does not certify every product configuration or use.
+		D. Incorrect. The covered practice, not the client, generally contracts with its business associate.
+		CTA Exam Strategy: “Stores PHI on behalf of the practice” is a strong business-associate clue.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Business Associate Agreements; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist loses a password-protected laptop containing clinical information. The laptop uses full-disk encryption, and the encryption key was not stored with the device. What should the therapist do first?',
@@ -1209,10 +2066,18 @@ CTA Exam Strategy: “Stores PHI on behalf of the practice” is a strong busine
 		'option_d'       => 'Delete the device from the inventory so the loss is not documented.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Encryption may change the breach analysis, but a lost device still requires assessment and appropriate response.
+<<<<<<< HEAD
 B. Incorrect. Notification may be required, but the therapist should promptly assess the facts rather than issue uninformed notices.
 C. Correct. Containment and factual assessment come first; encryption status is a major factor in determining whether information was unsecured or compromised.
 D. Incorrect. Concealing or deleting the record of the incident undermines accountability and may violate policy or law.
 CTA Exam Strategy: Encryption is important evidence, not permission to ignore a lost device.',
+=======
+		B. Incorrect. Notification may be required, but the therapist should promptly assess the facts rather than issue uninformed notices.
+		C. Correct. Containment and factual assessment come first; encryption status is a major factor in determining whether information was unsecured or compromised.
+		D. Incorrect. Concealing or deleting the record of the incident undermines accountability and may violate policy or law.
+		CTA Exam Strategy: Encryption is important evidence, not permission to ignore a lost device.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Lost Encrypted Device; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist accidentally emails a treatment summary to the wrong parent with a similar name. What is the best first response?',
@@ -1222,10 +2087,18 @@ CTA Exam Strategy: Encryption is important evidence, not permission to ignore a 
 		'option_d'       => 'Contain the disclosure if possible, preserve the facts, assess what was sent and whether it was accessed, follow incident procedures, and determine required notification or mitigation.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Delay may increase exposure and reduce the chance of mitigation.
+<<<<<<< HEAD
 B. Incorrect. Deleting evidence does not retrieve the message and may interfere with the required analysis.
 C. Incorrect. Sending additional information to the wrong recipient could compound the disclosure.
 D. Correct. Prompt containment, evidence preservation, scope assessment, mitigation, consultation, and notification analysis are appropriate.
 CTA Exam Strategy: Wrong-recipient questions favor containment and assessment, not waiting, concealment, or additional disclosure.',
+=======
+		B. Incorrect. Deleting evidence does not retrieve the message and may interfere with the required analysis.
+		C. Incorrect. Sending additional information to the wrong recipient could compound the disclosure.
+		D. Correct. Prompt containment, evidence preservation, scope assessment, mitigation, consultation, and notification analysis are appropriate.
+		CTA Exam Strategy: Wrong-recipient questions favor containment and assessment, not waiting, concealment, or additional disclosure.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Wrong Recipient Incident; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist reads that encryption is an “addressable” implementation specification under the current HIPAA Security Rule. What does that mean?',
@@ -1235,10 +2108,18 @@ CTA Exam Strategy: Wrong-recipient questions favor containment and assessment, n
 		'option_d'       => 'The practice may ignore encryption if no breach has occurred.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Cost may be one factor, but it does not make an addressable specification optional.
+<<<<<<< HEAD
 B. Correct. Addressable requires a documented, context-specific determination and an appropriate safeguard or equivalent measure.
 C. Incorrect. Encryption is a security control and does not generally require a client authorization.
 D. Incorrect. Security safeguards are preventive and should not wait for a breach.
 CTA Exam Strategy: On the exam, translate “addressable” as “evaluate, implement or use an equivalent, and document” - not “optional.”',
+=======
+		B. Correct. Addressable requires a documented, context-specific determination and an appropriate safeguard or equivalent measure.
+		C. Incorrect. Encryption is a security control and does not generally require a client authorization.
+		D. Incorrect. Security safeguards are preventive and should not wait for a breach.
+		CTA Exam Strategy: On the exam, translate “addressable” as “evaluate, implement or use an equivalent, and document” - not “optional.”
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Addressable Security Specifications; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice creates automatic nightly backups but has never attempted to restore a file or system. Which response best reflects sound risk management?',
@@ -1248,10 +2129,18 @@ CTA Exam Strategy: On the exam, translate “addressable” as “evaluate, impl
 		'option_d'       => 'Wait for a system failure to determine whether recovery works.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A success message does not prove that the data is complete or recoverable.
+<<<<<<< HEAD
 B. Incorrect. Retention should follow a deliberate policy; deleting all redundancy may increase risk.
 C. Correct. Recovery testing is necessary to determine whether the contingency plan actually supports availability and continuity.
 D. Incorrect. Waiting for failure defeats preventive risk management.
 CTA Exam Strategy: A backup is only useful when it can be restored.',
+=======
+		B. Incorrect. Retention should follow a deliberate policy; deleting all redundancy may increase risk.
+		C. Correct. Recovery testing is necessary to determine whether the contingency plan actually supports availability and continuity.
+		D. Incorrect. Waiting for failure defeats preventive risk management.
+		CTA Exam Strategy: A backup is only useful when it can be restored.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Backup and Recovery; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A vendor announces a critical security vulnerability in the telehealth platform and releases a patch. The practice has no evidence that client information was accessed. What should the practice do?',
@@ -1261,10 +2150,18 @@ CTA Exam Strategy: A backup is only useful when it can be restored.',
 		'option_d'       => 'Continue using the unpatched system until the annual policy review.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. A vulnerability should be assessed and corrected even before confirmed unauthorized access; documentation and monitoring support accountability.
+<<<<<<< HEAD
 B. Incorrect. Risk management is preventive and does not require a confirmed breach before action.
 C. Incorrect. A vulnerability does not by itself prove that information was acquired or that breach notice is required.
 D. Incorrect. Delaying a critical correction may create avoidable exposure.
 CTA Exam Strategy: Distinguish a vulnerability from a confirmed breach: correct the risk promptly without inventing facts.',
+=======
+		B. Incorrect. Risk management is preventive and does not require a confirmed breach before action.
+		C. Incorrect. A vulnerability does not by itself prove that information was acquired or that breach notice is required.
+		D. Incorrect. Delaying a critical correction may create avoidable exposure.
+		CTA Exam Strategy: Distinguish a vulnerability from a confirmed breach: correct the risk promptly without inventing facts.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Vulnerability and Change Management; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A HIPAA-covered practice discovers that an employee sent a spreadsheet containing client names and appointment dates to an unauthorized vendor. Which information is most relevant to determining whether there is a low probability that the PHI was compromised?',
@@ -1274,10 +2171,18 @@ CTA Exam Strategy: Distinguish a vulnerability from a confirmed breach: correct 
 		'option_d'       => 'The nature and extent of the PHI, the unauthorized recipient, whether the PHI was actually acquired or viewed, and the extent of mitigation.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Intent may affect employment or disciplinary response, but it is not one of the required four breach risk-assessment factors.
+<<<<<<< HEAD
 B. Incorrect. Insurance does not determine whether PHI was compromised.
 C. Incorrect. Performance history is not part of the HIPAA breach risk assessment.
 D. Correct. These are the four factors required by the HIPAA Breach Notification Rule’s compromise analysis.
 CTA Exam Strategy: Memorize the four factors: information, recipient, acquisition/viewing, mitigation.',
+=======
+		B. Incorrect. Insurance does not determine whether PHI was compromised.
+		C. Incorrect. Performance history is not part of the HIPAA breach risk assessment.
+		D. Correct. These are the four factors required by the HIPAA Breach Notification Rule’s compromise analysis.
+		CTA Exam Strategy: Memorize the four factors: information, recipient, acquisition/viewing, mitigation.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review HIPAA Breach Risk Assessment; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A cash-pay California LMFT providing telehealth believes the practice is not independently a HIPAA covered entity and therefore concludes that HIPAA security standards are irrelevant. Which statement is most accurate?',
@@ -1287,10 +2192,18 @@ CTA Exam Strategy: Memorize the four factors: information, recipient, acquisitio
 		'option_d'       => 'The LMFT must stop offering telehealth unless the practice begins billing insurance.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Cash payment does not eliminate California BBS telehealth security duties.
+<<<<<<< HEAD
 B. Incorrect. Vendor policy does not replace the therapist’s professional and regulatory obligations.
 C. Correct. The BBS regulation expressly incorporates the CMIA and HIPAA Security standards into the telehealth practice requirements.
 D. Incorrect. Insurance billing is not a prerequisite for lawful telehealth; the therapist must comply with the applicable standards.
 CTA Exam Strategy: This question separates federal HIPAA status from the independent California BBS telehealth requirement.',
+=======
+		B. Incorrect. Vendor policy does not replace the therapist’s professional and regulatory obligations.
+		C. Correct. The BBS regulation expressly incorporates the CMIA and HIPAA Security standards into the telehealth practice requirements.
+		D. Incorrect. Insurance billing is not a prerequisite for lawful telehealth; the therapist must comply with the applicable standards.
+		CTA Exam Strategy: This question separates federal HIPAA status from the independent California BBS telehealth requirement.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review BBS Incorporation of Security Standards; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist wants to use an AI note-taking tool that records sessions, stores transcripts, and may use customer data to improve its models. What is the best response before use?',
@@ -1300,10 +2213,18 @@ CTA Exam Strategy: This question separates federal HIPAA status from the indepen
 		'option_d'       => 'Use the free consumer version because a paid contract creates more liability.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Efficiency does not override confidentiality, recording, vendor, accuracy, or competence concerns.
+<<<<<<< HEAD
 B. Correct. The tool performs multiple high-risk functions and requires a complete legal, vendor, clinical, and security analysis before use.
 C. Incorrect. Popularity is not evidence of legal compliance or suitability for the therapist’s workflow.
 D. Incorrect. A consumer version may provide fewer protections and does not avoid professional responsibility.
 CTA Exam Strategy: When a tool records, stores, analyzes, and trains on data, analyze every function rather than the product label.',
+=======
+		B. Correct. The tool performs multiple high-risk functions and requires a complete legal, vendor, clinical, and security analysis before use.
+		C. Incorrect. Popularity is not evidence of legal compliance or suitability for the therapist’s workflow.
+		D. Incorrect. A consumer version may provide fewer protections and does not avoid professional responsibility.
+		CTA Exam Strategy: When a tool records, stores, analyzes, and trains on data, analyze every function rather than the product label.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review AI Vendor Risk Management; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A ransomware attack encrypts a practice’s active electronic records. The attacker may also have copied information. The practice has a protected offline backup. What is the best initial course of action?',
@@ -1313,10 +2234,18 @@ CTA Exam Strategy: When a tool records, stores, analyzes, and trains on data, an
 		'option_d'       => 'Delete all logs and infected systems before contacting anyone.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Ransomware may affect confidentiality, integrity, and availability; coordinated containment, recovery, forensic assessment, consultation, and notification analysis are necessary.
+<<<<<<< HEAD
 B. Incorrect. Restoring onto an unsafe network may reinfect systems or destroy evidence.
 C. Incorrect. Payment does not prove that data was not copied or eliminate legal duties.
 D. Incorrect. Deleting evidence can obstruct the investigation, recovery, and required documentation.
 CTA Exam Strategy: Ransomware is an integrated CIA problem: contain, preserve, recover safely, and assess exfiltration.',
+=======
+		B. Incorrect. Restoring onto an unsafe network may reinfect systems or destroy evidence.
+		C. Incorrect. Payment does not prove that data was not copied or eliminate legal duties.
+		D. Incorrect. Deleting evidence can obstruct the investigation, recovery, and required documentation.
+		CTA Exam Strategy: Ransomware is an integrated CIA problem: contain, preserve, recover safely, and assess exfiltration.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Ransomware and Continuity; log error category TECHNOLOGY-RISK-COMPLIANCE.',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A group practice uses shared administrator credentials, an unreviewed cloud transcription tool, untested backups, and outdated laptops. After a suspicious login, the director tells staff to delete the alert because no client has complained. Which response best reflects the practice’s responsibilities?',
@@ -1326,9 +2255,50 @@ CTA Exam Strategy: Ransomware is an integrated CIA problem: contain, preserve, r
 		'option_d'       => 'Contain and preserve the incident evidence, assess access and information involved, correct account and device controls, review the vendor and any required BAA, test continuity measures, determine notification duties under applicable law, document the response, and update policies and training.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Notification may be required, but automatic notice to every client and the BBS before factual assessment is not the universal first step.
+<<<<<<< HEAD
 B. Incorrect. Device replacement addresses only one part of the system-wide risk.
 C. Incorrect. Preventive and incident-response duties do not wait for a complaint or proof of theft.
 D. Correct. This answer integrates incident response, risk analysis, access control, vendor compliance, continuity, notification analysis, documentation, and corrective action.
 CTA Exam Strategy: Integrated questions require a complete, proportional response - not one product fix, automatic reporting, or delay.',
+=======
+		B. Incorrect. Device replacement addresses only one part of the system-wide risk.
+		C. Incorrect. Preventive and incident-response duties do not wait for a complaint or proof of theft.
+		D. Correct. This answer integrates incident response, risk analysis, access control, vendor compliance, continuity, notification analysis, documentation, and corrective action.
+		CTA Exam Strategy: Integrated questions require a complete, proportional response - not one product fix, automatic reporting, or delay.
+		Remediation: Return to Workbook 2, Chapter 6: Technology Risk Management and Compliance; review Technology Risk Management and Compliance; log error category TECHNOLOGY-RISK-COMPLIANCE.
+		Performance Analysis and Remediation Plan
+		Chapter
+		Score
+		High-Confidence Misses
+		Low-Confidence Correct
+		Next Remediation Action
+		1
+		____ / 17
+		WB2 Ch. 1 | TELEHEALTH-FOUNDATIONS
+		2
+		____ / 17
+		WB2 Ch. 2 | TELEHEALTH-CONSENT
+		3
+		____ / 17
+		WB2 Ch. 3 | TELEHEALTH-PRIVACY-SECURITY
+		4
+		____ / 17
+		WB2 Ch. 4 | ELECTRONIC-COMMUNICATION
+		5
+		____ / 17
+		WB2 Ch. 5 | DIGITAL-BOUNDARIES-ADVERTISING
+		6
+		____ / 17
+		WB2 Ch. 6 | TECHNOLOGY-RISK-COMPLIANCE
+		Score interpretation control: Use results to identify strengths and remediation priorities. Do not present this practice score as an official BBS passing score or a guarantee of passage.
+		Current Authorities and Source Controls
+		The LMFT-specific conversions and time-sensitive telehealth, temporary-practice, advertising, privacy, and technology rules in this assessment were verified through August 3, 2026. The federal HIPAA Security Rule cybersecurity changes remain a proposed rule, not current final law, as of this source review. Re-audit before future publication or use.
+		California Board of Behavioral Sciences, 2026 Statutes and Regulations: Open official source
+		BBS Standards of Practice for Telehealth, 16 CCR section 1815.5: Open official source
+		BBS Temporary Practice Allowance for Out-of-State Licensees: Open official source
+		BBS Advertising Requirements Fact Sheet and FAQs, effective April 1, 2026: Open official source
+		HHS HIPAA Security Rule: Open official source
+		HHS HIPAA Security Rule Notice of Proposed Rulemaking: Open official source',
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

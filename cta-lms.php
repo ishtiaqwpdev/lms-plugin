@@ -20,7 +20,11 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
+<<<<<<< HEAD
 	define( 'CTA_VERSION', '1.0.313' );
+=======
+	define( 'CTA_VERSION', '1.0.299' );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -83,7 +87,10 @@ $cta_required_files = array(
 	'includes/class-cta-exam-access.php',
 	'includes/class-cta-ce-access.php',
 	'includes/class-cta-ce-completion.php',
+<<<<<<< HEAD
 	'includes/class-cta-ce-materials-sync.php',
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	'includes/class-cta-course-materials.php',
 	'includes/class-cta-flashcards.php',
 	'includes/class-cta-exam-prep-flashcard-center.php',
@@ -191,6 +198,7 @@ if ( ! function_exists( 'cta_lms_queue_deferred_upgrade' ) ) {
 	}
 }
 
+<<<<<<< HEAD
 if ( ! function_exists( 'cta_lms_is_plugin_lifecycle_request' ) ) {
 	/**
 	 * True during plugin upload / install / update / activation requests.
@@ -221,6 +229,8 @@ if ( ! function_exists( 'cta_lms_is_plugin_lifecycle_request' ) ) {
 	}
 }
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 	/**
 	 * Queue batched content sync tasks for a version jump (never run inline on upgrade).
@@ -280,6 +290,7 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 			}
 		}
 
+<<<<<<< HEAD
 		// LMFT California Law & Ethics: publish 9 workbook online Practice Banks (wb1_bank … wb9_bank).
 		if ( version_compare( $installed, '1.0.312', '<' ) ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_workbook_banks' );
@@ -290,6 +301,22 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		}
 		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) && ! CTA_Lmft_Law_Ethics_Sync::workbook_banks_are_live() ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_workbook_banks' );
+=======
+		if ( version_compare( $installed, '1.0.296', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
+		}
+
+		if ( version_compare( $installed, '1.0.297', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_workbook_banks' );
+		}
+
+		if ( version_compare( $installed, '1.0.298', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'lmft_law_ethics_practice_exams' );
+		}
+
+		if ( version_compare( $installed, '1.0.299', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'ce_catalog_materials_heal' );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		}
 	}
 }
@@ -428,7 +455,10 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 	 * Run database upgrades when plugin version changes.
 	 */
 	function cta_maybe_upgrade_db() {
+<<<<<<< HEAD
 		// Stamp/queue upgrades on normal loads. Heavy writes stay deferred — never block upload with sync(true).
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		$installed = get_option( 'cta_lms_version', '0' );
 
 		if ( version_compare( (string) $installed, CTA_VERSION, '>=' ) ) {
@@ -1746,6 +1776,7 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 				}
 			}
 
+<<<<<<< HEAD
 			// LMFT California Clinical: publish 12 workbook online practice banks (17q each).
 			if ( version_compare( $installed, '1.0.296', '<' ) ) {
 				cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
@@ -1774,6 +1805,8 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 				}
 			}
 
+=======
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			// Decouple supervision application pending from general account / CE access.
 			if ( version_compare( $installed, '1.0.90', '<' ) && class_exists( 'CTA_Associate_Access' ) ) {
 				$query = new WP_User_Query(
@@ -2039,12 +2072,20 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_clinical_workbook_banks' ) ) {
 }
 
 if ( function_exists( 'cta_maybe_heal_lmft_clinical_workbook_banks' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_clinical_workbook_banks' ) ) {
+<<<<<<< HEAD
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_clinical_workbook_banks', 11 );
+=======
+	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_clinical_workbook_banks', 12 );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
 	/**
+<<<<<<< HEAD
 	 * Publish missing LMFT Law & Ethics workbook online Practice Banks without touching Practice Exams.
+=======
+	 * Publish missing LMFT Law & Ethics workbook online practice banks without touching Practice Exams.
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 */
 	function cta_maybe_heal_lmft_law_ethics_workbook_banks() {
 		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
@@ -2054,12 +2095,20 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
 }
 
 if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks' ) ) {
+<<<<<<< HEAD
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks', 11 );
+=======
+	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_workbook_banks', 13 );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
 	/**
+<<<<<<< HEAD
 	 * Publish missing LMFT Law & Ethics Practice Exams without touching workbook banks / flashcards.
+=======
+	 * Publish missing LMFT Law & Ethics Practice A/B / comprehensive final without touching workbook banks.
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 */
 	function cta_maybe_heal_lmft_law_ethics_practice_exams() {
 		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
@@ -2069,7 +2118,26 @@ if ( ! function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
 }
 
 if ( function_exists( 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams' ) ) {
+<<<<<<< HEAD
 	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams', 11 );
+=======
+	add_action( 'plugins_loaded', 'cta_maybe_heal_lmft_law_ethics_practice_exams', 14 );
+}
+
+if ( ! function_exists( 'cta_maybe_heal_ce_catalog_materials' ) ) {
+	/**
+	 * Unlink exam-prep files from CE courses and hide controlled keys from learners.
+	 */
+	function cta_maybe_heal_ce_catalog_materials() {
+		if ( class_exists( 'CTA_Course_Materials' ) ) {
+			CTA_Course_Materials::maybe_heal_ce_catalog_materials();
+		}
+	}
+}
+
+if ( function_exists( 'cta_maybe_heal_ce_catalog_materials' ) && ! has_action( 'plugins_loaded', 'cta_maybe_heal_ce_catalog_materials' ) ) {
+	add_action( 'plugins_loaded', 'cta_maybe_heal_ce_catalog_materials', 15 );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ( function_exists( 'cta_maybe_sync_ce_prices_from_catalog' ) && ! has_action( 'plugins_loaded', 'cta_maybe_sync_ce_prices_from_catalog' ) ) {

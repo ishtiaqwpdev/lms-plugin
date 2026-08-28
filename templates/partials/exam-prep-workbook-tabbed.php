@@ -142,6 +142,7 @@ foreach ( $workbook_tabs as $tab ) {
 						<?php
 						$cards = isset( $tab['quiz_cards'] ) ? (array) $tab['quiz_cards'] : array();
 						$qpid  = absint( $tab['quiz_page_id'] ?? $quiz_page_id ?? 0 );
+<<<<<<< HEAD
 						$chapter_test_count = 0;
 						if ( class_exists( 'CTA_Exam_Prep_Workbooks' ) ) {
 							foreach ( $cards as $probe_card ) {
@@ -178,6 +179,14 @@ foreach ( $workbook_tabs as $tab ) {
 							: ( class_exists( 'CTA_Exam_Prep_Workbooks' )
 								? CTA_Exam_Prep_Workbooks::get_assessment_category_label( 'workbook_bank', ! empty( $cards[0]['quiz'] ) ? $cards[0]['quiz'] : null )
 								: __( 'Workbook Practice Bank', 'cta-lms' ) );
+=======
+						$wb_bank_label = class_exists( 'CTA_Exam_Prep_Workbooks' )
+							? CTA_Exam_Prep_Workbooks::get_workbook_practice_bank_button_label( $module ?? null )
+							: __( 'Practice Bank', 'cta-lms' );
+						$wb_bank_tag = class_exists( 'CTA_Exam_Prep_Workbooks' )
+							? CTA_Exam_Prep_Workbooks::get_assessment_category_label( 'workbook_bank', ! empty( $cards[0]['quiz'] ) ? $cards[0]['quiz'] : null )
+							: __( 'Workbook Practice Bank', 'cta-lms' );
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 						$pb_status = class_exists( 'CTA_Exam_Prep_Workbooks' )
 							? CTA_Exam_Prep_Workbooks::get_practice_bank_status_from_cards( $cards )
 							: 'not_available';
@@ -201,6 +210,7 @@ foreach ( $workbook_tabs as $tab ) {
 									<?php echo esc_html( $pb_status_label ); ?>
 								</span>
 								<span class="cta-ep-workbook-section__status-hint">
+<<<<<<< HEAD
 									<?php
 									echo $has_chapter_tests
 										? esc_html__( 'Chapter test progress (separate from workbook completion)', 'cta-lms' )
@@ -214,6 +224,13 @@ foreach ( $workbook_tabs as $tab ) {
 									? esc_html__( 'Each chapter test covers one chapter in this workbook — not the full program exam.', 'cta-lms' )
 									: esc_html__( 'This practice bank covers only this workbook — not the full program exam.', 'cta-lms' );
 								?>
+=======
+									<?php esc_html_e( 'Practice Bank progress (separate from workbook completion)', 'cta-lms' ); ?>
+								</span>
+							</p>
+							<p class="cta-ep-workbook-section__hint">
+								<?php esc_html_e( 'This practice bank covers only this workbook — not the full program exam.', 'cta-lms' ); ?>
+>>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 							</p>
 
 							<?php if ( $primary_card && 1 === count( $cards ) ) : ?>
