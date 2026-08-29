@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.316' );
+	define( 'CTA_VERSION', '1.0.317' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -1806,6 +1806,9 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 				if ( class_exists( 'CTA_CE_Materials_Sync' ) ) {
 					CTA_CE_Materials_Sync::repair_all_ce_courses( true );
 				}
+			}
+			if ( version_compare( $installed, '1.0.317', '<' ) && class_exists( 'CTA_Course_Materials' ) ) {
+				CTA_Course_Materials::restore_exam_prep_protected_rationale_gates();
 			}
 
 			// Decouple supervision application pending from general account / CE access.

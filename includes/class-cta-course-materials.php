@@ -174,7 +174,7 @@ class CTA_Course_Materials {
 	 * - modules_complete — all instructional modules finished
 	 * - form_b_ready — always true (legacy key; Exam Prep no longer uses it for locking)
 	 * - form_a_remediation — Form A remediation workbook marked complete
-	 * - form_a / form_b / wbN_bank / checkpoint_N — matching quiz type submitted
+	 * - form_a / form_b / practice_a / practice_b / license_25 / comprehensive_final / wbN_bank / checkpoint_N — matching quiz type submitted
 	 *
 	 * @param int    $user_id     User ID.
 	 * @param int    $course_id   Course ID.
@@ -584,6 +584,31 @@ class CTA_Course_Materials {
 			return 'comprehensive_final';
 		}
 
+		if ( preg_match( '/Practice\s+Examination\s+B\b/i', $hay )
+			&& ( false !== stripos( $hay, 'Answer Key' )
+				|| false !== stripos( $hay, 'Answer_Key' )
+				|| false !== stripos( $hay, 'Rationale' )
+				|| false !== stripos( $hay, 'Controlled Answer' ) ) ) {
+			return 'practice_b';
+		}
+
+		if ( preg_match( '/Practice\s+Examination\s+A\b/i', $hay )
+			&& ( false !== stripos( $hay, 'Answer Key' )
+				|| false !== stripos( $hay, 'Answer_Key' )
+				|| false !== stripos( $hay, 'Rationale' )
+				|| false !== stripos( $hay, 'Controlled Answer' ) ) ) {
+			return 'practice_a';
+		}
+
+		if ( ( false !== stripos( $hay, 'Practice Act Module' )
+				|| false !== stripos( $hay, 'License-Specific Module' ) )
+			&& ( false !== stripos( $hay, 'Answer Key' )
+				|| false !== stripos( $hay, 'Answer_Key' )
+				|| false !== stripos( $hay, 'Rationale' )
+				|| false !== stripos( $hay, 'Controlled Answer' ) ) ) {
+			return 'license_25';
+		}
+
 		if ( preg_match( '/Workbook\s+(\d+)/i', $title, $m )
 			&& ( false !== stripos( $hay, 'Answer Key' )
 				|| false !== stripos( $hay, 'Answer_Key' )
@@ -844,6 +869,28 @@ class CTA_Course_Materials {
 				return __( 'Complete the Comprehensive Final (or record your preserved attempt) to unlock the Answer Key and Rationales.', 'cta-lms' );
 			}
 			return __( 'Complete the Comprehensive Final to unlock the Answer Key and Rationales.', 'cta-lms' );
+		}
+		if ( 'practice_a' === $type ) {
+			if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::uses_assessment_gates( $course ) ) {
+				return __( 'Complete Practice Examination A (or record your preserved attempt) to unlock the Answer Key and Rationales.', 'cta-lms' );
+			}
+			return __( 'Complete Practice Examination A to unlock the Answer Key and Rationales.', 'cta-lms' );
+		}
+		if ( 'practice_b' === $type ) {
+			if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::uses_assessment_gates( $course ) ) {
+				return __( 'Complete Practice Examination B (or record your preserved attempt) to unlock the Answer Key and Rationales.', 'cta-lms' );
+			}
+			return __( 'Complete Practice Examination B to unlock the Answer Key and Rationales.', 'cta-lms' );
+		}
+		if ( 'license_25' === $type ) {
+			$title = (string) ( $resource->title ?? '' );
+			if ( false !== stripos( $title, 'Practice Act Module' ) ) {
+				return __( 'Complete the LMFT Practice Act Module assessment to unlock the Answer Key and Rationales.', 'cta-lms' );
+			}
+			if ( false !== stripos( $title, 'License-Specific Module' ) ) {
+				return __( 'Complete the License-Specific Module assessment to unlock the Answer Key and Rationales.', 'cta-lms' );
+			}
+			return __( 'Complete the module assessment to unlock the Answer Key and Rationales.', 'cta-lms' );
 		}
 		if ( 'checkpoint_1' === $type ) {
 			if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::uses_assessment_gates( $course ) ) {

@@ -587,6 +587,9 @@ class CTA_Exam_Prep_Exam_Center {
 			case 'comprehensive_final':
 				$patterns = array( 'comprehensive final', 'comprehensive_final', 'comprehensive-final' );
 				break;
+			case 'license_25':
+				$patterns = array( 'practice act module', 'license-specific module', 'license_25' );
+				break;
 			case 'checkpoint_1':
 				$patterns = array( 'checkpoint 1', 'checkpoint_1', 'checkpoint-1' );
 				break;
