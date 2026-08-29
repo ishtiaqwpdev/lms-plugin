@@ -500,6 +500,7 @@ class CTA_Student_Dashboard {
 		if ( $is_exam_prep ) {
 			$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
 			$this->maybe_heal_lmft_clinical_workbook_banks_for_course( $course );
+			$this->maybe_heal_lpcc_law_ethics_chapter_tests_for_workbook( $course, $module );
 		}
 
 		// Exam Prep can have multiple assessments; CE still uses the primary quiz.
@@ -1270,6 +1271,30 @@ class CTA_Student_Dashboard {
 		}
 
 		CTA_Lmft_Clinical_Sync::maybe_heal_workbook_banks( true );
+	}
+
+	/**
+	 * Publish missing LPCC California Law & Ethics workbook chapter tests from a learner workbook page.
+	 *
+	 * @param object|null $course Course row.
+	 * @param object|null $module Workbook module row.
+	 * @return void
+	 */
+	private function maybe_heal_lpcc_law_ethics_chapter_tests_for_workbook( $course, $module ) {
+		if ( ! $course || ! $module || ! class_exists( 'CTA_Lpcc_Law_Ethics_Sync' ) ) {
+			return;
+		}
+
+		$lpcc_le = CTA_Lpcc_Law_Ethics_Sync::find_course();
+		if ( ! $lpcc_le || (int) $lpcc_le->id !== (int) $course->id ) {
+			return;
+		}
+
+		$wb_num = class_exists( 'CTA_Exam_Prep_Lessons' )
+			? CTA_Exam_Prep_Lessons::workbook_number_from_module( $module )
+			: 0;
+
+		CTA_Lpcc_Law_Ethics_Sync::maybe_heal_workbook_chapter_tests( (int) $course->id, $wb_num );
 	}
 
 	/**

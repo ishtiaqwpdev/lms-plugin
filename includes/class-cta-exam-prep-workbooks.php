@@ -839,6 +839,58 @@ class CTA_Exam_Prep_Workbooks {
 	}
 
 	/**
+	 * Whether a downloadable resource is the printable workbook DOCX (not a practice bank).
+	 *
+	 * @param object|null $resource Resource row.
+	 * @return bool
+	 */
+	public static function is_printable_workbook_resource( $resource ) {
+		if ( ! $resource ) {
+			return false;
+		}
+
+		$title = (string) ( $resource->title ?? '' );
+		$file  = (string) ( $resource->file_name ?? '' );
+		$path  = (string) ( $resource->file_path ?? '' );
+		$hay   = strtolower( $title . ' ' . $file . ' ' . $path );
+		$norm  = str_replace( '\\', '/', $path . ' ' . $file );
+
+		if ( preg_match( '#/(workbooks|workbook)/#i', $norm ) ) {
+			return true;
+		}
+
+		if ( preg_match( '/candidate\s+edition/i', $hay )
+			&& preg_match( '/workbook|\bwb\s*\d+/i', $hay )
+			&& ! preg_match( '/chapter\s+test|practice\s+bank|candidate\s+assessment|candidate\s+booklet/i', $hay ) ) {
+			return true;
+		}
+
+		return (bool) preg_match( '/candidate\s+edition.*workbook|workbook.*candidate\s+edition/i', $hay );
+	}
+
+	/**
+	 * Whether a resource is a genuine downloadable practice bank / chapter-test booklet.
+	 *
+	 * @param object|null $resource Resource row.
+	 * @return bool
+	 */
+	public static function is_downloadable_practice_bank_resource( $resource ) {
+		if ( ! $resource || self::is_printable_workbook_resource( $resource ) ) {
+			return false;
+		}
+
+		$title = (string) ( $resource->title ?? '' );
+		$file  = (string) ( $resource->file_name ?? '' );
+		$path  = (string) ( $resource->file_path ?? '' );
+		$hay   = $title . ' ' . $file . ' ' . $path;
+
+		return (bool) preg_match(
+			'/chapter\s+test|practice\s+bank|candidate\s+assessment|candidate\s+booklet|knowledge\s+check/i',
+			$hay
+		);
+	}
+
+	/**
 	 * Downloadable practice bank resource for a workbook module.
 	 *
 	 * @param array  $resources Resource rows.
@@ -860,8 +912,17 @@ class CTA_Exam_Prep_Workbooks {
 				continue;
 			}
 
+			if ( self::is_printable_workbook_resource( $resource ) ) {
+				continue;
+			}
+
+			if ( ! self::is_downloadable_practice_bank_resource( $resource ) ) {
+				continue;
+			}
+
 			$title = (string) ( $resource->title ?? '' );
 			$file  = (string) ( $resource->file_name ?? '' );
+			$path  = (string) ( $resource->file_path ?? '' );
 
 			// Skip simulations / forms — Exam Center content.
 			if ( false !== stripos( $title, 'Form A' )
@@ -876,7 +937,7 @@ class CTA_Exam_Prep_Workbooks {
 				return $resource;
 			}
 
-			if ( $wb_num > 0 && preg_match( '/Workbook\s+' . $wb_num . '\b|\bWB\s*' . $wb_num . '\b/i', $title . ' ' . $file ) ) {
+			if ( $wb_num > 0 && preg_match( '/Workbook\s+' . $wb_num . '\b|\bWB\s*' . $wb_num . '\b/i', $title . ' ' . $file . ' ' . $path ) ) {
 				return $resource;
 			}
 		}
@@ -993,7 +1054,8 @@ class CTA_Exam_Prep_Workbooks {
 			}
 		}
 
-		if ( '' !== $docx_url ) {
+		if ( '' !== $docx_url
+			&& ( ! $practice_bank_resource || self::is_downloadable_practice_bank_resource( $practice_bank_resource ) ) ) {
 			return array(
 				'mode'           => 'download',
 				'url'            => $docx_url,

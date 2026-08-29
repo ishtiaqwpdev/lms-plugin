@@ -365,7 +365,17 @@ class CTA_Exam_Prep_Workbook_Sections {
 		$bank_url     = (string) ( $extra['bank_download_url'] ?? '' );
 		$bank_title   = (string) ( $extra['bank_title'] ?? '' );
 		$quiz_page_id = absint( $extra['quiz_page_id'] ?? 0 );
+		$bank_resource = $extra['practice_bank_resource'] ?? null;
 
+		if ( class_exists( 'CTA_Exam_Prep_Workbooks' )
+			&& ( CTA_Exam_Prep_Workbooks::is_printable_workbook_resource( $bank_resource )
+				|| ( '' !== $bank_url && empty( $quiz_cards ) && ! CTA_Exam_Prep_Workbooks::is_downloadable_practice_bank_resource( $bank_resource ) ) ) ) {
+			$bank_url    = '';
+			$bank_title  = '';
+			$bank_resource = null;
+		}
+
+		// Law & Ethics chapter tests are online-only — never create a DOCX-only Practice Bank tab.
 		if ( empty( $quiz_cards ) && '' === $bank_url ) {
 			return null;
 		}

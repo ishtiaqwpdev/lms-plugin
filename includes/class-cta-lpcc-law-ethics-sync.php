@@ -636,6 +636,95 @@ class CTA_Lpcc_Law_Ethics_Sync {
 	}
 
 	/**
+	 * Self-heal missing online chapter tests when a learner opens a workbook page.
+	 *
+	 * @param int $course_id    Course ID.
+	 * @param int $workbook_num Workbook number 1–9 (0 = check all).
+	 * @return void
+	 */
+	public static function maybe_heal_workbook_chapter_tests( $course_id = 0, $workbook_num = 0 ) {
+		if ( function_exists( 'cta_lms_is_plugin_lifecycle_request' ) && cta_lms_is_plugin_lifecycle_request() ) {
+			return;
+		}
+
+		if ( get_transient( 'cta_lpcc_le_chapter_heal_lock' ) ) {
+			return;
+		}
+
+		$course_id = absint( $course_id );
+		if ( ! $course_id ) {
+			$course = self::find_course();
+			if ( ! $course ) {
+				return;
+			}
+			$course_id = (int) $course->id;
+		}
+
+		$workbook_num = absint( $workbook_num );
+		if ( self::count_missing_chapter_tests( $course_id, $workbook_num ) <= 0 ) {
+			return;
+		}
+
+		set_transient( 'cta_lpcc_le_chapter_heal_lock', 1, 5 * MINUTE_IN_SECONDS );
+
+		if ( function_exists( 'set_time_limit' ) ) {
+			// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+			@set_time_limit( 300 );
+		}
+		if ( function_exists( 'wp_raise_memory_limit' ) ) {
+			wp_raise_memory_limit( 'admin' );
+		}
+
+		self::sync_assessments( $course_id );
+	}
+
+	/**
+	 * @param int $course_id    Course ID.
+	 * @param int $workbook_num Workbook number 1–9 (0 = all workbooks).
+	 * @return int
+	 */
+	public static function count_missing_chapter_tests( $course_id, $workbook_num = 0 ) {
+		$course_id    = absint( $course_id );
+		$workbook_num = absint( $workbook_num );
+		if ( ! $course_id || ! class_exists( 'CTA_Database' ) ) {
+			return 1;
+		}
+
+		$by_type = array();
+		foreach ( (array) CTA_Database::get_quizzes_by_course( $course_id, false ) as $row ) {
+			$type = sanitize_key( (string) ( $row->quiz_type ?? '' ) );
+			if ( '' !== $type ) {
+				$by_type[ $type ] = $row;
+			}
+		}
+
+		$missing = 0;
+		foreach ( self::get_chapter_assessment_definitions() as $def ) {
+			$quiz_type = sanitize_key( (string) ( $def['quiz_type'] ?? '' ) );
+			if ( ! preg_match( '/^wb(\d+)_c\d+$/', $quiz_type, $m ) ) {
+				continue;
+			}
+			$wb = absint( $m[1] );
+			if ( $workbook_num > 0 && $wb !== $workbook_num ) {
+				continue;
+			}
+
+			$row = $by_type[ $quiz_type ] ?? null;
+			if ( ! $row || empty( $row->id ) || 'active' !== sanitize_key( (string) ( $row->status ?? '' ) ) ) {
+				++$missing;
+				continue;
+			}
+
+			$question_count = count( CTA_Database::get_quiz_questions( (int) $row->id ) );
+			if ( $question_count < (int) ( $def['expect'] ?? 1 ) ) {
+				++$missing;
+			}
+		}
+
+		return $missing;
+	}
+
+	/**
 	 * Self-heal: if the Draft program exists but modules/quizzes were never loaded, force sync once.
 	 *
 	 * @return void

@@ -91,6 +91,10 @@ if ( $workbook_resource && class_exists( 'CTA_Course_Materials' ) ) {
 }
 
 $bank_download_url = '';
+if ( $practice_bank_resource && class_exists( 'CTA_Exam_Prep_Workbooks' )
+	&& CTA_Exam_Prep_Workbooks::is_printable_workbook_resource( $practice_bank_resource ) ) {
+	$practice_bank_resource = null;
+}
 if ( $practice_bank_resource && class_exists( 'CTA_Course_Materials' ) ) {
 	$bank_can_dl = CTA_Course_Materials::user_can_access( get_current_user_id(), $practice_bank_resource );
 	$bank_download_url = $bank_can_dl ? CTA_Course_Materials::get_serve_url( (int) $practice_bank_resource->id ) : '';
@@ -120,10 +124,11 @@ if ( $practice_bank_resource && class_exists( 'CTA_Course_Materials' ) ) {
 					$workbook_tabs = CTA_Exam_Prep_Workbook_Sections::build_tabs(
 						$exam_lesson['html'],
 						array(
-							'quiz_cards'        => $workbook_quiz_cards ?? array(),
-							'bank_download_url' => $bank_download_url,
-							'bank_title'        => $practice_bank_resource ? (string) $practice_bank_resource->title : '',
-							'quiz_page_id'      => $quiz_page_id ?? 0,
+							'quiz_cards'              => $workbook_quiz_cards ?? array(),
+							'bank_download_url'       => $bank_download_url,
+							'bank_title'              => $practice_bank_resource ? (string) $practice_bank_resource->title : '',
+							'quiz_page_id'            => $quiz_page_id ?? 0,
+							'practice_bank_resource'  => $practice_bank_resource,
 						)
 					);
 				} elseif ( ! empty( $workbook_quiz_cards ) || $bank_download_url ) {
@@ -131,10 +136,11 @@ if ( $practice_bank_resource && class_exists( 'CTA_Course_Materials' ) ) {
 						? CTA_Exam_Prep_Workbook_Sections::build_tabs(
 							'',
 							array(
-								'quiz_cards'        => $workbook_quiz_cards ?? array(),
-								'bank_download_url' => $bank_download_url,
-								'bank_title'        => $practice_bank_resource ? (string) $practice_bank_resource->title : '',
-								'quiz_page_id'      => $quiz_page_id ?? 0,
+								'quiz_cards'             => $workbook_quiz_cards ?? array(),
+								'bank_download_url'      => $bank_download_url,
+								'bank_title'             => $practice_bank_resource ? (string) $practice_bank_resource->title : '',
+								'quiz_page_id'           => $quiz_page_id ?? 0,
+								'practice_bank_resource' => $practice_bank_resource,
 							)
 						)
 						: array();

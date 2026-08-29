@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.318' );
+	define( 'CTA_VERSION', '1.0.319' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -1825,6 +1825,22 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 					CTA_Lmft_Clinical_Sync::sync_workbook_banks( (int) $lmft_clinical->id );
 					if ( ! CTA_Lmft_Clinical_Sync::workbook_banks_are_live( (int) $lmft_clinical->id ) ) {
 						cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
+					}
+				}
+			}
+
+			// LPCC California Law & Ethics: fix Practice Bank tab routing + restore online chapter tests.
+			if ( version_compare( $installed, '1.0.319', '<' ) && class_exists( 'CTA_Lpcc_Law_Ethics_Sync' ) ) {
+				$lpcc_le = CTA_Lpcc_Law_Ethics_Sync::find_course();
+				if ( $lpcc_le ) {
+					$lpcc_course_id = (int) $lpcc_le->id;
+					CTA_Lpcc_Law_Ethics_Sync::sync_materials( $lpcc_course_id );
+					if ( CTA_Lpcc_Law_Ethics_Sync::count_missing_chapter_tests( $lpcc_course_id, 0 ) > 0 ) {
+						if ( function_exists( 'set_time_limit' ) ) {
+							// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged
+							@set_time_limit( 300 );
+						}
+						CTA_Lpcc_Law_Ethics_Sync::sync_assessments( $lpcc_course_id );
 					}
 				}
 			}

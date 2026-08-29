@@ -52,6 +52,9 @@ foreach ( $workbook_tabs as $tab ) {
 	} elseif ( ! empty( $bank_download_url ) ) {
 		$pb_docx_url = (string) $bank_download_url;
 	}
+	if ( $pb_docx_url && ! empty( $wb_download_url ) && $pb_docx_url === $wb_download_url ) {
+		$pb_docx_url = '';
+	}
 	?>
 	<div class="cta-ep-workbook-toolbar" data-cta-ep-workbook-toolbar>
 		<?php if ( $wb_download_url || $pb_docx_url ) : ?>
@@ -300,6 +303,8 @@ foreach ( $workbook_tabs as $tab ) {
 								</ul>
 							<?php elseif ( ! empty( $tab['bank_url'] ) ) : ?>
 								<p><?php esc_html_e( 'Use the downloadable practice bank link above, or check back when the online quiz is published for this program.', 'cta-lms' ); ?></p>
+							<?php else : ?>
+								<p><?php esc_html_e( 'Online chapter tests for this workbook are being published. Check back shortly — each chapter will appear here with its own Start button.', 'cta-lms' ); ?></p>
 							<?php endif; ?>
 						</div>
 					<?php else : ?>
