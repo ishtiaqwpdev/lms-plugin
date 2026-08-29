@@ -19,7 +19,7 @@ if ( ! class_exists( 'CTA_CE_Materials_Sync' ) ) {
 
 class CTA_CE_Materials_Sync {
 
-	const REPAIR_OPTION = 'cta_ce_materials_repair_1_0_314';
+	const REPAIR_OPTION = 'cta_ce_materials_repair_1_0_316';
 	const AUDIT_OPTION  = 'cta_ce_materials_audit_report';
 
 	/**
@@ -241,7 +241,7 @@ class CTA_CE_Materials_Sync {
 	/**
 	 * Title patterns for Law & Ethics exam-prep R9A / study-toolkit downloads.
 	 *
-	 * These must not appear on CE course materials lists (e.g. CTA-CE-003).
+	 * These must not appear on CE course materials lists (e.g. CTA-CE-003, Alcoholism CE).
 	 *
 	 * @return string[]
 	 */
@@ -257,6 +257,46 @@ class CTA_CE_Materials_Sync {
 	}
 
 	/**
+	 * Canonical Law & Ethics exam-prep toolkit titles from program sync definitions.
+	 *
+	 * @return string[]
+	 */
+	public static function get_canonical_law_ethics_toolkit_titles() {
+		$titles = array();
+
+		$sources = array(
+			array( 'CTA_Lmft_Law_Ethics_Sync', 'get_toolkit_material_definitions' ),
+		);
+
+		foreach ( $sources as $source ) {
+			if ( ! class_exists( $source[0] ) || ! method_exists( $source[0], $source[1] ) ) {
+				continue;
+			}
+			foreach ( (array) call_user_func( array( $source[0], $source[1] ) ) as $def ) {
+				$label = self::normalize_resource_title( (string) ( $def['title'] ?? '' ) );
+				if ( '' !== $label ) {
+					$titles[] = $label;
+				}
+			}
+		}
+
+		// LCSW / LPCC R9A titles (without relying on private sync helpers).
+		$lcsw_titles = array(
+			'Exam Strategy and Study Planning Toolkit',
+			'High-Yield Numbers, Timelines, and Trigger Words Toolkit',
+			'High-Yield California Law Decision Guides Toolkit',
+			'High-Yield California Ethics Decision Guides Toolkit',
+			'45-Chapter Exam Traps and Correction Rules Toolkit',
+			'45-Chapter Master Study Map and Readiness Checklist Toolkit',
+		);
+		foreach ( $lcsw_titles as $label ) {
+			$titles[] = self::normalize_resource_title( $label );
+		}
+
+		return array_values( array_unique( $titles ) );
+	}
+
+	/**
 	 * Normalize a resource title for signature matching (strip R9A prefix, etc.).
 	 *
 	 * @param string $title Raw title.
@@ -264,7 +304,9 @@ class CTA_CE_Materials_Sync {
 	 */
 	public static function normalize_resource_title( $title ) {
 		$title = trim( (string) $title );
-		return trim( (string) preg_replace( '/^R9A\s*[—\-–]\s*/iu', '', $title ) );
+		$title = trim( (string) preg_replace( '/^R9A\s*[—\-–]\s*/iu', '', $title ) );
+		$title = preg_replace( '/\s*&\s*/u', ' and ', $title );
+		return trim( preg_replace( '/\s+/u', ' ', $title ) );
 	}
 
 	/**
@@ -285,6 +327,12 @@ class CTA_CE_Materials_Sync {
 			}
 		}
 
+		foreach ( self::get_canonical_law_ethics_toolkit_titles() as $canonical ) {
+			if ( strcasecmp( $title, $canonical ) === 0 ) {
+				return true;
+			}
+		}
+
 		$haystack = self::resource_haystack( $resource );
 		$file_markers = array(
 			'law_and_ethics_ep_r9a',
@@ -294,6 +342,10 @@ class CTA_CE_Materials_Sync {
 			'r9a_exam_strategy',
 			'r9a_high_yield',
 			'r9a_45_chapter',
+			'cta_le_lmft_45_chapter',
+			'cta_le_lmft_exam_strategy',
+			'cta_le_lmft_high_yield',
+			'cta_le_lmft',
 		);
 		foreach ( $file_markers as $marker ) {
 			if ( false !== strpos( $haystack, $marker ) ) {
@@ -319,6 +371,7 @@ class CTA_CE_Materials_Sync {
 			'lcsw-law-ethics'     => 'lcsw-california-law-ethics-exam-preparation',
 			'lmft_law_and_ethics' => 'california-law-ethics-exam-preparation',
 			'lmft-law-ethics'     => 'california-law-ethics-exam-preparation',
+			'cta_le_lmft'         => 'california-law-ethics-exam-preparation',
 		);
 
 		foreach ( $marker_slug_map as $marker => $slug ) {
@@ -357,6 +410,109 @@ class CTA_CE_Materials_Sync {
 	}
 
 	/**
+	 * Exam-prep audio program sync classes (placement map + owner slug).
+	 *
+	 * @return array<int,array{class:string,resolve:string,find:string,slug:string}>
+	 */
+	public static function get_exam_prep_audio_program_sources() {
+		return array(
+			array(
+				'class'   => 'CTA_Lpcc_Ncmhce_Sync',
+				'resolve' => 'resolve_audio_meta',
+				'find'    => 'find_course',
+				'slug'    => 'lpcc-ncmhce-exam-preparation',
+			),
+			array(
+				'class'   => 'CTA_Lmft_Amftrb_Sync',
+				'resolve' => 'resolve_audio_meta',
+				'find'    => 'find_course',
+				'slug'    => 'lmft-amftrb-national-exam-preparation',
+			),
+		);
+	}
+
+	/**
+	 * Whether a resource is an exam-prep program audio track (NCMHCE, AMFTRB, etc.).
+	 *
+	 * @param object|null $resource Resource row.
+	 * @return bool
+	 */
+	public static function is_exam_prep_audio_resource( $resource ) {
+		if ( ! $resource ) {
+			return false;
+		}
+
+		if ( self::resolve_exam_prep_audio_owner_course_id( $resource ) ) {
+			return true;
+		}
+
+		$haystack = self::resource_haystack( $resource );
+		$markers  = array(
+			'cta_lpcc_audio_track',
+			'cta_lmft_amftrb_audio',
+			'/audio/cta_lpcc_',
+			'/audio/cta_lmft_amftrb_',
+		);
+		foreach ( $markers as $marker ) {
+			if ( '' !== $marker && false !== strpos( $haystack, strtolower( $marker ) ) ) {
+				return true;
+			}
+		}
+
+		$file_type = strtolower( (string) ( $resource->file_type ?? '' ) );
+		if ( 'mp3' === $file_type && preg_match( '/level-of-care sequencing|ncmhce case reasoning|form a\/form b readiness/i', (string) ( $resource->title ?? '' ) ) ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Resolve exam-prep course_id for a mislinked audio track row.
+	 *
+	 * @param object $resource Resource row.
+	 * @return int 0 when unknown.
+	 */
+	public static function resolve_exam_prep_audio_owner_course_id( $resource ) {
+		foreach ( self::get_exam_prep_audio_program_sources() as $source ) {
+			if ( ! class_exists( $source['class'] ) || ! method_exists( $source['class'], $source['resolve'] ) ) {
+				continue;
+			}
+
+			$meta = call_user_func( array( $source['class'], $source['resolve'] ), $resource );
+			if ( null === $meta ) {
+				continue;
+			}
+
+			if ( method_exists( $source['class'], $source['find'] ) ) {
+				$owner = call_user_func( array( $source['class'], $source['find'] ) );
+				if ( $owner ) {
+					return (int) $owner->id;
+				}
+			}
+
+			$owner = self::find_exam_prep_course_by_slug( (string) $source['slug'] );
+			return $owner ? (int) $owner->id : 0;
+		}
+
+		$haystack = self::resource_haystack( $resource );
+		$slug_map = array(
+			'cta_lpcc_audio_track'    => 'lpcc-ncmhce-exam-preparation',
+			'lpcc-ncmhce'             => 'lpcc-ncmhce-exam-preparation',
+			'cta_lmft_amftrb_audio'   => 'lmft-amftrb-national-exam-preparation',
+			'lmft-amftrb'             => 'lmft-amftrb-national-exam-preparation',
+		);
+		foreach ( $slug_map as $marker => $slug ) {
+			if ( false !== strpos( $haystack, $marker ) ) {
+				$owner = self::find_exam_prep_course_by_slug( $slug );
+				return $owner ? (int) $owner->id : 0;
+			}
+		}
+
+		return 0;
+	}
+
+	/**
 	 * Whether a downloadable resource is exam-prep content.
 	 *
 	 * @param object|null $resource Resource row.
@@ -372,6 +528,10 @@ class CTA_CE_Materials_Sync {
 		}
 
 		if ( self::is_law_ethics_exam_prep_study_toolkit( $resource ) ) {
+			return true;
+		}
+
+		if ( self::is_exam_prep_audio_resource( $resource ) ) {
 			return true;
 		}
 
@@ -501,6 +661,11 @@ class CTA_CE_Materials_Sync {
 			if ( $owner_id ) {
 				return $owner_id;
 			}
+		}
+
+		$audio_owner_id = self::resolve_exam_prep_audio_owner_course_id( $resource );
+		if ( $audio_owner_id ) {
+			return $audio_owner_id;
 		}
 
 		$haystack = self::resource_haystack( $resource );
