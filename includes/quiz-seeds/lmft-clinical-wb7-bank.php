@@ -1,13 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Clinical - Workbook 7 - 17-question practice bank.
  * Built from approved CTA_LMFT_WB7_17_Question_Bank_v1.0.docx.
-=======
- * CTA LMFT California Clinical â€” Workbook 7 â€” 17-question practice bank.
- * Source: CTA_LMFT_WB7_17_Question_Bank_v1.0.docx (Planning, Progress, and Termination).
- * Learner-facing fields omit Question ID / difficulty / type / concept metadata.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -19,18 +13,10 @@ return array(
 		'option_d'       => 'A list of interventions that can be used regardless of the client system.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Theory informs planning, but it should not replace assessment of the client system and priority need.
-<<<<<<< HEAD
 B. Correct. Planning begins by identifying priority, formulation, and the outcome the client system is working toward.
 C. Incorrect. Termination planning is important, but a fixed date is not always clinically appropriate at the outset.
 D. Incorrect. Interventions should be selected because they fit the formulation, goal, readiness, and context.
 CTA Exam StrategyBefore choosing a technique, identify the need, formulate the maintaining pattern, and define the desired change.',
-=======
-		B. Correct. Planning begins by identifying priority, formulation, and the outcome the client system is working toward.
-		C. Incorrect. Termination planning is important, but a fixed date is not always clinically appropriate at the outset.
-		D. Incorrect. Interventions should be selected because they fit the formulation, goal, readiness, and context.
-		
-		CTA Exam Strategy: Before choosing a technique, identify the need, formulate the maintaining pattern, and define the desired change.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple reports occasional communication problems, but one partner also describes escalating threats at home. Which planning action is MOST appropriate?',
@@ -40,18 +26,10 @@ CTA Exam StrategyBefore choosing a technique, identify the need, formulate the m
 		'option_d'       => 'Set equal priority for every concern so neither partner feels judged.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Safety and acute instability take priority over lower-risk relational goals.
-<<<<<<< HEAD
 B. Incorrect. Communication work may be useful later, but it is premature while safety is uncertain.
 C. Incorrect. The therapist must assess risk even when the partners differ in how they describe it.
 D. Incorrect. Ethical planning requires prioritization rather than treating all concerns as equally urgent.
 CTA Exam StrategyWhen goals compete, address immediate safety and stability before quality-of-life or skill-building targets.',
-=======
-		B. Incorrect. Communication work may be useful later, but it is premature while safety is uncertain.
-		C. Incorrect. The therapist must assess risk even when the partners differ in how they describe it.
-		D. Incorrect. Ethical planning requires prioritization rather than treating all concerns as equally urgent.
-		
-		CTA Exam Strategy: When goals compete, address immediate safety and stability before quality-of-life or skill-building targets.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which treatment goal is BEST written for progress monitoring?',
@@ -61,18 +39,10 @@ CTA Exam StrategyWhen goals compete, address immediate safety and stability befo
 		'option_d'       => 'The parents will stop being dysfunctional.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. “Healthier” is too broad to guide intervention or review.
-<<<<<<< HEAD
 B. Incorrect. “All family problems” is not realistic or observable.
 C. Correct. The goal identifies a behavior, context, time frame, and method for reviewing change.
 D. Incorrect. The wording is blaming and does not define measurable behavior.
 CTA Exam StrategyChoose goals that describe who will do what, under what conditions, by when, and how progress will be reviewed.',
-=======
-		B. Incorrect. “All family problems” is not realistic or observable.
-		C. Correct. The goal identifies a behavior, context, time frame, and method for reviewing change.
-		D. Incorrect. The wording is blaming and does not define measurable behavior.
-		
-		CTA Exam Strategy: Choose goals that describe who will do what, under what conditions, by when, and how progress will be reviewed.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT began individual treatment with a teenager referred for anxiety. Assessment now shows that parental conflict and inconsistent responses are maintaining the symptoms. What should the therapist do NEXT?',
@@ -82,18 +52,10 @@ CTA Exam StrategyChoose goals that describe who will do what, under what conditi
 		'option_d'       => 'Discuss the systemic formulation, clarify roles and consent, and consider revising the unit and plan of treatment.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Ignoring new assessment data can preserve an ineffective plan.
-<<<<<<< HEAD
 B. Incorrect. A systemic formulation should not be communicated as blame.
 C. Incorrect. New information calls for collaborative revision rather than automatic termination.
 D. Correct. The therapist should revisit who should participate, what roles apply, and how the treatment plan should change.
 CTA Exam StrategyThe unit of treatment can change when the formulation changes; revise roles and consent before changing participation.',
-=======
-		B. Incorrect. A systemic formulation should not be communicated as blame.
-		C. Incorrect. New information calls for collaborative revision rather than automatic termination.
-		D. Correct. The therapist should revisit who should participate, what roles apply, and how the treatment plan should change.
-		
-		CTA Exam Strategy: The unit of treatment can change when the formulation changes; revise roles and consent before changing participation.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A structural family formulation identifies diffuse parent-child boundaries and a weak parental subsystem. Which intervention target BEST fits the formulation?',
@@ -103,18 +65,10 @@ CTA Exam StrategyThe unit of treatment can change when the formulation changes; 
 		'option_d'       => 'Interpret early unconscious conflicts without observing current family interactions.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Structural planning targets hierarchy, subsystems, boundaries, and interactional organization.
-<<<<<<< HEAD
 B. Incorrect. This is more consistent with an individual cognitive approach and does not directly address the stated systemic pattern.
 C. Incorrect. Focusing only on the child risks reinforcing the identified-patient pattern.
 D. Incorrect. The formulation calls for present-focused systemic intervention rather than only intrapsychic interpretation.
 CTA Exam StrategyMatch the intervention target to the mechanism of change named in the formulation.',
-=======
-		B. Incorrect. This is more consistent with an individual cognitive approach and does not directly address the stated systemic pattern.
-		C. Incorrect. Focusing only on the child risks reinforcing the identified-patient pattern.
-		D. Incorrect. The formulation calls for present-focused systemic intervention rather than only intrapsychic interpretation.
-		
-		CTA Exam Strategy: Match the intervention target to the mechanism of change named in the formulation. Moderate Questions 7 questions | Applied planning, monitoring, and termination decisions.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After an LMFT assigns a between-session task, one partner says the therapist “always takes sides” and threatens to stop attending. What should the therapist do FIRST?',
@@ -124,18 +78,10 @@ CTA Exam StrategyMatch the intervention target to the mechanism of change named 
 		'option_d'       => 'Pause, explore the partner’s experience, assess the alliance and safety, and collaborate on repair before proceeding.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Defending the intervention before understanding the rupture can deepen mistrust.
-<<<<<<< HEAD
 B. Incorrect. The therapist should address the alliance directly rather than recruiting one partner.
 C. Incorrect. Proceeding without repair risks dropout and weakens treatment effectiveness.
 D. Correct. Alliance information is treatment data and should be explored and repaired collaboratively.
 CTA Exam StrategyWhen treatment participation is threatened by a rupture, address the relationship before adding another technique.',
-=======
-		B. Incorrect. The therapist should address the alliance directly rather than recruiting one partner.
-		C. Incorrect. Proceeding without repair risks dropout and weakens treatment effectiveness.
-		D. Correct. Alliance information is treatment data and should be explored and repaired collaboratively.
-		
-		CTA Exam Strategy: When treatment participation is threatened by a rupture, address the relationship before adding another technique.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which progress-monitoring plan provides the MOST useful information for a family working to reduce conflict escalation?',
@@ -145,18 +91,10 @@ CTA Exam StrategyWhen treatment participation is threatened by a rupture, addres
 		'option_d'       => 'Count the number of sessions attended.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Waiting until termination prevents timely revision.
-<<<<<<< HEAD
 B. Incorrect. Clinical observation matters, but it should be combined with defined indicators and client-system feedback.
 C. Correct. Baseline indicators and scheduled review make change visible and actionable.
 D. Incorrect. Attendance is not the same as outcome.
 CTA Exam StrategyA useful measure has a baseline, a target, repeated review, and a clear link to the treatment goal.',
-=======
-		B. Incorrect. Clinical observation matters, but it should be combined with defined indicators and client-system feedback.
-		C. Correct. Baseline indicators and scheduled review make change visible and actionable.
-		D. Incorrect. Attendance is not the same as outcome.
-		
-		CTA Exam Strategy: A useful measure has a baseline, a target, repeated review, and a clear link to the treatment goal.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An employer refers a client for therapy and requests monthly summaries. Before finalizing treatment goals, what should the LMFT do?',
@@ -166,18 +104,10 @@ CTA Exam StrategyA useful measure has a baseline, a target, repeated review, and
 		'option_d'       => 'Send only verbal updates so no release is needed.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Referral source status does not create unrestricted access to treatment information.
-<<<<<<< HEAD
 B. Correct. Roles, authorization, confidentiality, and information boundaries must be clear before treatment proceeds.
 C. Incorrect. Third-party referrals can be managed ethically when expectations and permissions are defined.
 D. Incorrect. Verbal disclosure is still disclosure and requires appropriate authorization or legal basis.
 CTA Exam StrategyIn third-party cases, clarify client, role, purpose, authorization, recipient, and scope before promising information.',
-=======
-		B. Correct. Roles, authorization, confidentiality, and information boundaries must be clear before treatment proceeds.
-		C. Incorrect. Third-party referrals can be managed ethically when expectations and permissions are defined.
-		D. Incorrect. Verbal disclosure is still disclosure and requires appropriate authorization or legal basis.
-		
-		CTA Exam Strategy: In third-party cases, clarify client, role, purpose, authorization, recipient, and scope before promising information.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A family has attended eight sessions with no meaningful change. Homework completion is low, and transportation problems have caused several late arrivals. What should the LMFT do NEXT?',
@@ -187,18 +117,10 @@ CTA Exam StrategyIn third-party cases, clarify client, role, purpose, authorizat
 		'option_d'       => 'Increase homework complexity to improve motivation.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. No progress is new assessment data and requires collaborative review of both clinical and practical barriers.
-<<<<<<< HEAD
 B. Incorrect. Consistency without evaluation may preserve an ineffective plan.
 C. Incorrect. Labeling resistance bypasses assessment and shared problem solving.
 D. Incorrect. Increasing burden may worsen the mismatch before barriers are understood.
 CTA Exam StrategyWhen progress stalls, reassess before repeating, blaming, or terminating.',
-=======
-		B. Incorrect. Consistency without evaluation may preserve an ineffective plan.
-		C. Incorrect. Labeling resistance bypasses assessment and shared problem solving.
-		D. Incorrect. Increasing burden may worsen the mismatch before barriers are understood.
-		
-		CTA Exam Strategy: When progress stalls, reassess before repeating, blaming, or terminating.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which factor should carry the GREATEST weight when an LMFT chooses between individual, conjoint, family, group, or higher-level services?',
@@ -208,18 +130,10 @@ CTA Exam StrategyWhen progress stalls, reassess before repeating, blaming, or te
 		'option_d'       => 'Whether the client has previously tried therapy.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Therapist convenience cannot be the primary clinical criterion.
-<<<<<<< HEAD
 B. Incorrect. Agency practice does not replace individualized judgment.
 C. Correct. Modality and level of care should fit the formulation, risk, participants, context, and treatment needs.
 D. Incorrect. Prior treatment is relevant but does not determine the current modality by itself.
 CTA Exam StrategyChoose the setting and participants that best match formulation, risk, readiness, and required intensity.',
-=======
-		B. Incorrect. Agency practice does not replace individualized judgment.
-		C. Correct. Modality and level of care should fit the formulation, risk, participants, context, and treatment needs.
-		D. Incorrect. Prior treatment is relevant but does not determine the current modality by itself.
-		
-		CTA Exam Strategy: Choose the setting and participants that best match formulation, risk, readiness, and required intensity.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple reports substantial goal attainment and uses repair skills independently, but one partner worries that ending therapy means the relationship may fail again. What should the LMFT do?',
@@ -229,18 +143,10 @@ CTA Exam StrategyChoose the setting and participants that best match formulation
 		'option_d'       => 'Explore the meaning of ending, review gains and remaining risks, plan relapse prevention, and collaboratively consider tapering or closure.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Concern about ending should be explored but does not automatically justify indefinite treatment.
-<<<<<<< HEAD
 B. Incorrect. Abrupt closure misses an opportunity to consolidate gains and address the transition.
 C. Incorrect. Referral is not indicated solely to avoid termination work.
 D. Correct. Termination is a clinical process involving review, meaning, risk, supports, and continuity.
 CTA Exam StrategyReadiness depends on goals, functioning, independent skill use, risk, supports, and the meaning of ending.',
-=======
-		B. Incorrect. Abrupt closure misses an opportunity to consolidate gains and address the transition.
-		C. Incorrect. Referral is not indicated solely to avoid termination work.
-		D. Correct. Termination is a clinical process involving review, meaning, risk, supports, and continuity.
-		
-		CTA Exam Strategy: Readiness depends on goals, functioning, independent skill use, risk, supports, and the meaning of ending.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which item belongs in the CTA CLOSE termination check?',
@@ -250,18 +156,10 @@ CTA Exam StrategyReadiness depends on goals, functioning, independent skill use,
 		'option_d'       => 'Delete earlier treatment goals once closure is planned.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Clinicians cannot guarantee that symptoms or stressors will never return.
-<<<<<<< HEAD
 B. Correct. The CLOSE check organizes safety, gains, supports, follow-up, meaning, and documentation.
 C. Incorrect. The meaning of ending may be clinically important and should not be avoided automatically.
 D. Incorrect. Prior goals and progress remain part of the clinical record.
 CTA Exam StrategyA sound ending protects safety and continuity while consolidating what the client system can carry forward.',
-=======
-		B. Correct. The CLOSE check organizes safety, gains, supports, follow-up, meaning, and documentation.
-		C. Incorrect. The meaning of ending may be clinically important and should not be avoided automatically.
-		D. Incorrect. Prior goals and progress remain part of the clinical record.
-		
-		CTA Exam Strategy: A sound ending protects safety and continuity while consolidating what the client system can carry forward. Difficult Questions 5 questions | Integrated clinical reasoning across competing priorities.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Parents seek family therapy because their 14-year-old is skipping school. In the first meeting, the adolescent reports recent self-harm, the parents begin blaming each other, and the family has no reliable transportation. Which plan is BEST?',
@@ -271,18 +169,10 @@ CTA Exam StrategyA sound ending protects safety and continuity while consolidati
 		'option_d'       => 'Terminate and tell the family to return when transportation is reliable.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The plan prioritizes safety while integrating systemic formulation, participation, and practical access barriers.
-<<<<<<< HEAD
 B. Incorrect. Attendance planning is premature before current self-harm risk is clarified and stabilized.
 C. Incorrect. Family conflict informs the formulation but does not automatically justify excluding parents.
 D. Incorrect. Transportation is a barrier to solve, not a reason for abandonment.
 CTA Exam StrategyIntegrated items require the sequence: immediate safety, collaborative formulation, feasible plan, monitoring, and continuity.',
-=======
-		B. Incorrect. Attendance planning is premature before current self-harm risk is clarified and stabilized.
-		C. Incorrect. Family conflict informs the formulation but does not automatically justify excluding parents.
-		D. Incorrect. Transportation is a barrier to solve, not a reason for abandonment.
-		
-		CTA Exam Strategy: Integrated items require the sequence: immediate safety, collaborative formulation, feasible plan, monitoring, and continuity.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT uses solution-focused tasks with a family, but progress measures remain unchanged. The parents say the tasks do not fit their cultural decision-making process, and the adolescent reports feeling unheard. What is the BEST next step?',
@@ -292,18 +182,10 @@ CTA Exam StrategyIntegrated items require the sequence: immediate safety, collab
 		'option_d'       => 'Reassess the alliance, cultural meaning, family roles, formulation, and intervention fit; then revise goals and methods collaboratively and define a new review point.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. More of a poorly fitting intervention is unlikely to resolve the mismatch.
-<<<<<<< HEAD
 B. Incorrect. Competent planning adapts implementation to the client system while preserving clinical integrity.
 C. Incorrect. Nonprogress should trigger reassessment before blaming or terminating.
 D. Correct. The response uses outcome data and client feedback to revise alliance, formulation, and intervention fit.
 CTA Exam StrategyWhen outcome data and client feedback both signal poor fit, revise the formulation and plan rather than intensifying the same approach.',
-=======
-		B. Incorrect. Competent planning adapts implementation to the client system while preserving clinical integrity.
-		C. Incorrect. Nonprogress should trigger reassessment before blaming or terminating.
-		D. Correct. The response uses outcome data and client feedback to revise alliance, formulation, and intervention fit.
-		
-		CTA Exam Strategy: When outcome data and client feedback both signal poor fit, revise the formulation and plan rather than intensifying the same approach.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client in individual LMFT treatment has improved but still has intermittent panic symptoms. The client can no longer afford the current fee and asks to stop next week. Which response is BEST?',
@@ -313,18 +195,10 @@ CTA Exam StrategyWhen outcome data and client feedback both signal poor fit, rev
 		'option_d'       => 'Close the case immediately without further contact because the client requested it.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Unlimited free treatment is not required and may create sustainability and boundary problems.
-<<<<<<< HEAD
 B. Correct. The response respects self-determination while protecting continuity and addressing remaining clinical needs.
 C. Incorrect. A competent voluntary client may choose to stop, although the therapist should explain concerns and options.
 D. Incorrect. Abrupt administrative closure omits reasonable transition and relapse planning.
 CTA Exam StrategyWhen an external barrier drives ending, combine respect for choice with risk review, feasible alternatives, and continuity.',
-=======
-		B. Correct. The response respects self-determination while protecting continuity and addressing remaining clinical needs.
-		C. Incorrect. A competent voluntary client may choose to stop, although the therapist should explain concerns and options.
-		D. Incorrect. Abrupt administrative closure omits reasonable transition and relapse planning.
-		
-		CTA Exam Strategy: When an external barrier drives ending, combine respect for choice with risk review, feasible alternatives, and continuity.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple completes conjoint therapy successfully. One partner asks to continue individually with the same LMFT to discuss information that should be kept from the other partner. What should the therapist do FIRST?',
@@ -334,18 +208,10 @@ CTA Exam StrategyWhen an external barrier drives ending, combine respect for cho
 		'option_d'       => 'Destroy the conjoint record and open a new individual chart.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Ending conjoint treatment does not erase role, confidentiality, or conflict considerations.
-<<<<<<< HEAD
 B. Incorrect. The therapist should not impose disclosure before clarifying the request and professional obligations.
 C. Correct. A potential role transition requires careful analysis and informed discussion before services begin.
 D. Incorrect. Records must be maintained appropriately; a new chart does not erase the prior relationship.
 CTA Exam StrategyBefore changing from conjoint to individual work, identify the client, role, information rules, conflicts, and alternatives.',
-=======
-		B. Incorrect. The therapist should not impose disclosure before clarifying the request and professional obligations.
-		C. Correct. A potential role transition requires careful analysis and informed discussion before services begin.
-		D. Incorrect. Records must be maintained appropriately; a new chart does not erase the prior relationship.
-		
-		CTA Exam Strategy: Before changing from conjoint to individual work, identify the client, role, information rules, conflicts, and alternatives.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A family member is returning home after psychiatric hospitalization. The family wants to resume the same outpatient plan immediately, but discharge instructions identify new medication monitoring, crisis-warning signs, and follow-up appointments. What is the BEST LMFT response?',
@@ -355,7 +221,6 @@ CTA Exam StrategyBefore changing from conjoint to individual work, identify the 
 		'option_d'       => 'Delay all contact until the client has been home for one month.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Transition from higher-level care requires reassessment, coordination, family-system planning, and enhanced monitoring.
-<<<<<<< HEAD
 B. Incorrect. Continuity does not mean ignoring significant new clinical information.
 C. Incorrect. The LMFT does not prescribe, but medication effects, adherence barriers, and discharge recommendations can affect safety and treatment planning.
 D. Incorrect. Delayed contact can weaken continuity during a high-risk transition.
@@ -380,12 +245,5 @@ CTA LMFT Workbook 7: Planning, Progress, and Termination, Version 1.0 (July 2026
 California Board of Behavioral Sciences. Licensed Marriage and Family Therapist Written Clinical Examination Outline (source cited in the workbook).
 Pearson VUE. California Board of Behavioral Sciences Examination Candidate Handbook (source cited in the workbook).
 Exam specifications, laws, regulations, and professional standards may change. Consult current official sources before testing or relying on a legal rule in practice.',
-=======
-		B. Incorrect. Continuity does not mean ignoring significant new clinical information.
-		C. Incorrect. The LMFT does not prescribe, but medication effects, adherence barriers, and discharge recommendations can affect safety and treatment planning.
-		D. Incorrect. Delayed contact can weaken continuity during a high-risk transition.
-		
-		CTA Exam Strategy: After a level-of-care transition, reassess and coordinate before assuming the prior outpatient plan still fits.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

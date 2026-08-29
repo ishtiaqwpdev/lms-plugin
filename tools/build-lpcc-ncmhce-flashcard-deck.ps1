@@ -9,7 +9,6 @@ $OutDir = Join-Path $Root 'assets\course-materials\lpcc-ncmhce\study-tools'
 $OutFile = Join-Path $OutDir 'flashcard-study-center.json'
 
 # Official current NCMHCE content areas (Areas of Clinical Focus is embedded, not a 6th tab).
-<<<<<<< HEAD
 # Approved Study Center allocation = NBCC content-area weights × 180:
 # PPE 15% / IAD 25% / TP 15% / CSI 30% / CCA 15% => 27 / 45 / 27 / 54 / 27
 $DomainDefs = @(
@@ -18,14 +17,6 @@ $DomainDefs = @(
 	@{ code = 'TP';  key = 'treatment-planning'; label = 'Treatment Planning'; order = 3; target = 27 },
 	@{ code = 'CSI'; key = 'counseling-skills-and-interventions'; label = 'Counseling Skills and Interventions'; order = 4; target = 54 },
 	@{ code = 'CCA'; key = 'core-counseling-attributes'; label = 'Core Counseling Attributes'; order = 5; target = 27 }
-=======
-$DomainDefs = @(
-	@{ code = 'PPE'; key = 'professional-practice-and-ethics'; label = 'Professional Practice and Ethics'; order = 1 },
-	@{ code = 'IAD'; key = 'intake-assessment-and-diagnosis'; label = 'Intake, Assessment, and Diagnosis'; order = 2 },
-	@{ code = 'TP';  key = 'treatment-planning'; label = 'Treatment Planning'; order = 3 },
-	@{ code = 'CSI'; key = 'counseling-skills-and-interventions'; label = 'Counseling Skills and Interventions'; order = 4 },
-	@{ code = 'CCA'; key = 'core-counseling-attributes'; label = 'Core Counseling Attributes'; order = 5 }
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 )
 
 function Get-PhpStringValue([string]$Block, [string]$Key) {
@@ -188,32 +179,11 @@ Write-Host ("Stems A={0} B={1} Keys A={2} B={3}" -f $stemsA.Count, $stemsB.Count
 $poolA = Build-Pool $stemsA $keysA 'Form A'
 $poolB = Build-Pool $stemsB $keysB 'Form B'
 
-<<<<<<< HEAD
 function Get-UniqueDomainPool($poolA, $poolB, [string]$Key) {
 	$combined = New-Object System.Collections.Generic.List[object]
 	foreach ($c in $poolA[$Key]) { $combined.Add($c) }
 	foreach ($c in $poolB[$Key]) { $combined.Add($c) }
 
-=======
-# Approved allocation (NBCC NCMHCE weights on 180 cards): 15/25/15/30/15.
-$TargetCounts = @{
-	'professional-practice-and-ethics'     = 27
-	'intake-assessment-and-diagnosis'      = 45
-	'treatment-planning'                   = 27
-	'counseling-skills-and-interventions'  = 54
-	'core-counseling-attributes'           = 27
-}
-$cards = New-Object System.Collections.Generic.List[object]
-$domainRows = @()
-
-foreach ($def in $DomainDefs) {
-	$need = [int]$TargetCounts[$def.key]
-	$combined = New-Object System.Collections.Generic.List[object]
-	foreach ($c in $poolA[$def.key]) { $combined.Add($c) }
-	foreach ($c in $poolB[$def.key]) { $combined.Add($c) }
-
-	# Prefer scored, then Form A order, then Form B; dedupe by compressed front.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	$ordered = $combined | Sort-Object @{ Expression = 'priority'; Ascending = $true }, @{ Expression = 'memory_cue'; Ascending = $true }, @{ Expression = 'source_code'; Ascending = $true }
 	$seen = @{}
 	$unique = New-Object System.Collections.Generic.List[object]
@@ -223,7 +193,6 @@ foreach ($def in $DomainDefs) {
 		$seen[$dk] = $true
 		$unique.Add($c)
 	}
-<<<<<<< HEAD
 	return $unique
 }
 
@@ -308,18 +277,6 @@ foreach ($def in $DomainDefs) {
 	foreach ($c in $domainCards) {
 		$i++
 		$final.Add([PSCustomObject]@{
-=======
-
-	if ($unique.Count -lt $need) {
-		throw ("Domain {0} has only {1} unique cards; need {2}" -f $def.key, $unique.Count, $need)
-	}
-
-	$picked = $unique | Select-Object -First $need
-	$i = 0
-	foreach ($c in $picked) {
-		$i++
-		$cards.Add([PSCustomObject]@{
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			id           = ('NCMHCE-{0}-{1:D3}' -f $def.order, $i)
 			domain       = [string]$def.key
 			domain_label = [string]$def.label
@@ -330,43 +287,22 @@ foreach ($def in $DomainDefs) {
 		})
 	}
 	$domainRows += [PSCustomObject]@{
-<<<<<<< HEAD
 		key            = [string]$def.key
 		label          = [string]$def.label
 		order          = [int]$def.order
 		expected_count = [int]$def.target
 	}
 	Write-Host ("{0}: picked {1}" -f $def.label, $def.target)
-=======
-		key   = [string]$def.key
-		label = [string]$def.label
-		order = [int]$def.order
-	}
-	Write-Host ("{0}: picked {1} (unique pool {2})" -f $def.label, $need, $unique.Count)
-}
-
-if ($cards.Count -ne 180) {
-	throw ("Expected 180 cards, got {0}" -f $cards.Count)
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 $deck = [PSCustomObject]@{
 	program         = 'lpcc-ncmhce'
-<<<<<<< HEAD
 	title           = 'LPCC NCMHCE - Flashcard Study Center'
 	version         = '1.1'
 	expected_total  = 180
 	source          = 'Five-domain NCMHCE Study Center deck; approved allocation PPE 27 / IAD 45 / TP 27 / CSI 54 / CCA 27 (NBCC content-area weights x 180; Forms A/B untouched)'
 	domains         = @($domainRows)
 	cards           = @($final.ToArray())
-=======
-	title           = 'LPCC NCMHCE — Flashcard Study Center'
-	version         = '1.0'
-	expected_total  = 180
-	source          = 'Five-domain current NCMHCE blueprint rebuild from Form A/B v2 keyed items; approved allocation 27/45/27/54/27 (Study Center only; exam banks unchanged)'
-	domains         = @($domainRows)
-	cards           = @($cards.ToArray())
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if (-not (Test-Path $OutDir)) {

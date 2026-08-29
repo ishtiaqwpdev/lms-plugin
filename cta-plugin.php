@@ -3,11 +3,7 @@
  * Plugin Name: CTA Academy LMS
  * Plugin URI: https://clinicaltrainingacademy.com
  * Description: Complete LMS platform for Clinical Training and Supervision Academy.
-<<<<<<< HEAD
  * Version: 1.0.313
-=======
- * Version: 1.0.299
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  * Author: David James
  * Author URI: https://clinicaltrainingacademy.com
  * License: GPL-2.0+
@@ -48,11 +44,7 @@ if ( defined( 'CTA_LMS_LOADED' ) ) {
 
 define( 'CTA_LMS_LOADED', true );
 define( 'CTA_PLUGIN_FILE', __FILE__ );
-<<<<<<< HEAD
 define( 'CTA_VERSION', '1.0.313' );
-=======
-define( 'CTA_VERSION', '1.0.299' );
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 define( 'CTA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CTA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'CTA_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );

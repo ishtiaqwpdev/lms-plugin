@@ -131,11 +131,7 @@ function Convert-WorkbookDocxToHtml([string]$DocxPath, [string]$ProgramKey, [int
 		$isBold = [bool]$row.IsBold
 
 		# Promote common chapter-title patterns when Word left them unstyled.
-<<<<<<< HEAD
 		if (-not $isH1 -and -not $isH2 -and $text -match '^(How to Use This Workbook|Workbook Learning Objectives|Learning Objectives|Why This Topic Matters|Workbook Roadmap|Chapter Summary|Chapter\s+\d+\s+Summary|Knowledge Check|Workbook\s+\d+\s+Knowledge Check|Common Exam Traps|Workbook Close|Study Planning(?:\s+and\s+Next Step)?|Current AMFTRB Alignment|Workbook\s+\d+\s+Emphasis)\b') {
-=======
-		if (-not $isH1 -and -not $isH2 -and $text -match '^(How to Use This Workbook|Workbook Learning Objectives|Learning Objectives|Why This Topic Matters|Workbook Roadmap|Chapter Map|Chapter Summary|Chapter\s+\d+\s+Summary|Knowledge Check|Workbook\s+\d+\s+Knowledge Check|Common Exam Traps|Workbook Close|Study Planning(?:\s+and\s+Next Step)?|Current AMFTRB Alignment|Workbook\s+\d+\s+Emphasis)\b') {
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			$isH1 = $true
 		}
 		if (-not $isH1 -and -not $isH2 -and $text -match '^(Answer Key|Answer Key and Detailed Rationales)\b') {
@@ -360,23 +356,6 @@ $programs = @(
 		FlashTitle = 'LMFT AMFTRB National — Flashcard Study Center'
 		DomainMap = @{}
 	}
-<<<<<<< HEAD
-=======
-	@{
-		Key = 'lmft-law-ethics'
-		WorkbookGlob = 'CTA_LMFT_Law_and_Ethics_EP_WB{0}_*_Candidate_Edition_*.docx'
-		FlashcardRel = ''
-		FlashTitle = 'LMFT California Law & Ethics — Flashcard Study Center'
-		DomainMap = @{}
-	}
-	@{
-		Key = 'lpcc-law-ethics'
-		WorkbookGlob = 'CTA_LPCC_Law_and_Ethics_EP_WB{0:D2}_*_Candidate_Edition_*.docx'
-		FlashcardRel = ''
-		FlashTitle = 'LPCC California Law & Ethics — Flashcard Study Center'
-		DomainMap = @{}
-	}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 )
 
 if ($ProgramKeys -and $ProgramKeys.Count -gt 0) {
@@ -409,11 +388,7 @@ foreach ($prog in $programs) {
 	}
 
 	$fcCount = 0
-<<<<<<< HEAD
 	if (-not $SkipFlashcards) {
-=======
-	if (-not $SkipFlashcards -and -not [string]::IsNullOrWhiteSpace([string]$prog.FlashcardRel)) {
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		$fcPath = Join-Path $progDir $prog.FlashcardRel
 		if (Test-Path $fcPath) {
 			$deck = Convert-FlashcardDocxToJson $fcPath $prog.FlashTitle $prog.DomainMap

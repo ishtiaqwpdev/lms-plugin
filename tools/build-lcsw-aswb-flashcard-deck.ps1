@@ -7,18 +7,11 @@ $Seeds = Join-Path $Root 'includes\quiz-seeds'
 $OutDir = Join-Path $Root 'assets\course-materials\lcsw-aswb\study-tools'
 $OutFile = Join-Path $OutDir 'flashcard-study-center.json'
 
-<<<<<<< HEAD
 # Approved Study Center allocation (180 total): 65 / 58 / 57
 $DomainDefs = @(
 	@{ key = 'values-and-ethics'; label = 'Values and Ethics'; order = 1; target = 65 },
 	@{ key = 'assessment-and-planning'; label = 'Assessment and Planning'; order = 2; target = 58 },
 	@{ key = 'intervention-and-practice'; label = 'Intervention and Practice'; order = 3; target = 57 }
-=======
-$DomainDefs = @(
-	@{ key = 'values-and-ethics'; label = 'Values and Ethics'; order = 1 },
-	@{ key = 'assessment-and-planning'; label = 'Assessment and Planning'; order = 2 },
-	@{ key = 'intervention-and-practice'; label = 'Intervention and Practice'; order = 3 }
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 )
 
 function Get-PhpStringValue([string]$Block, [string]$Key) {
@@ -124,45 +117,17 @@ foreach ($pack in @(@{ items = $formA; tag = 'A' }, @{ items = $formB; tag = 'B'
 	}
 }
 
-<<<<<<< HEAD
 # Group classified cards by domain, then fill exact approved targets (65/58/57).
-=======
-# Approved allocation: Values and Ethics 65 / Assessment and Planning 58 / Intervention and Practice 57.
-$TargetCounts = @{
-	'values-and-ethics'         = 65
-	'assessment-and-planning'   = 58
-	'intervention-and-practice' = 57
-}
-
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 $byDomain = @{}
 foreach ($d in $DomainDefs) { $byDomain[$d.key] = New-Object System.Collections.Generic.List[hashtable] }
 foreach ($c in $built) { $byDomain[$c.domain].Add($c) }
 
-<<<<<<< HEAD
 $counts = @{}
 foreach ($d in $DomainDefs) { $counts[$d.key] = 0 }
-=======
-function Score-DomainText([string]$Text, [string]$Kind) {
-	$t = $Text.ToLowerInvariant()
-	$n = 0
-	$words = @()
-	if ($Kind -eq 'ethics') {
-		$words = @('ethic','confidential','consent','mandate','boundary','dual relationship','privilege','justice','self-determination','values','nasw','duty to warn','informed consent','discrimination','oppression','cultural humility','advocacy')
-	} elseif ($Kind -eq 'assess') {
-		$words = @('assess','diagnos','biopsychosocial','intake','screen','risk','suicid','formul','goal','treatment plan','triage','person-in-environment','developmental','strengths','collateral')
-	} else {
-		$words = @('interven','therap','cbt','modality','session','group','family system','crisis response','termination','referral','case manag','supervis','discharge','engage the client','motivational')
-	}
-	foreach ($w in $words) { if ($t.Contains($w)) { $n++ } }
-	return $n
-}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 
 $final = New-Object System.Collections.Generic.List[hashtable]
 $used = @{}
 
-<<<<<<< HEAD
 # Pass 1: take up to target from each domain's natural pool.
 foreach ($d in $DomainDefs) {
 	$pool = $byDomain[$d.key]
@@ -217,51 +182,12 @@ while ($final.Count -lt 180 -and $li -lt $leftover.Count) {
 		domain_order = [int]$short.order
 	})
 	$counts[$short.key]++
-=======
-foreach ($d in $DomainDefs) {
-	$need = [int]$TargetCounts[$d.key]
-	$pool = $byDomain[$d.key]
-	$take = [Math]::Min($need, $pool.Count)
-	for ($i = 0; $i -lt $take; $i++) {
-		$final.Add($pool[$i])
-		$used[$pool[$i].id] = $true
-	}
-}
-
-function Add-Reassigned([string]$TargetKey, [int]$NeedMore) {
-	if ($NeedMore -le 0) { return }
-	$def = $DomainDefs | Where-Object { $_.key -eq $TargetKey } | Select-Object -First 1
-	$kind = if ($TargetKey -eq 'values-and-ethics') { 'ethics' } elseif ($TargetKey -eq 'intervention-and-practice') { 'interv' } else { 'assess' }
-	$candidates = @($built | Where-Object { -not $used.ContainsKey($_.id) } | Sort-Object {
-		- (Score-DomainText ($_.front + ' ' + $_.back) $kind)
-	})
-	$added = 0
-	foreach ($c in $candidates) {
-		if ($added -ge $NeedMore) { break }
-		$final.Add(@{
-			id            = $c.id
-			front         = $c.front
-			back          = $c.back
-			domain        = $def.key
-			domain_label  = $def.label
-			domain_order  = [int]$def.order
-		})
-		$used[$c.id] = $true
-		$added++
-	}
-}
-
-foreach ($d in $DomainDefs) {
-	$have = @($final | Where-Object { $_.domain -eq $d.key }).Count
-	Add-Reassigned $d.key ([int]$TargetCounts[$d.key] - $have)
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ($final.Count -ne 180) {
 	throw ("Expected 180 cards, got {0}" -f $final.Count)
 }
 foreach ($d in $DomainDefs) {
-<<<<<<< HEAD
 	$got = [int]$counts[$d.key]
 	if ($got -ne [int]$d.target) {
 		throw ("Domain {0}: expected {1}, got {2}" -f $d.label, $d.target, $got)
@@ -289,19 +215,10 @@ foreach ($d in $DomainDefs) {
 }
 $final = $sorted
 
-=======
-	$c = @($final | Where-Object { $_.domain -eq $d.key }).Count
-	if ($c -ne [int]$TargetCounts[$d.key]) {
-		throw ("Domain {0} expected {1}, got {2}" -f $d.key, $TargetCounts[$d.key], $c)
-	}
-}
-
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 if (-not (Test-Path $OutDir)) { New-Item -ItemType Directory -Path $OutDir | Out-Null }
 
 $domainArr = @()
 foreach ($d in $DomainDefs) {
-<<<<<<< HEAD
 	$domainArr += @{
 		key            = $d.key
 		label          = $d.label
@@ -318,18 +235,6 @@ $payload = @{
 	source         = 'Form A/B stems classified to 2026 ASWB Clinical content areas; approved allocation Values and Ethics 65 / Assessment and Planning 58 / Intervention and Practice 57 (Practice Exams untouched)'
 	domains        = $domainArr
 	cards          = @($final)
-=======
-	$domainArr += @{ key = $d.key; label = $d.label; order = $d.order }
-}
-
-$payload = @{
-	title = 'LCSW ASWB Clinical — Flashcard Study Center'
-	expected_total = 180
-	program = 'lcsw-aswb'
-	source = 'Form A/B stems classified to 2026 ASWB Clinical content areas; approved allocation 65/58/57 (Practice Exams untouched)'
-	domains = $domainArr
-	cards = @($final)
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 $json = $payload | ConvertTo-Json -Depth 8

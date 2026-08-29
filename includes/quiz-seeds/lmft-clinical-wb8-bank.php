@@ -1,13 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Clinical - Workbook 8 - 17-question practice bank.
  * Built from approved CTA_LMFT_WB8_17_Question_Bank_v1.0.docx.
-=======
- * CTA LMFT California Clinical â€” Workbook 8 â€” 17-question practice bank.
- * Source: CTA_LMFT_WB8_17_Question_Bank_v1.0.docx (Family, Couple, Attachment, and Relational Interventions).
- * Learner-facing fields omit Question ID / difficulty / type / concept metadata.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -19,18 +13,10 @@ return array(
 		'option_d'       => 'The preference of the person who made the referral, regardless of other participants.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Several people may attend without conjoint treatment being the safest or most effective unit.
-<<<<<<< HEAD
 B. Correct. The unit should follow the target, maintaining system, safety, voluntariness, and treatment frame.
 C. Incorrect. Therapist familiarity does not replace case formulation and client-system fit.
 D. Incorrect. A referral source does not determine the treatment unit or override participant rights and clinical judgment.
 CTA Exam StrategyChoose the treatment system from the target and maintaining pattern, not simply from who is present.',
-=======
-		B. Correct. The unit should follow the target, maintaining system, safety, voluntariness, and treatment frame.
-		C. Incorrect. Therapist familiarity does not replace case formulation and client-system fit.
-		D. Incorrect. A referral source does not determine the treatment unit or override participant rights and clinical judgment.
-		
-		CTA Exam Strategy: Choose the treatment system from the target and maintaining pattern, not simply from who is present.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A young child runs to a caregiver after a separation, then pushes the caregiver away and begins crying. What is the BEST caregiver-focused intervention?',
@@ -40,18 +26,10 @@ CTA Exam StrategyChoose the treatment system from the target and maintaining pat
 		'option_d'       => 'Ignore the reunion pattern and focus only on school performance.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Regulated, predictable responsiveness supports safety, attunement, and repair when attachment behavior is mixed.
-<<<<<<< HEAD
 B. Incorrect. Reciprocal withdrawal can intensify insecurity and disconnection.
 C. Incorrect. The demand is not developmentally matched and makes comfort contingent on explanation.
 D. Incorrect. School functioning may matter, but the described caregiver-child interaction is the immediate treatment target.
 CTA Exam StrategyFor attachment items, favor regulated caregiver availability and repair over withdrawal, coercion, or adult-level demands.',
-=======
-		B. Incorrect. Reciprocal withdrawal can intensify insecurity and disconnection.
-		C. Incorrect. The demand is not developmentally matched and makes comfort contingent on explanation.
-		D. Incorrect. School functioning may matter, but the described caregiver-child interaction is the immediate treatment target.
-		
-		CTA Exam Strategy: For attachment items, favor regulated caregiver availability and repair over withdrawal, coercion, or adult-level demands.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Before placing a client in a therapy group, which information is MOST important to assess?',
@@ -61,18 +39,10 @@ CTA Exam StrategyFor attachment items, favor regulated caregiver availability an
 		'option_d'       => 'Whether current members unanimously approve the client.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Cost may affect access, but it does not establish clinical suitability.
-<<<<<<< HEAD
 B. Incorrect. Diagnosis alone does not determine group fit.
 C. Correct. Screening should address purpose, readiness, risk, expectations, participation, access, composition, and stage.
 D. Incorrect. The facilitator is responsible for screening and protecting group integrity.
 CTA Exam StrategyGroup selection is a fit decision involving purpose, readiness, risk, participation, access, and stage.',
-=======
-		B. Incorrect. Diagnosis alone does not determine group fit.
-		C. Correct. Screening should address purpose, readiness, risk, expectations, participation, access, composition, and stage.
-		D. Incorrect. The facilitator is responsible for screening and protecting group integrity.
-		
-		CTA Exam Strategy: Group selection is a fit decision involving purpose, readiness, risk, participation, access, and stage.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A family reports increased irritability and role confusion after a parent returns from a long military deployment. What should the LMFT do FIRST?',
@@ -82,18 +52,10 @@ CTA Exam StrategyGroup selection is a fit decision involving purpose, readiness,
 		'option_d'       => 'Assess losses, expectations, changed roles, boundaries, loyalties, and the pace of reintegration before prescribing solutions.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Immediate authority changes may ignore the family’s adaptation during the separation.
-<<<<<<< HEAD
 B. Incorrect. Conflict can occur during normative transition and does not establish failure.
 C. Incorrect. Forced emotional expression can invalidate mixed reactions and increase resistance.
 D. Correct. Transition-focused assessment clarifies grief, expectations, role shifts, boundaries, and realistic pacing.
 CTA Exam StrategyDuring major transitions, assess role changes, losses, loyalties, expectations, and developmental timing before forcing closeness or authority.',
-=======
-		B. Incorrect. Conflict can occur during normative transition and does not establish failure.
-		C. Incorrect. Forced emotional expression can invalidate mixed reactions and increase resistance.
-		D. Correct. Transition-focused assessment clarifies grief, expectations, role shifts, boundaries, and realistic pacing.
-		
-		CTA Exam Strategy: During major transitions, assess role changes, losses, loyalties, expectations, and developmental timing before forcing closeness or authority.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'One partner repeatedly demands immediate discussion while the other becomes silent and leaves the room. Which intervention BEST targets the maintaining cycle?',
@@ -103,18 +65,10 @@ CTA Exam StrategyDuring major transitions, assess role changes, losses, loyaltie
 		'option_d'       => 'Ask both partners to discuss unrelated childhood memories before addressing the current interaction.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The intervention maps and reorganizes the reciprocal cycle rather than blaming one partner.
-<<<<<<< HEAD
 B. Incorrect. Systemic treatment focuses on the pattern and each person’s contribution, not a single culprit.
 C. Incorrect. A rigid prohibition ignores regulation needs and does not teach a safer alternative.
 D. Incorrect. History may inform meaning, but the immediate intervention should address the identified interactional sequence.
 CTA Exam StrategyName the cue, meaning, response, and feedback loop, then create a safer alternative sequence.',
-=======
-		B. Incorrect. Systemic treatment focuses on the pattern and each person’s contribution, not a single culprit.
-		C. Incorrect. A rigid prohibition ignores regulation needs and does not teach a safer alternative.
-		D. Incorrect. History may inform meaning, but the immediate intervention should address the identified interactional sequence.
-		
-		CTA Exam Strategy: Name the cue, meaning, response, and feedback loop, then create a safer alternative sequence. Moderate Questions 7 questions | Applied planning, monitoring, and termination decisions.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple reports a recent decline in sexual intimacy and asks the therapist to identify which partner is “the problem.” What should the LMFT do NEXT?',
@@ -124,18 +78,10 @@ CTA Exam StrategyName the cue, meaning, response, and feedback loop, then create
 		'option_d'       => 'Assess consent, safety, health factors, values, expectations, communication, relational meaning, and the interactional pattern before selecting an intervention.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Desire differences do not automatically identify one partner as the problem.
-<<<<<<< HEAD
 B. Incorrect. A prescribed frequency is premature and may ignore consent, health, values, and meaning.
 C. Incorrect. Sexuality can be clinically relevant when addressed competently and respectfully.
 D. Correct. A sound relational assessment includes consent, safety, health, values, expectations, communication, meaning, and cycle.
 CTA Exam StrategyFor intimacy concerns, assess consent, safety, health, values, expectations, communication, and relational meaning before technique.',
-=======
-		B. Incorrect. A prescribed frequency is premature and may ignore consent, health, values, and meaning.
-		C. Incorrect. Sexuality can be clinically relevant when addressed competently and respectfully.
-		D. Correct. A sound relational assessment includes consent, safety, health, values, expectations, communication, meaning, and cycle.
-		
-		CTA Exam Strategy: For intimacy concerns, assess consent, safety, health, values, expectations, communication, and relational meaning before technique.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An adult daughter caring for a parent with a chronic illness is exhausted, while siblings criticize her decisions but provide little help. Which intervention is MOST appropriate?',
@@ -145,18 +91,10 @@ CTA Exam StrategyFor intimacy concerns, assess consent, safety, health, values, 
 		'option_d'       => 'Recommend immediate residential placement without assessing the parent’s needs or preferences.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Individual coping matters, but the family organization and resource context are maintaining the strain.
-<<<<<<< HEAD
 B. Incorrect. Equal time may be infeasible and should not be imposed without assessment and collaboration.
 C. Correct. The response integrates caregiver stress, family roles, boundaries, communication, and resources.
 D. Incorrect. Placement is a major decision requiring fuller assessment and participation.
 CTA Exam StrategyCaregiving questions usually require both relational reorganization and practical resource assessment.',
-=======
-		B. Incorrect. Equal time may be infeasible and should not be imposed without assessment and collaboration.
-		C. Correct. The response integrates caregiver stress, family roles, boundaries, communication, and resources.
-		D. Incorrect. Placement is a major decision requiring fuller assessment and participation.
-		
-		CTA Exam Strategy: Caregiving questions usually require both relational reorganization and practical resource assessment.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'In a therapy group, one member repeatedly interrupts and answers questions directed to others. What should the facilitator do?',
@@ -166,18 +104,10 @@ CTA Exam StrategyCaregiving questions usually require both relational reorganiza
 		'option_d'       => 'Publicly label the member as controlling.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Ignoring the pattern permits continued interference with participation and cohesion.
-<<<<<<< HEAD
 B. Correct. Respectful redirection protects the whole group without humiliation.
 C. Incorrect. Immediate removal by group vote is disproportionate and abdicates facilitator responsibility.
 D. Incorrect. Shaming and labeling can damage safety and cohesion.
 CTA Exam StrategyProtect participation and cohesion through respectful here-and-now redirection, not shame or avoidance.',
-=======
-		B. Correct. Respectful redirection protects the whole group without humiliation.
-		C. Incorrect. Immediate removal by group vote is disproportionate and abdicates facilitator responsibility.
-		D. Incorrect. Shaming and labeling can damage safety and cohesion.
-		
-		CTA Exam Strategy: Protect participation and cohesion through respectful here-and-now redirection, not shame or avoidance.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'With appropriate authorization, an LMFT and school support team are coordinating accommodations for an adolescent. What information should the therapist share?',
@@ -187,18 +117,10 @@ CTA Exam StrategyProtect participation and cohesion through respectful here-and-
 		'option_d'       => 'No information under any circumstances, even when authorized and clinically useful.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Collaboration should be purpose-limited, role-clear, authorized, and focused on relevant information.
-<<<<<<< HEAD
 B. Incorrect. Team involvement does not automatically justify disclosure of the full record.
 C. Incorrect. Broad disclosure exceeds what is needed for the stated coordination purpose.
 D. Incorrect. Appropriate, authorized collaboration may support treatment and access.
 CTA Exam StrategyIn coordinated care, share the minimum relevant information for the defined purpose and role.',
-=======
-		B. Incorrect. Team involvement does not automatically justify disclosure of the full record.
-		C. Incorrect. Broad disclosure exceeds what is needed for the stated coordination purpose.
-		D. Incorrect. Appropriate, authorized collaboration may support treatment and access.
-		
-		CTA Exam Strategy: In coordinated care, share the minimum relevant information for the defined purpose and role.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An adult client says a spouse will end the marriage unless the client agrees to couple therapy. No threats of physical harm are reported. What should the LMFT do before beginning conjoint work?',
@@ -208,18 +130,10 @@ CTA Exam StrategyIn coordinated care, share the minimum relevant information for
 		'option_d'       => 'Ask the spouse to sign a statement promising not to leave the relationship.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Attendance does not by itself establish voluntariness or a shared goal.
-<<<<<<< HEAD
 B. Incorrect. External pressure requires assessment but does not automatically make conjoint work impossible.
 C. Correct. The therapist should assess voluntariness, pressure, safety, goals, expectations, and treatment fit.
 D. Incorrect. The therapist cannot require a relationship guarantee and such a statement would not establish voluntariness.
 CTA Exam StrategyAssess freedom to participate and shared goals rather than treating attendance as proof of voluntary conjoint consent.',
-=======
-		B. Incorrect. External pressure requires assessment but does not automatically make conjoint work impossible.
-		C. Correct. The therapist should assess voluntariness, pressure, safety, goals, expectations, and treatment fit.
-		D. Incorrect. The therapist cannot require a relationship guarantee and such a statement would not establish voluntariness.
-		
-		CTA Exam Strategy: Assess freedom to participate and shared goals rather than treating attendance as proof of voluntary conjoint consent.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During family therapy, one parent says, “You understand everyone except me,” and becomes less engaged. What should the LMFT do FIRST?',
@@ -229,18 +143,10 @@ CTA Exam StrategyAssess freedom to participate and shared goals rather than trea
 		'option_d'       => 'Invite the parent’s experience, assess alliance with each participant, examine therapist joining and pacing, and repair the frame before adding technique.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Defending neutrality does not address the participant’s experience or the rupture.
-<<<<<<< HEAD
 B. Incorrect. Recruiting others may intensify exclusion and confirm the concern.
 C. Incorrect. Proceeding without repair can deepen disengagement and reduce treatment effectiveness.
 D. Correct. Alliance imbalance is treatment data and should be explored and repaired before further intervention.
 CTA Exam StrategyWhen a participant feels excluded or joined against, assess and repair the alliance before continuing the technique.',
-=======
-		B. Incorrect. Recruiting others may intensify exclusion and confirm the concern.
-		C. Incorrect. Proceeding without repair can deepen disengagement and reduce treatment effectiveness.
-		D. Correct. Alliance imbalance is treatment data and should be explored and repaired before further intervention.
-		
-		CTA Exam Strategy: When a participant feels excluded or joined against, assess and repair the alliance before continuing the technique.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'What is the purpose of the final “Review response” step in the SAFER SYSTEM sequence?',
@@ -250,18 +156,10 @@ CTA Exam StrategyWhen a participant feels excluded or joined against, assess and
 		'option_d'       => 'To postpone evaluation until termination.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The sequence is not designed to assign blame.
-<<<<<<< HEAD
 B. Correct. Response review evaluates safety, alliance, functioning, target change, and the need for revision.
 C. Incorrect. Theoretical consistency matters only insofar as the intervention fits and helps the client system.
 D. Incorrect. Ongoing review supports timely adjustment rather than waiting until termination.
 CTA Exam StrategyThe response check asks whether the target pattern and overall safety and functioning are improving now.',
-=======
-		B. Correct. Response review evaluates safety, alliance, functioning, target change, and the need for revision.
-		C. Incorrect. Theoretical consistency matters only insofar as the intervention fits and helps the client system.
-		D. Incorrect. Ongoing review supports timely adjustment rather than waiting until termination.
-		
-		CTA Exam Strategy: The response check asks whether the target pattern and overall safety and functioning are improving now. Difficult Questions 5 questions | Integrated clinical reasoning across competing priorities.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An adolescent’s panic symptoms improve individually but recur after intense parental arguments. The parents are willing to participate, and no conjoint safety concerns are identified. What is the BEST next step?',
@@ -271,18 +169,10 @@ CTA Exam StrategyThe response check asks whether the target pattern and overall 
 		'option_d'       => 'Continue the same individual plan without discussing the recurring family context.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The treatment unit can be revised when new data identify a safe, relevant maintaining system.
-<<<<<<< HEAD
 B. Incorrect. Family involvement does not require abrupt termination of useful individual work.
 C. Incorrect. Systemic formulation should not be communicated as total blame.
 D. Incorrect. Ignoring the recurring relational trigger may preserve an incomplete plan.
 CTA Exam StrategyWhen new data reveal a safe relational maintaining system, revise the treatment unit and plan collaboratively.',
-=======
-		B. Incorrect. Family involvement does not require abrupt termination of useful individual work.
-		C. Incorrect. Systemic formulation should not be communicated as total blame.
-		D. Incorrect. Ignoring the recurring relational trigger may preserve an incomplete plan.
-		
-		CTA Exam Strategy: When new data reveal a safe relational maintaining system, revise the treatment unit and plan collaboratively.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A newly remarried family reports escalating conflict because the stepparent began enforcing strict rules immediately. The biological parent avoids conflict, and the children refuse family activities. What should the LMFT do?',
@@ -292,18 +182,10 @@ CTA Exam StrategyWhen new data reveal a safe relational maintaining system, revi
 		'option_d'       => 'Assess losses, loyalty conflicts, role expectations, parental alignment, boundaries, and developmental pacing, then build authority and connection gradually.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Forced compliance may intensify loyalty conflict and resistance.
-<<<<<<< HEAD
 B. Incorrect. Permanent exclusion is overly broad and does not support gradual role development.
 C. Incorrect. The children’s behavior is embedded in a transition and family-organization pattern.
 D. Correct. The intervention addresses transition, loyalty, hierarchy, boundaries, alignment, and realistic pacing.
 CTA Exam StrategyIn stepfamily items, assess grief, loyalties, roles, boundaries, and pacing before imposing closeness or authority.',
-=======
-		B. Incorrect. Permanent exclusion is overly broad and does not support gradual role development.
-		C. Incorrect. The children’s behavior is embedded in a transition and family-organization pattern.
-		D. Correct. The intervention addresses transition, loyalty, hierarchy, boundaries, alignment, and realistic pacing.
-		
-		CTA Exam Strategy: In stepfamily items, assess grief, loyalties, roles, boundaries, and pacing before imposing closeness or authority.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple caring for an aging parent argues about responsibilities. The parent has begun falling, missing medication, and refusing appointments. The LMFT is not trained to evaluate the medical condition. What is the BEST response?',
@@ -313,18 +195,10 @@ CTA Exam StrategyIn stepfamily items, assess grief, loyalties, roles, boundaries
 		'option_d'       => 'Ask one partner to take full responsibility so conflict stops.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The therapist should not provide medical treatment, but medical risk and functioning affect family safety and planning.
-<<<<<<< HEAD
 B. Incorrect. Immediate placement is premature without assessment of needs, preferences, and alternatives.
 C. Correct. The response integrates safety, competence, medical coordination, authorization, resources, and relational treatment.
 D. Incorrect. Unilateral assignment may increase burden and does not address capacity, resources, or shared decision-making.
 CTA Exam StrategyWhen specialty or medical risk appears, coordinate competent evaluation while preserving appropriate relational support and continuity.',
-=======
-		B. Incorrect. Immediate placement is premature without assessment of needs, preferences, and alternatives.
-		C. Correct. The response integrates safety, competence, medical coordination, authorization, resources, and relational treatment.
-		D. Incorrect. Unilateral assignment may increase burden and does not address capacity, resources, or shared decision-making.
-		
-		CTA Exam Strategy: When specialty or medical risk appears, coordinate competent evaluation while preserving appropriate relational support and continuity.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a support group, a member says they may not be safe after leaving and then asks the facilitator not to interrupt the group. What should the facilitator do?',
@@ -334,18 +208,10 @@ CTA Exam StrategyWhen specialty or medical risk appears, coordinate competent ev
 		'option_d'       => 'Require the member to describe the full crisis in front of everyone.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A possible immediate safety concern takes priority over preserving the planned agenda.
-<<<<<<< HEAD
 B. Correct. The facilitator should protect safety, use appropriate procedures, preserve privacy, and manage the group frame.
 C. Incorrect. Risk assessment is a professional responsibility, not a group vote.
 D. Incorrect. Forced public disclosure can be unsafe and unnecessary.
 CTA Exam StrategyIn group crises, prioritize safety while preserving privacy, role clarity, and the integrity of the group process.',
-=======
-		B. Correct. The facilitator should protect safety, use appropriate procedures, preserve privacy, and manage the group frame.
-		C. Incorrect. Risk assessment is a professional responsibility, not a group vote.
-		D. Incorrect. Forced public disclosure can be unsafe and unnecessary.
-		
-		CTA Exam Strategy: In group crises, prioritize safety while preserving privacy, role clarity, and the integrity of the group process.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A couple begins therapy for recurring arguments. Over several sessions conflict escalates, one partner privately reports fear of retaliation, and the other says the therapist is taking sides. What should the LMFT do FIRST?',
@@ -355,7 +221,6 @@ CTA Exam StrategyIn group crises, prioritize safety while preserving privacy, ro
 		'option_d'       => 'Defend the therapist’s neutrality and continue the original plan.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. New safety and alliance information requires immediate reassessment of the treatment frame and suitability of conjoint work.
-<<<<<<< HEAD
 B. Incorrect. More homework is premature when safety and alliance are uncertain.
 C. Incorrect. Forced conjoint disclosure may increase retaliation risk.
 D. Incorrect. Defensiveness ignores clinically significant safety and alliance data.
@@ -381,12 +246,5 @@ California Board of Behavioral Sciences. Licensed Marriage and Family Therapist 
 Pearson VUE. California Board of Behavioral Sciences Examination Candidate Handbook and LMFT examination resources (sources cited in the workbook).
 Family, couple, attachment, group, and interdisciplinary methods are summarized at an examination-preparation level and do not establish competence to deliver a specialized intervention.
 Exam specifications, laws, regulations, and professional standards may change. Consult current official sources before testing or relying on a legal rule in practice.',
-=======
-		B. Incorrect. More homework is premature when safety and alliance are uncertain.
-		C. Incorrect. Forced conjoint disclosure may increase retaliation risk.
-		D. Incorrect. Defensiveness ignores clinically significant safety and alliance data.
-		
-		CTA Exam Strategy: When new fear, retaliation risk, or alliance rupture appears, reassess safety and the treatment unit before continuing conjoint technique.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

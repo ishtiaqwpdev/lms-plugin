@@ -1,12 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Law & Ethics - Workbook 4 Assessment (85 questions).
  * Built from approved Controlled Answer Key DOCX (online Practice Bank).
-=======
- * CTA LMFT Law & Ethics EP - Workbook 4 Assessment (85 questions).
- * Source: CTA_LMFT_Law_and_Ethics_EP_WB4_85_Question_Assessment_Candidate_Form_v1.0.docx + CTA_LMFT_Law_and_Ethics_EP_WB4_85_Question_Assessment_Controlled_Answer_Key_and_Detailed_Rationales_v1.0.docx.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -18,18 +13,10 @@ return array(
 		'option_d'       => 'Any isolated professional mistake, regardless of context',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A diagnosis alone does not establish impairment. The relevant issue is its effect on current professional functioning.
-<<<<<<< HEAD
 B. Correct. Impairment is a functional concept involving interference with safe, ethical, or effective performance.
 C. Incorrect. Stress may occur while professional functioning remains intact.
 D. Incorrect. One mistake may require correction but does not automatically establish a pattern of impairment.
 CTA Exam Strategy: Anchor the item to Definition of Professional Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Correct. Impairment is a functional concept involving interference with safe, ethical, or effective performance.
-		C. Incorrect. Stress may occur while professional functioning remains intact.
-		D. Incorrect. One mistake may require correction but does not automatically establish a pattern of impairment.
-		CTA Exam Strategy: Anchor the item to Definition of Professional Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Definition of Professional Impairment; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has a well-managed depressive disorder and consistently demonstrates sound judgment, reliable attendance, accurate documentation, and effective client care. Which conclusion is most accurate?',
@@ -39,18 +26,10 @@ CTA Exam Strategy: Anchor the item to Definition of Professional Impairment. Eli
 		'option_d'       => 'The diagnosis alone does not establish impairment because professional functioning remains effective',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Professional impairment is not established by diagnosis alone.
-<<<<<<< HEAD
 B. Incorrect. There is no general rule requiring disclosure of a private diagnosis to every client merely because it exists.
 C. Incorrect. Permanent cessation is unsupported when safe functioning is intact.
 D. Correct. The facts show effective professional functioning despite the diagnosis.
 CTA Exam Strategy: Keep the tested distinction clear: Diagnosis vs. Impairment. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. There is no general rule requiring disclosure of a private diagnosis to every client merely because it exists.
-		C. Incorrect. Permanent cessation is unsupported when safe functioning is intact.
-		D. Correct. The facts show effective professional functioning despite the diagnosis.
-		CTA Exam Strategy: Keep the tested distinction clear: Diagnosis vs. Impairment. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Diagnosis vs. Impairment; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a therapist must distinguish a personal condition from professional impairment based on observable functioning. Which finding most strongly supports further evaluation for possible professional impairment?',
@@ -60,18 +39,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Diagnosis vs. Impairment. 
 		'option_d'       => 'Requesting feedback from a supervisor',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. A repeated pattern across several professional duties suggests meaningful functional decline.
-<<<<<<< HEAD
 B. Incorrect. An isolated difficult session with an appropriate response does not by itself establish impairment.
 C. Incorrect. Continuing education generally supports competence.
 D. Incorrect. Seeking feedback is a responsible monitoring practice, not evidence of impairment.
 CTA Exam Strategy: Anchor the item to Pattern and Warning Signs. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Incorrect. An isolated difficult session with an appropriate response does not by itself establish impairment.
-		C. Incorrect. Continuing education generally supports competence.
-		D. Incorrect. Seeking feedback is a responsible monitoring practice, not evidence of impairment.
-		CTA Exam Strategy: Anchor the item to Pattern and Warning Signs. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Pattern and Warning Signs; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor notices changes in a clinician’s performance but does not yet know whether they reflect ordinary stress, impairment, incompetence, or misconduct. Which statement best distinguishes professional impairment from professional misconduct?',
@@ -81,18 +52,10 @@ CTA Exam Strategy: Anchor the item to Pattern and Warning Signs. Eliminate optio
 		'option_d'       => 'The two terms are interchangeable',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Impairment may provide context but does not excuse unsafe or unethical conduct.
-<<<<<<< HEAD
 B. Incorrect. Professional misconduct can be intentional or unintentional, depending on the standard violated.
 C. Correct. The concepts may overlap, but their primary focus differs.
 D. Incorrect. Treating the terms as interchangeable leads to inaccurate legal and ethical analysis.
 CTA Exam Strategy: Keep the tested distinction clear: Impairment vs. Misconduct. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. Professional misconduct can be intentional or unintentional, depending on the standard violated.
-		C. Correct. The concepts may overlap, but their primary focus differs.
-		D. Incorrect. Treating the terms as interchangeable leads to inaccurate legal and ethical analysis.
-		CTA Exam Strategy: Keep the tested distinction clear: Impairment vs. Misconduct. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Impairment vs. Misconduct; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician notices an increase in mistakes and difficulty concentrating. No immediate emergency is described. What should the clinician generally do first?',
@@ -102,18 +65,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Impairment vs. Misconduct.
 		'option_d'       => 'Ask clients to decide whether the clinician is impaired',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Immediate license surrender is an extreme response unsupported by the limited facts.
-<<<<<<< HEAD
 B. Correct. A focused functional and risk assessment should guide the next proportionate step.
 C. Incorrect. Waiting for a complaint may allow preventable risk to increase.
 D. Incorrect. Clients cannot carry the clinician’s responsibility for evaluating professional functioning.
 CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.',
-=======
-		B. Correct. A focused functional and risk assessment should guide the next proportionate step.
-		C. Incorrect. Waiting for a complaint may allow preventable risk to increase.
-		D. Incorrect. Clients cannot carry the clinician’s responsibility for evaluating professional functioning.
-		CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Initial Functional Assessment; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is experiencing significant family stress but continues arriving on time, documenting accurately, maintaining boundaries, and making sound clinical decisions. What is the best analysis?',
@@ -123,18 +78,10 @@ CTA Exam Strategy: For first-step questions, address immediate client risk and o
 		'option_d'       => 'The therapist is not necessarily impaired because the facts do not show functional decline',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Leave may be appropriate if functioning declines, but the current facts do not establish that need.
-<<<<<<< HEAD
 B. Incorrect. Stress may contribute to impairment but does not automatically equal impairment.
 C. Incorrect. No unsafe or unethical conduct is described.
 D. Correct. The central issue is professional functioning, which remains intact in the scenario.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Stress may contribute to impairment but does not automatically equal impairment.
-		C. Incorrect. No unsafe or unethical conduct is described.
-		D. Correct. The central issue is professional functioning, which remains intact in the scenario.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Stress With Intact Functioning; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During one month, a clinician misses two appointments, submits several inaccurate notes, forgets important client information, and overlooks a documented suicide-risk factor. What is the strongest initial conclusion?',
@@ -144,18 +91,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Years of experience make impairment unlikely enough to ignore',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The repeated pattern affects reliability, documentation, memory, and risk assessment and requires prompt evaluation.
-<<<<<<< HEAD
 B. Incorrect. The facts do not establish intent. The conduct still requires attention, but intentional misconduct should not be assumed.
 C. Incorrect. Professional responsibility does not depend on a complaint when risk indicators are already present.
 D. Incorrect. Experience does not prevent current functional decline.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The facts do not establish intent. The conduct still requires attention, but intentional misconduct should not be assumed.
-		C. Incorrect. Professional responsibility does not depend on a complaint when risk indicators are already present.
-		D. Incorrect. Experience does not prevent current functional decline.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Pattern of Functional Decline; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist takes a prescribed medication and experiences no sedation, confusion, memory problems, or decline in professional performance. Which statement is most accurate?',
@@ -165,18 +104,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The therapist must stop the medication without medical consultation',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Legal or prescribed use does not automatically equal impairment.
-<<<<<<< HEAD
 B. Incorrect. There is no general requirement to disclose every prescription to clients.
 C. Correct. The professional question is whether side effects interfere with safe performance.
 D. Incorrect. Abrupt medication decisions may be medically unsafe and are not the ethical conclusion tested.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. There is no general requirement to disclose every prescription to clients.
-		C. Correct. The professional question is whether side effects interfere with safe performance.
-		D. Incorrect. Abrupt medication decisions may be medically unsafe and are not the ethical conclusion tested.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Medication and Functional Impact; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician observes a coworker slurring speech, appearing confused, and preparing to conduct an emergency risk assessment. What is the best initial response?',
@@ -186,18 +117,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Ignore the behavior to protect the coworker’s reputation',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A diagnosis is not required before addressing an immediate safety concern.
-<<<<<<< HEAD
 B. Correct. The observer should prevent unsafe service and use the available professional chain of responsibility.
 C. Incorrect. Sharing suspicions with the client is unnecessary and may violate privacy or professionalism.
 D. Incorrect. Loyalty and reputation do not outweigh client safety.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. The observer should prevent unsafe service and use the available professional chain of responsibility.
-		C. Incorrect. Sharing suspicions with the client is unnecessary and may violate privacy or professionalism.
-		D. Incorrect. Loyalty and reputation do not outweigh client safety.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Immediate Colleague Concern; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist receives repeated, specific feedback about late notes, missed clinical information, and unusual decision-making but dismisses every concern because “I know myself better than anyone.” What is the most significant concern?',
@@ -207,18 +130,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Reduced insight or minimization may be delaying evaluation and corrective action',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Performance feedback does not establish a diagnosis.
-<<<<<<< HEAD
 B. Incorrect. The facts warrant assessment and action, not automatic permanent removal.
 C. Incorrect. Because impairment can reduce insight, specific feedback may be important evidence.
 D. Correct. Persistent dismissal of concrete concerns increases the risk that functional decline will continue unaddressed.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The facts warrant assessment and action, not automatic permanent removal.
-		C. Incorrect. Because impairment can reduce insight, specific feedback may be important evidence.
-		D. Correct. Persistent dismissal of concrete concerns increases the risk that functional decline will continue unaddressed.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Feedback and Insight; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician’s recent errors raise concern about present professional functioning and possible risk to clients. Which statement best describes the relationship between impairment and incompetence?',
@@ -228,18 +143,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'A clinician cannot be impaired if the clinician was previously competent',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The concepts overlap but are not identical.
-<<<<<<< HEAD
 B. Incorrect. Incompetence may result from inadequate training, outdated skill, insufficient experience, or current functional limitations.
 C. Correct. Impairment is one possible source of reduced ability, not the only source.
 D. Incorrect. Competence and functioning can change over time.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. Incompetence may result from inadequate training, outdated skill, insufficient experience, or current functional limitations.
-		C. Correct. Impairment is one possible source of reduced ability, not the only source.
-		D. Incorrect. Competence and functioning can change over time.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Impairment vs. Incompetence; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a therapist must distinguish a personal condition from professional impairment based on observable functioning. Under California law, which fact is most directly relevant to the disciplinary analysis of a clinician’s alcohol or drug use?',
@@ -249,18 +156,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Whether the clinician has disclosed the use on social media',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The BBS practice acts focus on use that is dangerous or injurious or impairs safe professional practice.
-<<<<<<< HEAD
 B. Incorrect. Any lifetime use is not the statutory standard.
 C. Incorrect. Moral disapproval is not a substitute for the legal functional and safety analysis.
 D. Incorrect. Social-media disclosure is not the controlling impairment criterion.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. Any lifetime use is not the statutory standard.
-		C. Incorrect. Moral disapproval is not a substitute for the legal functional and safety analysis.
-		D. Incorrect. Social-media disclosure is not the controlling impairment criterion.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review California Substance-Related Standard; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor notices that a clinician has begun dozing during routine sessions, making repeated scheduling errors, and asking clients to repeat information. No immediate high-risk assessment is scheduled. What should occur first?',
@@ -270,18 +169,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Permanently remove the clinician from practice before evaluating whether the condition is temporary or manageable',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The pattern requires attention, but the facts do not establish intentional misconduct. Assessment should distinguish impairment, competence concerns, and conduct issues.
-<<<<<<< HEAD
 B. Correct. Repeated dozing, errors, and difficulty retaining information suggest a meaningful decline in professional functioning. The first response is a prompt, focused assessment of severity, causes, client impact, and immediate safeguards. Temporary workload changes, coverage, consultation, or medical evaluation may be appropriate depending on the findings.
 C. Incorrect. Professional responsibility does not wait for a complaint when observable functioning may already be affecting clients.
 D. Incorrect. Permanent removal is disproportionate before determining whether the problem is temporary, treatable, or manageable with safeguards.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. Repeated dozing, errors, and difficulty retaining information suggest a meaningful decline in professional functioning. The first response is a prompt, focused assessment of severity, causes, client impact, and immediate safeguards. Temporary workload changes, coverage, consultation, or medical evaluation may be appropriate depending on the findings.
-		C. Incorrect. Professional responsibility does not wait for a complaint when observable functioning may already be affecting clients.
-		D. Incorrect. Permanent removal is disproportionate before determining whether the problem is temporary, treatable, or manageable with safeguards.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Recognizing a Pattern of Fatigue-Related Functional Decline; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor learns that a clinician uses a wheelchair and has modified the office layout. The clinician continues to communicate effectively, assess risk accurately, document reliably, and meet professional responsibilities. The supervisor has no evidence of functional decline but labels the clinician impaired solely because of the disability. What is the best analysis?',
@@ -291,18 +182,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Professional impairment should be evaluated through actual functioning; disability or accommodation alone does not establish unsafe or ineffective practice',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A disability does not automatically establish reduced professional functioning.
-<<<<<<< HEAD
 B. Incorrect. An accommodation may preserve or improve competent performance rather than prove inability.
 C. Incorrect. The scenario does not create a general duty to disclose private medical information to every client.
 D. Correct. Professional impairment is a functional concept. The facts show that the clinician continues to perform essential duties safely and effectively. A disability and an effective accommodation do not, by themselves, establish impairment.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. An accommodation may preserve or improve competent performance rather than prove inability.
-		C. Incorrect. The scenario does not create a general duty to disclose private medical information to every client.
-		D. Correct. Professional impairment is a functional concept. The facts show that the clinician continues to perform essential duties safely and effectively. A disability and an effective accommodation do not, by themselves, establish impairment.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Disability, Bias, and Functional Assessment; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT has direct knowledge that a colleague’s declining functioning is interfering with client care. The colleague is not in an immediate emergency, but has ignored prior supportive feedback. What is the strongest next step?',
@@ -312,18 +195,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Assign a diagnosis before taking any action',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Public disclosure is unnecessary and may create additional harm or confidentiality concerns.
-<<<<<<< HEAD
 B. Incorrect. Private concerns become professionally relevant when they interfere with client care.
 C. Correct. CAMFT Code of Ethics section 8.2 encourages consultation or assistance to an impaired colleague. When impaired functioning continues to affect client care despite prior feedback, proportionate use of appropriate organizational, professional, or regulatory channels may also be warranted.
 D. Incorrect. The observer should focus on functioning and risk rather than diagnose the colleague.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Private concerns become professionally relevant when they interfere with client care.
-		C. Correct. CAMFT Code of Ethics section 8.2 encourages consultation or assistance to an impaired colleague. When impaired functioning continues to affect client care despite prior feedback, proportionate use of appropriate organizational, professional, or regulatory channels may also be warranted.
-		D. Incorrect. The observer should focus on functioning and risk rather than diagnose the colleague.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Colleague Impairment and Appropriate Channels; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is experiencing severe symptoms and medication side effects that are causing memory problems, missed risk cues, and repeated scheduling errors. The therapist keeps a full caseload because reducing work would decrease income. What is the most significant concern?',
@@ -333,18 +208,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The concern is purely private unless clients know the diagnosis',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The functional effects are already compromising professional performance, and financial pressure does not justify unsafe practice.
-<<<<<<< HEAD
 B. Incorrect. A diagnosis or symptom does not automatically require permanent loss of licensure.
 C. Incorrect. Financial need cannot establish clinical safety or competence.
 D. Incorrect. The issue is professionally relevant because client care, risk recognition, and reliability are affected.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. A diagnosis or symptom does not automatically require permanent loss of licensure.
-		C. Incorrect. Financial need cannot establish clinical safety or competence.
-		D. Incorrect. The issue is professionally relevant because client care, risk recognition, and reliability are affected.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Impairment, Income, and Professional Responsibility; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has a chronic medical condition, recently began a medication that causes confusion, has missed two high-risk cues, is falling behind on records, and dismisses a supervisor’s concerns. The therapist plans to continue the same caseload without modification. Which response best reflects professional responsibilities?',
@@ -354,18 +221,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Identify the functional decline, assess immediate client risk, use appropriate supervision and health support, modify or stop affected duties as needed, arrange continuity of care, and reevaluate before resuming full responsibilities',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Privacy and good intentions do not justify continuing when current functioning is unsafe.
-<<<<<<< HEAD
 B. Incorrect. Broad disclosure and permanent career termination are disproportionate and not required by the facts.
 C. Incorrect. Waiting for a complaint ignores established risk and repeated warning signs.
 D. Correct. This integrates recognition, risk assessment, proportionate action, professional assistance, continuity, and return-to-practice evaluation.
 CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.',
-=======
-		B. Incorrect. Broad disclosure and permanent career termination are disproportionate and not required by the facts.
-		C. Incorrect. Waiting for a complaint ignores established risk and repeated warning signs.
-		D. Correct. This integrates recognition, risk assessment, proportionate action, professional assistance, continuity, and return-to-practice evaluation.
-		CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.
-		Remediation: Return to Workbook 4, Chapter 1: Recognizing Professional Impairment; review Comprehensive Impairment Analysis; log error category IMPAIRMENT-RECOGNITION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A colleague’s possible substance-related problem is being evaluated based on current functioning, client risk, and a developing pattern rather than stigma or diagnosis. Which statement best describes substance-related professional impairment?',
@@ -375,18 +234,10 @@ CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, 
 		'option_d'       => 'Any lawful off-duty use that a client might disapprove of',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Substance use alone does not establish impairment; professional functioning must be evaluated.
-<<<<<<< HEAD
 B. Correct. Professional impairment is a functional concept tied to safe, ethical, and effective performance.
 C. Incorrect. A treatment history does not establish current inability to practice safely.
 D. Incorrect. Client disapproval is not the legal or ethical test for impairment.
 CTA Exam Strategy: Anchor the item to Substance Use vs. Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Correct. Professional impairment is a functional concept tied to safe, ethical, and effective performance.
-		C. Incorrect. A treatment history does not establish current inability to practice safely.
-		D. Incorrect. Client disapproval is not the legal or ethical test for impairment.
-		CTA Exam Strategy: Anchor the item to Substance Use vs. Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Substance Use vs. Impairment; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist takes a medication exactly as prescribed. Which statement is most accurate?',
@@ -396,18 +247,10 @@ CTA Exam Strategy: Anchor the item to Substance Use vs. Impairment. Eliminate op
 		'option_d'       => 'The therapist should monitor whether side effects interfere with safe practice and obtain appropriate medical guidance when needed',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A prescribed medication may still cause sedation, confusion, slowed thinking, or other professionally relevant effects.
-<<<<<<< HEAD
 B. Incorrect. Abruptly stopping medication without medical guidance may be unsafe and is not the appropriate professional response.
 C. Incorrect. There is no general requirement to disclose every medication to every client.
 D. Correct. The relevant issue is the medication’s actual effect on professional functioning, addressed with appropriate medical input.
 CTA Exam Strategy: Keep the tested distinction clear: Prescribed Medication. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. Abruptly stopping medication without medical guidance may be unsafe and is not the appropriate professional response.
-		C. Incorrect. There is no general requirement to disclose every medication to every client.
-		D. Correct. The relevant issue is the medication’s actual effect on professional functioning, addressed with appropriate medical input.
-		CTA Exam Strategy: Keep the tested distinction clear: Prescribed Medication. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Prescribed Medication; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During supervision, a clinician reviews whether off-duty substance use has become professionally relevant to client care. When may substance use outside work hours become professionally relevant?',
@@ -417,18 +260,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Prescribed Medication. Sep
 		'option_d'       => 'Never, because off-duty conduct is always private',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Off-duty conduct becomes professionally relevant when its effects carry into judgment, reliability, or client care.
-<<<<<<< HEAD
 B. Incorrect. A colleague’s knowledge does not itself establish functional impairment.
 C. Incorrect. The ethical need to protect clients can arise before any formal Board proceeding.
 D. Incorrect. Private conduct may become professionally relevant when it compromises assigned duties or client safety.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. A colleague’s knowledge does not itself establish functional impairment.
-		C. Incorrect. The ethical need to protect clients can arise before any formal Board proceeding.
-		D. Incorrect. Private conduct may become professionally relevant when it compromises assigned duties or client safety.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Off-Duty Residual Effects; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A colleague’s possible substance-related problem is being evaluated based on current functioning, client risk, and a developing pattern rather than stigma or diagnosis. Which statement best reflects California impairment analysis?',
@@ -438,18 +273,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Client consent authorizes a clinician to practice while impaired',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Lawful substances may still impair attention, judgment, communication, or reliability.
-<<<<<<< HEAD
 B. Incorrect. California’s statutes focus on dangerous, injurious, or safety-impairing use—not any use.
 C. Correct. Safe professional functioning remains the controlling issue.
 D. Incorrect. Clients cannot waive the clinician’s duty to provide safe and competent services.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. California’s statutes focus on dangerous, injurious, or safety-impairing use—not any use.
-		C. Correct. Safe professional functioning remains the controlling issue.
-		D. Incorrect. Clients cannot waive the clinician’s duty to provide safe and competent services.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Legal Status vs. Safe Practice; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist notices possible medication-related concentration problems, but no immediate emergency is described. What should the therapist generally do first?',
@@ -459,18 +286,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Ask clients to decide whether the therapist is impaired',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Permanent closure is an extreme response unsupported by the limited facts.
-<<<<<<< HEAD
 B. Correct. A focused functional and risk assessment should guide the proportionate next step.
 C. Incorrect. Waiting for a complaint may allow preventable risk to increase.
 D. Incorrect. The clinician retains responsibility for assessing professional functioning.
 CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.',
-=======
-		B. Correct. A focused functional and risk assessment should guide the proportionate next step.
-		C. Incorrect. Waiting for a complaint may allow preventable risk to increase.
-		D. Incorrect. The clinician retains responsibility for assessing professional functioning.
-		CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Initial Functional Assessment; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist drinks one glass of wine with dinner on Saturday. On Monday, the therapist is fully alert, prepared, reliable, and clinically effective. What is the best conclusion?',
@@ -480,18 +299,10 @@ CTA Exam Strategy: For first-step questions, address immediate client risk and o
 		'option_d'       => 'The facts do not establish professional impairment because no functional decline is described',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The facts do not show dangerous, injurious, or safety-impairing use.
-<<<<<<< HEAD
 B. Incorrect. There is no general requirement to disclose lawful private use that has no professional impact.
 C. Incorrect. No facts indicate that a diagnostic evaluation is required before ordinary work.
 D. Correct. Substance use and professional impairment are not interchangeable.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. There is no general requirement to disclose lawful private use that has no professional impact.
-		C. Incorrect. No facts indicate that a diagnostic evaluation is required before ordinary work.
-		D. Correct. Substance use and professional impairment are not interchangeable.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Use Without Functional Impact; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician smells strongly of alcohol, is slurring speech, and is preparing to begin a session with a client at acute suicide risk. What is the strongest initial response by the clinical manager?',
@@ -501,18 +312,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Publicly diagnose the clinician with alcohol use disorder',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Objective signs and the high-risk assignment require immediate protective action and coverage.
-<<<<<<< HEAD
 B. Incorrect. Perfect proof should not delay protection when the clinician appears unable to conduct a high-risk session safely.
 C. Incorrect. Embarrassment does not outweigh client safety.
 D. Incorrect. A manager should address functioning and risk without assigning an unsupported diagnosis.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Perfect proof should not delay protection when the clinician appears unable to conduct a high-risk session safely.
-		C. Incorrect. Embarrassment does not outweigh client safety.
-		D. Incorrect. A manager should address functioning and risk without assigning an unsupported diagnosis.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Immediate Client Safety; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist begins a prescribed medication and repeatedly becomes drowsy and confused during afternoon crisis sessions. Which response is most appropriate?',
@@ -522,18 +325,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Ask clients to accept the risk in writing',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Prescription status does not eliminate the functional effects described.
-<<<<<<< HEAD
 B. Incorrect. Abrupt medication changes without medical guidance may be unsafe.
 C. Correct. This response addresses both the health issue and the current professional duty.
 D. Incorrect. A client cannot waive the clinician’s responsibility for safe practice.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Abrupt medication changes without medical guidance may be unsafe.
-		C. Correct. This response addresses both the health issue and the current professional duty.
-		D. Incorrect. A client cannot waive the clinician’s responsibility for safe practice.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Medication Side Effects and High-Risk Work; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist notices that a coworker has recently missed appointments, made serious documentation errors, and appeared disoriented on two occasions. The therapist does not know the cause. What is the best response?',
@@ -543,18 +338,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'File a public accusation before speaking with anyone responsible for safety',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Discussing an unsupported diagnosis with clients is inappropriate and unnecessary.
-<<<<<<< HEAD
 B. Correct. The therapist can address objective functioning and risk without knowing the cause.
 C. Incorrect. Uncertainty about cause does not justify ignoring repeated safety-related concerns.
 D. Incorrect. The response should use appropriate channels and disclose only what is necessary.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. The therapist can address objective functioning and risk without knowing the cause.
-		C. Incorrect. Uncertainty about cause does not justify ignoring repeated safety-related concerns.
-		D. Incorrect. The response should use appropriate channels and disclose only what is necessary.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Colleague Concern; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician recognizes significant substance-related impairment and enters treatment but continues a full high-risk caseload despite ongoing missed risk cues and unreliable attendance. What is the primary concern?',
@@ -564,18 +351,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The clinician has not adequately addressed the immediate effect of impaired functioning on current client care',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Seeking treatment is responsible and should not be treated as misconduct.
-<<<<<<< HEAD
 B. Incorrect. Treatment participation does not by itself prove restored professional functioning.
 C. Incorrect. High-risk responsibilities require careful attention to present ability and coverage.
 D. Correct. Recovery support and protection of current clients must be addressed together.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. Treatment participation does not by itself prove restored professional functioning.
-		C. Incorrect. High-risk responsibilities require careful attention to present ability and coverage.
-		D. Correct. Recovery support and protection of current clients must be addressed together.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Treatment and Current Duties; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A colleague arrives late once and appears unusually tired after caring for a sick child. No errors, odor, disorientation, or continuing pattern is described. What is the best analysis?',
@@ -585,18 +364,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'The colleague should permanently stop practicing',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The limited facts do not establish a reporting duty or substance-related impairment.
-<<<<<<< HEAD
 B. Incorrect. One late arrival and fatigue do not support a diagnosis.
 C. Correct. Pattern, severity, context, and professional impact matter.
 D. Incorrect. Permanent cessation is grossly disproportionate to the facts.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. One late arrival and fatigue do not support a diagnosis.
-		C. Correct. Pattern, severity, context, and professional impact matter.
-		D. Incorrect. Permanent cessation is grossly disproportionate to the facts.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Single Sign vs. Pattern; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist drinks heavily the night before an assigned on-call shift and then sleeps through repeated emergency calls. Which issue is most relevant?',
@@ -606,18 +377,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'The therapist’s intent to answer the calls eliminates the functional problem',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Residual effects and missed emergency availability directly affected professional responsibilities.
-<<<<<<< HEAD
 B. Incorrect. The location of use does not eliminate its impact on assigned duties.
 C. Incorrect. A complaint is not required before addressing a serious reliability and safety concern.
 D. Incorrect. Good intentions do not restore missed availability or protect clients.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The location of use does not eliminate its impact on assigned duties.
-		C. Incorrect. A complaint is not required before addressing a serious reliability and safety concern.
-		D. Incorrect. Good intentions do not restore missed availability or protect clients.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Residual Effects and On-Call Duty; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A colleague’s possible substance-related problem is being evaluated based on current functioning, client risk, and a developing pattern rather than stigma or diagnosis. Which fact most directly tracks the California statutory ground concerning alcohol or drug use by an LMFT?',
@@ -627,18 +390,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The clinician lawfully filled a prescription',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Past help-seeking does not itself establish current unprofessional conduct.
-<<<<<<< HEAD
 B. Correct. This reflects the LMFT unprofessional-conduct standard in Business and Professions Code section 4982(c).
 C. Incorrect. A client’s moral view is not the statutory standard.
 D. Incorrect. Filling a lawful prescription does not establish dangerous, injurious, or safety-impairing use.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Correct. This reflects the LMFT unprofessional-conduct standard in Business and Professions Code section 4982(c).
-		C. Incorrect. A client’s moral view is not the statutory standard.
-		D. Incorrect. Filling a lawful prescription does not establish dangerous, injurious, or safety-impairing use.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review California Unprofessional Conduct; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT recognizes that substance-related aftereffects are causing memory gaps and missed risk information. The registered AMFT minimizes the problem to the supervisor to avoid losing hours. What is the strongest analysis?',
@@ -648,18 +403,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'The registered AMFT must accurately disclose the functional concern so the supervisor can assess risk, modify assignments, and arrange continuity or coverage',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A supervisor’s license does not substitute for the supervisee’s safe functioning.
-<<<<<<< HEAD
 B. Incorrect. Experience hours do not outweigh client protection or honest supervision.
 C. Incorrect. Waiting for harm is inconsistent with preventive ethical practice.
 D. Correct. Accurate disclosure is necessary for meaningful supervision and client protection.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Experience hours do not outweigh client protection or honest supervision.
-		C. Incorrect. Waiting for harm is inconsistent with preventive ethical practice.
-		D. Correct. Accurate disclosure is necessary for meaningful supervision and client protection.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Supervision and Accurate Disclosure; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During supervision, a clinician reviews whether off-duty substance use has become professionally relevant to client care. Which statement about California Code of Regulations section 1888 is most accurate?',
@@ -669,18 +416,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'It prohibits clinicians from seeking confidential treatment',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Section 1888 does not impose probation on every person who uses alcohol.
-<<<<<<< HEAD
 B. Incorrect. It is a disciplinary regulation, not a replacement for ethical self-monitoring or clinical judgment.
 C. Correct. The regulation addresses Board disciplinary decision-making and violations involving drugs or alcohol.
 D. Incorrect. The regulation does not prohibit confidential help-seeking.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. It is a disciplinary regulation, not a replacement for ethical self-monitoring or clinical judgment.
-		C. Correct. The regulation addresses Board disciplinary decision-making and violations involving drugs or alcohol.
-		D. Incorrect. The regulation does not prohibit confidential help-seeking.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review BBS Disciplinary Guidelines; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist previously stopped practicing after substance-related impairment and now reports three weeks of abstinence. The therapist asks to resume a full crisis caseload immediately, but no trial duties, treatment recommendations, or monitoring plan have evaluated current professional functioning. What is the strongest response?',
@@ -690,18 +429,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Allow the therapist to decide based solely on confidence and financial need',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Abstinence may be an important part of recovery, but it does not by itself demonstrate readiness for a high-risk caseload. A proportionate return-to-practice plan should evaluate current attention, judgment, reliability, risk-management ability, relevant treatment recommendations, and the need for staged duties or monitoring.
-<<<<<<< HEAD
 B. Incorrect. A period of abstinence does not conclusively establish restoration of every professional function required for crisis work.
 C. Incorrect. Prior impairment does not automatically establish permanent inability to practice. The decision should be based on current functioning and appropriate safeguards.
 D. Incorrect. Confidence, financial need, and personal preference cannot replace an objective assessment of readiness and client risk.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. A period of abstinence does not conclusively establish restoration of every professional function required for crisis work.
-		C. Incorrect. Prior impairment does not automatically establish permanent inability to practice. The decision should be based on current functioning and appropriate safeguards.
-		D. Incorrect. Confidence, financial need, and personal preference cannot replace an objective assessment of readiness and client risk.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Substance-Related Return-to-Practice Planning; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A licensed therapist has begun using a prescribed sedating medication and drinking heavily at night. The therapist has missed on-call emergencies, appeared confused during sessions, received repeated feedback, and enrolled in treatment. The therapist plans to continue a full high-risk caseload because the substances are legal and treatment has begun. Which response best reflects the therapist’s responsibilities?',
@@ -711,43 +442,23 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Assess immediate fitness and client risk, limit or stop unsafe duties, arrange continuity and coverage, obtain appropriate medical and professional assistance, document relevant decisions, and reevaluate before fuller return',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Legal status and treatment participation do not negate the ongoing functional decline described.
-<<<<<<< HEAD
 B. Incorrect. Clients cannot waive the clinician’s responsibility to practice safely.
 C. Incorrect. Ethical responsibility arises before a Board investigation and requires proactive client protection.
 D. Correct. This integrates functional assessment, immediate safety, duty modification, continuity, assistance, documentation, and return-to-practice evaluation.
 CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.',
-=======
-		B. Incorrect. Clients cannot waive the clinician’s responsibility to practice safely.
-		C. Incorrect. Ethical responsibility arises before a Board investigation and requires proactive client protection.
-		D. Correct. This integrates functional assessment, immediate safety, duty modification, continuity, assistance, documentation, and return-to-practice evaluation.
-		CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.
-		Remediation: Return to Workbook 4, Chapter 2: Substance Use and Professional Impairment; review Comprehensive Substance-Impairment Response; log error category SUBSTANCE-USE-IMPAIRMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist reports burnout-related symptoms, but the immediate question is whether current functioning remains safe and competent. To decide how to proceed, the clinician must apply the correct meaning of professional impairment related to a mental health concern. Which explanation should guide the next professional step?',
 		'option_a'       => 'The clinician has received any mental health diagnosis',
-<<<<<<< HEAD
 		'option_b'       => 'The concern is interfering with the clinician\\'s ability to provide safe, ethical, and effective professional services',
-=======
-		'option_b'       => 'The concern is interfering with the clinician\'s ability to provide safe, ethical, and effective professional services',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'The clinician is experiencing ordinary stress but continues functioning effectively',
 		'option_d'       => 'The clinician has chosen to obtain personal therapy',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A diagnosis alone does not establish professional impairment.
-<<<<<<< HEAD
 B. Correct. Professional impairment is based on the functional effect on safe, ethical, and effective practice.
 C. Incorrect. Stress with intact functioning does not meet the functional definition of impairment.
 D. Incorrect. Help-seeking is not proof of impairment and may be preventive or supportive.
 CTA Exam Strategy: Anchor the item to Condition vs. Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Correct. Professional impairment is based on the functional effect on safe, ethical, and effective practice.
-		C. Incorrect. Stress with intact functioning does not meet the functional definition of impairment.
-		D. Incorrect. Help-seeking is not proof of impairment and may be preventive or supportive.
-		CTA Exam Strategy: Anchor the item to Condition vs. Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Condition vs. Impairment; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has a well-managed anxiety disorder, arrives on time, documents accurately, maintains boundaries, and makes sound clinical decisions. What is the best conclusion?',
@@ -757,7 +468,6 @@ CTA Exam Strategy: Anchor the item to Condition vs. Impairment. Eliminate option
 		'option_d'       => 'The facts do not establish professional impairment because professional functioning remains intact',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The facts do not create an automatic duty to disclose private health information to every client.
-<<<<<<< HEAD
 B. Incorrect. A diagnosis does not establish impairment without functional decline.
 C. Incorrect. Permanent cessation is unsupported and disproportionate.
 D. Correct. The functional evidence shows competent performance despite the diagnosis.
@@ -765,34 +475,16 @@ CTA Exam Strategy: Keep the tested distinction clear: Diagnosis Does Not Equal I
 	),
 	array(
 		'question_text'  => 'A clinician’s mental-health concern may be affecting judgment, attention, and continuity of care, requiring a function-focused response. Which statement most accurately reflects the World Health Organization\\'s description of burnout?',
-=======
-		B. Incorrect. A diagnosis does not establish impairment without functional decline.
-		C. Incorrect. Permanent cessation is unsupported and disproportionate.
-		D. Correct. The functional evidence shows competent performance despite the diagnosis.
-		CTA Exam Strategy: Keep the tested distinction clear: Diagnosis Does Not Equal Impairment. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Diagnosis Does Not Equal Impairment; log error category MENTAL-HEALTH-BURNOUT.',
-	),
-	array(
-		'question_text'  => 'A clinician’s mental-health concern may be affecting judgment, attention, and continuity of care, requiring a function-focused response. Which statement most accurately reflects the World Health Organization\'s description of burnout?',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'It is an occupational phenomenon associated with chronic workplace stress that has not been successfully managed',
 		'option_b'       => 'It is any temporary fatigue after a difficult workday',
 		'option_c'       => 'It is a medical diagnosis that automatically proves professional impairment',
 		'option_d'       => 'It is limited to professionals who treat trauma',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. WHO describes burnout as an occupational phenomenon linked to chronic workplace stress that has not been successfully managed.
-<<<<<<< HEAD
 B. Incorrect. Temporary tiredness alone is not the WHO burnout construct.
 C. Incorrect. WHO does not classify burnout as a medical condition, and burnout does not automatically prove impairment.
 D. Incorrect. Burnout may occur across occupations and is not limited to trauma work.
 CTA Exam Strategy: Anchor the item to Burnout Definition. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Incorrect. Temporary tiredness alone is not the WHO burnout construct.
-		C. Incorrect. WHO does not classify burnout as a medical condition, and burnout does not automatically prove impairment.
-		D. Incorrect. Burnout may occur across occupations and is not limited to trauma work.
-		CTA Exam Strategy: Anchor the item to Burnout Definition. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Burnout Definition; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist reports burnout-related symptoms, but the immediate question is whether current functioning remains safe and competent. Which statement is most accurate about compassion fatigue?',
@@ -802,18 +494,10 @@ CTA Exam Strategy: Anchor the item to Burnout Definition. Eliminate options base
 		'option_d'       => 'It can occur only after direct personal exposure to trauma',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Compassion fatigue is not identical to all occupational stress.
-<<<<<<< HEAD
 B. Incorrect. It is not a single formal diagnosis that automatically dictates one professional response.
 C. Correct. SAMHSA materials describe compassion fatigue as involving burnout and secondary traumatic stress, and professional usage varies.
 D. Incorrect. Secondary traumatic stress may follow indirect exposure to others\\' traumatic experiences.
 CTA Exam Strategy: Keep the tested distinction clear: Compassion Fatigue and Secondary Traumatic Stress. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. It is not a single formal diagnosis that automatically dictates one professional response.
-		C. Correct. SAMHSA materials describe compassion fatigue as involving burnout and secondary traumatic stress, and professional usage varies.
-		D. Incorrect. Secondary traumatic stress may follow indirect exposure to others\' traumatic experiences.
-		CTA Exam Strategy: Keep the tested distinction clear: Compassion Fatigue and Secondary Traumatic Stress. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Compassion Fatigue and Secondary Traumatic Stress; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist notices increasing irritability and reduced concentration but is unsure whether client care is affected. What should the therapist generally do first?',
@@ -823,18 +507,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Compassion Fatigue and Sec
 		'option_d'       => 'Assume that good intentions prevent impairment',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Immediate permanent cessation is not justified by the limited facts.
-<<<<<<< HEAD
 B. Correct. A focused functional and risk assessment should precede a proportionate response.
 C. Incorrect. Waiting for a complaint may allow risk to increase.
 D. Incorrect. Good intentions do not establish safe functioning.
 CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.',
-=======
-		B. Correct. A focused functional and risk assessment should precede a proportionate response.
-		C. Incorrect. Waiting for a complaint may allow risk to increase.
-		D. Incorrect. Good intentions do not establish safe functioning.
-		CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Initial Response to Functional Change; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician experiences grief after a family death, uses personal support, and continues meeting professional responsibilities with sound judgment and effective client care. Which analysis is strongest?',
@@ -844,18 +520,10 @@ CTA Exam Strategy: For first-step questions, address immediate client risk and o
 		'option_d'       => 'Grief warrants monitoring, but the facts do not establish impairment because professional functioning remains effective',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Grief is a human experience and does not automatically establish impairment.
-<<<<<<< HEAD
 B. Incorrect. Universal client disclosure is not required by the facts and may be clinically unnecessary.
 C. Incorrect. No misconduct or unsafe functioning is described.
 D. Correct. Monitoring is appropriate, but the functional evidence remains intact.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Universal client disclosure is not required by the facts and may be clinically unnecessary.
-		C. Incorrect. No misconduct or unsafe functioning is described.
-		D. Correct. Monitoring is appropriate, but the functional evidence remains intact.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Mental Health Condition With Intact Functioning; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist facing chronic workload pressure becomes cynical, rushes sessions, completes notes late, and reports reduced professional effectiveness. What is the strongest response?',
@@ -865,32 +533,19 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Wait until a client files a complaint',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The pattern is affecting professional performance and warrants early, proportionate intervention.
-<<<<<<< HEAD
 B. Incorrect. Common occupational risk does not make functional decline ethically irrelevant.
 C. Incorrect. Burnout is not necessarily permanent and does not automatically require career termination.
 D. Incorrect. A complaint is not required before addressing declining performance.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Common occupational risk does not make functional decline ethically irrelevant.
-		C. Incorrect. Burnout is not necessarily permanent and does not automatically require career termination.
-		D. Incorrect. A complaint is not required before addressing declining performance.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Burnout Affecting Practice; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After repeated exposure to severe trauma narratives, a clinician develops intrusive images, avoids trauma discussions, and begins missing important clinical material. What is the most accurate analysis?',
 		'option_a'       => 'The clinician is automatically guilty of misconduct',
-<<<<<<< HEAD
 		'option_b'       => 'The reactions are irrelevant because the clinician did not experience the clients\\' trauma directly',
-=======
-		'option_b'       => 'The reactions are irrelevant because the clinician did not experience the clients\' trauma directly',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'Secondary traumatic stress or a related trauma-exposure reaction may be affecting professional functioning and requires evaluation and support',
 		'option_d'       => 'The clinician must disclose every intrusive image to clients',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Symptoms do not automatically establish professional misconduct.
-<<<<<<< HEAD
 B. Incorrect. Indirect exposure to trauma can produce clinically meaningful stress reactions.
 C. Correct. The described reactions are affecting engagement and assessment and should be addressed.
 D. Incorrect. Detailed self-disclosure is not the required professional response and may create boundary concerns.
@@ -899,34 +554,15 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 	array(
 		'question_text'  => 'A therapist\\'s own unresolved trauma is activated by a client\\'s story. The therapist becomes overprotective, dismisses information that conflicts with the therapist\\'s view, and discourages appropriate client autonomy. What should the therapist do first?',
 		'option_a'       => 'Tell the client every detail of the therapist\\'s trauma history',
-=======
-		B. Incorrect. Indirect exposure to trauma can produce clinically meaningful stress reactions.
-		C. Correct. The described reactions are affecting engagement and assessment and should be addressed.
-		D. Incorrect. Detailed self-disclosure is not the required professional response and may create boundary concerns.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Secondary Traumatic Stress; log error category MENTAL-HEALTH-BURNOUT.',
-	),
-	array(
-		'question_text'  => 'A therapist\'s own unresolved trauma is activated by a client\'s story. The therapist becomes overprotective, dismisses information that conflicts with the therapist\'s view, and discourages appropriate client autonomy. What should the therapist do first?',
-		'option_a'       => 'Tell the client every detail of the therapist\'s trauma history',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_b'       => 'Recognize that personal reactions may be distorting judgment and assess the impact on treatment and client welfare',
 		'option_c'       => 'Assume empathy prevents any competence concern',
 		'option_d'       => 'Continue unchanged unless the client complains',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Extensive disclosure is not the first response and may add boundary problems.
-<<<<<<< HEAD
 B. Correct. Recognition and impact assessment are necessary before selecting consultation, treatment, or other action.
 C. Incorrect. Empathy does not eliminate countertransference, bias, or impaired judgment.
 D. Incorrect. The functional concern should be addressed proactively.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. Recognition and impact assessment are necessary before selecting consultation, treatment, or other action.
-		C. Incorrect. Empathy does not eliminate countertransference, bias, or impaired judgment.
-		D. Incorrect. The functional concern should be addressed proactively.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Personal Reactions and Clinical Judgment; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician begins personal therapy for severe emotional exhaustion but continues a full crisis caseload despite emotional flooding, missed danger cues, and repeated cancellations. What is the primary concern?',
@@ -936,18 +572,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The clinician has not adequately addressed the immediate effect of impaired functioning on current client care',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Seeking treatment is responsible and should not be treated as misconduct.
-<<<<<<< HEAD
 B. Incorrect. Treatment participation does not automatically restore professional functioning.
 C. Incorrect. High-risk duties require careful attention to current ability and coverage.
 D. Correct. Recovery support and current client protection must be addressed together.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. Treatment participation does not automatically restore professional functioning.
-		C. Incorrect. High-risk duties require careful attention to current ability and coverage.
-		D. Correct. Recovery support and current client protection must be addressed together.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Treatment and Current Duties; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is unusually quiet during one session after receiving difficult personal news. The therapist remains attentive, documents accurately, and shows no continuing decline. What is the best analysis?',
@@ -957,18 +585,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'The therapist must permanently stop practicing',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Pattern, persistence, severity, and professional effect matter more than one isolated nonspecific observation.
-<<<<<<< HEAD
 B. Incorrect. The facts do not establish immediate danger or a reporting duty.
 C. Incorrect. One quiet session does not support a diagnosis.
 D. Incorrect. Permanent cessation is grossly disproportionate.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. The facts do not establish immediate danger or a reporting duty.
-		C. Incorrect. One quiet session does not support a diagnosis.
-		D. Incorrect. Permanent cessation is grossly disproportionate.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Single Sign vs. Pattern; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist observes a colleague becoming increasingly disorganized, missing risk information, and reacting angrily to routine feedback. The cause is unknown. What is the best response?',
@@ -978,18 +598,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Post the concern publicly so others can decide',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Discussing an unsupported diagnosis with clients is inappropriate and unnecessary.
-<<<<<<< HEAD
 B. Incorrect. Diagnostic uncertainty does not justify ignoring repeated safety-related performance concerns.
 C. Correct. Objective functioning and client risk can be addressed without knowing the cause.
 D. Incorrect. Public disclosure is unnecessary, harmful, and not role-appropriate.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Diagnostic uncertainty does not justify ignoring repeated safety-related performance concerns.
-		C. Correct. Objective functioning and client risk can be addressed without knowing the cause.
-		D. Incorrect. Public disclosure is unnecessary, harmful, and not role-appropriate.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Colleague Concern; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist reports burnout-related symptoms, but the immediate question is whether current functioning remains safe and competent. Which statement most accurately reflects California Business and Professions Code section 820?',
@@ -999,18 +611,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'A licensing agency may order an examination when it appears a licentiate may be unable to practice safely because mental or physical illness impairs the ability to practice',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Section 820 does not make diagnosis alone an automatic ground for revocation.
-<<<<<<< HEAD
 B. Incorrect. The statutory examination is an action of the licensing agency, not an ordinary employer order.
 C. Incorrect. Burnout is not legally defined in section 820 as automatic inability to practice.
 D. Correct. This tracks the safety-focused statutory language.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. The statutory examination is an action of the licensing agency, not an ordinary employer order.
-		C. Incorrect. Burnout is not legally defined in section 820 as automatic inability to practice.
-		D. Correct. This tracks the safety-focused statutory language.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Business and Professions Code Section 820; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A trauma clinician has chronic administrative overload, cynicism about work, intrusive images from client stories, avoidance of trauma material, and declining documentation. Which response is strongest?',
@@ -1020,18 +624,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Permanently stop practicing because multiple causes are present',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The exact label is less important than the clear functional decline, risk, and need to address contributing conditions.
-<<<<<<< HEAD
 B. Incorrect. Diagnostic or terminology certainty should not delay protection and support.
 C. Incorrect. Overlapping concepts can still be evaluated through observable functioning.
 D. Incorrect. Permanent cessation is not automatically required; the response should match severity and recovery.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Diagnostic or terminology certainty should not delay protection and support.
-		C. Incorrect. Overlapping concepts can still be evaluated through observable functioning.
-		D. Incorrect. Permanent cessation is not automatically required; the response should match severity and recovery.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Overlapping Stress Reactions; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT tells the supervisor only that they are “a little stressed.” The supervisor has independently observed panic symptoms, poor concentration, and two missed suicide-risk indicators. What should the supervisor do?',
@@ -1041,24 +637,15 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Permanently end the registered AMFT’s registration without evaluating whether the limitation is temporary or manageable',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A supervisor may need additional information when observable functioning raises a client-protection concern.
-<<<<<<< HEAD
 B. Incorrect. Preventive supervision requires action before avoidable harm occurs.
 C. Correct. The supervisor’s gatekeeping responsibility requires attention to observable performance, not merely acceptance of a vague reassurance. A focused assessment should determine the severity and duration of the limitation, the effect on client safety, and the need for immediate assignment changes, coverage, consultation, or other safeguards. The response and follow-up should be documented.
 D. Incorrect. Permanent exclusion is disproportionate without assessing whether the condition is temporary, treatable, or manageable through appropriate safeguards.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Preventive supervision requires action before avoidable harm occurs.
-		C. Correct. The supervisor’s gatekeeping responsibility requires attention to observable performance, not merely acceptance of a vague reassurance. A focused assessment should determine the severity and duration of the limitation, the effect on client safety, and the need for immediate assignment changes, coverage, consultation, or other safeguards. The response and follow-up should be documented.
-		D. Incorrect. Permanent exclusion is disproportionate without assessing whether the condition is temporary, treatable, or manageable through appropriate safeguards.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Supervisor Gatekeeping After Incomplete Disclosure; log error category MENTAL-HEALTH-BURNOUT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician reports feeling emotionally better after leave and requests a full crisis caseload. Trial duties still show late notes, inconsistent attention, and difficulty making urgent decisions. What is the strongest response?',
 		'option_a'       => 'Restore the full caseload because subjective improvement is sufficient',
 		'option_b'       => 'Continue limited or supported duties and base fuller return on demonstrated restoration of professional functioning and risk-management ability',
-<<<<<<< HEAD
 		'option_c'       => 'Permanently end the clinician\\'s career because any prior impairment is irreversible',
 		'option_d'       => 'Let clients decide whether the clinician is ready',
 		'correct_option' => 'b',
@@ -1070,27 +657,12 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 	),
 	array(
 		'question_text'  => 'A licensed therapist has a history of depression, is under severe workload pressure, has become emotionally numb with trauma clients, misses risk cues, completes records late, and has received repeated feedback. The therapist has started personal therapy but plans to continue a full high-risk caseload because the diagnosis is private and treatment has begun. Which response best reflects the therapist\\'s responsibilities?',
-=======
-		'option_c'       => 'Permanently end the clinician\'s career because any prior impairment is irreversible',
-		'option_d'       => 'Let clients decide whether the clinician is ready',
-		'correct_option' => 'b',
-		'explanation'    => 'A. Incorrect. Feeling better does not resolve the continuing performance concerns.
-		B. Correct. Return should be based on demonstrated functioning with proportionate limits or monitoring as needed.
-		C. Incorrect. Prior impairment does not automatically establish permanent inability to practice.
-		D. Incorrect. Clients cannot assume responsibility for fitness and assignment decisions.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Return-to-Practice Readiness; log error category MENTAL-HEALTH-BURNOUT.',
-	),
-	array(
-		'question_text'  => 'A licensed therapist has a history of depression, is under severe workload pressure, has become emotionally numb with trauma clients, misses risk cues, completes records late, and has received repeated feedback. The therapist has started personal therapy but plans to continue a full high-risk caseload because the diagnosis is private and treatment has begun. Which response best reflects the therapist\'s responsibilities?',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'Continue unchanged because privacy and treatment eliminate the professional concern',
 		'option_b'       => 'Disclose the diagnosis to every client and let each client decide whether care is safe',
 		'option_c'       => 'Conceal the performance concerns unless the Board opens an investigation',
 		'option_d'       => 'Assess immediate fitness and client risk, limit or modify unsafe duties, arrange continuity and coverage, engage appropriate treatment and professional support, document relevant decisions, and reevaluate before fuller return',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Privacy and treatment do not negate the observable functional decline described.
-<<<<<<< HEAD
 B. Incorrect. Clients should not be given unnecessary private information or responsibility for the clinician\\'s fitness decision.
 C. Incorrect. Ethical responsibility arises before a Board investigation and requires proactive client protection.
 D. Correct. This integrates functional assessment, safety, duty modification, continuity, support, documentation, and return-to-practice evaluation.
@@ -1100,34 +672,14 @@ CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, 
 		'question_text'  => 'A clinician has a physical condition and requests a practice adjustment while continuing to meet essential professional responsibilities. To decide how to proceed, the clinician must apply the correct meaning of professional impairment related to a physical condition. Which explanation should guide the next professional step?',
 		'option_a'       => 'Any physical diagnosis that appears in a clinician\\'s medical record',
 		'option_b'       => 'A physical condition is interfering with the clinician\\'s ability to provide safe, ethical, and effective professional services',
-=======
-		B. Incorrect. Clients should not be given unnecessary private information or responsibility for the clinician\'s fitness decision.
-		C. Incorrect. Ethical responsibility arises before a Board investigation and requires proactive client protection.
-		D. Correct. This integrates functional assessment, safety, duty modification, continuity, support, documentation, and return-to-practice evaluation.
-		CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.
-		Remediation: Return to Workbook 4, Chapter 3: Mental Health, Burnout, and Compassion Fatigue; review Comprehensive Mental Health and Burnout Response; log error category MENTAL-HEALTH-BURNOUT.',
-	),
-	array(
-		'question_text'  => 'A clinician has a physical condition and requests a practice adjustment while continuing to meet essential professional responsibilities. To decide how to proceed, the clinician must apply the correct meaning of professional impairment related to a physical condition. Which explanation should guide the next professional step?',
-		'option_a'       => 'Any physical diagnosis that appears in a clinician\'s medical record',
-		'option_b'       => 'A physical condition is interfering with the clinician\'s ability to provide safe, ethical, and effective professional services',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_c'       => 'The clinician uses an assistive device or requests a schedule change',
 		'option_d'       => 'The clinician experiences temporary discomfort while professional functioning remains intact',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A diagnosis alone does not establish professional impairment.
-<<<<<<< HEAD
 B. Correct. The professional issue is the functional effect on safe, ethical, and effective practice.
 C. Incorrect. Assistive devices and schedule changes may preserve competent functioning and are not proof of impairment.
 D. Incorrect. Temporary discomfort with intact performance does not meet the functional definition of impairment.
 CTA Exam Strategy: Anchor the item to Condition vs. Professional Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Correct. The professional issue is the functional effect on safe, ethical, and effective practice.
-		C. Incorrect. Assistive devices and schedule changes may preserve competent functioning and are not proof of impairment.
-		D. Incorrect. Temporary discomfort with intact performance does not meet the functional definition of impairment.
-		CTA Exam Strategy: Anchor the item to Condition vs. Professional Impairment. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Condition vs. Professional Impairment; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician has a mobility disability and performs all essential clinical duties safely with an accessible office and adaptive equipment. Which statement is most accurate?',
@@ -1137,18 +689,10 @@ CTA Exam Strategy: Anchor the item to Condition vs. Professional Impairment. Eli
 		'option_d'       => 'The clinician is not professionally impaired merely because a disability is present when effective functioning is maintained',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Disability is not automatic evidence of incompetence.
-<<<<<<< HEAD
 B. Incorrect. The facts do not create a general duty to disclose private medical information to clients.
 C. Incorrect. An accommodation may enable the clinician to meet the same essential professional standards.
 D. Correct. The functional evidence shows that the clinician can practice safely and effectively.
 CTA Exam Strategy: Keep the tested distinction clear: Disability and Competence. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. The facts do not create a general duty to disclose private medical information to clients.
-		C. Incorrect. An accommodation may enable the clinician to meet the same essential professional standards.
-		D. Correct. The functional evidence shows that the clinician can practice safely and effectively.
-		CTA Exam Strategy: Keep the tested distinction clear: Disability and Competence. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Disability and Competence; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is deciding whether an accommodation, workload change, coverage plan, or temporary limitation would adequately protect clients. Which combination is most consistent with significant work-related fatigue?',
@@ -1158,18 +702,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Disability and Competence.
 		'option_d'       => 'Automatic permanent inability to practice',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. CDC/NIOSH identifies these as important fatigue-related effects.
-<<<<<<< HEAD
 B. Incorrect. Fatigue generally reduces rather than improves concentration and decision speed.
 C. Incorrect. Fatigue can increase errors and impair memory.
 D. Incorrect. Fatigue may be temporary and does not automatically establish permanent inability to practice.
 CTA Exam Strategy: Anchor the item to Effects of Fatigue. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Incorrect. Fatigue generally reduces rather than improves concentration and decision speed.
-		C. Incorrect. Fatigue can increase errors and impair memory.
-		D. Incorrect. Fatigue may be temporary and does not automatically establish permanent inability to practice.
-		CTA Exam Strategy: Anchor the item to Effects of Fatigue. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Effects of Fatigue; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician has a physical condition and requests a practice adjustment while continuing to meet essential professional responsibilities. What is the primary professional purpose of a reasonable accommodation?',
@@ -1179,18 +715,10 @@ CTA Exam Strategy: Anchor the item to Effects of Fatigue. Eliminate options base
 		'option_d'       => 'To guarantee that no future difficulty will occur',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. An accommodation does not remove every essential professional responsibility.
-<<<<<<< HEAD
 B. Incorrect. Requesting or using accommodation is not proof of impairment.
 C. Correct. The adjustment is intended to enable effective performance of essential functions.
 D. Incorrect. No accommodation can guarantee that every future problem will be prevented.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. Requesting or using accommodation is not proof of impairment.
-		C. Correct. The adjustment is intended to enable effective performance of essential functions.
-		D. Incorrect. No accommodation can guarantee that every future problem will be prevented.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Effective Accommodation; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist notices new fatigue and difficulty following complex client narratives. What should the therapist generally do first?',
@@ -1200,18 +728,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Assess the specific functional effect, the duties involved, and whether client safety is currently at risk',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Experience does not reliably overcome significant fatigue or cognitive slowing.
-<<<<<<< HEAD
 B. Incorrect. Permanent career termination is disproportionate before the concern is assessed.
 C. Incorrect. Professional responsibility begins before a complaint or harm.
 D. Correct. A focused functional and risk assessment should guide the next action.
 CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.',
-=======
-		B. Incorrect. Permanent career termination is disproportionate before the concern is assessed.
-		C. Incorrect. Professional responsibility begins before a complaint or harm.
-		D. Correct. A focused functional and risk assessment should guide the next action.
-		CTA Exam Strategy: For first-step questions, address immediate client risk and observable functional change before moving to diagnosis, permanent career action, or later administrative consequences.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Initial Functional Assessment; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician starts a prescribed medication and develops afternoon confusion, slowed thinking, and repeated documentation errors. What is the strongest response?',
@@ -1221,18 +741,10 @@ CTA Exam Strategy: For first-step questions, address immediate client risk and o
 		'option_d'       => 'Tell clients to accept the increased error risk',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Legal prescription status does not remove the duty to address functional side effects and client risk.
-<<<<<<< HEAD
 B. Incorrect. Prescribed medications can still affect alertness, memory, and judgment.
 C. Incorrect. Abrupt self-directed discontinuation may be medically unsafe and does not address current client duties.
 D. Incorrect. Clients cannot be asked to assume the clinician\\'s professional responsibility.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Prescribed medications can still affect alertness, memory, and judgment.
-		C. Incorrect. Abrupt self-directed discontinuation may be medically unsafe and does not address current client duties.
-		D. Incorrect. Clients cannot be asked to assume the clinician\'s professional responsibility.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Medication Side Effects; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist with chronic pain remains clinically effective but becomes less attentive late in a six-session day. Which approach is strongest?',
@@ -1242,18 +754,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Disclose the full medical history to every client',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Chronic pain does not automatically establish permanent inability to practice.
-<<<<<<< HEAD
 B. Incorrect. The emerging attention problem should be addressed before a complaint or harm.
 C. Correct. A proportionate, individualized adjustment may preserve safe practice.
 D. Incorrect. Clients generally need service information, not unnecessary private medical details.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The emerging attention problem should be addressed before a complaint or harm.
-		C. Correct. A proportionate, individualized adjustment may preserve safe practice.
-		D. Incorrect. Clients generally need service information, not unnecessary private medical details.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Chronic Pain and Proportionate Adjustment; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor observes fatigue-related changes in attention and documentation and must evaluate current client risk without making disability assumptions. What is the central standard in California Business and Professions Code section 820 when physical illness is involved?',
@@ -1263,18 +767,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Whether the clinician has taken any sick leave',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. An accommodation request is not the statutory fitness standard.
-<<<<<<< HEAD
 B. Correct. Section 820 focuses on possible inability to practice safely because physical illness affects competency.
 C. Incorrect. Coworker knowledge of a diagnosis does not decide the legal question.
 D. Incorrect. Taking sick leave is not the controlling criterion.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Correct. Section 820 focuses on possible inability to practice safely because physical illness affects competency.
-		C. Incorrect. Coworker knowledge of a diagnosis does not decide the legal question.
-		D. Incorrect. Taking sick leave is not the controlling criterion.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review BPC Section 820; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician has slept only a few hours over three nights, is struggling to stay awake, and is scheduled to conduct an urgent violence-risk assessment. What is the best response?',
@@ -1284,25 +780,16 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Determine that the clinician cannot safely perform the task at that time and arrange qualified coverage or another immediate protective alternative',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Motivation and experience do not reliably restore alertness or judgment.
-<<<<<<< HEAD
 B. Incorrect. The clinician retains responsibility for current fitness and client safety.
 C. Incorrect. Caffeine does not establish safe functioning for a high-risk task.
 D. Correct. The facts establish present inability to safely complete a high-consequence assessment.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The clinician retains responsibility for current fitness and client safety.
-		C. Incorrect. Caffeine does not establish safe functioning for a high-risk task.
-		D. Correct. The facts establish present inability to safely complete a high-consequence assessment.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review High-Risk Duty and Severe Fatigue; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor observes a registered AMFT repeatedly falling asleep, missing risk information, and confusing client records. What is the strongest initial response?',
 		'option_a'       => 'Publicly diagnose the registered AMFT with a sleep disorder',
 		'option_b'       => 'Ignore the behavior until a complaint is filed',
 		'option_c'       => 'Address the observable performance and immediate client risk, limit unsafe assignments, and use appropriate supervisory and workplace procedures',
-<<<<<<< HEAD
 		'option_d'       => 'Tell clients the registered AMFT\\'s suspected medical condition',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The supervisor should not make an unsupported diagnosis.
@@ -1310,16 +797,6 @@ B. Incorrect. Waiting for a complaint ignores established safety concerns.
 C. Correct. The response is based on observable functioning, role, and client protection.
 D. Incorrect. Clients should not receive unnecessary speculative medical information.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		'option_d'       => 'Tell clients the registered AMFT\'s suspected medical condition',
-		'correct_option' => 'c',
-		'explanation'    => 'A. Incorrect. The supervisor should not make an unsupported diagnosis.
-		B. Incorrect. Waiting for a complaint ignores established safety concerns.
-		C. Correct. The response is based on observable functioning, role, and client protection.
-		D. Incorrect. Clients should not receive unnecessary speculative medical information.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Colleague Functional Concern; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist develops an acute illness causing intermittent confusion and cannot reliably complete sessions for several days. What is the strongest response?',
@@ -1329,18 +806,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Provide clients with the complete medical record',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Temporary inability still requires client protection, coverage, and continuity planning.
-<<<<<<< HEAD
 B. Incorrect. Temporary duration does not make current confusion safe.
 C. Incorrect. Failure to arrange continuity may create abandonment and safety concerns.
 D. Incorrect. Clients do not need unnecessary private medical documentation.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Temporary duration does not make current confusion safe.
-		C. Incorrect. Failure to arrange continuity may create abandonment and safety concerns.
-		D. Incorrect. Clients do not need unnecessary private medical documentation.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Acute Illness and Continuity; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician develops a hearing limitation. Reliable assistive technology permits accurate communication, informed consent, and risk assessment. What is the best analysis?',
@@ -1350,18 +819,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The clinician must permanently transfer every client',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. A sensory limitation does not automatically prevent competent practice.
-<<<<<<< HEAD
 B. Correct. The functioning and effectiveness of the support are the controlling facts.
 C. Incorrect. Assistive technology may enable competence rather than undermine it.
 D. Incorrect. Permanent transfer is unnecessary when safe and effective functioning is preserved.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Correct. The functioning and effectiveness of the support are the controlling facts.
-		C. Incorrect. Assistive technology may enable competence rather than undermine it.
-		D. Incorrect. Permanent transfer is unnecessary when safe and effective functioning is preserved.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Communication Accommodation; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A mobile crisis clinician is severely fatigued, has had two microsleep episodes, and is expected to drive to a client and make rapid emergency decisions. What is the strongest response?',
@@ -1371,18 +832,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Do not drive or perform the high-risk duty while unsafe; arrange qualified coverage or another emergency response and document the operational plan',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Driving slowly does not resolve microsleep risk or impaired decision-making.
-<<<<<<< HEAD
 B. Incorrect. The client cannot assume responsibility for unsafe professional operations.
 C. Incorrect. Being on call does not override current inability to function safely.
 D. Correct. Immediate operational safety and continuity require another qualified response.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The client cannot assume responsibility for unsafe professional operations.
-		C. Incorrect. Being on call does not override current inability to function safely.
-		D. Correct. Immediate operational safety and continuity require another qualified response.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Driving, Fatigue, and Client Safety; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An employer assumes that a therapist who now uses a wheelchair can no longer provide effective therapy and removes all clinical duties without evaluating the actual job or possible accommodations. What is the strongest analysis?',
@@ -1392,18 +845,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Client safety requires permanent exclusion whenever mobility changes',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Automatic assumptions based on disability are inconsistent with individualized analysis.
-<<<<<<< HEAD
 B. Correct. California employment guidance emphasizes individualized assessment and reasonable accommodation while preserving essential functions and safety.
 C. Incorrect. The issue is not whether every limitation disappears; it is whether essential duties can be performed with or without accommodation.
 D. Incorrect. Mobility change does not automatically impair clinical judgment, communication, or effectiveness.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. California employment guidance emphasizes individualized assessment and reasonable accommodation while preserving essential functions and safety.
-		C. Incorrect. The issue is not whether every limitation disappears; it is whether essential duties can be performed with or without accommodation.
-		D. Incorrect. Mobility change does not automatically impair clinical judgment, communication, or effectiveness.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Disability Accommodation and Individualized Assessment; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has a neurological condition causing unpredictable episodes of confusion. Schedule changes and assistive tools have not prevented missed risk cues during crisis sessions. Which response is strongest?',
@@ -1413,24 +858,15 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Conclude that the therapist can never perform any professional role',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Trying accommodations does not justify continued unsafe performance when they are ineffective for the duty.
-<<<<<<< HEAD
 B. Incorrect. Clients cannot assume the professional fitness decision.
 C. Correct. The response addresses the essential high-risk function, continuity, support, and reevaluation.
 D. Incorrect. Inability to safely perform one duty does not establish permanent inability to perform every professional role.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Clients cannot assume the professional fitness decision.
-		C. Correct. The response addresses the essential high-risk function, continuity, support, and reevaluation.
-		D. Incorrect. Inability to safely perform one duty does not establish permanent inability to perform every professional role.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Accommodation Limits and Essential Duties; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician feels improved after leave for a serious illness and requests a full high-risk caseload. Trial duties still show delayed decisions, late notes, and reduced endurance. What is the best response?',
 		'option_a'       => 'Continue limited or supported duties and base fuller return on demonstrated restoration of judgment, reliability, endurance, and risk-management capacity',
 		'option_b'       => 'Restore full duties because the clinician reports feeling better',
-<<<<<<< HEAD
 		'option_c'       => 'Permanently end the clinician\\'s career because prior impairment is irreversible',
 		'option_d'       => 'Let clients vote on readiness',
 		'correct_option' => 'a',
@@ -1442,38 +878,16 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 	),
 	array(
 		'question_text'  => 'A therapist has chronic pain, begins a medication that causes sedation, has slept poorly for several nights, misses two suicide-risk cues, falls behind on records, and dismisses a supervisor\\'s concerns. The therapist plans to continue a full caseload because the condition is private and clients need continuity. Which response best reflects professional responsibilities?',
-=======
-		'option_c'       => 'Permanently end the clinician\'s career because prior impairment is irreversible',
-		'option_d'       => 'Let clients vote on readiness',
-		'correct_option' => 'a',
-		'explanation'    => 'A. Correct. Current performance supports a staged or limited return rather than full high-risk duties.
-		B. Incorrect. Subjective improvement does not resolve the continuing functional deficits.
-		C. Incorrect. Prior impairment does not automatically establish permanent inability to practice.
-		D. Incorrect. Clients cannot assume responsibility for professional fitness and assignment decisions.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Return-to-Practice Readiness; log error category PHYSICAL-CONDITIONS-FATIGUE.',
-	),
-	array(
-		'question_text'  => 'A therapist has chronic pain, begins a medication that causes sedation, has slept poorly for several nights, misses two suicide-risk cues, falls behind on records, and dismisses a supervisor\'s concerns. The therapist plans to continue a full caseload because the condition is private and clients need continuity. Which response best reflects professional responsibilities?',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		'option_a'       => 'Continue unchanged because privacy and continuity outweigh the performance concerns',
 		'option_b'       => 'Disclose every diagnosis and medication to all clients and permanently leave practice',
 		'option_c'       => 'Wait for a complaint before changing duties',
 		'option_d'       => 'Assess current fitness and immediate risk, limit or stop unsafe duties, arrange qualified coverage and continuity, engage appropriate medical, supervisory, and accommodation processes, document relevant decisions, and reevaluate before fuller return',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Privacy and continuity do not justify continuing when current functioning is unsafe.
-<<<<<<< HEAD
 B. Incorrect. Broad disclosure and permanent career termination are disproportionate and unnecessary.
 C. Incorrect. Professional responsibility arises before a complaint when risk and functional decline are established.
 D. Correct. This integrates functional assessment, safety, duty modification, continuity, support, documentation, and return readiness.
 CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.',
-=======
-		B. Incorrect. Broad disclosure and permanent career termination are disproportionate and unnecessary.
-		C. Incorrect. Professional responsibility arises before a complaint when risk and functional decline are established.
-		D. Correct. This integrates functional assessment, safety, duty modification, continuity, support, documentation, and return readiness.
-		CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.
-		Remediation: Return to Workbook 4, Chapter 4: Physical Conditions, Fatigue, and Professional Functioning; review Comprehensive Physical-Functioning Response; log error category PHYSICAL-CONDITIONS-FATIGUE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist recognizes that a personal condition is interfering with safe professional performance. What is the therapist’s primary ethical responsibility?',
@@ -1483,18 +897,10 @@ CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, 
 		'option_d'       => 'Disclose every private health detail to all current clients',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Financial concerns may be important, but they do not outweigh safe and competent client care.
-<<<<<<< HEAD
 B. Correct. Recognition must be followed by timely corrective action that protects clients and addresses the functional problem.
 C. Incorrect. A complaint is not required when impairment and risk are already apparent.
 D. Incorrect. Clients need necessary service information, not an automatic disclosure of all private health details.
 CTA Exam Strategy: Anchor the item to Primary Ethical Responsibility. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Correct. Recognition must be followed by timely corrective action that protects clients and addresses the functional problem.
-		C. Incorrect. A complaint is not required when impairment and risk are already apparent.
-		D. Incorrect. Clients need necessary service information, not an automatic disclosure of all private health details.
-		CTA Exam Strategy: Anchor the item to Primary Ethical Responsibility. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Primary Ethical Responsibility; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician is distinguishing ordinary self-correction and support from a formal licensing-agency fitness proceeding. Which statement is most accurate when an impaired clinician begins personal treatment?',
@@ -1504,18 +910,10 @@ CTA Exam Strategy: Anchor the item to Primary Ethical Responsibility. Eliminate 
 		'option_d'       => 'Treatment may support recovery, but current duties and client risks must still be addressed',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Beginning treatment does not establish immediate readiness for every duty.
-<<<<<<< HEAD
 B. Incorrect. The clinician retains professional responsibility for client care and practice decisions.
 C. Incorrect. Help-seeking and client protection should occur before a complaint when concerns arise.
 D. Correct. Recovery support and present client-protection measures may both be necessary.
 CTA Exam Strategy: Keep the tested distinction clear: Treatment vs. Current Practice Safety. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.',
-=======
-		B. Incorrect. The clinician retains professional responsibility for client care and practice decisions.
-		C. Incorrect. Help-seeking and client protection should occur before a complaint when concerns arise.
-		D. Correct. Recovery support and present client-protection measures may both be necessary.
-		CTA Exam Strategy: Keep the tested distinction clear: Treatment vs. Current Practice Safety. Separate a condition, stressor, treatment status, or accommodation from its demonstrated effect on safe and effective professional functioning.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Treatment vs. Current Practice Safety; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor is planning how to document functional concerns, immediate safeguards, follow-through, and readiness to resume duties. What does a proportionate impairment response require?',
@@ -1525,18 +923,10 @@ CTA Exam Strategy: Keep the tested distinction clear: Treatment vs. Current Prac
 		'option_d'       => 'Using the same response for every diagnosis and setting',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The response should match functional decline, urgency, role, and client risk.
-<<<<<<< HEAD
 B. Incorrect. Permanent removal is unnecessarily extreme for many manageable or temporary concerns.
 C. Incorrect. Ethical action should occur before preventable harm when functioning is affected.
 D. Incorrect. Impairment responses require individualized analysis rather than a diagnosis-based formula.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. Permanent removal is unnecessarily extreme for many manageable or temporary concerns.
-		C. Incorrect. Ethical action should occur before preventable harm when functioning is affected.
-		D. Incorrect. Impairment responses require individualized analysis rather than a diagnosis-based formula.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Proportionate Response; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician must stop an unsafe professional duty because of impairment. What additional responsibility is most important?',
@@ -1546,18 +936,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'Delete records that describe the affected services',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Clients cannot assume the clinician’s responsibility to assess professional fitness.
-<<<<<<< HEAD
 B. Incorrect. Current client protection cannot wait for completion of treatment.
 C. Correct. Limiting or stopping duties must be paired with reasonable continuity planning.
 D. Incorrect. Records must be maintained accurately; deleting relevant records would create additional ethical and legal problems.
 CTA Exam Strategy: Anchor the item to Continuity of Care. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.',
-=======
-		B. Incorrect. Current client protection cannot wait for completion of treatment.
-		C. Correct. Limiting or stopping duties must be paired with reasonable continuity planning.
-		D. Incorrect. Records must be maintained accurately; deleting relevant records would create additional ethical and legal problems.
-		CTA Exam Strategy: Anchor the item to Continuity of Care. Eliminate options based only on diagnosis, stigma, confidence, income, or an unnecessarily permanent response when the facts call for functional assessment and proportionate protection.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Continuity of Care; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician is distinguishing ordinary self-correction and support from a formal licensing-agency fitness proceeding. Which statement best describes Business and Professions Code section 820 in an impairment scenario?',
@@ -1567,18 +949,10 @@ CTA Exam Strategy: Anchor the item to Continuity of Care. Eliminate options base
 		'option_d'       => 'It authorizes a formal licensing-agency examination process when illness may impair safe practice',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Section 820 does not create a universal colleague-reporting duty for every diagnosis.
-<<<<<<< HEAD
 B. Incorrect. The statute focuses on possible inability to practice safely, not diagnosis alone.
 C. Incorrect. Everyday ethical client-protection responsibilities exist independently of a formal Board process.
 D. Correct. Section 820 concerns formal agency evaluation of possible inability to practice safely.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. The statute focuses on possible inability to practice safely, not diagnosis alone.
-		C. Incorrect. Everyday ethical client-protection responsibilities exist independently of a formal Board process.
-		D. Correct. Section 820 concerns formal agency evaluation of possible inability to practice safely.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Board Fitness Process; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has increasing fatigue and several delayed notes. Judgment and client safety remain intact, and the therapist can reduce the schedule, obtain treatment, and use weekly consultation. What is the strongest response?',
@@ -1588,18 +962,10 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Tell every client the therapist’s diagnosis before making any schedule change',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The facts support a limited, monitored response that preserves safe care while addressing the decline.
-<<<<<<< HEAD
 B. Incorrect. Lack of complaint does not justify ignoring a worsening pattern.
 C. Incorrect. Permanent closure is disproportionate when safe practice may continue with adequate support.
 D. Incorrect. Necessary service communication does not require broad private-health disclosure.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Lack of complaint does not justify ignoring a worsening pattern.
-		C. Incorrect. Permanent closure is disproportionate when safe practice may continue with adequate support.
-		D. Incorrect. Necessary service communication does not require broad private-health disclosure.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Early Decline and Available Support; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician is confused, cannot remain alert, and is scheduled to conduct an urgent suicide-risk assessment. What should occur first?',
@@ -1609,18 +975,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Wait for a routine consultation appointment later in the week',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Rushing an urgent assessment while unable to function safely increases risk.
-<<<<<<< HEAD
 B. Incorrect. The client cannot monitor or assume responsibility for clinician fitness.
 C. Correct. Immediate safety and qualified coverage come before routine long-term planning.
 D. Incorrect. A delayed consultation does not address the immediate high-risk duty.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The client cannot monitor or assume responsibility for clinician fitness.
-		C. Correct. Immediate safety and qualified coverage come before routine long-term planning.
-		D. Incorrect. A delayed consultation does not address the immediate high-risk duty.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Immediate High-Risk Duty; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT tells the supervisor about “stress” but omits repeated memory errors and a missed violence-risk cue. What is the most significant concern?',
@@ -1630,18 +988,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The supervisor should provide personal psychotherapy to the registered AMFT',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The supervisee should disclose functionally relevant information, not necessarily every private treatment detail.
-<<<<<<< HEAD
 B. Correct. Material omissions interfere with supervisory risk assessment, oversight, and assignment decisions.
 C. Incorrect. Supervision does not cure unsafe functioning or missing information.
 D. Incorrect. The supervisor should supervise professional work and refer for personal treatment rather than become the treating clinician.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. Material omissions interfere with supervisory risk assessment, oversight, and assignment decisions.
-		C. Incorrect. Supervision does not cure unsafe functioning or missing information.
-		D. Incorrect. The supervisor should supervise professional work and refer for personal treatment rather than become the treating clinician.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Supervisee Disclosure and Assignment Safety; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT has direct knowledge that a colleague’s impairment is reducing practice effectiveness. There is no immediate emergency, and a private conversation is feasible. What is the strongest initial response?',
@@ -1651,18 +1001,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Address the colleague privately when feasible, assist with remedial action, and use appropriate channels if the concern is not adequately addressed',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Broad client notification is unnecessary, may violate privacy, and may create harm.
-<<<<<<< HEAD
 B. Incorrect. The concern is professionally relevant when impairment interferes with practice effectiveness.
 C. Incorrect. The observer should focus on conduct and functioning rather than make an unsupported diagnosis.
 D. Correct. This reflects CAMFT Code of Ethics section 8.2 by beginning with proportionate consultation or assistance when feasible, while preserving escalation through appropriate channels if risk persists or client welfare requires it.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. The concern is professionally relevant when impairment interferes with practice effectiveness.
-		C. Incorrect. The observer should focus on conduct and functioning rather than make an unsupported diagnosis.
-		D. Correct. This reflects CAMFT Code of Ethics section 8.2 by beginning with proportionate consultation or assistance when feasible, while preserving escalation through appropriate channels if risk persists or client welfare requires it.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Colleague Concern Without Immediate Danger; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist recognizes a possible impairment concern and must choose a proportionate response that protects clients and preserves continuity of care. Which impairment-related documentation is most appropriate?',
@@ -1672,18 +1014,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Avoid documentation because impairment is always a personal matter',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Neutral, behavior-based documentation should show the professional concern, reasoning, action, and follow-up.
-<<<<<<< HEAD
 B. Incorrect. A conclusory label without supporting facts or action is inadequate.
 C. Incorrect. Unnecessary private information should not be included merely for completeness.
 D. Incorrect. When impairment affects professional decisions and client care, relevant documentation is important.
 CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.',
-=======
-		B. Incorrect. A conclusory label without supporting facts or action is inadequate.
-		C. Incorrect. Unnecessary private information should not be included merely for completeness.
-		D. Incorrect. When impairment affects professional decisions and client care, relevant documentation is important.
-		CTA Exam Strategy: Apply the functional standard to the facts: identify what has changed, how client care is affected, and which proportionate safeguard or professional response follows.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Documentation and Privacy; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist knows that severe symptoms are causing missed risk cues but refuses to reduce the caseload because income would decline. What should control the decision?',
@@ -1693,18 +1027,10 @@ CTA Exam Strategy: Apply the functional standard to the facts: identify what has
 		'option_d'       => 'The therapist’s belief that good intentions compensate for errors',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Past reputation does not establish current safe functioning.
-<<<<<<< HEAD
 B. Incorrect. A complaint is not required when significant risk is already known.
 C. Correct. Client welfare and current professional capacity control over income preservation.
 D. Incorrect. Good intentions do not restore missed risk recognition or safe performance.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. A complaint is not required when significant risk is already known.
-		C. Correct. Client welfare and current professional capacity control over income preservation.
-		D. Incorrect. Good intentions do not restore missed risk recognition or safe performance.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Income and Client Safety; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician enters treatment for significant impairment but keeps the same high-risk caseload, continues making errors, and has no coverage plan. What is the primary ethical problem?',
@@ -1714,18 +1040,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Treatment must be completed before any impairment can be recognized',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Seeking treatment is responsible and is not itself misconduct.
-<<<<<<< HEAD
 B. Correct. The clinician must address present client safety, workload, and continuity in addition to treatment.
 C. Incorrect. Personal care does not automatically prohibit practice; current functioning and safeguards matter.
 D. Incorrect. Impairment may be recognized and acted upon before treatment is completed.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. The clinician must address present client safety, workload, and continuity in addition to treatment.
-		C. Incorrect. Personal care does not automatically prohibit practice; current functioning and safeguards matter.
-		D. Incorrect. Impairment may be recognized and acted upon before treatment is completed.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Treatment Without Practice Adjustment; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A colleague appears severely disoriented, cannot follow conversation, and is about to meet with a client who has an active plan to seriously harm another person. What is the strongest response?',
@@ -1735,18 +1053,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Use immediate supervisory or workplace procedures to prevent unsafe practice and secure qualified coverage for the client',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A later private conversation does not address the immediate danger.
-<<<<<<< HEAD
 B. Incorrect. Mass communication and diagnostic speculation are unnecessary and potentially harmful.
 C. Incorrect. A diagnosis is not required to act on observable inability to practice safely.
 D. Correct. Immediate client protection and qualified coverage take priority.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Mass communication and diagnostic speculation are unnecessary and potentially harmful.
-		C. Incorrect. A diagnosis is not required to act on observable inability to practice safely.
-		D. Correct. Immediate client protection and qualified coverage take priority.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Immediate Colleague Risk; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a leave, a therapist reports feeling much better. Trial sessions still show late documentation, poor concentration, and avoidance of complex cases. What is the strongest next step?',
@@ -1756,18 +1066,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Ask clients to vote on whether the therapist should return',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Objective performance supports a continued staged response and reassessment.
-<<<<<<< HEAD
 B. Incorrect. Feeling better does not establish readiness when functional deficits remain.
 C. Incorrect. Permanent career termination is disproportionate to the facts.
 D. Incorrect. Clients do not decide clinician fitness or professional duty assignments.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Incorrect. Feeling better does not establish readiness when functional deficits remain.
-		C. Incorrect. Permanent career termination is disproportionate to the facts.
-		D. Incorrect. Clients do not decide clinician fitness or professional duty assignments.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Return-to-Practice Readiness; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor confirms that a registered AMFT’s impairment is causing missed risk information and unreliable documentation. The registered AMFT is willing to seek treatment. What response is strongest?',
@@ -1777,18 +1079,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'Remove all hours previously earned regardless of whether they were lawfully and competently completed',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Willingness to seek treatment does not resolve current assignment risk.
-<<<<<<< HEAD
 B. Correct. This combines client protection, supervision, remediation, continuity, and reassessment.
 C. Incorrect. The supervisor should not become the supervisee’s personal therapist.
 D. Incorrect. The facts do not justify automatically invalidating all prior lawful experience.
 CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.',
-=======
-		B. Correct. This combines client protection, supervision, remediation, continuity, and reassessment.
-		C. Incorrect. The supervisor should not become the supervisee’s personal therapist.
-		D. Incorrect. The facts do not justify automatically invalidating all prior lawful experience.
-		CTA Exam Strategy: In impairment scenarios, prioritize observable functioning and client risk, then select the least extreme response that still provides adequate protection, supervision, continuity, and reassessment.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Supervisor Response to Significant Impairment; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist learns that a licensed colleague has begun treatment for depression. No unsafe practice, client risk, or specific reporting trigger is known. What is the best analysis?',
@@ -1798,18 +1092,10 @@ CTA Exam Strategy: In impairment scenarios, prioritize observable functioning an
 		'option_d'       => 'The therapist should inform the colleague’s clients so they can investigate',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. There is no universal duty to report a colleague merely because a diagnosis exists.
-<<<<<<< HEAD
 B. Incorrect. Treatment does not automatically require suspension or Board approval.
 C. Correct. The analysis must be based on functioning, risk, role, and a specific reporting authority.
 D. Incorrect. Client disclosure would be unnecessary and potentially harmful without a legitimate service or safety basis.
 CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.',
-=======
-		B. Incorrect. Treatment does not automatically require suspension or Board approval.
-		C. Correct. The analysis must be based on functioning, risk, role, and a specific reporting authority.
-		D. Incorrect. Client disclosure would be unnecessary and potentially harmful without a legitimate service or safety basis.
-		CTA Exam Strategy: Match the facts to the exact legal standard—current ability to practice safely, observable impairment, and the authorized Board process—rather than moral judgment, diagnosis alone, or an invented reporting duty.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Reporting Precision; log error category ETHICAL-IMPAIRMENT-RESPONSE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist has severe sleep loss and medication side effects, has missed two suicide-risk cues, is behind on records, has begun personal treatment, and continues a full caseload to preserve income. The therapist minimizes the problem to a supervisor and has no coverage plan. Which response best reflects the therapist’s responsibilities?',
@@ -1819,45 +1105,9 @@ CTA Exam Strategy: Match the facts to the exact legal standard—current ability
 		'option_d'       => 'Prioritize immediate client safety, provide accurate functional information, obtain appropriate help, limit or stop unsafe duties, arrange continuity, document the plan, and resume fuller work only after functioning is demonstrated',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Treatment and absence of complaint do not resolve established current risk.
-<<<<<<< HEAD
 B. Incorrect. Broad disclosure and permanent surrender are disproportionate and unsupported.
 C. Incorrect. The therapist has an independent responsibility to disclose relevant functional concerns and act.
 D. Correct. This integrates the full PROTECT sequence: safety, assessment, help, duty modification, continuity, documentation, and return evaluation.
 CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.',
-=======
-		B. Incorrect. Broad disclosure and permanent surrender are disproportionate and unsupported.
-		C. Incorrect. The therapist has an independent responsibility to disclose relevant functional concerns and act.
-		D. Correct. This integrates the full PROTECT sequence: safety, assessment, help, duty modification, continuity, documentation, and return evaluation.
-		CTA Exam Strategy: For integrated impairment items, sort the facts into SAFETY, FUNCTION, ROLE, RESPONSE, CONTINUITY, and RETURN; choose the option that addresses all six without relying on diagnosis or stigma.
-		Remediation: Return to Workbook 4, Chapter 5: Responding Ethically to Professional Impairment; review Comprehensive Ethical Response; log error category ETHICAL-IMPAIRMENT-RESPONSE.
-		Performance Analysis and Remediation Plan
-		Chapter
-		Score
-		High-Confidence Misses
-		Low-Confidence Correct
-		Next Remediation Action
-		1
-		____ / 17
-		WB4 Ch. 1 | IMPAIRMENT-RECOGNITION
-		2
-		____ / 17
-		WB4 Ch. 2 | SUBSTANCE-USE-IMPAIRMENT
-		3
-		____ / 17
-		WB4 Ch. 3 | MENTAL-HEALTH-BURNOUT
-		4
-		____ / 17
-		WB4 Ch. 4 | PHYSICAL-CONDITIONS-FATIGUE
-		5
-		____ / 17
-		WB4 Ch. 5 | ETHICAL-IMPAIRMENT-RESPONSE
-		Score interpretation control: Use results to identify strengths and remediation priorities. Do not present this practice score as an official BBS passing score or a guarantee of passage.
-		Current Authorities and Source Controls
-		The LMFT-specific conversions and time-sensitive professional-impairment, alcohol and drug use, mental or physical illness, Board examination, supervision, colleague-assistance, client-protection, and return-to-practice principles in this assessment were verified through August 3, 2026. Re-audit before future publication or use and after any material legal, regulatory, disciplinary-guideline, ethical-code, or examination change.
-		California Board of Behavioral Sciences, 2026 Statutes and Regulations: Open official source
-		BBS Uniform Standards Related to Substance Abuse and Disciplinary Guidelines, July 2026: Open official source
-		BBS Supervisor Resources: Open official source
-		CAMFT Code of Ethics, current online edition: Open official source',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

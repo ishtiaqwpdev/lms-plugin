@@ -358,7 +358,6 @@ class CTA_Courses {
 		$login_url       = CTA_Emails::get_page_url( 'cta_login_page_id' );
 		$is_free_course  = (float) $course->price <= 0;
 		$video_helper    = new CTA_Student_Dashboard();
-<<<<<<< HEAD
 		$resources       = class_exists( 'CTA_Database' ) ? CTA_Database::get_downloadable_resources( $course_id ) : array();
 		if ( class_exists( 'CTA_Course_Materials' ) ) {
 			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
@@ -367,12 +366,6 @@ class CTA_Courses {
 			&& class_exists( 'CTA_CE_Materials_Sync' ) ) {
 			$resources = CTA_CE_Materials_Sync::filter_ce_course_resources( $course_id, $resources );
 		}
-=======
-		$resources       = CTA_Database::get_downloadable_resources( $course_id );
-		if ( class_exists( 'CTA_Course_Materials' ) ) {
-			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
-		}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		$syllabus_meta   = class_exists( 'CTA_Syllabus_Sync' )
 			? CTA_Syllabus_Sync::get_meta( $course )
 			: array();

@@ -25,12 +25,6 @@ class CTA_Course_Materials {
 	/** @var int Max upload size in bytes (25MB — fits exam-prep audio MP3s). */
 	const MAX_UPLOAD_BYTES = 26214400;
 
-<<<<<<< HEAD
-=======
-	const CE_MATERIALS_HEAL_OPTION = 'cta_ce_catalog_materials_healed_1_0_299';
-	const CE_MATERIALS_HEAL_LOCK   = 'cta_ce_materials_heal_lock';
-
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	/** @var array Allowed MIME types keyed by extension. */
 	const ALLOWED_MIMES = array(
 		'pdf'  => 'application/pdf',
@@ -152,19 +146,10 @@ class CTA_Course_Materials {
 			if ( ! CTA_CE_Access::has_active_access( $user_id, $course_id ) ) {
 				return false;
 			}
-<<<<<<< HEAD
 			if ( class_exists( 'CTA_CE_Materials_Sync' )
 				&& ! CTA_CE_Materials_Sync::resource_belongs_to_ce_course( $course_id, $resource ) ) {
 				return false;
 			}
-=======
-			// CE learners never receive exam-prep files or controlled assessment keys.
-			if ( self::is_ce_learner_blocked_resource( $resource, $course ) ) {
-				return false;
-			}
-		} elseif ( self::is_ce_learner_blocked_resource( $resource, $course ) ) {
-			return false;
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		}
 
 		// CE (and non-exam-prep) per-resource unlock gates.
@@ -1220,10 +1205,7 @@ class CTA_Course_Materials {
 					'Clinical and Ethical Excellence in Telehealth: The Essential California Framework',
 					'Clinical and Ethical Excellence in Telehealth',
 				),
-<<<<<<< HEAD
 				'course_code'         => 'CTA-CE-002',
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				'source_file'         => 'assets/course-materials/CTA_Telehealth_Clinical_Resource_Toolkit_v2_0.docx',
 				// Prefer PDF if present (matches other course handouts); fall back to DOCX.
 				'alt_source_files'    => array(
@@ -1442,7 +1424,6 @@ class CTA_Course_Materials {
 		$code = isset( $bundle['course_code'] ) ? trim( (string) $bundle['course_code'] ) : '';
 		if ( '' !== $code && 'CTA-CE-001' === $code && class_exists( 'CTA_Law_Ethics_Module_Sync' ) ) {
 			$course = CTA_Law_Ethics_Module_Sync::find_course();
-<<<<<<< HEAD
 			if ( $course ) {
 				return $course;
 			}
@@ -1458,9 +1439,6 @@ class CTA_Course_Materials {
 		if ( '' !== $code && 'CTA-CE-003' === $code && class_exists( 'CTA_Suicide_Risk_Module_Sync' ) ) {
 			$course = CTA_Suicide_Risk_Module_Sync::find_course();
 			if ( $course ) {
-=======
-			if ( $course && self::course_is_ce_for_materials( $course ) ) {
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				return $course;
 			}
 		}
@@ -1471,12 +1449,6 @@ class CTA_Course_Materials {
 			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$rows  = $wpdb->get_results( "SELECT * FROM {$table} ORDER BY id ASC" );
 			foreach ( (array) $rows as $row ) {
-<<<<<<< HEAD
-=======
-				if ( ! self::course_is_ce_for_materials( $row ) ) {
-					continue;
-				}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 				if ( empty( $row->syllabus_meta ) ) {
 					continue;
 				}
@@ -1490,7 +1462,6 @@ class CTA_Course_Materials {
 		$titles = isset( $bundle['course_match_titles'] ) ? (array) $bundle['course_match_titles'] : array();
 		foreach ( $titles as $title ) {
 			$title = trim( (string) $title );
-<<<<<<< HEAD
 			if ( '' === $title || ! class_exists( 'CTA_Database' ) ) {
 				continue;
 			}
@@ -1505,76 +1476,11 @@ class CTA_Course_Materials {
 				continue;
 			}
 			return $course;
-=======
-			if ( '' === $title ) {
-				continue;
-			}
-			$course = self::find_ce_course_by_exact_title( $title );
-			if ( $course ) {
-				return $course;
-			}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		}
 		return null;
 	}
 
 	/**
-<<<<<<< HEAD
-=======
-	 * Bundled CE materials must never attach to Exam Prep programs.
-	 *
-	 * @param object|null $course Course row.
-	 * @return bool
-	 */
-	private static function course_is_ce_for_materials( $course ) {
-		if ( ! $course ) {
-			return false;
-		}
-		if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
-			return false;
-		}
-		if ( class_exists( 'CTA_CE_Access' ) ) {
-			return CTA_CE_Access::is_ce_course( $course );
-		}
-		$type = isset( $course->product_type ) ? (string) $course->product_type : 'ce';
-		return '' === $type || 'ce' === $type;
-	}
-
-	/**
-	 * Exact CE title match only — never LIKE (avoids Exam Prep / sibling CE collisions).
-	 *
-	 * @param string $title Course title.
-	 * @return object|null
-	 */
-	private static function find_ce_course_by_exact_title( $title ) {
-		global $wpdb;
-
-		$title = trim( (string) $title );
-		if ( '' === $title ) {
-			return null;
-		}
-
-		$table = $wpdb->prefix . 'cta_courses';
-
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-		$rows = $wpdb->get_results(
-			$wpdb->prepare(
-				"SELECT * FROM {$table} WHERE title = %s ORDER BY id ASC",
-				$title
-			)
-		);
-
-		foreach ( (array) $rows as $row ) {
-			if ( self::course_is_ce_for_materials( $row ) ) {
-				return $row;
-			}
-		}
-
-		return null;
-	}
-
-	/**
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Copy a local filesystem file into protected course materials storage.
 	 *
 	 * @param string $source_path Absolute source path.
@@ -1715,22 +1621,8 @@ class CTA_Course_Materials {
 			wp_die( esc_html__( 'This file is not available.', 'cta-lms' ), 403 );
 		}
 
-<<<<<<< HEAD
 		$user_id = get_current_user_id();
 		if ( ! self::user_can_access( $user_id, $resource ) ) {
-=======
-		$course_for_serve = class_exists( 'CTA_Database' )
-			? CTA_Database::get_course( (int) ( $resource->course_id ?? 0 ) )
-			: null;
-		$is_admin_user = function_exists( 'current_user_can' ) && current_user_can( 'manage_options' );
-		$ce_blocked    = self::is_ce_learner_blocked_resource( $resource, $course_for_serve );
-		if ( $ce_blocked && ! $is_admin_user ) {
-			wp_die( esc_html__( 'This file is not available.', 'cta-lms' ), 403 );
-		}
-
-		$user_id = get_current_user_id();
-		if ( ! $ce_blocked && ! self::user_can_access( $user_id, $resource ) ) {
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			$gate_msg = self::get_unlock_lock_message( $user_id, $resource );
 			if ( $gate_msg ) {
 				wp_die( esc_html( $gate_msg ), 403 );
@@ -1857,23 +1749,11 @@ class CTA_Course_Materials {
 	/**
 	 * Strip admin/source/control package files from a student-facing resource list.
 	 *
-<<<<<<< HEAD
-=======
-	 * On CE courses this also removes exam-prep program files and controlled
-	 * answer keys / detailed rationales so learners never see Open/Download.
-	 *
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * @param array $resources Resource rows.
 	 * @return array
 	 */
 	public static function filter_student_visible_resources( $resources ) {
-<<<<<<< HEAD
 		$out = array();
-=======
-		$out          = array();
-		$course_cache = array();
-
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		foreach ( (array) $resources as $resource ) {
 			$path_bits = trim(
 				(string) ( $resource->file_path ?? '' ) . ' ' .
@@ -1886,453 +1766,12 @@ class CTA_Course_Materials {
 			if ( self::is_archived_resource( $resource ) ) {
 				continue;
 			}
-<<<<<<< HEAD
-=======
-
-			$course_id = isset( $resource->course_id ) ? (int) $resource->course_id : 0;
-			if ( $course_id && ! isset( $course_cache[ $course_id ] ) ) {
-				$course_cache[ $course_id ] = class_exists( 'CTA_Database' )
-					? CTA_Database::get_course( $course_id )
-					: null;
-			}
-			$course = $course_id && isset( $course_cache[ $course_id ] )
-				? $course_cache[ $course_id ]
-				: null;
-
-			if ( self::is_ce_learner_blocked_resource( $resource, $course ) ) {
-				continue;
-			}
-
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			$out[] = $resource;
 		}
 		return $out;
 	}
 
 	/**
-<<<<<<< HEAD
-=======
-	 * Whether a CE learner must never see or download this resource.
-	 *
-	 * Exam Prep keeps gated rationale release. CE treats controlled keys as
-	 * admin-only and never displays exam-prep program files.
-	 *
-	 * @param object      $resource Resource row.
-	 * @param object|null $course   Course row when already loaded.
-	 * @return bool
-	 */
-	public static function is_ce_learner_blocked_resource( $resource, $course = null ) {
-		if ( ! $resource ) {
-			return false;
-		}
-
-		if ( ! $course && ! empty( $resource->course_id ) && class_exists( 'CTA_Database' ) ) {
-			$course = CTA_Database::get_course( (int) $resource->course_id );
-		}
-
-		if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
-			return false;
-		}
-
-		$is_ce = class_exists( 'CTA_CE_Access' )
-			? CTA_CE_Access::is_ce_course( $course )
-			: ( ! $course || ( empty( $course->product_type ) || 'ce' === (string) $course->product_type ) );
-
-		if ( ! $is_ce ) {
-			return false;
-		}
-
-		if ( self::is_exam_prep_program_material( $resource ) ) {
-			return true;
-		}
-
-		return self::is_protected_rationale_resource( $resource );
-	}
-
-	/**
-	 * Whether a downloadable row is an Exam Prep program file (not a CE handout).
-	 *
-	 * Detects original plugin paths, protected-storage filenames, and titles
-	 * from the seven Exam Prep programs. Does not match CE toolkits such as
-	 * the Telehealth Clinical Resource Toolkit or CE-001 Practice Protection Toolkit.
-	 *
-	 * @param object|null $resource Resource row.
-	 * @return bool
-	 */
-	public static function is_exam_prep_program_material( $resource ) {
-		if ( ! $resource ) {
-			return false;
-		}
-
-		$hay = strtolower(
-			str_replace(
-				'\\',
-				'/',
-				(string) ( $resource->title ?? '' ) . ' ' .
-				(string) ( $resource->file_path ?? '' ) . ' ' .
-				(string) ( $resource->file_url ?? '' )
-			)
-		);
-
-		if ( '' === trim( $hay ) ) {
-			return false;
-		}
-
-		$markers = array(
-			'/lmft-law-ethics/',
-			'/lcsw-law-ethics/',
-			'/lpcc-law-ethics/',
-			'/lmft-clinical/',
-			'/lcsw-aswb/',
-			'/lpcc-ncmhce/',
-			'/lmft-amftrb/',
-			'cta_lmft_law_and_ethics_ep_',
-			'cta_lcsw_law_and_ethics_ep_',
-			'cta_lpcc_law_and_ethics_ep_',
-			'cta_lmft_amftrb_',
-			'cta_lpcc_ncmhce_',
-			'cta_lcsw_2026_comprehensive',
-			'cta_lmft_wb',
-			'cta_lcsw_wb',
-			'cta_lpcc_wb',
-			'flashcard-study-center',
-			'exam_preparation',
-			'exam preparation',
-			'candidate edition',
-			'candidate form',
-			'candidate booklet',
-			'learner booklet',
-			'student workbook',
-			'practice examination a',
-			'practice examination b',
-			'comprehensive final examination',
-			'comprehensive simulation',
-			'ncmhce',
-			'amftrb',
-			'aswb clinical',
-			'aswb exam',
-			'license-specific module',
-			'practice act module',
-			'807-card',
-			'807 card',
-		);
-
-		foreach ( $markers as $marker ) {
-			if ( false !== strpos( $hay, $marker ) ) {
-				return true;
-			}
-		}
-
-		if ( preg_match( '/\bworkbook\s+\d+\s+[—\-:]/i', $hay ) ) {
-			return true;
-		}
-
-		if ( preg_match( '/\bform\s+[ab]\s+[—\-:]/i', $hay ) ) {
-			return true;
-		}
-
-		return false;
-	}
-
-	/**
-	 * Self-heal: unlink exam-prep files that were attached to CE courses.
-	 *
-	 * Reassigns rows to the matching Exam Prep program when possible. If that
-	 * program already has the same title, the CE copy is archived (not deleted).
-	 * Files on disk are never removed.
-	 *
-	 * @param int $limit Max rows to process this pass.
-	 * @return array{ok:bool,reassigned:int,archived:int,scanned:int,remaining:int,by_course:array}
-	 */
-	public static function heal_ce_catalog_material_mapping( $limit = 80 ) {
-		global $wpdb;
-
-		$limit     = max( 1, (int) $limit );
-		$courses_t = $wpdb->prefix . 'cta_courses';
-		$res_t     = $wpdb->prefix . 'cta_downloadable_resources';
-
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-		$ce_courses = $wpdb->get_results(
-			"SELECT * FROM {$courses_t}
-			WHERE product_type IS NULL OR product_type = '' OR product_type = 'ce'
-			ORDER BY id ASC"
-		);
-
-		$reassigned = 0;
-		$archived   = 0;
-		$scanned    = 0;
-		$by_course  = array();
-		$processed  = 0;
-
-		foreach ( (array) $ce_courses as $course ) {
-			if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
-				continue;
-			}
-
-			$course_id = (int) $course->id;
-			$label     = (string) ( $course->title ?? ( 'Course #' . $course_id ) );
-			if ( ! isset( $by_course[ $course_id ] ) ) {
-				$by_course[ $course_id ] = array(
-					'title'      => $label,
-					'reassigned' => 0,
-					'archived'   => 0,
-					'kept'       => 0,
-				);
-			}
-
-			$resources = class_exists( 'CTA_Database' )
-				? CTA_Database::get_downloadable_resources( $course_id )
-				: array();
-
-			foreach ( (array) $resources as $resource ) {
-				++$scanned;
-
-				$is_stray = self::is_exam_prep_program_material( $resource );
-				$ce_home  = $is_stray ? 0 : self::resolve_bundled_ce_owner_course_id( $resource );
-
-				if ( ! $is_stray && ( ! $ce_home || $ce_home === $course_id ) ) {
-					++$by_course[ $course_id ]['kept'];
-					continue;
-				}
-
-				if ( $processed >= $limit ) {
-					return array(
-						'ok'         => false,
-						'reassigned' => $reassigned,
-						'archived'   => $archived,
-						'scanned'    => $scanned,
-						'remaining'  => 1,
-						'by_course'  => $by_course,
-					);
-				}
-
-				++$processed;
-
-				$dest_id = $is_stray
-					? self::resolve_exam_prep_owner_course_id( $resource )
-					: $ce_home;
-				$title   = sanitize_text_field( (string) ( $resource->title ?? '' ) );
-
-				if ( $dest_id && $dest_id !== $course_id ) {
-					$dup = (int) $wpdb->get_var(
-						$wpdb->prepare(
-							"SELECT id FROM {$res_t} WHERE course_id = %d AND title = %s AND id <> %d LIMIT 1",
-							$dest_id,
-							$title,
-							(int) $resource->id
-						)
-					);
-					if ( $dup ) {
-						self::archive_resource_row( (int) $resource->id, $title );
-						++$archived;
-						++$by_course[ $course_id ]['archived'];
-					} else {
-						// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-						$wpdb->update(
-							$res_t,
-							array(
-								'course_id' => $dest_id,
-								'module_id' => 0,
-							),
-							array( 'id' => (int) $resource->id ),
-							array( '%d', '%d' ),
-							array( '%d' )
-						);
-						++$reassigned;
-						++$by_course[ $course_id ]['reassigned'];
-					}
-					continue;
-				}
-
-				self::archive_resource_row( (int) $resource->id, $title );
-				++$archived;
-				++$by_course[ $course_id ]['archived'];
-			}
-		}
-
-		return array(
-			'ok'         => true,
-			'reassigned' => $reassigned,
-			'archived'   => $archived,
-			'scanned'    => $scanned,
-			'remaining'  => 0,
-			'by_course'  => $by_course,
-		);
-	}
-
-	/**
-	 * Prefix a resource title so learners never see it. Does not delete the file.
-	 *
-	 * @param int    $resource_id Resource ID.
-	 * @param string $title       Current title.
-	 * @return void
-	 */
-	private static function archive_resource_row( $resource_id, $title ) {
-		global $wpdb;
-
-		$resource_id = absint( $resource_id );
-		$title       = trim( (string) $title );
-		if ( ! $resource_id ) {
-			return;
-		}
-		if ( 0 !== stripos( $title, '[archived]' ) ) {
-			$title = '[archived] ' . $title;
-		}
-
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-		$wpdb->update(
-			$wpdb->prefix . 'cta_downloadable_resources',
-			array( 'title' => $title ),
-			array( 'id' => $resource_id ),
-			array( '%s' ),
-			array( '%d' )
-		);
-	}
-
-	/**
-	 * Match a stray exam-prep file to its owning Exam Prep program.
-	 *
-	 * @param object $resource Resource row.
-	 * @return int Destination course ID or 0.
-	 */
-	private static function resolve_exam_prep_owner_course_id( $resource ) {
-		$hay = strtolower(
-			str_replace(
-				'\\',
-				'/',
-				(string) ( $resource->title ?? '' ) . ' ' .
-				(string) ( $resource->file_path ?? '' ) . ' ' .
-				(string) ( $resource->file_url ?? '' )
-			)
-		);
-
-		$finder = '';
-		if ( false !== strpos( $hay, 'lpcc-law-ethics' ) || false !== strpos( $hay, 'cta_lpcc_law_and_ethics' ) ) {
-			$finder = 'CTA_Lpcc_Law_Ethics_Sync';
-		} elseif ( false !== strpos( $hay, 'lcsw-law-ethics' ) || false !== strpos( $hay, 'cta_lcsw_law_and_ethics' ) ) {
-			$finder = 'CTA_Lcsw_Law_Ethics_Sync';
-		} elseif ( false !== strpos( $hay, 'lmft-law-ethics' ) || false !== strpos( $hay, 'cta_lmft_law_and_ethics' ) || false !== strpos( $hay, 'practice act module' ) ) {
-			$finder = 'CTA_Lmft_Law_Ethics_Sync';
-		} elseif ( false !== strpos( $hay, 'lmft-amftrb' ) || false !== strpos( $hay, 'cta_lmft_amftrb' ) || false !== strpos( $hay, 'amftrb' ) ) {
-			$finder = 'CTA_Lmft_Amftrb_Sync';
-		} elseif ( false !== strpos( $hay, 'lpcc-ncmhce' ) || false !== strpos( $hay, 'cta_lpcc_ncmhce' ) || false !== strpos( $hay, 'ncmhce' ) ) {
-			$finder = 'CTA_Lpcc_Ncmhce_Sync';
-		} elseif ( false !== strpos( $hay, 'lcsw-aswb' ) || false !== strpos( $hay, 'cta_lcsw_wb' ) || false !== strpos( $hay, 'aswb' ) ) {
-			$finder = 'CTA_Lcsw_Aswb_Sync';
-		} elseif ( false !== strpos( $hay, 'lmft-clinical' ) || false !== strpos( $hay, 'cta_lmft_wb' ) ) {
-			$finder = 'CTA_Lmft_Clinical_Sync';
-		}
-
-		if ( '' === $finder || ! class_exists( $finder ) || ! method_exists( $finder, 'find_course' ) ) {
-			return 0;
-		}
-
-		$dest = $finder::find_course();
-		return ( $dest && ! empty( $dest->id ) ) ? (int) $dest->id : 0;
-	}
-
-	/**
-	 * If a resource is a known CE bundled toolkit, return that CE course ID.
-	 *
-	 * Used to move a CE-001 syllabus that was attached to Telehealth, etc.
-	 *
-	 * @param object $resource Resource row.
-	 * @return int
-	 */
-	private static function resolve_bundled_ce_owner_course_id( $resource ) {
-		$hay = strtolower(
-			str_replace(
-				'\\',
-				'/',
-				(string) ( $resource->title ?? '' ) . ' ' .
-				(string) ( $resource->file_path ?? '' ) . ' ' .
-				(string) ( $resource->file_url ?? '' )
-			)
-		);
-
-		foreach ( self::get_bundled_materials() as $bundle ) {
-			$needles = array();
-			if ( ! empty( $bundle['title'] ) ) {
-				$needles[] = strtolower( (string) $bundle['title'] );
-			}
-			if ( ! empty( $bundle['resource_key'] ) ) {
-				$needles[] = strtolower( str_replace( '_', ' ', (string) $bundle['resource_key'] ) );
-				$needles[] = strtolower( (string) $bundle['resource_key'] );
-			}
-			if ( ! empty( $bundle['source_file'] ) ) {
-				$needles[] = strtolower( basename( (string) $bundle['source_file'] ) );
-			}
-			if ( ! empty( $bundle['alt_source_files'] ) && is_array( $bundle['alt_source_files'] ) ) {
-				foreach ( $bundle['alt_source_files'] as $alt ) {
-					$needles[] = strtolower( basename( (string) $alt ) );
-				}
-			}
-
-			$matched = false;
-			foreach ( array_unique( array_filter( $needles ) ) as $needle ) {
-				$needle = trim( (string) $needle );
-				if ( strlen( $needle ) < 12 ) {
-					continue;
-				}
-				if ( false !== strpos( $hay, $needle ) ) {
-					$matched = true;
-					break;
-				}
-			}
-
-			if ( ! $matched ) {
-				continue;
-			}
-
-			$course = self::find_course_for_bundle( $bundle );
-			if ( $course && ! empty( $course->id ) ) {
-				return (int) $course->id;
-			}
-		}
-
-		return 0;
-	}
-
-	/**
-	 * Run mapping heal + re-attach approved CE bundled toolkits (idempotent).
-	 *
-	 * @return array
-	 */
-	public static function maybe_heal_ce_catalog_materials() {
-		if ( get_option( self::CE_MATERIALS_HEAL_OPTION ) ) {
-			return array(
-				'ok'      => true,
-				'message' => 'already',
-			);
-		}
-
-		if ( get_transient( self::CE_MATERIALS_HEAL_LOCK ) ) {
-			return array(
-				'ok'      => true,
-				'message' => 'locked',
-			);
-		}
-
-		set_transient( self::CE_MATERIALS_HEAL_LOCK, 1, 5 * MINUTE_IN_SECONDS );
-
-		$report = self::heal_ce_catalog_material_mapping( 80 );
-
-		self::ensure_bundled_resources();
-		if ( class_exists( 'CTA_Suicide_Risk_Toolkit_Sync' ) && method_exists( 'CTA_Suicide_Risk_Toolkit_Sync', 'ensure' ) ) {
-			CTA_Suicide_Risk_Toolkit_Sync::ensure();
-		}
-
-		if ( ! empty( $report['ok'] ) ) {
-			update_option( self::CE_MATERIALS_HEAL_OPTION, $report, false );
-		}
-
-		delete_transient( self::CE_MATERIALS_HEAL_LOCK );
-
-		return $report;
-	}
-
-	/**
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Whether a downloadable resource has been flagged as archived for learners.
 	 *
 	 * @param object|null $resource Resource row.

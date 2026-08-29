@@ -39,12 +39,9 @@ class CTA_Admin {
 		add_action( 'admin_post_cta_publish_all_exam_prep', array( $this, 'publish_all_exam_prep' ) );
 		add_action( 'admin_post_cta_sync_syllabus', array( $this, 'sync_syllabus' ) );
 		add_action( 'admin_post_cta_sync_exam_prep_content', array( $this, 'sync_exam_prep_content' ) );
-<<<<<<< HEAD
 		add_action( 'admin_post_cta_lmft_le_publish_practice_exams', array( $this, 'publish_lmft_law_ethics_practice_exams' ) );
 		add_action( 'admin_post_cta_toggle_quiz_status', array( $this, 'toggle_quiz_status' ) );
 		add_action( 'admin_post_cta_publish_all_learner_content', array( $this, 'publish_all_learner_content' ) );
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		add_action( 'admin_post_cta_save_settings', array( $this, 'save_settings' ) );
 		add_action( 'admin_post_cta_save_email_settings', array( $this, 'save_email_settings' ) );
 		add_action( 'admin_post_cta_extend_exam_access', array( $this, 'extend_exam_access' ) );
@@ -2067,7 +2064,6 @@ class CTA_Admin {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Publish all Exam Prep programs + seed Practice Exams / queue remaining banks.
 	 */
 	public function publish_all_learner_content() {
@@ -2243,8 +2239,6 @@ class CTA_Admin {
 	}
 
 	/**
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Save plugin settings.
 	 */
 	public function save_settings() {
@@ -3182,7 +3176,6 @@ class CTA_Admin {
 			$quiz_type = $quiz && ! empty( $quiz->quiz_type ) ? (string) $quiz->quiz_type : $default_type;
 		}
 
-<<<<<<< HEAD
 		$allowed_types = array(
 			'final',
 			'practice',
@@ -3194,9 +3187,6 @@ class CTA_Admin {
 			'custom',
 			'license_25',
 		);
-=======
-		$allowed_types = array( 'final', 'practice', 'form_a', 'form_b', 'custom' );
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		if ( ! in_array( $quiz_type, $allowed_types, true ) ) {
 			$quiz_type = $default_type;
 		}

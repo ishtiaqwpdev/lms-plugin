@@ -147,14 +147,7 @@ class CTA_Student_Dashboard {
 			} else {
 				$has_access = in_array( (string) $enrollment->status, array( 'active', 'completed' ), true );
 			}
-<<<<<<< HEAD
 			$resources     = $this->get_student_visible_resources_for_course( (int) $course->id, $course );
-=======
-			$resources     = CTA_Database::get_downloadable_resources( (int) $course->id );
-			if ( class_exists( 'CTA_Course_Materials' ) ) {
-				$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
-			}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			$quiz          = CTA_Database::get_quiz_by_course( (int) $course->id );
 			$quiz_url      = '';
 
@@ -396,10 +389,7 @@ class CTA_Student_Dashboard {
 				$modules = CTA_Database::get_course_modules( $course_id );
 			}
 		}
-<<<<<<< HEAD
 		$this->maybe_heal_ce_materials_for_course( $course );
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		$completed_ids = $this->parse_completed_modules( $enrollment->modules_completed );
 
 		if ( empty( $modules ) ) {
@@ -571,21 +561,12 @@ class CTA_Student_Dashboard {
 		$video_markup   = $this->get_module_video_markup( $module, $course );
 		$module_complete = in_array( (int) $module->id, $completed_ids, true );
 		$dashboard      = $this;
-<<<<<<< HEAD
 		$resources      = $this->get_student_visible_resources_for_course( $course_id, $course );
 		$is_exam_prep   = class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course );
 
 		if ( $is_exam_prep ) {
 			$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
-=======
-		$resources      = CTA_Database::get_downloadable_resources( $course_id );
-		if ( class_exists( 'CTA_Course_Materials' ) ) {
-			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
-		}
-		$is_exam_prep   = class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course );
-
-		if ( $is_exam_prep ) {
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
+			$this->maybe_heal_lmft_clinical_workbook_banks_for_course( $course );
 			$home_url      = $this->get_player_home_url( $course_id );
 			$workbooks_url = class_exists( 'CTA_Exam_Prep_Workbooks' )
 				? CTA_Exam_Prep_Workbooks::get_workbooks_list_url( $course_id, $player_base )
@@ -1207,7 +1188,6 @@ class CTA_Student_Dashboard {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Publish missing LMFT Law & Ethics workbook Practice Banks from a safe learner page.
 	 *
 	 * @param object|null $course Course row.
@@ -1271,8 +1251,25 @@ class CTA_Student_Dashboard {
 	}
 
 	/**
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
+	 * Publish missing LMFT California Clinical workbook Practice Banks from a learner workbook page.
+	 *
+	 * @param object|null $course Course row.
+	 * @return void
+	 */
+	private function maybe_heal_lmft_clinical_workbook_banks_for_course( $course ) {
+		if ( ! $course || ! class_exists( 'CTA_Lmft_Clinical_Sync' ) ) {
+			return;
+		}
+
+		$lmft_clinical = CTA_Lmft_Clinical_Sync::find_course();
+		if ( ! $lmft_clinical || (int) $lmft_clinical->id !== (int) $course->id ) {
+			return;
+		}
+
+		CTA_Lmft_Clinical_Sync::maybe_heal_workbook_banks( true );
+	}
+
+	/**
 	 * Build exam prep workbooks list URL.
 	 *
 	 * @param int $course_id Course ID.
@@ -1369,11 +1366,8 @@ class CTA_Student_Dashboard {
 	private function render_exam_prep_workbooks_list( $course, $modules, $enrollment, $completed_ids ) {
 		$course_id = (int) $course->id;
 
-<<<<<<< HEAD
 		$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
 
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		if ( class_exists( 'CTA_CE_Completion' ) ) {
 			$progress = CTA_CE_Completion::sync_progress( get_current_user_id(), $course_id, $enrollment );
 		} else {
@@ -1422,14 +1416,7 @@ class CTA_Student_Dashboard {
 			$progress = (int) $enrollment->progress;
 		}
 
-<<<<<<< HEAD
 		$resources = $this->get_student_visible_resources_for_course( $course_id, $course );
-=======
-		$resources = CTA_Database::get_downloadable_resources( $course_id );
-		if ( class_exists( 'CTA_Course_Materials' ) ) {
-			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
-		}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 
 		$getting_started = class_exists( 'CTA_Exam_Prep_Getting_Started' )
 			? CTA_Exam_Prep_Getting_Started::get_config_for_course( $course, $resources )
@@ -1493,14 +1480,7 @@ class CTA_Student_Dashboard {
 			$progress = (int) $enrollment->progress;
 		}
 
-<<<<<<< HEAD
 		$resources = $this->get_student_visible_resources_for_course( $course_id, $course );
-=======
-		$resources = CTA_Database::get_downloadable_resources( $course_id );
-		if ( class_exists( 'CTA_Course_Materials' ) ) {
-			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
-		}
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 
 		$getting_started = class_exists( 'CTA_Exam_Prep_Getting_Started' )
 			? CTA_Exam_Prep_Getting_Started::get_config_for_course( $course, $resources )
@@ -1519,7 +1499,6 @@ class CTA_Student_Dashboard {
 		}
 
 		if ( 'exams' === $section_view && class_exists( 'CTA_Exam_Prep_Exam_Center' ) ) {
-<<<<<<< HEAD
 			// LMFT Law & Ethics: publish missing Practice A/B/Final from a safe learner page
 			// (never during plugin upload — that path white-screened Hostinger).
 			if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) ) {
@@ -1528,8 +1507,6 @@ class CTA_Student_Dashboard {
 					CTA_Lmft_Law_Ethics_Sync::maybe_heal_practice_exams( true );
 				}
 			}
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 			$section_data['exam_center_data'] = CTA_Exam_Prep_Exam_Center::get_center_data_for_course( $course, $this );
 		}
 

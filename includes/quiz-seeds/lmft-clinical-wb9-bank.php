@@ -1,13 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Clinical - Workbook 9 - 17-question practice bank.
  * Built from approved CTA_LMFT_WB9_17_Question_Bank_v1.0.docx.
-=======
- * CTA LMFT California Clinical â€” Workbook 9 â€” 17-question practice bank.
- * Source: CTA_LMFT_WB9_17_Question_Bank_v1.0.docx (Trauma, Psychological, Behavioral, and Recovery Interventions).
- * Learner-facing fields omit Question ID / difficulty / type / concept metadata.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -19,18 +13,10 @@ return array(
 		'option_d'       => 'How many techniques can be combined in the same session.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The FITS sequence begins with formulation and immediacy, then identifies the target and suitability before technique selection.
-<<<<<<< HEAD
 B. Incorrect. Popularity does not establish fit with the client, target, or treatment stage.
 C. Incorrect. Client understanding matters, but recognition of a technique name is not the first clinical decision.
 D. Incorrect. Adding multiple methods before clarifying the target creates unfocused treatment.
 CTA Exam StrategyWhen several techniques sound reasonable, identify the maintaining mechanism and urgent priorities before choosing a method.',
-=======
-		B. Incorrect. Popularity does not establish fit with the client, target, or treatment stage.
-		C. Incorrect. Client understanding matters, but recognition of a technique name is not the first clinical decision.
-		D. Incorrect. Adding multiple methods before clarifying the target creates unfocused treatment.
-		
-		CTA Exam Strategy: When several techniques sound reasonable, identify the maintaining mechanism and urgent priorities before choosing a method.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A trauma survivor asks to begin detailed memory work but becomes disoriented whenever the event is mentioned. What is the BEST initial response?',
@@ -40,18 +26,10 @@ CTA Exam StrategyWhen several techniques sound reasonable, identify the maintain
 		'option_d'       => 'Ask a family member to persuade the client to continue.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Client choice matters, but current disorientation indicates that stabilization and informed pacing are needed first.
-<<<<<<< HEAD
 B. Correct. Trauma-informed sequencing prioritizes orientation, regulation, safety, collaboration, and readiness before intensive processing.
 C. Incorrect. Permanent avoidance may maintain symptoms and does not create a treatment plan.
 D. Incorrect. Recruiting family pressure can undermine autonomy and safety.
 CTA Exam StrategyAcute dysregulation or disorientation is a cue to stabilize and restore choice before detailed processing.',
-=======
-		B. Correct. Trauma-informed sequencing prioritizes orientation, regulation, safety, collaboration, and readiness before intensive processing.
-		C. Incorrect. Permanent avoidance may maintain symptoms and does not create a treatment plan.
-		D. Incorrect. Recruiting family pressure can undermine autonomy and safety.
-		
-		CTA Exam Strategy: Acute dysregulation or disorientation is a cue to stabilize and restore choice before detailed processing.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which intervention MOST directly targets the cycle in which depressed mood leads to withdrawal, reduced rewarding activity, and further depressed mood?',
@@ -61,18 +39,10 @@ CTA Exam StrategyAcute dysregulation or disorientation is a cue to stabilize and
 		'option_d'       => 'Advising the client to wait for motivation before acting.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Emotional expression may help, but it does not directly alter the withdrawal-reinforcement cycle.
-<<<<<<< HEAD
 B. Incorrect. Labeling withdrawal as resistance does not test or change the maintaining behavior.
 C. Correct. Behavioral activation increases contact with meaningful and reinforcing activity while monitoring mood and functioning.
 D. Incorrect. Waiting for motivation can prolong avoidance and inactivity.
 CTA Exam StrategyMatch behavioral activation to the withdrawal-and-low-reinforcement mechanism.',
-=======
-		B. Incorrect. Labeling withdrawal as resistance does not test or change the maintaining behavior.
-		C. Correct. Behavioral activation increases contact with meaningful and reinforcing activity while monitoring mood and functioning.
-		D. Incorrect. Waiting for motivation can prolong avoidance and inactivity.
-		
-		CTA Exam Strategy: Match behavioral activation to the withdrawal-and-low-reinforcement mechanism.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client repeatedly sends threatening messages during arguments and later says the behavior “came out of nowhere.” What should the therapist do NEXT?',
@@ -82,18 +52,10 @@ CTA Exam StrategyMatch behavioral activation to the withdrawal-and-low-reinforce
 		'option_d'       => 'Map vulnerabilities, prompting events, thoughts, body cues, actions, consequences, and safer alternative links.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. History may matter, but current risk and the behavioral sequence require immediate attention.
-<<<<<<< HEAD
 B. Incorrect. Threatening behavior should not be normalized or assigned to the partner to tolerate.
 C. Incorrect. Accountability may be addressed, but demanding an apology does not explain or interrupt the chain.
 D. Correct. Chain analysis identifies where regulation, delay, safety, and interpersonal skills can be inserted.
 CTA Exam StrategyWhen behavior seems sudden, break it into links and identify the earliest point where a safer response can occur.',
-=======
-		B. Incorrect. Threatening behavior should not be normalized or assigned to the partner to tolerate.
-		C. Incorrect. Accountability may be addressed, but demanding an apology does not explain or interrupt the chain.
-		D. Correct. Chain analysis identifies where regulation, delay, safety, and interpersonal skills can be inserted.
-		
-		CTA Exam Strategy: When behavior seems sudden, break it into links and identify the earliest point where a safer response can occur.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client referred by an employer says, “I do not think my cannabis use is a problem, but I cannot afford another absence.” Which response is MOST consistent with motivational interviewing?',
@@ -103,18 +65,10 @@ CTA Exam StrategyWhen behavior seems sudden, break it into links and identify th
 		'option_d'       => 'Ask the employer to apply additional pressure.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The response uses partnership and discrepancy to evoke the client’s own reasons and choices.
-<<<<<<< HEAD
 B. Incorrect. Argument and labeling increase defensiveness and bypass the client’s perspective.
 C. Incorrect. A predetermined demand is not an MI-consistent exploration of readiness.
 D. Incorrect. External pressure does not replace client-centered engagement.
 CTA Exam StrategyWith ambivalence or external pressure, evoke the client’s values and discrepancy rather than arguing.',
-=======
-		B. Incorrect. Argument and labeling increase defensiveness and bypass the client’s perspective.
-		C. Incorrect. A predetermined demand is not an MI-consistent exploration of readiness.
-		D. Incorrect. External pressure does not replace client-centered engagement.
-		
-		CTA Exam Strategy: With ambivalence or external pressure, evoke the client’s values and discrepancy rather than arguing. Moderate Questions 7 questions | Applied intervention, coordination, and client-system decisions.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Six months after a parent’s death, a client reports sadness, disrupted family rituals, and conflict with siblings over caregiving decisions made before the death. The client is working and denies suicidal thoughts. What should the therapist do NEXT?',
@@ -124,18 +78,10 @@ CTA Exam StrategyWith ambivalence or external pressure, evoke the client’s val
 		'option_d'       => 'Refer immediately for inpatient psychiatric care.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Persistent sadness or family conflict alone does not establish a disorder.
-<<<<<<< HEAD
 B. Correct. The intervention integrates grief, functioning, meaning, family reorganization, and support while continuing safety assessment.
 C. Incorrect. Avoiding the loss may invalidate the client and prevent needed meaning-making.
 D. Incorrect. No acute danger or severe functional collapse is described.
 CTA Exam StrategyGrief questions require assessment of safety and functioning plus attention to meaning, roles, relationships, and culture.',
-=======
-		B. Correct. The intervention integrates grief, functioning, meaning, family reorganization, and support while continuing safety assessment.
-		C. Incorrect. Avoiding the loss may invalidate the client and prevent needed meaning-making.
-		D. Incorrect. No acute danger or severe functional collapse is described.
-		
-		CTA Exam Strategy: Grief questions require assessment of safety and functioning plus attention to meaning, roles, relationships, and culture.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client with bipolar disorder reports sleeping two hours nightly, rapidly increasing spending, and stopping prescribed medication. What is the therapist’s BEST response?',
@@ -145,18 +91,10 @@ CTA Exam StrategyGrief questions require assessment of safety and functioning pl
 		'option_d'       => 'Tell the client that medication decisions are unrelated to psychotherapy.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Relational effects matter, but the symptom pattern suggests possible acute mood instability requiring broader assessment.
-<<<<<<< HEAD
 B. Incorrect. Routine outpatient technique alone may be insufficient for the current severity.
 C. Correct. The response integrates risk assessment, level-of-care judgment, medical coordination, and recovery support.
 D. Incorrect. The LMFT should remain within scope while coordinating relevant care rather than ignoring medication concerns.
 CTA Exam StrategyRapid change, reduced sleep, impaired judgment, or severe symptoms call for risk and level-of-care assessment before routine intervention.',
-=======
-		B. Incorrect. Routine outpatient technique alone may be insufficient for the current severity.
-		C. Correct. The response integrates risk assessment, level-of-care judgment, medical coordination, and recovery support.
-		D. Incorrect. The LMFT should remain within scope while coordinating relevant care rather than ignoring medication concerns.
-		
-		CTA Exam Strategy: Rapid change, reduced sleep, impaired judgment, or severe symptoms call for risk and level-of-care assessment before routine intervention.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A seven-year-old has frequent morning meltdowns. Caregivers give different instructions, change consequences daily, and argue in front of the child. What intervention is MOST appropriate?',
@@ -166,18 +104,10 @@ CTA Exam StrategyRapid change, reduced sleep, impaired judgment, or severe sympt
 		'option_d'       => 'Clarify the routine, coach consistent caregiver responses, model emotion-regulation support, and reinforce achievable behavior.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The intervention is not developmentally matched and ignores the caregiving environment.
-<<<<<<< HEAD
 B. Incorrect. Caregiver participation is central because inconsistent responses are maintaining the problem.
 C. Incorrect. An adult worksheet is poorly matched to age and the identified mechanism.
 D. Correct. Predictable routines, caregiver coaching, modeling, and reinforcement directly address the developmental and systemic pattern.
 CTA Exam StrategyFor young children, look for concrete skills and caregiver-environment change rather than abstract individual insight.',
-=======
-		B. Incorrect. Caregiver participation is central because inconsistent responses are maintaining the problem.
-		C. Incorrect. An adult worksheet is poorly matched to age and the identified mechanism.
-		D. Correct. Predictable routines, caregiver coaching, modeling, and reinforcement directly address the developmental and systemic pattern.
-		
-		CTA Exam Strategy: For young children, look for concrete skills and caregiver-environment change rather than abstract individual insight.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A spouse caring for a partner with a disabling illness reports sleep loss, missed work, isolation, and guilt about accepting help. What should the LMFT do FIRST?',
@@ -187,18 +117,10 @@ CTA Exam StrategyFor young children, look for concrete skills and caregiver-envi
 		'option_d'       => 'Ask the ill partner to stop discussing symptoms.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Caregiver distress is embedded in roles, resources, health, beliefs, and relationship patterns that require systemic assessment.
-<<<<<<< HEAD
 B. Incorrect. Relaxation may help but is too narrow for the burden and access problems described.
 C. Incorrect. The recommendation is premature and not based on the couple’s goals or safety assessment.
 D. Incorrect. Silencing symptoms does not reduce the actual care burden.
 CTA Exam StrategyCaregiver questions often require both coping support and reorganization of roles, resources, and practical assistance.',
-=======
-		B. Incorrect. Relaxation may help but is too narrow for the burden and access problems described.
-		C. Incorrect. The recommendation is premature and not based on the couple’s goals or safety assessment.
-		D. Incorrect. Silencing symptoms does not reduce the actual care burden.
-		
-		CTA Exam Strategy: Caregiver questions often require both coping support and reorganization of roles, resources, and practical assistance.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client who drinks heavily is unwilling to pursue abstinence but agrees that driving after drinking is dangerous. What is the BEST next intervention?',
@@ -208,18 +130,10 @@ CTA Exam StrategyCaregiver questions often require both coping support and reorg
 		'option_d'       => 'Promise that reduced drinking eliminates all risk.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Ending engagement may increase risk when the client is willing to work on safer behavior.
-<<<<<<< HEAD
 B. Correct. Harm reduction addresses current danger while preserving autonomy, engagement, and future change options.
 C. Incorrect. Secret monitoring undermines trust and does not replace assessment or collaboration.
 D. Incorrect. Risk reduction does not justify a guarantee of safety.
 CTA Exam StrategyWhen abstinence is not chosen, reduce immediate harm and preserve engagement while continuing assessment.',
-=======
-		B. Correct. Harm reduction addresses current danger while preserving autonomy, engagement, and future change options.
-		C. Incorrect. Secret monitoring undermines trust and does not replace assessment or collaboration.
-		D. Incorrect. Risk reduction does not justify a guarantee of safety.
-		
-		CTA Exam Strategy: When abstinence is not chosen, reduce immediate harm and preserve engagement while continuing assessment.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client reports severe dietary restriction, dizziness, fainting, and rapid weight loss but asks to focus only on body-image thoughts. What should the therapist do NEXT?',
@@ -229,18 +143,10 @@ CTA Exam StrategyWhen abstinence is not chosen, reduce immediate harm and preser
 		'option_d'       => 'Wait until the client requests medical care.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Medical warning signs require assessment before routine behavioral work.
-<<<<<<< HEAD
 B. Incorrect. The symptoms may indicate instability beyond the therapist’s independent scope.
 C. Correct. Prompt coordinated evaluation addresses safety while preserving continuity and relational support.
 D. Incorrect. Deferring action despite fainting and rapid loss may expose the client to serious harm.
 CTA Exam StrategyMedical warning signs outrank routine insight or skills work; coordinate specialty care without abandoning the client.',
-=======
-		B. Incorrect. The symptoms may indicate instability beyond the therapist’s independent scope.
-		C. Correct. Prompt coordinated evaluation addresses safety while preserving continuity and relational support.
-		D. Incorrect. Deferring action despite fainting and rapid loss may expose the client to serious harm.
-		
-		CTA Exam Strategy: Medical warning signs outrank routine insight or skills work; coordinate specialty care without abandoning the client.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which statement BEST describes theory-consistent intervention selection?',
@@ -250,18 +156,10 @@ CTA Exam StrategyMedical warning signs outrank routine insight or skills work; c
 		'option_d'       => 'Select a model because its mechanism directly fits the assessed maintaining pattern and client-system context.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Diagnosis alone does not determine a single method, and therapist preference is not sufficient.
-<<<<<<< HEAD
 B. Incorrect. Novelty does not establish suitability or competence.
 C. Incorrect. Unfocused integration can obscure the treatment rationale.
 D. Correct. Theory selection should follow formulation, target mechanism, stage, fit, and competence.
 CTA Exam StrategyA theory is useful when the vignette supports the mechanism that theory is designed to change.',
-=======
-		B. Incorrect. Novelty does not establish suitability or competence.
-		C. Incorrect. Unfocused integration can obscure the treatment rationale.
-		D. Correct. Theory selection should follow formulation, target mechanism, stage, fit, and competence.
-		
-		CTA Exam Strategy: A theory is useful when the vignette supports the mechanism that theory is designed to change. Difficult Questions 5 questions | Integrated clinical reasoning across competing priorities.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A trauma survivor experiences panic when alone. A partner repeatedly leaves work to provide reassurance, which lowers distress briefly but increases dependence and avoidance. After confirming current safety, what plan is BEST?',
@@ -271,18 +169,10 @@ CTA Exam StrategyA theory is useful when the vignette supports the mechanism tha
 		'option_d'       => 'Identify the partner as the cause of the trauma symptoms.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The plan integrates stabilization, behavioral learning, relational-cycle change, and attachment support without blame.
-<<<<<<< HEAD
 B. Incorrect. Abrupt withdrawal may destabilize the client and does not teach a safe alternative.
 C. Incorrect. Processing during acute panic is poorly timed.
 D. Incorrect. The partner’s behavior may maintain a cycle but did not cause the original trauma symptoms.
 CTA Exam StrategyIntegrated answers should change the maintaining cycle while preserving safety, choice, and supportive connection.',
-=======
-		B. Incorrect. Abrupt withdrawal may destabilize the client and does not teach a safe alternative.
-		C. Incorrect. Processing during acute panic is poorly timed.
-		D. Incorrect. The partner’s behavior may maintain a cycle but did not cause the original trauma symptoms.
-		
-		CTA Exam Strategy: Integrated answers should change the maintaining cycle while preserving safety, choice, and supportive connection.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client has returned to opioid use twice after treatment. Family members alternate between paying debts and threatening permanent cutoff. What should the therapist do NEXT?',
@@ -292,18 +182,10 @@ CTA Exam StrategyIntegrated answers should change the maintaining cycle while pr
 		'option_d'       => 'End family involvement because it has become complicated.',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Either extreme may intensify instability and does not address the recovery system.
-<<<<<<< HEAD
 B. Correct. The response integrates safety, relapse formulation, level of care, family patterns, boundaries, and coordinated recovery support.
 C. Incorrect. Historical exploration alone does not address current risk and maintaining factors.
 D. Incorrect. Family involvement may need restructuring rather than automatic elimination.
 CTA Exam StrategyAfter relapse, reassess risk, triggers, intensity, access, and the family reinforcement cycle rather than moralizing.',
-=======
-		B. Correct. The response integrates safety, relapse formulation, level of care, family patterns, boundaries, and coordinated recovery support.
-		C. Incorrect. Historical exploration alone does not address current risk and maintaining factors.
-		D. Incorrect. Family involvement may need restructuring rather than automatic elimination.
-		
-		CTA Exam Strategy: After relapse, reassess risk, triggers, intensity, access, and the family reinforcement cycle rather than moralizing.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A bilingual adolescent with depression has not improved after six weeks of a parent-selected treatment. The adolescent says sessions feel culturally disconnected, transportation causes missed visits, and the goals do not feel relevant. What should the therapist do NEXT?',
@@ -313,18 +195,10 @@ CTA Exam StrategyAfter relapse, reassess risk, triggers, intensity, access, and 
 		'option_d'       => 'Ask the parent to impose consequences for missed appointments.',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The vignette identifies multiple fit and access barriers rather than simple resistance.
-<<<<<<< HEAD
 B. Incorrect. Lack of response and explicit concerns justify reassessment now.
 C. Correct. The response reviews safety, alliance, meaningful goals, culture, language, access, implementation, and level of care.
 D. Incorrect. Punishment may worsen engagement and does not solve transportation or treatment-fit problems.
 CTA Exam StrategyNonresponse requires reassessment of formulation, alliance, implementation, access, culture, development, and treatment unit.',
-=======
-		B. Incorrect. Lack of response and explicit concerns justify reassessment now.
-		C. Correct. The response reviews safety, alliance, meaningful goals, culture, language, access, implementation, and level of care.
-		D. Incorrect. Punishment may worsen engagement and does not solve transportation or treatment-fit problems.
-		
-		CTA Exam Strategy: Nonresponse requires reassessment of formulation, alliance, implementation, access, culture, development, and treatment unit.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An adolescent with worsening depression reports passive thoughts of death. Parents argue about whether the symptoms are “real,” and the adolescent refuses conjoint discussion. What should the LMFT do FIRST?',
@@ -334,18 +208,10 @@ CTA Exam StrategyNonresponse requires reassessment of formulation, alliance, imp
 		'option_d'       => 'Assess suicide risk and immediate safety privately, clarify confidentiality limits, then plan developmentally appropriate support and family involvement consistent with safety and consent.',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Safety assessment should not be delayed for conjoint participation.
-<<<<<<< HEAD
 B. Incorrect. Parent communication may matter later, but current risk is the first priority.
 C. Incorrect. An absolute confidentiality promise may be inaccurate and unsafe.
 D. Correct. The response sequences private risk assessment, transparent limits, developmental fit, and carefully planned family involvement.
 CTA Exam StrategyWhen risk and family conflict coexist, assess safety first, then decide the treatment unit and information-sharing plan.',
-=======
-		B. Incorrect. Parent communication may matter later, but current risk is the first priority.
-		C. Incorrect. An absolute confidentiality promise may be inaccurate and unsafe.
-		D. Correct. The response sequences private risk assessment, transparent limits, developmental fit, and carefully planned family involvement.
-		
-		CTA Exam Strategy: When risk and family conflict coexist, assess safety first, then decide the treatment unit and information-sharing plan.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT has strong rapport with a client whose eating symptoms are worsening, but the therapist lacks specialty training and the nearest program has a waiting list. What is the BEST response?',
@@ -355,7 +221,6 @@ CTA Exam StrategyWhen risk and family conflict coexist, assess safety first, the
 		'option_d'       => 'Use an intensive protocol after reading a brief summary online.',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The plan protects safety and competence while preserving continuity, consultation, and active linkage.
-<<<<<<< HEAD
 B. Incorrect. Rapport does not substitute for training or specialty care.
 C. Incorrect. Abrupt termination can increase risk and ignores continuity responsibilities.
 D. Incorrect. A brief summary does not establish competence in an intensive specialty intervention.
@@ -380,12 +245,5 @@ CTA LMFT Workbook 9: Trauma, Psychological, Behavioral, and Recovery Interventio
 California Board of Behavioral Sciences and Pearson VUE LMFT examination resources cited in the source workbook.
 Trauma, behavioral, recovery, eating-concern, and other clinical methods are summarized for examination preparation and do not establish competence to deliver a specialized intervention.
 Clinical, legal, and examination standards may change. Consult current official sources and case-specific professional guidance before relying on a rule in practice.',
-=======
-		B. Incorrect. Rapport does not substitute for training or specialty care.
-		C. Incorrect. Abrupt termination can increase risk and ignores continuity responsibilities.
-		D. Incorrect. A brief summary does not establish competence in an intensive specialty intervention.
-		
-		CTA Exam Strategy: When specialty care is needed, combine risk management, consultation, active referral, and competent continuity rather than improvising or abandoning.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

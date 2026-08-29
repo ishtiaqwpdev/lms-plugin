@@ -9,7 +9,6 @@ $OutDir = Join-Path $Root 'assets\course-materials\lmft-clinical\study-tools'
 $OutFile = Join-Path $OutDir 'flashcard-study-center.json'
 
 $DomainDefs = @(
-<<<<<<< HEAD
 	@{ key = 'clinical-evaluation'; label = 'Clinical Evaluation'; order = 1; areaMatch = 'Area 1:'; target = 49 },
 	@{ key = 'diagnostic-impression'; label = 'Developing a Diagnostic Impression'; order = 2; areaMatch = 'Area 2:'; target = 20 },
 	@{ key = 'managing-crisis'; label = 'Managing Crisis Situations'; order = 3; areaMatch = 'Area 3:'; target = 19 },
@@ -18,15 +17,6 @@ $DomainDefs = @(
 	@{ key = 'legal-ethical-obligations'; label = 'Managing Legal and Ethical Obligations'; order = 6; areaMatch = 'Area 6:'; target = 18 }
 )
 # Targets = Form A/B answer-key area counts (41/17/16/18/43/15 per 150-item form) scaled to 180 Study Center cards.
-=======
-	@{ key = 'clinical-evaluation'; label = 'Clinical Evaluation'; order = 1; areaMatch = 'Area 1:' },
-	@{ key = 'diagnostic-impression'; label = 'Developing a Diagnostic Impression'; order = 2; areaMatch = 'Area 2:' },
-	@{ key = 'managing-crisis'; label = 'Managing Crisis Situations'; order = 3; areaMatch = 'Area 3:' },
-	@{ key = 'case-conceptualization-planning'; label = 'Case Conceptualization and Planning'; order = 4; areaMatch = 'Area 4:' },
-	@{ key = 'treatment'; label = 'Treatment'; order = 5; areaMatch = 'Area 5:' },
-	@{ key = 'legal-ethical-obligations'; label = 'Managing Legal and Ethical Obligations'; order = 6; areaMatch = 'Area 6:' }
-)
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 
 function Get-PhpStringValue([string]$Block, [string]$Key) {
 	# Match 'key' => 'value' with escaped quotes inside.
@@ -150,7 +140,6 @@ function Build-Pool($stems, $keys, [string]$FormLabel) {
 $poolA = Build-Pool $stemsA $keysA 'Form A'
 $poolB = Build-Pool $stemsB $keysB 'Form B'
 
-<<<<<<< HEAD
 function Pick-BalancedCards($poolA, $poolB, [int]$Target) {
 	$picked = New-Object System.Collections.Generic.List[object]
 	$ai = 0; $bi = 0
@@ -176,22 +165,6 @@ $domainRows = @()
 	}
 
 	$picked = Pick-BalancedCards $fromA $fromB $target
-=======
-$cards = New-Object System.Collections.Generic.List[object]
-$perDomain = 30
-$domainRows = @()
-
-foreach ($def in $DomainDefs) {
-	$combined = New-Object System.Collections.Generic.List[object]
-	foreach ($c in $poolA[$def.key]) { $combined.Add($c) }
-	foreach ($c in $poolB[$def.key]) { $combined.Add($c) }
-
-	if ($combined.Count -lt $perDomain) {
-		throw ("Domain {0} has only {1} cards; need {2}" -f $def.key, $combined.Count, $perDomain)
-	}
-
-	$picked = $combined | Select-Object -First $perDomain
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	$i = 0
 	foreach ($c in $picked) {
 		$i++
@@ -200,20 +173,12 @@ foreach ($def in $DomainDefs) {
 		$cards.Add($c)
 	}
 	$domainRows += [ordered]@{
-<<<<<<< HEAD
 		key            = $def.key
 		label          = $def.label
 		order          = $def.order
 		expected_count = $target
 	}
 	Write-Host ("{0}: picked {1} (pool A={2} B={3})" -f $def.label, $target, $fromA.Count, $fromB.Count)
-=======
-		key   = $def.key
-		label = $def.label
-		order = $def.order
-	}
-	Write-Host ("{0}: picked {1} (pool {2})" -f $def.label, $perDomain, $combined.Count)
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 }
 
 if ($cards.Count -ne 180) {
@@ -236,32 +201,19 @@ foreach ($c in $cards) {
 $domainObj = @()
 foreach ($d in $domainRows) {
 	$domainObj += [PSCustomObject]@{
-<<<<<<< HEAD
 		key            = [string]$d.key
 		label          = [string]$d.label
 		order          = [int]$d.order
 		expected_count = [int]$d.expected_count
-=======
-		key   = [string]$d.key
-		label = [string]$d.label
-		order = [int]$d.order
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	}
 }
 
 $deck = [PSCustomObject]@{
 	program         = 'lmft-clinical'
-<<<<<<< HEAD
 	title           = 'LMFT California Clinical - Flashcard Study Center'
 	version         = '1.1'
 	expected_total  = 180
 	source          = 'BBS six-domain Study Center deck; per-domain counts match Form A/B answer-key area distribution (41/17/16/18/43/15 per 150-item form scaled to 180 cards)'
-=======
-	title           = 'LMFT California Clinical — Flashcard Study Center'
-	version         = '1.0'
-	expected_total  = 180
-	source          = 'BBS six-domain blueprint rebuild from Form A/B keyed items (Study Center only; exam banks unchanged)'
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	domains         = $domainObj
 	cards           = $cardRows
 }

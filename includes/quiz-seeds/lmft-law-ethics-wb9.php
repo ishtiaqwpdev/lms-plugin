@@ -1,12 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Law & Ethics - Workbook 9 Assessment (68 questions).
  * Built from approved Controlled Answer Key DOCX (online Practice Bank).
-=======
- * CTA LMFT Law & Ethics EP - Workbook 9 Assessment (68 questions).
- * Source: CTA_LMFT_Law_and_Ethics_EP_WB9_68_Question_Assessment_Candidate_Form_v1.0.docx + CTA_LMFT_Law_and_Ethics_EP_WB9_68_Question_Assessment_Controlled_Answer_Key_and_Detailed_Rationales_v1.0.docx.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -18,7 +13,6 @@ return array(
 		'option_d'       => 'To replace the therapist’s need for professional judgment',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Clinical documentation creates a professional record of the services provided, the client’s clinical presentation, interventions used, decisions made, and follow-up plans.
 Well-maintained records support continuity of care, help clinicians monitor progress, facilitate appropriate professional communication, and demonstrate the reasoning behind important treatment decisions.
 Why the Other Answers Are Incorrect
@@ -26,16 +20,6 @@ A. Incorrect. Documentation may support risk management, but it cannot guarantee
 C. Incorrect. Effective documentation should be complete without becoming excessive. Irrelevant details, gossip, and unnecessary personal information may reduce clarity and create additional risks.
 D. Incorrect. Documentation reflects professional judgment; it does not replace it. The therapist must still assess, make clinical decisions, obtain consultation when necessary, and provide competent care.
 CTA Exam Strategy: Remember:Documentation is part of treatment—not separate from treatment.Look for answers emphasizing continuity, communication, clinical reasoning, and client welfare.',
-=======
-		Clinical documentation creates a professional record of the services provided, the client’s clinical presentation, interventions used, decisions made, and follow-up plans.
-		Well-maintained records support continuity of care, help clinicians monitor progress, facilitate appropriate professional communication, and demonstrate the reasoning behind important treatment decisions.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Documentation may support risk management, but it cannot guarantee that complaints, investigations, or legal proceedings will not occur. It also cannot eliminate professional liability.
-		C. Incorrect. Effective documentation should be complete without becoming excessive. Irrelevant details, gossip, and unnecessary personal information may reduce clarity and create additional risks.
-		D. Incorrect. Documentation reflects professional judgment; it does not replace it. The therapist must still assess, make clinical decisions, obtain consultation when necessary, and provide competent care.
-		CTA Exam Strategy: Remember:Documentation is part of treatment—not separate from treatment.Look for answers emphasizing continuity, communication, clinical reasoning, and client welfare.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Purpose of Clinical Documentation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a client arrives late and becomes visibly upset when a missed appointment is discussed, a therapist prepares the progress note.Which entry is the most objective and professionally appropriate?',
@@ -45,7 +29,6 @@ CTA Exam Strategy: Remember:Documentation is part of treatment—not separate fr
 		'option_d'       => 'The client arrived 20 minutes late, spoke loudly when discussing the missed appointment, and stated, “I felt criticized”',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 This statement documents observable behavior, timing, and the client’s own words. It allows another professional to understand what occurred without presenting assumptions about the client’s character or motivation as fact.
 Objective documentation may include observations, client statements, clinical findings, and relevant responses to interventions.
 Why the Other Answers Are Incorrect
@@ -53,16 +36,6 @@ A. Incorrect. “Irresponsible” and “did not care” are character judgments
 B. Incorrect. “Dramatic” is subjective and potentially demeaning. It does not explain what the therapist actually observed.
 C. Incorrect. “Manipulative” and “attempted to control” are conclusions rather than specific observable behaviors. The therapist should describe what the client said or did that led to the clinical concern.
 CTA Exam Strategy: Use the workbook’s rule:Observe. Don’t label.Choose the answer that documents behavior, statements, and observable facts rather than personality judgments.',
-=======
-		This statement documents observable behavior, timing, and the client’s own words. It allows another professional to understand what occurred without presenting assumptions about the client’s character or motivation as fact.
-		Objective documentation may include observations, client statements, clinical findings, and relevant responses to interventions.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. “Irresponsible” and “did not care” are character judgments and assumptions about motivation. The note should instead describe the late arrival and any statements or behaviors demonstrating the client’s response.
-		B. Incorrect. “Dramatic” is subjective and potentially demeaning. It does not explain what the therapist actually observed.
-		C. Incorrect. “Manipulative” and “attempted to control” are conclusions rather than specific observable behaviors. The therapist should describe what the client said or did that led to the clinical concern.
-		CTA Exam Strategy: Use the workbook’s rule:Observe. Don’t label.Choose the answer that documents behavior, statements, and observable facts rather than personality judgments.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Objective Documentation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client transfers to a new therapist after several months of treatment. The record lists the dates of each session but does not describe the interventions used, the client’s responses, the therapist’s clinical decisions, or the follow-up plan.What is the most significant documentation concern?',
@@ -72,7 +45,6 @@ CTA Exam Strategy: Use the workbook’s rule:Observe. Don’t label.Choose the a
 		'option_d'       => 'The record is sufficient because documenting the dates proves that treatment occurred',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Documentation should be clear enough for another competent professional to understand the concerns addressed, interventions provided, client responses, significant decisions, and next steps.
 Session dates alone may establish that appointments occurred, but they do not adequately communicate the course of treatment or support a safe transition to another provider.
 Why the Other Answers Are Incorrect
@@ -80,16 +52,6 @@ A. Incorrect. The problem is insufficient clinically relevant information, not e
 C. Incorrect. Progress notes do not need to reproduce sessions word for word. Verbatim transcripts would usually be unnecessary and excessive.
 D. Incorrect. Attendance information does not show what services were provided, how the client responded, why decisions were made, or what continued care may be needed.
 CTA Exam Strategy: Apply the documentation test:Could another competent professional understand what happened, why decisions were made, and what should occur next?When the answer is no, the record likely lacks sufficient clarity.',
-=======
-		Documentation should be clear enough for another competent professional to understand the concerns addressed, interventions provided, client responses, significant decisions, and next steps.
-		Session dates alone may establish that appointments occurred, but they do not adequately communicate the course of treatment or support a safe transition to another provider.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. The problem is insufficient clinically relevant information, not excessive detail. The record lacks the information necessary to understand treatment.
-		C. Incorrect. Progress notes do not need to reproduce sessions word for word. Verbatim transcripts would usually be unnecessary and excessive.
-		D. Incorrect. Attendance information does not show what services were provided, how the client responded, why decisions were made, or what continued care may be needed.
-		CTA Exam Strategy: Apply the documentation test:Could another competent professional understand what happened, why decisions were made, and what should occur next?When the answer is no, the record likely lacks sufficient clarity.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Clarity and Continuity of Care; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist waits three weeks before completing a progress note for a clinically significant session. The therapist relies entirely on memory when writing the note.What is the primary documentation concern?',
@@ -99,7 +61,6 @@ CTA Exam Strategy: Apply the documentation test:Could another competent professi
 		'option_d'       => 'No concern exists as long as the therapist eventually completes the note',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Documentation should generally be completed as soon as reasonably possible after the service is provided. As time passes, details may be forgotten, confused with other sessions, or reconstructed inaccurately.
 A substantial delay may weaken continuity of care and make the record less reliable if later reviewed during consultation, transfer, investigation, or legal proceedings.
 Why the Other Answers Are Incorrect
@@ -107,16 +68,6 @@ B. Incorrect. Late documentation does not automatically invalidate the entire tr
 C. Incorrect. Waiting does not inherently improve objectivity. It often creates a greater risk that memory will become incomplete or distorted.
 D. Incorrect. Completing the note eventually is preferable to leaving the record blank, but the delay still creates a professional concern and should be handled transparently when appropriate.
 CTA Exam Strategy: When choosing between prompt and delayed documentation, the examination generally favors:Document as soon as reasonably possible.',
-=======
-		Documentation should generally be completed as soon as reasonably possible after the service is provided. As time passes, details may be forgotten, confused with other sessions, or reconstructed inaccurately.
-		A substantial delay may weaken continuity of care and make the record less reliable if later reviewed during consultation, transfer, investigation, or legal proceedings.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Late documentation does not automatically invalidate the entire treatment record. The primary concern is reduced accuracy and reliability.
-		C. Incorrect. Waiting does not inherently improve objectivity. It often creates a greater risk that memory will become incomplete or distorted.
-		D. Incorrect. Completing the note eventually is preferable to leaving the record blank, but the delay still creates a professional concern and should be handled transparently when appropriate.
-		CTA Exam Strategy: When choosing between prompt and delayed documentation, the examination generally favors:Document as soon as reasonably possible.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Timely Documentation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist includes several paragraphs in a progress note describing rumors about the client’s neighbors, the therapist’s personal opinion of the client’s relatives, and unrelated details about the client’s workplace.Which documentation principle is most affected?',
@@ -126,7 +77,6 @@ CTA Exam Strategy: When choosing between prompt and delayed documentation, the e
 		'option_d'       => 'Client access timelines',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Clinical documentation should contain information that supports assessment, treatment, continuity of care, risk management, and professional decision-making. Gossip, personal opinions, and unrelated details may distract from important clinical information and unnecessarily expose third parties.
 Good documentation is complete enough to support care without becoming excessive.
 Why the Other Answers Are Incorrect
@@ -134,16 +84,6 @@ A. Incorrect. The scenario concerns what information was included, not who physi
 B. Incorrect. No unauthorized electronic access or security failure is described.
 D. Incorrect. The question does not involve a client request for inspection or copies.
 CTA Exam Strategy: Use this rule:Include what is clinically useful. Exclude what is merely interesting.',
-=======
-		Clinical documentation should contain information that supports assessment, treatment, continuity of care, risk management, and professional decision-making. Gossip, personal opinions, and unrelated details may distract from important clinical information and unnecessarily expose third parties.
-		Good documentation is complete enough to support care without becoming excessive.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. The scenario concerns what information was included, not who physically owns or maintains the record.
-		B. Incorrect. No unauthorized electronic access or security failure is described.
-		D. Incorrect. The question does not involve a client request for inspection or copies.
-		CTA Exam Strategy: Use this rule:Include what is clinically useful. Exclude what is merely interesting.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Clinically Relevant Documentation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist writes in a progress note:“The client acted like a spoiled child and threw another ridiculous tantrum.”What is the most appropriate revision?',
@@ -153,7 +93,6 @@ CTA Exam Strategy: Use this rule:Include what is clinically useful. Exclude what
 		'option_d'       => '“The client raised their voice, began crying, and left the chair when the treatment limit was discussed.”',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 The revised statement describes observable behavior and the context in which it occurred. It avoids insulting, sarcastic, punitive, or speculative language.
 Professional documentation should permit another clinician to understand the event without relying on character judgments.
 Why the Other Answers Are Incorrect
@@ -161,16 +100,6 @@ A. Incorrect. “Immature” remains a judgment about the client’s character r
 B. Incorrect. “Severe emotional instability” is a broad clinical conclusion that is not adequately supported by the described event.
 C. Incorrect. “Inappropriately” and “difficult to manage” remain subjective and do not explain what actually occurred.
 CTA Exam Strategy: Replace labels with:What the client said, did, or displayed.',
-=======
-		The revised statement describes observable behavior and the context in which it occurred. It avoids insulting, sarcastic, punitive, or speculative language.
-		Professional documentation should permit another clinician to understand the event without relying on character judgments.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. “Immature” remains a judgment about the client’s character rather than an observation.
-		B. Incorrect. “Severe emotional instability” is a broad clinical conclusion that is not adequately supported by the described event.
-		C. Incorrect. “Inappropriately” and “difficult to manage” remain subjective and do not explain what actually occurred.
-		CTA Exam Strategy: Replace labels with:What the client said, did, or displayed.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Professional Language; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist decides to increase session frequency after the client reports worsening symptoms. The progress note records only, “Client will now be seen twice weekly.”What important information is missing?',
@@ -180,7 +109,6 @@ CTA Exam Strategy: Replace labels with:What the client said, did, or displayed.'
 		'option_d'       => 'Detailed information about every previous appointment',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Significant treatment decisions should be supported by documentation of the relevant assessment, clinical reasoning, intervention, and follow-up plan.
 The record should help another professional understand why session frequency changed and what concerns or goals the change was intended to address.
 Why the Other Answers Are Incorrect
@@ -188,16 +116,6 @@ A. Incorrect. Clinical records do not require a word-for-word transcript. That w
 C. Incorrect. The therapist’s personal feelings are not the relevant basis for a treatment decision.
 D. Incorrect. The note does not need to repeat every earlier appointment. It should document the clinically relevant information supporting the current decision.
 CTA Exam Strategy: For a significant decision, document:Assessment → Reasoning → Decision → Plan',
-=======
-		Significant treatment decisions should be supported by documentation of the relevant assessment, clinical reasoning, intervention, and follow-up plan.
-		The record should help another professional understand why session frequency changed and what concerns or goals the change was intended to address.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Clinical records do not require a word-for-word transcript. That would usually be unnecessary and excessive.
-		C. Incorrect. The therapist’s personal feelings are not the relevant basis for a treatment decision.
-		D. Incorrect. The note does not need to repeat every earlier appointment. It should document the clinically relevant information supporting the current decision.
-		CTA Exam Strategy: For a significant decision, document:Assessment → Reasoning → Decision → Plan
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documentation of Clinical Reasoning; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client reports intermittent suicidal thoughts but denies a current plan or intent. The therapist completes a risk assessment, identifies protective factors, consults with a supervisor, develops a safety plan, and schedules follow-up contact.Which documentation approach is strongest?',
@@ -207,7 +125,6 @@ CTA Exam Strategy: For a significant decision, document:Assessment → Reasoning
 		'option_d'       => 'Document the safety plan but omit the assessment to keep the note brief',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Risk-related documentation should show what information was obtained, how the therapist evaluated the concern, what protective and risk factors were considered, what consultation occurred, what actions were taken, and what follow-up was planned.
 This supports continuity of care and demonstrates the clinical decision-making process rather than merely recording the final conclusion.
 Why the Other Answers Are Incorrect
@@ -215,16 +132,6 @@ B. Incorrect. Recording only the denial of intent omits important assessment and
 C. Incorrect. Consultation may be an important part of clinical reasoning and should generally be documented when it materially affects treatment or risk management.
 D. Incorrect. A safety plan without the underlying assessment does not show why the plan was developed or how the therapist evaluated the client’s risk.
 CTA Exam Strategy: In high-risk situations, document:Concern → Assessment → Decision → Intervention → Follow-up',
-=======
-		Risk-related documentation should show what information was obtained, how the therapist evaluated the concern, what protective and risk factors were considered, what consultation occurred, what actions were taken, and what follow-up was planned.
-		This supports continuity of care and demonstrates the clinical decision-making process rather than merely recording the final conclusion.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Recording only the denial of intent omits important assessment and intervention information. Brief documentation may make the record appear incomplete.
-		C. Incorrect. Consultation may be an important part of clinical reasoning and should generally be documented when it materially affects treatment or risk management.
-		D. Incorrect. A safety plan without the underlying assessment does not show why the plan was developed or how the therapist evaluated the client’s risk.
-		CTA Exam Strategy: In high-risk situations, document:Concern → Assessment → Decision → Intervention → Follow-up
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documentation and Risk Management; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist conducts an assessment outside the therapist’s competence but creates exceptionally detailed and polished documentation of the service.Which statement is most accurate?',
@@ -234,7 +141,6 @@ CTA Exam Strategy: In high-risk situations, document:Concern → Assessment → 
 		'option_d'       => 'The service becomes appropriate as long as the therapist clearly explains the limitations in the note',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Documentation may show what the therapist did and why, but it cannot replace the knowledge, skills, judgment, or preparation required to provide the service competently.
 Excellent documentation does not transform poor, unethical, or incompetent treatment into appropriate professional practice.
 Why the Other Answers Are Incorrect
@@ -242,16 +148,6 @@ B. Incorrect. A thorough record may improve transparency, but it does not elimin
 C. Incorrect. Documentation supports care; it is not more important than competent and ethical clinical practice.
 D. Incorrect. Acknowledging limitations in the note does not automatically justify proceeding with a service beyond the therapist’s competence.
 CTA Exam Strategy: Remember:Documenting poor practice well does not make it good practice.',
-=======
-		Documentation may show what the therapist did and why, but it cannot replace the knowledge, skills, judgment, or preparation required to provide the service competently.
-		Excellent documentation does not transform poor, unethical, or incompetent treatment into appropriate professional practice.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. A thorough record may improve transparency, but it does not eliminate concerns about whether the therapist was qualified to perform the assessment.
-		C. Incorrect. Documentation supports care; it is not more important than competent and ethical clinical practice.
-		D. Incorrect. Acknowledging limitations in the note does not automatically justify proceeding with a service beyond the therapist’s competence.
-		CTA Exam Strategy: Remember:Documenting poor practice well does not make it good practice.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documentation Cannot Replace Competence; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist’s progress notes are completed promptly and contain detailed descriptions of each session. However, the notes repeatedly include unsupported assumptions about the client’s motivation, sarcastic comments, irrelevant family gossip, and no explanation of major treatment decisions.Which statement best describes the record?',
@@ -261,7 +157,6 @@ CTA Exam Strategy: Remember:Documenting poor practice well does not make it good
 		'option_d'       => 'The only problem is that the client may eventually request access',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Effective documentation requires more than prompt completion or extensive detail. It should be accurate, objective, timely, clear, professional, and clinically relevant.
 Unsupported conclusions, sarcasm, gossip, and unexplained decisions weaken the record even when the notes are lengthy and completed immediately after sessions.
 Why the Other Answers Are Incorrect
@@ -269,16 +164,6 @@ A. Incorrect. Timeliness is only one documentation standard. The record still fa
 B. Incorrect. More documentation is not automatically better documentation. Excessive or irrelevant content may obscure important clinical information.
 D. Incorrect. Client access is one reason to use professional language, but the documentation would be problematic even if the client never reviewed it.
 CTA Exam Strategy: Apply the full A-O-T-C-P test:AccurateObjectiveTimelyClearProfessionalA note that satisfies only one or two elements is not necessarily adequate.',
-=======
-		Effective documentation requires more than prompt completion or extensive detail. It should be accurate, objective, timely, clear, professional, and clinically relevant.
-		Unsupported conclusions, sarcasm, gossip, and unexplained decisions weaken the record even when the notes are lengthy and completed immediately after sessions.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Timeliness is only one documentation standard. The record still fails important requirements involving objectivity, professional language, relevance, and clarity.
-		B. Incorrect. More documentation is not automatically better documentation. Excessive or irrelevant content may obscure important clinical information.
-		D. Incorrect. Client access is one reason to use professional language, but the documentation would be problematic even if the client never reviewed it.
-		CTA Exam Strategy: Apply the full A-O-T-C-P test:AccurateObjectiveTimelyClearProfessionalA note that satisfies only one or two elements is not necessarily adequate.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Integrated Documentation Quality; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist reviews a draft note and notices that it describes what the therapist wishes had occurred rather than the intervention actually provided.Which revision principle should the therapist apply?',
@@ -288,7 +173,6 @@ CTA Exam Strategy: Apply the full A-O-T-C-P test:AccurateObjectiveTimelyClearPro
 		'option_d'       => 'The record should emphasize information that makes the therapist appear competent',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Accurate documentation reflects the services that were actually provided and the information available at the time. It may include relevant client statements, clinical observations, interventions, responses, decisions, and follow-up plans.
 The record should represent the treatment truthfully rather than being shaped to create a more favorable impression.
 Why the Other Answers Are Incorrect
@@ -296,16 +180,6 @@ A. Incorrect. Documentation should not describe what the therapist wishes had ha
 C. Incorrect. Missing details should not be replaced with assumptions presented as fact. When information is uncertain, the record should reflect that uncertainty accurately.
 D. Incorrect. The purpose of documentation is to support care and accountability—not to protect the therapist’s image by selectively presenting events.
 CTA Exam Strategy: Remember:Document what occurred—not what should have occurred.',
-=======
-		Accurate documentation reflects the services that were actually provided and the information available at the time. It may include relevant client statements, clinical observations, interventions, responses, decisions, and follow-up plans.
-		The record should represent the treatment truthfully rather than being shaped to create a more favorable impression.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Documentation should not describe what the therapist wishes had happened. Recording an ideal response instead of the actual response would make the record misleading.
-		C. Incorrect. Missing details should not be replaced with assumptions presented as fact. When information is uncertain, the record should reflect that uncertainty accurately.
-		D. Incorrect. The purpose of documentation is to support care and accountability—not to protect the therapist’s image by selectively presenting events.
-		CTA Exam Strategy: Remember:Document what occurred—not what should have occurred.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documentation Accuracy; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is deciding what information from a routine session belongs in the progress note.Which information is most appropriate to include?',
@@ -315,7 +189,6 @@ CTA Exam Strategy: Remember:Document what occurred—not what should have occurr
 		'option_d'       => 'Every statement made during the session',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 A useful progress note identifies the clinically relevant issue, the services or intervention provided, the client’s response, significant decisions, and the next step in treatment.
 This level of information supports continuity of care without turning the note into a verbatim transcript.
 Why the Other Answers Are Incorrect
@@ -323,16 +196,6 @@ A. Incorrect. Unverified rumors that are unrelated to treatment may be inaccurat
 B. Incorrect. Personal opinions about appearance generally do not belong in the record unless a specific observation is clinically relevant and documented objectively.
 D. Incorrect. Progress notes do not require every word spoken during a session. Excessive detail may reduce clarity and obscure important information.
 CTA Exam Strategy: A strong progress note generally answers:What was addressed? What was done? How did the client respond? What happens next?',
-=======
-		A useful progress note identifies the clinically relevant issue, the services or intervention provided, the client’s response, significant decisions, and the next step in treatment.
-		This level of information supports continuity of care without turning the note into a verbatim transcript.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Unverified rumors that are unrelated to treatment may be inaccurate, irrelevant, and potentially harmful.
-		B. Incorrect. Personal opinions about appearance generally do not belong in the record unless a specific observation is clinically relevant and documented objectively.
-		D. Incorrect. Progress notes do not require every word spoken during a session. Excessive detail may reduce clarity and obscure important information.
-		CTA Exam Strategy: A strong progress note generally answers:What was addressed? What was done? How did the client respond? What happens next?
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Appropriate Progress-Note Content; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Several years after treatment ends, a former client’s record is reviewed during a licensing inquiry about the services provided and the therapist’s follow-up efforts.Which statement best explains why the documentation remains important?',
@@ -342,7 +205,6 @@ CTA Exam Strategy: A strong progress note generally answers:What was addressed? 
 		'option_d'       => 'It may later demonstrate the services provided, clinical reasoning, decisions made, and follow-up efforts',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Clinical records may later be reviewed during continued treatment, transfer of care, consultation, audits, licensing investigations, complaints, or legal proceedings.
 A clear record helps explain what occurred and why the therapist made particular professional decisions.
 Why the Other Answers Are Incorrect
@@ -350,16 +212,6 @@ A. Incorrect. Documentation does not make clinical decisions immune from review.
 B. Incorrect. Documentation does not eliminate client-access rights. Records may be reviewed by clients under applicable law.
 C. Incorrect. Records support professional memory and continuity, but they do not replace the therapist’s need to remain attentive, competent, and familiar with the treatment.
 CTA Exam Strategy: Think of documentation as evidence of:Service + reasoning + action + follow-up',
-=======
-		Clinical records may later be reviewed during continued treatment, transfer of care, consultation, audits, licensing investigations, complaints, or legal proceedings.
-		A clear record helps explain what occurred and why the therapist made particular professional decisions.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Documentation does not make clinical decisions immune from review. It provides evidence that helps others evaluate those decisions.
-		B. Incorrect. Documentation does not eliminate client-access rights. Records may be reviewed by clients under applicable law.
-		C. Incorrect. Records support professional memory and continuity, but they do not replace the therapist’s need to remain attentive, competent, and familiar with the treatment.
-		CTA Exam Strategy: Think of documentation as evidence of:Service + reasoning + action + follow-up
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Professional Accountability; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist consults with an experienced clinician about a complicated treatment decision. The consultation materially affects the therapist’s plan.Which documentation approach is most appropriate?',
@@ -369,7 +221,6 @@ CTA Exam Strategy: Think of documentation as evidence of:Service + reasoning + a
 		'option_d'       => 'Document only the consultant’s name and no other information',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 When consultation affects treatment, the record may appropriately identify when consultation occurred, why it was sought, the general clinical issue, relevant recommendations, and what the therapist decided to do.
 This supports continuity of care and demonstrates that the therapist used professional resources responsibly.
 Why the Other Answers Are Incorrect
@@ -377,16 +228,6 @@ A. Incorrect. A verbatim transcript is generally unnecessary and may introduce e
 C. Incorrect. Consultation can be an important part of professional decision-making even when the consultant does not directly treat the client.
 D. Incorrect. The consultant’s name alone does not show why consultation occurred or how it affected the clinical plan.
 CTA Exam Strategy: Consultation documentation should show:Why help was sought + what guidance mattered + what action followed',
-=======
-		When consultation affects treatment, the record may appropriately identify when consultation occurred, why it was sought, the general clinical issue, relevant recommendations, and what the therapist decided to do.
-		This supports continuity of care and demonstrates that the therapist used professional resources responsibly.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. A verbatim transcript is generally unnecessary and may introduce excessive information. The clinically relevant content is what matters.
-		C. Incorrect. Consultation can be an important part of professional decision-making even when the consultant does not directly treat the client.
-		D. Incorrect. The consultant’s name alone does not show why consultation occurred or how it affected the clinical plan.
-		CTA Exam Strategy: Consultation documentation should show:Why help was sought + what guidance mattered + what action followed
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documenting Consultation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist determines that a client requires a specialized service beyond the therapist’s competence and provides several referral options.Which documentation is strongest?',
@@ -396,7 +237,6 @@ CTA Exam Strategy: Consultation documentation should show:Why help was sought + 
 		'option_d'       => 'No documentation unless the client actually contacts a referral',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Referral documentation should help explain the clinical concern, why another service was recommended, what resources were provided, how the client responded, and whether follow-up or coordination was planned.
 This supports continuity and demonstrates how the therapist addressed a competence limitation or unmet treatment need.
 Why the Other Answers Are Incorrect
@@ -404,16 +244,6 @@ B. Incorrect. A list of names does not explain the reason for referral, the clie
 C. Incorrect. “Too difficult to treat” is judgmental and does not identify the actual competence or treatment issue.
 D. Incorrect. The referral decision itself is clinically significant and should generally be documented even before the client contacts another provider.
 CTA Exam Strategy: For referrals, document:Concern → Reason → Resources → Client response → Follow-up',
-=======
-		Referral documentation should help explain the clinical concern, why another service was recommended, what resources were provided, how the client responded, and whether follow-up or coordination was planned.
-		This supports continuity and demonstrates how the therapist addressed a competence limitation or unmet treatment need.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. A list of names does not explain the reason for referral, the client’s response, or the therapist’s follow-up responsibilities.
-		C. Incorrect. “Too difficult to treat” is judgmental and does not identify the actual competence or treatment issue.
-		D. Incorrect. The referral decision itself is clinically significant and should generally be documented even before the client contacts another provider.
-		CTA Exam Strategy: For referrals, document:Concern → Reason → Resources → Client response → Follow-up
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Documenting Referrals; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist writes eight-page notes after routine sessions. The notes include detailed descriptions of the client’s relatives, unrelated workplace conflicts, personal speculation, repeated quotations, and only one sentence about the intervention used.What is the strongest analysis?',
@@ -423,7 +253,6 @@ CTA Exam Strategy: For referrals, document:Concern → Reason → Resources → 
 		'option_d'       => 'Excessive and irrelevant content may obscure clinically important information, reduce clarity, and unnecessarily expose information about others',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Good documentation should be sufficiently complete to explain treatment without becoming excessive. Large amounts of irrelevant material can make it difficult for another professional to identify the clinical concern, intervention, response, and treatment plan.
 Unnecessary details about relatives, coworkers, or other nonclients may also create privacy and professional-language concerns.
 Why the Other Answers Are Incorrect
@@ -431,16 +260,6 @@ A. Incorrect. Length does not automatically create quality or protection. Excess
 B. Incorrect. Time burden may be relevant, but the more serious concern is the effect on clarity, relevance, professional communication, and third-party privacy.
 C. Incorrect. Preserving every client statement is not the goal of a progress note. The therapist should select clinically relevant information rather than create a transcript.
 CTA Exam Strategy: Remember:Complete does not mean exhaustive.The strongest note makes important information easy to find.',
-=======
-		Good documentation should be sufficiently complete to explain treatment without becoming excessive. Large amounts of irrelevant material can make it difficult for another professional to identify the clinical concern, intervention, response, and treatment plan.
-		Unnecessary details about relatives, coworkers, or other nonclients may also create privacy and professional-language concerns.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Length does not automatically create quality or protection. Excessive records may increase confusion and risk rather than reduce it.
-		B. Incorrect. Time burden may be relevant, but the more serious concern is the effect on clarity, relevance, professional communication, and third-party privacy.
-		C. Incorrect. Preserving every client statement is not the goal of a progress note. The therapist should select clinically relevant information rather than create a transcript.
-		CTA Exam Strategy: Remember:Complete does not mean exhaustive.The strongest note makes important information easy to find.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Complete vs. Excessive Documentation; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Following a session involving increased depression and possible suicide risk, a therapist waits two weeks to write the note. The therapist documents:“Client was dramatic, attention-seeking, and probably exaggerating. Discussed safety.”The therapist does not record the risk questions asked, the client’s responses, protective factors, clinical decision, consultation, safety plan, or follow-up arrangements.What is the most appropriate documentation response?',
@@ -450,7 +269,6 @@ CTA Exam Strategy: Remember:Complete does not mean exhaustive.The strongest note
 		'option_d'       => 'Delete the judgmental language and document only, “Client denied immediate intent”',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 The record has several deficiencies:
 Documentation was delayed.
 The language is judgmental and speculative.
@@ -464,22 +282,6 @@ A. Incorrect. Properly identified late entries and transparent corrections may b
 B. Incorrect. Replacing the original note and dating it as though it had been completed earlier would compromise record integrity and amount to misleading backdating.
 D. Incorrect. Deleting unfavorable language without preserving the correction process may conceal the original entry. Recording only denial of immediate intent would still omit the broader assessment and protective actions.
 CTA Exam Strategy: For a deficient high-risk note, look for the answer that protects:AccuracyTransparencyRecord integrityClinical reasoningAssessment and follow-upNever choose secret replacement or backdating.',
-=======
-		The record has several deficiencies:
-		Documentation was delayed.
-		The language is judgmental and speculative.
-		Observable information is missing.
-		The risk assessment is not described.
-		Clinical reasoning is absent.
-		Consultation, safety planning, and follow-up are omitted.
-		The therapist should not backdate or secretly replace the record. When accurate information is available, a transparent correction or clearly identified late entry may be used according to proper record procedures. The entry should distinguish what occurred during the session from when the additional documentation was created.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Properly identified late entries and transparent corrections may be appropriate. Leaving a known incomplete and judgmental record unchanged is not automatically the best response.
-		B. Incorrect. Replacing the original note and dating it as though it had been completed earlier would compromise record integrity and amount to misleading backdating.
-		D. Incorrect. Deleting unfavorable language without preserving the correction process may conceal the original entry. Recording only denial of immediate intent would still omit the broader assessment and protective actions.
-		CTA Exam Strategy: For a deficient high-risk note, look for the answer that protects:AccuracyTransparencyRecord integrityClinical reasoningAssessment and follow-upNever choose secret replacement or backdating.
-		Remediation: Return to Workbook 9, Chapter 1: Clinical Documentation Standards; review Clinical Documentation Standards; log error category DOCUMENTATION-STANDARDS.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist realizes three days after a session that the progress note was not completed. The therapist creates an entry using the current date, identifies it as a late entry, states when the session occurred, and documents the information accurately.Which statement is most accurate?',
@@ -489,7 +291,6 @@ CTA Exam Strategy: For a deficient high-risk note, look for the answer that prot
 		'option_d'       => 'The therapist should add the information to the next session’s note without identifying the delay',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 When documentation was not completed promptly, a properly identified late entry may be used to add accurate and clinically relevant information. The entry should distinguish the date of the service from the date the documentation was actually created.
 This approach maintains transparency and record integrity rather than creating the false impression that the note was written earlier.
 Why the Other Answers Are Incorrect
@@ -497,16 +298,6 @@ A. Incorrect. Changing the entry date to make the note appear contemporaneous wo
 C. Incorrect. Late documentation is not automatically prohibited. A transparent late entry is generally preferable to leaving important information undocumented.
 D. Incorrect. Adding the information to a later note without identifying when the original event occurred could create confusion and an inaccurate treatment chronology.
 CTA Exam Strategy: Remember:Late entry = identify it.Backdating = avoid it.',
-=======
-		When documentation was not completed promptly, a properly identified late entry may be used to add accurate and clinically relevant information. The entry should distinguish the date of the service from the date the documentation was actually created.
-		This approach maintains transparency and record integrity rather than creating the false impression that the note was written earlier.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Changing the entry date to make the note appear contemporaneous would be misleading and may constitute backdating.
-		C. Incorrect. Late documentation is not automatically prohibited. A transparent late entry is generally preferable to leaving important information undocumented.
-		D. Incorrect. Adding the information to a later note without identifying when the original event occurred could create confusion and an inaccurate treatment chronology.
-		CTA Exam Strategy: Remember:Late entry = identify it.Backdating = avoid it.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Late Entry vs. Backdating; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist discovers that a progress note incorrectly states that the client denied panic attacks when the client actually reported two panic attacks that week.What is the most appropriate response?',
@@ -516,7 +307,6 @@ CTA Exam Strategy: Remember:Late entry = identify it.Backdating = avoid it.',
 		'option_d'       => 'Correct the error transparently according to proper record procedures, preserving the original information or audit trail when required',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Known inaccuracies should be corrected through the appropriate documentation process. A proper correction generally preserves the original entry or electronic audit trail, identifies the corrected information, and records the date of the correction.
 The goal is to improve accuracy without concealing that the record was changed.
 Why the Other Answers Are Incorrect
@@ -524,16 +314,6 @@ A. Incorrect. Deleting and replacing the entire note may compromise record integ
 B. Incorrect. A factual error may affect future assessment, treatment planning, or continuity of care. It should not be knowingly left uncorrected.
 C. Incorrect. Quietly changing the record may conceal the correction and create uncertainty about when the information was modified.
 CTA Exam Strategy: The examination generally favors:Correction with transparency—not correction through concealment.',
-=======
-		Known inaccuracies should be corrected through the appropriate documentation process. A proper correction generally preserves the original entry or electronic audit trail, identifies the corrected information, and records the date of the correction.
-		The goal is to improve accuracy without concealing that the record was changed.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Deleting and replacing the entire note may compromise record integrity and make it appear that the original entry never existed.
-		B. Incorrect. A factual error may affect future assessment, treatment planning, or continuity of care. It should not be knowingly left uncorrected.
-		C. Incorrect. Quietly changing the record may conceal the correction and create uncertainty about when the information was modified.
-		CTA Exam Strategy: The examination generally favors:Correction with transparency—not correction through concealment.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Correcting Documentation Errors; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client makes a serious threat toward another person. The therapist assesses intent, access to weapons, identifying information about the potential victim, protective factors, and immediate safety needs. The therapist obtains consultation, takes protective action, and schedules follow-up.The progress note states only:“Client was angry. Safety addressed.”What is the most significant documentation concern?',
@@ -543,7 +323,6 @@ CTA Exam Strategy: The examination generally favors:Correction with transparency
 		'option_d'       => 'The note is sufficient because it establishes that safety was discussed',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 High-risk situations generally require documentation sufficient to show what information was obtained, how the concern was assessed, what decisions were made, what consultation occurred, what protective actions were taken, and what follow-up was planned.
 The statement “safety addressed” does not allow another professional to understand the nature of the risk or the basis for the therapist’s response.
 Why the Other Answers Are Incorrect
@@ -551,16 +330,6 @@ B. Incorrect. The note as written does not contain excessive identifying informa
 C. Incorrect. A word-for-word transcript is not required. The record should contain relevant information, not every statement made during the session.
 D. Incorrect. Merely stating that safety was addressed does not demonstrate the assessment process, reasoning, intervention, consultation, or continuity plan.
 CTA Exam Strategy: For high-risk situations, look for documentation of:Risk information → Assessment → Decision → Action → Consultation → Follow-up',
-=======
-		High-risk situations generally require documentation sufficient to show what information was obtained, how the concern was assessed, what decisions were made, what consultation occurred, what protective actions were taken, and what follow-up was planned.
-		The statement “safety addressed” does not allow another professional to understand the nature of the risk or the basis for the therapist’s response.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. The note as written does not contain excessive identifying information. Its central problem is the absence of clinically important assessment and intervention details.
-		C. Incorrect. A word-for-word transcript is not required. The record should contain relevant information, not every statement made during the session.
-		D. Incorrect. Merely stating that safety was addressed does not demonstrate the assessment process, reasoning, intervention, consultation, or continuity plan.
-		CTA Exam Strategy: For high-risk situations, look for documentation of:Risk information → Assessment → Decision → Action → Consultation → Follow-up
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review High-Risk Documentation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist copies the previous session’s note into the current progress note. The copied text states:“Client denied suicidal ideation.”During the current session, however, the client reported recurring suicidal thoughts without a current plan.What should the therapist do?',
@@ -570,7 +339,6 @@ CTA Exam Strategy: For high-risk situations, look for documentation of:Risk info
 		'option_d'       => 'Keep the copied statement and add that the client appeared stable',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Each progress note should accurately reflect the client’s current presentation and the services provided during that encounter. The therapist should remove or transparently correct inaccurate copied material and document the current suicidal thoughts, assessment findings, clinical reasoning, interventions, and follow-up plan.
 Copy-and-paste tools may support efficiency, but the therapist remains responsible for reviewing and updating every entry.
 Why the Other Answers Are Incorrect
@@ -578,16 +346,6 @@ A. Incorrect. Information that was accurate during a prior session may become mi
 B. Incorrect. Prior accurate documentation should not be destroyed merely because the client’s condition changed. Earlier notes remain part of the treatment history.
 D. Incorrect. A general statement that the client appeared stable does not correct the inaccurate denial or document the required risk assessment.
 CTA Exam Strategy: For copied documentation, ask:Does every statement accurately describe this session?Templates never replace clinical review.',
-=======
-		Each progress note should accurately reflect the client’s current presentation and the services provided during that encounter. The therapist should remove or transparently correct inaccurate copied material and document the current suicidal thoughts, assessment findings, clinical reasoning, interventions, and follow-up plan.
-		Copy-and-paste tools may support efficiency, but the therapist remains responsible for reviewing and updating every entry.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Information that was accurate during a prior session may become misleading when copied into a current note without clarification. The present note must reflect the present encounter.
-		B. Incorrect. Prior accurate documentation should not be destroyed merely because the client’s condition changed. Earlier notes remain part of the treatment history.
-		D. Incorrect. A general statement that the client appeared stable does not correct the inaccurate denial or document the required risk assessment.
-		CTA Exam Strategy: For copied documentation, ask:Does every statement accurately describe this session?Templates never replace clinical review.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Copy-and-Paste Documentation Errors; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a crisis session, a therapist completes a suicide-risk assessment, consults with a supervisor, arranges an emergency psychiatric evaluation, and confirms that the client arrived at the evaluation site.The therapist documents only:“Crisis session completed.”What is the strongest documentation response?',
@@ -597,7 +355,6 @@ CTA Exam Strategy: For copied documentation, ask:Does every statement accurately
 		'option_d'       => 'Wait until treatment ends and include the incident in the discharge summary',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 The record should show what concern arose, what assessment occurred, what decision was made, what consultation was obtained, what intervention followed, and whether continuity and follow-up were established.
 A crisis note does not need to reproduce every word spoken, but it must contain enough information for another professional to understand the therapist’s reasoning and protective actions.
 Why the Other Answers Are Incorrect
@@ -605,16 +362,6 @@ B. Incorrect. Avoiding clinically important information does not reduce risk. It
 C. Incorrect. Merely recording a referral does not explain the risk assessment, urgency, consultation, or whether the client reached the recommended service.
 D. Incorrect. Waiting until discharge may leave other providers without essential information during active treatment and weaken the reliability of the record.
 CTA Exam Strategy: In high-risk care, document:What happened + what you assessed + what you did + what happened next',
-=======
-		The record should show what concern arose, what assessment occurred, what decision was made, what consultation was obtained, what intervention followed, and whether continuity and follow-up were established.
-		A crisis note does not need to reproduce every word spoken, but it must contain enough information for another professional to understand the therapist’s reasoning and protective actions.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Avoiding clinically important information does not reduce risk. It may make the record appear incomplete and interfere with continuity of care.
-		C. Incorrect. Merely recording a referral does not explain the risk assessment, urgency, consultation, or whether the client reached the recommended service.
-		D. Incorrect. Waiting until discharge may leave other providers without essential information during active treatment and weaken the reliability of the record.
-		CTA Exam Strategy: In high-risk care, document:What happened + what you assessed + what you did + what happened next
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Omitting Significant Clinical Actions; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist consults with a supervisor after becoming uncertain about whether a client requires a higher level of care.Which documentation is most appropriate?',
@@ -624,7 +371,6 @@ CTA Exam Strategy: In high-risk care, document:What happened + what you assessed
 		'option_d'       => 'The date, purpose, relevant clinical issue, general recommendations, and actions the therapist took',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Consultation documentation should demonstrate why guidance was sought, the general issue discussed, recommendations that influenced care, and what the therapist decided or did afterward.
 This supports continuity, accountability, and the clinical decision-making process without creating an unnecessary transcript.
 Why the Other Answers Are Incorrect
@@ -632,16 +378,6 @@ A. Incorrect. A word-for-word record is generally excessive. The clinically sign
 B. Incorrect. A title alone does not explain the consultation’s purpose, substance, or effect on treatment.
 C. Incorrect. Consultation may materially affect client care and professional judgment. When clinically significant, it should generally be documented.
 CTA Exam Strategy: Consultation documentation should answer:Why was help sought, what guidance mattered, and what action followed?',
-=======
-		Consultation documentation should demonstrate why guidance was sought, the general issue discussed, recommendations that influenced care, and what the therapist decided or did afterward.
-		This supports continuity, accountability, and the clinical decision-making process without creating an unnecessary transcript.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. A word-for-word record is generally excessive. The clinically significant content and resulting actions are more important.
-		B. Incorrect. A title alone does not explain the consultation’s purpose, substance, or effect on treatment.
-		C. Incorrect. Consultation may materially affect client care and professional judgment. When clinically significant, it should generally be documented.
-		CTA Exam Strategy: Consultation documentation should answer:Why was help sought, what guidance mattered, and what action followed?
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Consultation Documentation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist determines that a client needs specialized treatment beyond the therapist’s competence. The therapist explains the concern, provides three referrals, and offers to coordinate care. The client declines the referrals and wants to continue unchanged.What should the therapist document?',
@@ -651,7 +387,6 @@ CTA Exam Strategy: Consultation documentation should answer:Why was help sought,
 		'option_d'       => 'Only the names and telephone numbers of the referral sources',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 The record should explain why referral was recommended, what resources were offered, how the client responded, and what steps were taken to protect continuity and client welfare.
 The therapist should also document any further assessment or decisions about whether current services can safely continue during transition.
 Why the Other Answers Are Incorrect
@@ -659,16 +394,6 @@ A. Incorrect. “Difficult” and “uncooperative” are judgmental labels that
 C. Incorrect. The recommendation and the client’s response are significant treatment events even when the client does not contact a referral.
 D. Incorrect. A list of providers does not document the clinical reason, informed discussion, client response, or follow-up plan.
 CTA Exam Strategy: A referral note should show:Need → Recommendation → Resources → Response → Continuity',
-=======
-		The record should explain why referral was recommended, what resources were offered, how the client responded, and what steps were taken to protect continuity and client welfare.
-		The therapist should also document any further assessment or decisions about whether current services can safely continue during transition.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. “Difficult” and “uncooperative” are judgmental labels that do not explain the actual clinical issue or the client’s stated reasons.
-		C. Incorrect. The recommendation and the client’s response are significant treatment events even when the client does not contact a referral.
-		D. Incorrect. A list of providers does not document the clinical reason, informed discussion, client response, or follow-up plan.
-		CTA Exam Strategy: A referral note should show:Need → Recommendation → Resources → Response → Continuity
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Referral and Follow-Up Documentation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A former client files a licensing complaint. After receiving notice of the complaint, the therapist reviews the record and notices that several old notes are vague and unprofessional.What is the most appropriate response?',
@@ -678,7 +403,6 @@ CTA Exam Strategy: A referral note should show:Need → Recommendation → Resou
 		'option_d'       => 'Destroy personal drafts and incomplete notes before anyone requests them',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 A complaint does not authorize the therapist to change history. The original record should be preserved, and any legitimate correction or addendum should be transparent, properly dated, and completed according to applicable record procedures.
 The therapist may obtain legal, ethical, supervisory, or organizational consultation while maintaining the record’s integrity.
 Why the Other Answers Are Incorrect
@@ -686,16 +410,6 @@ A. Incorrect. Rewriting and backdating old notes would create a false impression
 B. Incorrect. Removing unfavorable information may conceal the original record and create serious credibility and professional-conduct concerns.
 D. Incorrect. Destroying materials after learning of a complaint may compromise evidence and violate applicable preservation duties or policies.
 CTA Exam Strategy: Once a complaint or investigation exists:Preserve—do not polish.The safest record is an honest record.',
-=======
-		A complaint does not authorize the therapist to change history. The original record should be preserved, and any legitimate correction or addendum should be transparent, properly dated, and completed according to applicable record procedures.
-		The therapist may obtain legal, ethical, supervisory, or organizational consultation while maintaining the record’s integrity.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Rewriting and backdating old notes would create a false impression about when and how the documentation was completed.
-		B. Incorrect. Removing unfavorable information may conceal the original record and create serious credibility and professional-conduct concerns.
-		D. Incorrect. Destroying materials after learning of a complaint may compromise evidence and violate applicable preservation duties or policies.
-		CTA Exam Strategy: Once a complaint or investigation exists:Preserve—do not polish.The safest record is an honest record.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Documentation During a Complaint; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist documents that a client denied access to weapons during a risk assessment. Two days later, a family member provides credible information that the client had access to a firearm at the time of the original session.What is the most appropriate documentation approach?',
@@ -705,7 +419,6 @@ CTA Exam Strategy: Once a complaint or investigation exists:Preserve—do not po
 		'option_d'       => 'Preserve the original note and add a dated entry identifying the later collateral information, its source, the therapist’s reassessment, actions taken, and follow-up',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 The original note accurately reflected what the client reported and what the therapist knew at that time. Later information should be documented as later information rather than inserted into the original record as though it had been known earlier.
 The addendum or subsequent note should identify the source, clarify when the information was received, record the reassessment, and describe any protective action or follow-up.
 Why the Other Answers Are Incorrect
@@ -713,16 +426,6 @@ A. Incorrect. Quietly changing the original note would distort the treatment chr
 B. Incorrect. The client’s original denial remains clinically relevant. It should not be erased simply because contradictory information later emerged.
 C. Incorrect. Credible collateral information may materially affect risk assessment and treatment and should not be ignored merely because it came from someone other than the client.
 CTA Exam Strategy: Keep the timeline clear:What was known thenversusWhat was learned later',
-=======
-		The original note accurately reflected what the client reported and what the therapist knew at that time. Later information should be documented as later information rather than inserted into the original record as though it had been known earlier.
-		The addendum or subsequent note should identify the source, clarify when the information was received, record the reassessment, and describe any protective action or follow-up.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Quietly changing the original note would distort the treatment chronology and falsely suggest that the therapist possessed the information earlier.
-		B. Incorrect. The client’s original denial remains clinically relevant. It should not be erased simply because contradictory information later emerged.
-		C. Incorrect. Credible collateral information may materially affect risk assessment and treatment and should not be ignored merely because it came from someone other than the client.
-		CTA Exam Strategy: Keep the timeline clear:What was known thenversusWhat was learned later
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Later Information and Transparent Addenda; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client reports suicidal thoughts, recent substance use, and access to medication that could be used for self-harm. The therapist:Assesses intent, plan, means, risk factors, and protective factorsConsults with a supervisorRecommends emergency evaluationInvolves an authorized support personConfirms transportation to the hospitalContacts the client after dischargeRevises the treatment and safety planWhich documentation approach is strongest?',
@@ -732,7 +435,6 @@ CTA Exam Strategy: Keep the timeline clear:What was known thenversusWhat was lea
 		'option_d'       => 'Limit the note to the client’s diagnosis and the hospital’s name',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 The record should present a clear clinical sequence:
 What risk information was obtained
 What factors were assessed
@@ -747,23 +449,6 @@ B. Incorrect. The final outcome does not show what the therapist knew, assessed,
 C. Incorrect. Objectivity does not require omitting professional reasoning. A transcript may be excessive while still failing to explain the assessment and decision.
 D. Incorrect. Diagnosis and destination alone do not document the risk evaluation, consultation, intervention, or follow-up process.
 CTA Exam Strategy: For an integrated high-risk question, use:Concern → Assessment → Reasoning → Consultation → Action → Outcome → Follow-up',
-=======
-		The record should present a clear clinical sequence:
-		What risk information was obtained
-		What factors were assessed
-		How the therapist reached the decision
-		What consultation occurred
-		What intervention and coordination followed
-		How the client responded
-		What disposition and follow-up occurred
-		This level of documentation supports continuity, risk management, and professional accountability without requiring a transcript.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. The final outcome does not show what the therapist knew, assessed, or considered when making the decision. Clinical reasoning matters as much as the disposition.
-		C. Incorrect. Objectivity does not require omitting professional reasoning. A transcript may be excessive while still failing to explain the assessment and decision.
-		D. Incorrect. Diagnosis and destination alone do not document the risk evaluation, consultation, intervention, or follow-up process.
-		CTA Exam Strategy: For an integrated high-risk question, use:Concern → Assessment → Reasoning → Consultation → Action → Outcome → Follow-up
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Integrated High-Risk Documentation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor reviews four proposed ways to document information after the original service date and asks a registered AMFT to identify the method that would falsely conceal when a note was created.Which action most clearly represents improper backdating?',
@@ -773,7 +458,6 @@ CTA Exam Strategy: For an integrated high-risk question, use:Concern → Assessm
 		'option_d'       => 'Adding new information when it is received from a collateral contact',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Backdating creates the false appearance that documentation was completed earlier than it actually was. This compromises record integrity and may create significant credibility, ethical, and legal concerns.
 A delayed note should reflect both the date of the clinical event and the actual date the entry was created.
 Why the Other Answers Are Incorrect
@@ -781,16 +465,6 @@ A. Incorrect. This may be an appropriate late-entry procedure when the delay is 
 B. Incorrect. Transparent correction preserves integrity rather than concealing the original record.
 D. Incorrect. Later information may properly be documented in a new dated entry that identifies the source and explains any resulting clinical response.
 CTA Exam Strategy: Remember:A late entry tells the truth about when it was written. Backdating hides that truth.',
-=======
-		Backdating creates the false appearance that documentation was completed earlier than it actually was. This compromises record integrity and may create significant credibility, ethical, and legal concerns.
-		A delayed note should reflect both the date of the clinical event and the actual date the entry was created.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. This may be an appropriate late-entry procedure when the delay is clearly identified and the information is accurate.
-		B. Incorrect. Transparent correction preserves integrity rather than concealing the original record.
-		D. Incorrect. Later information may properly be documented in a new dated entry that identifies the source and explains any resulting clinical response.
-		CTA Exam Strategy: Remember:A late entry tells the truth about when it was written. Backdating hides that truth.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Backdating; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which action is most important to document because it materially affects treatment and client safety?',
@@ -800,7 +474,6 @@ CTA Exam Strategy: Remember:A late entry tells the truth about when it was writt
 		'option_d'       => 'Every casual comment made during the session',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Risk assessments, safety planning, crisis interventions, consultations, referrals, and follow-up efforts are significant clinical actions. Documentation should explain what concern was identified, what the therapist assessed, what decision was made, and what occurred afterward.
 This information supports continuity of care and professional accountability.
 Why the Other Answers Are Incorrect
@@ -808,16 +481,6 @@ B. Incorrect. The therapist’s personal dislike is not clinically appropriate d
 C. Incorrect. Unverified and irrelevant gossip does not support treatment and may unnecessarily expose information about others.
 D. Incorrect. Clinical documentation should be relevant and organized rather than a transcript of every remark.
 CTA Exam Strategy: Use this shortcut:If it significantly affects treatment, safety, or continuity, it probably deserves documentation.',
-=======
-		Risk assessments, safety planning, crisis interventions, consultations, referrals, and follow-up efforts are significant clinical actions. Documentation should explain what concern was identified, what the therapist assessed, what decision was made, and what occurred afterward.
-		This information supports continuity of care and professional accountability.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. The therapist’s personal dislike is not clinically appropriate documentation and may introduce bias or judgmental language.
-		C. Incorrect. Unverified and irrelevant gossip does not support treatment and may unnecessarily expose information about others.
-		D. Incorrect. Clinical documentation should be relevant and organized rather than a transcript of every remark.
-		CTA Exam Strategy: Use this shortcut:If it significantly affects treatment, safety, or continuity, it probably deserves documentation.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Significant Clinical Actions; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist learns that a licensing-board investigation has begun.What is the most appropriate documentation response?',
@@ -827,7 +490,6 @@ CTA Exam Strategy: Use this shortcut:If it significantly affects treatment, safe
 		'option_d'       => 'Preserve the existing record and continue accurate, timely, and professional documentation',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 A complaint or investigation does not change the therapist’s obligation to preserve record integrity. Existing documentation should not be rewritten, concealed, or destroyed merely because it may be reviewed.
 The therapist should continue normal professional documentation and obtain appropriate consultation concerning preservation requirements when needed.
 Why the Other Answers Are Incorrect
@@ -835,16 +497,6 @@ A. Incorrect. Rewriting old notes may create the false appearance that the revis
 B. Incorrect. Removing potentially unfavorable information may constitute improper alteration or concealment.
 C. Incorrect. Suspending documentation could create additional gaps in care and weaken continuity and accountability.
 CTA Exam Strategy: After a complaint or investigation:Preserve the record. Do not reconstruct a better-looking history.',
-=======
-		A complaint or investigation does not change the therapist’s obligation to preserve record integrity. Existing documentation should not be rewritten, concealed, or destroyed merely because it may be reviewed.
-		The therapist should continue normal professional documentation and obtain appropriate consultation concerning preservation requirements when needed.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Rewriting old notes may create the false appearance that the revised content was documented contemporaneously.
-		B. Incorrect. Removing potentially unfavorable information may constitute improper alteration or concealment.
-		C. Incorrect. Suspending documentation could create additional gaps in care and weaken continuity and accountability.
-		CTA Exam Strategy: After a complaint or investigation:Preserve the record. Do not reconstruct a better-looking history.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Record Integrity During an Investigation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist realizes one week after a psychiatric hospitalization that the original note omitted the name of the hospital, the consultation obtained, and confirmation that the client arrived safely. The therapist has reliable documentation supporting those facts.What is the most appropriate response?',
@@ -854,7 +506,6 @@ CTA Exam Strategy: After a complaint or investigation:Preserve the record. Do no
 		'option_d'       => 'Leave the record incomplete because adding information later is never permitted',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 A transparent late entry is generally preferable to leaving important information missing. The therapist should identify when the event occurred, when the additional entry was made, and what reliable information supports the entry.
 The original documentation and applicable electronic audit trail should remain intact.
 Why the Other Answers Are Incorrect
@@ -862,16 +513,6 @@ A. Incorrect. Quiet insertion may conceal when the information was added and com
 C. Incorrect. Dating the new information as though it had been documented earlier would be misleading backdating.
 D. Incorrect. Later documentation is not categorically prohibited. The key is accuracy, transparency, and preservation of record integrity.
 CTA Exam Strategy: A proper late entry contains two timelines:When the clinical event occurredandwhen the documentation was created',
-=======
-		A transparent late entry is generally preferable to leaving important information missing. The therapist should identify when the event occurred, when the additional entry was made, and what reliable information supports the entry.
-		The original documentation and applicable electronic audit trail should remain intact.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Quiet insertion may conceal when the information was added and compromise transparency.
-		C. Incorrect. Dating the new information as though it had been documented earlier would be misleading backdating.
-		D. Incorrect. Later documentation is not categorically prohibited. The key is accuracy, transparency, and preservation of record integrity.
-		CTA Exam Strategy: A proper late entry contains two timelines:When the clinical event occurredandwhen the documentation was created
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Properly Identified Late Entry; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist’s electronic note template automatically carries forward the statement:“Client lives alone and has no current medication.”The therapist knows that the client recently moved in with family and began taking a prescribed medication.What should the therapist do?',
@@ -881,7 +522,6 @@ CTA Exam Strategy: A proper late entry contains two timelines:When the clinical 
 		'option_d'       => 'Add a general statement that the client’s situation may have changed',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 The current record must accurately reflect the client’s current circumstances. The therapist should review all copied or automatically populated text, correct outdated information, and document clinically relevant changes.
 Electronic templates support efficiency but do not relieve the therapist of responsibility for accuracy.
 Why the Other Answers Are Incorrect
@@ -889,16 +529,6 @@ A. Incorrect. Information that was once accurate may become misleading when carr
 B. Incorrect. Earlier accurate notes should remain part of the historical record. They should not be destroyed because the client’s situation later changed.
 D. Incorrect. A vague statement does not correct the specific inaccuracies or provide clinically useful information.
 CTA Exam Strategy: With templates and copied text:Review every field before signing.Automatic does not mean accurate.',
-=======
-		The current record must accurately reflect the client’s current circumstances. The therapist should review all copied or automatically populated text, correct outdated information, and document clinically relevant changes.
-		Electronic templates support efficiency but do not relieve the therapist of responsibility for accuracy.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Information that was once accurate may become misleading when carried into a later note as though it remains current.
-		B. Incorrect. Earlier accurate notes should remain part of the historical record. They should not be destroyed because the client’s situation later changed.
-		D. Incorrect. A vague statement does not correct the specific inaccuracies or provide clinically useful information.
-		CTA Exam Strategy: With templates and copied text:Review every field before signing.Automatic does not mean accurate.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Outdated Template Information; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a client’s serious suicide attempt, a therapist reviews the record and discovers that the note from the previous session failed to document a consultation and a safety-planning discussion that actually occurred. The therapist has contemporaneous consultation records and secure messages confirming those actions.What is the most appropriate response?',
@@ -908,7 +538,6 @@ CTA Exam Strategy: With templates and copied text:Review every field before sign
 		'option_d'       => 'Omit the information because any correction after an adverse event is automatically improper',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 The therapist may appropriately correct an incomplete record when the additional information is accurate and supported by reliable contemporaneous evidence. The addendum should show when it was created, identify the earlier service date, and avoid suggesting that the information was recorded before the adverse event.
 Preserving the original entry and documenting the correction transparently protects record integrity.
 Why the Other Answers Are Incorrect
@@ -916,16 +545,6 @@ B. Incorrect. Replacing the original note would conceal the original documentati
 C. Incorrect. Accurate record correction should not be conditioned on the client surrendering complaint or legal rights.
 D. Incorrect. An adverse event does not automatically prohibit legitimate correction. It increases the importance of transparency, reliable support, and careful preservation.
 CTA Exam Strategy: After a serious incident, ask:Is this an honest, supported correction—or an attempt to improve the record after the fact?The exam favors the honest, clearly dated correction.',
-=======
-		The therapist may appropriately correct an incomplete record when the additional information is accurate and supported by reliable contemporaneous evidence. The addendum should show when it was created, identify the earlier service date, and avoid suggesting that the information was recorded before the adverse event.
-		Preserving the original entry and documenting the correction transparently protects record integrity.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Replacing the original note would conceal the original documentation and distort the historical record.
-		C. Incorrect. Accurate record correction should not be conditioned on the client surrendering complaint or legal rights.
-		D. Incorrect. An adverse event does not automatically prohibit legitimate correction. It increases the importance of transparency, reliable support, and careful preservation.
-		CTA Exam Strategy: After a serious incident, ask:Is this an honest, supported correction—or an attempt to improve the record after the fact?The exam favors the honest, clearly dated correction.
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Post-Incident Record Correction; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a session, a client describes a specific violent threat, identifies an intended victim, reports access to a weapon, and states an intention to act soon. The therapist conducts a risk assessment, consults, initiates legally and clinically appropriate protective actions, coordinates emergency intervention, and schedules follow-up.The therapist later notices that the electronic note still contains copied language from the previous session stating, “Client denied violent thoughts,” and the note does not describe the current assessment or actions.What is the most appropriate response?',
@@ -935,7 +554,6 @@ CTA Exam Strategy: After a serious incident, ask:Is this an honest, supported co
 		'option_d'       => 'Transparently correct the inaccurate copied language and document the clinically relevant threat information, assessment, reasoning, consultation, protective actions, disposition, and follow-up while preserving the record’s audit trail',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 The current note must accurately reflect the client’s presentation and the therapist’s response. The copied denial is materially inaccurate and could interfere with continuity of care or later review.
 The therapist should use proper correction procedures, preserve the original information or audit trail, and document:
 The threat and available identifying information
@@ -952,25 +570,6 @@ A. Incorrect. Related records elsewhere do not eliminate the need for the clinic
 B. Incorrect. Deleting and recreating the note with an earlier date would conceal the original entry and amount to improper alteration or backdating.
 C. Incorrect. Contacting emergency services is only one part of the clinical response. Omitting the threat and assessment would leave the reasoning and intervention unsupported.
 CTA Exam Strategy: For critical incidents, protect all three:Client welfare + clinical continuity + record integrityUse the sequence:Event → Assessment → Reasoning → Consultation → Action → Disposition → Follow-up',
-=======
-		The current note must accurately reflect the client’s presentation and the therapist’s response. The copied denial is materially inaccurate and could interfere with continuity of care or later review.
-		The therapist should use proper correction procedures, preserve the original information or audit trail, and document:
-		The threat and available identifying information
-		Intent, plan, means, and immediacy
-		Relevant risk and protective factors
-		Consultation obtained
-		Clinical and legal reasoning
-		Protective and emergency actions
-		Client disposition
-		Planned follow-up
-		The record should be sufficiently detailed to explain the decision-making process without becoming a verbatim transcript.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Related records elsewhere do not eliminate the need for the clinical note to accurately describe the encounter. The copied denial is directly misleading.
-		B. Incorrect. Deleting and recreating the note with an earlier date would conceal the original entry and amount to improper alteration or backdating.
-		C. Incorrect. Contacting emergency services is only one part of the clinical response. Omitting the threat and assessment would leave the reasoning and intervention unsupported.
-		CTA Exam Strategy: For critical incidents, protect all three:Client welfare + clinical continuity + record integrityUse the sequence:Event → Assessment → Reasoning → Consultation → Action → Disposition → Follow-up
-		Remediation: Return to Workbook 9, Chapter 2: Documentation Errors, Risk Management, and High-Risk Situations; review Critical-Incident Documentation; log error category HIGH-RISK-DOCUMENTATION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is closing a practice and asks why former-client records cannot simply be discarded when treatment ends.Which explanation best identifies the purpose of record retention?',
@@ -980,7 +579,6 @@ CTA Exam Strategy: For critical incidents, protect all three:Client welfare + cl
 		'option_d'       => 'To eliminate the need for secure record destruction later',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Clinical records may remain important long after active treatment concludes. A former client may return to treatment, transfer to another provider, request records, or need information about prior diagnoses, interventions, risk concerns, referrals, and treatment responses.
 Retention also preserves documentation that may later be relevant to professional accountability, audits, investigations, consultation, or legal proceedings.
 Why the Other Answers Are Incorrect
@@ -988,16 +586,6 @@ A. Incorrect. Record retention does not prevent clients from questioning care. R
 C. Incorrect. Retention does not authorize unrelated use or disclosure of client information. Confidentiality obligations continue throughout the retention period.
 D. Incorrect. Records may eventually become eligible for secure destruction after applicable retention responsibilities have been satisfied. Retention does not eliminate the need for proper disposal.
 CTA Exam Strategy: Remember:Retention preserves information for future lawful and clinical needs.It is not merely defensive storage.',
-=======
-		Clinical records may remain important long after active treatment concludes. A former client may return to treatment, transfer to another provider, request records, or need information about prior diagnoses, interventions, risk concerns, referrals, and treatment responses.
-		Retention also preserves documentation that may later be relevant to professional accountability, audits, investigations, consultation, or legal proceedings.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Record retention does not prevent clients from questioning care. Records may help explain what occurred, but they do not make professional decisions immune from review.
-		C. Incorrect. Retention does not authorize unrelated use or disclosure of client information. Confidentiality obligations continue throughout the retention period.
-		D. Incorrect. Records may eventually become eligible for secure destruction after applicable retention responsibilities have been satisfied. Retention does not eliminate the need for proper disposal.
-		CTA Exam Strategy: Remember:Retention preserves information for future lawful and clinical needs.It is not merely defensive storage.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Purpose of Record Retention; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist closes a client’s case after treatment ends.Which statement is most accurate?',
@@ -1007,7 +595,6 @@ CTA Exam Strategy: Remember:Retention preserves information for future lawful an
 		'option_d'       => 'Confidentiality responsibilities continue while the records are retained',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Treatment termination does not automatically end confidentiality. Paper records, electronic records, billing information, assessments, progress notes, and other protected information must continue to be safeguarded during retention.
 The therapist’s professional responsibility follows the record even when no current therapeutic relationship exists.
 Why the Other Answers Are Incorrect
@@ -1015,16 +602,6 @@ A. Incorrect. Confidentiality is not limited to active treatment. Record protect
 B. Incorrect. Confidentiality applies to both paper and electronic information, as well as other forms of client information.
 C. Incorrect. Former-client status does not make treatment information public or reduce the need for authorization or another lawful disclosure basis.
 CTA Exam Strategy: Use the memory phrase:Treatment ends. Confidentiality doesn’t.',
-=======
-		Treatment termination does not automatically end confidentiality. Paper records, electronic records, billing information, assessments, progress notes, and other protected information must continue to be safeguarded during retention.
-		The therapist’s professional responsibility follows the record even when no current therapeutic relationship exists.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Confidentiality is not limited to active treatment. Record protection continues after services conclude.
-		B. Incorrect. Confidentiality applies to both paper and electronic information, as well as other forms of client information.
-		C. Incorrect. Former-client status does not make treatment information public or reduce the need for authorization or another lawful disclosure basis.
-		CTA Exam Strategy: Use the memory phrase:Treatment ends. Confidentiality doesn’t.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Confidentiality After Treatment; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist retains former clients’ records in several unmarked storage boxes. When a lawful request arrives, the therapist cannot determine which box contains the requested record.What is the most significant retention concern?',
@@ -1034,7 +611,6 @@ CTA Exam Strategy: Use the memory phrase:Treatment ends. Confidentiality doesn�
 		'option_d'       => 'The client must identify the exact storage location before the therapist has to respond',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Retention includes more than keeping records somewhere. Records should remain organized, protected, usable, and reasonably retrievable throughout the retention period.
 A record that cannot be located may fail to support lawful access, continuity of care, professional communication, or accountability—even though it was not physically destroyed.
 Why the Other Answers Are Incorrect
@@ -1042,16 +618,6 @@ B. Incorrect. Destroying the records would create additional retention and confi
 C. Incorrect. Physical existence alone is insufficient. Effective retention requires accessibility, security, integrity, and organization.
 D. Incorrect. The clinician or practice is responsible for maintaining an appropriate retrieval system. That responsibility cannot be shifted to the client.
 CTA Exam Strategy: Remember:Retained does not merely mean stored. It also means retrievable.',
-=======
-		Retention includes more than keeping records somewhere. Records should remain organized, protected, usable, and reasonably retrievable throughout the retention period.
-		A record that cannot be located may fail to support lawful access, continuity of care, professional communication, or accountability—even though it was not physically destroyed.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Destroying the records would create additional retention and confidentiality concerns. Reconstructing them from memory would not preserve the original clinical record.
-		C. Incorrect. Physical existence alone is insufficient. Effective retention requires accessibility, security, integrity, and organization.
-		D. Incorrect. The clinician or practice is responsible for maintaining an appropriate retrieval system. That responsibility cannot be shifted to the client.
-		CTA Exam Strategy: Remember:Retained does not merely mean stored. It also means retrievable.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Accessibility During Retention; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist retains former clients’ records in an electronic system but stops paying for the software subscription. The therapist can no longer open or export the records.What is the most significant concern?',
@@ -1061,7 +627,6 @@ CTA Exam Strategy: Remember:Retained does not merely mean stored. It also means 
 		'option_d'       => 'No concern exists because the electronic files may still be stored on the vendor’s server',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Electronic retention requires more than leaving data somewhere in a computer system. Records must remain reasonably accessible, retrievable, protected, and usable throughout the required retention period.
 Before ending a software relationship, the therapist should plan for lawful export, secure migration, continued accessibility, and preservation of record integrity.
 Why the Other Answers Are Incorrect
@@ -1069,16 +634,6 @@ A. Incorrect. A software contract does not determine when professional retention
 B. Incorrect. A vendor may store or manage information, but the therapist or practice remains responsible for maintaining access and responding appropriately to lawful requests.
 D. Incorrect. Records that technically exist but cannot be accessed or used do not satisfy meaningful retention responsibilities.
 CTA Exam Strategy: For electronic retention, ask:Can the record still be opened, understood, protected, and produced when needed?',
-=======
-		Electronic retention requires more than leaving data somewhere in a computer system. Records must remain reasonably accessible, retrievable, protected, and usable throughout the required retention period.
-		Before ending a software relationship, the therapist should plan for lawful export, secure migration, continued accessibility, and preservation of record integrity.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. A software contract does not determine when professional retention duties end. The therapist’s responsibilities continue independently of the platform.
-		B. Incorrect. A vendor may store or manage information, but the therapist or practice remains responsible for maintaining access and responding appropriately to lawful requests.
-		D. Incorrect. Records that technically exist but cannot be accessed or used do not satisfy meaningful retention responsibilities.
-		CTA Exam Strategy: For electronic retention, ask:Can the record still be opened, understood, protected, and produced when needed?
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Electronic Record Retention; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A group practice is evaluating electronic-record systems for long-term storage and wants to preserve an accurate history of every change.Which system feature or practice most clearly threatens record integrity?',
@@ -1088,7 +643,6 @@ CTA Exam Strategy: For electronic retention, ask:Can the record still be opened,
 		'option_d'       => 'Access is limited according to professional role',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Record integrity requires records to remain accurate, complete, reliable, accessible, and protected from unauthorized modification. A system that permits changes without preserving a history may make it impossible to determine what information was originally documented or when changes occurred.
 Audit trails and transparent correction processes help protect the reliability of electronic records.
 Why the Other Answers Are Incorrect
@@ -1096,16 +650,6 @@ B. Incorrect. Organization by client and date generally supports accessibility a
 C. Incorrect. Secure backups help protect records from loss and support availability.
 D. Incorrect. Role-based access reduces unnecessary or unauthorized access and supports security.
 CTA Exam Strategy: Use the integrity formula:Accurate + Complete + Accessible + Protected',
-=======
-		Record integrity requires records to remain accurate, complete, reliable, accessible, and protected from unauthorized modification. A system that permits changes without preserving a history may make it impossible to determine what information was originally documented or when changes occurred.
-		Audit trails and transparent correction processes help protect the reliability of electronic records.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Organization by client and date generally supports accessibility and retrieval.
-		C. Incorrect. Secure backups help protect records from loss and support availability.
-		D. Incorrect. Role-based access reduces unnecessary or unauthorized access and supports security.
-		CTA Exam Strategy: Use the integrity formula:Accurate + Complete + Accessible + Protected
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Record Integrity; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist tells a former client, “These are my records because I created and maintain them, so you have no right to request a copy.”Which statement is most accurate?',
@@ -1115,7 +659,6 @@ CTA Exam Strategy: Use the integrity formula:Accurate + Complete + Accessible + 
 		'option_d'       => 'The therapist’s maintenance or ownership of the record does not eliminate the client’s applicable access rights',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Ownership and access are separate concepts. A therapist or practice may maintain the original clinical record while the client retains legally recognized rights to inspect or obtain copies under applicable law.
 The therapist should analyze the request according to access requirements rather than treating physical ownership as a reason for automatic refusal.
 Why the Other Answers Are Incorrect
@@ -1123,16 +666,6 @@ A. Incorrect. Physical control of a record does not erase the client’s access 
 B. Incorrect. Access rights do not ordinarily mean that the client may remove the original record from the therapist’s custody.
 C. Incorrect. The concepts are related but legally and professionally distinct.
 CTA Exam Strategy: Remember:Ownership asks who maintains the record.Access asks who may inspect or receive information.',
-=======
-		Ownership and access are separate concepts. A therapist or practice may maintain the original clinical record while the client retains legally recognized rights to inspect or obtain copies under applicable law.
-		The therapist should analyze the request according to access requirements rather than treating physical ownership as a reason for automatic refusal.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Physical control of a record does not erase the client’s access rights.
-		B. Incorrect. Access rights do not ordinarily mean that the client may remove the original record from the therapist’s custody.
-		C. Incorrect. The concepts are related but legally and professionally distinct.
-		CTA Exam Strategy: Remember:Ownership asks who maintains the record.Access asks who may inspect or receive information.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Ownership vs. Client Access; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist plans to retire and permanently close the practice.What is the most appropriate records-management approach?',
@@ -1142,7 +675,6 @@ CTA Exam Strategy: Remember:Ownership asks who maintains the record.Access asks 
 		'option_d'       => 'Leave the records in the former office and allow the new tenant to manage requests',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Retirement or practice closure does not eliminate record responsibilities. The therapist should make arrangements for continued secure retention, reasonable accessibility, confidentiality protection, and an appropriate method for responding to lawful client or representative requests.
 The plan may involve a records custodian, secure storage, client notification, or another arrangement consistent with applicable professional and legal requirements.
 Why the Other Answers Are Incorrect
@@ -1150,16 +682,6 @@ A. Incorrect. Closing a practice does not mean that all retention periods have e
 C. Incorrect. Automatically transferring original records may compromise continuity, record integrity, or legal retention obligations.
 D. Incorrect. An unrelated tenant has no automatic authority to possess or manage confidential client records.
 CTA Exam Strategy: Practice changes do not erase record duties.Look for answers preserving:Confidentiality + accessibility + retention + continuity',
-=======
-		Retirement or practice closure does not eliminate record responsibilities. The therapist should make arrangements for continued secure retention, reasonable accessibility, confidentiality protection, and an appropriate method for responding to lawful client or representative requests.
-		The plan may involve a records custodian, secure storage, client notification, or another arrangement consistent with applicable professional and legal requirements.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Closing a practice does not mean that all retention periods have ended. Premature destruction may violate professional responsibilities.
-		C. Incorrect. Automatically transferring original records may compromise continuity, record integrity, or legal retention obligations.
-		D. Incorrect. An unrelated tenant has no automatic authority to possess or manage confidential client records.
-		CTA Exam Strategy: Practice changes do not erase record duties.Look for answers preserving:Confidentiality + accessibility + retention + continuity
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Practice Closure and Retirement; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist stores all electronic records on one office computer without backups. The computer fails, and several years of client records become unrecoverable.Which retention responsibility was most clearly neglected?',
@@ -1169,7 +691,6 @@ CTA Exam Strategy: Practice changes do not erase record duties.Look for answers 
 		'option_d'       => 'Documentation of session interventions',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Electronic retention requires planning for hardware failure, system failure, accidental deletion, disasters, and other foreseeable losses. Reliable backups and recovery procedures help ensure that records remain available and intact throughout the retention period.
 A record that cannot be recovered cannot support continuity, lawful access, or accountability.
 Why the Other Answers Are Incorrect
@@ -1177,16 +698,6 @@ A. Incorrect. The problem concerns preservation and recovery, not the tone of do
 B. Incorrect. The loss affects the entire record system, not one diagnostic entry.
 D. Incorrect. The issue is not whether interventions were originally documented but whether the retained records remained available.
 CTA Exam Strategy: Electronic retention requires both:Primary storage + recovery plan',
-=======
-		Electronic retention requires planning for hardware failure, system failure, accidental deletion, disasters, and other foreseeable losses. Reliable backups and recovery procedures help ensure that records remain available and intact throughout the retention period.
-		A record that cannot be recovered cannot support continuity, lawful access, or accountability.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. The problem concerns preservation and recovery, not the tone of documentation.
-		B. Incorrect. The loss affects the entire record system, not one diagnostic entry.
-		D. Incorrect. The issue is not whether interventions were originally documented but whether the retained records remained available.
-		CTA Exam Strategy: Electronic retention requires both:Primary storage + recovery plan
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Backups and Data Recovery; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A former client threatens to file a complaint. The therapist believes the applicable retention period may have ended and considers destroying the record immediately under the practice’s routine destruction schedule.What is the most appropriate response?',
@@ -1196,7 +707,6 @@ CTA Exam Strategy: Electronic retention requires both:Primary storage + recovery
 		'option_d'       => 'Remove only the entries that relate to the threatened complaint',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Even when a routine retention period may have ended, records should not be destroyed without considering whether a complaint, investigation, litigation risk, legal hold, or other preservation obligation requires continued retention.
 The workbook emphasizes that preservation is generally favored when uncertainty exists. The therapist should obtain appropriate consultation and document the retention or destruction decision.
 Why the Other Answers Are Incorrect
@@ -1204,16 +714,6 @@ B. Incorrect. Routine schedules do not override legal holds, investigations, or 
 C. Incorrect. Transferring the only record to the client may fail to satisfy professional accountability or preservation requirements.
 D. Incorrect. Selective removal would compromise record integrity and may constitute improper alteration or concealment.
 CTA Exam Strategy: Before destruction, ask:Has retention truly ended—and is any complaint, investigation, litigation, or hold pending?When uncertain, preserve first.',
-=======
-		Even when a routine retention period may have ended, records should not be destroyed without considering whether a complaint, investigation, litigation risk, legal hold, or other preservation obligation requires continued retention.
-		The workbook emphasizes that preservation is generally favored when uncertainty exists. The therapist should obtain appropriate consultation and document the retention or destruction decision.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Routine schedules do not override legal holds, investigations, or other preservation duties.
-		C. Incorrect. Transferring the only record to the client may fail to satisfy professional accountability or preservation requirements.
-		D. Incorrect. Selective removal would compromise record integrity and may constitute improper alteration or concealment.
-		CTA Exam Strategy: Before destruction, ask:Has retention truly ended—and is any complaint, investigation, litigation, or hold pending?When uncertain, preserve first.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Premature Destruction; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is moving from solo practice into an agency. The therapist’s former electronic-record vendor will delete all data 30 days after the contract ends. The records remain within their retention periods, and several former clients may still request copies.What is the most appropriate response?',
@@ -1223,7 +723,6 @@ CTA Exam Strategy: Before destruction, ask:Has retention truly ended—and is an
 		'option_d'       => 'Arrange a secure, complete, and reliable migration or retention plan that preserves confidentiality, accessibility, integrity, and the ability to respond to future lawful requests',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 A practice or employment transition does not end responsibility for records created in the former practice. Before the vendor deletes the data, the therapist must develop an appropriate plan for secure export, migration, storage, indexing, backup, and future retrieval.
 The therapist must also determine who may lawfully possess the records, how confidentiality will be maintained, and how former clients can exercise applicable access rights.
 Why the Other Answers Are Incorrect
@@ -1231,16 +730,6 @@ A. Incorrect. Changing employment does not end retention duties or permit destru
 B. Incorrect. Keeping only the most recent note would create incomplete records and destroy important clinical history.
 C. Incorrect. The new agency does not automatically have authority to receive records from the therapist’s prior independent practice. Confidentiality and ownership arrangements must be evaluated.
 CTA Exam Strategy: For a system or practice transition, use:Preserve → Protect → Migrate → Verify → RetrieveDo not wait until the vendor deletes the data.',
-=======
-		A practice or employment transition does not end responsibility for records created in the former practice. Before the vendor deletes the data, the therapist must develop an appropriate plan for secure export, migration, storage, indexing, backup, and future retrieval.
-		The therapist must also determine who may lawfully possess the records, how confidentiality will be maintained, and how former clients can exercise applicable access rights.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Changing employment does not end retention duties or permit destruction of records still within the retention period.
-		B. Incorrect. Keeping only the most recent note would create incomplete records and destroy important clinical history.
-		C. Incorrect. The new agency does not automatically have authority to receive records from the therapist’s prior independent practice. Confidentiality and ownership arrangements must be evaluated.
-		CTA Exam Strategy: For a system or practice transition, use:Preserve → Protect → Migrate → Verify → RetrieveDo not wait until the vendor deletes the data.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Integrated Electronic Retention and Practice Transition; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is updating a records-management policy and must distinguish maintaining records for the required period from disposing of them after all preservation duties are satisfied. Which statement most accurately distinguishes retention from destruction?',
@@ -1250,7 +739,6 @@ CTA Exam Strategy: For a system or practice transition, use:Preserve → Protect
 		'option_d'       => 'Retaining a record means it may never be destroyed',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Record retention means preserving clinical records throughout the applicable retention period. Once those responsibilities have been satisfied—and no investigation, legal hold, or other reason requires continued preservation—the record may become eligible for secure destruction.
 Destruction must be performed in a way that prevents unauthorized reconstruction or recovery.
 Why the Other Answers Are Incorrect
@@ -1258,16 +746,6 @@ A. Incorrect. Record protection is primarily a security issue. Retention focuses
 C. Incorrect. Both retention and secure destruction apply to paper and electronic records.
 D. Incorrect. Records are not necessarily retained permanently. They may eventually be destroyed after all applicable requirements are met.
 CTA Exam Strategy: Remember:Retain first. Destroy securely later.Treatment termination does not automatically trigger destruction.',
-=======
-		Record retention means preserving clinical records throughout the applicable retention period. Once those responsibilities have been satisfied—and no investigation, legal hold, or other reason requires continued preservation—the record may become eligible for secure destruction.
-		Destruction must be performed in a way that prevents unauthorized reconstruction or recovery.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Record protection is primarily a security issue. Retention focuses on how long records must remain available.
-		C. Incorrect. Both retention and secure destruction apply to paper and electronic records.
-		D. Incorrect. Records are not necessarily retained permanently. They may eventually be destroyed after all applicable requirements are met.
-		CTA Exam Strategy: Remember:Retain first. Destroy securely later.Treatment termination does not automatically trigger destruction.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Retention vs. Destruction; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist stores closed paper files in a locked cabinet and former-client electronic files in an encrypted system.Which statement is most accurate?',
@@ -1277,7 +755,6 @@ CTA Exam Strategy: Remember:Retain first. Destroy securely later.Treatment termi
 		'option_d'       => 'Closed records may be accessed by staff members for personal interest',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Confidentiality continues after treatment ends and applies to records regardless of format. Both paper and electronic files must remain protected against unauthorized access, loss, disclosure, and alteration.
 The fact that a case is closed does not make the information less sensitive.
 Why the Other Answers Are Incorrect
@@ -1285,16 +762,6 @@ A. Incorrect. Paper records remain confidential just as electronic records do.
 B. Incorrect. Confidentiality does not depend on whether the client intends to resume treatment.
 D. Incorrect. Staff access should be based on authorization, professional need, and an appropriate purpose—not curiosity.
 CTA Exam Strategy: Use the workbook’s memory rule:Confidentiality follows the record.',
-=======
-		Confidentiality continues after treatment ends and applies to records regardless of format. Both paper and electronic files must remain protected against unauthorized access, loss, disclosure, and alteration.
-		The fact that a case is closed does not make the information less sensitive.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Paper records remain confidential just as electronic records do.
-		B. Incorrect. Confidentiality does not depend on whether the client intends to resume treatment.
-		D. Incorrect. Staff access should be based on authorization, professional need, and an appropriate purpose—not curiosity.
-		CTA Exam Strategy: Use the workbook’s memory rule:Confidentiality follows the record.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Confidentiality During Retention; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Which practice best supports accessibility throughout the record-retention period?',
@@ -1304,7 +771,6 @@ CTA Exam Strategy: Use the workbook’s memory rule:Confidentiality follows the 
 		'option_d'       => 'Allowing each employee to create an individual storage method',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Proper retention requires records to remain organized, retrievable, usable, and available when needed. An indexing and retrieval system supports client access, continuity of care, audits, and professional accountability.
 A record that cannot be found or opened may not meaningfully serve its retention purpose.
 Why the Other Answers Are Incorrect
@@ -1312,16 +778,6 @@ A. Incorrect. Unlabeled storage creates retrieval problems even when the records
 C. Incorrect. Inaccessible or unreadable files are not meaningfully available.
 D. Incorrect. Inconsistent individual systems increase the likelihood of loss, confusion, and incomplete retrieval.
 CTA Exam Strategy: Remember:A record that cannot be found cannot serve its purpose.',
-=======
-		Proper retention requires records to remain organized, retrievable, usable, and available when needed. An indexing and retrieval system supports client access, continuity of care, audits, and professional accountability.
-		A record that cannot be found or opened may not meaningfully serve its retention purpose.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Unlabeled storage creates retrieval problems even when the records physically remain present.
-		C. Incorrect. Inaccessible or unreadable files are not meaningfully available.
-		D. Incorrect. Inconsistent individual systems increase the likelihood of loss, confusion, and incomplete retrieval.
-		CTA Exam Strategy: Remember:A record that cannot be found cannot serve its purpose.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Usable Record Accessibility; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist sells a private practice to another clinician. The records of former clients remain within their retention periods.What is the most appropriate approach?',
@@ -1331,7 +787,6 @@ CTA Exam Strategy: Remember:A record that cannot be found cannot serve its purpo
 		'option_d'       => 'Establish a lawful records-management plan addressing custody, confidentiality, security, accessibility, retention, and future client requests',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 A practice sale does not eliminate responsibilities for former clients’ records. The clinicians should determine who will serve as the lawful custodian, how records will remain protected, and how clients or authorized representatives can make future requests.
 The transition should preserve confidentiality, accessibility, integrity, and applicable retention obligations.
 Why the Other Answers Are Incorrect
@@ -1339,16 +794,6 @@ A. Incorrect. A business transaction does not automatically authorize unrestrict
 B. Incorrect. Records still within their retention periods should not be destroyed merely to make the sale easier.
 C. Incorrect. Failing to designate responsibility may result in abandoned, inaccessible, or improperly disclosed records.
 CTA Exam Strategy: During a practice transition, ask:Who will protect, retain, retrieve, and lawfully provide the records?',
-=======
-		A practice sale does not eliminate responsibilities for former clients’ records. The clinicians should determine who will serve as the lawful custodian, how records will remain protected, and how clients or authorized representatives can make future requests.
-		The transition should preserve confidentiality, accessibility, integrity, and applicable retention obligations.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. A business transaction does not automatically authorize unrestricted transfer or access to confidential records.
-		B. Incorrect. Records still within their retention periods should not be destroyed merely to make the sale easier.
-		C. Incorrect. Failing to designate responsibility may result in abandoned, inaccessible, or improperly disclosed records.
-		CTA Exam Strategy: During a practice transition, ask:Who will protect, retain, retrieve, and lawfully provide the records?
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Sale or Transfer of a Practice; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist properly exports former-client records before changing electronic systems. Five years later, the files still exist, but they can be opened only with discontinued software that is no longer available.What is the strongest analysis?',
@@ -1358,7 +803,6 @@ CTA Exam Strategy: During a practice transition, ask:Who will protect, retain, r
 		'option_d'       => 'Accessibility matters only during active treatment',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Electronic retention requires ongoing attention to format compatibility, system changes, migration, and recovery. Merely possessing data is insufficient when the information cannot be opened or used.
 The therapist should anticipate technology changes and preserve records in a format that remains readable, secure, complete, and reliable.
 Why the Other Answers Are Incorrect
@@ -1366,16 +810,6 @@ A. Incorrect. Technical existence without practical accessibility does not fully
 C. Incorrect. Reconstructing years-old records from memory would not preserve the original record’s accuracy or integrity.
 D. Incorrect. Accessibility continues to matter after treatment ends because clients, future providers, regulators, or courts may lawfully need the records.
 CTA Exam Strategy: Electronic retention means:Save the data—and preserve the ability to read it.',
-=======
-		Electronic retention requires ongoing attention to format compatibility, system changes, migration, and recovery. Merely possessing data is insufficient when the information cannot be opened or used.
-		The therapist should anticipate technology changes and preserve records in a format that remains readable, secure, complete, and reliable.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Technical existence without practical accessibility does not fully satisfy retention responsibilities.
-		C. Incorrect. Reconstructing years-old records from memory would not preserve the original record’s accuracy or integrity.
-		D. Incorrect. Accessibility continues to matter after treatment ends because clients, future providers, regulators, or courts may lawfully need the records.
-		CTA Exam Strategy: Electronic retention means:Save the data—and preserve the ability to read it.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Obsolete Electronic Formats; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice maintains each client’s progress notes electronically, signed forms in paper files, billing records in a separate program, and consultation records in email. No index identifies where the components are stored.A former client later submits a lawful request for the clinical record.What is the most appropriate response?',
@@ -1385,7 +819,6 @@ CTA Exam Strategy: Electronic retention means:Save the data—and preserve the a
 		'option_d'       => 'Destroy the paper and email materials to create one simplified record',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 A clinical record may be distributed across several authorized systems, but the practice remains responsible for maintaining its organization, integrity, and accessibility.
 The therapist should determine what information belongs to the responsive record, retrieve the relevant components, and address the request according to applicable access rules. The storage system should then be improved to reduce future retrieval failures.
 Why the Other Answers Are Incorrect
@@ -1393,16 +826,6 @@ A. Incorrect. Convenience does not determine the scope of the retained record. R
 B. Incorrect. Separate storage locations do not remove information from record-management responsibilities.
 D. Incorrect. Destroying materials simply to simplify the system could result in premature destruction and an incomplete record.
 CTA Exam Strategy: For hybrid records, think:One client record may exist in several locations—but it must remain collectively retrievable.',
-=======
-		A clinical record may be distributed across several authorized systems, but the practice remains responsible for maintaining its organization, integrity, and accessibility.
-		The therapist should determine what information belongs to the responsive record, retrieve the relevant components, and address the request according to applicable access rules. The storage system should then be improved to reduce future retrieval failures.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Convenience does not determine the scope of the retained record. Relevant paper, billing, and consultation information cannot automatically be ignored.
-		B. Incorrect. Separate storage locations do not remove information from record-management responsibilities.
-		D. Incorrect. Destroying materials simply to simplify the system could result in premature destruction and an incomplete record.
-		CTA Exam Strategy: For hybrid records, think:One client record may exist in several locations—but it must remain collectively retrievable.
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Fragmented Hybrid Records; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is retiring in 60 days. The therapist has:Paper files stored in an unlocked garageElectronic records in a vendor system that will soon terminate accessNo current backupSeveral records still within their retention periodsA threatened complaint involving one former clientNo designated records custodianNo procedure for future client requestsWhat is the most appropriate course of action?',
@@ -1412,7 +835,6 @@ CTA Exam Strategy: For hybrid records, think:One client record may exist in seve
 		'option_d'       => 'Develop and implement a secure transition plan that preserves all records still requiring retention, addresses the threatened complaint and any preservation duties, exports and backs up electronic data, secures paper files, designates an appropriate custodian, and establishes a process for lawful future access',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Retirement does not end the therapist’s responsibilities. The transition plan should address:
 Which records still require retention
 Whether any complaint, investigation, or legal hold requires extended preservation
@@ -1429,25 +851,6 @@ A. Incorrect. Retirement does not authorize destruction of records still subject
 B. Incorrect. A family member does not automatically have authority to possess confidential records, and sharing system credentials would weaken access controls.
 C. Incorrect. The threatened complaint requires careful preservation, but it does not justify prematurely destroying every other record still within its retention period.
 CTA Exam Strategy: For retirement or closure, use the four responsibilities:Retain + Protect + Retrieve + Destroy Properly',
-=======
-		Retirement does not end the therapist’s responsibilities. The transition plan should address:
-		Which records still require retention
-		Whether any complaint, investigation, or legal hold requires extended preservation
-		Secure storage for paper records
-		Timely export and backup of electronic information
-		Continued readability and integrity
-		Designation of an appropriate records custodian
-		Confidentiality and access controls
-		A process for responding to future lawful requests
-		Eventual secure destruction when permitted
-		This approach protects client welfare, confidentiality, accessibility, and professional accountability throughout the remaining record lifecycle.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Retirement does not authorize destruction of records still subject to retention or preservation duties.
-		B. Incorrect. A family member does not automatically have authority to possess confidential records, and sharing system credentials would weaken access controls.
-		C. Incorrect. The threatened complaint requires careful preservation, but it does not justify prematurely destroying every other record still within its retention period.
-		CTA Exam Strategy: For retirement or closure, use the four responsibilities:Retain + Protect + Retrieve + Destroy Properly
-		Remediation: Return to Workbook 9, Chapter 3: Record Retention Requirements; review Comprehensive Record-Retention Planning; log error category RECORD-RETENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A group practice is revising its paper and electronic record-security policy after identifying several preventable vulnerabilities. Which purpose should primarily guide the practice’s security controls?',
@@ -1457,7 +860,6 @@ CTA Exam Strategy: For retirement or closure, use the four responsibilities:Reta
 		'option_d'       => 'To allow all practice employees to access every client file',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Clinical records contain highly sensitive information, including diagnoses, assessments, treatment plans, progress notes, risk information, personal history, and billing data.
 Record security protects that information from unauthorized access, disclosure, alteration, loss, theft, damage, and improper disposal throughout the record lifecycle.
 Why the Other Answers Are Incorrect
@@ -1465,16 +867,6 @@ B. Incorrect. Security measures should protect information while still allowing 
 C. Incorrect. Safeguards reduce risk but cannot guarantee that no incident will ever occur. Practices must also prepare to identify and respond to security failures.
 D. Incorrect. Access should be limited according to authorization, professional need, job responsibilities, and appropriate purpose.
 CTA Exam Strategy: Remember:Retention keeps the record. Security protects the record.',
-=======
-		Clinical records contain highly sensitive information, including diagnoses, assessments, treatment plans, progress notes, risk information, personal history, and billing data.
-		Record security protects that information from unauthorized access, disclosure, alteration, loss, theft, damage, and improper disposal throughout the record lifecycle.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Security measures should protect information while still allowing lawful client access and authorized professional use.
-		C. Incorrect. Safeguards reduce risk but cannot guarantee that no incident will ever occur. Practices must also prepare to identify and respond to security failures.
-		D. Incorrect. Access should be limited according to authorization, professional need, job responsibilities, and appropriate purpose.
-		CTA Exam Strategy: Remember:Retention keeps the record. Security protects the record.
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Purpose of Record Security; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist leaves paper client files unattended on a table in a public waiting room.What is the most significant concern?',
@@ -1484,7 +876,6 @@ CTA Exam Strategy: Remember:Retention keeps the record. Security protects the re
 		'option_d'       => 'The clients may believe the therapist owns the records',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Paper records require physical safeguards just as electronic records require technological protections. Leaving files unattended in a public area creates a risk that unauthorized people could view, photograph, remove, or disclose confidential information.
 Appropriate physical safeguards may include locked cabinets, controlled-access spaces, supervised visitors, and secure handling procedures.
 Why the Other Answers Are Incorrect
@@ -1492,16 +883,6 @@ A. Incorrect. The scenario concerns security and unauthorized access, not how lo
 C. Incorrect. The content of the notes may raise separate documentation issues, but the immediate concern is that unauthorized people can access them.
 D. Incorrect. Ownership is unrelated to the security failure presented.
 CTA Exam Strategy: Do not assume security means only cybersecurity.An exposed paper file creates the same basic confidentiality concern as an exposed electronic file.',
-=======
-		Paper records require physical safeguards just as electronic records require technological protections. Leaving files unattended in a public area creates a risk that unauthorized people could view, photograph, remove, or disclose confidential information.
-		Appropriate physical safeguards may include locked cabinets, controlled-access spaces, supervised visitors, and secure handling procedures.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. The scenario concerns security and unauthorized access, not how long the records are being retained.
-		C. Incorrect. The content of the notes may raise separate documentation issues, but the immediate concern is that unauthorized people can access them.
-		D. Incorrect. Ownership is unrelated to the security failure presented.
-		CTA Exam Strategy: Do not assume security means only cybersecurity.An exposed paper file creates the same basic confidentiality concern as an exposed electronic file.
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Physical Record Security; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A group practice uses encrypted electronic records and strong passwords. However, employees receive no privacy training, several staff members share login credentials, and the practice has no procedure for reporting suspected unauthorized access.What is the strongest analysis?',
@@ -1511,7 +892,6 @@ CTA Exam Strategy: Do not assume security means only cybersecurity.An exposed pa
 		'option_d'       => 'No changes are needed unless an actual breach occurs',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Effective record security depends on more than technology. Administrative safeguards help ensure that people understand how information may be accessed, used, disclosed, and protected.
 The practice should provide staff training, prohibit shared credentials, assign access according to role, establish security policies, and create procedures for identifying and reporting incidents.
 Why the Other Answers Are Incorrect
@@ -1519,16 +899,6 @@ A. Incorrect. Encryption is valuable, but it does not correct unsafe staff behav
 B. Incorrect. Physical safeguards matter, but the problems described primarily involve administrative and electronic access-control weaknesses.
 D. Incorrect. Waiting for a breach is poor risk management. Security measures should be implemented proactively.
 CTA Exam Strategy: Use the P-A-E framework:Physical safeguardsAdministrative safeguardsElectronic safeguardsThe strongest security system uses all three.',
-=======
-		Effective record security depends on more than technology. Administrative safeguards help ensure that people understand how information may be accessed, used, disclosed, and protected.
-		The practice should provide staff training, prohibit shared credentials, assign access according to role, establish security policies, and create procedures for identifying and reporting incidents.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Encryption is valuable, but it does not correct unsafe staff behavior, shared passwords, unclear responsibilities, or the absence of incident procedures.
-		B. Incorrect. Physical safeguards matter, but the problems described primarily involve administrative and electronic access-control weaknesses.
-		D. Incorrect. Waiting for a breach is poor risk management. Security measures should be implemented proactively.
-		CTA Exam Strategy: Use the P-A-E framework:Physical safeguardsAdministrative safeguardsElectronic safeguardsThe strongest security system uses all three.
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Physical, Administrative, and Electronic Safeguards; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A receptionist at a group practice can open every client’s psychotherapy record, even though the receptionist’s duties are limited to scheduling appointments and collecting payments.What is the most appropriate security response?',
@@ -1538,7 +908,6 @@ CTA Exam Strategy: Use the P-A-E framework:Physical safeguardsAdministrative saf
 		'option_d'       => 'Limit the receptionist’s access to the information reasonably necessary for authorized job duties',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Access to clinical records should be based on need, authorization, and appropriate purpose. A receptionist may need access to scheduling, contact, or billing information without needing unrestricted access to diagnoses, progress notes, risk assessments, or psychotherapy content.
 Role-based access controls reduce unnecessary exposure while allowing employees to perform authorized responsibilities.
 Why the Other Answers Are Incorrect
@@ -1546,16 +915,6 @@ A. Incorrect. Employment alone does not justify unrestricted access to every par
 B. Incorrect. A verbal promise does not replace appropriate technical and administrative access controls.
 C. Incorrect. Convenience does not justify granting more access than an employee’s responsibilities require.
 CTA Exam Strategy: Use the access formula:Need + Authorization + Purpose = Appropriate Access',
-=======
-		Access to clinical records should be based on need, authorization, and appropriate purpose. A receptionist may need access to scheduling, contact, or billing information without needing unrestricted access to diagnoses, progress notes, risk assessments, or psychotherapy content.
-		Role-based access controls reduce unnecessary exposure while allowing employees to perform authorized responsibilities.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Employment alone does not justify unrestricted access to every part of every client record.
-		B. Incorrect. A verbal promise does not replace appropriate technical and administrative access controls.
-		C. Incorrect. Convenience does not justify granting more access than an employee’s responsibilities require.
-		CTA Exam Strategy: Use the access formula:Need + Authorization + Purpose = Appropriate Access
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Role-Based Access Controls; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist transports several paper records from one office to another. The therapist places the files in an unlocked cardboard box on the back seat of a car and stops at several stores before reaching the new office.What is the most appropriate alternative?',
@@ -1565,7 +924,6 @@ CTA Exam Strategy: Use the access formula:Need + Authorization + Purpose = Appro
 		'option_d'       => 'Remove the clients’ names from the file tabs but take no additional precautions',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Records remain confidential while being transported. Appropriate safeguards may include secure containers, controlled possession, direct transportation, tracking procedures, and limiting opportunities for theft, loss, or unauthorized viewing.
 Changing the record’s location does not reduce the therapist’s duty to protect it.
 Why the Other Answers Are Incorrect
@@ -1573,16 +931,6 @@ B. Incorrect. Covering the box does not prevent theft, removal, or unauthorized 
 C. Incorrect. Daylight does not make an unattended vehicle a secure storage location.
 D. Incorrect. Removing names from visible tabs may reduce immediate identification but does not adequately protect the clinical information inside the files.
 CTA Exam Strategy: Remember:Confidentiality follows the record wherever it goes.',
-=======
-		Records remain confidential while being transported. Appropriate safeguards may include secure containers, controlled possession, direct transportation, tracking procedures, and limiting opportunities for theft, loss, or unauthorized viewing.
-		Changing the record’s location does not reduce the therapist’s duty to protect it.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Covering the box does not prevent theft, removal, or unauthorized access.
-		C. Incorrect. Daylight does not make an unattended vehicle a secure storage location.
-		D. Incorrect. Removing names from visible tabs may reduce immediate identification but does not adequately protect the clinical information inside the files.
-		CTA Exam Strategy: Remember:Confidentiality follows the record wherever it goes.
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Security During Record Transportation; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist intends to email a treatment summary to an authorized healthcare provider. Just before sending it, the therapist notices that the email program automatically selected another person with a similar name.What should the therapist do?',
@@ -1592,7 +940,6 @@ CTA Exam Strategy: Remember:Confidentiality follows the record wherever it goes.
 		'option_d'       => 'Send the record to both addresses so the intended provider is certain to receive it',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Before transmitting confidential information electronically, the therapist should verify:
 The recipient’s identity and address
 The existence and scope of authorization
@@ -1605,21 +952,6 @@ A. Incorrect. Sending information to the wrong person would create a confidentia
 B. Incorrect. A client’s identity and diagnosis are also sensitive information and should not be sent to an unverified recipient.
 D. Incorrect. Sending the record to an uncertain address would expand the risk rather than solve it.
 CTA Exam Strategy: Before pressing Send, verify:Client + recipient + authority + attachment + method',
-=======
-		Before transmitting confidential information electronically, the therapist should verify:
-		The recipient’s identity and address
-		The existence and scope of authorization
-		The correct client and attachment
-		The appropriateness of the information being sent
-		The security of the transmission method
-		Catching the mistake before sending prevents an avoidable unauthorized disclosure.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Sending information to the wrong person would create a confidentiality and security incident. The recipient’s ability to delete it does not prevent the disclosure.
-		B. Incorrect. A client’s identity and diagnosis are also sensitive information and should not be sent to an unverified recipient.
-		D. Incorrect. Sending the record to an uncertain address would expand the risk rather than solve it.
-		CTA Exam Strategy: Before pressing Send, verify:Client + recipient + authority + attachment + method
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Secure Electronic Transmission; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A small practice securely stores all paper records in one basement room. The area has flooded twice, but the practice has no off-site backup, disaster plan, or recovery procedure.Which response is most appropriate?',
@@ -1629,7 +961,6 @@ CTA Exam Strategy: Before pressing Send, verify:Client + recipient + authority +
 		'option_d'       => 'Ask clients to keep their own copies in case the practice loses the originals',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Record security includes protection from more than unauthorized viewing. Practices should also prepare for fire, flood, theft, hardware failure, human error, and other events that could make records unavailable.
 A reasonable plan may include safer physical storage, redundant or electronic backups, disaster procedures, recovery protocols, and assignment of responsibility.
 Why the Other Answers Are Incorrect
@@ -1637,16 +968,6 @@ A. Incorrect. A locked room may limit unauthorized access but does not protect r
 C. Incorrect. Records cannot be destroyed prematurely merely because safe storage is inconvenient.
 D. Incorrect. Providing clients with copies does not transfer or eliminate the practice’s retention and security responsibilities.
 CTA Exam Strategy: Security protects against:Unauthorized access and unexpected loss',
-=======
-		Record security includes protection from more than unauthorized viewing. Practices should also prepare for fire, flood, theft, hardware failure, human error, and other events that could make records unavailable.
-		A reasonable plan may include safer physical storage, redundant or electronic backups, disaster procedures, recovery protocols, and assignment of responsibility.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. A locked room may limit unauthorized access but does not protect records from a known environmental threat.
-		C. Incorrect. Records cannot be destroyed prematurely merely because safe storage is inconvenient.
-		D. Incorrect. Providing clients with copies does not transfer or eliminate the practice’s retention and security responsibilities.
-		CTA Exam Strategy: Security protects against:Unauthorized access and unexpected loss
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Disaster Planning and Recovery; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice determines that a group of records is eligible for destruction. Some records are on paper, and others are stored on old computer drives.Which destruction plan is most appropriate?',
@@ -1656,7 +977,6 @@ CTA Exam Strategy: Security protects against:Unauthorized access and unexpected 
 		'option_d'       => 'Shred or use an approved confidential service for paper and securely erase or physically destroy electronic media so the information cannot reasonably be recovered',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 The purpose of secure destruction is to prevent unauthorized reconstruction or recovery. Paper records may require shredding or an approved confidential-destruction service. Electronic information may require secure deletion, media sanitization, or physical destruction of the storage device.
 The practice should follow applicable policies and may document what was destroyed, when, how, and by whom.
 Why the Other Answers Are Incorrect
@@ -1664,16 +984,6 @@ A. Incorrect. Ordinary recycling and normal file deletion may leave information 
 B. Incorrect. Home disposal would remove the records from controlled procedures and create additional confidentiality risks.
 C. Incorrect. Records may eventually be destroyed when retention and preservation obligations have been satisfied.
 CTA Exam Strategy: Use the destruction rule:Destroy → Prevent recovery → Protect confidentiality',
-=======
-		The purpose of secure destruction is to prevent unauthorized reconstruction or recovery. Paper records may require shredding or an approved confidential-destruction service. Electronic information may require secure deletion, media sanitization, or physical destruction of the storage device.
-		The practice should follow applicable policies and may document what was destroyed, when, how, and by whom.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Ordinary recycling and normal file deletion may leave information readable or recoverable.
-		B. Incorrect. Home disposal would remove the records from controlled procedures and create additional confidentiality risks.
-		C. Incorrect. Records may eventually be destroyed when retention and preservation obligations have been satisfied.
-		CTA Exam Strategy: Use the destruction rule:Destroy → Prevent recovery → Protect confidentiality
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Secure Record Destruction; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist’s laptop is stolen from a vehicle. The laptop contains identifiable client records. It requires a password, but the therapist does not know whether the drive was encrypted.What should the therapist do first?',
@@ -1683,7 +993,6 @@ CTA Exam Strategy: Use the destruction rule:Destroy → Prevent recovery → Pro
 		'option_d'       => 'Contact every client immediately before determining what information was stored or whether it was protected',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 A lost or stolen device requires prompt and organized action. The therapist or practice should determine:
 What information was stored
 Whether it was identifiable
@@ -1698,23 +1007,6 @@ A. Incorrect. Waiting may increase risk and delay required containment, assessme
 C. Incorrect. Destroying secure backups would not protect the stolen device and could cause additional record-loss and retention problems.
 D. Incorrect. Client notification may ultimately be required, but the practice should first conduct a prompt factual assessment so any notices are accurate and consistent with applicable requirements.
 CTA Exam Strategy: For a security incident, use:Identify → Contain → Assess → Report → Correct → Document',
-=======
-		A lost or stolen device requires prompt and organized action. The therapist or practice should determine:
-		What information was stored
-		Whether it was identifiable
-		What security protections were present
-		Whether remote locking or deletion is possible
-		Who must be notified internally or externally
-		What corrective measures are needed
-		How the incident and response should be documented
-		The exact notification obligations depend on the facts, but delaying the initial assessment is not appropriate.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Waiting may increase risk and delay required containment, assessment, reporting, or notification.
-		C. Incorrect. Destroying secure backups would not protect the stolen device and could cause additional record-loss and retention problems.
-		D. Incorrect. Client notification may ultimately be required, but the practice should first conduct a prompt factual assessment so any notices are accurate and consistent with applicable requirements.
-		CTA Exam Strategy: For a security incident, use:Identify → Contain → Assess → Report → Correct → Document
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Lost Device and Security-Incident Response; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice hires an outside company to destroy expired paper and electronic records. The company offers the lowest price but provides no information about its security procedures, employee screening, destruction methods, or proof that the records were actually destroyed.What is the most appropriate response?',
@@ -1724,7 +1016,6 @@ CTA Exam Strategy: For a security incident, use:Identify → Contain → Assess 
 		'option_d'       => 'Require the company to promise verbally that employees will not read the records',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Using an outside vendor does not eliminate the practice’s responsibility to protect confidential information. The practice should evaluate the vendor’s safeguards, destruction methods, handling procedures, contractual responsibilities, and ability to document completion.
 Appropriate oversight may include secure transfer, controlled access, verified destruction, and a certificate or other record identifying what was destroyed and when.
 Why the Other Answers Are Incorrect
@@ -1732,16 +1023,6 @@ A. Incorrect. Delegating the physical task does not eliminate the practice’s p
 B. Incorrect. Former-client records remain confidential and require the same careful destruction procedures as active-client records once eligible for destruction.
 D. Incorrect. A verbal promise is not an adequate substitute for established procedures, verification, and appropriate oversight.
 CTA Exam Strategy: Outsourcing the task does not outsource accountability.Look for:Secure process + defined responsibility + verified destruction',
-=======
-		Using an outside vendor does not eliminate the practice’s responsibility to protect confidential information. The practice should evaluate the vendor’s safeguards, destruction methods, handling procedures, contractual responsibilities, and ability to document completion.
-		Appropriate oversight may include secure transfer, controlled access, verified destruction, and a certificate or other record identifying what was destroyed and when.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Delegating the physical task does not eliminate the practice’s professional responsibility for confidential record handling.
-		B. Incorrect. Former-client records remain confidential and require the same careful destruction procedures as active-client records once eligible for destruction.
-		D. Incorrect. A verbal promise is not an adequate substitute for established procedures, verification, and appropriate oversight.
-		CTA Exam Strategy: Outsourcing the task does not outsource accountability.Look for:Secure process + defined responsibility + verified destruction
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Destruction Vendor and Professional Responsibility; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor explains that a practice can retain a record for the correct length of time and still fail to protect it from unauthorized access or loss. Which statement most accurately distinguishes record retention from record security?',
@@ -1751,7 +1032,6 @@ CTA Exam Strategy: Outsourcing the task does not outsource accountability.Look f
 		'option_d'       => 'Retention ends when treatment ends, but security continues indefinitely',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Record retention focuses on preserving records for the applicable period. Record security focuses on protecting those records from unauthorized access, loss, theft, alteration, damage, disclosure, and improper destruction.
 The responsibilities overlap because retained records must also remain secure, accessible, and reliable.
 Why the Other Answers Are Incorrect
@@ -1759,16 +1039,6 @@ B. Incorrect. Both retention and security apply to paper and electronic records.
 C. Incorrect. Client access and ownership are separate record-management concepts. They do not define the difference between retention and security.
 D. Incorrect. Retention does not automatically end when treatment ends. Record responsibilities continue throughout the applicable retention period.
 CTA Exam Strategy: Use the memory aid:Retention = KeepSecurity = Protect',
-=======
-		Record retention focuses on preserving records for the applicable period. Record security focuses on protecting those records from unauthorized access, loss, theft, alteration, damage, disclosure, and improper destruction.
-		The responsibilities overlap because retained records must also remain secure, accessible, and reliable.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Both retention and security apply to paper and electronic records.
-		C. Incorrect. Client access and ownership are separate record-management concepts. They do not define the difference between retention and security.
-		D. Incorrect. Retention does not automatically end when treatment ends. Record responsibilities continue throughout the applicable retention period.
-		CTA Exam Strategy: Use the memory aid:Retention = KeepSecurity = Protect
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Retention vs. Security; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Several therapists use the same username and password to access the practice’s electronic health-record system.What is the primary security concern?',
@@ -1778,7 +1048,6 @@ CTA Exam Strategy: Use the memory aid:Retention = KeepSecurity = Protect',
 		'option_d'       => 'The password is acceptable as long as it is changed once each year',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 Individual credentials help limit access, support accountability, and create reliable audit trails. Shared passwords make it difficult to determine who viewed, entered, altered, or disclosed information.
 Access should be based on each person’s authorization, role, and appropriate professional purpose.
 Why the Other Answers Are Incorrect
@@ -1786,16 +1055,6 @@ B. Incorrect. Convenience does not justify weakening security or accountability.
 C. Incorrect. Professional licensure does not automatically authorize unrestricted access to every client record.
 D. Incorrect. Periodically changing a shared password does not correct the underlying problem of multiple people using the same credentials.
 CTA Exam Strategy: Look for security measures that create:Individual access + role limits + accountability',
-=======
-		Individual credentials help limit access, support accountability, and create reliable audit trails. Shared passwords make it difficult to determine who viewed, entered, altered, or disclosed information.
-		Access should be based on each person’s authorization, role, and appropriate professional purpose.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Convenience does not justify weakening security or accountability.
-		C. Incorrect. Professional licensure does not automatically authorize unrestricted access to every client record.
-		D. Incorrect. Periodically changing a shared password does not correct the underlying problem of multiple people using the same credentials.
-		CTA Exam Strategy: Look for security measures that create:Individual access + role limits + accountability
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Shared Passwords; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist places expired paper treatment records into an ordinary office trash container.What is the most significant concern?',
@@ -1805,7 +1064,6 @@ CTA Exam Strategy: Look for security measures that create:Individual access + ro
 		'option_d'       => 'The client may own the trash container',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Record destruction should prevent unauthorized reconstruction or recovery. Paper clinical records generally require shredding, an approved confidential-destruction service, or another secure method.
 Ordinary trash leaves sensitive information vulnerable to viewing, removal, or disclosure.
 Why the Other Answers Are Incorrect
@@ -1813,16 +1071,6 @@ A. Incorrect. The scenario states that the records were eligible for destruction
 B. Incorrect. Documentation quality is unrelated to whether disposal protects confidentiality.
 D. Incorrect. Ownership of the trash container is irrelevant to the therapist’s duty to destroy records securely.
 CTA Exam Strategy: Secure destruction means:The information cannot reasonably be recovered.',
-=======
-		Record destruction should prevent unauthorized reconstruction or recovery. Paper clinical records generally require shredding, an approved confidential-destruction service, or another secure method.
-		Ordinary trash leaves sensitive information vulnerable to viewing, removal, or disclosure.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. The scenario states that the records were eligible for destruction. The concern is the method used, not the retention period.
-		B. Incorrect. Documentation quality is unrelated to whether disposal protects confidentiality.
-		D. Incorrect. Ownership of the trash container is irrelevant to the therapist’s duty to destroy records securely.
-		CTA Exam Strategy: Secure destruction means:The information cannot reasonably be recovered.
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Confidential Disposal; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'While working remotely, a therapist plans to access clinical records through public Wi-Fi at a crowded coffee shop. The therapist’s screen may also be visible to nearby customers.What is the most appropriate response?',
@@ -1832,7 +1080,6 @@ CTA Exam Strategy: Secure destruction means:The information cannot reasonably be
 		'option_d'       => 'Ask nearby customers to promise not to look at the screen',
 		'correct_option' => 'c',
 		'explanation'    => 'C. Correct.
-<<<<<<< HEAD
 Electronic security includes protecting information during access and transmission. Public networks and visible screens may expose client information through interception, unauthorized viewing, or device compromise.
 The therapist should use appropriate technical safeguards and work in a setting that protects privacy before accessing identifiable records.
 Why the Other Answers Are Incorrect
@@ -1840,16 +1087,6 @@ A. Incorrect. Device ownership does not make an insecure connection or public en
 B. Incorrect. Scheduling, billing, diagnostic, and identifying information may also be confidential.
 D. Incorrect. Informal promises from strangers are not meaningful physical or electronic safeguards.
 CTA Exam Strategy: Remote access requires protection of both:The connection and the physical environment',
-=======
-		Electronic security includes protecting information during access and transmission. Public networks and visible screens may expose client information through interception, unauthorized viewing, or device compromise.
-		The therapist should use appropriate technical safeguards and work in a setting that protects privacy before accessing identifiable records.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Device ownership does not make an insecure connection or public environment safe.
-		B. Incorrect. Scheduling, billing, diagnostic, and identifying information may also be confidential.
-		D. Incorrect. Informal promises from strangers are not meaningful physical or electronic safeguards.
-		CTA Exam Strategy: Remote access requires protection of both:The connection and the physical environment
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Use of an Unsecured Network; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice’s audit log shows that an employee opened the records of several clients who were not assigned to that employee. The employee claims the access was accidental.What is the most appropriate response?',
@@ -1859,7 +1096,6 @@ CTA Exam Strategy: Remote access requires protection of both:The connection and 
 		'option_d'       => 'Immediately delete the audit logs to protect the employee',
 		'correct_option' => 'b',
 		'explanation'    => 'B. Correct.
-<<<<<<< HEAD
 Possible unauthorized access is a security incident that requires a prompt and organized response. The practice should determine:
 Which records were accessed
 Whether the employee was authorized
@@ -1873,22 +1109,6 @@ A. Incorrect. Unauthorized internal access may create confidentiality and privac
 D. Incorrect. Deleting audit logs would destroy important security and accountability information.
 C. Incorrect. The practice should respond promptly but fairly by assessing the facts before reaching conclusions.
 CTA Exam Strategy: When suspicious access appears, choose:Contain → Investigate → Assess → Report → Correct → Document',
-=======
-		Possible unauthorized access is a security incident that requires a prompt and organized response. The practice should determine:
-		Which records were accessed
-		Whether the employee was authorized
-		Why the access occurred
-		Whether information was viewed, altered, or disclosed
-		What containment and reporting steps are required
-		What training, discipline, or system corrections are appropriate
-		Audit information should be preserved as part of the investigation and documentation process.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. Unauthorized internal access may create confidentiality and privacy concerns even without proof of disclosure outside the organization.
-		D. Incorrect. Deleting audit logs would destroy important security and accountability information.
-		C. Incorrect. The practice should respond promptly but fairly by assessing the facts before reaching conclusions.
-		CTA Exam Strategy: When suspicious access appears, choose:Contain → Investigate → Assess → Report → Correct → Document
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Suspected Unauthorized Electronic Access; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A practice’s routine schedule indicates that a group of records is eligible for destruction. Before destruction occurs, the practice receives notice that one record may be relevant to a licensing investigation.What is the most appropriate action?',
@@ -1898,7 +1118,6 @@ CTA Exam Strategy: When suspicious access appears, choose:Contain → Investigat
 		'option_d'       => 'Transfer the only copy to the client so the practice no longer possesses it',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct.
-<<<<<<< HEAD
 A routine destruction schedule does not override a pending investigation, legal hold, complaint, audit, or other preservation obligation. When uncertainty exists, preservation is generally favored until the practice determines whether destruction is legally and professionally permissible.
 The decision and any consultation should be documented appropriately.
 Why the Other Answers Are Incorrect
@@ -1906,16 +1125,6 @@ B. Incorrect. Eligibility under a routine schedule does not authorize destructio
 C. Incorrect. Selectively removing information compromises record integrity and may constitute concealment.
 D. Incorrect. Giving away the only copy does not necessarily satisfy preservation responsibilities and may interfere with the investigation.
 CTA Exam Strategy: Before destroying records, always ask:Is any complaint, investigation, audit, litigation, or legal hold pending?',
-=======
-		A routine destruction schedule does not override a pending investigation, legal hold, complaint, audit, or other preservation obligation. When uncertainty exists, preservation is generally favored until the practice determines whether destruction is legally and professionally permissible.
-		The decision and any consultation should be documented appropriately.
-		Why the Other Answers Are Incorrect
-		B. Incorrect. Eligibility under a routine schedule does not authorize destruction after a preservation duty arises.
-		C. Incorrect. Selectively removing information compromises record integrity and may constitute concealment.
-		D. Incorrect. Giving away the only copy does not necessarily satisfy preservation responsibilities and may interfere with the investigation.
-		CTA Exam Strategy: Before destroying records, always ask:Is any complaint, investigation, audit, litigation, or legal hold pending?
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Destruction During an Investigation or Legal Hold; log error category SECURITY-STORAGE-DESTRUCTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A group practice is relocating. Its records include:Paper files in unlocked cabinetsElectronic files stored without a current backupShared staff passwordsRecords being transported by an unverified moving companyOld hard drives scheduled for disposalNo written incident-response procedureSeveral records connected to pending complaintsWhich plan best protects the records throughout the transition?',
@@ -1925,7 +1134,6 @@ CTA Exam Strategy: Before destroying records, always ask:Is any complaint, inves
 		'option_d'       => 'Secure and inventory the paper files, use controlled and authorized transportation, establish individual electronic access, create verified backups, preserve records connected to complaints, securely destroy only eligible media, and implement an incident-response process',
 		'correct_option' => 'd',
 		'explanation'    => 'D. Correct.
-<<<<<<< HEAD
 Record security applies throughout the entire lifecycle and during every stage of the relocation. A sound plan should include:
 Physical safeguards: Locked storage, inventories, secure containers, supervised transport, and controlled possession
 Administrative safeguards: Written procedures, authorized vendors, staff responsibilities, training, and incident reporting
@@ -1939,48 +1147,5 @@ A. Incorrect. General insurance does not establish that movers are authorized to
 B. Incorrect. Relocation does not permit premature destruction of records still subject to retention or preservation requirements.
 C. Incorrect. Paper and electronic records both contain confidential information and require appropriate protection.
 CTA Exam Strategy: For integrated security questions, apply:Physical + Administrative + Electronic safeguardsThen check every lifecycle stage:Create → Store → Access → Transfer → Retain → Destroy',
-=======
-		Record security applies throughout the entire lifecycle and during every stage of the relocation. A sound plan should include:
-		Physical safeguards: Locked storage, inventories, secure containers, supervised transport, and controlled possession
-		Administrative safeguards: Written procedures, authorized vendors, staff responsibilities, training, and incident reporting
-		Electronic safeguards: Individual credentials, access controls, secure backups, encryption when appropriate, and reliable audit trails
-		Preservation: Continued retention of records connected to complaints, investigations, or legal holds
-		Secure destruction: Verified destruction only for records and media that are truly eligible
-		Incident readiness: Procedures to identify, contain, assess, report, correct, and document a security failure
-		This approach protects confidentiality, accessibility, integrity, and professional accountability throughout the transition.
-		Why the Other Answers Are Incorrect
-		A. Incorrect. General insurance does not establish that movers are authorized to handle confidential records or that appropriate safeguards exist.
-		B. Incorrect. Relocation does not permit premature destruction of records still subject to retention or preservation requirements.
-		C. Incorrect. Paper and electronic records both contain confidential information and require appropriate protection.
-		CTA Exam Strategy: For integrated security questions, apply:Physical + Administrative + Electronic safeguardsThen check every lifecycle stage:Create → Store → Access → Transfer → Retain → Destroy
-		Remediation: Return to Workbook 9, Chapter 4: Record Security, Storage, and Record Destruction; review Comprehensive Record-Lifecycle Security; log error category SECURITY-STORAGE-DESTRUCTION.
-		Performance Analysis and Remediation Plan
-		Chapter
-		Score
-		High-Confidence Misses
-		Low-Confidence Correct
-		Next Remediation Action
-		1
-		____ / 17
-		WB9 Ch. 1 | DOCUMENTATION-STANDARDS
-		2
-		____ / 17
-		WB9 Ch. 2 | HIGH-RISK-DOCUMENTATION
-		3
-		____ / 17
-		WB9 Ch. 3 | RECORD-RETENTION
-		4
-		____ / 17
-		WB9 Ch. 4 | SECURITY-STORAGE-DESTRUCTION
-		Score interpretation control: Use results to identify strengths and remediation priorities. Do not present this practice score as an official BBS passing score or a guarantee of passage.
-		Current Authorities and Source Controls
-		The LMFT-specific clinical-documentation, record-retention, security, storage, destruction, and technology content in this assessment was verified through August 3, 2026. Under Business and Professions Code section 4980.49, LMFT records are retained for at least seven years after therapy terminates; for a minor, at least seven years after the client reaches age 18. Re-audit governing California and federal authorities before future publication or use.
-		California Board of Behavioral Sciences, 2026 Statutes and Regulations: Open official source
-		California Business and Professions Code section 4980.49, LMFT record retention: Open official source
-		California Civil Code section 56.101, confidentiality and electronic-record integrity: Open official source
-		California Health and Safety Code sections 123100-123149.5, patient access to health records: Open official source
-		HHS HIPAA Security Rule: Open official source
-		HHS HIPAA Breach Notification Rule: Open official source',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

@@ -641,12 +641,9 @@ class CTA_Lpcc_Law_Ethics_Sync {
 	 * @return void
 	 */
 	public static function maybe_heal_incomplete_content() {
-<<<<<<< HEAD
 		if ( function_exists( 'cta_lms_is_plugin_lifecycle_request' ) && cta_lms_is_plugin_lifecycle_request() ) {
 			return;
 		}
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		if ( get_transient( 'cta_lpcc_le_heal_lock' ) ) {
 			return;
 		}
@@ -1110,11 +1107,7 @@ class CTA_Lpcc_Law_Ethics_Sync {
 
 				$defs[] = array(
 					'quiz_type' => $quiz_type,
-<<<<<<< HEAD
 					'title'     => sprintf( 'WB%d-C%d — %s (Chapter Test)', $wb, $ch, $chapter_title ),
-=======
-					'title'     => sprintf( 'Workbook %d — Chapter %d: %s', $wb, $ch, $chapter_title ),
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 					'sort'      => $sort,
 					'time'      => 25,
 					'file'      => $file,
@@ -1365,7 +1358,6 @@ class CTA_Lpcc_Law_Ethics_Sync {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Publish Practice A/B + Comprehensive Final only (scoped).
 	 *
 	 * @param int $course_id Course ID.
@@ -1445,8 +1437,6 @@ class CTA_Lpcc_Law_Ethics_Sync {
 	}
 
 	/**
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	 * Widen option_* columns so long official stems are not truncated.
 	 */
 	private static function maybe_widen_option_columns() {

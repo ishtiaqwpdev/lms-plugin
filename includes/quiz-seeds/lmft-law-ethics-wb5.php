@@ -1,12 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * CTA LMFT California Law & Ethics - Workbook 5 Assessment (85 questions).
  * Built from approved Controlled Answer Key DOCX (online Practice Bank).
-=======
- * CTA LMFT Law & Ethics EP - Workbook 5 Assessment (85 questions).
- * Source: CTA_LMFT_Law_and_Ethics_EP_WB5_85_Question_Assessment_Candidate_Form_v1.0.docx + CTA_LMFT_Law_and_Ethics_EP_WB5_85_Question_Assessment_Controlled_Answer_Key_and_Detailed_Rationales_v1.0.docx.
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 return array(
@@ -18,18 +13,10 @@ return array(
 		'option_d'       => 'Clinicians should choose the intervention that produces the fastest improvement',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Psychotherapy may involve distress, and no clinician can guarantee a risk-free outcome. The duty is reasonable harm avoidance and risk management.
-<<<<<<< HEAD
 B. Correct. Nonmaleficence directs clinicians to identify, avoid, and reduce unnecessary or unjustified harm while providing clinically appropriate care.
 C. Incorrect. Client autonomy matters, but it does not require a clinician to provide illegal, incompetent, unsafe, or clinically inappropriate care.
 D. Incorrect. Speed alone does not establish benefit, safety, or ethical appropriateness and may increase avoidable risk.
 CTA Exam Strategy: Translate nonmaleficence as reasonable harm avoidance, not a promise of zero discomfort or zero risk.',
-=======
-		B. Correct. Nonmaleficence directs clinicians to identify, avoid, and reduce unnecessary or unjustified harm while providing clinically appropriate care.
-		C. Incorrect. Client autonomy matters, but it does not require a clinician to provide illegal, incompetent, unsafe, or clinically inappropriate care.
-		D. Incorrect. Speed alone does not establish benefit, safety, or ethical appropriateness and may increase avoidable risk.
-		CTA Exam Strategy: Translate nonmaleficence as reasonable harm avoidance, not a promise of zero discomfort or zero risk.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Definition of Nonmaleficence; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician must distinguish unavoidable treatment discomfort from unnecessary or unjustified harm. Which statement MOST accurately describes the relationship between nonmaleficence and California law?',
@@ -39,18 +26,10 @@ CTA Exam Strategy: Translate nonmaleficence as reasonable harm avoidance, not a 
 		'option_d'       => 'Nonmaleficence is a broad ethical principle, while specific California statutes and regulations govern particular harmful conduct and duties',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. California uses multiple profession-specific statutes, regulations, and duties rather than one universal nonmaleficence section.
-<<<<<<< HEAD
 B. Incorrect. The principle informs professional reasoning and overlaps with enforceable duties concerning competence, negligence, confidentiality, safety, and client harm.
 C. Incorrect. Discomfort may be clinically appropriate, and a legal violation requires analysis of the controlling rule and relevant facts.
 D. Correct. This correctly separates the broad ethical principle from the specific legal provisions that regulate defined conduct.
 CTA Exam Strategy: Do not convert a broad ethical value into a nonexistent single statute; identify the particular California rule.',
-=======
-		B. Incorrect. The principle informs professional reasoning and overlaps with enforceable duties concerning competence, negligence, confidentiality, safety, and client harm.
-		C. Incorrect. Discomfort may be clinically appropriate, and a legal violation requires analysis of the controlling rule and relevant facts.
-		D. Correct. This correctly separates the broad ethical principle from the specific legal provisions that regulate defined conduct.
-		CTA Exam Strategy: Do not convert a broad ethical value into a nonexistent single statute; identify the particular California rule.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Ethical Principle vs. Legal Rule; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A case review focuses on whether the clinician acted—or failed to act—in a way that exposed the client to avoidable risk. Which fact BEST supports the conclusion that treatment-related distress may be clinically appropriate rather than avoidable harm?',
@@ -60,18 +39,10 @@ CTA Exam Strategy: Do not convert a broad ethical value into a nonexistent singl
 		'option_d'       => 'The intervention is popular on social media',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Purpose, preparation, proportionality, monitoring, and adjustment are central to distinguishing clinically justified discomfort from avoidable harm.
-<<<<<<< HEAD
 B. Incorrect. Distress is not self-validating; worsening may signal excessive intensity, poor fit, inadequate preparation, or another problem.
 C. Incorrect. A general form does not establish that this intervention remains appropriate or that current distress is proportionate.
 D. Incorrect. Popularity does not establish evidence, competence, suitability, or safety for the individual client.
 CTA Exam Strategy: Look for treatment purpose plus proportionality and monitoring—not discomfort alone.',
-=======
-		B. Incorrect. Distress is not self-validating; worsening may signal excessive intensity, poor fit, inadequate preparation, or another problem.
-		C. Incorrect. A general form does not establish that this intervention remains appropriate or that current distress is proportionate.
-		D. Incorrect. Popularity does not establish evidence, competence, suitability, or safety for the individual client.
-		CTA Exam Strategy: Look for treatment purpose plus proportionality and monitoring—not discomfort alone.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Necessary Discomfort vs. Avoidable Harm; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is considering an intervention that may create short-term distress but could serve a reasonable treatment purpose if carefully monitored. Which example is an act of omission that may expose a client to avoidable harm?',
@@ -81,18 +52,10 @@ CTA Exam Strategy: Look for treatment purpose plus proportionality and monitorin
 		'option_d'       => 'Obtaining qualified consultation before a high-risk decision',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Clear explanation supports informed decision-making and risk reduction rather than constituting a harmful omission.
-<<<<<<< HEAD
 B. Incorrect. Appropriate modification is an active response to new information and may reduce harm.
 C. Correct. The clinician fails to take a needed protective action despite material warning signs; omission can be as consequential as an affirmative act.
 D. Incorrect. Qualified consultation is a safeguard when used appropriately and does not shift professional responsibility.
 CTA Exam Strategy: In omission questions, identify the protective duty the clinician failed to perform.',
-=======
-		B. Incorrect. Appropriate modification is an active response to new information and may reduce harm.
-		C. Correct. The clinician fails to take a needed protective action despite material warning signs; omission can be as consequential as an affirmative act.
-		D. Incorrect. Qualified consultation is a safeguard when used appropriately and does not shift professional responsibility.
-		CTA Exam Strategy: In omission questions, identify the protective duty the clinician failed to perform.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Commission and Omission; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician must distinguish unavoidable treatment discomfort from unnecessary or unjustified harm. When does nonmaleficence generally require a clinician to begin addressing risk?',
@@ -102,18 +65,10 @@ CTA Exam Strategy: In omission questions, identify the protective duty the clini
 		'option_d'       => 'Only when harm can be predicted with certainty',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Risk management is preventive; material foreseeable risk warrants assessment and proportionate safeguards before actual injury.
-<<<<<<< HEAD
 B. Incorrect. A complaint is not required when the clinician already has facts indicating meaningful risk.
 C. Incorrect. Professional duties apply during practice and do not wait for a later disciplinary decision.
 D. Incorrect. Certainty is rarely possible and is not required before taking reasonable precautions.
 CTA Exam Strategy: Foreseeability triggers prevention; actual harm and certainty are not prerequisites.Moderate QuestionsApplied scenarios involving reassessment, consent, competence, vulnerability, and safety sequencing.',
-=======
-		B. Incorrect. A complaint is not required when the clinician already has facts indicating meaningful risk.
-		C. Incorrect. Professional duties apply during practice and do not wait for a later disciplinary decision.
-		D. Incorrect. Certainty is rarely possible and is not required before taking reasonable precautions.
-		CTA Exam Strategy: Foreseeability triggers prevention; actual harm and certainty are not prerequisites.Moderate QuestionsApplied scenarios involving reassessment, consent, competence, vulnerability, and safety sequencing.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Foreseeable Risk; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT notices that a client’s symptoms have steadily worsened during six weeks of a new intervention. No immediate danger is reported. What should the LMFT do FIRST?',
@@ -123,18 +78,10 @@ CTA Exam Strategy: Foreseeability triggers prevention; actual harm and certainty
 		'option_d'       => 'Ask the client to sign a waiver accepting further deterioration',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A preset protocol does not justify ignoring a sustained adverse trend that requires reassessment.
-<<<<<<< HEAD
 B. Incorrect. Worsening warrants timely review, but immediate termination may be unnecessarily disruptive when no urgent danger is established.
 C. Correct. This gathers the clinically relevant facts and supports a proportionate response without minimizing or overreacting.
 D. Incorrect. A waiver cannot replace competent reassessment or authorize avoidable harm.
 CTA Exam Strategy: For meaningful but nonurgent deterioration, reassess before choosing the least disruptive effective modification.',
-=======
-		B. Incorrect. Worsening warrants timely review, but immediate termination may be unnecessarily disruptive when no urgent danger is established.
-		C. Correct. This gathers the clinically relevant facts and supports a proportionate response without minimizing or overreacting.
-		D. Incorrect. A waiver cannot replace competent reassessment or authorize avoidable harm.
-		CTA Exam Strategy: For meaningful but nonurgent deterioration, reassess before choosing the least disruptive effective modification.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Deterioration Without Immediate Danger; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A competent adult client refuses a treatment the LMFT believes would probably help. There is no immediate safety emergency. Which response BEST reflects nonmaleficence?',
@@ -144,18 +91,10 @@ CTA Exam Strategy: For meaningful but nonurgent deterioration, reassess before c
 		'option_d'       => 'Provide the treatment anyway because the clinician has superior expertise',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Coercion may itself cause harm and undermines voluntary decision-making when no emergency authority applies.
-<<<<<<< HEAD
 B. Correct. This supports informed choice, avoids coercion, and preserves the possibility of safe alternative care.
 C. Incorrect. Immediate termination may create avoidable continuity harm and is not automatically required by disagreement.
 D. Incorrect. Professional expertise does not authorize overriding a competent adult’s refusal in an ordinary nonemergency situation.
 CTA Exam Strategy: When no emergency overrides choice, combine clear information with noncoercion and continuity planning.',
-=======
-		B. Correct. This supports informed choice, avoids coercion, and preserves the possibility of safe alternative care.
-		C. Incorrect. Immediate termination may create avoidable continuity harm and is not automatically required by disagreement.
-		D. Incorrect. Professional expertise does not authorize overriding a competent adult’s refusal in an ordinary nonemergency situation.
-		CTA Exam Strategy: When no emergency overrides choice, combine clear information with noncoercion and continuity planning.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Client Refusal and Noncoercion; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a telehealth session, a client reports holding a loaded firearm and intending to act within minutes. Some details remain unclear. What should the LMFT do FIRST?',
@@ -165,18 +104,10 @@ CTA Exam Strategy: When no emergency overrides choice, combine clear information
 		'option_d'       => 'Use available information to initiate immediate safety and emergency procedures while continuing focused assessment as feasible',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Diagnostic completeness must not delay protection when the facts indicate imminent danger.
-<<<<<<< HEAD
 B. Incorrect. Consultation may assist, but waiting for it could expose the client or others to immediate harm.
 C. Incorrect. Abruptly ending contact abandons the immediate safety task and may increase risk.
 D. Correct. Acuity controls the sequence: protect first, maintain contact when feasible, and continue gathering the information needed for the response.
 CTA Exam Strategy: In an imminent-danger item, choose protection before exhaustive assessment or consultation.',
-=======
-		B. Incorrect. Consultation may assist, but waiting for it could expose the client or others to immediate harm.
-		C. Incorrect. Abruptly ending contact abandons the immediate safety task and may increase risk.
-		D. Correct. Acuity controls the sequence: protect first, maintain contact when feasible, and continue gathering the information needed for the response.
-		CTA Exam Strategy: In an imminent-danger item, choose protection before exhaustive assessment or consultation.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Immediate Safety Sequencing; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client experiences an unexpected relapse after a carefully planned, competently delivered course of treatment. Which conclusion is MOST accurate?',
@@ -186,18 +117,10 @@ CTA Exam Strategy: In an imminent-danger item, choose protection before exhausti
 		'option_d'       => 'The client’s consent makes review unnecessary',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Outcomes matter, but wrongdoing depends on the governing rule and the reasonableness of care, monitoring, and response to new information.
-<<<<<<< HEAD
 B. Incorrect. Gross negligence is a serious legal conclusion and cannot be inferred from outcome alone.
 C. Incorrect. A reasonable original plan does not eliminate the duty to reassess and respond to relapse.
 D. Incorrect. Consent does not waive competent follow-up, monitoring, or adjustment.
 CTA Exam Strategy: Separate outcome from process: review care and response without assuming either fault or immunity.',
-=======
-		B. Incorrect. Gross negligence is a serious legal conclusion and cannot be inferred from outcome alone.
-		C. Incorrect. A reasonable original plan does not eliminate the duty to reassess and respond to relapse.
-		D. Incorrect. Consent does not waive competent follow-up, monitoring, or adjustment.
-		CTA Exam Strategy: Separate outcome from process: review care and response without assuming either fault or immunity.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Adverse Outcome vs. Wrongdoing; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During a planned exposure intervention, a client becomes far more distressed than anticipated and cannot use previously effective coping skills. What should the therapist do NEXT?',
@@ -207,18 +130,10 @@ CTA Exam Strategy: Separate outcome from process: review care and response witho
 		'option_d'       => 'Tell the client that distress is irrelevant because it was discussed at intake',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A theoretical concern about avoidance does not justify ignoring disproportionate distress or lost coping capacity.
-<<<<<<< HEAD
 B. Incorrect. Exposure can be appropriate when competently selected, prepared, paced, consented to, and monitored.
 C. Correct. This treats new client data as clinically meaningful and uses proportionate modification to reduce avoidable harm.
 D. Incorrect. Prior discussion does not eliminate the need for present assessment and adjustment.
 CTA Exam Strategy: When distress exceeds the plan, reassess and titrate; do not reflexively persist or abandon the entire modality.',
-=======
-		B. Incorrect. Exposure can be appropriate when competently selected, prepared, paced, consented to, and monitored.
-		C. Correct. This treats new client data as clinically meaningful and uses proportionate modification to reduce avoidable harm.
-		D. Incorrect. Prior discussion does not eliminate the need for present assessment and adjustment.
-		CTA Exam Strategy: When distress exceeds the plan, reassess and titrate; do not reflexively persist or abandon the entire modality.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Exposure Pacing and Monitoring; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT is asked to use a specialized trauma procedure that is within the profession’s legal scope but outside the LMFT’s present competence. The client is stable and alternatives are available. What is the BEST response?',
@@ -228,18 +143,10 @@ CTA Exam Strategy: When distress exceeds the plan, reassess and titrate; do not 
 		'option_d'       => 'Terminate all treatment immediately without continuity planning',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Legal permission and actual competence are separate; licensure does not qualify a clinician for every permitted service.
-<<<<<<< HEAD
 B. Correct. This prevents the client from becoming an unprotected practice opportunity while preserving proportionate alternatives and continuity.
 C. Incorrect. Client consent cannot create professional competence or waive the clinician’s duty to practice safely.
 D. Incorrect. Immediate termination may be unnecessarily disruptive when safe alternatives, collaboration, or orderly referral are available.
 CTA Exam Strategy: When scope is legal but competence is lacking, protect the client through preparation, qualified help, and continuity—not a waiver.',
-=======
-		B. Correct. This prevents the client from becoming an unprotected practice opportunity while preserving proportionate alternatives and continuity.
-		C. Incorrect. Client consent cannot create professional competence or waive the clinician’s duty to practice safely.
-		D. Incorrect. Immediate termination may be unnecessarily disruptive when safe alternatives, collaboration, or orderly referral are available.
-		CTA Exam Strategy: When scope is legal but competence is lacking, protect the client through preparation, qualified help, and continuity—not a waiver.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Competence and Risk; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A financially dependent client agrees to a boundary change after saying, “I cannot risk upsetting you because you control whether my services continue.” What is the therapist’s BEST response?',
@@ -249,18 +156,10 @@ CTA Exam Strategy: When scope is legal but competence is lacking, protect the cl
 		'option_d'       => 'Pause the change, explore voluntariness and potential harm, clarify the client’s rights and alternatives, and use added safeguards or avoid the change',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Verbal agreement is not enough when the client identifies coercive pressure and dependence.
-<<<<<<< HEAD
 B. Incorrect. Power differences require attention precisely because they may distort choice and increase vulnerability.
 C. Incorrect. Documentation is important but does not correct the underlying voluntariness and boundary concern.
 D. Correct. This recognizes the power imbalance, prevents a potentially exploitative change, and restores conditions for meaningful choice.
 CTA Exam Strategy: When vulnerability or dependency affects consent, add safeguards rather than treating assent as conclusive.Difficult QuestionsLayered scenarios requiring legal precision, proportionality, and integrated harm-prevention reasoning.',
-=======
-		B. Incorrect. Power differences require attention precisely because they may distort choice and increase vulnerability.
-		C. Incorrect. Documentation is important but does not correct the underlying voluntariness and boundary concern.
-		D. Correct. This recognizes the power imbalance, prevents a potentially exploitative change, and restores conditions for meaningful choice.
-		CTA Exam Strategy: When vulnerability or dependency affects consent, add safeguards rather than treating assent as conclusive.Difficult QuestionsLayered scenarios requiring legal precision, proportionality, and integrated harm-prevention reasoning.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Vulnerability and Power Imbalance; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is considering an intervention that may create short-term distress but could serve a reasonable treatment purpose if carefully monitored. Which statement BEST distinguishes the ethical principle of nonmaleficence from California disciplinary law governing LMFTs and registered AMFTs?',
@@ -270,18 +169,10 @@ CTA Exam Strategy: When vulnerability or dependency affects consent, add safegua
 		'option_d'       => 'Only intentional injury is relevant; omissions and incompetence cannot create disciplinary exposure',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This preserves the broader ethical framework while accurately recognizing the conduct-based legal categories identified in Business and Professions Code section 4982.
-<<<<<<< HEAD
 B. Incorrect. Failure to maximize benefit does not by itself establish the mental state or statutory elements of intentional harm.
 C. Incorrect. Reported worsening is important clinical data but does not automatically prove a violation without the controlling legal facts.
 D. Incorrect. Business and Professions Code section 4982(d) addresses gross negligence or incompetence, while section 4982(i) separately addresses intentionally or recklessly causing client harm; omissions are not categorically excluded from professional-conduct analysis.
 CTA Exam Strategy: Match the label to its threshold: broad ethical concern and statutory unprofessional conduct are related but not identical.',
-=======
-		B. Incorrect. Failure to maximize benefit does not by itself establish the mental state or statutory elements of intentional harm.
-		C. Incorrect. Reported worsening is important clinical data but does not automatically prove a violation without the controlling legal facts.
-		D. Incorrect. Business and Professions Code section 4982(d) addresses gross negligence or incompetence, while section 4982(i) separately addresses intentionally or recklessly causing client harm; omissions are not categorically excluded from professional-conduct analysis.
-		CTA Exam Strategy: Match the label to its threshold: broad ethical concern and statutory unprofessional conduct are related but not identical.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Statutory and Ethical Distinction; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT has repeatedly failed to return a high-risk client’s crisis calls, has not updated the safety assessment, and learns that the client’s threats are escalating today. What should occur FIRST?',
@@ -291,18 +182,10 @@ CTA Exam Strategy: Match the label to its threshold: broad ethical concern and s
 		'option_d'       => 'Ask the client to waive responsibility for missed callbacks',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Foreseeable escalating risk requires preventive action before actual injury.
-<<<<<<< HEAD
 B. Incorrect. Accountability matters, but it must not delay protection of the client whose risk is acute.
 C. Correct. This sequences immediate protection first while preserving supervision, documentation, corrective action, and accountability.
 D. Incorrect. A waiver cannot erase prior omissions or transfer the clinician’s safety duties to the client.
 CTA Exam Strategy: When omission and acute risk coexist, protect the client before completing personnel or accountability processes.',
-=======
-		B. Incorrect. Accountability matters, but it must not delay protection of the client whose risk is acute.
-		C. Correct. This sequences immediate protection first while preserving supervision, documentation, corrective action, and accountability.
-		D. Incorrect. A waiver cannot erase prior omissions or transfer the clinician’s safety duties to the client.
-		CTA Exam Strategy: When omission and acute risk coexist, protect the client before completing personnel or accountability processes.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Escalating Risk and Omission; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An agency assigns an LMFT an excessive caseload. The LMFT has missed two urgent follow-ups and reasonably foresees further safety failures if the workload continues. What is the BEST response?',
@@ -312,18 +195,10 @@ CTA Exam Strategy: When omission and acute risk coexist, protect the client befo
 		'option_d'       => 'Wait for a client complaint so the concern can be proven objectively',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Organizational pressure may explain the risk but does not erase the clinician’s professional client-protection duties.
-<<<<<<< HEAD
 B. Correct. This addresses both tracks: immediate client safety and the system condition creating repeated foreseeable harm.
 C. Incorrect. Resignation may eventually be considered, but abrupt departure can create additional harm and does not address current continuity needs.
 D. Incorrect. The missed urgent duties and foreseeable recurrence already require action; a complaint is unnecessary.
 CTA Exam Strategy: Employer pressure is context, not immunity. Protect current clients and address the system risk together.',
-=======
-		B. Correct. This addresses both tracks: immediate client safety and the system condition creating repeated foreseeable harm.
-		C. Incorrect. Resignation may eventually be considered, but abrupt departure can create additional harm and does not address current continuity needs.
-		D. Incorrect. The missed urgent duties and foreseeable recurrence already require action; a complaint is unnecessary.
-		CTA Exam Strategy: Employer pressure is context, not immunity. Protect current clients and address the system risk together.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Organizational Pressure and Individual Duty; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT realizes that confidential information was sent to the wrong recipient. The recipient says the message was deleted, but the extent of access is uncertain. What is the BEST next step?',
@@ -333,18 +208,10 @@ CTA Exam Strategy: Employer pressure is context, not immunity. Protect current c
 		'option_d'       => 'Contain the disclosure, preserve facts, assess risk and applicable duties, consult as needed, mitigate harm, document, and notify when required',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Concealing or destroying information impairs accurate assessment, accountability, and any required response.
-<<<<<<< HEAD
 B. Incorrect. Deletion may reduce risk but does not establish what was accessed, retained, forwarded, or legally required.
 C. Incorrect. A suspected incident must be assessed under applicable law before making unsupported public or legal conclusions.
 D. Correct. This is a structured, proportionate response that prioritizes containment and mitigation while preserving the facts needed for legal analysis.
 CTA Exam Strategy: After a mistake, protect and assess—do not conceal, minimize, or declare conclusions before evaluating the facts.',
-=======
-		B. Incorrect. Deletion may reduce risk but does not establish what was accessed, retained, forwarded, or legally required.
-		C. Incorrect. A suspected incident must be assessed under applicable law before making unsupported public or legal conclusions.
-		D. Correct. This is a structured, proportionate response that prioritizes containment and mitigation while preserving the facts needed for legal analysis.
-		CTA Exam Strategy: After a mistake, protect and assess—do not conceal, minimize, or declare conclusions before evaluating the facts.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Responding After a Mistake; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor directs a registered AMFT to continue an unfamiliar high-intensity intervention with a highly dependent client whose symptoms are worsening. The registered AMFT lacks training, the client says, “I will agree so you do not abandon me,” and no immediate life-threatening danger is present. What is the BEST next step?',
@@ -354,18 +221,10 @@ CTA Exam Strategy: After a mistake, protect and assess—do not conceal, minimiz
 		'option_d'       => 'Obtain a more detailed waiver and proceed until actual injury occurs',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This integrates competence, deterioration, power imbalance, noncoercion, qualified assistance, proportionality, documentation, and continuity without delaying until harm occurs.
-<<<<<<< HEAD
 B. Incorrect. A supervisor cannot create competence or make disproportionate risk ethical, and the client’s statement raises a voluntariness concern.
 C. Incorrect. Immediate termination may create avoidable harm and is disproportionate when modification, collaboration, or orderly transfer can protect the client.
 D. Incorrect. A waiver cannot authorize incompetent care, neutralize coercive pressure, or justify waiting for injury.
 CTA Exam Strategy: In integrated items, identify each risk layer and choose the response that protects, corrects competence limits, and preserves continuity.',
-=======
-		B. Incorrect. A supervisor cannot create competence or make disproportionate risk ethical, and the client’s statement raises a voluntariness concern.
-		C. Incorrect. Immediate termination may create avoidable harm and is disproportionate when modification, collaboration, or orderly transfer can protect the client.
-		D. Incorrect. A waiver cannot authorize incompetent care, neutralize coercive pressure, or justify waiting for injury.
-		CTA Exam Strategy: In integrated items, identify each risk layer and choose the response that protects, corrects competence limits, and preserves continuity.
-		Remediation: Return to Workbook 5, Chapter 1: The Principle of Nonmaleficence; review Integrated Harm Prevention and Sequencing; log error category NONMALEFICENCE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is planning ongoing assessment, communication, documentation, and consultation to reduce foreseeable client harm throughout treatment. Which explanation best identifies the primary purpose of harm-prevention practices in psychotherapy in this situation?',
@@ -375,18 +234,10 @@ CTA Exam Strategy: In integrated items, identify each risk layer and choose the 
 		'option_d'       => 'Protect clinicians from every complaint',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Competent care cannot guarantee a particular outcome, and prevention focuses on reasonable process and risk reduction.
-<<<<<<< HEAD
 B. Incorrect. Some distress may be clinically appropriate; zero distress is neither possible nor always desirable.
 C. Correct. Prevention requires attention to material foreseeable risk and proportionate measures that protect client welfare.
 D. Incorrect. Documentation and sound practice may reduce disputes, but clinician self-protection is not the primary purpose.
 CTA Exam Strategy: Choose reasonable risk reduction, not absolute promises or clinician-centered goals.',
-=======
-		B. Incorrect. Some distress may be clinically appropriate; zero distress is neither possible nor always desirable.
-		C. Correct. Prevention requires attention to material foreseeable risk and proportionate measures that protect client welfare.
-		D. Incorrect. Documentation and sound practice may reduce disputes, but clinician self-protection is not the primary purpose.
-		CTA Exam Strategy: Choose reasonable risk reduction, not absolute promises or clinician-centered goals.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Purpose of Harm Prevention; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a client’s condition changes, a clinician must decide which preventive step should occur before continuing the existing plan. Why must client safety be considered throughout treatment rather than only at intake?',
@@ -396,18 +247,10 @@ CTA Exam Strategy: Choose reasonable risk reduction, not absolute promises or cl
 		'option_d'       => 'Safety matters only when a client uses the word crisis',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Ongoing care requires attention to material changes that affect risk, treatment fit, and client needs.
-<<<<<<< HEAD
 B. Incorrect. An intake assessment does not automatically become invalid; it remains part of the record but may need updating.
 C. Incorrect. Ongoing assessment does not mean repeating a complete written intake at every session.
 D. Incorrect. Clinically significant risk may be present without a particular label or phrase from the client.
 CTA Exam Strategy: Ongoing safety means responsive updating, not automatic repetition of the intake process.',
-=======
-		B. Incorrect. An intake assessment does not automatically become invalid; it remains part of the record but may need updating.
-		C. Incorrect. Ongoing assessment does not mean repeating a complete written intake at every session.
-		D. Incorrect. Clinically significant risk may be present without a particular label or phrase from the client.
-		CTA Exam Strategy: Ongoing safety means responsive updating, not automatic repetition of the intake process.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Safety Throughout Treatment; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During supervision, a registered AMFT treats harm prevention as an intake-only task rather than an ongoing professional responsibility. Which statement BEST describes assessment as a harm-prevention tool?',
@@ -417,18 +260,10 @@ CTA Exam Strategy: Ongoing safety means responsive updating, not automatic repet
 		'option_d'       => 'Assessment should gather enough relevant information to guide action, without delaying protection when danger is immediate',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Complete certainty is rarely possible, and exhaustive information gathering can become dangerous delay.
-<<<<<<< HEAD
 B. Incorrect. The clinician retains responsibility to assess material changes and risk when the facts warrant it.
 C. Incorrect. Assessment supplies information; professional judgment applies that information to the controlling duties and choices.
 D. Correct. This captures both functions: informed decision-making and urgency-based protection.
 CTA Exam Strategy: The exam favors sufficient assessment, except when acuity requires protection first.',
-=======
-		B. Incorrect. The clinician retains responsibility to assess material changes and risk when the facts warrant it.
-		C. Incorrect. Assessment supplies information; professional judgment applies that information to the controlling duties and choices.
-		D. Correct. This captures both functions: informed decision-making and urgency-based protection.
-		CTA Exam Strategy: The exam favors sufficient assessment, except when acuity requires protection first.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Assessment and Urgency; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist is planning ongoing assessment, communication, documentation, and consultation to reduce foreseeable client harm throughout treatment. How can clear professional communication help prevent client harm?',
@@ -438,18 +273,10 @@ CTA Exam Strategy: The exam favors sufficient assessment, except when acuity req
 		'option_d'       => 'It eliminates the need for documentation',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Clear communication supports informed participation but does not guarantee agreement.
-<<<<<<< HEAD
 B. Correct. Role and expectation clarity can reduce confusion, uninformed decisions, boundary problems, missed follow-up, and crisis-response failures.
 C. Incorrect. Communication includes checking understanding, especially when the issue is material or complex.
 D. Incorrect. Significant communications and decisions may still need appropriate documentation.
 CTA Exam Strategy: Link communication to understanding and safer participation—not compliance or paperwork avoidance.',
-=======
-		B. Correct. Role and expectation clarity can reduce confusion, uninformed decisions, boundary problems, missed follow-up, and crisis-response failures.
-		C. Incorrect. Communication includes checking understanding, especially when the issue is material or complex.
-		D. Incorrect. Significant communications and decisions may still need appropriate documentation.
-		CTA Exam Strategy: Link communication to understanding and safer participation—not compliance or paperwork avoidance.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Communication and Prevention; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a client’s condition changes, a clinician must decide which preventive step should occur before continuing the existing plan. Which statement BEST describes preventive clinical documentation?',
@@ -459,18 +286,10 @@ CTA Exam Strategy: Link communication to understanding and safer participation�
 		'option_d'       => 'It is unnecessary when the clinician remembers what occurred',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. No record can guarantee immunity, and clinician self-protection is not the central clinical purpose.
-<<<<<<< HEAD
 B. Correct. Accurate documentation supports continuity, risk response, communication, accountability, and later reassessment.
 C. Incorrect. Material uncertainty and the steps taken to address it may be clinically important and should not be concealed.
 D. Incorrect. Memory is not a reliable substitute for records needed by the clinician, client, supervisors, or other authorized providers.
 CTA Exam Strategy: Choose documentation that supports care and continuity, not defensive image management.Moderate QuestionsApplied scenarios involving patterns, treatment changes, boundaries, risk, consultation, and records.',
-=======
-		B. Correct. Accurate documentation supports continuity, risk response, communication, accountability, and later reassessment.
-		C. Incorrect. Material uncertainty and the steps taken to address it may be clinically important and should not be concealed.
-		D. Incorrect. Memory is not a reliable substitute for records needed by the clinician, client, supervisors, or other authorized providers.
-		CTA Exam Strategy: Choose documentation that supports care and continuity, not defensive image management.Moderate QuestionsApplied scenarios involving patterns, treatment changes, boundaries, risk, consultation, and records.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Documentation as Prevention; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Over one month, a registered AMFT misses two safety-plan follow-ups, submits several late notes, and receives a client complaint about inconsistent instructions. What should the supervisor do FIRST?',
@@ -480,18 +299,10 @@ CTA Exam Strategy: Choose documentation that supports care and continuity, not d
 		'option_d'       => 'Clarify the facts, assess affected clients and urgency, address immediate gaps, and evaluate the pattern and contributing conditions',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Possible explanations should be assessed, but they do not justify ignoring a recurring clinically significant pattern.
-<<<<<<< HEAD
 B. Incorrect. A drastic licensure conclusion is unsupported and does not first address current client needs.
 C. Incorrect. Foreseeable risk and repeated safety-related failures warrant preventive action before injury.
 D. Correct. This protects clients, evaluates context and pattern, and supports proportionate supervisory and system correction.
 CTA Exam Strategy: For a recurring pattern, address current client impact while investigating context and cause.',
-=======
-		B. Incorrect. A drastic licensure conclusion is unsupported and does not first address current client needs.
-		C. Incorrect. Foreseeable risk and repeated safety-related failures warrant preventive action before injury.
-		D. Correct. This protects clients, evaluates context and pattern, and supports proportionate supervisory and system correction.
-		CTA Exam Strategy: For a recurring pattern, address current client impact while investigating context and cause.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Pattern of Warning Signs; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT substantially changes the treatment approach without explaining the change. The client becomes confused and disengages. What is the BEST response?',
@@ -501,18 +312,10 @@ CTA Exam Strategy: For a recurring pattern, address current client impact while 
 		'option_d'       => 'Terminate immediately to avoid further disagreement',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This directly addresses the communication failure, supports informed participation, and uses the client’s response to reassess treatment fit.
-<<<<<<< HEAD
 B. Incorrect. Professional judgment does not eliminate the client’s right to meaningful information and participation in material treatment decisions.
 C. Incorrect. Blame avoids the preventable source of confusion and may further damage the therapeutic relationship.
 D. Incorrect. Immediate termination is disproportionate when clarification and treatment review may safely repair the problem.
 CTA Exam Strategy: When a material change creates confusion, repair communication and reassess before choosing a disruptive response.',
-=======
-		B. Incorrect. Professional judgment does not eliminate the client’s right to meaningful information and participation in material treatment decisions.
-		C. Incorrect. Blame avoids the preventable source of confusion and may further damage the therapeutic relationship.
-		D. Incorrect. Immediate termination is disproportionate when clarification and treatment review may safely repair the problem.
-		CTA Exam Strategy: When a material change creates confusion, repair communication and reassess before choosing a disruptive response.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Material Treatment Change; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT has begun answering a client’s nonurgent messages late every night. The client now says they cannot cope unless the LMFT replies immediately. What should the LMFT do NEXT?',
@@ -522,18 +325,10 @@ CTA Exam Strategy: When a material change creates confusion, repair communicatio
 		'option_d'       => 'Ask the client to sign a waiver approving unlimited messaging',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Helpful intent does not resolve role confusion, dependency, availability, or clinical-impact concerns.
-<<<<<<< HEAD
 B. Incorrect. Abruptly cutting contact may create additional risk and fails to address the developed treatment pattern.
 C. Correct. This directly evaluates the boundary’s impact and uses communication, consultation, and monitoring to reduce harm.
 D. Incorrect. A waiver does not make an unsustainable or clinically harmful pattern appropriate.
 CTA Exam Strategy: Boundary questions turn on function and client impact, not generosity or rigid punishment.',
-=======
-		B. Incorrect. Abruptly cutting contact may create additional risk and fails to address the developed treatment pattern.
-		C. Correct. This directly evaluates the boundary’s impact and uses communication, consultation, and monitoring to reduce harm.
-		D. Incorrect. A waiver does not make an unsustainable or clinically harmful pattern appropriate.
-		CTA Exam Strategy: Boundary questions turn on function and client impact, not generosity or rigid punishment.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Boundary Pattern and Dependency; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client reports worsening hopelessness, severe insomnia, social withdrawal, and giving away possessions. The therapist assumes the client is merely stressed. What should the therapist do FIRST?',
@@ -543,18 +338,10 @@ CTA Exam Strategy: Boundary questions turn on function and client impact, not ge
 		'option_d'       => 'Continue the existing treatment plan until the next scheduled review',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The warning signs already create a professional reason to assess; responsibility should not be shifted to the client.
-<<<<<<< HEAD
 B. Correct. The cluster of material changes warrants direct assessment and a risk-responsive plan.
 C. Incorrect. Avoiding relevant assessment leaves important safety information unknown and does not prevent suicide risk.
 D. Incorrect. Routine scheduling should not override new clinically significant warning signs.
 CTA Exam Strategy: When multiple warning signs converge, choose direct assessment rather than assumption or avoidance.',
-=======
-		B. Correct. The cluster of material changes warrants direct assessment and a risk-responsive plan.
-		C. Incorrect. Avoiding relevant assessment leaves important safety information unknown and does not prevent suicide risk.
-		D. Incorrect. Routine scheduling should not override new clinically significant warning signs.
-		CTA Exam Strategy: When multiple warning signs converge, choose direct assessment rather than assumption or avoidance.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Incomplete Risk Assessment; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client’s functioning has steadily declined for eight weeks, but the therapist continues the same treatment because it helped similar clients. No immediate emergency is present. What is the BEST next step?',
@@ -564,18 +351,10 @@ CTA Exam Strategy: When multiple warning signs converge, choose direct assessmen
 		'option_d'       => 'Reassess the formulation, goals, treatment response, risk, competence needs, and level of care; consult and modify or arrange alternative care as indicated',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. General evidence informs care but does not justify ignoring sustained client-specific deterioration.
-<<<<<<< HEAD
 B. Incorrect. Blaming the client substitutes an assumption for clinical assessment and may obscure treatment mismatch or risk.
 C. Incorrect. Abrupt termination may create additional harm when a reasoned modification or orderly transition is available.
 D. Correct. This uses outcome information to conduct a comprehensive but proportionate review and preserve continuity.
 CTA Exam Strategy: Sustained deterioration calls for reassessment and a reasoned change, not persistence, blame, or abandonment.',
-=======
-		B. Incorrect. Blaming the client substitutes an assumption for clinical assessment and may obscure treatment mismatch or risk.
-		C. Incorrect. Abrupt termination may create additional harm when a reasoned modification or orderly transition is available.
-		D. Correct. This uses outcome information to conduct a comprehensive but proportionate review and preserve continuity.
-		CTA Exam Strategy: Sustained deterioration calls for reassessment and a reasoned change, not persistence, blame, or abandonment.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Ineffective Treatment; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A consultant recommends a course of action, but the treating LMFT believes it conflicts with current client facts and a legal duty. What should the LMFT do?',
@@ -585,18 +364,10 @@ CTA Exam Strategy: Sustained deterioration calls for reassessment and a reasoned
 		'option_d'       => 'Ask the client to choose which professional is legally correct',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Consultation informs judgment, but the treating clinician must apply the law and facts and remains responsible for the care decision.
-<<<<<<< HEAD
 B. Incorrect. A consultant does not assume the treating clinician’s professional or legal responsibilities merely by giving advice.
 C. Incorrect. Disagreement may require clarification or another qualified opinion, not wholesale rejection of consultation.
 D. Incorrect. The client may participate in treatment choices but should not bear responsibility for resolving professionals’ legal analysis.
 CTA Exam Strategy: Consultation supplies perspective—not permission, immunity, or automatic control.',
-=======
-		B. Incorrect. A consultant does not assume the treating clinician’s professional or legal responsibilities merely by giving advice.
-		C. Incorrect. Disagreement may require clarification or another qualified opinion, not wholesale rejection of consultation.
-		D. Incorrect. The client may participate in treatment choices but should not bear responsibility for resolving professionals’ legal analysis.
-		CTA Exam Strategy: Consultation supplies perspective—not permission, immunity, or automatic control.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Consultation and Responsibility; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT discovers that yesterday’s progress note contains a clinically significant factual error. What is the BEST response?',
@@ -606,18 +377,10 @@ CTA Exam Strategy: Consultation supplies perspective—not permission, immunity,
 		'option_d'       => 'Create a new note blaming the client for the inaccurate information',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Secret deletion can undermine record integrity and conceal information needed to understand what occurred.
-<<<<<<< HEAD
 B. Incorrect. Accurate corrections or amendments may be appropriate when made transparently under governing procedures.
 C. Correct. This supports accuracy, continuity, accountability, and mitigation of any clinical effect.
 D. Incorrect. Unsupported blame does not correct the record responsibly and may introduce another inaccurate statement.
 CTA Exam Strategy: Correct records transparently; do not erase history, conceal errors, or add unsupported blame.Difficult QuestionsLayered scenarios requiring urgency, power, system, continuity, and integrated prevention analysis.',
-=======
-		B. Incorrect. Accurate corrections or amendments may be appropriate when made transparently under governing procedures.
-		C. Correct. This supports accuracy, continuity, accountability, and mitigation of any clinical effect.
-		D. Incorrect. Unsupported blame does not correct the record responsibly and may introduce another inaccurate statement.
-		CTA Exam Strategy: Correct records transparently; do not erase history, conceal errors, or add unsupported blame.Difficult QuestionsLayered scenarios requiring urgency, power, system, continuity, and integrated prevention analysis.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Correcting a Record; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client reports feeling pressured by a treatment recommendation, while the therapist recalls presenting it as optional. No urgent danger is present. What is the BEST first response?',
@@ -627,18 +390,10 @@ CTA Exam Strategy: Correct records transparently; do not erase history, conceal 
 		'option_d'       => 'Ask the client to sign a statement withdrawing the complaint',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The client’s experience is relevant data even when the therapist remembers the interaction differently.
-<<<<<<< HEAD
 B. Correct. Because no urgent danger is established, focused clarification and repair directly address possible coercion and misunderstanding.
 C. Incorrect. Immediate termination is disproportionate before assessing whether communication and treatment planning can be repaired.
 D. Incorrect. Pressuring the client to retract the concern compounds the voluntariness problem and does not protect welfare.
 CTA Exam Strategy: For a nonurgent relational concern, gather both perspectives and repair the direct source of risk before escalating.',
-=======
-		B. Correct. Because no urgent danger is established, focused clarification and repair directly address possible coercion and misunderstanding.
-		C. Incorrect. Immediate termination is disproportionate before assessing whether communication and treatment planning can be repaired.
-		D. Incorrect. Pressuring the client to retract the concern compounds the voluntariness problem and does not protect welfare.
-		CTA Exam Strategy: For a nonurgent relational concern, gather both perspectives and repair the direct source of risk before escalating.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Lower-Acuity Conflicting Information; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT receives a message indicating that a client may act violently within the hour. The intended target and exact location are not yet confirmed. What should occur FIRST?',
@@ -648,18 +403,10 @@ CTA Exam Strategy: For a nonurgent relational concern, gather both perspectives 
 		'option_d'       => 'Promptly involve the supervisor, initiate focused assessment and applicable protective procedures, and continue gathering critical facts without delaying safety action',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Imminent potential harm may require protective action before certainty is possible.
-<<<<<<< HEAD
 B. Incorrect. Deleting the message destroys relevant information and abandons the safety concern.
 C. Incorrect. Documentation matters but should not precede necessary immediate protection and supervision.
 D. Correct. This correctly combines registered-AMFT supervision, urgency, focused assessment, and applicable protective duties.
 CTA Exam Strategy: When time-sensitive danger is credible, act on available facts while refining the assessment.',
-=======
-		B. Incorrect. Deleting the message destroys relevant information and abandons the safety concern.
-		C. Incorrect. Documentation matters but should not precede necessary immediate protection and supervision.
-		D. Correct. This correctly combines registered-AMFT supervision, urgency, focused assessment, and applicable protective duties.
-		CTA Exam Strategy: When time-sensitive danger is credible, act on available facts while refining the assessment.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Imminent Danger With Incomplete Facts; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT repeatedly provides one client with unpaid extra sessions, shares personal problems, and asks the client for emotional reassurance. The client reports guilt and fear that services will end if support is withheld. What is the BEST response?',
@@ -669,18 +416,10 @@ CTA Exam Strategy: When time-sensitive danger is credible, act on available fact
 		'option_d'       => 'Ignore the pattern unless the client files a Board complaint',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The pattern serves the clinician’s needs, exploits power and dependency, and requires prompt protection, correction, consultation, and continuity planning.
-<<<<<<< HEAD
 B. Incorrect. Unpaid time does not neutralize role reversal, guilt, coercive pressure, or client harm.
 C. Incorrect. Consent cannot make an exploitative clinician-centered role appropriate, particularly when voluntariness is compromised.
 D. Incorrect. The therapist must respond to known client impact and foreseeable risk without waiting for a formal complaint.
 CTA Exam Strategy: Evaluate the function and power of the boundary pattern, not whether the clinician describes it as kindness.',
-=======
-		B. Incorrect. Unpaid time does not neutralize role reversal, guilt, coercive pressure, or client harm.
-		C. Incorrect. Consent cannot make an exploitative clinician-centered role appropriate, particularly when voluntariness is compromised.
-		D. Incorrect. The therapist must respond to known client impact and foreseeable risk without waiting for a formal complaint.
-		CTA Exam Strategy: Evaluate the function and power of the boundary pattern, not whether the clinician describes it as kindness.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Boundary Exception and Client Impact; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinic’s new scheduling system repeatedly drops urgent follow-up tasks. Two clients have already missed safety contacts, and management says staff should wait for the next software update. What is the BEST professional response?',
@@ -690,18 +429,10 @@ CTA Exam Strategy: Evaluate the function and power of the boundary pattern, not 
 		'option_d'       => 'Quietly create personal records outside approved systems without addressing privacy or organizational controls',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Vendor involvement does not remove the clinic’s and clinicians’ responsibilities to protect clients from a known care failure.
-<<<<<<< HEAD
 B. Incorrect. Clients should not carry responsibility for detecting the provider’s missed professional tasks.
 C. Correct. This addresses current clients, continuity, containment, organizational escalation, and verification of the remedy.
 D. Incorrect. An unauthorized workaround may create new privacy and record-integrity risks and leaves the system failure unresolved.
 CTA Exam Strategy: For system-caused harm, protect affected clients now and correct the system rather than shifting responsibility.',
-=======
-		B. Incorrect. Clients should not carry responsibility for detecting the provider’s missed professional tasks.
-		C. Correct. This addresses current clients, continuity, containment, organizational escalation, and verification of the remedy.
-		D. Incorrect. An unauthorized workaround may create new privacy and record-integrity risks and leaves the system failure unresolved.
-		CTA Exam Strategy: For system-caused harm, protect affected clients now and correct the system rather than shifting responsibility.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Organizational Risk and Continuity; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT’s high-risk client is deteriorating, sends frequent late-night nonurgent messages, and says immediate replies are necessary to cope. The registered AMFT has missed a safety follow-up, feels unusually protective, and has not consulted the supervisor. No imminent danger is established today. What is the BEST next step?',
@@ -711,18 +442,10 @@ CTA Exam Strategy: For system-caused harm, protect affected clients now and corr
 		'option_d'       => 'Ask the client to waive risks from missed follow-up and unlimited messaging',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The absence of imminent danger does not neutralize deterioration, dependency, missed safety work, boundary drift, and unaddressed clinician reactions.
-<<<<<<< HEAD
 B. Correct. This integrates assessment, supervision, boundary repair, treatment review, continuity, documentation, and follow-up in a proportionate sequence.
 C. Incorrect. Abrupt termination can create further harm and bypasses available supervision, repair, treatment modification, and orderly transition options.
 D. Incorrect. A waiver cannot excuse missed safety duties, create healthy boundaries, or transfer professional responsibility to the client.
 CTA Exam Strategy: Integrated prevention items reward a coordinated response to client risk, clinician factors, boundaries, supervision, and continuity.',
-=======
-		B. Correct. This integrates assessment, supervision, boundary repair, treatment review, continuity, documentation, and follow-up in a proportionate sequence.
-		C. Incorrect. Abrupt termination can create further harm and bypasses available supervision, repair, treatment modification, and orderly transition options.
-		D. Incorrect. A waiver cannot excuse missed safety duties, create healthy boundaries, or transfer professional responsibility to the client.
-		CTA Exam Strategy: Integrated prevention items reward a coordinated response to client risk, clinician factors, boundaries, supervision, and continuity.
-		Remediation: Return to Workbook 5, Chapter 2: Avoiding and Preventing Client Harm; review Integrated Prevention and Sequencing; log error category HARM-PREVENTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist must choose among clinically reasonable options while balancing likely benefit, possible harm, and the client’s informed preferences. Which statement BEST describes beneficence in psychotherapy?',
@@ -732,18 +455,10 @@ CTA Exam Strategy: Integrated prevention items reward a coordinated response to 
 		'option_d'       => 'It applies only when an emergency is present',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Beneficence requires sound professional effort, not a guaranteed clinical outcome.
-<<<<<<< HEAD
 B. Incorrect. Client preferences matter, but the clinician need not provide an unlawful, unsafe, ineffective, or incompetent service.
 C. Correct. Beneficence is the ethical commitment to pursue client welfare through competent and thoughtful professional action.
 D. Incorrect. Promotion of welfare applies throughout services, not only during crises.
 CTA Exam Strategy: Choose reasonable, competent promotion of welfare—not guarantees, automatic compliance, or crisis-only duties.',
-=======
-		B. Incorrect. Client preferences matter, but the clinician need not provide an unlawful, unsafe, ineffective, or incompetent service.
-		C. Correct. Beneficence is the ethical commitment to pursue client welfare through competent and thoughtful professional action.
-		D. Incorrect. Promotion of welfare applies throughout services, not only during crises.
-		CTA Exam Strategy: Choose reasonable, competent promotion of welfare—not guarantees, automatic compliance, or crisis-only duties.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Meaning of Beneficence; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During case consultation, clinicians disagree about how beneficence should influence treatment when improvement cannot be guaranteed. What is the clearest distinction between beneficence and nonmaleficence?',
@@ -753,18 +468,10 @@ CTA Exam Strategy: Choose reasonable, competent promotion of welfare—not guara
 		'option_d'       => 'The principles can never apply to the same decision',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. The principles have different emphases but usually work together in clinical decision-making.
-<<<<<<< HEAD
 B. Incorrect. Neither principle can be reduced to this legal-versus-optional distinction; applicable law and ethics must both be identified.
 C. Incorrect. Both principles apply broadly to professional conduct, not to these isolated administrative categories.
 D. Incorrect. Most treatment choices involve both expected benefit and foreseeable risk.
 CTA Exam Strategy: Remember: promote welfare and reduce harm usually operate together, not as competing silos.',
-=======
-		B. Incorrect. Neither principle can be reduced to this legal-versus-optional distinction; applicable law and ethics must both be identified.
-		C. Incorrect. Both principles apply broadly to professional conduct, not to these isolated administrative categories.
-		D. Incorrect. Most treatment choices involve both expected benefit and foreseeable risk.
-		CTA Exam Strategy: Remember: promote welfare and reduce harm usually operate together, not as competing silos.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Beneficence and Nonmaleficence; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client does not improve despite a competent and appropriately monitored course of treatment. Which conclusion is MOST accurate?',
@@ -774,18 +481,10 @@ CTA Exam Strategy: Remember: promote welfare and reduce harm usually operate tog
 		'option_d'       => 'A poor outcome alone does not prove a violation, but it should prompt appropriate reassessment and response',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Outcome alone does not establish the quality of assessment, competence, reasoning, monitoring, or response.
-<<<<<<< HEAD
 B. Incorrect. Beneficence remains relevant because the clinician must evaluate whether continued care, modification, or transition promotes welfare.
 C. Incorrect. Falsifying or distorting the record creates additional ethical and legal risk.
 D. Correct. This avoids hindsight-based liability while preserving the duty to respond to evidence that treatment is not helping.
 CTA Exam Strategy: The exam tests a competent process and responsive reassessment, not guaranteed success.',
-=======
-		B. Incorrect. Beneficence remains relevant because the clinician must evaluate whether continued care, modification, or transition promotes welfare.
-		C. Incorrect. Falsifying or distorting the record creates additional ethical and legal risk.
-		D. Correct. This avoids hindsight-based liability while preserving the duty to respond to evidence that treatment is not helping.
-		CTA Exam Strategy: The exam tests a competent process and responsive reassessment, not guaranteed success.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review No Outcome Guarantee; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist must choose among clinically reasonable options while balancing likely benefit, possible harm, and the client’s informed preferences. How should beneficence generally relate to an informed client’s autonomy?',
@@ -795,18 +494,10 @@ CTA Exam Strategy: The exam tests a competent process and responsive reassessmen
 		'option_d'       => 'The client must receive any requested service',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Expertise supports recommendation but does not automatically erase informed client choice.
-<<<<<<< HEAD
 B. Correct. This integrates professional judgment, understandable information, and meaningful participation.
 C. Incorrect. Respect for autonomy does not require professional passivity or withholding clinically relevant guidance.
 D. Incorrect. Autonomy does not require provision of services that are inappropriate, unlawful, or beyond competence.
 CTA Exam Strategy: Look for collaborative professional judgment—not control, passivity, or automatic compliance.',
-=======
-		B. Correct. This integrates professional judgment, understandable information, and meaningful participation.
-		C. Incorrect. Respect for autonomy does not require professional passivity or withholding clinically relevant guidance.
-		D. Incorrect. Autonomy does not require provision of services that are inappropriate, unlawful, or beyond competence.
-		CTA Exam Strategy: Look for collaborative professional judgment—not control, passivity, or automatic compliance.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Beneficence and Autonomy; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During case consultation, clinicians disagree about how beneficence should influence treatment when improvement cannot be guaranteed. Which approach BEST reflects a beneficence-based treatment decision?',
@@ -816,18 +507,10 @@ CTA Exam Strategy: Look for collaborative professional judgment—not control, p
 		'option_d'       => 'Choose the option requiring the least effort from the clinician',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Intensity is not a substitute for client-specific necessity, fit, or proportionality.
-<<<<<<< HEAD
 B. Incorrect. Beneficence must be integrated with nonmaleficence and realistic appraisal of burdens.
 C. Correct. This is a complete, client-centered benefit-risk and monitoring analysis.
 D. Incorrect. Clinician convenience should not determine which option best serves client welfare.
 CTA Exam Strategy: The strongest answer compares benefit, harm, alternatives, fit, feasibility, and follow-up.Moderate QuestionsApplied scenarios involving preference, effectiveness, incentives, competence, access, dependency, and vulnerability.',
-=======
-		B. Incorrect. Beneficence must be integrated with nonmaleficence and realistic appraisal of burdens.
-		C. Correct. This is a complete, client-centered benefit-risk and monitoring analysis.
-		D. Incorrect. Clinician convenience should not determine which option best serves client welfare.
-		CTA Exam Strategy: The strongest answer compares benefit, harm, alternatives, fit, feasibility, and follow-up.Moderate QuestionsApplied scenarios involving preference, effectiveness, incentives, competence, access, dependency, and vulnerability.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Benefit-Risk Analysis; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An informed client declines the therapist’s preferred intervention and selects another evidence-informed option that is reasonable for the client’s goals. What is the BEST response?',
@@ -837,18 +520,10 @@ CTA Exam Strategy: The strongest answer compares benefit, harm, alternatives, fi
 		'option_d'       => 'Provide no recommendation because autonomy prohibits professional guidance',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Pressure undermines voluntariness and converts a recommendation into paternalistic control.
-<<<<<<< HEAD
 B. Correct. The option remains clinically reasonable, so respect for autonomy can coexist with monitoring and continuing professional judgment.
 C. Incorrect. Disagreement alone does not justify a disruptive termination when a reasonable plan is available.
 D. Incorrect. The clinician may continue to explain benefits, risks, and professional concerns without controlling the choice.
 CTA Exam Strategy: When multiple reasonable options exist, favor informed participation with monitoring over coercion or withdrawal.',
-=======
-		B. Correct. The option remains clinically reasonable, so respect for autonomy can coexist with monitoring and continuing professional judgment.
-		C. Incorrect. Disagreement alone does not justify a disruptive termination when a reasonable plan is available.
-		D. Incorrect. The clinician may continue to explain benefits, risks, and professional concerns without controlling the choice.
-		CTA Exam Strategy: When multiple reasonable options exist, favor informed participation with monitoring over coercion or withdrawal.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Informed Preference; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After ten weeks, a client’s functioning is deteriorating and the current approach has produced no meaningful benefit. No immediate emergency is present. What should the therapist do NEXT?',
@@ -858,18 +533,10 @@ CTA Exam Strategy: When multiple reasonable options exist, favor informed partic
 		'option_d'       => 'Reassess goals, formulation, risk, fit, barriers, and level of care; consult and modify or coordinate alternative care as indicated',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Initial reasonableness does not eliminate the need to monitor and respond to later evidence.
-<<<<<<< HEAD
 B. Incorrect. Blame substitutes judgment for reassessment and may obscure mismatch, barriers, or rising risk.
 C. Incorrect. Abrupt termination may create further harm when modification or an orderly transition is possible.
 D. Correct. This directly tests whether the service remains beneficial and preserves continuity while considering a reasoned change.
 CTA Exam Strategy: Sustained deterioration calls for reassessment and proportionate change—not persistence, blame, or abandonment.',
-=======
-		B. Incorrect. Blame substitutes judgment for reassessment and may obscure mismatch, barriers, or rising risk.
-		C. Incorrect. Abrupt termination may create further harm when modification or an orderly transition is possible.
-		D. Correct. This directly tests whether the service remains beneficial and preserves continuity while considering a reasoned change.
-		CTA Exam Strategy: Sustained deterioration calls for reassessment and proportionate change—not persistence, blame, or abandonment.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Continuing Benefit; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinic offers bonuses to therapists who avoid referrals to higher-cost services. An LMFT believes a client may need a specialized evaluation the clinic does not provide. What is the BEST response?',
@@ -879,18 +546,10 @@ CTA Exam Strategy: Sustained deterioration calls for reassessment and proportion
 		'option_d'       => 'Tell the client the evaluation is legally mandatory without verifying that claim',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Clinical need and client welfare should guide the decision; the financial incentive must not replace professional judgment.
-<<<<<<< HEAD
 B. Incorrect. An organizational incentive does not justify withholding an indicated option or qualified expertise.
 C. Incorrect. Automatic referral ignores individualized assessment and may impose unnecessary cost or disruption.
 D. Incorrect. Misstating a recommendation as a legal mandate undermines informed decision-making.
 CTA Exam Strategy: When money or policy conflicts with care, protect client-centered judgment without overreacting or misrepresenting the law.',
-=======
-		B. Incorrect. An organizational incentive does not justify withholding an indicated option or qualified expertise.
-		C. Incorrect. Automatic referral ignores individualized assessment and may impose unnecessary cost or disruption.
-		D. Incorrect. Misstating a recommendation as a legal mandate undermines informed decision-making.
-		CTA Exam Strategy: When money or policy conflicts with care, protect client-centered judgment without overreacting or misrepresenting the law.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Financial Incentive and Care; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT identifies a specialized intervention that could help a client but lacks the education and supervised skill to provide it. What should the LMFT do?',
@@ -900,18 +559,10 @@ CTA Exam Strategy: When money or policy conflicts with care, protect client-cent
 		'option_d'       => 'End all treatment that day without assessing the client’s ongoing needs',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Possible benefit cannot justify unqualified practice or using the client as an unprotected training opportunity.
-<<<<<<< HEAD
 B. Incorrect. Concealing relevant options may undermine informed participation and access to appropriate care.
 C. Correct. This combines welfare, competence, transparency, alternatives, and continuity.
 D. Incorrect. Immediate termination may create avoidable disruption when competent interim or adjunctive options exist.
 CTA Exam Strategy: Beneficence must travel with competence and continuity; potential usefulness alone is not authorization.',
-=======
-		B. Incorrect. Concealing relevant options may undermine informed participation and access to appropriate care.
-		C. Correct. This combines welfare, competence, transparency, alternatives, and continuity.
-		D. Incorrect. Immediate termination may create avoidable disruption when competent interim or adjunctive options exist.
-		CTA Exam Strategy: Beneficence must travel with competence and continuity; potential usefulness alone is not authorization.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Competence and Access; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client becomes distressed whenever the therapist does not answer nonurgent messages immediately. The therapist considers unlimited availability to keep the client calm. What is the BEST analysis?',
@@ -921,18 +572,10 @@ CTA Exam Strategy: Beneficence must travel with competence and continuity; poten
 		'option_d'       => 'Ask the client to waive any harm caused by unlimited access',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Immediate relief may reinforce dependency, role confusion, and an unsustainable care pattern.
-<<<<<<< HEAD
 B. Correct. This addresses present distress while protecting autonomy, functioning, boundaries, and long-term welfare.
 C. Incorrect. Abrupt withdrawal may create additional risk and fails to address the developed pattern.
 D. Incorrect. A waiver does not transform an unsustainable or clinically harmful arrangement into beneficial care.
 CTA Exam Strategy: Do not confuse short-term comfort with durable benefit; analyze dependency, sustainability, and client functioning.',
-=======
-		B. Correct. This addresses present distress while protecting autonomy, functioning, boundaries, and long-term welfare.
-		C. Incorrect. Abrupt withdrawal may create additional risk and fails to address the developed pattern.
-		D. Incorrect. A waiver does not transform an unsustainable or clinically harmful arrangement into beneficial care.
-		CTA Exam Strategy: Do not confuse short-term comfort with durable benefit; analyze dependency, sustainability, and client functioning.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Short-Term Comfort and Dependency; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT learns that transportation barriers are causing a client to miss an indicated service. Which response BEST promotes welfare?',
@@ -942,18 +585,10 @@ CTA Exam Strategy: Do not confuse short-term comfort with durable benefit; analy
 		'option_d'       => 'Explore the barrier with the client, identify realistic resources or service alternatives, coordinate within authorization and role, and follow up',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A foreseeable access barrier may determine whether an otherwise appropriate plan can actually benefit the client.
-<<<<<<< HEAD
 B. Incorrect. Beneficence does not authorize promises beyond the clinician’s control.
 C. Incorrect. Advocacy remains constrained by confidentiality, authorization, necessity, and professional role.
 D. Correct. This supports feasible access without overpromising or disregarding privacy.
 CTA Exam Strategy: Effective advocacy addresses real barriers within role, authority, confidentiality, and available resources.',
-=======
-		B. Incorrect. Beneficence does not authorize promises beyond the clinician’s control.
-		C. Incorrect. Advocacy remains constrained by confidentiality, authorization, necessity, and professional role.
-		D. Correct. This supports feasible access without overpromising or disregarding privacy.
-		CTA Exam Strategy: Effective advocacy addresses real barriers within role, authority, confidentiality, and available resources.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Advocacy Within Role; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An adult client with a cognitive disability needs extra time and simplified explanations but demonstrates understanding of two reasonable treatment options. What is the BEST response?',
@@ -963,18 +598,10 @@ CTA Exam Strategy: Effective advocacy addresses real barriers within role, autho
 		'option_d'       => 'Withhold all information to prevent possible anxiety',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This adds the support needed for meaningful participation without unnecessarily removing autonomy.
-<<<<<<< HEAD
 B. Incorrect. A diagnosis alone does not establish global or decision-specific incapacity.
 C. Incorrect. Family involvement and decision-making authority require separate factual and legal analysis.
 D. Incorrect. Withholding material information undermines informed participation rather than promoting welfare.
 CTA Exam Strategy: Vulnerability calls for tailored support and safeguards, not automatic loss of rights.Difficult QuestionsLayered scenarios requiring proportionality, organizational conflict, value awareness, access, and integrated welfare analysis.',
-=======
-		B. Incorrect. A diagnosis alone does not establish global or decision-specific incapacity.
-		C. Incorrect. Family involvement and decision-making authority require separate factual and legal analysis.
-		D. Incorrect. Withholding material information undermines informed participation rather than promoting welfare.
-		CTA Exam Strategy: Vulnerability calls for tailored support and safeguards, not automatic loss of rights.Difficult QuestionsLayered scenarios requiring proportionality, organizational conflict, value awareness, access, and integrated welfare analysis.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Vulnerability Without Paternalism; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Two lawful treatments are within an LMFT’s competence. Option 1 may work somewhat faster but requires travel the client cannot reliably manage. Option 2 is accessible, evidence-informed, and strongly preferred by the client. No urgent danger is present. What is the BEST response?',
@@ -984,18 +611,10 @@ CTA Exam Strategy: Vulnerability calls for tailored support and safeguards, not 
 		'option_d'       => 'Terminate because the client’s access limitations complicate treatment',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. A theoretical speed advantage does not erase feasibility, burden, preference, or the risk of nonaccess.
-<<<<<<< HEAD
 B. Incorrect. Administrative convenience is not the primary client-welfare criterion.
 C. Correct. This weighs clinical evidence, real-world feasibility, autonomy, and outcome monitoring without equating beneficence with control.
 D. Incorrect. Access barriers should be addressed rather than used as an unsupported reason to remove the client from care.
 CTA Exam Strategy: Benefit is practical and client-specific; an inaccessible ‘best’ option may not be the most beneficial available plan.',
-=======
-		B. Incorrect. Administrative convenience is not the primary client-welfare criterion.
-		C. Correct. This weighs clinical evidence, real-world feasibility, autonomy, and outcome monitoring without equating beneficence with control.
-		D. Incorrect. Access barriers should be addressed rather than used as an unsupported reason to remove the client from care.
-		CTA Exam Strategy: Benefit is practical and client-specific; an inaccessible ‘best’ option may not be the most beneficial available plan.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Competing Benefits and Burdens; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A program directs clinicians to close every case after six visits. An LMFT concludes that one client still needs care and that abrupt closure would create foreseeable deterioration. What should the LMFT do FIRST?',
@@ -1005,18 +624,10 @@ CTA Exam Strategy: Benefit is practical and client-specific; an inaccessible ‘
 		'option_d'       => 'Alter the diagnosis to force approval',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Organizational policy does not erase the clinician’s responsibility to identify and address foreseeable client impact.
-<<<<<<< HEAD
 B. Correct. This responds to client need, system constraints, accurate advocacy, and continuity without making unauthorized promises.
 C. Incorrect. Beneficence does not authorize commitments the clinician or program cannot provide.
 D. Incorrect. Inaccurate documentation is unethical and may create legal, clinical, and billing consequences.
 CTA Exam Strategy: When policy conflicts with welfare, use accurate client-specific assessment, escalation, alternatives, and continuity—not blind compliance or fabrication.',
-=======
-		B. Correct. This responds to client need, system constraints, accurate advocacy, and continuity without making unauthorized promises.
-		C. Incorrect. Beneficence does not authorize commitments the clinician or program cannot provide.
-		D. Incorrect. Inaccurate documentation is unethical and may create legal, clinical, and billing consequences.
-		CTA Exam Strategy: When policy conflicts with welfare, use accurate client-specific assessment, escalation, alternatives, and continuity—not blind compliance or fabrication.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Organizational Pressure and Necessary Care; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An anxious client requests immediate hospitalization to feel completely safe. Assessment shows distress but no imminent danger, grave disability, or need for inpatient stabilization, and effective outpatient options are available. What is the BEST response?',
@@ -1026,18 +637,10 @@ CTA Exam Strategy: When policy conflicts with welfare, use accurate client-speci
 		'option_d'       => 'Validate and assess the concern, explain the clinical reasoning and options, create a proportionate outpatient safety and treatment plan, and reassess if risk changes',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Greater restriction is not automatically more beneficial when the assessed need can be safely met another way.
-<<<<<<< HEAD
 B. Incorrect. The request provides clinically relevant information that should be understood and addressed.
 C. Incorrect. No treatment setting can be represented as risk-free, and false reassurance undermines informed participation.
 D. Correct. This balances welfare, autonomy, risk, proportionality, and ongoing monitoring without unnecessary restriction.
 CTA Exam Strategy: Choose the least disruptive response that adequately addresses assessed need and risk; intensity is not beneficence by itself.',
-=======
-		B. Incorrect. The request provides clinically relevant information that should be understood and addressed.
-		C. Incorrect. No treatment setting can be represented as risk-free, and false reassurance undermines informed participation.
-		D. Correct. This balances welfare, autonomy, risk, proportionality, and ongoing monitoring without unnecessary restriction.
-		CTA Exam Strategy: Choose the least disruptive response that adequately addresses assessed need and risk; intensity is not beneficence by itself.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Proportionate Level of Care; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist believes reconciliation with family is always best and repeatedly pressures a client to resume contact despite the client’s informed goals and credible history of coercive abuse. What is the BEST response?',
@@ -1047,18 +650,10 @@ CTA Exam Strategy: Choose the least disruptive response that adequately addresse
 		'option_d'       => 'Contact the family and arrange reconciliation without authorization',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This addresses value imposition, safety, professional self-awareness, autonomy, and the client-specific meaning of welfare.
-<<<<<<< HEAD
 B. Incorrect. Good intent does not cure coercion, bias, or disregard of credible risk and informed goals.
 C. Incorrect. Disagreement with the therapist does not establish impaired decision-making ability.
 D. Incorrect. Unauthorized contact may violate confidentiality and increase the danger the client identified.
 CTA Exam Strategy: ‘Best interest’ language is a warning sign when it masks clinician values, coercion, or disregard of client-specific safety.',
-=======
-		B. Incorrect. Good intent does not cure coercion, bias, or disregard of credible risk and informed goals.
-		C. Incorrect. Disagreement with the therapist does not establish impaired decision-making ability.
-		D. Incorrect. Unauthorized contact may violate confidentiality and increase the danger the client identified.
-		CTA Exam Strategy: ‘Best interest’ language is a warning sign when it masks clinician values, coercion, or disregard of client-specific safety.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Value Imposition; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client is deteriorating in an inaccessible treatment program, prefers a reasonable alternative, and needs expertise the treating registered AMFT does not possess. The supervisor has not yet been consulted, and no imminent danger is established today. What is the BEST next step?',
@@ -1068,18 +663,10 @@ CTA Exam Strategy: ‘Best interest’ language is a warning sign when it masks 
 		'option_d'       => 'Attempt the specialized service without preparation so the client receives something quickly',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Past appropriateness does not justify ignoring deterioration, barriers, preference, and current competence limits.
-<<<<<<< HEAD
 B. Incorrect. Abruptly shifting the burden to the client may worsen access and continuity problems.
 C. Correct. This integrates beneficence, nonmaleficence, autonomy, supervision, competence, access, referral, documentation, and outcome monitoring.
 D. Incorrect. Urgency to help does not justify unqualified practice when qualified coordination and alternatives can be pursued.
 CTA Exam Strategy: Integrated welfare questions reward a coordinated plan that joins benefit, safety, autonomy, competence, access, supervision, and continuity.',
-=======
-		B. Incorrect. Abruptly shifting the burden to the client may worsen access and continuity problems.
-		C. Correct. This integrates beneficence, nonmaleficence, autonomy, supervision, competence, access, referral, documentation, and outcome monitoring.
-		D. Incorrect. Urgency to help does not justify unqualified practice when qualified coordination and alternatives can be pursued.
-		CTA Exam Strategy: Integrated welfare questions reward a coordinated plan that joins benefit, safety, autonomy, competence, access, supervision, and continuity.
-		Remediation: Return to Workbook 5, Chapter 3: Beneficence and Promoting Client Welfare; review Integrated Client-Welfare Analysis; log error category BENEFICENCE-CLIENT-WELFARE.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a significant clinical decision, a therapist must determine what accountability requires in consultation, follow-through, and documentation. Which statement BEST describes professional responsibility?',
@@ -1089,18 +676,10 @@ CTA Exam Strategy: Integrated welfare questions reward a coordinated plan that j
 		'option_d'       => 'Meeting the ethical, legal, clinical, and role-based duties that apply to the service',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Clinicians must practice responsibly but cannot guarantee every clinical outcome.
-<<<<<<< HEAD
 B. Incorrect. Uncertainty calls for professional analysis, not substitution of personal preference for applicable standards.
 C. Incorrect. Consultation informs judgment but does not transfer the clinician’s duties.
 D. Correct. Professional responsibility is the obligation to fulfill the duties attached to the clinician’s role and conduct.
 CTA Exam Strategy: Responsibility concerns applicable duties—not perfection, preference, or transfer of judgment.',
-=======
-		B. Incorrect. Uncertainty calls for professional analysis, not substitution of personal preference for applicable standards.
-		C. Incorrect. Consultation informs judgment but does not transfer the clinician’s duties.
-		D. Correct. Professional responsibility is the obligation to fulfill the duties attached to the clinician’s role and conduct.
-		CTA Exam Strategy: Responsibility concerns applicable duties—not perfection, preference, or transfer of judgment.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Professional Responsibility; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor reviews whether a clinician accepted responsibility for an error and took reasonable corrective action to protect the client. What does professional accountability MOST directly require?',
@@ -1110,18 +689,10 @@ CTA Exam Strategy: Responsibility concerns applicable duties—not perfection, p
 		'option_d'       => 'Reporting every concern to the BBS',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Accountability centers on an honest, client-protective response and follow-through.
-<<<<<<< HEAD
 B. Incorrect. Accountability is fact-based and does not require unsupported or unlimited blame.
 C. Incorrect. Concealment may prevent needed correction and is not a reliable way to protect trust.
 D. Incorrect. Board reporting depends on a specific legal duty or trigger; it is not automatic for every concern.
 CTA Exam Strategy: Choose truthful, proportionate action—not self-punishment, concealment, or indiscriminate reporting.',
-=======
-		B. Incorrect. Accountability is fact-based and does not require unsupported or unlimited blame.
-		C. Incorrect. Concealment may prevent needed correction and is not a reliable way to protect trust.
-		D. Incorrect. Board reporting depends on a specific legal duty or trigger; it is not automatic for every concern.
-		CTA Exam Strategy: Choose truthful, proportionate action—not self-punishment, concealment, or indiscriminate reporting.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Meaning of Accountability; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist discovers a professional error that may still be affecting a client. What should be prioritized FIRST?',
@@ -1131,18 +702,10 @@ CTA Exam Strategy: Choose truthful, proportionate action—not self-punishment, 
 		'option_d'       => 'Waiting to see whether the client complains',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Professional image does not take priority over current client welfare.
-<<<<<<< HEAD
 B. Incorrect. Causal review may be useful later but should not delay necessary protection.
 C. Correct. The first task is to determine and reduce any continuing client impact.
 D. Incorrect. A complaint is not required before a known risk warrants assessment and action.
 CTA Exam Strategy: When harm may be continuing, protect first; analyze blame and prevention afterward.',
-=======
-		B. Incorrect. Causal review may be useful later but should not delay necessary protection.
-		C. Correct. The first task is to determine and reduce any continuing client impact.
-		D. Incorrect. A complaint is not required before a known risk warrants assessment and action.
-		CTA Exam Strategy: When harm may be continuing, protect first; analyze blame and prevention afterward.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review First Priority After Error; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After a significant clinical decision, a therapist must determine what accountability requires in consultation, follow-through, and documentation. Which record practice BEST reflects accountability?',
@@ -1152,18 +715,10 @@ CTA Exam Strategy: When harm may be continuing, protect first; analyze blame and
 		'option_d'       => 'Rewriting another clinician’s note without identification',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Backdating misrepresents when documentation occurred.
-<<<<<<< HEAD
 B. Correct. A transparent correction protects record integrity and continuity.
 C. Incorrect. Removing accurate material to protect appearance may conceal clinically relevant history.
 D. Incorrect. Unidentified alteration undermines authorship, accuracy, and the record’s reliability.
 CTA Exam Strategy: Corrections should be transparent and traceable, never designed to make the past look different.',
-=======
-		B. Correct. A transparent correction protects record integrity and continuity.
-		C. Incorrect. Removing accurate material to protect appearance may conceal clinically relevant history.
-		D. Incorrect. Unidentified alteration undermines authorship, accuracy, and the record’s reliability.
-		CTA Exam Strategy: Corrections should be transparent and traceable, never designed to make the past look different.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Record Integrity; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A supervisor reviews whether a clinician accepted responsibility for an error and took reasonable corrective action to protect the client. Which statement about consultation is MOST accurate?',
@@ -1173,18 +728,10 @@ CTA Exam Strategy: Corrections should be transparent and traceable, never design
 		'option_d'       => 'Consultation can inform judgment, but the clinician remains responsible for evaluating and applying the advice',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. A consultant’s input does not automatically transfer the treating clinician’s responsibility.
-<<<<<<< HEAD
 B. Incorrect. Advice must be assessed for expertise, facts, law, client fit, and role.
 C. Incorrect. Consultation supplements rather than replaces the controlling legal analysis.
 D. Correct. This accurately describes consultation as professional assistance rather than delegation of judgment.
 CTA Exam Strategy: Consultation adds perspective; it does not erase professional judgment or duty.Moderate QuestionsApplied scenarios involving safety, corrections, feedback, supervision, billing, colleagues, and system failures.',
-=======
-		B. Incorrect. Advice must be assessed for expertise, facts, law, client fit, and role.
-		C. Incorrect. Consultation supplements rather than replaces the controlling legal analysis.
-		D. Correct. This accurately describes consultation as professional assistance rather than delegation of judgment.
-		CTA Exam Strategy: Consultation adds perspective; it does not erase professional judgment or duty.Moderate QuestionsApplied scenarios involving safety, corrections, feedback, supervision, billing, colleagues, and system failures.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Consultation and Responsibility; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT discovers that a promised same-day safety follow-up was not completed and the client’s current condition is unknown. What is the BEST next step?',
@@ -1194,18 +741,10 @@ CTA Exam Strategy: Consultation adds perspective; it does not erase professional
 		'option_d'       => 'Document that the follow-up occurred to avoid confusion',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Responsibility for the process can be reviewed after current client risk is addressed.
-<<<<<<< HEAD
 B. Correct. This prioritizes safety and then completes the accountable corrective response.
 C. Incorrect. Delay may increase foreseeable harm when the client’s status is unknown.
 D. Incorrect. Falsifying the record compounds the error and may mislead future care.
 CTA Exam Strategy: Separate immediate client protection from later remediation; both matter, but safety comes first.',
-=======
-		B. Correct. This prioritizes safety and then completes the accountable corrective response.
-		C. Incorrect. Delay may increase foreseeable harm when the client’s status is unknown.
-		D. Incorrect. Falsifying the record compounds the error and may mislead future care.
-		CTA Exam Strategy: Separate immediate client protection from later remediation; both matter, but safety comes first.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Missed Safety Follow-Up; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT realizes that a clinically significant risk assessment from yesterday was omitted from the note. What is the BEST response?',
@@ -1215,18 +754,10 @@ CTA Exam Strategy: Separate immediate client protection from later remediation; 
 		'option_d'       => 'Follow the approved late-entry or amendment process, identify the current date and source of information, preserve the original history, and address any client impact',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Changing the date falsely implies contemporaneous documentation.
-<<<<<<< HEAD
 B. Incorrect. Unexplained replacement destroys transparency and may remove the audit history.
 C. Incorrect. Fear of liability does not justify leaving clinically important information unaddressed.
 D. Correct. This protects accuracy, continuity, and record integrity without rewriting history.
 CTA Exam Strategy: A late correction should improve accuracy while showing honestly when and how it was made.',
-=======
-		B. Incorrect. Unexplained replacement destroys transparency and may remove the audit history.
-		C. Incorrect. Fear of liability does not justify leaving clinically important information unaddressed.
-		D. Correct. This protects accuracy, continuity, and record integrity without rewriting history.
-		CTA Exam Strategy: A late correction should improve accuracy while showing honestly when and how it was made.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Late Entry and Correction; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client says the therapist’s explanation of a new fee was confusing and affected the client’s decision to continue. What is the BEST response?',
@@ -1236,18 +767,10 @@ CTA Exam Strategy: A late correction should improve accuracy while showing hones
 		'option_d'       => 'Refund every fee automatically without first clarifying facts or obligations',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This treats feedback as relevant information and restores informed decision-making proportionately.
-<<<<<<< HEAD
 B. Incorrect. Posting a policy does not resolve whether the communication was understandable or materially misleading.
 C. Incorrect. Blame prevents accurate assessment and may damage the therapeutic relationship.
 D. Incorrect. A refund might become appropriate, but automatic action before factual and policy analysis is not the strongest first response.
 CTA Exam Strategy: Credible feedback calls for clarification, impact assessment, correction, and follow-through—not defensiveness or reflexive overcorrection.',
-=======
-		B. Incorrect. Posting a policy does not resolve whether the communication was understandable or materially misleading.
-		C. Incorrect. Blame prevents accurate assessment and may damage the therapeutic relationship.
-		D. Incorrect. A refund might become appropriate, but automatic action before factual and policy analysis is not the strongest first response.
-		CTA Exam Strategy: Credible feedback calls for clarification, impact assessment, correction, and follow-through—not defensiveness or reflexive overcorrection.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Responding to Client Feedback; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT omitted important deterioration from a case presentation because the registered AMFT feared criticism. What is the MOST accountable response now?',
@@ -1257,18 +780,10 @@ CTA Exam Strategy: Credible feedback calls for clarification, impact assessment,
 		'option_d'       => 'Change the progress note to make the deterioration appear less serious',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Ongoing concealment defeats supervision and may increase client risk.
-<<<<<<< HEAD
 B. Incorrect. Peer secrecy does not provide the required oversight or client protection.
 C. Correct. Effective supervision requires honest material information and a client-centered corrective plan.
 D. Incorrect. Minimizing the record compounds the concern through inaccurate documentation.
 CTA Exam Strategy: A supervisee should restore effective oversight by disclosing material facts and addressing the client impact.',
-=======
-		B. Incorrect. Peer secrecy does not provide the required oversight or client protection.
-		C. Correct. Effective supervision requires honest material information and a client-centered corrective plan.
-		D. Incorrect. Minimizing the record compounds the concern through inaccurate documentation.
-		CTA Exam Strategy: A supervisee should restore effective oversight by disclosing material facts and addressing the client impact.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Supervisee Disclosure; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT discovers that an incorrect diagnosis was transmitted on several claims and may affect the client’s coverage and record. What is the BEST response?',
@@ -1278,18 +793,10 @@ CTA Exam Strategy: A supervisee should restore effective oversight by disclosing
 		'option_d'       => 'Clarify the facts and clinical record, assess client consequences, consult appropriate billing or compliance resources, correct authorized records and claims, communicate as required, and track completion',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Administrative errors may have clinical, privacy, financial, and continuity consequences.
-<<<<<<< HEAD
 B. Incorrect. Changing clinical facts to justify a claim is dishonest and may create greater harm.
 C. Incorrect. Assigning blame before factual review does not correct the information or protect the client.
 D. Correct. This coordinates factual, clinical, compliance, communication, and follow-up responsibilities.
 CTA Exam Strategy: Treat billing data as consequential information: verify, correct through proper channels, address impact, and confirm completion.',
-=======
-		B. Incorrect. Changing clinical facts to justify a claim is dishonest and may create greater harm.
-		C. Incorrect. Assigning blame before factual review does not correct the information or protect the client.
-		D. Correct. This coordinates factual, clinical, compliance, communication, and follow-up responsibilities.
-		CTA Exam Strategy: Treat billing data as consequential information: verify, correct through proper channels, address impact, and confirm completion.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Billing and Diagnostic Error; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist receives credible but incomplete information that a colleague may be practicing while impaired. No immediate client danger is established. What should the therapist do FIRST?',
@@ -1299,18 +806,10 @@ CTA Exam Strategy: Treat billing data as consequential information: verify, corr
 		'option_d'       => 'Automatically file complaints with every possible agency',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Public accusation may breach confidentiality, spread unverified information, and bypass appropriate processes.
-<<<<<<< HEAD
 B. Correct. This is fact-based and proportionate while preserving the ability to act promptly if risk or a reporting duty is identified.
 C. Incorrect. Credible information affecting clients may require professional attention even without a client complaint.
 D. Incorrect. Indiscriminate reporting is not a substitute for identifying the applicable duty and authorized channel.
 CTA Exam Strategy: With incomplete nonurgent facts, clarify risk and duties before selecting the intervention or reporting path.',
-=======
-		B. Correct. This is fact-based and proportionate while preserving the ability to act promptly if risk or a reporting duty is identified.
-		C. Incorrect. Credible information affecting clients may require professional attention even without a client complaint.
-		D. Incorrect. Indiscriminate reporting is not a substitute for identifying the applicable duty and authorized channel.
-		CTA Exam Strategy: With incomplete nonurgent facts, clarify risk and duties before selecting the intervention or reporting path.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Colleague Conduct; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinic learns that a messaging configuration prevented several urgent client messages from reaching clinicians. What is the BEST accountable response?',
@@ -1320,18 +819,10 @@ CTA Exam Strategy: With incomplete nonurgent facts, clarify risk and duties befo
 		'option_d'       => 'Blame the vendor and make no practice changes',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This addresses current clients, evidence, duties, correction, and prevention as one coordinated response.
-<<<<<<< HEAD
 B. Incorrect. Waiting shifts the burden to clients and may allow urgent risk to continue.
 C. Incorrect. Deleting evidence may obstruct assessment and create additional record or compliance problems.
 D. Incorrect. A vendor’s contribution does not eliminate the clinic’s responsibility to protect clients and correct its workflow.
 CTA Exam Strategy: For multi-client system failures: contain, identify, assess, restore, preserve, correct, and verify.Difficult QuestionsLayered scenarios requiring disclosure analysis, record integrity, privacy response, conflicting advice, and coordinated accountability.',
-=======
-		B. Incorrect. Waiting shifts the burden to clients and may allow urgent risk to continue.
-		C. Incorrect. Deleting evidence may obstruct assessment and create additional record or compliance problems.
-		D. Incorrect. A vendor’s contribution does not eliminate the clinic’s responsibility to protect clients and correct its workflow.
-		CTA Exam Strategy: For multi-client system failures: contain, identify, assess, restore, preserve, correct, and verify.Difficult QuestionsLayered scenarios requiring disclosure analysis, record integrity, privacy response, conflicting advice, and coordinated accountability.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review System Failure; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician discovers a treatment error that may have materially affected the client’s choices, but the disclosure and legal implications are unclear. No immediate danger remains. What is the BEST response?',
@@ -1341,18 +832,10 @@ CTA Exam Strategy: For multi-client system failures: contain, identify, assess, 
 		'option_d'       => 'Ask the client to waive all consequences before discussing the error',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Professional discomfort or fear does not justify withholding information the client may need for protection or informed choice.
-<<<<<<< HEAD
 B. Incorrect. Overdisclosure aimed at clinician relief may burden the client and reveal irrelevant or confidential internal information.
 C. Correct. This preserves prompt accountability while tailoring communication to materiality, law, authorization, and client need.
 D. Incorrect. A prospective waiver does not replace truthful analysis, correction, or required communication.
 CTA Exam Strategy: Avoid both concealment and emotional overdisclosure; use a timely, client-centered, legally informed process.',
-=======
-		B. Incorrect. Overdisclosure aimed at clinician relief may burden the client and reveal irrelevant or confidential internal information.
-		C. Correct. This preserves prompt accountability while tailoring communication to materiality, law, authorization, and client need.
-		D. Incorrect. A prospective waiver does not replace truthful analysis, correction, or required communication.
-		CTA Exam Strategy: Avoid both concealment and emotional overdisclosure; use a timely, client-centered, legally informed process.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Client Error Disclosure; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A manager instructs a registered AMFT to backdate a note and omit a missed assessment so the agency will pass an audit. What is the BEST response?',
@@ -1362,18 +845,10 @@ CTA Exam Strategy: Avoid both concealment and emotional overdisclosure; use a ti
 		'option_d'       => 'Refuse to falsify the record, preserve accurate information, assess any client impact, involve the supervisor and appropriate compliance or legal channels, and document through authorized processes',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Employment does not authorize dishonesty or erase the registrant’s professional duties.
-<<<<<<< HEAD
 B. Incorrect. Deleting the chart would further damage continuity and record integrity.
 C. Incorrect. A hidden home copy may create confidentiality and record-control problems while leaving the official record false.
 D. Correct. This protects the client and record while using the proper supervisory and organizational response.
 CTA Exam Strategy: Organizational pressure never makes falsification acceptable; protect the record, client, and authorized escalation path.',
-=======
-		B. Incorrect. Deleting the chart would further damage continuity and record integrity.
-		C. Incorrect. A hidden home copy may create confidentiality and record-control problems while leaving the official record false.
-		D. Correct. This protects the client and record while using the proper supervisory and organizational response.
-		CTA Exam Strategy: Organizational pressure never makes falsification acceptable; protect the record, client, and authorized escalation path.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Instruction to Falsify; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT learns that a file containing client information may have been sent to the wrong recipient, but it is unknown whether the file was opened. What is the BEST initial response?',
@@ -1383,18 +858,10 @@ CTA Exam Strategy: Organizational pressure never makes falsification acceptable;
 		'option_d'       => 'Delete the sent-message record and wait',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. A suspected incident requires containment and structured assessment before a legally supported notification decision.
-<<<<<<< HEAD
 B. Incorrect. Uncertainty about access does not eliminate the need to investigate and document the incident.
 C. Incorrect. Premature broad notification may disclose additional information and is not tailored to verified scope or legal triggers.
 D. Incorrect. Destroying evidence prevents sound assessment and may compound the violation.
 CTA Exam Strategy: Do not equate incident with confirmed reportable breach; contain, assess, preserve, consult, then notify as required.',
-=======
-		B. Incorrect. Uncertainty about access does not eliminate the need to investigate and document the incident.
-		C. Incorrect. Premature broad notification may disclose additional information and is not tailored to verified scope or legal triggers.
-		D. Incorrect. Destroying evidence prevents sound assessment and may compound the violation.
-		CTA Exam Strategy: Do not equate incident with confirmed reportable breach; contain, assess, preserve, consult, then notify as required.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Suspected Confidentiality Incident; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Two consultants give an LMFT conflicting advice about correcting a significant error. One option is easier but appears inconsistent with the governing rule. What should the LMFT do?',
@@ -1404,18 +871,10 @@ CTA Exam Strategy: Do not equate incident with confirmed reportable breach; cont
 		'option_d'       => 'Take no action until the consultants agree',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Convenience and consultation do not override law or professional responsibility.
-<<<<<<< HEAD
 B. Correct. This resolves the conflict by returning to authority, expertise, facts, and accountable judgment.
 C. Incorrect. Professional advice cannot be mechanically averaged when the recommendations rest on different legal or factual premises.
 D. Incorrect. The clinician remains responsible for timely action and cannot allow disagreement to create harmful paralysis.
 CTA Exam Strategy: Conflicting advice calls for authority-based resolution, not convenience, arithmetic, or indefinite delay.',
-=======
-		B. Correct. This resolves the conflict by returning to authority, expertise, facts, and accountable judgment.
-		C. Incorrect. Professional advice cannot be mechanically averaged when the recommendations rest on different legal or factual premises.
-		D. Incorrect. The clinician remains responsible for timely action and cannot allow disagreement to create harmful paralysis.
-		CTA Exam Strategy: Conflicting advice calls for authority-based resolution, not convenience, arithmetic, or indefinite delay.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Conflicting Consultation; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A registered AMFT realizes that a high-risk message was missed, the client’s condition is unknown, a note inaccurately states follow-up occurred, and the supervisor has not been told. What is the BEST next step?',
@@ -1425,18 +884,10 @@ CTA Exam Strategy: Conflicting advice calls for authority-based resolution, not 
 		'option_d'       => 'Resign immediately without transferring care or explaining the concern',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Record correction matters, but it should not precede urgent assessment or permit delayed supervision.
-<<<<<<< HEAD
 B. Incorrect. Client contact alone leaves inaccurate records, ineffective oversight, and process risk unaddressed.
 C. Correct. This integrates safety, supervision, record integrity, communication, documentation, and prevention in the proper sequence.
 D. Incorrect. Abrupt departure may worsen continuity and does not fulfill the immediate responsibilities created by the known concern.
 CTA Exam Strategy: Integrated questions reward a coordinated sequence: protect, disclose material facts to oversight, correct honestly, apply duties, document, and prevent recurrence.',
-=======
-		B. Incorrect. Client contact alone leaves inaccurate records, ineffective oversight, and process risk unaddressed.
-		C. Correct. This integrates safety, supervision, record integrity, communication, documentation, and prevention in the proper sequence.
-		D. Incorrect. Abrupt departure may worsen continuity and does not fulfill the immediate responsibilities created by the known concern.
-		CTA Exam Strategy: Integrated questions reward a coordinated sequence: protect, disclose material facts to oversight, correct honestly, apply duties, document, and prevent recurrence.
-		Remediation: Return to Workbook 5, Chapter 4: Professional Responsibility and Accountability; review Integrated Accountability Response; log error category ACCOUNTABILITY-CORRECTION.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist faces incomplete information and must separate verified facts, assumptions, legal duties, clinical risks, and available consultation before acting. Which statement BEST describes professional judgment?',
@@ -1446,18 +897,10 @@ CTA Exam Strategy: Integrated questions reward a coordinated sequence: protect, 
 		'option_d'       => 'A guarantee that the chosen action will succeed',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Sound judgment integrates relevant sources through a reasoned process.
-<<<<<<< HEAD
 B. Incorrect. Intuition may signal a concern but cannot replace assessment and standards.
 C. Incorrect. Common practice may be useful context but is not automatically lawful or appropriate.
 D. Incorrect. Responsible judgment reduces risk but cannot guarantee outcomes.
 CTA Exam Strategy: Choose an integrated, reviewable process—not instinct, popularity, or guaranteed success.',
-=======
-		B. Incorrect. Intuition may signal a concern but cannot replace assessment and standards.
-		C. Incorrect. Common practice may be useful context but is not automatically lawful or appropriate.
-		D. Incorrect. Responsible judgment reduces risk but cannot guarantee outcomes.
-		CTA Exam Strategy: Choose an integrated, reviewable process—not instinct, popularity, or guaranteed success.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Meaning of Professional Judgment; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician must decide how a clear California requirement affects professional judgment in a complex case. When a clear California legal duty applies, what is the clinician’s FIRST reasoning task?',
@@ -1467,18 +910,10 @@ CTA Exam Strategy: Choose an integrated, reviewable process—not instinct, popu
 		'option_d'       => 'Replace the duty with the clinician’s preferred ethical principle',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Convenience cannot override a binding duty.
-<<<<<<< HEAD
 B. Incorrect. Majority practice does not determine the law.
 C. Correct. Professional judgment begins with the controlling authority and then addresses implementation.
 D. Incorrect. Ethical principles help interpret lawful options but do not erase governing law.
 CTA Exam Strategy: Apply the legal rule first; exercise discretion only where the rule permits it.',
-=======
-		B. Incorrect. Majority practice does not determine the law.
-		C. Correct. Professional judgment begins with the controlling authority and then addresses implementation.
-		D. Incorrect. Ethical principles help interpret lawful options but do not erase governing law.
-		CTA Exam Strategy: Apply the legal rule first; exercise discretion only where the rule permits it.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Legal Priority; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A nonroutine decision involves uncertainty, potential client harm, and conflicting recommendations that require a structured response. Which statement is an assumption rather than a verified fact?',
@@ -1488,18 +923,10 @@ CTA Exam Strategy: Apply the legal rule first; exercise discretion only where th
 		'option_d'       => 'The client is manipulative because the therapist feels pressured',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. This is a reported fact that can be documented with attribution.
-<<<<<<< HEAD
 B. Incorrect. The record provides verifiable evidence of the event.
 C. Incorrect. This is information from an identified source that can be evaluated.
 D. Correct. The conclusion converts a therapist reaction into an unsupported trait judgment.
 CTA Exam Strategy: Label sources and observations accurately; do not convert feelings or interpretations into facts.',
-=======
-		B. Incorrect. The record provides verifiable evidence of the event.
-		C. Incorrect. This is information from an identified source that can be evaluated.
-		D. Correct. The conclusion converts a therapist reaction into an unsupported trait judgment.
-		CTA Exam Strategy: Label sources and observations accurately; do not convert feelings or interpretations into facts.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Facts and Assumptions; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist faces incomplete information and must separate verified facts, assumptions, legal duties, clinical risks, and available consultation before acting. What is the BEST general rule when information is incomplete?',
@@ -1509,18 +936,10 @@ CTA Exam Strategy: Label sources and observations accurately; do not convert fee
 		'option_d'       => 'Choose the most restrictive response',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Perfect information is often unavailable and delay may be dangerous.
-<<<<<<< HEAD
 B. Correct. This calibrates information gathering to urgency and client protection.
 C. Incorrect. Uncertainty alone does not establish an emergency.
 D. Incorrect. Restriction must be justified by the duty and assessed risk, not incomplete facts alone.
 CTA Exam Strategy: Match the amount of assessment to urgency; neither paralysis nor reflexive escalation is sound judgment.',
-=======
-		B. Correct. This calibrates information gathering to urgency and client protection.
-		C. Incorrect. Uncertainty alone does not establish an emergency.
-		D. Incorrect. Restriction must be justified by the duty and assessed risk, not incomplete facts alone.
-		CTA Exam Strategy: Match the amount of assessment to urgency; neither paralysis nor reflexive escalation is sound judgment.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Urgency; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'During consultation, a clinician must decide how a clear California requirement affects professional judgment in a complex case. Which statement about consultation is MOST accurate?',
@@ -1530,18 +949,10 @@ CTA Exam Strategy: Match the amount of assessment to urgency; neither paralysis 
 		'option_d'       => 'It is unnecessary whenever the clinician feels confident',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Consultation strengthens but does not replace judgment.
-<<<<<<< HEAD
 B. Incorrect. The treating clinician remains accountable for applying the advice.
 C. Incorrect. Advice must still be checked against controlling law and client facts.
 D. Incorrect. Confidence may reflect overconfidence and does not establish competence or correctness.
 CTA Exam Strategy: Consultation informs; it does not authorize, immunize, or transfer responsibility.Moderate QuestionsApplied scenarios involving factual conflict, autonomy, policy, bias, proportionality, client decisions, and documentation.',
-=======
-		B. Incorrect. The treating clinician remains accountable for applying the advice.
-		C. Incorrect. Advice must still be checked against controlling law and client facts.
-		D. Incorrect. Confidence may reflect overconfidence and does not establish competence or correctness.
-		CTA Exam Strategy: Consultation informs; it does not authorize, immunize, or transfer responsibility.Moderate QuestionsApplied scenarios involving factual conflict, autonomy, policy, bias, proportionality, client decisions, and documentation.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Consultation; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist plans to confront a client for dishonesty after receiving two conflicting third-party reports. No urgent risk is present. What should the therapist do NEXT?',
@@ -1551,18 +962,10 @@ CTA Exam Strategy: Consultation informs; it does not authorize, immunize, or tra
 		'option_d'       => 'Choose the report that matches the therapist’s first impression',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. The conclusion is not established and would create an inaccurate record.
-<<<<<<< HEAD
 B. Incorrect. Immediate termination is disproportionate without clarifying the concern.
 C. Correct. Nonurgent conflicting information calls for focused fact gathering before major action.
 D. Incorrect. Selecting only confirming information demonstrates anchoring or confirmation bias.
 CTA Exam Strategy: When risk is not urgent, resolve material factual conflicts before labeling or acting.',
-=======
-		B. Incorrect. Immediate termination is disproportionate without clarifying the concern.
-		C. Correct. Nonurgent conflicting information calls for focused fact gathering before major action.
-		D. Incorrect. Selecting only confirming information demonstrates anchoring or confirmation bias.
-		CTA Exam Strategy: When risk is not urgent, resolve material factual conflicts before labeling or acting.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Clarifying Conflicting Information; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A competent client prefers a lawful, clinically reasonable option that is not the therapist’s first choice. No urgent danger exists. What is the BEST response?',
@@ -1572,18 +975,10 @@ CTA Exam Strategy: When risk is not urgent, resolve material factual conflicts b
 		'option_d'       => 'End treatment because the client disagreed',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Expertise supports recommendation but does not automatically erase autonomy.
-<<<<<<< HEAD
 B. Correct. This integrates informed participation and ongoing professional monitoring.
 C. Incorrect. Respect for autonomy does not require withholding useful clinical guidance.
 D. Incorrect. Disagreement among reasonable options does not justify disruptive termination.
 CTA Exam Strategy: When options are reasonable, support informed choice rather than control, passivity, or withdrawal.',
-=======
-		B. Correct. This integrates informed participation and ongoing professional monitoring.
-		C. Incorrect. Respect for autonomy does not require withholding useful clinical guidance.
-		D. Incorrect. Disagreement among reasonable options does not justify disruptive termination.
-		CTA Exam Strategy: When options are reasonable, support informed choice rather than control, passivity, or withdrawal.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Client Preference and Risk; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician preparing to follow an agency procedure discovers that it appears inconsistent with a licensing requirement and may affect current clients; the usual administrator is unavailable. What should the clinician do?',
@@ -1593,18 +988,10 @@ CTA Exam Strategy: When options are reasonable, support informed choice rather t
 		'option_d'       => 'Verify the governing requirement, raise the discrepancy through appropriate channels, protect affected clients, and document relevant action',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Employer policy cannot authorize noncompliance with governing law.
-<<<<<<< HEAD
 B. Incorrect. Secret workarounds may create new risks and do not resolve the conflict.
 C. Incorrect. Departure may later be necessary, but immediate resignation can worsen continuity and bypass correction.
 D. Correct. This combines authority verification, organizational response, client protection, and documentation.
 CTA Exam Strategy: When policy conflicts with duty, verify, escalate appropriately, protect clients, and preserve continuity.',
-=======
-		B. Incorrect. Secret workarounds may create new risks and do not resolve the conflict.
-		C. Incorrect. Departure may later be necessary, but immediate resignation can worsen continuity and bypass correction.
-		D. Correct. This combines authority verification, organizational response, client protection, and documentation.
-		CTA Exam Strategy: When policy conflicts with duty, verify, escalate appropriately, protect clients, and preserve continuity.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Organizational Policy Conflict; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'An LMFT concludes that a client is resistant and notices only facts supporting that view while discounting evidence that the intervention is ineffective. What should the LMFT address?',
@@ -1614,18 +1001,10 @@ CTA Exam Strategy: When policy conflicts with duty, verify, escalate appropriate
 		'option_d'       => 'The need to hide the lack of progress',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Selective attention to confirming evidence can obscure treatment mismatch and calls for reassessment.
-<<<<<<< HEAD
 B. Incorrect. No facts establish a universal legal duty to terminate immediately.
 C. Incorrect. Disagreement or poor response does not establish incapacity.
 D. Incorrect. Concealment prevents honest evaluation and correction.
 CTA Exam Strategy: Look for the reasoning distortion, then return to outcome data and alternative explanations.',
-=======
-		B. Incorrect. No facts establish a universal legal duty to terminate immediately.
-		C. Incorrect. Disagreement or poor response does not establish incapacity.
-		D. Incorrect. Concealment prevents honest evaluation and correction.
-		CTA Exam Strategy: Look for the reasoning distortion, then return to outcome data and alternative explanations.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Bias Check; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'Two lawful options would adequately address a concern, but one would substantially restrict the client’s autonomy without additional protection. Which option should the therapist generally choose?',
@@ -1635,18 +1014,10 @@ CTA Exam Strategy: Look for the reasoning distortion, then return to outcome dat
 		'option_d'       => 'No action because both options could be criticized',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Therapist anxiety is not a sufficient basis for unnecessary restriction.
-<<<<<<< HEAD
 B. Incorrect. Documentation convenience does not determine client-centered proportionality.
 C. Correct. When protection is equivalent, unnecessary intrusion should be avoided.
 D. Incorrect. The possibility of criticism does not remove the duty to make a reasoned decision.
 CTA Exam Strategy: Prefer the least intrusive effective response, not the least action regardless of risk.',
-=======
-		B. Incorrect. Documentation convenience does not determine client-centered proportionality.
-		C. Correct. When protection is equivalent, unnecessary intrusion should be avoided.
-		D. Incorrect. The possibility of criticism does not remove the duty to make a reasoned decision.
-		CTA Exam Strategy: Prefer the least intrusive effective response, not the least action regardless of risk.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Proportionality; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A competent client asks the therapist to make a major personal decision for the client. What is the BEST response?',
@@ -1656,18 +1027,10 @@ CTA Exam Strategy: Prefer the least intrusive effective response, not the least 
 		'option_d'       => 'State what the therapist would personally choose as the correct answer',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. The request does not automatically justify taking control of a personal decision.
-<<<<<<< HEAD
 B. Correct. This supports autonomy and decision-making capacity without abandoning therapeutic assistance.
 C. Incorrect. Clinicians may help clients reason through personal decisions.
 D. Incorrect. The therapist’s personal values and circumstances may pressure or mislead the client.
 CTA Exam Strategy: Support the process of client choice without taking ownership of the client’s decision.',
-=======
-		B. Correct. This supports autonomy and decision-making capacity without abandoning therapeutic assistance.
-		C. Incorrect. Clinicians may help clients reason through personal decisions.
-		D. Incorrect. The therapist’s personal values and circumstances may pressure or mislead the client.
-		CTA Exam Strategy: Support the process of client choice without taking ownership of the client’s decision.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Supporting Client Decisions; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'After choosing among several legally permissible responses to a high-risk situation, a clinician makes a significant nonroutine decision involving uncertainty. Which documentation is MOST appropriate?',
@@ -1677,18 +1040,10 @@ CTA Exam Strategy: Support the process of client choice without taking ownership
 		'option_d'       => 'Relevant facts, assessment, client participation, standards considered, consultation, rationale, action, and follow-up as appropriate',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. The phrase is too vague to support continuity or show the decision process.
-<<<<<<< HEAD
 B. Incorrect. The clinical record should not become an irrelevant personal or defensive narrative.
 C. Incorrect. Significant decisions should be documented when made, not reconstructed only after a bad outcome.
 D. Correct. This creates a clinically meaningful and proportionate record of the decision.
 CTA Exam Strategy: Document the significant facts and reasoning needed for care, not vague conclusions or every internal thought.Difficult QuestionsLayered scenarios involving urgent uncertainty, conflicting advice, hindsight, competing duties, and integrated decision-making.',
-=======
-		B. Incorrect. The clinical record should not become an irrelevant personal or defensive narrative.
-		C. Incorrect. Significant decisions should be documented when made, not reconstructed only after a bad outcome.
-		D. Correct. This creates a clinically meaningful and proportionate record of the decision.
-		CTA Exam Strategy: Document the significant facts and reasoning needed for care, not vague conclusions or every internal thought.Difficult QuestionsLayered scenarios involving urgent uncertainty, conflicting advice, hindsight, competing duties, and integrated decision-making.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Documentation of Judgment; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A credible report suggests serious harm may occur within the hour, but several details remain unknown. What is the BEST response?',
@@ -1698,18 +1053,10 @@ CTA Exam Strategy: Document the significant facts and reasoning needed for care,
 		'option_d'       => 'Terminate services without addressing the threat',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. Urgent credible risk calls for timely assessment and protection based on information reasonably available.
-<<<<<<< HEAD
 B. Incorrect. Complete certainty may be impossible and delay may increase harm.
 C. Incorrect. Incomplete information should be evaluated, not ignored automatically.
 D. Incorrect. Termination does not itself manage the potential immediate danger and may disrupt care.
 CTA Exam Strategy: Urgency changes timing, not the need for proportionate fact-based action.',
-=======
-		B. Incorrect. Complete certainty may be impossible and delay may increase harm.
-		C. Incorrect. Incomplete information should be evaluated, not ignored automatically.
-		D. Incorrect. Termination does not itself manage the potential immediate danger and may disrupt care.
-		CTA Exam Strategy: Urgency changes timing, not the need for proportionate fact-based action.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Urgent Incomplete Information; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A consultant recommends an action that conflicts with the clinician’s reading of a clear California requirement. What should the clinician do?',
@@ -1719,18 +1066,10 @@ CTA Exam Strategy: Urgency changes timing, not the need for proportionate fact-b
 		'option_d'       => 'Discuss the discrepancy, verify the authority and facts, obtain additional qualified guidance if needed, and make a timely professional decision',
 		'correct_option' => 'd',
 		'explanation'    => 'A. Incorrect. Consultation does not override law or transfer the clinician’s responsibility.
-<<<<<<< HEAD
 B. Incorrect. The clinician should remain open to correction and verify the basis for disagreement.
 C. Incorrect. Consultants need not accept liability, and delay may harm the client.
 D. Correct. This returns the decision to controlling authority, expertise, facts, and accountable judgment.
 CTA Exam Strategy: Resolve conflicting advice through authority and expertise, not deference, ego, or paralysis.',
-=======
-		B. Incorrect. The clinician should remain open to correction and verify the basis for disagreement.
-		C. Incorrect. Consultants need not accept liability, and delay may harm the client.
-		D. Correct. This returns the decision to controlling authority, expertise, facts, and accountable judgment.
-		CTA Exam Strategy: Resolve conflicting advice through authority and expertise, not deference, ego, or paralysis.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Conflicting Consultation; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A therapist used a reasonable structured process based on available facts, but the outcome was unfavorable. Which conclusion is MOST accurate?',
@@ -1740,18 +1079,10 @@ CTA Exam Strategy: Resolve conflicting advice through authority and expertise, n
 		'option_d'       => 'Ethical practice guarantees success',
 		'correct_option' => 'b',
 		'explanation'    => 'A. Incorrect. Outcome alone does not establish negligence or unethical conduct.
-<<<<<<< HEAD
 B. Correct. This avoids hindsight bias while preserving the duty to reassess new information.
 C. Incorrect. Avoiding a necessary decision can itself create risk.
 D. Incorrect. Professional practice cannot eliminate all adverse outcomes.
 CTA Exam Strategy: Judge the original process without hindsight, then treat the outcome as new information requiring response.',
-=======
-		B. Correct. This avoids hindsight bias while preserving the duty to reassess new information.
-		C. Incorrect. Avoiding a necessary decision can itself create risk.
-		D. Incorrect. Professional practice cannot eliminate all adverse outcomes.
-		CTA Exam Strategy: Judge the original process without hindsight, then treat the outcome as new information requiring response.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Outcome Bias; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A client preference appears to conflict with a serious welfare concern, but no emergency or automatic legal override is established. What is the BEST response?',
@@ -1761,18 +1092,10 @@ CTA Exam Strategy: Judge the original process without hindsight, then treat the 
 		'option_d'       => 'Delay until the situation becomes an emergency',
 		'correct_option' => 'c',
 		'explanation'    => 'A. Incorrect. Concern alone does not automatically justify overriding a competent client.
-<<<<<<< HEAD
 B. Incorrect. Autonomy does not require ignoring foreseeable and material risk.
 C. Correct. This integrates fact gathering, authority, welfare, participation, consultation, and proportionality.
 D. Incorrect. Waiting may allow a manageable concern to worsen and avoids present responsibility.
 CTA Exam Strategy: When no automatic override applies, assess, involve the client, and choose a proportionate lawful response.',
-=======
-		B. Incorrect. Autonomy does not require ignoring foreseeable and material risk.
-		C. Correct. This integrates fact gathering, authority, welfare, participation, consultation, and proportionality.
-		D. Incorrect. Waiting may allow a manageable concern to worsen and avoids present responsibility.
-		CTA Exam Strategy: When no automatic override applies, assess, involve the client, and choose a proportionate lawful response.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Competing Duties; log error category ETHICAL-JUDGMENT.',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 	array(
 		'question_text'  => 'A clinician faces incomplete facts, possible client harm, organizational pressure, a strong personal reaction, and conflicting options. What response BEST reflects sound judgment?',
@@ -1782,44 +1105,9 @@ CTA Exam Strategy: When no automatic override applies, assess, involve the clien
 		'option_d'       => 'Delay until certainty and unanimous agreement exist',
 		'correct_option' => 'a',
 		'explanation'    => 'A. Correct. This integrates the complete structured process while preserving urgency and accountability.
-<<<<<<< HEAD
 B. Incorrect. Emotion may signal concern but cannot replace facts, law, and client-centered analysis.
 C. Incorrect. Organizational direction does not eliminate independent professional responsibility.
 D. Incorrect. Perfect certainty and unanimity are often unavailable, and delay may increase harm.
 CTA Exam Strategy: Integrated questions reward a lawful, client-specific, bias-aware process that moves from urgency to action and follow-up.',
-=======
-		B. Incorrect. Emotion may signal concern but cannot replace facts, law, and client-centered analysis.
-		C. Incorrect. Organizational direction does not eliminate independent professional responsibility.
-		D. Incorrect. Perfect certainty and unanimity are often unavailable, and delay may increase harm.
-		CTA Exam Strategy: Integrated questions reward a lawful, client-specific, bias-aware process that moves from urgency to action and follow-up.
-		Remediation: Return to Workbook 5, Chapter 5: Professional Judgment and Ethical Decision-Making; review Integrated Ethical Decision-Making; log error category ETHICAL-JUDGMENT.
-		Performance Analysis and Remediation Plan
-		Chapter
-		Score
-		High-Confidence Misses
-		Low-Confidence Correct
-		Next Remediation Action
-		1
-		____ / 17
-		WB5 Ch. 1 | NONMALEFICENCE
-		2
-		____ / 17
-		WB5 Ch. 2 | HARM-PREVENTION
-		3
-		____ / 17
-		WB5 Ch. 3 | BENEFICENCE-CLIENT-WELFARE
-		4
-		____ / 17
-		WB5 Ch. 4 | ACCOUNTABILITY-CORRECTION
-		5
-		____ / 17
-		WB5 Ch. 5 | ETHICAL-JUDGMENT
-		Score interpretation control: Use results to identify strengths and remediation priorities. Do not present this practice score as an official BBS passing score or a guarantee of passage.
-		Current Authorities and Source Controls
-		The LMFT-specific conversions and time-sensitive client-harm, gross-negligence, incompetence, confidentiality, supervision, record-integrity, client-welfare, consultation, continuity, and professional-conduct principles in this assessment were verified through August 3, 2026. Re-audit before future publication or use and after any material legal, regulatory, ethical-code, or examination change.
-		California Board of Behavioral Sciences, 2026 Statutes and Regulations: Open official source
-		California Business and Professions Code section 4982: Open official source
-		CAMFT Code of Ethics, effective December 6, 2025: Open official source',
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	),
 );

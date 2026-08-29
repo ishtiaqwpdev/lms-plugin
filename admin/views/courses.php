@@ -27,12 +27,9 @@ $access_counts = isset( $access_counts ) ? $access_counts : array();
 			<a class="page-title-action" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=cta_publish_all_exam_prep' ), 'cta_publish_all_exam_prep' ) ); ?>">
 				<?php esc_html_e( 'Publish All Exam Prep', 'cta-lms' ); ?>
 			</a>
-<<<<<<< HEAD
 			<a class="page-title-action" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=cta_publish_all_learner_content' ), 'cta_publish_all_learner_content' ) ); ?>">
 				<?php esc_html_e( 'Publish ALL learner content', 'cta-lms' ); ?>
 			</a>
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 		<?php else : ?>
 			<a class="page-title-action" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=cta_sync_syllabus' ), 'cta_sync_syllabus' ) ); ?>">
 				<?php esc_html_e( 'Restore Prices + Sync Syllabus', 'cta-lms' ); ?>
@@ -111,7 +108,6 @@ $access_counts = isset( $access_counts ) ? $access_counts : array();
 				?>
 			</p>
 		</div>
-<<<<<<< HEAD
 	<?php elseif ( 'all_learner_content_published' === $notice ) : ?>
 		<div class="notice notice-success is-dismissible">
 			<p>
@@ -126,8 +122,6 @@ $access_counts = isset( $access_counts ) ? $access_counts : array();
 				?>
 			</p>
 		</div>
-=======
->>>>>>> 1dcdd55b430ec7b912f0b502b3878173ec976d47
 	<?php elseif ( 'syllabus_sync_failed' === $notice ) : ?>
 		<div class="notice notice-error is-dismissible"><p><?php esc_html_e( 'Syllabus sync could not run. Confirm CTA syllabus files are installed.', 'cta-lms' ); ?></p></div>
 	<?php endif; ?>
