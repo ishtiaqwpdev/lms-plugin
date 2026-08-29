@@ -497,6 +497,11 @@ class CTA_Student_Dashboard {
 			}
 		}
 
+		if ( $is_exam_prep ) {
+			$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
+			$this->maybe_heal_lmft_clinical_workbook_banks_for_course( $course );
+		}
+
 		// Exam Prep can have multiple assessments; CE still uses the primary quiz.
 		$course_quizzes = CTA_Database::get_quizzes_by_course( $course_id, true );
 		$quiz_cards     = array();
@@ -565,8 +570,6 @@ class CTA_Student_Dashboard {
 		$is_exam_prep   = class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course );
 
 		if ( $is_exam_prep ) {
-			$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
-			$this->maybe_heal_lmft_clinical_workbook_banks_for_course( $course );
 			$home_url      = $this->get_player_home_url( $course_id );
 			$workbooks_url = class_exists( 'CTA_Exam_Prep_Workbooks' )
 				? CTA_Exam_Prep_Workbooks::get_workbooks_list_url( $course_id, $player_base )
@@ -1367,6 +1370,7 @@ class CTA_Student_Dashboard {
 		$course_id = (int) $course->id;
 
 		$this->maybe_heal_lmft_law_ethics_workbook_banks_for_course( $course );
+		$this->maybe_heal_lmft_clinical_workbook_banks_for_course( $course );
 
 		if ( class_exists( 'CTA_CE_Completion' ) ) {
 			$progress = CTA_CE_Completion::sync_progress( get_current_user_id(), $course_id, $enrollment );

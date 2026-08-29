@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.317' );
+	define( 'CTA_VERSION', '1.0.318' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -1809,6 +1809,24 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 			}
 			if ( version_compare( $installed, '1.0.317', '<' ) && class_exists( 'CTA_Course_Materials' ) ) {
 				CTA_Course_Materials::restore_exam_prep_protected_rationale_gates();
+			}
+
+			// LMFT California Clinical: publish all 12 workbook online Practice Banks (wb1_bank … wb12_bank).
+			if ( version_compare( $installed, '1.0.318', '<' ) && class_exists( 'CTA_Lmft_Clinical_Sync' ) ) {
+				$lmft_clinical = CTA_Lmft_Clinical_Sync::find_course();
+				if ( $lmft_clinical && ! CTA_Lmft_Clinical_Sync::workbook_banks_are_live( (int) $lmft_clinical->id ) ) {
+					if ( function_exists( 'set_time_limit' ) ) {
+						// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- upgrade may write 12×17 questions.
+						@set_time_limit( 300 );
+					}
+					if ( function_exists( 'wp_raise_memory_limit' ) ) {
+						wp_raise_memory_limit( 'admin' );
+					}
+					CTA_Lmft_Clinical_Sync::sync_workbook_banks( (int) $lmft_clinical->id );
+					if ( ! CTA_Lmft_Clinical_Sync::workbook_banks_are_live( (int) $lmft_clinical->id ) ) {
+						cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
+					}
+				}
 			}
 
 			// Decouple supervision application pending from general account / CE access.

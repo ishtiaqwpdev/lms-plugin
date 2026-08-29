@@ -272,8 +272,8 @@ class CTA_Lms_Deferred_Upgrades {
 
 			case 'lmft_clinical_workbook_banks':
 				if ( class_exists( 'CTA_Lmft_Clinical_Sync' ) ) {
-					$result = CTA_Lmft_Clinical_Sync::sync_workbook_banks_missing( 0, 2 );
-					if ( empty( $result['ok'] ) && ! empty( $result['remaining'] ) ) {
+					$result = CTA_Lmft_Clinical_Sync::sync_workbook_banks_missing( 0, 4 );
+					if ( ! empty( $result['remaining'] ) ) {
 						self::queue( 'lmft_clinical_workbook_banks' );
 					}
 				}

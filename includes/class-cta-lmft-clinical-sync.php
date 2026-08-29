@@ -870,10 +870,6 @@ class CTA_Lmft_Clinical_Sync {
 			return;
 		}
 
-		if ( ! get_option( self::SEED_OPTION ) ) {
-			return;
-		}
-
 		$course = self::find_course();
 		if ( ! $course || empty( $course->id ) ) {
 			return;
@@ -902,7 +898,11 @@ class CTA_Lmft_Clinical_Sync {
 			wp_raise_memory_limit( 'admin' );
 		}
 
-		self::sync_workbook_banks_missing( $course_id, 3 );
+		self::sync_workbook_banks( $course_id );
+
+		if ( ! self::workbook_banks_are_live( $course_id ) && class_exists( 'CTA_Lms_Deferred_Upgrades' ) ) {
+			CTA_Lms_Deferred_Upgrades::queue( 'lmft_clinical_workbook_banks' );
+		}
 	}
 
 	/**
