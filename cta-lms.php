@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.313' );
+	define( 'CTA_VERSION', '1.0.314' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -286,6 +286,10 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		}
 		// CE catalog: repair mislinked Course Materials (exam prep / cross-CE contamination).
 		if ( version_compare( $installed, '1.0.313', '<' ) ) {
+			cta_lms_queue_deferred_upgrade( 'ce_materials_repair' );
+		}
+		// CE-003: detach Law & Ethics R9A study toolkits incorrectly linked to suicide-risk CE.
+		if ( version_compare( $installed, '1.0.314', '<' ) ) {
 			cta_lms_queue_deferred_upgrade( 'ce_materials_repair' );
 		}
 		if ( class_exists( 'CTA_Lmft_Law_Ethics_Sync' ) && ! CTA_Lmft_Law_Ethics_Sync::workbook_banks_are_live() ) {
@@ -1774,6 +1778,12 @@ if ( ! function_exists( 'cta_maybe_upgrade_db' ) ) {
 
 			// CE catalog: reassign mislinked Course Materials and store audit report.
 			if ( version_compare( $installed, '1.0.313', '<' ) ) {
+				cta_lms_queue_deferred_upgrade( 'ce_materials_repair' );
+				if ( class_exists( 'CTA_CE_Materials_Sync' ) ) {
+					CTA_CE_Materials_Sync::repair_all_ce_courses( true );
+				}
+			}
+			if ( version_compare( $installed, '1.0.314', '<' ) ) {
 				cta_lms_queue_deferred_upgrade( 'ce_materials_repair' );
 				if ( class_exists( 'CTA_CE_Materials_Sync' ) ) {
 					CTA_CE_Materials_Sync::repair_all_ce_courses( true );

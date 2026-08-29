@@ -359,6 +359,10 @@ class CTA_Courses {
 		$is_free_course  = (float) $course->price <= 0;
 		$video_helper    = new CTA_Student_Dashboard();
 		$resources       = class_exists( 'CTA_Database' ) ? CTA_Database::get_downloadable_resources( $course_id ) : array();
+		if ( class_exists( 'CTA_CE_Access' ) && CTA_CE_Access::is_ce_course( $course )
+			&& class_exists( 'CTA_CE_Materials_Sync' ) ) {
+			CTA_CE_Materials_Sync::maybe_repair_ce_course( $course_id );
+		}
 		if ( class_exists( 'CTA_Course_Materials' ) ) {
 			$resources = CTA_Course_Materials::filter_student_visible_resources( $resources );
 		}

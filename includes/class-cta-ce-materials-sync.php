@@ -19,7 +19,7 @@ if ( ! class_exists( 'CTA_CE_Materials_Sync' ) ) {
 
 class CTA_CE_Materials_Sync {
 
-	const REPAIR_OPTION = 'cta_ce_materials_repair_1_0_313';
+	const REPAIR_OPTION = 'cta_ce_materials_repair_1_0_314';
 	const AUDIT_OPTION  = 'cta_ce_materials_audit_report';
 
 	/**
@@ -239,6 +239,124 @@ class CTA_CE_Materials_Sync {
 	}
 
 	/**
+	 * Title patterns for Law & Ethics exam-prep R9A / study-toolkit downloads.
+	 *
+	 * These must not appear on CE course materials lists (e.g. CTA-CE-003).
+	 *
+	 * @return string[]
+	 */
+	public static function get_law_ethics_study_toolkit_title_patterns() {
+		return array(
+			'/exam\s+strategy\s+and\s+study\s+planning\s+toolkit/i',
+			'/high[-\s]yield\s+numbers,\s*timelines,\s*and\s+trigger\s+words\s+toolkit/i',
+			'/high[-\s]yield\s+california\s+law\s+decision\s+guides\s+toolkit/i',
+			'/high[-\s]yield\s+california\s+ethics\s+decision\s+guides\s+toolkit/i',
+			'/45[-\s]chapter\s+exam\s+traps\s+and\s+correction\s+rules\s+toolkit/i',
+			'/45[-\s]chapter\s+master\s+study\s+map\s+and\s+readiness\s+checklist\s+toolkit/i',
+		);
+	}
+
+	/**
+	 * Normalize a resource title for signature matching (strip R9A prefix, etc.).
+	 *
+	 * @param string $title Raw title.
+	 * @return string
+	 */
+	public static function normalize_resource_title( $title ) {
+		$title = trim( (string) $title );
+		return trim( (string) preg_replace( '/^R9A\s*[—\-–]\s*/iu', '', $title ) );
+	}
+
+	/**
+	 * Whether a resource is a Law & Ethics exam-prep study toolkit (R9A set).
+	 *
+	 * @param object|null $resource Resource row.
+	 * @return bool
+	 */
+	public static function is_law_ethics_exam_prep_study_toolkit( $resource ) {
+		if ( ! $resource ) {
+			return false;
+		}
+
+		$title = self::normalize_resource_title( (string) ( $resource->title ?? '' ) );
+		foreach ( self::get_law_ethics_study_toolkit_title_patterns() as $pattern ) {
+			if ( preg_match( $pattern, $title ) ) {
+				return true;
+			}
+		}
+
+		$haystack = self::resource_haystack( $resource );
+		$file_markers = array(
+			'law_and_ethics_ep_r9a',
+			'law_and_ethics_ep_exam_strategy',
+			'law_and_ethics_ep_high_yield',
+			'law_and_ethics_ep_45_chapter',
+			'r9a_exam_strategy',
+			'r9a_high_yield',
+			'r9a_45_chapter',
+		);
+		foreach ( $file_markers as $marker ) {
+			if ( false !== strpos( $haystack, $marker ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Resolve Law & Ethics exam-prep course_id for a mislinked toolkit row.
+	 *
+	 * @param object $resource Resource row.
+	 * @return int 0 when unknown.
+	 */
+	public static function resolve_law_ethics_exam_prep_course_id( $resource ) {
+		$haystack = self::resource_haystack( $resource );
+		$marker_slug_map = array(
+			'lpcc_law_and_ethics' => 'lpcc-california-law-ethics-exam-preparation',
+			'lpcc-law-ethics'     => 'lpcc-california-law-ethics-exam-preparation',
+			'lcsw_law_and_ethics' => 'lcsw-california-law-ethics-exam-preparation',
+			'lcsw-law-ethics'     => 'lcsw-california-law-ethics-exam-preparation',
+			'lmft_law_and_ethics' => 'california-law-ethics-exam-preparation',
+			'lmft-law-ethics'     => 'california-law-ethics-exam-preparation',
+		);
+
+		foreach ( $marker_slug_map as $marker => $slug ) {
+			if ( false !== strpos( $haystack, $marker ) ) {
+				$owner = self::find_exam_prep_course_by_slug( $slug );
+				if ( $owner ) {
+					return (int) $owner->id;
+				}
+			}
+		}
+
+		$fallback_slugs = array(
+			'lcsw-california-law-ethics-exam-preparation',
+			'lpcc-california-law-ethics-exam-preparation',
+			'california-law-ethics-exam-preparation',
+		);
+
+		foreach ( $fallback_slugs as $slug ) {
+			$owner = self::find_exam_prep_course_by_slug( $slug );
+			if ( ! $owner ) {
+				continue;
+			}
+			if ( self::find_duplicate_resource_id( (int) $owner->id, $resource, 0 ) ) {
+				return (int) $owner->id;
+			}
+		}
+
+		foreach ( $fallback_slugs as $slug ) {
+			$owner = self::find_exam_prep_course_by_slug( $slug );
+			if ( $owner ) {
+				return (int) $owner->id;
+			}
+		}
+
+		return 0;
+	}
+
+	/**
 	 * Whether a downloadable resource is exam-prep content.
 	 *
 	 * @param object|null $resource Resource row.
@@ -250,6 +368,10 @@ class CTA_CE_Materials_Sync {
 		}
 
 		if ( ! empty( $resource->is_practice_test ) ) {
+			return true;
+		}
+
+		if ( self::is_law_ethics_exam_prep_study_toolkit( $resource ) ) {
 			return true;
 		}
 
@@ -372,6 +494,13 @@ class CTA_CE_Materials_Sync {
 
 		if ( ! self::is_exam_prep_resource( $resource ) ) {
 			return 0;
+		}
+
+		if ( self::is_law_ethics_exam_prep_study_toolkit( $resource ) ) {
+			$owner_id = self::resolve_law_ethics_exam_prep_course_id( $resource );
+			if ( $owner_id ) {
+				return $owner_id;
+			}
 		}
 
 		$haystack = self::resource_haystack( $resource );
@@ -542,6 +671,35 @@ class CTA_CE_Materials_Sync {
 	}
 
 	/**
+	 * Remove a mislinked resource row from a CE course (protected file kept on disk).
+	 *
+	 * @param object $resource Resource row.
+	 * @return array{action:string,resource_id:int,from_course_id:int}
+	 */
+	private static function unlink_from_ce_course( $resource ) {
+		global $wpdb;
+
+		$resource_id    = (int) ( $resource->id ?? 0 );
+		$from_course_id = (int) ( $resource->course_id ?? 0 );
+		$result         = array(
+			'action'         => 'skipped',
+			'resource_id'    => $resource_id,
+			'from_course_id' => $from_course_id,
+		);
+
+		if ( ! $resource_id ) {
+			return $result;
+		}
+
+		$table = $wpdb->prefix . 'cta_downloadable_resources';
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$wpdb->delete( $table, array( 'id' => $resource_id ), array( '%d' ) );
+		$result['action'] = 'unlinked_from_ce';
+
+		return $result;
+	}
+
+	/**
 	 * Repair mislinked materials for one CE course.
 	 *
 	 * @param int $course_id CE course ID.
@@ -573,12 +731,24 @@ class CTA_CE_Materials_Sync {
 
 			$owner_id = self::resolve_resource_owner_course_id( $resource );
 			if ( ! $owner_id ) {
+				if ( self::is_exam_prep_resource( $resource ) ) {
+					$report['actions'][] = array_merge(
+						array(
+							'title'     => (string) ( $resource->title ?? '' ),
+							'file_path' => (string) ( $resource->file_path ?? '' ),
+							'reason'    => 'exam_prep_unmapped',
+						),
+						self::unlink_from_ce_course( $resource )
+					);
+					continue;
+				}
+
 				$report['actions'][] = array(
 					'action'       => 'unresolved',
 					'resource_id'  => (int) $resource->id,
 					'title'        => (string) ( $resource->title ?? '' ),
 					'file_path'    => (string) ( $resource->file_path ?? '' ),
-					'reason'       => self::is_exam_prep_resource( $resource ) ? 'exam_prep_unmapped' : 'foreign_ce_or_unknown',
+					'reason'       => 'foreign_ce_or_unknown',
 				);
 				continue;
 			}
