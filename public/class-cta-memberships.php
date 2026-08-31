@@ -42,6 +42,11 @@ class CTA_Memberships {
 
 		$bundles = CTA_Database::get_all_bundles();
 
+		if ( empty( $bundles ) && class_exists( 'CTA_Bundle_Catalog' ) ) {
+			CTA_Bundle_Catalog::maybe_sync( true );
+			$bundles = CTA_Database::get_all_bundles();
+		}
+
 		foreach ( $bundles as $bundle ) {
 			if ( 'subscription' !== (string) $bundle->plan_type ) {
 				continue;

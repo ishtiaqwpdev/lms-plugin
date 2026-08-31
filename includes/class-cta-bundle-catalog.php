@@ -252,6 +252,9 @@ class CTA_Bundle_Catalog {
 			// Still kill any leftover obsolete actives (partial prior sync).
 			if ( self::has_active_obsolete_bundles() ) {
 				$force = true;
+			} elseif ( self::count_active_bundles() < 1 ) {
+				// Fingerprint can be set while wp_cta_bundles is empty or all inactive (data disconnect).
+				$force = true;
 			} else {
 				return null;
 			}
@@ -267,6 +270,22 @@ class CTA_Bundle_Catalog {
 		delete_transient( 'cta_bundle_catalog_sync_lock' );
 
 		return $report;
+	}
+
+	/**
+	 * Count active bundles in wp_cta_bundles.
+	 *
+	 * @return int
+	 */
+	public static function count_active_bundles() {
+		global $wpdb;
+
+		CTA_Database::ensure_tables();
+
+		$table = $wpdb->prefix . 'cta_bundles';
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		return (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table} WHERE status = 'active'" );
 	}
 
 	/**

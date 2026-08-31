@@ -580,6 +580,9 @@ class CTA_Database {
 		$count = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$table}" );
 
 		if ( $count > 0 ) {
+			if ( class_exists( 'CTA_Bundle_Catalog' ) && CTA_Bundle_Catalog::count_active_bundles() < 1 ) {
+				CTA_Bundle_Catalog::sync_all();
+			}
 			return;
 		}
 

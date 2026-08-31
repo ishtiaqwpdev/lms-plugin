@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.319' );
+	define( 'CTA_VERSION', '1.0.320' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -303,6 +303,12 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		}
 		if ( class_exists( 'CTA_Lmft_Clinical_Sync' ) && ! CTA_Lmft_Clinical_Sync::workbook_banks_are_live() ) {
 			cta_lms_queue_deferred_upgrade( 'lmft_clinical_workbook_banks' );
+		}
+
+		// Memberships page: re-sync Catalog v3.5 when wp_cta_bundles has zero active rows.
+		if ( version_compare( $installed, '1.0.320', '<' ) && class_exists( 'CTA_Bundle_Catalog' ) ) {
+			delete_option( 'cta_bundle_catalog_v35_fp' );
+			CTA_Bundle_Catalog::maybe_sync( true );
 		}
 	}
 }
