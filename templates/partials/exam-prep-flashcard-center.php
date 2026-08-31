@@ -54,6 +54,9 @@ $deck_json = wp_json_encode(
 					if ( '' !== $cue ) {
 						$row['memory_cue'] = $cue;
 					}
+					if ( ! empty( $card['meta'] ) && is_array( $card['meta'] ) ) {
+						$row['meta'] = $card['meta'];
+					}
 					return $row;
 				},
 				(array) ( $deck['cards'] ?? array() )
@@ -139,6 +142,11 @@ $deck_json = wp_json_encode(
 			<button type="button" class="btn btn-outline" data-cta-fsc-start="browse">
 				<?php esc_html_e( 'Browse / Review Mode', 'cta-lms' ); ?>
 			</button>
+			<?php if ( $has_content ) : ?>
+				<button type="button" class="btn btn-outline" data-cta-fsc-print>
+					<?php esc_html_e( 'Print deck', 'cta-lms' ); ?>
+				</button>
+			<?php endif; ?>
 		</div>
 	</div>
 
@@ -206,6 +214,7 @@ $deck_json = wp_json_encode(
 		<div class="cta-fsc__controls">
 			<button type="button" class="btn btn-outline btn--sm" data-cta-fsc-prev><?php esc_html_e( 'Previous', 'cta-lms' ); ?></button>
 			<button type="button" class="btn btn-outline btn--sm" data-cta-fsc-shuffle><?php esc_html_e( 'Shuffle', 'cta-lms' ); ?></button>
+			<button type="button" class="btn btn-outline btn--sm" data-cta-fsc-print><?php esc_html_e( 'Print', 'cta-lms' ); ?></button>
 			<button type="button" class="btn btn-primary btn--sm" data-cta-fsc-next><?php esc_html_e( 'Next', 'cta-lms' ); ?></button>
 		</div>
 	</div>

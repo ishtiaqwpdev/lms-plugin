@@ -94,6 +94,17 @@ class CTA_Exam_Prep_Flashcard_Center {
 			);
 		}
 
+		if ( self::study_center_deck_is_live( 'lcsw-law-ethics' ) ) {
+			$slugs = array_values(
+				array_diff(
+					$slugs,
+					array(
+						'lcsw-california-law-ethics-exam-preparation',
+					)
+				)
+			);
+		}
+
 		/**
 		 * Filter slugs that may fall back to legacy flashcards.json decks.
 		 *
@@ -145,6 +156,7 @@ class CTA_Exam_Prep_Flashcard_Center {
 			'lpcc-california-clinical-exam-preparation',
 			'lcsw-aswb-clinical-exam-preparation',
 			'lcsw-california-clinical-exam-preparation',
+			'lcsw-california-law-ethics-exam-preparation',
 		);
 
 		/**
@@ -480,6 +492,19 @@ class CTA_Exam_Prep_Flashcard_Center {
 
 			$front = isset( $card['front'] ) ? self::sanitize_card_text( (string) $card['front'] ) : '';
 			$back  = isset( $card['back'] ) ? self::sanitize_card_text( (string) $card['back'] ) : '';
+
+			if ( '' === $front && ! empty( $card['prompt'] ) ) {
+				$concept = isset( $card['concept'] ) ? trim( (string) $card['concept'] ) : '';
+				$prompt  = self::sanitize_card_text( (string) $card['prompt'] );
+				if ( '' !== $concept && $concept !== $prompt ) {
+					$front = self::sanitize_card_text( $concept . "\n\n" . $prompt );
+				} else {
+					$front = $prompt;
+				}
+			} elseif ( '' === $front && ! empty( $card['concept'] ) ) {
+				$front = self::sanitize_card_text( (string) $card['concept'] );
+			}
+
 			if ( '' === $front || '' === $back ) {
 				continue;
 			}
@@ -503,7 +528,9 @@ class CTA_Exam_Prep_Flashcard_Center {
 
 			$memory_cue = isset( $card['memory_cue'] )
 				? self::sanitize_card_text( (string) $card['memory_cue'] )
-				: ( isset( $card['memoryCue'] ) ? self::sanitize_card_text( (string) $card['memoryCue'] ) : '' );
+				: ( isset( $card['memoryCue'] )
+					? self::sanitize_card_text( (string) $card['memoryCue'] )
+					: ( isset( $card['cue'] ) ? self::sanitize_card_text( (string) $card['cue'] ) : '' ) );
 
 			$row = array(
 				'id'         => isset( $card['id'] ) ? sanitize_text_field( (string) $card['id'] ) : (string) ( count( $normalized ) + 1 ),

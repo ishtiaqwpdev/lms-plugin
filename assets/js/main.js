@@ -6021,6 +6021,75 @@
         }
       }
 
+      function printDeck() {
+        var indices = filteredIndices();
+        if (!indices.length) {
+          return;
+        }
+
+        var filterLabel = state.domain === "all" ? "All domains" : domainLabel(state.domain);
+        if (state.search.trim()) {
+          filterLabel += ' — search: "' + state.search.trim() + '"';
+        }
+
+        var printWindow = window.open("", "_blank", "noopener,noreferrer");
+        if (!printWindow) {
+          return;
+        }
+
+        var body = "";
+        body += "<h1>" + escapeHtml(deck.title || "Flashcard Study Center") + "</h1>";
+        body +=
+          "<p><strong>" +
+          indices.length +
+          " card" +
+          (indices.length === 1 ? "" : "s") +
+          "</strong> — " +
+          escapeHtml(filterLabel) +
+          "</p>";
+
+        indices.forEach(function (idx, i) {
+          var card = cards[idx];
+          body += '<section class="cta-fsc-print-card">';
+          body +=
+            '<p class="cta-fsc-print-meta">#' +
+            (i + 1) +
+            " · " +
+            escapeHtml(domainLabel(card.domain)) +
+            "</p>";
+          body += '<p class="cta-fsc-print-front">' + escapeHtml(card.front || "") + "</p>";
+          body += '<p class="cta-fsc-print-back"><strong>Answer:</strong> ' + escapeHtml(card.back || "") + "</p>";
+          if (card.memory_cue) {
+            body +=
+              '<p class="cta-fsc-print-cue"><strong>Memory Cue:</strong> ' +
+              escapeHtml(card.memory_cue) +
+              "</p>";
+          }
+          body += "</section>";
+        });
+
+        printWindow.document.open();
+        printWindow.document.write(
+          "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" +
+            escapeHtml(deck.title || "Flashcards") +
+            "</title><style>" +
+            "body{font-family:Georgia,'Times New Roman',serif;margin:24px;color:#111;line-height:1.5;}" +
+            "h1{font-size:1.35rem;margin:0 0 8px;}" +
+            ".cta-fsc-print-card{page-break-inside:avoid;border:1px solid #ccc;border-radius:8px;padding:16px;margin:0 0 16px;}" +
+            ".cta-fsc-print-meta{font-size:0.8rem;color:#555;margin:0 0 8px;}" +
+            ".cta-fsc-print-front{font-weight:600;margin:0 0 10px;white-space:pre-wrap;}" +
+            ".cta-fsc-print-back{margin:0 0 8px;white-space:pre-wrap;}" +
+            ".cta-fsc-print-cue{margin:0;font-style:italic;color:#444;white-space:pre-wrap;}" +
+            "@media print{body{margin:12px;}.cta-fsc-print-card{break-inside:avoid;}}" +
+            "</style></head><body>" +
+            body +
+            "</body></html>"
+        );
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+      }
+
       root.querySelectorAll("[data-cta-fsc-start]").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var mode = btn.getAttribute("data-cta-fsc-start") || "study";
@@ -6131,6 +6200,11 @@
           state.index = 0;
           state.flipped = false;
           renderStudy();
+          return;
+        }
+
+        if (target.matches("[data-cta-fsc-print]")) {
+          printDeck();
           return;
         }
 
