@@ -162,7 +162,9 @@ class CTA_Memberships {
 			);
 		}
 
-		$secret_key = (string) get_option( 'cta_stripe_secret_key', '' );
+		$secret_key = class_exists( 'CTA_Stripe' )
+			? (string) CTA_Stripe::get_active_credentials()['secret_key']
+			: (string) get_option( 'cta_stripe_secret_key', '' );
 
 		if ( '' === $secret_key ) {
 			if ( ! empty( $_POST['demo_confirm'] ) ) {

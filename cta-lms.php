@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.320' );
+	define( 'CTA_VERSION', '1.0.321' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -309,6 +309,11 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		if ( version_compare( $installed, '1.0.320', '<' ) && class_exists( 'CTA_Bundle_Catalog' ) ) {
 			delete_option( 'cta_bundle_catalog_v35_fp' );
 			CTA_Bundle_Catalog::maybe_sync( true );
+		}
+
+		// Stripe Sandbox/Live dual credential sets — migrate legacy single-key options.
+		if ( version_compare( $installed, '1.0.321', '<' ) && class_exists( 'CTA_Stripe' ) ) {
+			CTA_Stripe::migrate_legacy_credentials();
 		}
 	}
 }

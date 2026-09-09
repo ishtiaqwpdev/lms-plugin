@@ -22,37 +22,149 @@ $notice = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ?? '' ) );
 		<?php wp_nonce_field( 'cta_save_settings' ); ?>
 		<input type="hidden" name="action" value="cta_save_settings">
 
-		<div class="cta-admin-panel">
-			<h2><?php esc_html_e( 'Stripe Configuration', 'cta-lms' ); ?></h2>
-			<table class="form-table">
-				<tr>
-					<th><?php esc_html_e( 'Mode', 'cta-lms' ); ?></th>
-					<td>
-						<label><input type="radio" name="cta_stripe_mode" value="test" <?php checked( get_option( 'cta_stripe_mode', 'test' ), 'test' ); ?>> <?php esc_html_e( 'Test', 'cta-lms' ); ?></label>
-						<label><input type="radio" name="cta_stripe_mode" value="live" <?php checked( get_option( 'cta_stripe_mode', 'test' ), 'live' ); ?>> <?php esc_html_e( 'Live', 'cta-lms' ); ?></label>
-					</td>
-				</tr>
-				<tr>
-					<th><label for="cta_stripe_secret_key"><?php esc_html_e( 'Secret Key', 'cta-lms' ); ?></label></th>
-					<td><input type="password" class="regular-text" id="cta_stripe_secret_key" name="cta_stripe_secret_key" value="<?php echo esc_attr( get_option( 'cta_stripe_secret_key', '' ) ); ?>" autocomplete="off"></td>
-				</tr>
-				<tr>
-					<th><label for="cta_stripe_publishable_key"><?php esc_html_e( 'Publishable Key', 'cta-lms' ); ?></label></th>
-					<td><input type="text" class="regular-text" id="cta_stripe_publishable_key" name="cta_stripe_publishable_key" value="<?php echo esc_attr( get_option( 'cta_stripe_publishable_key', '' ) ); ?>"></td>
-				</tr>
-				<tr>
-					<th><label for="cta_stripe_webhook_secret"><?php esc_html_e( 'Webhook Secret', 'cta-lms' ); ?></label></th>
-					<td><input type="password" class="regular-text" id="cta_stripe_webhook_secret" name="cta_stripe_webhook_secret" value="<?php echo esc_attr( get_option( 'cta_stripe_webhook_secret', '' ) ); ?>" autocomplete="off"></td>
-				</tr>
-				<tr>
-					<th><?php esc_html_e( 'Webhook URL', 'cta-lms' ); ?></th>
-					<td><input type="text" class="large-text" readonly value="<?php echo esc_attr( $webhook_url ); ?>"></td>
-				</tr>
-			</table>
-			<p>
-				<button type="button" class="button" id="cta-test-stripe"><?php esc_html_e( 'Test Connection', 'cta-lms' ); ?></button>
-				<span id="cta-stripe-test-result" class="cta-inline-result"></span>
-			</p>
+		<div class="cta-admin-panel cta-stripe-settings">
+			<h2><?php esc_html_e( 'Stripe Integration', 'cta-lms' ); ?></h2>
+
+			<?php
+			$active_mode     = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_mode() : (string) get_option( 'cta_stripe_mode', 'test' );
+			$test_creds      = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_credentials( 'test' ) : array( 'publishable_key' => '', 'secret_key' => '', 'webhook_secret' => '' );
+			$live_creds      = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_credentials( 'live' ) : array( 'publishable_key' => '', 'secret_key' => '', 'webhook_secret' => '' );
+			$webhook_test    = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_webhook_url( 'test' ) : add_query_arg( 'env', 'test', $webhook_url );
+			$webhook_live    = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_webhook_url( 'live' ) : add_query_arg( 'env', 'live', $webhook_url );
+			$portal_test     = (string) get_option( 'cta_stripe_test_portal_configuration_id', '' );
+			$portal_live     = (string) get_option( 'cta_stripe_live_portal_configuration_id', '' );
+			$portal_config   = ( 'live' === $active_mode ) ? $portal_live : $portal_test;
+			if ( '' === $portal_config ) {
+				$portal_config = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
+			}
+			$required_events = 'checkout.session.completed, customer.created, customer.updated, customer.subscription.created, customer.subscription.updated, customer.subscription.deleted, customer.subscription.trial_will_end, invoice.paid, invoice.payment_failed, payment_intent.succeeded, payment_intent.payment_failed, charge.refunded';
+			?>
+
+			<div class="cta-stripe-mode-switch" role="group" aria-label="<?php esc_attr_e( 'Active Stripe mode', 'cta-lms' ); ?>">
+				<div class="cta-stripe-mode-switch__label">
+					<strong><?php esc_html_e( 'Active Mode', 'cta-lms' ); ?></strong>
+					<span class="description"><?php esc_html_e( 'Only one mode drives checkout, subscriptions, and webhook verification at a time. Test fully in Sandbox, then flip to Live.', 'cta-lms' ); ?></span>
+				</div>
+				<div class="cta-stripe-mode-switch__controls">
+					<label class="cta-stripe-mode-option <?php echo 'test' === $active_mode ? 'is-active' : ''; ?>">
+						<input type="radio" name="cta_stripe_mode" value="test" <?php checked( $active_mode, 'test' ); ?>>
+						<span><?php esc_html_e( 'Sandbox / Test', 'cta-lms' ); ?></span>
+					</label>
+					<label class="cta-stripe-mode-option <?php echo 'live' === $active_mode ? 'is-active' : ''; ?>">
+						<input type="radio" name="cta_stripe_mode" value="live" <?php checked( $active_mode, 'live' ); ?>>
+						<span><?php esc_html_e( 'Live', 'cta-lms' ); ?></span>
+					</label>
+				</div>
+				<p class="cta-stripe-mode-badge" data-mode-badge>
+					<?php
+					echo 'live' === $active_mode
+						? esc_html__( 'Currently using Live credentials for all payments.', 'cta-lms' )
+						: esc_html__( 'Currently using Sandbox / Test credentials for all payments.', 'cta-lms' );
+					?>
+				</p>
+			</div>
+
+			<div class="cta-stripe-tabs" role="tablist" aria-label="<?php esc_attr_e( 'Stripe environments', 'cta-lms' ); ?>">
+				<button type="button" class="cta-stripe-tab cta-stripe-tab--active" data-stripe-tab="test" role="tab" aria-selected="true">
+					<?php esc_html_e( 'Sandbox / Test', 'cta-lms' ); ?>
+				</button>
+				<button type="button" class="cta-stripe-tab" data-stripe-tab="live" role="tab" aria-selected="false">
+					<?php esc_html_e( 'Live', 'cta-lms' ); ?>
+				</button>
+			</div>
+
+			<section class="cta-stripe-panel" data-stripe-panel="test" role="tabpanel">
+				<table class="form-table">
+					<tr>
+						<th><label for="cta_stripe_test_publishable_key"><?php esc_html_e( 'Test Publishable Key', 'cta-lms' ); ?></label></th>
+						<td>
+							<input type="text" class="regular-text cta-stripe-pk" id="cta_stripe_test_publishable_key" name="cta_stripe_test_publishable_key" value="<?php echo esc_attr( $test_creds['publishable_key'] ); ?>" placeholder="pk_test_..." autocomplete="off" data-stripe-env="test">
+							<p class="description"><?php esc_html_e( 'Starts with pk_test_ — safe to expose client-side.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="cta_stripe_test_secret_key"><?php esc_html_e( 'Test Secret Key', 'cta-lms' ); ?></label></th>
+						<td>
+							<div class="cta-secret-field">
+								<input type="password" class="regular-text cta-stripe-sk" id="cta_stripe_test_secret_key" name="cta_stripe_test_secret_key" value="<?php echo esc_attr( $test_creds['secret_key'] ); ?>" placeholder="sk_test_..." autocomplete="new-password" data-stripe-env="test">
+								<button type="button" class="button cta-toggle-secret" aria-label="<?php esc_attr_e( 'Show or hide secret', 'cta-lms' ); ?>"><?php esc_html_e( 'Show', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Starts with sk_test_ — never expose client-side.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="cta_stripe_test_webhook_secret"><?php esc_html_e( 'Webhook Signing Secret (Test)', 'cta-lms' ); ?></label></th>
+						<td>
+							<div class="cta-secret-field">
+								<input type="password" class="regular-text" id="cta_stripe_test_webhook_secret" name="cta_stripe_test_webhook_secret" value="<?php echo esc_attr( $test_creds['webhook_secret'] ); ?>" placeholder="whsec_..." autocomplete="new-password">
+								<button type="button" class="button cta-toggle-secret" aria-label="<?php esc_attr_e( 'Show or hide secret', 'cta-lms' ); ?>"><?php esc_html_e( 'Show', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Starts with whsec_ — from the Test webhook endpoint in Stripe Dashboard.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><?php esc_html_e( 'Webhook URL (Test)', 'cta-lms' ); ?></th>
+						<td>
+							<div class="cta-webhook-url-row">
+								<input type="text" class="large-text" id="cta_stripe_test_webhook_url" readonly value="<?php echo esc_attr( $webhook_test ); ?>">
+								<button type="button" class="button cta-copy-shortcode" data-shortcode="<?php echo esc_attr( $webhook_test ); ?>"><?php esc_html_e( 'Copy', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Paste this into Stripe Dashboard → Developers → Webhooks (Test mode).', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+				</table>
+				<p>
+					<button type="button" class="button cta-test-stripe-btn" data-stripe-env="test" disabled><?php esc_html_e( 'Test Connection', 'cta-lms' ); ?></button>
+					<span class="cta-inline-result cta-stripe-test-result" data-stripe-env="test" role="status"></span>
+				</p>
+			</section>
+
+			<section class="cta-stripe-panel" data-stripe-panel="live" role="tabpanel" hidden>
+				<table class="form-table">
+					<tr>
+						<th><label for="cta_stripe_live_publishable_key"><?php esc_html_e( 'Live Publishable Key', 'cta-lms' ); ?></label></th>
+						<td>
+							<input type="text" class="regular-text cta-stripe-pk" id="cta_stripe_live_publishable_key" name="cta_stripe_live_publishable_key" value="<?php echo esc_attr( $live_creds['publishable_key'] ); ?>" placeholder="pk_live_..." autocomplete="off" data-stripe-env="live">
+							<p class="description"><?php esc_html_e( 'Starts with pk_live_ — safe to expose client-side.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="cta_stripe_live_secret_key"><?php esc_html_e( 'Live Secret Key', 'cta-lms' ); ?></label></th>
+						<td>
+							<div class="cta-secret-field">
+								<input type="password" class="regular-text cta-stripe-sk" id="cta_stripe_live_secret_key" name="cta_stripe_live_secret_key" value="<?php echo esc_attr( $live_creds['secret_key'] ); ?>" placeholder="sk_live_..." autocomplete="new-password" data-stripe-env="live">
+								<button type="button" class="button cta-toggle-secret" aria-label="<?php esc_attr_e( 'Show or hide secret', 'cta-lms' ); ?>"><?php esc_html_e( 'Show', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Starts with sk_live_ — never expose client-side.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><label for="cta_stripe_live_webhook_secret"><?php esc_html_e( 'Webhook Signing Secret (Live)', 'cta-lms' ); ?></label></th>
+						<td>
+							<div class="cta-secret-field">
+								<input type="password" class="regular-text" id="cta_stripe_live_webhook_secret" name="cta_stripe_live_webhook_secret" value="<?php echo esc_attr( $live_creds['webhook_secret'] ); ?>" placeholder="whsec_..." autocomplete="new-password">
+								<button type="button" class="button cta-toggle-secret" aria-label="<?php esc_attr_e( 'Show or hide secret', 'cta-lms' ); ?>"><?php esc_html_e( 'Show', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Starts with whsec_ — from the Live webhook endpoint in Stripe Dashboard.', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+					<tr>
+						<th><?php esc_html_e( 'Webhook URL (Live)', 'cta-lms' ); ?></th>
+						<td>
+							<div class="cta-webhook-url-row">
+								<input type="text" class="large-text" id="cta_stripe_live_webhook_url" readonly value="<?php echo esc_attr( $webhook_live ); ?>">
+								<button type="button" class="button cta-copy-shortcode" data-shortcode="<?php echo esc_attr( $webhook_live ); ?>"><?php esc_html_e( 'Copy', 'cta-lms' ); ?></button>
+							</div>
+							<p class="description"><?php esc_html_e( 'Paste this into Stripe Dashboard → Developers → Webhooks (Live mode).', 'cta-lms' ); ?></p>
+						</td>
+					</tr>
+				</table>
+				<p>
+					<button type="button" class="button cta-test-stripe-btn" data-stripe-env="live" disabled><?php esc_html_e( 'Test Connection', 'cta-lms' ); ?></button>
+					<span class="cta-inline-result cta-stripe-test-result" data-stripe-env="live" role="status"></span>
+				</p>
+			</section>
+
 			<table class="form-table">
 				<tr>
 					<th><?php esc_html_e( 'Testing Mode', 'cta-lms' ); ?></th>
@@ -61,22 +173,17 @@ $notice = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ?? '' ) );
 							<input type="checkbox" name="cta_payments_bypass" value="yes" <?php checked( get_option( 'cta_payments_bypass', 'yes' ), 'yes' ); ?>>
 							<?php esc_html_e( 'Skip payments (instant enroll / subscribe without Stripe)', 'cta-lms' ); ?>
 						</label>
-						<p class="description"><?php esc_html_e( 'Enable only for UI demos without Stripe. This is NOT Stripe test mode. Turn this OFF to use real Stripe Checkout and the Customer Billing Portal (with Stripe test keys if you are still testing payments).', 'cta-lms' ); ?></p>
+						<p class="description"><?php esc_html_e( 'Enable only for UI demos without Stripe. This is NOT Stripe Sandbox mode. Turn this OFF to use real Stripe Checkout with the Active Mode credentials above.', 'cta-lms' ); ?></p>
 					</td>
 				</tr>
 				<tr>
 					<th><?php esc_html_e( 'Customer Billing Portal', 'cta-lms' ); ?></th>
 					<td>
 						<p class="description" style="margin-top:0;">
-							<?php esc_html_e( "Students use Manage Subscription to open Stripe's Customer Portal (update payment method, view invoices, cancel auto-renewal at period end, and reactivate). The portal configuration is created automatically in your Stripe account on first use.", 'cta-lms' ); ?>
+							<?php esc_html_e( "Students use Manage Subscription to open Stripe's Customer Portal. The portal configuration is created automatically for the Active Mode account on first use.", 'cta-lms' ); ?>
 						</p>
-						<?php
-						$portal_config = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
-						if ( $portal_config ) :
-							?>
-							<p>
-								<code><?php echo esc_html( $portal_config ); ?></code>
-							</p>
+						<?php if ( $portal_config ) : ?>
+							<p><code><?php echo esc_html( $portal_config ); ?></code></p>
 						<?php endif; ?>
 						<p>
 							<button type="button" class="button" id="cta-ensure-portal"><?php esc_html_e( 'Ensure Portal Configuration', 'cta-lms' ); ?></button>
@@ -85,9 +192,10 @@ $notice = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ?? '' ) );
 						<p class="description">
 							<?php
 							printf(
-								/* translators: %s: Stripe dashboard URL */
-								esc_html__( 'Webhook events required: checkout.session.completed, customer.subscription.updated, customer.subscription.deleted, invoice.paid, invoice.payment_failed. Dashboard: %s', 'cta-lms' ),
-								'https://dashboard.stripe.com/' . ( 'live' === get_option( 'cta_stripe_mode', 'test' ) ? '' : 'test/' ) . 'settings/billing/portal'
+								/* translators: 1: event list, 2: Stripe dashboard URL */
+								esc_html__( 'Register these webhook events: %1$s. Portal dashboard: %2$s', 'cta-lms' ),
+								esc_html( $required_events ),
+								'https://dashboard.stripe.com/' . ( 'live' === $active_mode ? '' : 'test/' ) . 'settings/billing/portal'
 							);
 							?>
 						</p>

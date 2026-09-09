@@ -1013,6 +1013,10 @@ class CTA_Admin {
 	 * Render settings form.
 	 */
 	public function render_settings() {
+		if ( class_exists( 'CTA_Stripe' ) ) {
+			CTA_Stripe::migrate_legacy_credentials();
+		}
+
 		$this->load_view(
 			'settings.php',
 			array(
@@ -2244,10 +2248,26 @@ class CTA_Admin {
 	public function save_settings() {
 		$this->verify_admin_request( 'cta_save_settings' );
 
-		update_option( 'cta_stripe_mode', sanitize_text_field( wp_unslash( $_POST['cta_stripe_mode'] ?? 'test' ) ) );
-		update_option( 'cta_stripe_secret_key', sanitize_text_field( wp_unslash( $_POST['cta_stripe_secret_key'] ?? '' ) ) );
-		update_option( 'cta_stripe_publishable_key', sanitize_text_field( wp_unslash( $_POST['cta_stripe_publishable_key'] ?? '' ) ) );
-		update_option( 'cta_stripe_webhook_secret', sanitize_text_field( wp_unslash( $_POST['cta_stripe_webhook_secret'] ?? '' ) ) );
+		$mode = sanitize_text_field( wp_unslash( $_POST['cta_stripe_mode'] ?? 'test' ) );
+		$mode = ( 'live' === $mode ) ? 'live' : 'test';
+		update_option( 'cta_stripe_mode', $mode );
+
+		$stripe_fields = array(
+			'cta_stripe_test_publishable_key',
+			'cta_stripe_test_secret_key',
+			'cta_stripe_test_webhook_secret',
+			'cta_stripe_live_publishable_key',
+			'cta_stripe_live_secret_key',
+			'cta_stripe_live_webhook_secret',
+		);
+		foreach ( $stripe_fields as $field ) {
+			update_option( $field, sanitize_text_field( wp_unslash( $_POST[ $field ] ?? '' ) ), false );
+		}
+
+		if ( class_exists( 'CTA_Stripe' ) ) {
+			CTA_Stripe::sync_legacy_mirror_options();
+		}
+
 		update_option( 'cta_payments_bypass', isset( $_POST['cta_payments_bypass'] ) ? 'yes' : 'no' );
 
 		foreach ( self::get_page_option_map() as $option_key => $label ) {
@@ -2729,7 +2749,7 @@ class CTA_Admin {
 	}
 
 	/**
-	 * AJAX: test Stripe API connection.
+	 * AJAX: test Stripe API connection for Sandbox or Live credentials.
 	 */
 	public function ajax_test_stripe_connection() {
 		$this->verify_admin_ajax();
@@ -2738,32 +2758,87 @@ class CTA_Admin {
 			wp_send_json_error( array( 'message' => __( 'Stripe SDK not installed. Run composer install.', 'cta-lms' ) ) );
 		}
 
-		$secret = sanitize_text_field( wp_unslash( $_POST['secret_key'] ?? get_option( 'cta_stripe_secret_key', '' ) ) );
+		$env    = sanitize_text_field( wp_unslash( $_POST['env'] ?? 'test' ) );
+		$env    = ( 'live' === $env ) ? 'live' : 'test';
+		$secret = sanitize_text_field( wp_unslash( $_POST['secret_key'] ?? '' ) );
+		$pub    = sanitize_text_field( wp_unslash( $_POST['publishable_key'] ?? '' ) );
 
 		if ( '' === $secret ) {
-			wp_send_json_error( array( 'message' => __( 'Secret key is required.', 'cta-lms' ) ) );
+			$creds  = class_exists( 'CTA_Stripe' ) ? CTA_Stripe::get_credentials( $env ) : array( 'secret_key' => '' );
+			$secret = (string) ( $creds['secret_key'] ?? '' );
+		}
+
+		if ( '' === $secret || '' === $pub ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Publishable Key and Secret Key are both required to test the connection.', 'cta-lms' ),
+				)
+			);
+		}
+
+		$expected_sk = ( 'live' === $env ) ? 'sk_live_' : 'sk_test_';
+		$expected_pk = ( 'live' === $env ) ? 'pk_live_' : 'pk_test_';
+		$other_label = ( 'live' === $env ) ? __( 'Test', 'cta-lms' ) : __( 'Live', 'cta-lms' );
+		$tab_label   = ( 'live' === $env ) ? __( 'Live', 'cta-lms' ) : __( 'Test', 'cta-lms' );
+
+		if ( 0 !== strpos( $secret, $expected_sk ) ) {
+			wp_send_json_error(
+				array(
+					'message' => sprintf(
+						/* translators: 1: Live/Test, 2: Test/Live */
+						__( 'This looks like a %1$s key — please use a %2$s key in this field.', 'cta-lms' ),
+						$other_label,
+						$tab_label
+					),
+				)
+			);
+		}
+
+		if ( '' !== $pub && 0 !== strpos( $pub, $expected_pk ) ) {
+			wp_send_json_error(
+				array(
+					'message' => sprintf(
+						/* translators: 1: Live/Test, 2: Test/Live */
+						__( 'This looks like a %1$s publishable key — please use a %2$s key in this field.', 'cta-lms' ),
+						$other_label,
+						$tab_label
+					),
+				)
+			);
 		}
 
 		try {
 			\Stripe\Stripe::setApiKey( $secret );
-			$account = \Stripe\Account::retrieve();
+			// Lightweight read-only auth check — never log the secret.
+			\Stripe\Balance::retrieve();
 
 			wp_send_json_success(
 				array(
 					'message' => sprintf(
-						/* translators: %s: Stripe account ID */
-						__( 'Connected to Stripe account %s', 'cta-lms' ),
-						isset( $account->id ) ? $account->id : ''
-					),
-					'account' => array(
-						'id'      => $account->id ?? '',
-						'country' => $account->country ?? '',
-						'email'   => $account->email ?? '',
+						/* translators: %s: Test or Live */
+						__( 'Connected successfully — Stripe %s mode is active and verified.', 'cta-lms' ),
+						$tab_label
 					),
 				)
 			);
+		} catch ( \Stripe\Exception\AuthenticationException $e ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Connection failed — Stripe rejected this key. Double-check it was copied correctly.', 'cta-lms' ),
+				)
+			);
+		} catch ( \Stripe\Exception\ApiConnectionException $e ) {
+			wp_send_json_error(
+				array(
+					'message' => __( "Couldn't reach Stripe — check your server's outbound connection and try again.", 'cta-lms' ),
+				)
+			);
 		} catch ( Exception $e ) {
-			wp_send_json_error( array( 'message' => $e->getMessage() ) );
+			wp_send_json_error(
+				array(
+					'message' => __( 'Connection failed — Stripe rejected this key. Double-check it was copied correctly.', 'cta-lms' ),
+				)
+			);
 		}
 	}
 

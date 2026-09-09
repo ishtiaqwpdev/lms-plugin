@@ -45,13 +45,178 @@ class CTA_Stripe {
 	private $mode;
 
 	/**
+	 * Whether legacy credential migration is in progress.
+	 *
+	 * @var bool
+	 */
+	private static $migrating_credentials = false;
+
+	/**
+	 * Normalize environment to test|live.
+	 *
+	 * @param string $env Environment label.
+	 * @return string
+	 */
+	public static function normalize_env( $env ) {
+		return ( 'live' === (string) $env ) ? 'live' : 'test';
+	}
+
+	/**
+	 * Active payment mode (Sandbox/Test or Live).
+	 *
+	 * @return string test|live
+	 */
+	public static function get_mode() {
+		return self::normalize_env( get_option( 'cta_stripe_mode', 'test' ) );
+	}
+
+	/**
+	 * Option key prefix for an environment.
+	 *
+	 * @param string $env test|live
+	 * @return string
+	 */
+	public static function credential_option_prefix( $env ) {
+		return ( 'live' === self::normalize_env( $env ) ) ? 'cta_stripe_live_' : 'cta_stripe_test_';
+	}
+
+	/**
+	 * Credential set for an environment (does not change Active Mode).
+	 *
+	 * @param string|null $env test|live; null = active mode.
+	 * @return array{mode:string,publishable_key:string,secret_key:string,webhook_secret:string}
+	 */
+	public static function get_credentials( $env = null ) {
+		// Ensure legacy single-key installs are mapped before any read.
+		if ( ! self::$migrating_credentials && '1' !== (string) get_option( 'cta_stripe_dual_creds_migrated', '' ) ) {
+			self::migrate_legacy_credentials();
+		}
+
+		$env    = self::normalize_env( null === $env ? self::get_mode() : $env );
+		$prefix = self::credential_option_prefix( $env );
+
+		return array(
+			'mode'            => $env,
+			'publishable_key' => (string) get_option( $prefix . 'publishable_key', '' ),
+			'secret_key'      => (string) get_option( $prefix . 'secret_key', '' ),
+			'webhook_secret'  => (string) get_option( $prefix . 'webhook_secret', '' ),
+		);
+	}
+
+	/**
+	 * Credentials for the Active Mode switch.
+	 *
+	 * @return array{mode:string,publishable_key:string,secret_key:string,webhook_secret:string}
+	 */
+	public static function get_active_credentials() {
+		return self::get_credentials( self::get_mode() );
+	}
+
+	/**
+	 * Auto-generated webhook endpoint URL for an environment.
+	 *
+	 * @param string $env test|live
+	 * @return string
+	 */
+	public static function get_webhook_url( $env ) {
+		$env = self::normalize_env( $env );
+		return add_query_arg( 'env', $env, rest_url( 'cta-lms/v1/stripe-webhook' ) );
+	}
+
+	/**
+	 * Portal configuration option key for the given mode.
+	 *
+	 * @param string|null $env test|live
+	 * @return string
+	 */
+	public static function portal_config_option_key( $env = null ) {
+		$env = self::normalize_env( null === $env ? self::get_mode() : $env );
+		return ( 'live' === $env ) ? 'cta_stripe_live_portal_configuration_id' : 'cta_stripe_test_portal_configuration_id';
+	}
+
+	/**
+	 * One-time migration from legacy single-key options into test/live sets.
+	 *
+	 * @return void
+	 */
+	public static function migrate_legacy_credentials() {
+		if ( self::$migrating_credentials ) {
+			return;
+		}
+
+		if ( '1' === (string) get_option( 'cta_stripe_dual_creds_migrated', '' ) ) {
+			return;
+		}
+
+		self::$migrating_credentials = true;
+
+		$legacy_secret = (string) get_option( 'cta_stripe_secret_key', '' );
+		$legacy_pub    = (string) get_option( 'cta_stripe_publishable_key', '' );
+		$legacy_whsec  = (string) get_option( 'cta_stripe_webhook_secret', '' );
+		$legacy_portal = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
+		$mode          = self::get_mode();
+
+		$target = 'test';
+		if ( 0 === strpos( $legacy_secret, 'sk_live_' ) || 0 === strpos( $legacy_pub, 'pk_live_' ) ) {
+			$target = 'live';
+		} elseif ( 0 === strpos( $legacy_secret, 'sk_test_' ) || 0 === strpos( $legacy_pub, 'pk_test_' ) ) {
+			$target = 'test';
+		} else {
+			$target = $mode;
+		}
+
+		$prefix = self::credential_option_prefix( $target );
+
+		if ( $legacy_secret && '' === (string) get_option( $prefix . 'secret_key', '' ) ) {
+			update_option( $prefix . 'secret_key', $legacy_secret, false );
+		}
+		if ( $legacy_pub && '' === (string) get_option( $prefix . 'publishable_key', '' ) ) {
+			update_option( $prefix . 'publishable_key', $legacy_pub, false );
+		}
+		if ( $legacy_whsec && '' === (string) get_option( $prefix . 'webhook_secret', '' ) ) {
+			update_option( $prefix . 'webhook_secret', $legacy_whsec, false );
+		}
+
+		$portal_key = self::portal_config_option_key( $target );
+		if ( $legacy_portal && '' === (string) get_option( $portal_key, '' ) ) {
+			update_option( $portal_key, $legacy_portal, false );
+		}
+
+		update_option( 'cta_stripe_dual_creds_migrated', '1', false );
+		self::$migrating_credentials = false;
+
+		// Keep legacy options mirrored to Active Mode for any leftover readers.
+		self::sync_legacy_mirror_options();
+	}
+
+	/**
+	 * Mirror Active Mode credentials into legacy option names.
+	 *
+	 * @return void
+	 */
+	public static function sync_legacy_mirror_options() {
+		$creds = self::get_active_credentials();
+		update_option( 'cta_stripe_secret_key', $creds['secret_key'], false );
+		update_option( 'cta_stripe_publishable_key', $creds['publishable_key'], false );
+		update_option( 'cta_stripe_webhook_secret', $creds['webhook_secret'], false );
+
+		$portal = (string) get_option( self::portal_config_option_key(), '' );
+		if ( $portal ) {
+			update_option( 'cta_stripe_portal_configuration_id', $portal, false );
+		}
+	}
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
-		$this->secret_key      = (string) get_option( 'cta_stripe_secret_key', '' );
-		$this->publishable_key = (string) get_option( 'cta_stripe_publishable_key', '' );
-		$this->webhook_secret  = (string) get_option( 'cta_stripe_webhook_secret', '' );
-		$this->mode            = (string) get_option( 'cta_stripe_mode', 'test' );
+		self::migrate_legacy_credentials();
+
+		$creds                 = self::get_active_credentials();
+		$this->secret_key      = $creds['secret_key'];
+		$this->publishable_key = $creds['publishable_key'];
+		$this->webhook_secret  = $creds['webhook_secret'];
+		$this->mode            = $creds['mode'];
 
 		if ( ! empty( $this->secret_key ) && class_exists( '\Stripe\Stripe' ) ) {
 			\Stripe\Stripe::setApiKey( $this->secret_key );
@@ -69,13 +234,13 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Whether Stripe secret key is configured.
+	 * Whether Stripe secret key is configured for Active Mode.
 	 *
 	 * @return bool
 	 */
 	private function is_stripe_configured() {
-		$key = get_option( 'cta_stripe_secret_key', '' );
-		return ! empty( $key );
+		$creds = self::get_active_credentials();
+		return ! empty( $creds['secret_key'] );
 	}
 
 	/**
@@ -201,8 +366,12 @@ class CTA_Stripe {
 			return '';
 		}
 
-		$features = $this->get_billing_portal_features();
-		$existing = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
+		$features   = $this->get_billing_portal_features();
+		$portal_key = self::portal_config_option_key();
+		$existing   = (string) get_option( $portal_key, '' );
+		if ( '' === $existing ) {
+			$existing = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
+		}
 
 		if ( $existing ) {
 			try {
@@ -217,7 +386,8 @@ class CTA_Stripe {
 				);
 
 				if ( ! empty( $config->id ) ) {
-					update_option( 'cta_stripe_portal_configuration_id', (string) $config->id );
+					update_option( $portal_key, (string) $config->id, false );
+					update_option( 'cta_stripe_portal_configuration_id', (string) $config->id, false );
 					return (string) $config->id;
 				}
 			} catch ( Exception $e ) {
@@ -242,7 +412,8 @@ class CTA_Stripe {
 				);
 			}
 
-			update_option( 'cta_stripe_portal_configuration_id', (string) $config->id );
+			update_option( $portal_key, (string) $config->id, false );
+			update_option( 'cta_stripe_portal_configuration_id', (string) $config->id, false );
 
 			return (string) $config->id;
 		} catch ( Exception $e ) {
@@ -1416,50 +1587,302 @@ class CTA_Stripe {
 
 		$payload    = $request->get_body();
 		$sig_header = $request->get_header( 'stripe-signature' );
+		$env_param  = sanitize_text_field( (string) $request->get_param( 'env' ) );
+		$verified   = $this->construct_webhook_event( $payload, $sig_header, $env_param );
 
-		try {
-			if ( ! empty( $this->webhook_secret ) ) {
-				$event = \Stripe\Webhook::constructEvent(
-					$payload,
-					$sig_header,
-					$this->webhook_secret
-				);
-			} else {
-				$event = json_decode( $payload );
+		if ( is_wp_error( $verified ) ) {
+			$code = (int) $verified->get_error_data();
+			if ( $code < 400 ) {
+				$code = 400;
 			}
-		} catch ( \UnexpectedValueException $e ) {
-			return new WP_REST_Response( array( 'error' => 'Invalid payload.' ), 400 );
-		} catch ( \Stripe\Exception\SignatureVerificationException $e ) {
-			return new WP_REST_Response( array( 'error' => 'Invalid signature.' ), 400 );
+			return new WP_REST_Response( array( 'error' => $verified->get_error_message() ), $code );
 		}
+
+		$event = $verified['event'];
+		$env   = $verified['env'];
 
 		if ( empty( $event->type ) ) {
 			return new WP_REST_Response( array( 'error' => 'Missing event type.' ), 400 );
 		}
 
-		switch ( $event->type ) {
+		$event_id = sanitize_text_field( (string) ( $event->id ?? '' ) );
+		if ( $event_id && ! $this->claim_webhook_event( $event_id ) ) {
+			// Duplicate delivery — acknowledge without re-processing.
+			return new WP_REST_Response( array( 'received' => true, 'duplicate' => true ), 200 );
+		}
+
+		$this->dispatch_webhook_event( $event, $env );
+
+		return new WP_REST_Response( array( 'received' => true ), 200 );
+	}
+
+	/**
+	 * Verify webhook signature using the environment signing secret.
+	 *
+	 * @param string $payload    Raw body.
+	 * @param string $sig_header Stripe-Signature header.
+	 * @param string $env_param  Optional env query (test|live).
+	 * @return array{event:object,env:string}|WP_Error
+	 */
+	private function construct_webhook_event( $payload, $sig_header, $env_param = '' ) {
+		$candidates = array();
+		if ( in_array( $env_param, array( 'test', 'live' ), true ) ) {
+			$candidates[] = $env_param;
+		} else {
+			$candidates[] = self::get_mode();
+			$other        = ( 'live' === self::get_mode() ) ? 'test' : 'live';
+			$candidates[] = $other;
+		}
+
+		$last_error = null;
+
+		foreach ( $candidates as $env ) {
+			$creds  = self::get_credentials( $env );
+			$secret = $creds['webhook_secret'];
+
+			if ( '' === $secret ) {
+				continue;
+			}
+
+			try {
+				$event = \Stripe\Webhook::constructEvent( $payload, $sig_header, $secret );
+				return array(
+					'event' => $event,
+					'env'   => $env,
+				);
+			} catch ( \UnexpectedValueException $e ) {
+				return new WP_Error( 'invalid_payload', 'Invalid payload.', 400 );
+			} catch ( \Stripe\Exception\SignatureVerificationException $e ) {
+				$last_error = $e;
+				continue;
+			}
+		}
+
+		// No signing secret configured for any candidate — reject (do not process unverified).
+		if ( null === $last_error ) {
+			return new WP_Error( 'webhook_secret_missing', 'Webhook signing secret is not configured.', 400 );
+		}
+
+		return new WP_Error( 'invalid_signature', 'Invalid signature.', 400 );
+	}
+
+	/**
+	 * Claim an event ID for idempotent processing. Returns false if already seen.
+	 *
+	 * @param string $event_id Stripe event ID.
+	 * @return bool
+	 */
+	private function claim_webhook_event( $event_id ) {
+		$event_id = sanitize_text_field( $event_id );
+		if ( '' === $event_id ) {
+			return true;
+		}
+
+		$key = 'cta_stripe_evt_' . md5( $event_id );
+		if ( get_transient( $key ) ) {
+			return false;
+		}
+
+		set_transient( $key, 1, WEEK_IN_SECONDS );
+		return true;
+	}
+
+	/**
+	 * Cron/async entry reserved for future queue workers.
+	 *
+	 * @param string $event_id Stripe event ID.
+	 * @param string $event_json Encoded event object.
+	 * @return void
+	 */
+	public function process_webhook_event_async( $event_id, $event_json ) {
+		$event = json_decode( (string) $event_json );
+		if ( ! $event || empty( $event->type ) ) {
+			return;
+		}
+
+		$this->dispatch_webhook_event( $event, self::get_mode() );
+	}
+
+	/**
+	 * Route a verified Stripe event to the correct handler.
+	 *
+	 * @param object $event Stripe event.
+	 * @param string $env   test|live.
+	 * @return void
+	 */
+	private function dispatch_webhook_event( $event, $env = 'test' ) {
+		$type   = (string) ( $event->type ?? '' );
+		$object = isset( $event->data->object ) ? $event->data->object : null;
+
+		if ( ! $object ) {
+			return;
+		}
+
+		switch ( $type ) {
 			case 'checkout.session.completed':
-				$this->handle_checkout_completed( $event->data->object );
+				$this->handle_checkout_completed( $object );
 				break;
 
+			case 'customer.created':
+			case 'customer.updated':
+				$this->handle_customer_upsert( $object );
+				break;
+
+			case 'customer.subscription.created':
 			case 'customer.subscription.updated':
-				$this->sync_subscription_status_from_stripe( $event->data->object );
+				$this->sync_subscription_status_from_stripe( $object );
 				break;
 
 			case 'customer.subscription.deleted':
-				$this->handle_subscription_cancelled( $event->data->object );
+				$this->handle_subscription_cancelled( $object );
 				break;
 
-			case 'invoice.payment_failed':
-				$this->handle_subscription_payment_failed( $event->data->object );
+			case 'customer.subscription.trial_will_end':
+				$this->handle_subscription_trial_will_end( $object );
 				break;
 
 			case 'invoice.paid':
-				$this->handle_subscription_invoice_paid( $event->data->object );
+				$this->handle_subscription_invoice_paid( $object );
+				break;
+
+			case 'invoice.payment_failed':
+				$this->handle_subscription_payment_failed( $object );
+				break;
+
+			case 'payment_intent.succeeded':
+				$this->handle_payment_intent_succeeded( $object );
+				break;
+
+			case 'payment_intent.payment_failed':
+				$this->handle_payment_intent_failed( $object );
+				break;
+
+			case 'charge.refunded':
+				$this->handle_charge_refunded( $object );
 				break;
 		}
+	}
 
-		return new WP_REST_Response( array( 'received' => true ), 200 );
+	/**
+	 * Keep local Stripe Customer ID linked when Stripe customer events arrive.
+	 *
+	 * @param object $customer Stripe customer object.
+	 * @return void
+	 */
+	private function handle_customer_upsert( $customer ) {
+		$customer_id = sanitize_text_field( (string) ( $customer->id ?? '' ) );
+		if ( '' === $customer_id ) {
+			return;
+		}
+
+		$user_id = 0;
+		if ( ! empty( $customer->metadata->user_id ) ) {
+			$user_id = absint( $customer->metadata->user_id );
+		}
+
+		if ( ! $user_id && ! empty( $customer->email ) ) {
+			$user = get_user_by( 'email', sanitize_email( (string) $customer->email ) );
+			if ( $user ) {
+				$user_id = (int) $user->ID;
+			}
+		}
+
+		if ( $user_id ) {
+			update_user_meta( $user_id, 'cta_stripe_customer_id', $customer_id );
+		}
+	}
+
+	/**
+	 * Trial ending soon — record reminder state; skip if already paid/active.
+	 *
+	 * @param object $subscription Stripe subscription.
+	 * @return void
+	 */
+	private function handle_subscription_trial_will_end( $subscription ) {
+		$status = sanitize_text_field( (string) ( $subscription->status ?? '' ) );
+		if ( ! in_array( $status, array( 'trialing', 'incomplete' ), true ) ) {
+			return;
+		}
+
+		$user_id = $this->get_user_id_by_subscription( sanitize_text_field( (string) ( $subscription->id ?? '' ) ) );
+		if ( ! $user_id ) {
+			return;
+		}
+
+		update_user_meta( $user_id, 'cta_supervision_trial_ending_notice', gmdate( 'c' ) );
+	}
+
+	/**
+	 * One-time PaymentIntent succeeded.
+	 *
+	 * @param object $intent Stripe PaymentIntent.
+	 * @return void
+	 */
+	private function handle_payment_intent_succeeded( $intent ) {
+		global $wpdb;
+
+		$intent_id = sanitize_text_field( (string) ( $intent->id ?? '' ) );
+		if ( '' === $intent_id ) {
+			return;
+		}
+
+		$wpdb->update(
+			$wpdb->prefix . 'cta_payments',
+			array( 'status' => 'completed' ),
+			array( 'stripe_payment_id' => $intent_id ),
+			array( '%s' ),
+			array( '%s' )
+		);
+	}
+
+	/**
+	 * One-time PaymentIntent failed.
+	 *
+	 * @param object $intent Stripe PaymentIntent.
+	 * @return void
+	 */
+	private function handle_payment_intent_failed( $intent ) {
+		global $wpdb;
+
+		$intent_id = sanitize_text_field( (string) ( $intent->id ?? '' ) );
+		if ( '' === $intent_id ) {
+			return;
+		}
+
+		$wpdb->update(
+			$wpdb->prefix . 'cta_payments',
+			array( 'status' => 'failed' ),
+			array( 'stripe_payment_id' => $intent_id ),
+			array( '%s' ),
+			array( '%s' )
+		);
+	}
+
+	/**
+	 * Charge refunded — mark matching payment as refunded.
+	 *
+	 * @param object $charge Stripe charge.
+	 * @return void
+	 */
+	private function handle_charge_refunded( $charge ) {
+		global $wpdb;
+
+		$candidates = array_filter(
+			array(
+				sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) ),
+				sanitize_text_field( (string) ( $charge->id ?? '' ) ),
+			)
+		);
+
+		foreach ( $candidates as $id ) {
+			$wpdb->update(
+				$wpdb->prefix . 'cta_payments',
+				array( 'status' => 'refunded' ),
+				array( 'stripe_payment_id' => $id ),
+				array( '%s' ),
+				array( '%s' )
+			);
+		}
 	}
 
 	/**

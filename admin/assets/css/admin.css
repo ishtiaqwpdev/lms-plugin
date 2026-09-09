@@ -263,6 +263,107 @@
   color: #b32d2e;
 }
 
+.cta-stripe-mode-switch {
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  background: #f6f7f7;
+}
+
+.cta-stripe-mode-switch__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.cta-stripe-mode-switch__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta-stripe-mode-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cta-stripe-mode-option.is-active {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  background: #f0f6fc;
+}
+
+.cta-stripe-mode-badge {
+  margin: 12px 0 0;
+  font-weight: 600;
+}
+
+.cta-stripe-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #c3c4c7;
+}
+
+.cta-stripe-tab {
+  padding: 8px 12px;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  background: #f6f7f7;
+  color: #1d2327;
+  cursor: pointer;
+}
+
+.cta-stripe-tab:hover,
+.cta-stripe-tab:focus {
+  border-color: #2271b1;
+  color: #135e96;
+}
+
+.cta-stripe-tab--active,
+.cta-stripe-tab--active:hover,
+.cta-stripe-tab--active:focus {
+  border-color: #2271b1;
+  background: #2271b1;
+  color: #fff;
+}
+
+.cta-stripe-panel {
+  padding: 18px;
+  margin-bottom: 18px;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.cta-stripe-panel[hidden] {
+  display: none !important;
+}
+
+.cta-secret-field,
+.cta-webhook-url-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.cta-secret-field .regular-text,
+.cta-webhook-url-row .large-text {
+  flex: 1 1 280px;
+  max-width: 100%;
+}
+
 .cta-email-tabs {
   display: flex;
   flex-wrap: wrap;

@@ -704,24 +704,93 @@
   }
 
   function initStripeTest() {
-    $("#cta-test-stripe").on("click", function () {
-      var $result = $("#cta-stripe-test-result");
+    var $settings = $(".cta-stripe-settings");
+    if (!$settings.length) {
+      return;
+    }
+
+    function syncTestButtons() {
+      $settings.find(".cta-test-stripe-btn").each(function () {
+        var env = $(this).data("stripe-env");
+        var pk = $.trim($settings.find('.cta-stripe-pk[data-stripe-env="' + env + '"]').val() || "");
+        var sk = $.trim($settings.find('.cta-stripe-sk[data-stripe-env="' + env + '"]').val() || "");
+        $(this).prop("disabled", !(pk && sk));
+      });
+    }
+
+    $settings.on("click", ".cta-stripe-tab", function () {
+      var tab = $(this).data("stripe-tab");
+      $settings.find(".cta-stripe-tab").removeClass("cta-stripe-tab--active").attr("aria-selected", "false");
+      $(this).addClass("cta-stripe-tab--active").attr("aria-selected", "true");
+      $settings.find(".cta-stripe-panel").attr("hidden", true);
+      $settings.find('.cta-stripe-panel[data-stripe-panel="' + tab + '"]').removeAttr("hidden");
+    });
+
+    $settings.on("change", 'input[name="cta_stripe_mode"]', function () {
+      var mode = $(this).val();
+      $settings.find(".cta-stripe-mode-option").removeClass("is-active");
+      $(this).closest(".cta-stripe-mode-option").addClass("is-active");
+      var msg =
+        mode === "live"
+          ? "Currently using Live credentials for all payments."
+          : "Currently using Sandbox / Test credentials for all payments.";
+      $settings.find("[data-mode-badge]").text(msg);
+    });
+
+    $settings.on("click", ".cta-toggle-secret", function () {
+      var $btn = $(this);
+      var $input = $btn.siblings("input").first();
+      if (!$input.length) {
+        return;
+      }
+      if ($input.attr("type") === "password") {
+        $input.attr("type", "text");
+        $btn.text("Hide");
+      } else {
+        $input.attr("type", "password");
+        $btn.text("Show");
+      }
+    });
+
+    $settings.on("input change", ".cta-stripe-pk, .cta-stripe-sk", syncTestButtons);
+    syncTestButtons();
+
+    $settings.on("click", ".cta-test-stripe-btn", function () {
+      var env = $(this).data("stripe-env");
+      var $result = $settings.find('.cta-stripe-test-result[data-stripe-env="' + env + '"]');
+      var pk = $.trim($settings.find('.cta-stripe-pk[data-stripe-env="' + env + '"]').val() || "");
+      var sk = $.trim($settings.find('.cta-stripe-sk[data-stripe-env="' + env + '"]').val() || "");
+
       $result.removeClass("is-success is-error").text(ctaAdmin.i18n.stripeTesting);
 
       $.post(ctaAdmin.ajaxUrl, {
         action: "cta_test_stripe_connection",
         nonce: ctaAdmin.nonce,
-        secret_key: $("#cta_stripe_secret_key").val()
-      }).done(function (response) {
-        if (response.success) {
-          $result.addClass("is-success").text(response.data.message || ctaAdmin.i18n.stripeSuccess);
-          return;
-        }
+        env: env,
+        publishable_key: pk,
+        secret_key: sk
+      })
+        .done(function (response) {
+          if (response.success) {
+            $result
+              .addClass("is-success")
+              .text(response.data.message || ctaAdmin.i18n.stripeSuccess);
+            return;
+          }
 
-        $result
-          .addClass("is-error")
-          .text(response.data && response.data.message ? response.data.message : ctaAdmin.i18n.stripeFailed);
-      });
+          $result
+            .addClass("is-error")
+            .text(
+              response.data && response.data.message
+                ? response.data.message
+                : ctaAdmin.i18n.stripeFailed
+            );
+        })
+        .fail(function () {
+          $result
+            .addClass("is-error")
+            .text("Couldn't reach Stripe — check your server's outbound connection and try again.");
+        });
     });
 
     $("#cta-ensure-portal").on("click", function () {
@@ -731,18 +800,24 @@
       $.post(ctaAdmin.ajaxUrl, {
         action: "cta_ensure_billing_portal",
         nonce: ctaAdmin.nonce
-      }).done(function (response) {
-        if (response.success) {
-          $result.addClass("is-success").text(response.data.message || "Portal ready.");
-          return;
-        }
+      })
+        .done(function (response) {
+          if (response.success) {
+            $result.addClass("is-success").text(response.data.message || "Portal ready.");
+            return;
+          }
 
-        $result
-          .addClass("is-error")
-          .text(response.data && response.data.message ? response.data.message : "Portal configuration failed.");
-      }).fail(function () {
-        $result.addClass("is-error").text("Portal configuration failed.");
-      });
+          $result
+            .addClass("is-error")
+            .text(
+              response.data && response.data.message
+                ? response.data.message
+                : "Portal configuration failed."
+            );
+        })
+        .fail(function () {
+          $result.addClass("is-error").text("Portal configuration failed.");
+        });
     });
   }
 

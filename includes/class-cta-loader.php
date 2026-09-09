@@ -271,8 +271,13 @@ class CTA_Loader {
 					&& class_exists( 'CTA_Associate_Access' )
 					&& CTA_Associate_Access::has_agency_application_info()
 				) ? 'yes' : 'no',
-				'stripePublishableKey' => get_option( 'cta_stripe_publishable_key', '' ),
-				'stripeConfigured'     => file_exists( CTA_PLUGIN_DIR . 'vendor/autoload.php' ) && ! empty( get_option( 'cta_stripe_secret_key', '' ) ) && ! empty( get_option( 'cta_stripe_publishable_key', '' ) ),
+				'stripePublishableKey' => class_exists( 'CTA_Stripe' )
+					? (string) CTA_Stripe::get_active_credentials()['publishable_key']
+					: (string) get_option( 'cta_stripe_publishable_key', '' ),
+				'stripeConfigured'     => file_exists( CTA_PLUGIN_DIR . 'vendor/autoload.php' )
+					&& class_exists( 'CTA_Stripe' )
+					&& ! empty( CTA_Stripe::get_active_credentials()['secret_key'] )
+					&& ! empty( CTA_Stripe::get_active_credentials()['publishable_key'] ),
 				'paymentsBypass'       => CTA_Stripe::is_payments_bypass_enabled() ? 'yes' : 'no',
 				'loginRequiredMessage' => __( 'Please log in to continue.', 'cta-lms' ),
 				'loginUrl'             => self::get_page_permalink( 'cta_login_page_id' ),
