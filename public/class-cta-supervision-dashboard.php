@@ -457,13 +457,6 @@ class CTA_Supervision_Dashboard {
 			'support_email'     => sanitize_email( $support_email ),
 		);
 
-		// Testing Mode (payment bypass) intentionally blocks the real Stripe portal.
-		if ( $bypass_on ) {
-			$fallback['reason']  = 'payments_bypass';
-			$fallback['message'] = __( 'Testing Mode is enabled in CTA LMS settings, so Stripe Checkout and the Customer Billing Portal are skipped. Turn off "Skip payments" (Testing Mode), keep your Stripe test API keys, then click Manage Subscription again.', 'cta-lms' );
-			wp_send_json_success( $fallback );
-		}
-
 		if ( ! $stripe || ! $stripe_configured ) {
 			$fallback['reason']  = 'stripe_not_configured';
 			$fallback['message'] = __( 'Stripe is not configured. Add your Stripe API keys in CTA LMS → Settings, then try again.', 'cta-lms' );

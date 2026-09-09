@@ -253,12 +253,14 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Whether test/demo mode skips Stripe and enrolls users instantly.
+	 * Whether payment bypass / skip-Stripe mode is enabled.
+	 *
+	 * Always false — the Testing Mode setting has been removed.
 	 *
 	 * @return bool
 	 */
 	public static function is_payments_bypass_enabled() {
-		return 'yes' === get_option( 'cta_payments_bypass', 'yes' );
+		return false;
 	}
 
 	/**
@@ -445,7 +447,7 @@ class CTA_Stripe {
 		if ( self::is_payments_bypass_enabled() ) {
 			return new WP_Error(
 				'payments_bypass',
-				__( 'Stripe billing portal is unavailable while payment bypass mode is enabled. Turn off Testing Mode in CTA LMS settings.', 'cta-lms' )
+				__( 'Stripe billing portal is unavailable while payment bypass mode is enabled.', 'cta-lms' )
 			);
 		}
 

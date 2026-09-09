@@ -2117,10 +2117,7 @@
     var statusBg = isActive ? "#DCFCE7" : "#FEE2E2";
     var statusColor = isActive ? "#16A34A" : "#DC2626";
     var stripeConfigured = !!(data && data.stripe_configured);
-    var paymentsBypass = !!(data && data.payments_bypass);
-    var footerText = paymentsBypass
-      ? "Testing Mode is on &mdash; turn off Skip payments in CTA LMS settings to open the real Stripe portal"
-      : stripeConfigured
+    var footerText = stripeConfigured
       ? "Subscribe with Stripe to unlock the Customer Billing Portal."
       : "Stripe is not configured &mdash; add API keys in CTA LMS settings";
     var supportBlock = supportEmail
@@ -2134,18 +2131,16 @@
         '<a href="' +
         renewUrl +
         '" class="cta-renew-btn" style="display:block;width:100%;padding:14px;background:#16A34A;color:#fff;text-align:center;font-weight:600;font-size:15px;font-family:\'Montserrat\',sans-serif;text-decoration:none;margin-bottom:10px;border:none;cursor:pointer;border-radius:10px;">\uD83D\uDD04 Renew Subscription</a>';
-    } else if (supportEmail && !paymentsBypass) {
+    } else if (supportEmail) {
       actionBlock =
         '<a href="mailto:' +
         supportEmail +
         '" style="display:block;text-align:center;font-size:13px;color:#6B7280;margin-top:8px;margin-bottom:10px;text-decoration:underline;">Contact support about billing</a>';
     }
 
-    var helpText = paymentsBypass
-      ? "Testing Mode (Skip payments) is enabled, so Manage Subscription cannot open Stripe&rsquo;s Customer Billing Portal. An admin must turn Testing Mode OFF in CTA LMS &rarr; Settings, then use Stripe test keys + a real test subscription."
-      : stripeConfigured
+    var helpText = stripeConfigured
       ? "No Stripe customer is linked to this account yet. Complete a subscription checkout first, then Manage Subscription will open Stripe&rsquo;s Customer Portal."
-      : "Stripe API keys are missing. After keys are saved and Testing Mode is off, Manage Subscription will open the real billing portal.";
+      : "Stripe API keys are missing. After keys are saved, Manage Subscription will open the real billing portal.";
 
     if (data && data.message) {
       helpText = data.message;

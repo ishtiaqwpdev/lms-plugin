@@ -278,7 +278,6 @@ class CTA_Loader {
 					&& class_exists( 'CTA_Stripe' )
 					&& ! empty( CTA_Stripe::get_active_credentials()['secret_key'] )
 					&& ! empty( CTA_Stripe::get_active_credentials()['publishable_key'] ),
-				'paymentsBypass'       => CTA_Stripe::is_payments_bypass_enabled() ? 'yes' : 'no',
 				'loginRequiredMessage' => __( 'Please log in to continue.', 'cta-lms' ),
 				'loginUrl'             => self::get_page_permalink( 'cta_login_page_id' ),
 				'dashboardUrl'         => $dashboard_url,

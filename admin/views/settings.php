@@ -167,16 +167,6 @@ $notice = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ?? '' ) );
 
 			<table class="form-table">
 				<tr>
-					<th><?php esc_html_e( 'Testing Mode', 'cta-lms' ); ?></th>
-					<td>
-						<label>
-							<input type="checkbox" name="cta_payments_bypass" value="yes" <?php checked( get_option( 'cta_payments_bypass', 'yes' ), 'yes' ); ?>>
-							<?php esc_html_e( 'Skip payments (instant enroll / subscribe without Stripe)', 'cta-lms' ); ?>
-						</label>
-						<p class="description"><?php esc_html_e( 'Enable only for UI demos without Stripe. This is NOT Stripe Sandbox mode. Turn this OFF to use real Stripe Checkout with the Active Mode credentials above.', 'cta-lms' ); ?></p>
-					</td>
-				</tr>
-				<tr>
 					<th><?php esc_html_e( 'Customer Billing Portal', 'cta-lms' ); ?></th>
 					<td>
 						<p class="description" style="margin-top:0;">

@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.321' );
+	define( 'CTA_VERSION', '1.0.322' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -314,6 +314,11 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		// Stripe Sandbox/Live dual credential sets — migrate legacy single-key options.
 		if ( version_compare( $installed, '1.0.321', '<' ) && class_exists( 'CTA_Stripe' ) ) {
 			CTA_Stripe::migrate_legacy_credentials();
+		}
+
+		// Remove obsolete Skip payments / Testing Mode setting.
+		if ( version_compare( $installed, '1.0.322', '<' ) ) {
+			delete_option( 'cta_payments_bypass' );
 		}
 	}
 }
