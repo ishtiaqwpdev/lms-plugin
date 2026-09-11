@@ -111,6 +111,7 @@ class CTA_Activator {
 		add_option( 'cta_stripe_live_webhook_secret', '' );
 		add_option( 'cta_stripe_test_portal_configuration_id', '' );
 		add_option( 'cta_stripe_live_portal_configuration_id', '' );
+		add_option( 'cta_payments_bypass', 'no' );
 		add_option( 'cta_supervision_monthly_price', 260.0 );
 		add_option( 'cta_supervision_all_access_price', 350.0 );
 		add_option( 'cta_supervision_product_name', 'Group Supervision' );

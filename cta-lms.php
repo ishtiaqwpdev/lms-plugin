@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.322' );
+	define( 'CTA_VERSION', '1.0.323' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -319,6 +319,13 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		// Remove obsolete Skip payments / Testing Mode setting.
 		if ( version_compare( $installed, '1.0.322', '<' ) ) {
 			delete_option( 'cta_payments_bypass' );
+		}
+
+		// Kill silent demo checkout; Skip payments defaults OFF and must be explicit.
+		if ( version_compare( $installed, '1.0.323', '<' ) ) {
+			if ( 'yes' !== (string) get_option( 'cta_payments_bypass', 'no' ) ) {
+				update_option( 'cta_payments_bypass', 'no', false );
+			}
 		}
 	}
 }

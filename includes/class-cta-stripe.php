@@ -244,23 +244,73 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Whether Stripe keys are configured.
+	 * Whether Stripe keys are configured for Active Mode.
 	 *
 	 * @return bool
 	 */
 	public function is_configured() {
-		return ! empty( $this->secret_key ) && ! empty( $this->publishable_key ) && class_exists( '\Stripe\Stripe' );
+		$creds = self::get_active_credentials();
+		return ! empty( $creds['secret_key'] ) && ! empty( $creds['publishable_key'] ) && class_exists( '\Stripe\Stripe' );
 	}
 
 	/**
-	 * Whether payment bypass / skip-Stripe mode is enabled.
+	 * Reload Active Mode credentials onto this instance and the Stripe SDK.
 	 *
-	 * Always false — the Testing Mode setting has been removed.
+	 * @return bool True when a secret key is available.
+	 */
+	public function refresh_active_credentials() {
+		$creds                 = self::get_active_credentials();
+		$this->secret_key      = $creds['secret_key'];
+		$this->publishable_key = $creds['publishable_key'];
+		$this->webhook_secret  = $creds['webhook_secret'];
+		$this->mode            = $creds['mode'];
+
+		if ( ! empty( $this->secret_key ) && class_exists( '\Stripe\Stripe' ) ) {
+			\Stripe\Stripe::setApiKey( $this->secret_key );
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Whether admin-enabled payment bypass (Skip payments) is on.
+	 *
+	 * Default is OFF. Never treat missing Stripe keys as an implicit bypass.
 	 *
 	 * @return bool
 	 */
 	public static function is_payments_bypass_enabled() {
-		return false;
+		return 'yes' === (string) get_option( 'cta_payments_bypass', 'no' );
+	}
+
+	/**
+	 * Log an intentional payment bypass so it is never mistaken for a real sale.
+	 *
+	 * @param string               $context Course / subscription / bundle / etc.
+	 * @param array<string,mixed>  $meta    Extra context (IDs only — never secrets).
+	 * @return void
+	 */
+	public static function log_payment_bypass( $context, $meta = array() ) {
+		$entry = array(
+			'at'      => gmdate( 'c' ),
+			'user_id' => get_current_user_id(),
+			'context' => sanitize_key( (string) $context ),
+			'meta'    => $meta,
+		);
+
+		$log   = get_option( 'cta_payments_bypass_log', array() );
+		$log   = is_array( $log ) ? $log : array();
+		$log[] = $entry;
+		if ( count( $log ) > 50 ) {
+			$log = array_slice( $log, -50 );
+		}
+		update_option( 'cta_payments_bypass_log', $log, false );
+
+		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( '[CTA LMS] Payment bypass used: ' . wp_json_encode( $entry ) );
+		}
 	}
 
 	/**
@@ -840,29 +890,25 @@ class CTA_Stripe {
 			);
 		}
 
-		if ( ! $this->is_stripe_configured() ) {
-			if ( ! empty( $_POST['demo_confirm'] ) ) {
-				$this->bypass_course_enrollment( $course_id );
-				return;
-			}
-
-			wp_send_json_success(
+		// Explicit admin Skip-payments bypass only — never a silent demo fallback.
+		if ( self::is_payments_bypass_enabled() ) {
+			self::log_payment_bypass(
+				'course_checkout',
 				array(
-					'demo_mode'    => true,
-					'checkout_url' => '',
+					'course_id' => $course_id,
 				)
 			);
-		}
-
-		if ( self::is_payments_bypass_enabled() ) {
 			$this->bypass_course_enrollment( $course_id );
 			return;
 		}
 
+		$this->refresh_active_credentials();
+
 		if ( ! $this->is_configured() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payments are not configured yet. Please contact support.', 'cta-lms' ),
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
 				)
 			);
 		}
@@ -912,6 +958,7 @@ class CTA_Stripe {
 		}
 
 		if ( (float) $course->price <= 0 ) {
+			// Truly free courses only — not a payment bypass.
 			$this->bypass_course_enrollment( $course_id );
 			return;
 		}
@@ -1046,29 +1093,19 @@ class CTA_Stripe {
 		CTA_Associate_Access::require_associate_for_purchase( get_current_user_id() );
 		CTA_Associate_Access::require_agency_for_supervision_application( get_current_user_id() );
 
-		if ( ! $this->is_stripe_configured() ) {
-			if ( ! empty( $_POST['demo_confirm'] ) ) {
-				$this->bypass_supervision_subscription();
-				return;
-			}
-
-			wp_send_json_success(
-				array(
-					'demo_mode'    => true,
-					'checkout_url' => '',
-				)
-			);
-		}
-
 		if ( self::is_payments_bypass_enabled() ) {
+			self::log_payment_bypass( 'supervision_subscription', array() );
 			$this->bypass_supervision_subscription();
 			return;
 		}
 
+		$this->refresh_active_credentials();
+
 		if ( ! $this->is_configured() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payments are not configured yet. Please contact support.', 'cta-lms' ),
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
 				)
 			);
 		}
@@ -1248,29 +1285,19 @@ class CTA_Stripe {
 			);
 		}
 
-		if ( ! $this->is_stripe_configured() ) {
-			if ( ! empty( $_POST['demo_confirm'] ) ) {
-				$this->bypass_individual_session_purchase();
-				return;
-			}
-
-			wp_send_json_success(
-				array(
-					'demo_mode'    => true,
-					'checkout_url' => '',
-				)
-			);
-		}
-
 		if ( self::is_payments_bypass_enabled() ) {
+			self::log_payment_bypass( 'individual_session', array() );
 			$this->bypass_individual_session_purchase();
 			return;
 		}
 
+		$this->refresh_active_credentials();
+
 		if ( ! $this->is_configured() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payments are not configured yet. Please contact support.', 'cta-lms' ),
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
 				)
 			);
 		}
@@ -2030,24 +2057,24 @@ class CTA_Stripe {
 	public function create_bundle_checkout_session( $bundle ) {
 		$bundle = $this->normalize_supervision_bundle( $bundle );
 
-		if ( ! $this->is_stripe_configured() ) {
-			if ( ! empty( $_POST['demo_confirm'] ) ) {
-				$this->bypass_bundle_purchase( $bundle );
-				return;
-			}
-
-			wp_send_json_success(
+		if ( self::is_payments_bypass_enabled() ) {
+			self::log_payment_bypass(
+				'bundle_checkout',
 				array(
-					'demo_mode'    => true,
-					'checkout_url' => '',
+					'bundle_id' => isset( $bundle->id ) ? (int) $bundle->id : 0,
 				)
 			);
+			$this->bypass_bundle_purchase( $bundle );
+			return;
 		}
+
+		$this->refresh_active_credentials();
 
 		if ( ! $this->is_configured() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payments are not configured yet. Please contact support.', 'cta-lms' ),
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
 				)
 			);
 		}

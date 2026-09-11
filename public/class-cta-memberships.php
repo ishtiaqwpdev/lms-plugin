@@ -162,30 +162,15 @@ class CTA_Memberships {
 			);
 		}
 
-		$secret_key = class_exists( 'CTA_Stripe' )
-			? (string) CTA_Stripe::get_active_credentials()['secret_key']
-			: (string) get_option( 'cta_stripe_secret_key', '' );
-
-		if ( '' === $secret_key ) {
-			if ( ! empty( $_POST['demo_confirm'] ) ) {
-				$stripe = cta_get_stripe();
-				if ( $stripe ) {
-					$stripe->bypass_bundle_purchase( $bundle );
-				}
-				return;
-			}
-
-			wp_send_json_success(
-				array(
-					'demo_mode'    => true,
-					'checkout_url' => '',
-				)
-			);
-		}
-
 		$stripe = cta_get_stripe();
 
 		if ( $stripe && CTA_Stripe::is_payments_bypass_enabled() ) {
+			CTA_Stripe::log_payment_bypass(
+				'bundle_purchase',
+				array(
+					'bundle_id' => (int) $bundle_id,
+				)
+			);
 			$stripe->bypass_bundle_purchase( $bundle );
 			return;
 		}
@@ -193,7 +178,8 @@ class CTA_Memberships {
 		if ( ! $stripe || ! $stripe->is_configured() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payments are not configured yet. Please contact support.', 'cta-lms' ),
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
 				)
 			);
 		}

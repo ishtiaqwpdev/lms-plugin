@@ -2268,7 +2268,7 @@ class CTA_Admin {
 			CTA_Stripe::sync_legacy_mirror_options();
 		}
 
-		delete_option( 'cta_payments_bypass' );
+		update_option( 'cta_payments_bypass', isset( $_POST['cta_payments_bypass'] ) ? 'yes' : 'no', false );
 
 		foreach ( self::get_page_option_map() as $option_key => $label ) {
 			update_option( $option_key, absint( wp_unslash( $_POST[ $option_key ] ?? 0 ) ) );
@@ -2851,7 +2851,7 @@ class CTA_Admin {
 		if ( CTA_Stripe::is_payments_bypass_enabled() ) {
 			wp_send_json_error(
 				array(
-					'message' => __( 'Payment bypass mode is enabled. Configure Stripe and try again.', 'cta-lms' ),
+					'message' => __( 'Turn off Skip payments before configuring the billing portal.', 'cta-lms' ),
 				)
 			);
 		}

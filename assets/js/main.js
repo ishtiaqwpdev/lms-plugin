@@ -2442,7 +2442,9 @@
             }
 
             if (response.success && response.data && response.data.demo_mode) {
-              showDemoPaymentModal(btn, action, paymentData);
+              window.alert(
+                "Stripe is not configured for the Active Mode. An admin must save Sandbox or Live API keys in CTA LMS → Settings and leave Skip payments OFF."
+              );
               return;
             }
 
