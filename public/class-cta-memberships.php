@@ -164,17 +164,6 @@ class CTA_Memberships {
 
 		$stripe = cta_get_stripe();
 
-		if ( $stripe && CTA_Stripe::is_payments_bypass_enabled() ) {
-			CTA_Stripe::log_payment_bypass(
-				'bundle_purchase',
-				array(
-					'bundle_id' => (int) $bundle_id,
-				)
-			);
-			$stripe->bypass_bundle_purchase( $bundle );
-			return;
-		}
-
 		if ( ! $stripe || ! $stripe->is_configured() ) {
 			wp_send_json_error(
 				array(

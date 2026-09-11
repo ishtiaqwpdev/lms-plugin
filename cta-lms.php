@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.323' );
+	define( 'CTA_VERSION', '1.0.324' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -326,6 +326,11 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 			if ( 'yes' !== (string) get_option( 'cta_payments_bypass', 'no' ) ) {
 				update_option( 'cta_payments_bypass', 'no', false );
 			}
+		}
+
+		// Permanently remove Skip-payments / silent paid enroll.
+		if ( version_compare( $installed, '1.0.324', '<' ) ) {
+			delete_option( 'cta_payments_bypass' );
 		}
 	}
 }

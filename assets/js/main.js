@@ -2449,6 +2449,18 @@
             }
 
             if (response.success && response.data && response.data.enrolled && response.data.redirect_url) {
+              // Paid courses must never free-enroll — require Stripe checkout_url instead.
+              var priceLabel = String(btn.data("price") || btn.attr("data-price") || "").trim();
+              var looksPaid =
+                priceLabel !== "" &&
+                !/^free$/i.test(priceLabel) &&
+                /(?:\$|£|€|\d)/.test(priceLabel);
+              if (looksPaid && !response.data.free_enroll) {
+                window.alert(
+                  "Payment is required for this course. Stripe Checkout did not start. Ask an admin to verify Active Mode Stripe keys in CTA LMS → Settings."
+                );
+                return;
+              }
               window.location.href = response.data.redirect_url;
               return;
             }

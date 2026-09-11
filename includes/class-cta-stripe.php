@@ -274,43 +274,25 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Whether admin-enabled payment bypass (Skip payments) is on.
+	 * Whether admin payment bypass is enabled.
 	 *
-	 * Default is OFF. Never treat missing Stripe keys as an implicit bypass.
+	 * Permanently disabled — paid checkout must always use real Stripe.
 	 *
 	 * @return bool
 	 */
 	public static function is_payments_bypass_enabled() {
-		return 'yes' === (string) get_option( 'cta_payments_bypass', 'no' );
+		return false;
 	}
 
 	/**
-	 * Log an intentional payment bypass so it is never mistaken for a real sale.
+	 * @deprecated Bypass logging retained for compatibility; no-op while bypass is disabled.
 	 *
-	 * @param string               $context Course / subscription / bundle / etc.
-	 * @param array<string,mixed>  $meta    Extra context (IDs only — never secrets).
+	 * @param string              $context Context key.
+	 * @param array<string,mixed> $meta    Meta.
 	 * @return void
 	 */
 	public static function log_payment_bypass( $context, $meta = array() ) {
-		$entry = array(
-			'at'      => gmdate( 'c' ),
-			'user_id' => get_current_user_id(),
-			'context' => sanitize_key( (string) $context ),
-			'meta'    => $meta,
-		);
-
-		$log   = get_option( 'cta_payments_bypass_log', array() );
-		$log   = is_array( $log ) ? $log : array();
-		$log[] = $entry;
-		if ( count( $log ) > 50 ) {
-			$log = array_slice( $log, -50 );
-		}
-		update_option( 'cta_payments_bypass_log', $log, false );
-
-		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			error_log( '[CTA LMS] Payment bypass used: ' . wp_json_encode( $entry ) );
-		}
+		unset( $context, $meta );
 	}
 
 	/**
@@ -890,29 +872,7 @@ class CTA_Stripe {
 			);
 		}
 
-		// Explicit admin Skip-payments bypass only — never a silent demo fallback.
-		if ( self::is_payments_bypass_enabled() ) {
-			self::log_payment_bypass(
-				'course_checkout',
-				array(
-					'course_id' => $course_id,
-				)
-			);
-			$this->bypass_course_enrollment( $course_id );
-			return;
-		}
-
-		$this->refresh_active_credentials();
-
-		if ( ! $this->is_configured() ) {
-			wp_send_json_error(
-				array(
-					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
-					'code'    => 'stripe_not_configured',
-				)
-			);
-		}
-
+		// Never silent-enroll paid courses. Resolve price first; Stripe only for paid.
 		global $wpdb;
 
 		$course = $wpdb->get_row(
@@ -957,10 +917,26 @@ class CTA_Stripe {
 			);
 		}
 
-		if ( (float) $course->price <= 0 ) {
-			// Truly free courses only — not a payment bypass.
-			$this->bypass_course_enrollment( $course_id );
+		$price = $this->resolve_course_checkout_price( $course );
+
+		if ( $price <= 0 ) {
+			// Truly free courses only.
+			$this->bypass_course_enrollment( $course_id, true );
 			return;
+		}
+
+		// Keep the in-memory course price aligned with what Stripe will charge.
+		$course->price = $price;
+
+		$this->refresh_active_credentials();
+
+		if ( ! $this->is_configured() ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Stripe is not configured for the Active Mode. Add Sandbox or Live API keys in CTA LMS → Settings, set Active Mode, then try again.', 'cta-lms' ),
+					'code'    => 'stripe_not_configured',
+				)
+			);
 		}
 
 		$course_page = function_exists( 'cta_lms_get_single_course_url' )
@@ -1092,12 +1068,6 @@ class CTA_Stripe {
 
 		CTA_Associate_Access::require_associate_for_purchase( get_current_user_id() );
 		CTA_Associate_Access::require_agency_for_supervision_application( get_current_user_id() );
-
-		if ( self::is_payments_bypass_enabled() ) {
-			self::log_payment_bypass( 'supervision_subscription', array() );
-			$this->bypass_supervision_subscription();
-			return;
-		}
 
 		$this->refresh_active_credentials();
 
@@ -1283,12 +1253,6 @@ class CTA_Stripe {
 					'message' => __( 'Individual session pricing is not configured.', 'cta-lms' ),
 				)
 			);
-		}
-
-		if ( self::is_payments_bypass_enabled() ) {
-			self::log_payment_bypass( 'individual_session', array() );
-			$this->bypass_individual_session_purchase();
-			return;
 		}
 
 		$this->refresh_active_credentials();
@@ -2057,17 +2021,6 @@ class CTA_Stripe {
 	public function create_bundle_checkout_session( $bundle ) {
 		$bundle = $this->normalize_supervision_bundle( $bundle );
 
-		if ( self::is_payments_bypass_enabled() ) {
-			self::log_payment_bypass(
-				'bundle_checkout',
-				array(
-					'bundle_id' => isset( $bundle->id ) ? (int) $bundle->id : 0,
-				)
-			);
-			$this->bypass_bundle_purchase( $bundle );
-			return;
-		}
-
 		$this->refresh_active_credentials();
 
 		if ( ! $this->is_configured() ) {
@@ -2326,11 +2279,71 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Skip Stripe and enroll the current user in a course (testing mode).
+	 * Resolve the chargeable course price (heal zero/missing from CE catalog when needed).
 	 *
-	 * @param int $course_id Course ID.
+	 * @param object $course Course row.
+	 * @return float
 	 */
-	private function bypass_course_enrollment( $course_id ) {
+	private function resolve_course_checkout_price( $course ) {
+		$price = isset( $course->price ) ? (float) $course->price : 0.0;
+
+		if ( $price > 0 ) {
+			return $price;
+		}
+
+		if ( ! class_exists( 'CTA_Course_Catalog' ) || ! method_exists( 'CTA_Course_Catalog', 'get_ce_catalog' ) ) {
+			return $price;
+		}
+
+		$title = isset( $course->title ) ? (string) $course->title : '';
+		foreach ( CTA_Course_Catalog::get_ce_catalog() as $entry ) {
+			$match_titles = array();
+			if ( ! empty( $entry['match_titles'] ) && is_array( $entry['match_titles'] ) ) {
+				$match_titles = $entry['match_titles'];
+			}
+			if ( ! empty( $entry['title'] ) ) {
+				$match_titles[] = (string) $entry['title'];
+			}
+
+			$matched = false;
+			foreach ( $match_titles as $candidate ) {
+				if ( 0 === strcasecmp( trim( (string) $candidate ), trim( $title ) ) ) {
+					$matched = true;
+					break;
+				}
+			}
+
+			if ( ! $matched ) {
+				continue;
+			}
+
+			$catalog_price = isset( $entry['price'] ) ? (float) $entry['price'] : 0.0;
+			if ( $catalog_price <= 0 ) {
+				return $price;
+			}
+
+			global $wpdb;
+			$wpdb->update(
+				$wpdb->prefix . 'cta_courses',
+				array( 'price' => $catalog_price ),
+				array( 'id' => (int) $course->id ),
+				array( '%f' ),
+				array( '%d' )
+			);
+
+			return $catalog_price;
+		}
+
+		return $price;
+	}
+
+	/**
+	 * Enroll without Stripe — allowed only for truly free courses ($0).
+	 *
+	 * @param int  $course_id   Course ID.
+	 * @param bool $free_enroll Must be true; paid silent enroll is blocked.
+	 */
+	private function bypass_course_enrollment( $course_id, $free_enroll = false ) {
 		global $wpdb;
 
 		$course = $wpdb->get_row(
@@ -2349,8 +2362,18 @@ class CTA_Stripe {
 			);
 		}
 
-		$user_id = get_current_user_id();
-		$payment_id = 'bypass-' . time();
+		$price = $this->resolve_course_checkout_price( $course );
+		if ( ! $free_enroll || $price > 0 ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'This course requires Stripe payment. Free enrollment is not available.', 'cta-lms' ),
+					'code'    => 'payment_required',
+				)
+			);
+		}
+
+		$user_id    = get_current_user_id();
+		$payment_id = 'free-' . time();
 
 		$enrolled = $this->create_enrollment(
 			$user_id,
@@ -2375,7 +2398,7 @@ class CTA_Stripe {
 			array(
 				'user_id'           => $user_id,
 				'stripe_payment_id' => $payment_id,
-				'amount'            => (float) $course->price,
+				'amount'            => 0,
 				'currency'          => 'usd',
 				'payment_type'      => 'one_time',
 				'product_type'      => 'course',
@@ -2402,8 +2425,9 @@ class CTA_Stripe {
 		wp_send_json_success(
 			array(
 				'enrolled'     => true,
+				'free_enroll'  => true,
 				'redirect_url' => $dashboard,
-				'message'      => __( 'Enrolled successfully (payment bypass mode).', 'cta-lms' ),
+				'message'      => __( 'Enrolled successfully.', 'cta-lms' ),
 			)
 		);
 	}
