@@ -846,6 +846,10 @@ class CTA_Stripe {
 
 		$user_id = get_current_user_id();
 
+		if ( class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::ensure_learner_profile( $user_id );
+		}
+
 		if ( class_exists( 'CTA_Associate_Access' ) ) {
 			CTA_Associate_Access::heal_decoupled_statuses( $user_id );
 		}
@@ -1890,6 +1894,22 @@ class CTA_Stripe {
 		$user_id  = absint( $metadata['user_id'] ?? 0 );
 		$type     = sanitize_text_field( $metadata['product_type'] ?? '' );
 
+		// Fallback when metadata user_id is missing: match Stripe customer email to WP user.
+		if ( ! $user_id ) {
+			$email = '';
+			if ( ! empty( $session->customer_email ) ) {
+				$email = sanitize_email( (string) $session->customer_email );
+			} elseif ( ! empty( $session->customer_details->email ) ) {
+				$email = sanitize_email( (string) $session->customer_details->email );
+			}
+			if ( $email ) {
+				$user = get_user_by( 'email', $email );
+				if ( $user ) {
+					$user_id = (int) $user->ID;
+				}
+			}
+		}
+
 		$wpdb->update(
 			$wpdb->prefix . 'cta_payments',
 			array(
@@ -1901,11 +1921,24 @@ class CTA_Stripe {
 			array( '%s' )
 		);
 
-		if ( 'course' === $type ) {
+		if ( 'course' === $type || 'exam_prep' === $type ) {
 			$course_id = absint( $metadata['course_id'] ?? 0 );
 
-			if ( $user_id && $course_id ) {
-				$this->create_enrollment(
+			if ( ! $user_id || ! $course_id ) {
+				if ( class_exists( 'CTA_Roles' ) ) {
+					CTA_Roles::log_enrollment_issue(
+						'checkout_missing_ids',
+						__( 'Paid checkout completed but user or course could not be resolved for enrollment.', 'cta-lms' ),
+						array(
+							'session_id'   => sanitize_text_field( (string) ( $session->id ?? '' ) ),
+							'user_id'      => $user_id,
+							'course_id'    => $course_id,
+							'product_type' => $type,
+						)
+					);
+				}
+			} elseif ( $user_id && $course_id ) {
+				$enrolled = $this->create_enrollment(
 					$user_id,
 					$course_id,
 					sanitize_text_field( $session->id ),
@@ -1914,6 +1947,18 @@ class CTA_Stripe {
 						'expires_at'    => null,
 					)
 				);
+
+				if ( ! $enrolled && class_exists( 'CTA_Roles' ) ) {
+					CTA_Roles::log_enrollment_issue(
+						'enrollment_failed_after_payment',
+						__( 'Payment completed but course enrollment could not be created.', 'cta-lms' ),
+						array(
+							'session_id' => sanitize_text_field( (string) ( $session->id ?? '' ) ),
+							'user_id'    => $user_id,
+							'course_id'  => $course_id,
+						)
+					);
+				}
 
 				$course = CTA_Database::get_course( $course_id );
 				if ( $course && class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
@@ -2799,6 +2844,31 @@ class CTA_Stripe {
 		$course_id = absint( $course_id );
 
 		if ( ! $user_id || ! $course_id ) {
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'create_enrollment_invalid_ids',
+					__( 'Enrollment skipped because user or course ID was missing.', 'cta-lms' ),
+					array(
+						'user_id'    => $user_id,
+						'course_id'  => $course_id,
+						'payment_id' => sanitize_text_field( (string) $payment_id ),
+					)
+				);
+			}
+			return false;
+		}
+
+		// Self-heal: WP users without a CTA role (Role "None" / non-CTA signup) get a learner profile.
+		if ( class_exists( 'CTA_Roles' ) && ! CTA_Roles::ensure_learner_profile( $user_id ) ) {
+			CTA_Roles::log_enrollment_issue(
+				'learner_profile_missing',
+				__( 'Could not create CTA LMS learner profile/role for paid enrollment.', 'cta-lms' ),
+				array(
+					'user_id'    => $user_id,
+					'course_id'  => $course_id,
+					'payment_id' => sanitize_text_field( (string) $payment_id ),
+				)
+			);
 			return false;
 		}
 
@@ -3222,6 +3292,78 @@ class CTA_Stripe {
 		$final_user_id = $session_user_id ? $session_user_id : $user_id;
 		if ( $final_user_id ) {
 			clean_user_cache( $final_user_id );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Reprocess course enrollment from an already-completed payment row (no new Stripe charge).
+	 *
+	 * @param string $payment_ref Stripe Checkout Session ID (cs_...) or local payment stripe_payment_id.
+	 * @return true|WP_Error
+	 */
+	public function reprocess_completed_course_payment( $payment_ref ) {
+		global $wpdb;
+
+		$payment_ref = sanitize_text_field( (string) $payment_ref );
+		if ( '' === $payment_ref ) {
+			return new WP_Error( 'missing_ref', __( 'Payment reference is required.', 'cta-lms' ) );
+		}
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM {$wpdb->prefix}cta_payments
+				WHERE stripe_payment_id = %s
+				LIMIT 1",
+				$payment_ref
+			)
+		);
+
+		if ( ! $row ) {
+			return new WP_Error( 'payment_not_found', __( 'No local payment record found for that reference.', 'cta-lms' ) );
+		}
+
+		$user_id   = absint( $row->user_id );
+		$course_id = absint( $row->product_id );
+		$type      = sanitize_key( (string) $row->product_type );
+
+		if ( ! in_array( $type, array( 'course', 'exam_prep' ), true ) ) {
+			return new WP_Error( 'not_course', __( 'That payment is not a course purchase.', 'cta-lms' ) );
+		}
+
+		if ( ! $user_id || ! $course_id ) {
+			return new WP_Error( 'incomplete_payment', __( 'Payment row is missing user or course ID.', 'cta-lms' ) );
+		}
+
+		if ( 'completed' !== (string) $row->status ) {
+			$wpdb->update(
+				$wpdb->prefix . 'cta_payments',
+				array( 'status' => 'completed' ),
+				array( 'id' => (int) $row->id ),
+				array( '%s' ),
+				array( '%d' )
+			);
+		}
+
+		$ok = $this->create_enrollment(
+			$user_id,
+			$course_id,
+			$payment_ref,
+			array(
+				'access_source' => 'purchase',
+				'expires_at'    => null,
+			)
+		);
+
+		if ( ! $ok ) {
+			return new WP_Error( 'enroll_failed', __( 'Could not create enrollment for this payment.', 'cta-lms' ) );
+		}
+
+		$course = CTA_Database::get_course( $course_id );
+		if ( $course && class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
+			$months = ! empty( $course->access_period_months ) ? (int) $course->access_period_months : 6;
+			CTA_Exam_Access::grant_access( $user_id, $course_id, $months );
 		}
 
 		return true;

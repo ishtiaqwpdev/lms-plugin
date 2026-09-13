@@ -66,6 +66,7 @@ delete_option( 'cta_stripe_test_portal_configuration_id' );
 delete_option( 'cta_stripe_live_portal_configuration_id' );
 delete_option( 'cta_stripe_dual_creds_migrated' );
 delete_option( 'cta_payments_bypass' );
+delete_option( 'cta_enrollment_issue_log' );
 delete_option( 'cta_supervision_monthly_price' );
 delete_option( 'cta_supervision_all_access_price' );
 delete_option( 'cta_supervision_product_name' );

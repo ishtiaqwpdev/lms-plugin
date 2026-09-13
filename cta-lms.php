@@ -20,7 +20,7 @@ if ( ! defined( 'CTA_PLUGIN_FILE' ) ) {
 }
 
 if ( ! defined( 'CTA_VERSION' ) ) {
-	define( 'CTA_VERSION', '1.0.324' );
+	define( 'CTA_VERSION', '1.0.325' );
 }
 
 if ( ! defined( 'CTA_PLUGIN_DIR' ) ) {
@@ -331,6 +331,11 @@ if ( ! function_exists( 'cta_lms_queue_heavy_upgrades_for_version' ) ) {
 		// Permanently remove Skip-payments / silent paid enroll.
 		if ( version_compare( $installed, '1.0.324', '<' ) ) {
 			delete_option( 'cta_payments_bypass' );
+		}
+
+		// Heal WP users with Role "None" (no CTA LMS learner profile).
+		if ( version_compare( $installed, '1.0.325', '<' ) && class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::heal_users_missing_cta_roles();
 		}
 	}
 }

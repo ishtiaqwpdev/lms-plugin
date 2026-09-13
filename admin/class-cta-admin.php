@@ -68,6 +68,8 @@ class CTA_Admin {
 		add_action( 'wp_ajax_cta_admin_cancel_session', array( $this, 'ajax_cancel_session' ) );
 		add_action( 'wp_ajax_cta_test_stripe_connection', array( $this, 'ajax_test_stripe_connection' ) );
 		add_action( 'wp_ajax_cta_ensure_billing_portal', array( $this, 'ajax_ensure_billing_portal' ) );
+		add_action( 'wp_ajax_cta_admin_reprocess_course_payment', array( $this, 'ajax_reprocess_course_payment' ) );
+		add_action( 'wp_ajax_cta_admin_heal_missing_roles', array( $this, 'ajax_heal_missing_roles' ) );
 		add_action( 'wp_ajax_cta_admin_cancel_subscription', array( $this, 'ajax_admin_cancel_subscription' ) );
 		add_action( 'wp_ajax_cta_admin_reactivate_subscription', array( $this, 'ajax_admin_reactivate_subscription' ) );
 		add_action( 'wp_ajax_cta_admin_sync_subscription', array( $this, 'ajax_admin_sync_subscription' ) );
@@ -655,6 +657,7 @@ class CTA_Admin {
 				'supervision_filter'    => $supervision_filter,
 				'missing_license_count' => $missing_license_count,
 				'license_types'         => cta_lms_get_license_types(),
+				'enrollment_issues'     => class_exists( 'CTA_Roles' ) ? CTA_Roles::get_enrollment_issue_log( 10 ) : array(),
 			)
 		);
 	}
@@ -2841,6 +2844,59 @@ class CTA_Admin {
 				)
 			);
 		}
+	}
+
+	/**
+	 * AJAX: reprocess course enrollment from an existing completed payment (no new charge).
+	 */
+	public function ajax_reprocess_course_payment() {
+		$this->verify_admin_ajax();
+
+		$ref = sanitize_text_field( wp_unslash( $_POST['payment_ref'] ?? '' ) );
+		if ( '' === $ref ) {
+			wp_send_json_error( array( 'message' => __( 'Enter a Stripe Checkout Session ID (cs_...) from the payment.', 'cta-lms' ) ) );
+		}
+
+		$stripe = cta_get_stripe();
+		if ( ! $stripe || ! method_exists( $stripe, 'reprocess_completed_course_payment' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Stripe enrollment helper is unavailable.', 'cta-lms' ) ) );
+		}
+
+		$result = $stripe->reprocess_completed_course_payment( $ref );
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( array( 'message' => $result->get_error_message() ) );
+		}
+
+		wp_send_json_success(
+			array(
+				'message' => __( 'Enrollment applied from the existing payment. No new charge was created.', 'cta-lms' ),
+			)
+		);
+	}
+
+	/**
+	 * AJAX: assign CTA learner roles to WordPress users with Role "None".
+	 */
+	public function ajax_heal_missing_roles() {
+		$this->verify_admin_ajax();
+
+		if ( ! class_exists( 'CTA_Roles' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Roles helper unavailable.', 'cta-lms' ) ) );
+		}
+
+		$report = CTA_Roles::heal_users_missing_cta_roles();
+
+		wp_send_json_success(
+			array(
+				'message' => sprintf(
+					/* translators: 1: healed count, 2: skipped count */
+					__( 'Healed %1$d user(s) with Role None. Skipped %2$d.', 'cta-lms' ),
+					(int) $report['healed'],
+					(int) $report['skipped']
+				),
+				'report'  => $report,
+			)
+		);
 	}
 
 	/**

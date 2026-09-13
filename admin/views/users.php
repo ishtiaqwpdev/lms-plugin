@@ -22,6 +22,41 @@ $notice                = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ??
 		<div class="notice notice-success is-dismissible"><p><?php esc_html_e( 'License information updated.', 'cta-lms' ); ?></p></div>
 	<?php endif; ?>
 
+	<div class="cta-admin-panel" style="margin:16px 0;">
+		<h2><?php esc_html_e( 'Enrollment repair tools', 'cta-lms' ); ?></h2>
+		<p class="description"><?php esc_html_e( 'Use these after a successful Stripe payment when a learner is missing from CTA Users or cannot open My Dashboard. These tools never create a new Stripe charge.', 'cta-lms' ); ?></p>
+		<p>
+			<label for="cta-reprocess-payment-ref"><strong><?php esc_html_e( 'Reprocess course enrollment from payment', 'cta-lms' ); ?></strong></label><br>
+			<input type="text" class="regular-text" id="cta-reprocess-payment-ref" placeholder="cs_..." autocomplete="off">
+			<button type="button" class="button button-primary" id="cta-reprocess-payment-btn"><?php esc_html_e( 'Grant access from this payment', 'cta-lms' ); ?></button>
+			<span id="cta-reprocess-payment-result" class="cta-inline-result"></span>
+		</p>
+		<p class="description"><?php esc_html_e( 'Paste the Checkout Session ID (cs_…) from Stripe → Payments / Events for the already-paid transaction (e.g. the $45 Telehealth purchase).', 'cta-lms' ); ?></p>
+		<p>
+			<button type="button" class="button" id="cta-heal-missing-roles-btn"><?php esc_html_e( 'Heal WordPress users with Role None', 'cta-lms' ); ?></button>
+			<span id="cta-heal-missing-roles-result" class="cta-inline-result"></span>
+		</p>
+		<?php
+		$enrollment_issues = isset( $enrollment_issues ) && is_array( $enrollment_issues ) ? $enrollment_issues : array();
+		if ( ! empty( $enrollment_issues ) ) :
+			?>
+			<details style="margin-top:12px;">
+				<summary><strong><?php esc_html_e( 'Recent enrollment issues', 'cta-lms' ); ?></strong></summary>
+				<ul>
+					<?php foreach ( $enrollment_issues as $issue ) : ?>
+						<li>
+							<code><?php echo esc_html( (string) ( $issue['at'] ?? '' ) ); ?></code>
+							— <?php echo esc_html( (string) ( $issue['message'] ?? '' ) ); ?>
+							<?php if ( ! empty( $issue['context'] ) && is_array( $issue['context'] ) ) : ?>
+								<em>(<?php echo esc_html( wp_json_encode( $issue['context'] ) ); ?>)</em>
+							<?php endif; ?>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</details>
+		<?php endif; ?>
+	</div>
+
 	<div class="cta-admin-tabs">
 		<?php
 		$tabs = array(

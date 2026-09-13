@@ -1623,6 +1623,13 @@ class CTA_Student_Dashboard {
 			return $this->redirect_markup( $this->get_login_url() );
 		}
 
+		$user_id = get_current_user_id();
+
+		// Self-heal Role "None" / missing CTA profile so paid learners can open My Dashboard.
+		if ( class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::ensure_learner_profile( $user_id );
+		}
+
 		$user  = wp_get_current_user();
 		$roles = (array) $user->roles;
 
