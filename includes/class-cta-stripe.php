@@ -1873,6 +1873,25 @@ class CTA_Stripe {
 	}
 
 	/**
+	 * Normalize a Stripe ID that may be a string or expanded object.
+	 *
+	 * @param mixed $value Stripe ID string or object with ->id.
+	 * @return string
+	 */
+	private function stripe_id( $value ) {
+		if ( is_string( $value ) || is_numeric( $value ) ) {
+			return sanitize_text_field( (string) $value );
+		}
+		if ( is_object( $value ) && isset( $value->id ) ) {
+			return sanitize_text_field( (string) $value->id );
+		}
+		if ( is_array( $value ) && ! empty( $value['id'] ) ) {
+			return sanitize_text_field( (string) $value['id'] );
+		}
+		return '';
+	}
+
+	/**
 	 * Charge refunded — mark matching payment refunded; full refunds revoke course access.
 	 *
 	 * Partial refunds leave access unchanged. Completion certificate rows are never deleted.
@@ -1888,8 +1907,25 @@ class CTA_Stripe {
 
 		$amount          = isset( $charge->amount ) ? (int) $charge->amount : 0;
 		$amount_refunded = isset( $charge->amount_refunded ) ? (int) $charge->amount_refunded : 0;
-		$charge_id       = sanitize_text_field( (string) ( $charge->id ?? '' ) );
+		$charge_id       = $this->stripe_id( $charge->id ?? '' );
+		$pi_id           = $this->stripe_id( $charge->payment_intent ?? '' );
+		$customer_id     = $this->stripe_id( $charge->customer ?? '' );
 		$env             = self::normalize_env( $env );
+
+		if ( class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::log_enrollment_issue(
+				'charge_refunded_received',
+				__( 'charge.refunded webhook handler entered.', 'cta-lms' ),
+				array(
+					'charge_id'       => $charge_id,
+					'payment_intent'  => $pi_id,
+					'customer'        => $customer_id,
+					'amount'          => $amount,
+					'amount_refunded' => $amount_refunded,
+					'env'             => $env,
+				)
+			);
+		}
 
 		// Full refund only — partial refunds must not change access.
 		if ( $amount <= 0 || $amount_refunded < $amount ) {
@@ -1907,17 +1943,22 @@ class CTA_Stripe {
 			return;
 		}
 
-		$payments = $this->find_payments_for_refunded_charge( $charge, $env );
+		$session_id = $this->resolve_checkout_session_id_for_charge( $charge, $env );
+		$payments   = $this->find_payments_for_refunded_charge( $charge, $env, $session_id );
 
-		if ( empty( $payments ) ) {
+		// Resolve learner + course from Session / charge metadata even when payment row is missing.
+		$target = $this->resolve_refund_user_course( $charge, $env, $session_id, $payments );
+
+		if ( empty( $payments ) && ( empty( $target['user_id'] ) || empty( $target['course_id'] ) ) ) {
 			if ( class_exists( 'CTA_Roles' ) ) {
 				CTA_Roles::log_enrollment_issue(
 					'charge_refunded_payment_not_found',
-					__( 'Full refund received but no matching local payment row was found; access was not revoked.', 'cta-lms' ),
+					__( 'Full refund received but no matching local payment/enrollment target was found; access was not revoked.', 'cta-lms' ),
 					array(
 						'charge_id'       => $charge_id,
-						'payment_intent'  => sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) ),
-						'customer'        => sanitize_text_field( (string) ( $charge->customer ?? '' ) ),
+						'payment_intent'  => $pi_id,
+						'customer'        => $customer_id,
+						'session_id'      => $session_id,
 						'amount'          => $amount,
 						'amount_refunded' => $amount_refunded,
 						'env'             => $env,
@@ -1928,6 +1969,7 @@ class CTA_Stripe {
 		}
 
 		$table_payments = $wpdb->prefix . 'cta_payments';
+		$revoked_pairs  = array();
 
 		foreach ( $payments as $payment ) {
 			$payment_id = absint( $payment->id ?? 0 );
@@ -1951,37 +1993,158 @@ class CTA_Stripe {
 			$user_id   = absint( $payment->user_id ?? 0 );
 			$course_id = absint( $payment->product_id ?? 0 );
 			if ( ! $user_id || ! $course_id ) {
-				if ( class_exists( 'CTA_Roles' ) ) {
-					CTA_Roles::log_enrollment_issue(
-						'charge_refunded_missing_ids',
-						__( 'Refunded payment row is missing user_id or product_id.', 'cta-lms' ),
-						array(
-							'charge_id'  => $charge_id,
-							'payment_id' => $payment_id,
-							'user_id'    => $user_id,
-							'course_id'  => $course_id,
-						)
-					);
-				}
 				continue;
 			}
 
 			$this->revoke_course_access_after_full_refund( $user_id, $course_id );
+			$revoked_pairs[ $user_id . ':' . $course_id ] = array( $user_id, $course_id, $payment_id );
+		}
+
+		// Session/metadata target: revoke even when payment row product_type/ids were incomplete.
+		if ( ! empty( $target['user_id'] ) && ! empty( $target['course_id'] ) ) {
+			$user_id   = (int) $target['user_id'];
+			$course_id = (int) $target['course_id'];
+			$key       = $user_id . ':' . $course_id;
+
+			if ( $session_id ) {
+				$wpdb->update(
+					$table_payments,
+					array( 'status' => 'refunded' ),
+					array( 'stripe_payment_id' => $session_id ),
+					array( '%s' ),
+					array( '%s' )
+				);
+			}
+
+			if ( ! isset( $revoked_pairs[ $key ] ) ) {
+				$this->revoke_course_access_after_full_refund( $user_id, $course_id );
+				$revoked_pairs[ $key ] = array( $user_id, $course_id, 0 );
+			}
+		}
+
+		foreach ( $revoked_pairs as $pair ) {
+			$user_id    = (int) $pair[0];
+			$course_id  = (int) $pair[1];
+			$payment_id = (int) $pair[2];
+
+			$enrollment = class_exists( 'CTA_Database' )
+				? CTA_Database::get_user_enrollment( $user_id, $course_id )
+				: null;
+			$still_has  = class_exists( 'CTA_CE_Access' )
+				? CTA_CE_Access::has_active_access( $user_id, $course_id )
+				: null;
 
 			if ( class_exists( 'CTA_Roles' ) ) {
 				CTA_Roles::log_enrollment_issue(
 					'charge_refunded_access_revoked',
-					__( 'Full refund processed; course access revoked.', 'cta-lms' ),
+					__( 'Full refund processed; course access revoke applied.', 'cta-lms' ),
 					array(
-						'charge_id'  => $charge_id,
-						'payment_id' => $payment_id,
-						'user_id'    => $user_id,
-						'course_id'  => $course_id,
-						'env'        => $env,
+						'charge_id'         => $charge_id,
+						'payment_intent'    => $pi_id,
+						'session_id'        => $session_id,
+						'payment_id'        => $payment_id,
+						'user_id'           => $user_id,
+						'course_id'         => $course_id,
+						'enrollment_status' => $enrollment ? (string) $enrollment->status : 'missing',
+						'has_active_access' => $still_has ? 1 : 0,
+						'env'               => $env,
 					)
 				);
 			}
 		}
+	}
+
+	/**
+	 * Resolve user_id + course_id for a refunded charge.
+	 *
+	 * @param object $charge     Stripe charge.
+	 * @param string $env        test|live.
+	 * @param string $session_id Checkout Session ID if known.
+	 * @param array  $payments   Already-matched payment rows.
+	 * @return array{user_id:int,course_id:int}
+	 */
+	private function resolve_refund_user_course( $charge, $env, $session_id, $payments ) {
+		global $wpdb;
+
+		foreach ( (array) $payments as $payment ) {
+			$user_id   = absint( $payment->user_id ?? 0 );
+			$course_id = absint( $payment->product_id ?? 0 );
+			if ( $user_id && $course_id ) {
+				return array(
+					'user_id'   => $user_id,
+					'course_id' => $course_id,
+				);
+			}
+		}
+
+		$meta = array();
+		if ( isset( $charge->metadata ) ) {
+			if ( is_object( $charge->metadata ) && method_exists( $charge->metadata, 'toArray' ) ) {
+				$meta = $charge->metadata->toArray();
+			} else {
+				$meta = (array) $charge->metadata;
+			}
+		}
+		$user_id   = absint( $meta['user_id'] ?? 0 );
+		$course_id = absint( $meta['course_id'] ?? 0 );
+
+		if ( $session_id ) {
+			$row = $wpdb->get_row(
+				$wpdb->prepare(
+					"SELECT user_id, product_id FROM {$wpdb->prefix}cta_payments
+					WHERE stripe_payment_id = %s LIMIT 1",
+					$session_id
+				)
+			);
+			if ( $row ) {
+				if ( ! $user_id ) {
+					$user_id = absint( $row->user_id );
+				}
+				if ( ! $course_id ) {
+					$course_id = absint( $row->product_id );
+				}
+			}
+
+			$enrollment = $wpdb->get_row(
+				$wpdb->prepare(
+					"SELECT user_id, course_id FROM {$wpdb->prefix}cta_enrollments
+					WHERE payment_id = %s LIMIT 1",
+					$session_id
+				)
+			);
+			if ( $enrollment ) {
+				if ( ! $user_id ) {
+					$user_id = absint( $enrollment->user_id );
+				}
+				if ( ! $course_id ) {
+					$course_id = absint( $enrollment->course_id );
+				}
+			}
+
+			if ( ( ! $user_id || ! $course_id ) && $this->set_stripe_api_for_env( $env ) ) {
+				try {
+					$session = \Stripe\Checkout\Session::retrieve( $session_id );
+					if ( $session && ! empty( $session->metadata ) ) {
+						$sm = is_object( $session->metadata ) && method_exists( $session->metadata, 'toArray' )
+							? $session->metadata->toArray()
+							: (array) $session->metadata;
+						if ( ! $user_id ) {
+							$user_id = absint( $sm['user_id'] ?? 0 );
+						}
+						if ( ! $course_id ) {
+							$course_id = absint( $sm['course_id'] ?? 0 );
+						}
+					}
+				} catch ( \Exception $e ) { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedCatch
+					// Keep empty targets; caller logs not-found.
+				}
+			}
+		}
+
+		return array(
+			'user_id'   => $user_id,
+			'course_id' => $course_id,
+		);
 	}
 
 	/**
@@ -2011,7 +2174,7 @@ class CTA_Stripe {
 	private function resolve_checkout_session_id_for_charge( $charge, $env = 'test' ) {
 		global $wpdb;
 
-		$pi = sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) );
+		$pi = $this->stripe_id( $charge->payment_intent ?? '' );
 		if ( '' === $pi ) {
 			return '';
 		}
@@ -2034,6 +2197,16 @@ class CTA_Stripe {
 
 		// Ask Stripe which Checkout Session created this PaymentIntent (same env as webhook).
 		if ( ! $this->set_stripe_api_for_env( $env ) ) {
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'charge_refunded_session_lookup_failed',
+					__( 'Stripe secret key missing for refund Session lookup.', 'cta-lms' ),
+					array(
+						'payment_intent' => $pi,
+						'env'            => self::normalize_env( $env ),
+					)
+				);
+			}
 			return '';
 		}
 
@@ -2063,7 +2236,7 @@ class CTA_Stripe {
 						}
 					}
 					$details['payment_intent'] = $pi;
-					$charge_id                 = sanitize_text_field( (string) ( $charge->id ?? '' ) );
+					$charge_id                 = $this->stripe_id( $charge->id ?? '' );
 					if ( $charge_id ) {
 						$details['charge_id'] = $charge_id;
 					}
@@ -2102,11 +2275,12 @@ class CTA_Stripe {
 	 * payment_intent / charge IDs alone often miss. Resolve cs_ via Stripe, then
 	 * fall back to customer/email + amount.
 	 *
-	 * @param object $charge Stripe charge.
-	 * @param string $env    test|live.
+	 * @param object $charge     Stripe charge.
+	 * @param string $env        test|live.
+	 * @param string $session_id Optional pre-resolved Checkout Session ID.
 	 * @return array<int,object>
 	 */
-	private function find_payments_for_refunded_charge( $charge, $env = 'test' ) {
+	private function find_payments_for_refunded_charge( $charge, $env = 'test', $session_id = '' ) {
 		global $wpdb;
 
 		$table = $wpdb->prefix . 'cta_payments';
@@ -2125,13 +2299,15 @@ class CTA_Stripe {
 			$found[]     = $row;
 		};
 
-		$session_id = $this->resolve_checkout_session_id_for_charge( $charge, $env );
+		if ( '' === $session_id ) {
+			$session_id = $this->resolve_checkout_session_id_for_charge( $charge, $env );
+		}
 
 		$candidates = array_filter(
 			array(
 				$session_id,
-				sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) ),
-				sanitize_text_field( (string) ( $charge->id ?? '' ) ),
+				$this->stripe_id( $charge->payment_intent ?? '' ),
+				$this->stripe_id( $charge->id ?? '' ),
 			)
 		);
 
@@ -2150,7 +2326,7 @@ class CTA_Stripe {
 		}
 
 		$amount_cents = isset( $charge->amount ) ? (int) $charge->amount : 0;
-		$customer_id  = sanitize_text_field( (string) ( $charge->customer ?? '' ) );
+		$customer_id  = $this->stripe_id( $charge->customer ?? '' );
 
 		// Match by Stripe customer + amount in cents (avoids float ROUND/%f mismatches).
 		if ( $customer_id && $amount_cents > 0 ) {
@@ -2177,7 +2353,14 @@ class CTA_Stripe {
 		}
 
 		// Resolve WP user: charge metadata, then billing/receipt email, then customer meta map.
-		$meta        = isset( $charge->metadata ) ? (array) $charge->metadata : array();
+		$meta = array();
+		if ( isset( $charge->metadata ) ) {
+			if ( is_object( $charge->metadata ) && method_exists( $charge->metadata, 'toArray' ) ) {
+				$meta = $charge->metadata->toArray();
+			} else {
+				$meta = (array) $charge->metadata;
+			}
+		}
 		$meta_user   = absint( $meta['user_id'] ?? 0 );
 		$meta_course = absint( $meta['course_id'] ?? 0 );
 		$user_id     = $meta_user;
@@ -2187,7 +2370,9 @@ class CTA_Stripe {
 			try {
 				$session = \Stripe\Checkout\Session::retrieve( $session_id );
 				if ( $session && ! empty( $session->metadata ) ) {
-					$session_meta = (array) $session->metadata;
+					$session_meta = is_object( $session->metadata ) && method_exists( $session->metadata, 'toArray' )
+						? $session->metadata->toArray()
+						: (array) $session->metadata;
 					if ( ! $user_id ) {
 						$user_id = absint( $session_meta['user_id'] ?? 0 );
 					}

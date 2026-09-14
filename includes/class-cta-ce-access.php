@@ -98,21 +98,18 @@ class CTA_CE_Access {
 			}
 		}
 
-		// Any refunded course payment with no remaining completed payment → locked.
-		if ( self::user_has_refunded_course_payment( $user_id, $course_id ) ) {
-			return false;
-		}
-
-		// Completed (non-refunded) individual purchase → permanent access.
-		if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
-			return true;
-		}
-
 		$source = self::resolve_access_source( $enrollment );
 
+		// Purchase-sourced access requires a non-refunded completed payment when any payment exists.
 		if ( self::SOURCE_PURCHASE === $source ) {
-			// Legacy purchase-sourced rows with no payment row keep access.
-			return ! self::user_has_any_course_payment( $user_id, $course_id );
+			if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
+				return true;
+			}
+			if ( self::user_has_any_course_payment( $user_id, $course_id ) ) {
+				return false;
+			}
+			// Legacy purchase row with no payment record.
+			return true;
 		}
 
 		// Membership-sourced access.
