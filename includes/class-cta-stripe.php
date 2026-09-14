@@ -1764,7 +1764,7 @@ class CTA_Stripe {
 				break;
 
 			case 'charge.refunded':
-				$this->handle_charge_refunded( $object );
+				$this->handle_charge_refunded( $object, $env );
 				break;
 		}
 	}
@@ -1872,14 +1872,16 @@ class CTA_Stripe {
 	 * by setting enrollment status to revoked (certificates remain in cta_certificates).
 	 *
 	 * @param object $charge Stripe charge object.
+	 * @param string $env    Webhook environment (test|live) — used to resolve Checkout Session.
 	 * @return void
 	 */
-	private function handle_charge_refunded( $charge ) {
+	private function handle_charge_refunded( $charge, $env = 'test' ) {
 		global $wpdb;
 
 		$amount          = isset( $charge->amount ) ? (int) $charge->amount : 0;
 		$amount_refunded = isset( $charge->amount_refunded ) ? (int) $charge->amount_refunded : 0;
 		$charge_id       = sanitize_text_field( (string) ( $charge->id ?? '' ) );
+		$env             = self::normalize_env( $env );
 
 		// Full refund only — partial refunds must not change access.
 		if ( $amount <= 0 || $amount_refunded < $amount ) {
@@ -1897,7 +1899,7 @@ class CTA_Stripe {
 			return;
 		}
 
-		$payments = $this->find_payments_for_refunded_charge( $charge );
+		$payments = $this->find_payments_for_refunded_charge( $charge, $env );
 
 		if ( empty( $payments ) ) {
 			if ( class_exists( 'CTA_Roles' ) ) {
@@ -1910,6 +1912,7 @@ class CTA_Stripe {
 						'customer'        => sanitize_text_field( (string) ( $charge->customer ?? '' ) ),
 						'amount'          => $amount,
 						'amount_refunded' => $amount_refunded,
+						'env'             => $env,
 					)
 				);
 			}
@@ -1966,6 +1969,7 @@ class CTA_Stripe {
 						'payment_id' => $payment_id,
 						'user_id'    => $user_id,
 						'course_id'  => $course_id,
+						'env'        => $env,
 					)
 				);
 			}
@@ -1973,15 +1977,128 @@ class CTA_Stripe {
 	}
 
 	/**
+	 * Set Stripe SDK API key for a specific environment (test|live).
+	 *
+	 * @param string $env Environment.
+	 * @return bool
+	 */
+	private function set_stripe_api_for_env( $env ) {
+		$creds = self::get_credentials( self::normalize_env( $env ) );
+		if ( empty( $creds['secret_key'] ) || ! class_exists( '\Stripe\Stripe' ) ) {
+			return false;
+		}
+		\Stripe\Stripe::setApiKey( $creds['secret_key'] );
+		return true;
+	}
+
+	/**
+	 * Resolve Checkout Session ID (cs_…) for a charge/PaymentIntent.
+	 *
+	 * Local payments store cs_… as stripe_payment_id; charges only carry pi_/ch_.
+	 *
+	 * @param object $charge Stripe charge.
+	 * @param string $env    test|live.
+	 * @return string
+	 */
+	private function resolve_checkout_session_id_for_charge( $charge, $env = 'test' ) {
+		global $wpdb;
+
+		$pi = sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) );
+		if ( '' === $pi ) {
+			return '';
+		}
+
+		// Prefer local mapping saved at checkout (plan_details.payment_intent).
+		$table = $wpdb->prefix . 'cta_payments';
+		$row   = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT stripe_payment_id FROM {$table}
+				WHERE plan_details LIKE %s
+				AND stripe_payment_id LIKE 'cs_%%'
+				ORDER BY id DESC
+				LIMIT 1",
+				'%' . $wpdb->esc_like( $pi ) . '%'
+			)
+		);
+		if ( $row && ! empty( $row->stripe_payment_id ) ) {
+			return sanitize_text_field( (string) $row->stripe_payment_id );
+		}
+
+		// Ask Stripe which Checkout Session created this PaymentIntent (same env as webhook).
+		if ( ! $this->set_stripe_api_for_env( $env ) ) {
+			return '';
+		}
+
+		try {
+			$sessions = \Stripe\Checkout\Session::all(
+				array(
+					'payment_intent' => $pi,
+					'limit'          => 1,
+				)
+			);
+			if ( ! empty( $sessions->data[0]->id ) ) {
+				$session_id = sanitize_text_field( (string) $sessions->data[0]->id );
+
+				// Backfill payment_intent onto the local payment row for next time.
+				$existing = $wpdb->get_row(
+					$wpdb->prepare(
+						"SELECT id, plan_details FROM {$table} WHERE stripe_payment_id = %s LIMIT 1",
+						$session_id
+					)
+				);
+				if ( $existing ) {
+					$details = array();
+					if ( ! empty( $existing->plan_details ) ) {
+						$decoded = json_decode( (string) $existing->plan_details, true );
+						if ( is_array( $decoded ) ) {
+							$details = $decoded;
+						}
+					}
+					$details['payment_intent'] = $pi;
+					$charge_id                 = sanitize_text_field( (string) ( $charge->id ?? '' ) );
+					if ( $charge_id ) {
+						$details['charge_id'] = $charge_id;
+					}
+					$wpdb->update(
+						$table,
+						array( 'plan_details' => wp_json_encode( $details ) ),
+						array( 'id' => (int) $existing->id ),
+						array( '%s' ),
+						array( '%d' )
+					);
+				}
+
+				return $session_id;
+			}
+		} catch ( \Exception $e ) {
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'charge_refunded_session_lookup_failed',
+					__( 'Could not resolve Checkout Session for refunded PaymentIntent.', 'cta-lms' ),
+					array(
+						'payment_intent' => $pi,
+						'env'            => self::normalize_env( $env ),
+						'error'          => $e->getMessage(),
+					)
+				);
+			}
+		}
+
+		return '';
+	}
+
+	/**
 	 * Locate local payment rows for a refunded Stripe charge.
 	 *
 	 * Course checkouts store Checkout Session IDs (cs_…) as stripe_payment_id, so
-	 * payment_intent / charge IDs alone often miss. Fall back to customer/email + amount.
+	 * payment_intent / charge IDs alone often miss. Resolve cs_ via Stripe, then
+	 * fall back to customer/email + amount.
 	 *
 	 * @param object $charge Stripe charge.
+	 * @param string $env    test|live.
 	 * @return array<int,object>
 	 */
-	private function find_payments_for_refunded_charge( $charge ) {
+	private function find_payments_for_refunded_charge( $charge, $env = 'test' ) {
 		global $wpdb;
 
 		$table = $wpdb->prefix . 'cta_payments';
@@ -2000,8 +2117,11 @@ class CTA_Stripe {
 			$found[]     = $row;
 		};
 
+		$session_id = $this->resolve_checkout_session_id_for_charge( $charge, $env );
+
 		$candidates = array_filter(
 			array(
+				$session_id,
 				sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) ),
 				sanitize_text_field( (string) ( $charge->id ?? '' ) ),
 			)
@@ -2049,10 +2169,28 @@ class CTA_Stripe {
 		}
 
 		// Resolve WP user: charge metadata, then billing/receipt email, then customer meta map.
-		$meta       = isset( $charge->metadata ) ? (array) $charge->metadata : array();
-		$meta_user  = absint( $meta['user_id'] ?? 0 );
+		$meta        = isset( $charge->metadata ) ? (array) $charge->metadata : array();
+		$meta_user   = absint( $meta['user_id'] ?? 0 );
 		$meta_course = absint( $meta['course_id'] ?? 0 );
-		$user_id    = $meta_user;
+		$user_id     = $meta_user;
+
+		// Session metadata (user_id / course_id) when we resolved cs_… from Stripe.
+		if ( ( ! $user_id || ! $meta_course ) && $session_id && $this->set_stripe_api_for_env( $env ) ) {
+			try {
+				$session = \Stripe\Checkout\Session::retrieve( $session_id );
+				if ( $session && ! empty( $session->metadata ) ) {
+					$session_meta = (array) $session->metadata;
+					if ( ! $user_id ) {
+						$user_id = absint( $session_meta['user_id'] ?? 0 );
+					}
+					if ( ! $meta_course ) {
+						$meta_course = absint( $session_meta['course_id'] ?? 0 );
+					}
+				}
+			} catch ( \Exception $e ) { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedCatch
+				// Fall through to email / amount matching.
+			}
+		}
 
 		if ( ! $user_id ) {
 			$email = '';
@@ -2214,14 +2352,42 @@ class CTA_Stripe {
 			}
 		}
 
+		$session_id      = sanitize_text_field( (string) ( $session->id ?? '' ) );
+		$payment_intent  = sanitize_text_field( (string) ( $session->payment_intent ?? '' ) );
+		$plan_details    = array();
+		if ( $payment_intent ) {
+			$plan_details['payment_intent'] = $payment_intent;
+		}
+
+		$update_data = array(
+			'status'             => 'completed',
+			'stripe_customer_id' => sanitize_text_field( $session->customer ?? '' ),
+		);
+		$update_fmt  = array( '%s', '%s' );
+
+		if ( ! empty( $plan_details ) ) {
+			// Merge with any existing plan_details on the pending row.
+			$existing_details = $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT plan_details FROM {$wpdb->prefix}cta_payments WHERE stripe_payment_id = %s LIMIT 1",
+					$session_id
+				)
+			);
+			if ( $existing_details ) {
+				$decoded = json_decode( (string) $existing_details, true );
+				if ( is_array( $decoded ) ) {
+					$plan_details = array_merge( $decoded, $plan_details );
+				}
+			}
+			$update_data['plan_details'] = wp_json_encode( $plan_details );
+			$update_fmt[]                = '%s';
+		}
+
 		$wpdb->update(
 			$wpdb->prefix . 'cta_payments',
-			array(
-				'status'             => 'completed',
-				'stripe_customer_id' => sanitize_text_field( $session->customer ?? '' ),
-			),
-			array( 'stripe_payment_id' => sanitize_text_field( $session->id ) ),
-			array( '%s', '%s' ),
+			$update_data,
+			array( 'stripe_payment_id' => $session_id ),
+			$update_fmt,
 			array( '%s' )
 		);
 

@@ -295,6 +295,23 @@ class CTA_Student_Dashboard {
 			return ob_get_clean();
 		}
 
+		// Refund / admin revoke — enrollment row remains for history but content is locked.
+		if ( 'revoked' === sanitize_key( (string) ( $enrollment->status ?? '' ) ) ) {
+			ob_start();
+			?>
+			<div class="cta-plugin-wrapper">
+				<div class="cta-empty-state cta-empty-state--locked">
+					<h2><?php esc_html_e( 'Course access revoked', 'cta-lms' ); ?></h2>
+					<p><?php esc_html_e( 'Access to this course is no longer active. Certificates you already earned remain available in My Certificates.', 'cta-lms' ); ?></p>
+					<?php if ( $this->get_dashboard_url() ) : ?>
+						<a href="<?php echo esc_url( $this->get_dashboard_url() ); ?>" class="btn btn-primary"><?php esc_html_e( 'Back to Dashboard', 'cta-lms' ); ?></a>
+					<?php endif; ?>
+				</div>
+			</div>
+			<?php
+			return ob_get_clean();
+		}
+
 		// Exam prep: expiration gates content access; enrollment/progress remain.
 		if ( class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
 			CTA_Exam_Access::ensure_access_for_enrollment( $user_id, $course, $enrollment );
@@ -623,7 +640,7 @@ class CTA_Student_Dashboard {
 		$module_id  = absint( wp_unslash( $_POST['module_id'] ?? 0 ) );
 		$enrollment = CTA_Database::get_user_enrollment( $user_id, $course_id );
 
-		if ( ! $enrollment || 'completed' === $enrollment->status ) {
+		if ( ! $enrollment || 'completed' === $enrollment->status || 'revoked' === sanitize_key( (string) ( $enrollment->status ?? '' ) ) ) {
 			wp_send_json_error(
 				array(
 					'message' => __( 'Enrollment not found.', 'cta-lms' ),
