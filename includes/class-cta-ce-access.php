@@ -66,12 +66,6 @@ class CTA_CE_Access {
 			return false;
 		}
 
-		// Individual purchase always wins (Rule 1 / Rule 2 exception).
-		if ( self::user_has_individual_purchase( $user_id, $course_id ) ) {
-			$enrollment = CTA_Database::get_user_enrollment( $user_id, $course_id );
-			return (bool) $enrollment && in_array( (string) $enrollment->status, array( 'active', 'completed' ), true );
-		}
-
 		$enrollment = CTA_Database::get_user_enrollment( $user_id, $course_id );
 		if ( ! $enrollment ) {
 			return false;
@@ -86,10 +80,21 @@ class CTA_CE_Access {
 			return false;
 		}
 
+		// Completed (non-refunded) individual purchase → permanent access.
+		if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
+			return true;
+		}
+
+		// Purchase was refunded (or cancelled): do not grant via access_source alone.
+		if ( self::user_has_refunded_course_payment( $user_id, $course_id ) ) {
+			return false;
+		}
+
 		$source = self::resolve_access_source( $enrollment );
 
 		if ( self::SOURCE_PURCHASE === $source ) {
-			return true;
+			// Legacy purchase-sourced rows with no payment row keep access.
+			return ! self::user_has_any_course_payment( $user_id, $course_id );
 		}
 
 		// Membership-sourced access.
@@ -133,11 +138,46 @@ class CTA_CE_Access {
 	/**
 	 * Whether the user has a completed individual course payment for this course.
 	 *
+	 * Refunded payments do not count. The access_source=purchase fallback only
+	 * applies when no payment row exists (legacy grants); it must not keep access
+	 * after a full refund while the enrollment row is still active.
+	 *
 	 * @param int $user_id   User ID.
 	 * @param int $course_id Course ID.
 	 * @return bool
 	 */
 	public static function user_has_individual_purchase( $user_id, $course_id ) {
+		$user_id   = absint( $user_id );
+		$course_id = absint( $course_id );
+
+		if ( ! $user_id || ! $course_id ) {
+			return false;
+		}
+
+		if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
+			return true;
+		}
+
+		// After a refund, payment rows exist but are not completed — not a purchase.
+		if ( self::user_has_any_course_payment( $user_id, $course_id ) ) {
+			return false;
+		}
+
+		$enrollment = class_exists( 'CTA_Database' )
+			? CTA_Database::get_user_enrollment( $user_id, $course_id )
+			: null;
+
+		return $enrollment && self::SOURCE_PURCHASE === sanitize_key( (string) ( $enrollment->access_source ?? '' ) );
+	}
+
+	/**
+	 * Whether a completed (non-refunded) course payment exists.
+	 *
+	 * @param int $user_id   User ID.
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function user_has_completed_course_payment( $user_id, $course_id ) {
 		global $wpdb;
 
 		$user_id   = absint( $user_id );
@@ -152,7 +192,7 @@ class CTA_CE_Access {
 			$wpdb->prepare(
 				"SELECT id FROM {$wpdb->prefix}cta_payments
 				WHERE user_id = %d
-				AND product_type = 'course'
+				AND product_type IN ('course', 'exam_prep')
 				AND product_id = %d
 				AND status = 'completed'
 				LIMIT 1",
@@ -161,15 +201,78 @@ class CTA_CE_Access {
 			)
 		);
 
-		if ( $found ) {
-			return true;
+		return (bool) $found;
+	}
+
+	/**
+	 * Whether any course payment row exists (including refunded).
+	 *
+	 * @param int $user_id   User ID.
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function user_has_any_course_payment( $user_id, $course_id ) {
+		global $wpdb;
+
+		$user_id   = absint( $user_id );
+		$course_id = absint( $course_id );
+
+		if ( ! $user_id || ! $course_id ) {
+			return false;
 		}
 
-		$enrollment = class_exists( 'CTA_Database' )
-			? CTA_Database::get_user_enrollment( $user_id, $course_id )
-			: null;
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$found = $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT id FROM {$wpdb->prefix}cta_payments
+				WHERE user_id = %d
+				AND product_type IN ('course', 'exam_prep')
+				AND product_id = %d
+				LIMIT 1",
+				$user_id,
+				$course_id
+			)
+		);
 
-		return $enrollment && self::SOURCE_PURCHASE === sanitize_key( (string) ( $enrollment->access_source ?? '' ) );
+		return (bool) $found;
+	}
+
+	/**
+	 * Whether the latest course payment for this course is refunded.
+	 *
+	 * @param int $user_id   User ID.
+	 * @param int $course_id Course ID.
+	 * @return bool
+	 */
+	public static function user_has_refunded_course_payment( $user_id, $course_id ) {
+		global $wpdb;
+
+		$user_id   = absint( $user_id );
+		$course_id = absint( $course_id );
+
+		if ( ! $user_id || ! $course_id ) {
+			return false;
+		}
+
+		if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
+			return false;
+		}
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$status = $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT status FROM {$wpdb->prefix}cta_payments
+				WHERE user_id = %d
+				AND product_type IN ('course', 'exam_prep')
+				AND product_id = %d
+				ORDER BY id DESC
+				LIMIT 1",
+				$user_id,
+				$course_id
+			)
+		);
+
+		return $status && 'refunded' === (string) $status;
 	}
 
 	/**

@@ -1603,14 +1603,23 @@ class CTA_Stripe {
 		}
 
 		$event_id = sanitize_text_field( (string) ( $event->id ?? '' ) );
-		if ( $event_id && ! $this->claim_webhook_event( $event_id ) ) {
-			// Duplicate delivery — acknowledge without re-processing.
+		$is_dup   = ( $event_id && ! $this->claim_webhook_event( $event_id ) );
+
+		// charge.refunded: allow Stripe Dashboard resend to re-run revoke logic.
+		// Other event types stay idempotent (acknowledge duplicate, no re-process).
+		if ( $is_dup && 'charge.refunded' !== (string) ( $event->type ?? '' ) ) {
 			return new WP_REST_Response( array( 'received' => true, 'duplicate' => true ), 200 );
 		}
 
 		$this->dispatch_webhook_event( $event, $env );
 
-		return new WP_REST_Response( array( 'received' => true ), 200 );
+		return new WP_REST_Response(
+			array(
+				'received'  => true,
+				'duplicate' => (bool) $is_dup,
+			),
+			200
+		);
 	}
 
 	/**
@@ -1870,15 +1879,40 @@ class CTA_Stripe {
 
 		$amount          = isset( $charge->amount ) ? (int) $charge->amount : 0;
 		$amount_refunded = isset( $charge->amount_refunded ) ? (int) $charge->amount_refunded : 0;
+		$charge_id       = sanitize_text_field( (string) ( $charge->id ?? '' ) );
 
 		// Full refund only — partial refunds must not change access.
 		if ( $amount <= 0 || $amount_refunded < $amount ) {
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'charge_refunded_partial_ignored',
+					__( 'Partial refund received; course access left unchanged.', 'cta-lms' ),
+					array(
+						'charge_id'       => $charge_id,
+						'amount'          => $amount,
+						'amount_refunded' => $amount_refunded,
+					)
+				);
+			}
 			return;
 		}
 
 		$payments = $this->find_payments_for_refunded_charge( $charge );
 
 		if ( empty( $payments ) ) {
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'charge_refunded_payment_not_found',
+					__( 'Full refund received but no matching local payment row was found; access was not revoked.', 'cta-lms' ),
+					array(
+						'charge_id'       => $charge_id,
+						'payment_intent'  => sanitize_text_field( (string) ( $charge->payment_intent ?? '' ) ),
+						'customer'        => sanitize_text_field( (string) ( $charge->customer ?? '' ) ),
+						'amount'          => $amount,
+						'amount_refunded' => $amount_refunded,
+					)
+				);
+			}
 			return;
 		}
 
@@ -1906,10 +1940,35 @@ class CTA_Stripe {
 			$user_id   = absint( $payment->user_id ?? 0 );
 			$course_id = absint( $payment->product_id ?? 0 );
 			if ( ! $user_id || ! $course_id ) {
+				if ( class_exists( 'CTA_Roles' ) ) {
+					CTA_Roles::log_enrollment_issue(
+						'charge_refunded_missing_ids',
+						__( 'Refunded payment row is missing user_id or product_id.', 'cta-lms' ),
+						array(
+							'charge_id'  => $charge_id,
+							'payment_id' => $payment_id,
+							'user_id'    => $user_id,
+							'course_id'  => $course_id,
+						)
+					);
+				}
 				continue;
 			}
 
 			$this->revoke_course_access_after_full_refund( $user_id, $course_id );
+
+			if ( class_exists( 'CTA_Roles' ) ) {
+				CTA_Roles::log_enrollment_issue(
+					'charge_refunded_access_revoked',
+					__( 'Full refund processed; course access revoked.', 'cta-lms' ),
+					array(
+						'charge_id'  => $charge_id,
+						'payment_id' => $payment_id,
+						'user_id'    => $user_id,
+						'course_id'  => $course_id,
+					)
+				);
+			}
 		}
 	}
 
@@ -1917,7 +1976,7 @@ class CTA_Stripe {
 	 * Locate local payment rows for a refunded Stripe charge.
 	 *
 	 * Course checkouts store Checkout Session IDs (cs_…) as stripe_payment_id, so
-	 * payment_intent / charge IDs alone often miss. Fall back to customer + amount.
+	 * payment_intent / charge IDs alone often miss. Fall back to customer/email + amount.
 	 *
 	 * @param object $charge Stripe charge.
 	 * @return array<int,object>
@@ -1928,6 +1987,18 @@ class CTA_Stripe {
 		$table = $wpdb->prefix . 'cta_payments';
 		$found = array();
 		$seen  = array();
+
+		$add_row = static function ( $row ) use ( &$found, &$seen ) {
+			if ( ! $row || empty( $row->id ) ) {
+				return;
+			}
+			$id = (int) $row->id;
+			if ( isset( $seen[ $id ] ) ) {
+				return;
+			}
+			$seen[ $id ] = true;
+			$found[]     = $row;
+		};
 
 		$candidates = array_filter(
 			array(
@@ -1943,38 +2014,33 @@ class CTA_Stripe {
 					$id
 				)
 			);
-			if ( $row && ! isset( $seen[ (int) $row->id ] ) ) {
-				$seen[ (int) $row->id ] = true;
-				$found[]                = $row;
-			}
+			$add_row( $row );
 		}
 
 		if ( ! empty( $found ) ) {
 			return $found;
 		}
 
-		$customer_id = sanitize_text_field( (string) ( $charge->customer ?? '' ) );
-		$amount_usd  = isset( $charge->amount ) ? round( ( (int) $charge->amount ) / 100, 2 ) : 0.0;
+		$amount_cents = isset( $charge->amount ) ? (int) $charge->amount : 0;
+		$customer_id  = sanitize_text_field( (string) ( $charge->customer ?? '' ) );
 
-		if ( $customer_id && $amount_usd > 0 ) {
+		// Match by Stripe customer + amount in cents (avoids float ROUND/%f mismatches).
+		if ( $customer_id && $amount_cents > 0 ) {
 			$rows = $wpdb->get_results(
 				$wpdb->prepare(
 					"SELECT * FROM {$table}
 					WHERE stripe_customer_id = %s
 					AND product_type IN ('course', 'exam_prep')
 					AND status IN ('completed', 'pending', 'refunded')
-					AND ROUND(amount, 2) = %f
+					AND ABS( ROUND( amount * 100 ) - %d ) < 1
 					ORDER BY id DESC
 					LIMIT 5",
 					$customer_id,
-					$amount_usd
+					$amount_cents
 				)
 			);
 			foreach ( (array) $rows as $row ) {
-				if ( $row && ! isset( $seen[ (int) $row->id ] ) ) {
-					$seen[ (int) $row->id ] = true;
-					$found[]                = $row;
-				}
+				$add_row( $row );
 			}
 		}
 
@@ -1982,11 +2048,42 @@ class CTA_Stripe {
 			return $found;
 		}
 
-		// Last resort: charge/PaymentIntent metadata from Checkout (user_id + course_id).
-		$meta      = isset( $charge->metadata ) ? (array) $charge->metadata : array();
-		$meta_user = absint( $meta['user_id'] ?? 0 );
+		// Resolve WP user: charge metadata, then billing/receipt email, then customer meta map.
+		$meta       = isset( $charge->metadata ) ? (array) $charge->metadata : array();
+		$meta_user  = absint( $meta['user_id'] ?? 0 );
 		$meta_course = absint( $meta['course_id'] ?? 0 );
-		if ( $meta_user && $meta_course ) {
+		$user_id    = $meta_user;
+
+		if ( ! $user_id ) {
+			$email = '';
+			if ( ! empty( $charge->billing_details->email ) ) {
+				$email = sanitize_email( (string) $charge->billing_details->email );
+			} elseif ( ! empty( $charge->receipt_email ) ) {
+				$email = sanitize_email( (string) $charge->receipt_email );
+			}
+			if ( $email ) {
+				$user = get_user_by( 'email', $email );
+				if ( $user ) {
+					$user_id = (int) $user->ID;
+				}
+			}
+		}
+
+		if ( ! $user_id && $customer_id ) {
+			$users = get_users(
+				array(
+					'meta_key'   => 'cta_stripe_customer_id',
+					'meta_value' => $customer_id,
+					'number'     => 1,
+					'fields'     => 'ID',
+				)
+			);
+			if ( ! empty( $users[0] ) ) {
+				$user_id = (int) $users[0];
+			}
+		}
+
+		if ( $user_id && $meta_course ) {
 			$row = $wpdb->get_row(
 				$wpdb->prepare(
 					"SELECT * FROM {$table}
@@ -1996,12 +2093,34 @@ class CTA_Stripe {
 					AND status IN ('completed', 'pending', 'refunded')
 					ORDER BY id DESC
 					LIMIT 1",
-					$meta_user,
+					$user_id,
 					$meta_course
 				)
 			);
-			if ( $row ) {
-				$found[] = $row;
+			$add_row( $row );
+		}
+
+		if ( ! empty( $found ) ) {
+			return $found;
+		}
+
+		// User + amount (Checkout metadata lives on the Session, not the Charge).
+		if ( $user_id && $amount_cents > 0 ) {
+			$rows = $wpdb->get_results(
+				$wpdb->prepare(
+					"SELECT * FROM {$table}
+					WHERE user_id = %d
+					AND product_type IN ('course', 'exam_prep')
+					AND status IN ('completed', 'pending', 'refunded')
+					AND ABS( ROUND( amount * 100 ) - %d ) < 1
+					ORDER BY id DESC
+					LIMIT 5",
+					$user_id,
+					$amount_cents
+				)
+			);
+			foreach ( (array) $rows as $row ) {
+				$add_row( $row );
 			}
 		}
 
