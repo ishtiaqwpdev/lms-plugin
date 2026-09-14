@@ -1856,13 +1856,78 @@ class CTA_Stripe {
 	}
 
 	/**
-	 * Charge refunded — mark matching payment as refunded.
+	 * Charge refunded — mark matching payment refunded; full refunds revoke course access.
 	 *
-	 * @param object $charge Stripe charge.
+	 * Partial refunds leave access unchanged. Completion certificate rows are never deleted.
+	 * Completed enrollments keep historical module progress on the row; active access is locked
+	 * by setting enrollment status to revoked (certificates remain in cta_certificates).
+	 *
+	 * @param object $charge Stripe charge object.
 	 * @return void
 	 */
 	private function handle_charge_refunded( $charge ) {
 		global $wpdb;
+
+		$amount          = isset( $charge->amount ) ? (int) $charge->amount : 0;
+		$amount_refunded = isset( $charge->amount_refunded ) ? (int) $charge->amount_refunded : 0;
+
+		// Full refund only — partial refunds must not change access.
+		if ( $amount <= 0 || $amount_refunded < $amount ) {
+			return;
+		}
+
+		$payments = $this->find_payments_for_refunded_charge( $charge );
+
+		if ( empty( $payments ) ) {
+			return;
+		}
+
+		$table_payments = $wpdb->prefix . 'cta_payments';
+
+		foreach ( $payments as $payment ) {
+			$payment_id = absint( $payment->id ?? 0 );
+			if ( ! $payment_id ) {
+				continue;
+			}
+
+			$wpdb->update(
+				$table_payments,
+				array( 'status' => 'refunded' ),
+				array( 'id' => $payment_id ),
+				array( '%s' ),
+				array( '%d' )
+			);
+
+			$product_type = sanitize_key( (string) ( $payment->product_type ?? '' ) );
+			if ( ! in_array( $product_type, array( 'course', 'exam_prep' ), true ) ) {
+				continue;
+			}
+
+			$user_id   = absint( $payment->user_id ?? 0 );
+			$course_id = absint( $payment->product_id ?? 0 );
+			if ( ! $user_id || ! $course_id ) {
+				continue;
+			}
+
+			$this->revoke_course_access_after_full_refund( $user_id, $course_id );
+		}
+	}
+
+	/**
+	 * Locate local payment rows for a refunded Stripe charge.
+	 *
+	 * Course checkouts store Checkout Session IDs (cs_…) as stripe_payment_id, so
+	 * payment_intent / charge IDs alone often miss. Fall back to customer + amount.
+	 *
+	 * @param object $charge Stripe charge.
+	 * @return array<int,object>
+	 */
+	private function find_payments_for_refunded_charge( $charge ) {
+		global $wpdb;
+
+		$table = $wpdb->prefix . 'cta_payments';
+		$found = array();
+		$seen  = array();
 
 		$candidates = array_filter(
 			array(
@@ -1872,12 +1937,132 @@ class CTA_Stripe {
 		);
 
 		foreach ( $candidates as $id ) {
+			$row = $wpdb->get_row(
+				$wpdb->prepare(
+					"SELECT * FROM {$table} WHERE stripe_payment_id = %s LIMIT 1",
+					$id
+				)
+			);
+			if ( $row && ! isset( $seen[ (int) $row->id ] ) ) {
+				$seen[ (int) $row->id ] = true;
+				$found[]                = $row;
+			}
+		}
+
+		if ( ! empty( $found ) ) {
+			return $found;
+		}
+
+		$customer_id = sanitize_text_field( (string) ( $charge->customer ?? '' ) );
+		$amount_usd  = isset( $charge->amount ) ? round( ( (int) $charge->amount ) / 100, 2 ) : 0.0;
+
+		if ( $customer_id && $amount_usd > 0 ) {
+			$rows = $wpdb->get_results(
+				$wpdb->prepare(
+					"SELECT * FROM {$table}
+					WHERE stripe_customer_id = %s
+					AND product_type IN ('course', 'exam_prep')
+					AND status IN ('completed', 'pending', 'refunded')
+					AND ROUND(amount, 2) = %f
+					ORDER BY id DESC
+					LIMIT 5",
+					$customer_id,
+					$amount_usd
+				)
+			);
+			foreach ( (array) $rows as $row ) {
+				if ( $row && ! isset( $seen[ (int) $row->id ] ) ) {
+					$seen[ (int) $row->id ] = true;
+					$found[]                = $row;
+				}
+			}
+		}
+
+		if ( ! empty( $found ) ) {
+			return $found;
+		}
+
+		// Last resort: charge/PaymentIntent metadata from Checkout (user_id + course_id).
+		$meta      = isset( $charge->metadata ) ? (array) $charge->metadata : array();
+		$meta_user = absint( $meta['user_id'] ?? 0 );
+		$meta_course = absint( $meta['course_id'] ?? 0 );
+		if ( $meta_user && $meta_course ) {
+			$row = $wpdb->get_row(
+				$wpdb->prepare(
+					"SELECT * FROM {$table}
+					WHERE user_id = %d
+					AND product_id = %d
+					AND product_type IN ('course', 'exam_prep')
+					AND status IN ('completed', 'pending', 'refunded')
+					ORDER BY id DESC
+					LIMIT 1",
+					$meta_user,
+					$meta_course
+				)
+			);
+			if ( $row ) {
+				$found[] = $row;
+			}
+		}
+
+		return $found;
+	}
+
+	/**
+	 * Revoke active course access after a full refund (does not delete certificates).
+	 *
+	 * @param int $user_id   User ID.
+	 * @param int $course_id Course ID.
+	 * @return void
+	 */
+	private function revoke_course_access_after_full_refund( $user_id, $course_id ) {
+		global $wpdb;
+
+		$user_id   = absint( $user_id );
+		$course_id = absint( $course_id );
+		if ( ! $user_id || ! $course_id ) {
+			return;
+		}
+
+		$table = $wpdb->prefix . 'cta_enrollments';
+		$row   = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT id, status FROM {$table}
+				WHERE user_id = %d AND course_id = %d
+				LIMIT 1",
+				$user_id,
+				$course_id
+			)
+		);
+
+		if ( $row ) {
+			$status = sanitize_key( (string) $row->status );
+			// Lock access for both in-progress and completed enrollments.
+			// Certificate rows in cta_certificates are left untouched; modules_completed stays on the row.
+			if ( in_array( $status, array( 'active', 'completed' ), true ) ) {
+				$wpdb->update(
+					$table,
+					array( 'status' => 'revoked' ),
+					array( 'id' => (int) $row->id ),
+					array( '%s' ),
+					array( '%d' )
+				);
+			}
+		}
+
+		// Exam prep timed access (if any) — expire without deleting progress history.
+		$exam_table = $wpdb->prefix . 'cta_exam_access';
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $exam_table ) ) === $exam_table ) {
 			$wpdb->update(
-				$wpdb->prefix . 'cta_payments',
-				array( 'status' => 'refunded' ),
-				array( 'stripe_payment_id' => $id ),
+				$exam_table,
+				array( 'expires_at' => current_time( 'mysql' ) ),
+				array(
+					'user_id'   => $user_id,
+					'course_id' => $course_id,
+				),
 				array( '%s' ),
-				array( '%s' )
+				array( '%d', '%d' )
 			);
 		}
 	}
