@@ -1018,6 +1018,14 @@ class CTA_Stripe {
 						'course_id'    => (string) $course_id,
 						'product_type' => $is_exam_prep ? 'exam_prep' : 'course',
 					),
+					// Copy onto PaymentIntent/Charge so charge.refunded can match without Session lookup.
+					'payment_intent_data' => array(
+						'metadata' => array(
+							'user_id'      => (string) $user_id,
+							'course_id'    => (string) $course_id,
+							'product_type' => $is_exam_prep ? 'exam_prep' : 'course',
+						),
+					),
 					'success_url' => $success_url,
 					'cancel_url'  => $cancel_url,
 				)
@@ -3408,9 +3416,25 @@ class CTA_Stripe {
 			if ( 'active' === $existing->status || 'completed' === $existing->status ) {
 				// Keep status; only refresh access metadata.
 			} else {
+				// Do not restore access if this payment (or the course's payment) was refunded.
+				$pay_status = $wpdb->get_var(
+					$wpdb->prepare(
+						"SELECT status FROM {$wpdb->prefix}cta_payments
+						WHERE stripe_payment_id = %s
+						LIMIT 1",
+						sanitize_text_field( (string) $payment_id )
+					)
+				);
+				if ( $pay_status && 'refunded' === (string) $pay_status ) {
+					return false;
+				}
+				if ( class_exists( 'CTA_CE_Access' ) && CTA_CE_Access::user_has_refunded_course_payment( $user_id, $course_id )
+					&& ! CTA_CE_Access::user_has_completed_course_payment( $user_id, $course_id ) ) {
+					return false;
+				}
 				// Restore revoked/other statuses to active for a new grant.
-				$update['status']   = 'active';
-				$formats[]          = '%s';
+				$update['status'] = 'active';
+				$formats[]        = '%s';
 			}
 
 			$updated = $wpdb->update(
@@ -3516,20 +3540,23 @@ class CTA_Stripe {
 				continue;
 			}
 
-			$has_enrollment = $wpdb->get_var(
+			$enrollment_row = $wpdb->get_row(
 				$wpdb->prepare(
-					"SELECT id FROM {$wpdb->prefix}cta_enrollments
+					"SELECT id, status FROM {$wpdb->prefix}cta_enrollments
 					WHERE user_id = %d
 					AND course_id = %d
-					AND status IN ('active','completed')
 					LIMIT 1",
 					$user_id,
 					$course_id
 				)
 			);
 
-			if ( $has_enrollment ) {
-				continue;
+			if ( $enrollment_row ) {
+				$enroll_status = sanitize_key( (string) ( $enrollment_row->status ?? '' ) );
+				// Already has access, or was revoked (refund) — never auto-restore revoked.
+				if ( in_array( $enroll_status, array( 'active', 'completed', 'revoked' ), true ) ) {
+					continue;
+				}
 			}
 
 			$payment_ref = ! empty( $payment->stripe_payment_id )
@@ -3834,6 +3861,74 @@ class CTA_Stripe {
 		if ( $course && class_exists( 'CTA_Exam_Access' ) && CTA_Exam_Access::is_exam_prep( $course ) ) {
 			$months = ! empty( $course->access_period_months ) ? (int) $course->access_period_months : 6;
 			CTA_Exam_Access::grant_access( $user_id, $course_id, $months );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Revoke course access from a local payment row (no Stripe API call).
+	 *
+	 * Marks the payment refunded and locks the enrollment. Certificates stay intact.
+	 * Use for full-refund repair when the webhook did not revoke access.
+	 *
+	 * @param string $payment_ref Stripe Checkout Session ID (cs_...) or local stripe_payment_id.
+	 * @return true|WP_Error
+	 */
+	public function revoke_course_access_from_payment( $payment_ref ) {
+		global $wpdb;
+
+		$payment_ref = sanitize_text_field( (string) $payment_ref );
+		if ( '' === $payment_ref ) {
+			return new WP_Error( 'missing_ref', __( 'Payment reference is required.', 'cta-lms' ) );
+		}
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM {$wpdb->prefix}cta_payments
+				WHERE stripe_payment_id = %s
+				LIMIT 1",
+				$payment_ref
+			)
+		);
+
+		if ( ! $row ) {
+			return new WP_Error( 'payment_not_found', __( 'No local payment record found for that reference.', 'cta-lms' ) );
+		}
+
+		$user_id   = absint( $row->user_id );
+		$course_id = absint( $row->product_id );
+		$type      = sanitize_key( (string) $row->product_type );
+
+		if ( ! in_array( $type, array( 'course', 'exam_prep' ), true ) ) {
+			return new WP_Error( 'not_course', __( 'That payment is not a course purchase.', 'cta-lms' ) );
+		}
+
+		if ( ! $user_id || ! $course_id ) {
+			return new WP_Error( 'incomplete_payment', __( 'Payment row is missing user or course ID.', 'cta-lms' ) );
+		}
+
+		$wpdb->update(
+			$wpdb->prefix . 'cta_payments',
+			array( 'status' => 'refunded' ),
+			array( 'id' => (int) $row->id ),
+			array( '%s' ),
+			array( '%d' )
+		);
+
+		$this->revoke_course_access_after_full_refund( $user_id, $course_id );
+
+		if ( class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::log_enrollment_issue(
+				'admin_revoke_access_from_payment',
+				__( 'Admin revoked course access from payment reference.', 'cta-lms' ),
+				array(
+					'payment_ref' => $payment_ref,
+					'payment_id'  => (int) $row->id,
+					'user_id'     => $user_id,
+					'course_id'   => $course_id,
+				)
+			);
 		}
 
 		return true;

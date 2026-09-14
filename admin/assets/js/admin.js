@@ -855,6 +855,39 @@
         });
     });
 
+    $("#cta-revoke-payment-btn").on("click", function () {
+      var $result = $("#cta-reprocess-payment-result");
+      var ref = $.trim($("#cta-reprocess-payment-ref").val() || "");
+      $result.removeClass("is-success is-error").text("Working...");
+
+      if (!ref) {
+        $result.addClass("is-error").text("Enter a Checkout Session ID (cs_...).");
+        return;
+      }
+
+      $.post(ctaAdmin.ajaxUrl, {
+        action: "cta_admin_revoke_course_payment",
+        nonce: ctaAdmin.nonce,
+        payment_ref: ref
+      })
+        .done(function (response) {
+          if (response.success) {
+            $result.addClass("is-success").text(response.data.message || "Done.");
+            return;
+          }
+          $result
+            .addClass("is-error")
+            .text(
+              response.data && response.data.message
+                ? response.data.message
+                : "Revoke failed."
+            );
+        })
+        .fail(function () {
+          $result.addClass("is-error").text("Request failed.");
+        });
+    });
+
     $("#cta-heal-missing-roles-btn").on("click", function () {
       var $result = $("#cta-heal-missing-roles-result");
       $result.removeClass("is-success is-error").text("Working...");

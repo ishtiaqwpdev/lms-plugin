@@ -69,6 +69,7 @@ class CTA_Admin {
 		add_action( 'wp_ajax_cta_test_stripe_connection', array( $this, 'ajax_test_stripe_connection' ) );
 		add_action( 'wp_ajax_cta_ensure_billing_portal', array( $this, 'ajax_ensure_billing_portal' ) );
 		add_action( 'wp_ajax_cta_admin_reprocess_course_payment', array( $this, 'ajax_reprocess_course_payment' ) );
+		add_action( 'wp_ajax_cta_admin_revoke_course_payment', array( $this, 'ajax_revoke_course_payment' ) );
 		add_action( 'wp_ajax_cta_admin_heal_missing_roles', array( $this, 'ajax_heal_missing_roles' ) );
 		add_action( 'wp_ajax_cta_admin_cancel_subscription', array( $this, 'ajax_admin_cancel_subscription' ) );
 		add_action( 'wp_ajax_cta_admin_reactivate_subscription', array( $this, 'ajax_admin_reactivate_subscription' ) );
@@ -2870,6 +2871,34 @@ class CTA_Admin {
 		wp_send_json_success(
 			array(
 				'message' => __( 'Enrollment applied from the existing payment. No new charge was created.', 'cta-lms' ),
+			)
+		);
+	}
+
+	/**
+	 * AJAX: revoke course access from an existing payment (full refund / manual lock).
+	 */
+	public function ajax_revoke_course_payment() {
+		$this->verify_admin_ajax();
+
+		$ref = sanitize_text_field( wp_unslash( $_POST['payment_ref'] ?? '' ) );
+		if ( '' === $ref ) {
+			wp_send_json_error( array( 'message' => __( 'Enter a Stripe Checkout Session ID (cs_...) from the payment.', 'cta-lms' ) ) );
+		}
+
+		$stripe = cta_get_stripe();
+		if ( ! $stripe || ! method_exists( $stripe, 'revoke_course_access_from_payment' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Stripe enrollment helper is unavailable.', 'cta-lms' ) ) );
+		}
+
+		$result = $stripe->revoke_course_access_from_payment( $ref );
+		if ( is_wp_error( $result ) ) {
+			wp_send_json_error( array( 'message' => $result->get_error_message() ) );
+		}
+
+		wp_send_json_success(
+			array(
+				'message' => __( 'Payment marked refunded and course access revoked. Learner account and certificates were not deleted.', 'cta-lms' ),
 			)
 		);
 	}

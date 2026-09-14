@@ -54,6 +54,8 @@ class CTA_CE_Access {
 	 * @return bool
 	 */
 	public static function has_active_access( $user_id, $course_id ) {
+		global $wpdb;
+
 		$user_id   = absint( $user_id );
 		$course_id = absint( $course_id );
 
@@ -80,14 +82,30 @@ class CTA_CE_Access {
 			return false;
 		}
 
+		// Enrollment tied to a refunded Checkout Session / payment → locked.
+		if ( ! empty( $enrollment->payment_id ) ) {
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+			$linked_status = $wpdb->get_var(
+				$wpdb->prepare(
+					"SELECT status FROM {$wpdb->prefix}cta_payments
+					WHERE stripe_payment_id = %s
+					LIMIT 1",
+					sanitize_text_field( (string) $enrollment->payment_id )
+				)
+			);
+			if ( $linked_status && 'refunded' === (string) $linked_status ) {
+				return false;
+			}
+		}
+
+		// Any refunded course payment with no remaining completed payment → locked.
+		if ( self::user_has_refunded_course_payment( $user_id, $course_id ) ) {
+			return false;
+		}
+
 		// Completed (non-refunded) individual purchase → permanent access.
 		if ( self::user_has_completed_course_payment( $user_id, $course_id ) ) {
 			return true;
-		}
-
-		// Purchase was refunded (or cancelled): do not grant via access_source alone.
-		if ( self::user_has_refunded_course_payment( $user_id, $course_id ) ) {
-			return false;
 		}
 
 		$source = self::resolve_access_source( $enrollment );

@@ -26,12 +26,13 @@ $notice                = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ??
 		<h2><?php esc_html_e( 'Enrollment repair tools', 'cta-lms' ); ?></h2>
 		<p class="description"><?php esc_html_e( 'Use these after a successful Stripe payment when a learner is missing from CTA Users or cannot open My Dashboard. These tools never create a new Stripe charge.', 'cta-lms' ); ?></p>
 		<p>
-			<label for="cta-reprocess-payment-ref"><strong><?php esc_html_e( 'Reprocess course enrollment from payment', 'cta-lms' ); ?></strong></label><br>
+			<label for="cta-reprocess-payment-ref"><strong><?php esc_html_e( 'Reprocess / revoke course access from payment', 'cta-lms' ); ?></strong></label><br>
 			<input type="text" class="regular-text" id="cta-reprocess-payment-ref" placeholder="cs_..." autocomplete="off">
 			<button type="button" class="button button-primary" id="cta-reprocess-payment-btn"><?php esc_html_e( 'Grant access from this payment', 'cta-lms' ); ?></button>
+			<button type="button" class="button" id="cta-revoke-payment-btn"><?php esc_html_e( 'Revoke access from this payment', 'cta-lms' ); ?></button>
 			<span id="cta-reprocess-payment-result" class="cta-inline-result"></span>
 		</p>
-		<p class="description"><?php esc_html_e( 'Paste the Checkout Session ID (cs_…) from Stripe → Payments / Events for the already-paid transaction (e.g. the $45 Telehealth purchase).', 'cta-lms' ); ?></p>
+		<p class="description"><?php esc_html_e( 'Paste the Checkout Session ID (cs_…) from Stripe → Payments / Events. Grant restores access after a paid checkout; Revoke locks the course after a full refund (same cs_… — no new charge).', 'cta-lms' ); ?></p>
 		<p>
 			<button type="button" class="button" id="cta-heal-missing-roles-btn"><?php esc_html_e( 'Heal WordPress users with Role None', 'cta-lms' ); ?></button>
 			<span id="cta-heal-missing-roles-result" class="cta-inline-result"></span>
