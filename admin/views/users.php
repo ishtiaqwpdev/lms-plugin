@@ -38,132 +38,113 @@ $notice                = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ??
 			<span id="cta-heal-missing-roles-result" class="cta-inline-result"></span>
 		</p>
 		<?php
+		/**
+		 * Render one vertical field row (label + copyable value).
+		 *
+		 * @param string $label Label.
+		 * @param string $value Value.
+		 * @return void
+		 */
+		$cta_render_issue_field = static function ( $label, $value ) {
+			$value = (string) $value;
+			if ( '' === $value ) {
+				return;
+			}
+			?>
+			<div class="cta-issue-field">
+				<span class="cta-issue-field__label"><?php echo esc_html( $label ); ?></span>
+				<code class="cta-issue-field__value"><?php echo esc_html( $value ); ?></code>
+			</div>
+			<?php
+		};
+
 		$last_refund_ping = get_option( 'cta_stripe_last_refund_webhook', null );
 		if ( is_array( $last_refund_ping ) && ! empty( $last_refund_ping ) ) :
 			$ping_ctx = ( ! empty( $last_refund_ping['context'] ) && is_array( $last_refund_ping['context'] ) )
 				? $last_refund_ping['context']
 				: array();
 			?>
-			<div class="cta-enrollment-issues" style="margin-top:16px;">
-				<h3 style="margin:0 0 8px;"><?php esc_html_e( 'Last refund webhook ping', 'cta-lms' ); ?></h3>
-				<table class="widefat striped cta-enrollment-issues-table">
-					<tbody>
-						<tr>
-							<th scope="row" style="width:160px;"><?php esc_html_e( 'When', 'cta-lms' ); ?></th>
-							<td><code><?php echo esc_html( (string) ( $last_refund_ping['at'] ?? '' ) ); ?></code></td>
-						</tr>
-						<tr>
-							<th scope="row"><?php esc_html_e( 'Code', 'cta-lms' ); ?></th>
-							<td><code><?php echo esc_html( (string) ( $last_refund_ping['code'] ?? '' ) ); ?></code></td>
-						</tr>
-						<tr>
-							<th scope="row"><?php esc_html_e( 'Message', 'cta-lms' ); ?></th>
-							<td><?php echo esc_html( (string) ( $last_refund_ping['message'] ?? '' ) ); ?></td>
-						</tr>
-						<?php foreach ( $ping_ctx as $ping_key => $ping_val ) : ?>
-							<tr>
-								<th scope="row"><code><?php echo esc_html( (string) $ping_key ); ?></code></th>
-								<td><code style="user-select:all;"><?php echo esc_html( is_scalar( $ping_val ) ? (string) $ping_val : wp_json_encode( $ping_val ) ); ?></code></td>
-							</tr>
-						<?php endforeach; ?>
-					</tbody>
-				</table>
-			</div>
+			<details class="cta-issue-card" open>
+				<summary class="cta-issue-card__summary">
+					<span class="cta-issue-card__title"><?php esc_html_e( 'Last refund webhook ping', 'cta-lms' ); ?></span>
+					<span class="cta-issue-card__meta"><code><?php echo esc_html( (string) ( $last_refund_ping['code'] ?? '' ) ); ?></code></span>
+				</summary>
+				<div class="cta-issue-card__body">
+					<?php
+					$cta_render_issue_field( __( 'When', 'cta-lms' ), (string) ( $last_refund_ping['at'] ?? '' ) );
+					$cta_render_issue_field( __( 'Code', 'cta-lms' ), (string) ( $last_refund_ping['code'] ?? '' ) );
+					$cta_render_issue_field( __( 'Message', 'cta-lms' ), (string) ( $last_refund_ping['message'] ?? '' ) );
+					foreach ( $ping_ctx as $ping_key => $ping_val ) {
+						$cta_render_issue_field(
+							(string) $ping_key,
+							is_scalar( $ping_val ) ? (string) $ping_val : wp_json_encode( $ping_val )
+						);
+					}
+					?>
+				</div>
+			</details>
 		<?php endif; ?>
 		<?php
 		$enrollment_issues = isset( $enrollment_issues ) && is_array( $enrollment_issues ) ? $enrollment_issues : array();
 		if ( ! empty( $enrollment_issues ) ) :
 			?>
-			<details class="cta-enrollment-issues" style="margin-top:16px;" open>
-				<summary style="cursor:pointer;margin-bottom:10px;">
-					<strong><?php esc_html_e( 'Recent enrollment issues', 'cta-lms' ); ?></strong>
-					<span class="description"> — <?php esc_html_e( 'each field is separate so you can copy cs_… / user_id / course_id easily', 'cta-lms' ); ?></span>
-				</summary>
-				<div style="overflow-x:auto;">
-					<table class="widefat striped cta-enrollment-issues-table">
-						<thead>
-							<tr>
-								<th><?php esc_html_e( 'When', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'Code', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'Message', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'payment_ref / cs_…', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'user_id', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'course_id', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'payment_id', 'cta-lms' ); ?></th>
-								<th><?php esc_html_e( 'Other details', 'cta-lms' ); ?></th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ( $enrollment_issues as $issue ) : ?>
-								<?php
-								$ctx = ( ! empty( $issue['context'] ) && is_array( $issue['context'] ) ) ? $issue['context'] : array();
-								// Support legacy/odd shapes where context was wrapped in a list.
-								if ( isset( $ctx[0] ) && is_array( $ctx[0] ) && ! isset( $ctx['payment_ref'] ) && ! isset( $ctx['user_id'] ) ) {
-									$ctx = $ctx[0];
+			<div class="cta-enrollment-issues" style="margin-top:16px;">
+				<h3 style="margin:0 0 8px;"><?php esc_html_e( 'Recent enrollment issues', 'cta-lms' ); ?></h3>
+				<p class="description" style="margin:0 0 12px;"><?php esc_html_e( 'Click a row to open. Each value is on its own line — copy the cs_… / user_id / course_id you need.', 'cta-lms' ); ?></p>
+				<?php foreach ( $enrollment_issues as $issue_index => $issue ) : ?>
+					<?php
+					$ctx = ( ! empty( $issue['context'] ) && is_array( $issue['context'] ) ) ? $issue['context'] : array();
+					if ( isset( $ctx[0] ) && is_array( $ctx[0] ) && ! isset( $ctx['payment_ref'] ) && ! isset( $ctx['user_id'] ) ) {
+						$ctx = $ctx[0];
+					}
+					$payment_ref = '';
+					if ( ! empty( $ctx['payment_ref'] ) ) {
+						$payment_ref = (string) $ctx['payment_ref'];
+					} elseif ( ! empty( $ctx['session_id'] ) ) {
+						$payment_ref = (string) $ctx['session_id'];
+					}
+					$code    = (string) ( $issue['code'] ?? '' );
+					$message = (string) ( $issue['message'] ?? '' );
+					$when    = (string) ( $issue['at'] ?? '' );
+					$open    = ( 0 === (int) $issue_index ) ? ' open' : '';
+					?>
+					<details class="cta-issue-card"<?php echo $open; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+						<summary class="cta-issue-card__summary">
+							<span class="cta-issue-card__title"><?php echo esc_html( $message ? $message : $code ); ?></span>
+							<span class="cta-issue-card__meta">
+								<?php if ( $code ) : ?>
+									<code><?php echo esc_html( $code ); ?></code>
+								<?php endif; ?>
+								<?php if ( $when ) : ?>
+									<span><?php echo esc_html( $when ); ?></span>
+								<?php endif; ?>
+							</span>
+						</summary>
+						<div class="cta-issue-card__body">
+							<?php
+							$cta_render_issue_field( __( 'When', 'cta-lms' ), $when );
+							$cta_render_issue_field( __( 'Code', 'cta-lms' ), $code );
+							$cta_render_issue_field( __( 'Message', 'cta-lms' ), $message );
+							$cta_render_issue_field( __( 'payment_ref (cs_… to copy)', 'cta-lms' ), $payment_ref );
+							$cta_render_issue_field( __( 'user_id', 'cta-lms' ), isset( $ctx['user_id'] ) ? (string) $ctx['user_id'] : '' );
+							$cta_render_issue_field( __( 'course_id', 'cta-lms' ), isset( $ctx['course_id'] ) ? (string) $ctx['course_id'] : '' );
+							$cta_render_issue_field( __( 'payment_id', 'cta-lms' ), isset( $ctx['payment_id'] ) ? (string) $ctx['payment_id'] : '' );
+
+							$skip_keys = array( 'payment_ref', 'session_id', 'user_id', 'course_id', 'payment_id' );
+							foreach ( $ctx as $ck => $cv ) {
+								if ( in_array( (string) $ck, $skip_keys, true ) ) {
+									continue;
 								}
-								$payment_ref = '';
-								if ( ! empty( $ctx['payment_ref'] ) ) {
-									$payment_ref = (string) $ctx['payment_ref'];
-								} elseif ( ! empty( $ctx['session_id'] ) ) {
-									$payment_ref = (string) $ctx['session_id'];
-								}
-								$user_id    = isset( $ctx['user_id'] ) ? (string) $ctx['user_id'] : '';
-								$course_id  = isset( $ctx['course_id'] ) ? (string) $ctx['course_id'] : '';
-								$payment_id = isset( $ctx['payment_id'] ) ? (string) $ctx['payment_id'] : '';
-								$skip_keys  = array( 'payment_ref', 'session_id', 'user_id', 'course_id', 'payment_id' );
-								$other      = array();
-								foreach ( $ctx as $ck => $cv ) {
-									if ( in_array( (string) $ck, $skip_keys, true ) ) {
-										continue;
-									}
-									$other[] = (string) $ck . ': ' . ( is_scalar( $cv ) ? (string) $cv : wp_json_encode( $cv ) );
-								}
-								?>
-								<tr>
-									<td><code><?php echo esc_html( (string) ( $issue['at'] ?? '' ) ); ?></code></td>
-									<td><code><?php echo esc_html( (string) ( $issue['code'] ?? '' ) ); ?></code></td>
-									<td><?php echo esc_html( (string) ( $issue['message'] ?? '' ) ); ?></td>
-									<td>
-										<?php if ( '' !== $payment_ref ) : ?>
-											<code style="user-select:all;word-break:break-all;"><?php echo esc_html( $payment_ref ); ?></code>
-										<?php else : ?>
-											—
-										<?php endif; ?>
-									</td>
-									<td>
-										<?php if ( '' !== $user_id ) : ?>
-											<code style="user-select:all;"><?php echo esc_html( $user_id ); ?></code>
-										<?php else : ?>
-											—
-										<?php endif; ?>
-									</td>
-									<td>
-										<?php if ( '' !== $course_id ) : ?>
-											<code style="user-select:all;"><?php echo esc_html( $course_id ); ?></code>
-										<?php else : ?>
-											—
-										<?php endif; ?>
-									</td>
-									<td>
-										<?php if ( '' !== $payment_id ) : ?>
-											<code style="user-select:all;"><?php echo esc_html( $payment_id ); ?></code>
-										<?php else : ?>
-											—
-										<?php endif; ?>
-									</td>
-									<td style="font-size:12px;max-width:280px;word-break:break-word;">
-										<?php
-										echo $other
-											? esc_html( implode( ' · ', $other ) )
-											: '—';
-										?>
-									</td>
-								</tr>
-							<?php endforeach; ?>
-						</tbody>
-					</table>
-				</div>
-			</details>
+								$cta_render_issue_field(
+									(string) $ck,
+									is_scalar( $cv ) ? (string) $cv : wp_json_encode( $cv )
+								);
+							}
+							?>
+						</div>
+					</details>
+				<?php endforeach; ?>
+			</div>
 		<?php endif; ?>
 	</div>
 
