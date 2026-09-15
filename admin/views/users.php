@@ -38,6 +38,19 @@ $notice                = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ??
 			<span id="cta-heal-missing-roles-result" class="cta-inline-result"></span>
 		</p>
 		<?php
+		$last_refund_ping = get_option( 'cta_stripe_last_refund_webhook', null );
+		if ( is_array( $last_refund_ping ) && ! empty( $last_refund_ping ) ) :
+			?>
+			<p class="description" style="margin-top:8px;">
+				<strong><?php esc_html_e( 'Last refund webhook ping:', 'cta-lms' ); ?></strong>
+				<code><?php echo esc_html( (string) ( $last_refund_ping['at'] ?? '' ) ); ?></code>
+				— <code><?php echo esc_html( (string) ( $last_refund_ping['code'] ?? '' ) ); ?></code>
+				<?php if ( ! empty( $last_refund_ping['context'] ) && is_array( $last_refund_ping['context'] ) ) : ?>
+					<em>(<?php echo esc_html( wp_json_encode( $last_refund_ping['context'] ) ); ?>)</em>
+				<?php endif; ?>
+			</p>
+		<?php endif; ?>
+		<?php
 		$enrollment_issues = isset( $enrollment_issues ) && is_array( $enrollment_issues ) ? $enrollment_issues : array();
 		if ( ! empty( $enrollment_issues ) ) :
 			?>

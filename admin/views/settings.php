@@ -37,7 +37,7 @@ $notice = sanitize_text_field( wp_unslash( $_GET['cta_notice'] ?? '' ) );
 			if ( '' === $portal_config ) {
 				$portal_config = (string) get_option( 'cta_stripe_portal_configuration_id', '' );
 			}
-			$required_events = 'checkout.session.completed, customer.created, customer.updated, customer.subscription.created, customer.subscription.updated, customer.subscription.deleted, customer.subscription.trial_will_end, invoice.paid, invoice.payment_failed, payment_intent.succeeded, payment_intent.payment_failed, charge.refunded';
+			$required_events = 'checkout.session.completed, customer.created, customer.updated, customer.subscription.created, customer.subscription.updated, customer.subscription.deleted, customer.subscription.trial_will_end, invoice.paid, invoice.payment_failed, payment_intent.succeeded, payment_intent.payment_failed, charge.refunded, charge.refund.updated, refund.created';
 			?>
 
 			<div class="cta-stripe-mode-switch" role="group" aria-label="<?php esc_attr_e( 'Active Stripe mode', 'cta-lms' ); ?>">

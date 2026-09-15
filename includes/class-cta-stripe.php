@@ -1610,21 +1610,41 @@ class CTA_Stripe {
 			return new WP_REST_Response( array( 'error' => 'Missing event type.' ), 400 );
 		}
 
-		$event_id = sanitize_text_field( (string) ( $event->id ?? '' ) );
-		$is_dup   = ( $event_id && ! $this->claim_webhook_event( $event_id ) );
+		$event_type = (string) ( $event->type ?? '' );
+		$event_id   = sanitize_text_field( (string) ( $event->id ?? '' ) );
+		$is_refund  = $this->is_stripe_refund_event_type( $event_type );
 
-		// charge.refunded: allow Stripe Dashboard resend to re-run revoke logic.
-		// Other event types stay idempotent (acknowledge duplicate, no re-process).
-		if ( $is_dup && 'charge.refunded' !== (string) ( $event->type ?? '' ) ) {
+		// Unconditional breadcrumb for refund-family events (proves delivery reached PHP).
+		if ( $is_refund ) {
+			$this->log_refund_webhook_breadcrumb(
+				'stripe_refund_webhook_received',
+				__( 'Stripe refund-family webhook received by CTA LMS endpoint.', 'cta-lms' ),
+				array(
+					'event_id'   => $event_id,
+					'event_type' => $event_type,
+					'env'        => $env,
+					'plugin'     => defined( 'CTA_VERSION' ) ? CTA_VERSION : '',
+				)
+			);
+		}
+
+		$is_dup = ( $event_id && ! $this->claim_webhook_event( $event_id ) );
+
+		// Refund-family events: allow Stripe Dashboard resend to re-run revoke logic.
+		if ( $is_dup && ! $is_refund ) {
 			return new WP_REST_Response( array( 'received' => true, 'duplicate' => true ), 200 );
 		}
 
-		$this->dispatch_webhook_event( $event, $env );
+		$dispatch = $this->dispatch_webhook_event( $event, $env );
 
 		return new WP_REST_Response(
 			array(
 				'received'  => true,
 				'duplicate' => (bool) $is_dup,
+				'type'      => $event_type,
+				'refund'    => $is_refund,
+				'dispatch'  => $dispatch,
+				'plugin'    => defined( 'CTA_VERSION' ) ? CTA_VERSION : '',
 			),
 			200
 		);
@@ -1722,59 +1742,265 @@ class CTA_Stripe {
 	 *
 	 * @param object $event Stripe event.
 	 * @param string $env   test|live.
-	 * @return void
+	 * @return array<string,mixed> Dispatch result for webhook response / debugging.
 	 */
 	private function dispatch_webhook_event( $event, $env = 'test' ) {
 		$type   = (string) ( $event->type ?? '' );
 		$object = isset( $event->data->object ) ? $event->data->object : null;
 
 		if ( ! $object ) {
+			if ( $this->is_stripe_refund_event_type( $type ) ) {
+				$this->log_refund_webhook_breadcrumb(
+					'stripe_refund_webhook_missing_object',
+					__( 'Refund webhook had no data.object — handler not invoked.', 'cta-lms' ),
+					array(
+						'event_type' => $type,
+						'env'        => $env,
+					)
+				);
+			}
+			return array(
+				'handled' => false,
+				'reason'  => 'missing_object',
+				'type'    => $type,
+			);
+		}
+
+		try {
+			switch ( $type ) {
+				case 'checkout.session.completed':
+					$this->handle_checkout_completed( $object );
+					break;
+
+				case 'customer.created':
+				case 'customer.updated':
+					$this->handle_customer_upsert( $object );
+					break;
+
+				case 'customer.subscription.created':
+				case 'customer.subscription.updated':
+					$this->sync_subscription_status_from_stripe( $object );
+					break;
+
+				case 'customer.subscription.deleted':
+					$this->handle_subscription_cancelled( $object );
+					break;
+
+				case 'customer.subscription.trial_will_end':
+					$this->handle_subscription_trial_will_end( $object );
+					break;
+
+				case 'invoice.paid':
+					$this->handle_subscription_invoice_paid( $object );
+					break;
+
+				case 'invoice.payment_failed':
+					$this->handle_subscription_payment_failed( $object );
+					break;
+
+				case 'payment_intent.succeeded':
+					$this->handle_payment_intent_succeeded( $object );
+					break;
+
+				case 'payment_intent.payment_failed':
+					$this->handle_payment_intent_failed( $object );
+					break;
+
+				case 'charge.refunded':
+					$this->handle_charge_refunded( $object, $env );
+					return array(
+						'handled' => true,
+						'type'    => $type,
+						'via'     => 'charge.refunded',
+					);
+
+				case 'charge.refund.updated':
+				case 'refund.created':
+					$this->handle_refund_object_event( $object, $env, $type );
+					return array(
+						'handled' => true,
+						'type'    => $type,
+						'via'     => 'refund_object',
+					);
+
+				default:
+					if ( $this->is_stripe_refund_event_type( $type ) ) {
+						$this->log_refund_webhook_breadcrumb(
+							'stripe_refund_webhook_unhandled_type',
+							__( 'Refund-family event type was not routed to a handler.', 'cta-lms' ),
+							array(
+								'event_type' => $type,
+								'env'        => $env,
+							)
+						);
+					}
+					return array(
+						'handled' => false,
+						'reason'  => 'unhandled_type',
+						'type'    => $type,
+					);
+			}
+		} catch ( \Throwable $e ) {
+			if ( $this->is_stripe_refund_event_type( $type ) ) {
+				$this->log_refund_webhook_breadcrumb(
+					'stripe_refund_webhook_exception',
+					__( 'Refund webhook handler threw an exception.', 'cta-lms' ),
+					array(
+						'event_type' => $type,
+						'env'        => $env,
+						'error'      => $e->getMessage(),
+					)
+				);
+			}
+			return array(
+				'handled' => false,
+				'reason'  => 'exception',
+				'type'    => $type,
+				'error'   => $e->getMessage(),
+			);
+		}
+
+		return array(
+			'handled' => true,
+			'type'    => $type,
+		);
+	}
+
+	/**
+	 * Whether a Stripe event type belongs to the refund family we must process.
+	 *
+	 * @param string $type Event type.
+	 * @return bool
+	 */
+	private function is_stripe_refund_event_type( $type ) {
+		$type = (string) $type;
+		return in_array(
+			$type,
+			array(
+				'charge.refunded',
+				'charge.refund.updated',
+				'refund.created',
+				'refund.updated',
+			),
+			true
+		) || false !== strpos( $type, 'refund' );
+	}
+
+	/**
+	 * Persist a refund-webhook breadcrumb even if later revoke logic fails.
+	 *
+	 * @param string              $code    Code.
+	 * @param string              $message Message.
+	 * @param array<string,mixed> $context Context.
+	 * @return void
+	 */
+	private function log_refund_webhook_breadcrumb( $code, $message, $context = array() ) {
+		$entry = array(
+			'at'      => gmdate( 'c' ),
+			'code'    => sanitize_key( (string) $code ),
+			'message' => sanitize_text_field( (string) $message ),
+			'context' => $context,
+			'plugin'  => defined( 'CTA_VERSION' ) ? CTA_VERSION : '',
+		);
+
+		// Dedicated option so admins can see the last refund ping even if the issue log UI is stale.
+		update_option( 'cta_stripe_last_refund_webhook', $entry, false );
+
+		if ( class_exists( 'CTA_Roles' ) ) {
+			CTA_Roles::log_enrollment_issue( $code, $message, $context );
+		}
+
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+		error_log( '[CTA LMS] Refund webhook: ' . wp_json_encode( $entry ) );
+	}
+
+	/**
+	 * Handle Refund object events by loading the Charge and reusing charge.refunded logic.
+	 *
+	 * @param object $refund Stripe Refund object.
+	 * @param string $env    test|live.
+	 * @param string $type   Event type.
+	 * @return void
+	 */
+	private function handle_refund_object_event( $refund, $env, $type ) {
+		$env = self::normalize_env( $env );
+
+		$this->log_refund_webhook_breadcrumb(
+			'stripe_refund_object_event',
+			__( 'Refund object event received — resolving Charge for revoke.', 'cta-lms' ),
+			array(
+				'event_type'     => $type,
+				'refund_id'      => $this->stripe_id( $refund->id ?? '' ),
+				'payment_intent' => $this->stripe_id( $refund->payment_intent ?? '' ),
+				'charge_id'      => $this->stripe_id( $refund->charge ?? '' ),
+				'env'            => $env,
+			)
+		);
+
+		$charge = $this->resolve_charge_from_refund_object( $refund, $env );
+		if ( ! $charge ) {
+			$this->log_refund_webhook_breadcrumb(
+				'charge_refunded_payment_not_found',
+				__( 'Refund event received but Charge could not be resolved for revoke.', 'cta-lms' ),
+				array(
+					'event_type'     => $type,
+					'refund_id'      => $this->stripe_id( $refund->id ?? '' ),
+					'payment_intent' => $this->stripe_id( $refund->payment_intent ?? '' ),
+					'env'            => $env,
+				)
+			);
 			return;
 		}
 
-		switch ( $type ) {
-			case 'checkout.session.completed':
-				$this->handle_checkout_completed( $object );
-				break;
+		$this->handle_charge_refunded( $charge, $env );
+	}
 
-			case 'customer.created':
-			case 'customer.updated':
-				$this->handle_customer_upsert( $object );
-				break;
+	/**
+	 * Resolve a Charge object from a Refund webhook payload.
+	 *
+	 * @param object $refund Stripe Refund.
+	 * @param string $env    test|live.
+	 * @return object|null
+	 */
+	private function resolve_charge_from_refund_object( $refund, $env ) {
+		$charge_id = $this->stripe_id( $refund->charge ?? '' );
+		$pi_id     = $this->stripe_id( $refund->payment_intent ?? '' );
 
-			case 'customer.subscription.created':
-			case 'customer.subscription.updated':
-				$this->sync_subscription_status_from_stripe( $object );
-				break;
-
-			case 'customer.subscription.deleted':
-				$this->handle_subscription_cancelled( $object );
-				break;
-
-			case 'customer.subscription.trial_will_end':
-				$this->handle_subscription_trial_will_end( $object );
-				break;
-
-			case 'invoice.paid':
-				$this->handle_subscription_invoice_paid( $object );
-				break;
-
-			case 'invoice.payment_failed':
-				$this->handle_subscription_payment_failed( $object );
-				break;
-
-			case 'payment_intent.succeeded':
-				$this->handle_payment_intent_succeeded( $object );
-				break;
-
-			case 'payment_intent.payment_failed':
-				$this->handle_payment_intent_failed( $object );
-				break;
-
-			case 'charge.refunded':
-				$this->handle_charge_refunded( $object, $env );
-				break;
+		if ( ! $this->set_stripe_api_for_env( $env ) ) {
+			return null;
 		}
+
+		try {
+			if ( $charge_id ) {
+				return \Stripe\Charge::retrieve( $charge_id );
+			}
+			if ( $pi_id ) {
+				$intent = \Stripe\PaymentIntent::retrieve(
+					$pi_id,
+					array( 'expand' => array( 'latest_charge' ) )
+				);
+				if ( ! empty( $intent->latest_charge ) && is_object( $intent->latest_charge ) ) {
+					return $intent->latest_charge;
+				}
+				$latest = $this->stripe_id( $intent->latest_charge ?? '' );
+				if ( $latest ) {
+					return \Stripe\Charge::retrieve( $latest );
+				}
+			}
+		} catch ( \Exception $e ) {
+			$this->log_refund_webhook_breadcrumb(
+				'stripe_refund_charge_retrieve_failed',
+				__( 'Could not retrieve Charge for refund object event.', 'cta-lms' ),
+				array(
+					'charge_id'      => $charge_id,
+					'payment_intent' => $pi_id,
+					'env'            => $env,
+					'error'          => $e->getMessage(),
+				)
+			);
+		}
+
+		return null;
 	}
 
 	/**
@@ -1910,6 +2136,21 @@ class CTA_Stripe {
 		$customer_id     = $this->stripe_id( $charge->customer ?? '' );
 		$env             = self::normalize_env( $env );
 
+		// Absolute first breadcrumb — proves handle_charge_refunded() was invoked.
+		$this->log_refund_webhook_breadcrumb(
+			'charge_refunded_handler_entered',
+			__( 'handle_charge_refunded() invoked.', 'cta-lms' ),
+			array(
+				'charge_id'       => $charge_id,
+				'payment_intent'  => $pi_id,
+				'customer'        => $customer_id,
+				'amount'          => $amount,
+				'amount_refunded' => $amount_refunded,
+				'env'             => $env,
+				'plugin'          => defined( 'CTA_VERSION' ) ? CTA_VERSION : '',
+			)
+		);
+
 		if ( class_exists( 'CTA_Roles' ) ) {
 			CTA_Roles::log_enrollment_issue(
 				'charge_refunded_received',
@@ -1926,18 +2167,21 @@ class CTA_Stripe {
 		}
 
 		// Full refund only — partial refunds must not change access.
-		if ( $amount <= 0 || $amount_refunded < $amount ) {
-			if ( class_exists( 'CTA_Roles' ) ) {
-				CTA_Roles::log_enrollment_issue(
-					'charge_refunded_partial_ignored',
-					__( 'Partial refund received; course access left unchanged.', 'cta-lms' ),
-					array(
-						'charge_id'       => $charge_id,
-						'amount'          => $amount,
-						'amount_refunded' => $amount_refunded,
-					)
-				);
-			}
+		// Also honor Stripe's boolean `refunded` when amount fields are oddly typed.
+		$is_full_refund = ( $amount > 0 && $amount_refunded >= $amount )
+			|| ( ! empty( $charge->refunded ) && $amount > 0 && $amount_refunded >= $amount );
+
+		if ( ! $is_full_refund ) {
+			$this->log_refund_webhook_breadcrumb(
+				'charge_refunded_partial_ignored',
+				__( 'Partial refund received; course access left unchanged.', 'cta-lms' ),
+				array(
+					'charge_id'       => $charge_id,
+					'amount'          => $amount,
+					'amount_refunded' => $amount_refunded,
+					'refunded_flag'   => ! empty( $charge->refunded ) ? 1 : 0,
+				)
+			);
 			return;
 		}
 
